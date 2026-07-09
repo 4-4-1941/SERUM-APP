@@ -3,6 +3,10 @@ const navButtons = document.querySelectorAll(".nav-btn");
 const pageTitle = document.getElementById("page-title");
 const pageSubtitle = document.getElementById("page-subtitle");
 
+if (!root || !pageTitle || !pageSubtitle) {
+  throw new Error("Faltan elementos base en index.html");
+}
+
 let timerId = null;
 let timeLeft = 60;
 let score = Number(localStorage.getItem("preSerumScore") || 0);
@@ -98,6 +102,16 @@ function startTimer() {
   }, 1000);
 }
 
+function renderCaseCard(c) {
+  return `
+    <button class="case-card" data-case="${c.id}" data-search="${(c.title + " " + c.tags.join(" ") + " " + c.level + " " + c.specialty).toLowerCase()}">
+      <strong>${c.title}</strong>
+      <span>${c.level} · ${c.specialty}</span>
+      <small>${c.statement}</small>
+    </button>
+  `;
+}
+
 function renderDashboard() {
   pageTitle.textContent = "Dashboard";
   pageSubtitle.textContent = "Resumen general del progreso y acceso a los módulos.";
@@ -150,16 +164,6 @@ function renderDashboard() {
       });
     });
   }
-}
-
-function renderCaseCard(c) {
-  return `
-    <button class="case-card" data-case="${c.id}" data-search="${(c.title + " " + c.tags.join(" ") + " " + c.level + " " + c.specialty).toLowerCase()}">
-      <strong>${c.title}</strong>
-      <span>${c.level} · ${c.specialty}</span>
-      <small>${c.statement}</small>
-    </button>
-  `;
 }
 
 function renderCase(id) {
@@ -246,11 +250,8 @@ function renderSimulator() {
     </div>
   `;
 
-  const start = document.getElementById("start-timer");
-  const stop = document.getElementById("stop-timer");
-
-  if (start) start.addEventListener("click", startTimer);
-  if (stop) stop.addEventListener("click", stopTimer);
+  document.getElementById("start-timer").addEventListener("click", startTimer);
+  document.getElementById("stop-timer").addEventListener("click", stopTimer);
 }
 
 function renderLibrary() {
