@@ -1,4 +1,4 @@
- const appData = {
+const appData = {
   dashboard: {
     metrics: [
       { label: "Casos completados", value: 24 },
@@ -18,4 +18,4 @@
     "D.S. N.° 007-2020-SA - Reglamento",
     "Normatividad MINSA sobre salud mental"
   ]
-};
+}; 
