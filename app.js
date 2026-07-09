@@ -308,8 +308,15 @@ function renderLibrary() {
   root.innerHTML = `
     <div class="panel">
       <ul>
-        ${appData.norms.map(n => `<li>${n}</li>`).join("")}
+        ${appData.norms.map(n => `<li>${safeText(n, "Norma")}</li>`).join("")}
       </ul>
+    </div>
+
+    <div class="panel">
+      <h3>Progreso guardado</h3>
+      <p>Casos resueltos: <strong>${state.completed}</strong></p>
+      <p>Correctos: <strong>${state.correct}</strong></p>
+      <p>Precisión: <strong>${getAccuracy()}%</strong></p>
     </div>
   `;
 }
