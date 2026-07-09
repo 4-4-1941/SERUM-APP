@@ -1,26 +1,27 @@
 # SERUMS Perú App
 
-Aplicación web interactiva para preparación SERUMS Perú con diseño de dos columnas, banco de casos, normativa, recursos y seguimiento local.
+Aplicación web interactiva para preparación SERUMS Perú.
 
-## Contenido
-- Tablero principal.
+## Objetivo
+Ofrecer una app de aprendizaje con:
+- Diseño de dos columnas.
 - Casos clínicos interactivos.
+- Prioridad en Psicología.
 - Normativa SERUMS.
-- Decretos y lineamientos.
-- Recursos de estudio.
+- Recursos y notas.
 
-## Estructura
+## Base oficial
+La estructura temática se apoya en los contenidos y bibliografía oficial del MINSA para SERUMS 2026-I, así como en la Ley N.° 23330 y el compendio normativo SERUMS [web:519][web:512][web:511].
+
+## Archivos
 - `index.html`
 - `styles.css`
 - `data.js`
 - `app.js`
 
-## Cómo usar
-1. Abre `index.html` en el navegador.
-2. Navega por las secciones del menú lateral.
+## Uso
+1. Abre `index.html`.
+2. Navega por el menú lateral.
 3. Responde casos clínicos.
-4. Consulta normas, decretos y recursos.
-5. El progreso se guarda en `localStorage`.
-
-## Nota normativa
-La base normativa y bibliográfica se organiza a partir de publicaciones oficiales del MINSA y GOB.PE sobre SERUMS, incluyendo la Ley N.° 23330 y los compendios vigentes de evaluación y normativa SERUMS [web:511][web:503][web:512].
+4. Consulta normas y recursos.
+5. El progreso se guarda localmente.
