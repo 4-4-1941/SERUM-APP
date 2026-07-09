@@ -65,10 +65,9 @@ function renderCases() {
     const q = filter.toLowerCase();
     const filtered = data.cases.filter(c => {
       const text = [c.title, c.block, c.specialty, c.statement, ...(c.tags || [])].join(" ").toLowerCase();
-      const matchesText = text.includes(q);
-      const matchesSpecialty = !selectedSpecialty || c.specialty === selectedSpecialty;
-      const matchesBlock = !selectedBlock || c.block === selectedBlock;
-      return matchesText && matchesSpecialty && matchesBlock;
+      return text.includes(q) &&
+        (!selectedSpecialty || c.specialty === selectedSpecialty) &&
+        (!selectedBlock || c.block === selectedBlock);
     });
 
     list.innerHTML = filtered.map(c => `
