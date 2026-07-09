@@ -177,11 +177,13 @@ function renderDashboard() {
       <input id="case-search" class="search" type="text" placeholder="Escribe un tema" />
     </div>
 
+    ${renderStatsCard()}
+
     <div class="grid metrics">
       ${appData.dashboard.metrics.map(m => `
         <div class="card">
-          <span class="label">${m.label}</span>
-          <strong class="value">${m.value}</strong>
+          <span class="label">${safeText(m.label, "Sin etiqueta")}</span>
+          <strong class="value">${safeText(String(m.value), "0")}</strong>
         </div>
       `).join("")}
     </div>
@@ -190,8 +192,8 @@ function renderDashboard() {
     <div class="progress-list">
       ${appData.dashboard.progress.map(p => `
         <div>
-          <div class="progress-head"><span>${p.label}</span><span>${p.value}%</span></div>
-          <div class="bar"><span style="width:${p.value}%"></span></div>
+          <div class="progress-head"><span>${safeText(p.label, "Bloque")}</span><span>${safeText(String(p.value), "0")}%</span></div>
+          <div class="bar"><span style="width:${Number(p.value) || 0}%"></span></div>
         </div>
       `).join("")}
     </div>
@@ -216,7 +218,6 @@ function renderDashboard() {
     });
   }
 }
-
 function renderCase(id) {
   const c = cases.find(x => x.id === id);
   pageTitle.textContent = c.title;
