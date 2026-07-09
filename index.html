@@ -5,37 +5,150 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Casos</title>
   <style>
+    :root {
+      --bg: #eaf2ff;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --border: #dbe6ff;
+      --shadow: 0 10px 30px rgba(37, 99, 235, 0.10);
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 20px;
-      background: #f5f5f5;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, #eff6ff 0%, var(--bg) 100%);
+      color: var(--text);
+      padding: 24px;
     }
+
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    .header {
+      margin-bottom: 18px;
+    }
+
+    .header h1 {
+      margin: 0 0 8px;
+      font-size: 28px;
+    }
+
+    .header p {
+      margin: 0;
+      color: var(--muted);
+    }
+
     .panel, .case-card {
-      background: white;
-      border-radius: 12px;
-      padding: 16px;
-      margin-bottom: 16px;
-      box-shadow: 0 2px 8px rgba(0,0,0,.08);
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
     }
+
+    .panel {
+      padding: 18px;
+      margin-bottom: 18px;
+    }
+
+    .stats {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .stat {
+      flex: 1 1 180px;
+      background: #f8fbff;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px;
+    }
+
+    .stat .label {
+      display: block;
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .stat .value {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+    }
+
+    .case-card {
+      padding: 18px;
+    }
+
+    .case-card h3 {
+      margin: 0 0 10px;
+      font-size: 20px;
+    }
+
+    .case-card p {
+      margin: 0 0 14px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
     .options {
       display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-top: 12px;
+      flex-direction: column;
+      gap: 10px;
     }
+
     button {
-      padding: 10px 14px;
+      width: 100%;
       border: 0;
-      border-radius: 8px;
+      border-radius: 12px;
+      padding: 12px 14px;
+      font-size: 15px;
       cursor: pointer;
-      background: #2563eb;
-      color: white;
+      background: #eff6ff;
+      color: var(--text);
+      border: 1px solid #cfe0ff;
+      transition: 0.2s ease;
+      text-align: left;
+    }
+
+    button:hover {
+      background: #dbeafe;
+      transform: translateY(-1px);
+    }
+
+    .footer-note {
+      margin-top: 16px;
+      font-size: 13px;
+      color: var(--muted);
     }
   </style>
 </head>
 <body>
-  <div id="app"></div>
+  <div class="wrap">
+    <div class="header">
+      <h1>Casos</h1>
+      <p>Responde cada caso y revisa tu progreso.</p>
+    </div>
+
+    <div id="app"></div>
+  </div>
 
   <script>
     const cases = [
@@ -80,10 +193,21 @@
     function renderStatsCard() {
       return `
         <div class="panel">
-          <h3>Estado general</h3>
-          <p>Casos resueltos: <strong>${state.completed}</strong></p>
-          <p>Respuestas correctas: <strong>${state.correct}</strong></p>
-          <p>Precisión: <strong>${getAccuracy()}%</strong></p>
+          <div class="stats">
+            <div class="stat">
+              <span class="label">Casos resueltos</span>
+              <span class="value">${state.completed}</span>
+            </div>
+            <div class="stat">
+              <span class="label">Respuestas correctas</span>
+              <span class="value">${state.correct}</span>
+            </div>
+            <div class="stat">
+              <span class="label">Precisión</span>
+              <span class="value">${getAccuracy()}%</span>
+            </div>
+          </div>
+          <div class="footer-note">Tu progreso se guarda en este navegador.</div>
         </div>
       `;
     }
@@ -105,8 +229,7 @@
         </div>
       `).join("");
 
-      const container = document.getElementById("app");
-      container.innerHTML = renderStatsCard() + items;
+      document.getElementById("app").innerHTML = renderStatsCard() + `<div class="grid">${items}</div>`;
     }
 
     function answerCase(caseId, selectedIndex) {
