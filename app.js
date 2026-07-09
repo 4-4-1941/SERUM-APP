@@ -41,11 +41,97 @@ const cases = [
     ],
     correct: 0,
     feedback: "Primero se debe tamizar, brindar soporte inicial y derivar."
+  },
+  {
+    id: 3,
+    title: "Paciente con crisis de angustia",
+    level: "I-1",
+    specialty: "Psicología",
+    tags: ["ansiedad", "contención", "primer nivel"],
+    statement: "Paciente adulto llega con disnea subjetiva, palpitaciones y miedo intenso; no presenta signos de descompensación orgánica.",
+    question: "¿Qué intervención inicial corresponde?",
+    options: [
+      "Contención emocional, evaluación breve y educación.",
+      "Derivación inmediata a cirugía.",
+      "Suspender la entrevista y esperar en silencio."
+    ],
+    correct: 0,
+    feedback: "La intervención inicial es contención emocional, evaluación breve y educación."
+  },
+  {
+    id: 4,
+    title: "Seguimiento de depresión leve",
+    level: "I-1",
+    specialty: "Psicología",
+    tags: ["depresión", "seguimiento", "psicoeducación"],
+    statement: "Paciente con depresión leve controlada, sin ideación suicida, solicita seguimiento y apoyo emocional.",
+    question: "¿Cuál es la acción más adecuada?",
+    options: [
+      "Brindar seguimiento, psicoeducación y reforzar soporte.",
+      "Dar de alta sin indicaciones.",
+      "Indicar suspensión de toda actividad."
+    ],
+    correct: 0,
+    feedback: "Corresponde seguimiento, psicoeducación y refuerzo del soporte."
+  },
+  {
+    id: 5,
+    title: "Tamizaje de violencia",
+    level: "I-2",
+    specialty: "Psicología",
+    tags: ["violencia", "tamizaje", "riesgo"],
+    statement: "Persona adulta refiere temor, lesiones antiguas y control coercitivo por parte de su pareja.",
+    question: "¿Qué debe hacerse primero?",
+    options: [
+      "Tamizar riesgo y activar ruta de atención.",
+      "Solo escuchar sin registrar datos.",
+      "Recomendar no volver al establecimiento."
+    ],
+    correct: 0,
+    feedback: "Primero se debe tamizar el riesgo y activar la ruta de atención."
   }
 ];
 
 function setActive(view) {
   navButtons.forEach(btn => btn.classList.toggle("active", btn.dataset.view === view));
+}
+
+function saveScore() {
+  localStorage.setItem("preSerumScore", String(score));
+}
+
+function formatTime(seconds) {
+  const m = String(Math.floor(seconds / 60)).padStart(2, "0");
+  const s = String(seconds % 60).padStart(2, "0");
+  return `${m}:${s}`;
+}
+
+function stopTimer() {
+  if (timerId) clearInterval(timerId);
+  timerId = null;
+}
+
+function startTimer() {
+  stopTimer();
+  timeLeft = 60;
+  const timerLabel = document.getElementById("timer-label");
+  if (timerLabel) timerLabel.textContent = formatTime(timeLeft);
+  timerId = setInterval(() => {
+    timeLeft -= 1;
+    const label = document.getElementById("timer-label");
+    if (label) label.textContent = formatTime(timeLeft);
+    if (timeLeft <= 0) stopTimer();
+  }, 1000);
+}
+
+function renderCaseCard(c) {
+  return `
+    <button class="case-card" data-case="${c.id}" data-search="${(c.title + " " + c.tags.join(" ") + " " + c.level + " " + c.specialty).toLowerCase()}">
+      <strong>${c.title}</strong>
+      <span>${c.level} · ${c.specialty}</span>
+      <small>${c.statement}</small>
+    </button>
+  `;
 }
 
 function renderDashboard() {
@@ -79,13 +165,7 @@ function renderDashboard() {
 
     <h3>Casos sugeridos</h3>
     <div class="grid cases">
-      ${cases.map(c => `
-        <button class="case-card" data-case="${c.id}" data-search="${(c.title + " " + c.tags.join(" ") + " " + c.level + " " + c.specialty).toLowerCase()}">
-          <strong>${c.title}</strong>
-          <span>${c.level} · ${c.specialty}</span>
-          <small>${c.statement}</small>
-        </button>
-      `).join("")}
+      ${cases.map(c => renderCaseCard(c)).join("")}
     </div>
   `;
 
@@ -94,12 +174,14 @@ function renderDashboard() {
   });
 
   const search = document.getElementById("case-search");
-  search.addEventListener("input", e => {
-    const text = e.target.value.toLowerCase().trim();
-    document.querySelectorAll(".case-card").forEach(card => {
-      card.style.display = card.dataset.search.includes(text) ? "flex" : "none";
+  if (search) {
+    search.addEventListener("input", e => {
+      const text = e.target.value.toLowerCase().trim();
+      document.querySelectorAll(".case-card").forEach(card => {
+        card.style.display = card.dataset.search.includes(text) ? "flex" : "none";
+      });
     });
-  });
+  }
 }
 
 function renderCase(id) {
@@ -128,6 +210,10 @@ function renderCase(id) {
     </div>
 
     <div id="feedback-zone"></div>
+
+    <div class="panel">
+      <button id="back-dashboard" class="action-btn secondary">Volver</button>
+    </div>
   `;
 
   document.querySelectorAll(".option-btn").forEach(btn => {
@@ -136,7 +222,7 @@ function renderCase(id) {
       const ok = picked === c.correct;
       if (ok) {
         score += 1;
-        localStorage.setItem("preSerumScore", String(score));
+        saveScore();
       }
       document.getElementById("feedback-zone").innerHTML = `
         <div class="panel ${ok ? "success" : "error"}">
@@ -148,6 +234,8 @@ function renderCase(id) {
       document.querySelectorAll(".option-btn").forEach(b => b.disabled = true);
     });
   });
+
+  document.getElementById("back-dashboard").addEventListener("click", renderDashboard);
 }
 
 function renderSimulator() {
@@ -163,20 +251,8 @@ function renderSimulator() {
     </div>
   `;
 
-  document.getElementById("start-timer").addEventListener("click", () => {
-    if (timerId) clearInterval(timerId);
-    timeLeft = 60;
-    document.getElementById("timer-label").textContent = "01:00";
-    timerId = setInterval(() => {
-      timeLeft--;
-      document.getElementById("timer-label").textContent = String(Math.floor(timeLeft / 60)).padStart(2, "0") + ":" + String(timeLeft % 60).padStart(2, "0");
-      if (timeLeft <= 0) clearInterval(timerId);
-    }, 1000);
-  });
-
-  document.getElementById("stop-timer").addEventListener("click", () => {
-    if (timerId) clearInterval(timerId);
-  });
+  document.getElementById("start-timer").addEventListener("click", startTimer);
+  document.getElementById("stop-timer").addEventListener("click", stopTimer);
 }
 
 function renderLibrary() {
@@ -193,6 +269,7 @@ function renderLibrary() {
 }
 
 function renderView(view) {
+  stopTimer();
   setActive(view);
   if (view === "dashboard") renderDashboard();
   if (view === "cases") renderDashboard();
