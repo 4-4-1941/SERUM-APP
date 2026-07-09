@@ -289,18 +289,27 @@ function renderSimulator() {
   pageSubtitle.textContent = "Cronómetro y práctica";
 
   root.innerHTML = `
-    <div class="panel">
+    <div class="panel timer-panel">
       <p>Tiempo restante: <strong id="timer-label">01:00</strong></p>
       <p>Puntaje: <strong>${score}</strong></p>
       <button id="start-timer" class="action-btn">Iniciar</button>
       <button id="stop-timer" class="action-btn secondary">Detener</button>
     </div>
+
+    <div class="panel">
+      <h3>Resumen rápido</h3>
+      <p>Casos resueltos: <strong>${state.completed}</strong></p>
+      <p>Respuestas correctas: <strong>${state.correct}</strong></p>
+      <p>Precisión: <strong>${getAccuracy()}%</strong></p>
+    </div>
   `;
 
-  document.getElementById("start-timer").addEventListener("click", startTimer);
-  document.getElementById("stop-timer").addEventListener("click", stopTimer);
-}
+  const startBtn = document.getElementById("start-timer");
+  const stopBtn = document.getElementById("stop-timer");
 
+  if (startBtn) startBtn.addEventListener("click", startTimer);
+  if (stopBtn) stopBtn.addEventListener("click", stopTimer);
+}
 function renderLibrary() {
   pageTitle.textContent = "Biblioteca";
   pageSubtitle.textContent = "Normativa";
