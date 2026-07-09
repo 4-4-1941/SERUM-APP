@@ -1,21 +1,18 @@
-const appData = {
-  dashboard: {
-    metrics: [
-      { label: "Casos completados", value: 24 },
-      { label: "Precisión promedio", value: 78 },
-      { label: "Tiempo medio", value: "7:42" }
-    ],
-    progress: [
-      { label: "Salud Pública", value: 72 },
-      { label: "Cuidado Integral", value: 81 },
-      { label: "Gestión", value: 64 },
-      { label: "Ética", value: 88 },
-      { label: "Investigación", value: 55 }
-    ]
+const cases = [
+  {
+    id: 1,
+    title: "Caso 1",
+    question: "¿Qué pasa con este paciente?",
+    options: ["Respuesta A", "Respuesta B", "Respuesta C"],
+    answer: 1,
+    explanation: "Explicación corta del caso 1."
   },
-  norms: [
-    "Ley N.° 30947 - Ley de Salud Mental",
-    "D.S. N.° 007-2020-SA - Reglamento",
-    "Normatividad MINSA sobre salud mental"
-  ]
-}; 
+  {
+    id: 2,
+    title: "Caso 2",
+    question: "¿Cuál es la respuesta correcta?",
+    options: ["Opción A", "Opción B", "Opción C"],
+    answer: 0,
+    explanation: "Explicación corta del caso 2."
+  }
+];
