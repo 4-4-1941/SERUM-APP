@@ -3,6 +3,9 @@ const navButtons = document.querySelectorAll(".nav-btn");
 const pageTitle = document.getElementById("page-title");
 const pageSubtitle = document.getElementById("page-subtitle");
 
+let timerId = null;
+let timeLeft = 60;
+
 function setActive(view) {
   navButtons.forEach(btn => btn.classList.toggle("active", btn.dataset.view === view));
 }
@@ -95,10 +98,42 @@ function renderSimulator() {
   root.innerHTML = `
     <div class="panel">
       <h3>Simulador cronometrado</h3>
-      <p>Configuración base para examen por tiempo y por bloque temático.</p>
-      <button class="action-btn">Iniciar simulación</button>
+      <p>Tiempo restante: <strong id="timer-label">${formatTime(timeLeft)}</strong></p>
+      <p>Pregunta ejemplo: paciente con riesgo psicosocial y necesidad de derivación.</p>
+      <button id="start-timer" class="action-btn">Iniciar cronómetro</button>
+      <button id="stop-timer" class="action-btn secondary">Detener</button>
     </div>
   `;
+
+  document.getElementById("start-timer").addEventListener("click", startTimer);
+  document.getElementById("stop-timer").addEventListener("click", stopTimer);
+}
+
+function formatTime(seconds) {
+  const m = String(Math.floor(seconds / 60)).padStart(2, "0");
+  const s = String(seconds % 60).padStart(2, "0");
+  return `${m}:${s}`;
+}
+
+function startTimer() {
+  stopTimer();
+  timerId = setInterval(() => {
+    timeLeft -= 1;
+    const timerLabel = document.getElementById("timer-label");
+    if (timerLabel) timerLabel.textContent = formatTime(timeLeft);
+    if (timeLeft <= 0) {
+      stopTimer();
+      const panel = document.querySelector(".panel");
+      if (panel) {
+        panel.insertAdjacentHTML("beforeend", `<p><strong>Tiempo agotado.</strong> Fin del simulador.</p>`);
+      }
+    }
+  }, 1000);
+}
+
+function stopTimer() {
+  if (timerId) clearInterval(timerId);
+  timerId = null;
 }
 
 function renderLibrary() {
@@ -115,6 +150,7 @@ function renderLibrary() {
 }
 
 function renderView(view) {
+  stopTimer();
   setActive(view);
   if (view === "dashboard") renderDashboard();
   if (view === "cases") renderDashboard();
