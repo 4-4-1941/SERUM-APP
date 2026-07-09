@@ -1,23 +1,5 @@
-const cases = [
-  {
-    id: 1,
-    title: "Caso 1",
-    question: "¿Qué pasa con este paciente?",
-    options: ["Respuesta A", "Respuesta B", "Respuesta C"],
-    answer: 1,
-    explanation: "Explicación corta del caso 1."
-  },
-  {
-    id: 2,
-    title: "Caso 2",
-    question: "¿Cuál es la respuesta correcta?",
-    options: ["Opción A", "Opción B", "Opción C"],
-    answer: 0,
-    explanation: "Explicación corta del caso 2."
-  }
-];
-
 const state = {
+  current: 0,
   completed: Number(localStorage.getItem("preSerumCompleted") || 0),
   correct: Number(localStorage.getItem("preSerumCorrect") || 0)
 };
@@ -39,12 +21,21 @@ function getAccuracy() {
 
 function renderStatsCard() {
   return `
-    <div class="panel">
-      <h3>Estado general</h3>
-      <p>Casos resueltos: <strong>${state.completed}</strong></p>
-      <p>Respuestas correctas: <strong>${state.correct}</strong></p>
-      <p>Precisión: <strong>${getAccuracy()}%</strong></p>
+    <div class="stats">
+      <div class="stat">
+        <span class="label">Casos resueltos</span>
+        <span class="value">${state.completed}</span>
+      </div>
+      <div class="stat">
+        <span class="label">Correctas</span>
+        <span class="value">${state.correct}</span>
+      </div>
+      <div class="stat">
+        <span class="label">Precisión</span>
+        <span class="value">${getAccuracy()}%</span>
+      </div>
     </div>
+    <div class="footer-note">Tu progreso se guarda en este navegador.</div>
   `;
 }
 
@@ -52,23 +43,24 @@ function safeText(value, fallback = "") {
   return typeof value === "string" && value.trim() ? value : fallback;
 }
 
-function renderCases() {
-  const items = cases.map((c, index) => `
+function renderCase(c) {
+  return `
     <div class="case-card">
-      <h3>${safeText(c.title, `Caso ${index + 1}`)}</h3>
+      <h2>${safeText(c.title, "Caso")}</h2>
       <p>${safeText(c.question, "Sin pregunta")}</p>
       <div class="options">
         ${c.options.map((opt, i) => `
-          <button onclick="answerCase(${c.id}, ${i})">${opt}</button>
+          <button class="option-btn" id="opt-${i}" onclick="answerCase(${c.id}, ${i})">${opt}</button>
         `).join("")}
       </div>
+      <div id="feedback" class="feedback"></div>
     </div>
-  `).join("");
+  `;
+}
 
-  const container = document.getElementById("app");
-  if (container) {
-    container.innerHTML = renderStatsCard() + items;
-  }
+function renderApp() {
+  const c = cases[state.current];
+  document.getElementById("app").innerHTML = renderStatsCard() + `<div class="cases-grid">${renderCase(c)}</div>`;
 }
 
 function answerCase(caseId, selectedIndex) {
@@ -78,8 +70,18 @@ function answerCase(caseId, selectedIndex) {
   const ok = selectedIndex === c.answer;
   updateStats(ok);
 
-  alert(ok ? "Correcto" : `Incorrecto. ${c.explanation}`);
-  renderCases();
+  const buttons = Array.from(document.querySelectorAll(".option-btn"));
+  buttons.forEach((btn, idx) => {
+    btn.disabled = true;
+    if (idx === c.answer) btn.classList.add("correct");
+    if (idx === selectedIndex && !ok) btn.classList.add("incorrect");
+  });
+
+  const feedback = document.getElementById("feedback");
+  feedback.style.display = "block";
+  feedback.textContent = ok ? "Correcto. " + c.explanation : "Incorrecto. " + c.explanation;
+
+  setTimeout(renderApp, 900);
 }
 
-document.addEventListener("DOMContentLoaded", renderCases);
+document.addEventListener("DOMContentLoaded", renderApp);
