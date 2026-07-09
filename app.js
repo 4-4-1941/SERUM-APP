@@ -1,3 +1,22 @@
+const cases = [
+  {
+    id: 1,
+    title: "Caso 1",
+    question: "¿Qué pasa con este paciente?",
+    options: ["Respuesta A", "Respuesta B", "Respuesta C"],
+    answer: 1,
+    explanation: "Explicación corta del caso 1."
+  },
+  {
+    id: 2,
+    title: "Caso 2",
+    question: "¿Cuál es la respuesta correcta?",
+    options: ["Opción A", "Opción B", "Opción C"],
+    answer: 0,
+    explanation: "Explicación corta del caso 2."
+  }
+];
+
 const state = {
   current: 0,
   completed: Number(localStorage.getItem("preSerumCompleted") || 0),
@@ -58,30 +77,67 @@ function renderCase(c) {
   `;
 }
 
-function renderApp() {
+function renderDashboard() {
+  return `
+    <div class="cases-grid">
+      <div class="case-card">
+        <h2>Bienvenido</h2>
+        <p>Selecciona un módulo en el panel izquierdo para comenzar.</p>
+      </div>
+    </div>
+  `;
+}
+
+function renderCases() {
   const c = cases[state.current];
-  document.getElementById("app").innerHTML = renderStatsCard() + `<div class="cases-grid">${renderCase(c)}</div>`;
+  return `
+    <div class="cases-grid">
+      ${renderCase(c)}
+    </div>
+  `;
 }
 
-function answerCase(caseId, selectedIndex) {
-  const c = cases.find(x => x.id === caseId);
-  if (!c) return;
-
-  const ok = selectedIndex === c.answer;
-  updateStats(ok);
-
-  const buttons = Array.from(document.querySelectorAll(".option-btn"));
-  buttons.forEach((btn, idx) => {
-    btn.disabled = true;
-    if (idx === c.answer) btn.classList.add("correct");
-    if (idx === selectedIndex && !ok) btn.classList.add("incorrect");
-  });
-
-  const feedback = document.getElementById("feedback");
-  feedback.style.display = "block";
-  feedback.textContent = ok ? "Correcto. " + c.explanation : "Incorrecto. " + c.explanation;
-
-  setTimeout(renderApp, 900);
+function renderSimulator() {
+  return `
+    <div class="cases-grid">
+      <div class="case-card">
+        <h2>Simulador</h2>
+        <p>Espacio para escenarios interactivos y práctica guiada.</p>
+      </div>
+    </div>
+  `;
 }
 
-document.addEventListener("DOMContentLoaded", renderApp);
+function renderLibrary() {
+  return `
+    <div class="cases-grid">
+      <div class="case-card">
+        <h2>Biblioteca Normativa</h2>
+        <p>Espacio para enlaces, protocolos y material de consulta.</p>
+      </div>
+    </div>
+  `;
+}
+
+function setHeader(title, subtitle) {
+  const pageTitle = document.getElementById("page-title");
+  const pageSubtitle = document.getElementById("page-subtitle");
+  if (pageTitle) pageTitle.textContent = title;
+  if (pageSubtitle) pageSubtitle.textContent = subtitle;
+}
+
+function renderView(view) {
+  const root = document.getElementById("view-root");
+  if (!root) return;
+
+  if (view === "dashboard") {
+    setHeader("Dashboard", "Resumen general del progreso y acceso a los módulos.");
+    root.innerHTML = renderDashboard();
+  } else if (view === "cases") {
+    setHeader("Módulo de Casos", "Responde los casos y revisa la retroalimentación.");
+    root.innerHTML = renderCases();
+  } else if (view === "simulator") {
+    setHeader("Simulador", "Práctica interactiva para entrenar decisiones.");
+    root.innerHTML = renderSimulator();
+  } else if (view === "library") {
+    setHeader("Biblioteca 
