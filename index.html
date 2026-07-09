@@ -6,14 +6,15 @@
   <title>Casos</title>
   <style>
     :root {
-      --bg: #eaf2ff;
-      --card: #ffffff;
+      --bg: #f4f7fb;
+      --left: #ffffff;
+      --right: #f8fbff;
       --text: #1f2937;
       --muted: #6b7280;
-      --primary: #2563eb;
-      --primary-dark: #1d4ed8;
+      --accent: #2563eb;
+      --accent-soft: #dbeafe;
       --border: #dbe6ff;
-      --shadow: 0 10px 30px rgba(37, 99, 235, 0.10);
+      --shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
       --radius: 18px;
     }
 
@@ -22,51 +23,87 @@
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: linear-gradient(180deg, #eff6ff 0%, var(--bg) 100%);
+      background: linear-gradient(180deg, #eef4ff 0%, var(--bg) 100%);
       color: var(--text);
-      padding: 24px;
+      min-height: 100vh;
     }
 
-    .wrap {
-      max-width: 980px;
-      margin: 0 auto;
+    .shell {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 18px;
+      min-height: 100vh;
+      padding: 18px;
     }
 
-    .header {
-      margin-bottom: 18px;
-    }
-
-    .header h1 {
-      margin: 0 0 8px;
-      font-size: 28px;
-    }
-
-    .header p {
-      margin: 0;
-      color: var(--muted);
-    }
-
-    .panel, .case-card {
-      background: var(--card);
+    .left, .right {
       border: 1px solid var(--border);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
+      overflow: hidden;
     }
 
-    .panel {
+    .left {
+      background: var(--left);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .right {
+      background: var(--right);
       padding: 18px;
-      margin-bottom: 18px;
+    }
+
+    .left-head {
+      padding: 18px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+    }
+
+    .left-head h1 {
+      margin: 0 0 8px;
+      font-size: 24px;
+    }
+
+    .left-head p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+
+    .left-body {
+      padding: 18px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .mini-card {
+      background: #f8fbff;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px;
+    }
+
+    .mini-card h3 {
+      margin: 0 0 8px;
+      font-size: 16px;
+    }
+
+    .mini-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.5;
     }
 
     .stats {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 16px;
     }
 
     .stat {
-      flex: 1 1 180px;
-      background: #f8fbff;
+      background: #ffffff;
       border: 1px solid var(--border);
       border-radius: 14px;
       padding: 14px;
@@ -80,22 +117,26 @@
     }
 
     .stat .value {
+      display: block;
       font-size: 24px;
       font-weight: 700;
-      color: var(--primary);
+      color: var(--accent);
     }
 
-    .grid {
+    .cases-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 18px;
+      gap: 16px;
     }
 
     .case-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 18px;
       padding: 18px;
+      box-shadow: var(--shadow);
     }
 
-    .case-card h3 {
+    .case-card h2 {
       margin: 0 0 10px;
       font-size: 20px;
     }
@@ -103,69 +144,94 @@
     .case-card p {
       margin: 0 0 14px;
       color: var(--muted);
-      line-height: 1.5;
+      line-height: 1.55;
     }
 
     .options {
-      display: flex;
-      flex-direction: column;
+      display: grid;
       gap: 10px;
     }
 
-    button {
+    .option-btn {
       width: 100%;
-      border: 0;
-      border-radius: 12px;
-      padding: 12px 14px;
-      font-size: 15px;
-      cursor: pointer;
+      text-align: left;
+      border: 1px solid #cfe0ff;
       background: #eff6ff;
       color: var(--text);
-      border: 1px solid #cfe0ff;
+      border-radius: 12px;
+      padding: 12px 14px;
+      cursor: pointer;
       transition: 0.2s ease;
-      text-align: left;
+      font-size: 15px;
     }
 
-    button:hover {
+    .option-btn:hover {
       background: #dbeafe;
       transform: translateY(-1px);
     }
 
-    .correct {
-      background: #dcfce7 !important;
-      border-color: #86efac !important;
+    .option-btn.correct {
+      background: #dcfce7;
+      border-color: #86efac;
     }
 
-    .incorrect {
-      background: #fee2e2 !important;
-      border-color: #fca5a5 !important;
+    .option-btn.incorrect {
+      background: #fee2e2;
+      border-color: #fca5a5;
     }
 
     .feedback {
-      margin-top: 12px;
-      padding: 12px;
+      margin-top: 14px;
       border-radius: 12px;
-      background: #f8fbff;
       border: 1px solid var(--border);
-      color: var(--text);
+      background: #f8fbff;
+      padding: 12px;
       display: none;
+      line-height: 1.5;
     }
 
     .footer-note {
-      margin-top: 16px;
-      font-size: 13px;
+      margin-top: 14px;
       color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 900px) {
+      .shell {
+        grid-template-columns: 1fr;
+      }
+      .stats {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="header">
-      <h1>Casos</h1>
-      <p>Responde cada caso y revisa tu progreso.</p>
-    </div>
+  <div class="shell">
+    <aside class="left">
+      <div class="left-head">
+        <h1>Panel principal</h1>
+        <p>Casos, progreso y estado general en un solo lugar.</p>
+      </div>
+      <div class="left-body">
+        <div class="mini-card">
+          <h3>Buscar casos</h3>
+          <p>Accede a los casos disponibles y responde de forma interactiva.</p>
+        </div>
+        <div class="mini-card">
+          <h3>Progreso</h3>
+          <p>Tu avance se conserva en este navegador para continuar después.</p>
+        </div>
+        <div class="mini-card">
+          <h3>Casos sugeridos</h3>
+          <p>La experiencia mantiene la estructura dividida que ya estabas usando.</p>
+        </div>
+      </div>
+    </aside>
 
-    <div id="app"></div>
+    <main class="right">
+      <div id="app"></div>
+    </main>
   </div>
 
   <script>
@@ -189,7 +255,6 @@
     ];
 
     const state = {
-      current: 0,
       completed: Number(localStorage.getItem("preSerumCompleted") || 0),
       correct: Number(localStorage.getItem("preSerumCorrect") || 0)
     };
@@ -211,22 +276,19 @@
 
     function renderStatsCard() {
       return `
-        <div class="panel">
-          <div class="stats">
-            <div class="stat">
-              <span class="label">Casos resueltos</span>
-              <span class="value">${state.completed}</span>
-            </div>
-            <div class="stat">
-              <span class="label">Respuestas correctas</span>
-              <span class="value">${state.correct}</span>
-            </div>
-            <div class="stat">
-              <span class="label">Precisión</span>
-              <span class="value">${getAccuracy()}%</span>
-            </div>
+        <div class="stats">
+          <div class="stat">
+            <span class="label">Casos resueltos</span>
+            <span class="value">${state.completed}</span>
           </div>
-          <div class="footer-note">Tu progreso se guarda en este navegador.</div>
+          <div class="stat">
+            <span class="label">Correctas</span>
+            <span class="value">${state.correct}</span>
+          </div>
+          <div class="stat">
+            <span class="label">Precisión</span>
+            <span class="value">${getAccuracy()}%</span>
+          </div>
         </div>
       `;
     }
@@ -238,11 +300,11 @@
     function renderCase(c) {
       return `
         <div class="case-card">
-          <h3>${safeText(c.title, "Caso")}</h3>
+          <h2>${safeText(c.title, "Caso")}</h2>
           <p>${safeText(c.question, "Sin pregunta")}</p>
           <div class="options">
             ${c.options.map((opt, i) => `
-              <button id="opt-${i}" onclick="answerCase(${c.id}, ${i})">${opt}</button>
+              <button class="option-btn" id="opt-${i}" onclick="answerCase(${c.id}, ${i})">${opt}</button>
             `).join("")}
           </div>
           <div id="feedback" class="feedback"></div>
@@ -251,8 +313,8 @@
     }
 
     function renderApp() {
-      const c = cases[state.current];
-      document.getElementById("app").innerHTML = renderStatsCard() + `<div class="grid">${renderCase(c)}</div>`;
+      const c = cases[0];
+      document.getElementById("app").innerHTML = renderStatsCard() + `<div class="cases-grid">${renderCase(c)}</div>`;
     }
 
     function answerCase(caseId, selectedIndex) {
@@ -262,23 +324,21 @@
       const ok = selectedIndex === c.answer;
       updateStats(ok);
 
-      const feedback = document.getElementById("feedback");
-      const buttons = Array.from(document.querySelectorAll(".options button"));
+      const buttons = Array.from(document.querySelectorAll(".option-btn"));
       buttons.forEach((btn, idx) => {
         btn.disabled = true;
         if (idx === c.answer) btn.classList.add("correct");
         if (idx === selectedIndex && !ok) btn.classList.add("incorrect");
       });
 
+      const feedback = document.getElementById("feedback");
       feedback.style.display = "block";
       feedback.textContent = ok ? "Correcto. " + c.explanation : "Incorrecto. " + c.explanation;
 
-      setTimeout(() => {
-        renderApp();
-      }, 900);
+      setTimeout(renderApp, 900);
     }
 
     document.addEventListener("DOMContentLoaded", renderApp);
   </script>
 </body>
-</html>
+        </html>
