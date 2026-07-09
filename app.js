@@ -1,143 +1,59 @@
-const cases = [
+const root = document.getElementById("view-root");
+const navButtons = document.querySelectorAll(".nav-btn");
+const pageTitle = document.getElementById("page-title");
+const pageSubtitle = document.getElementById("page-subtitle");
+
+let timerId = null;
+let timeLeft = 60;
+let score = Number(localStorage.getItem("preSerumScore") || 0);
+
+const interactiveCases = [
   {
     id: 1,
-    title: "Caso 1",
-    question: "¿Qué pasa con este paciente?",
-    options: ["Respuesta A", "Respuesta B", "Respuesta C"],
-    answer: 1,
-    explanation: "Explicación corta del caso 1."
+    title: "Riesgo suicida en adolescente",
+    level: "I-2",
+    specialty: "Psicología",
+    tags: ["salud mental", "crisis", "derivación"],
+    statement: "Adolescente de 16 años llega al establecimiento I-2 con ideación suicida, aislamiento, antecedente de violencia familiar y soporte limitado.",
+    question: "¿Cuál es la conducta más adecuada?",
+    options: [
+      "Dar consejería breve y citar en una semana.",
+      "Intervenir en crisis, estabilizar y derivar urgentemente.",
+      "Indicar reposo y observación domiciliaria."
+    ],
+    correct: 1,
+    feedback: "La conducta correcta es intervenir en crisis, estabilizar y derivar con urgencia por riesgo alto."
   },
   {
     id: 2,
-    title: "Caso 2",
-    question: "¿Cuál es la respuesta correcta?",
-    options: ["Opción A", "Opción B", "Opción C"],
-    answer: 0,
-    explanation: "Explicación corta del caso 2."
+    title: "Violencia familiar con ansiedad",
+    level: "I-2",
+    specialty: "Psicología",
+    tags: ["violencia familiar", "ansiedad", "tamizaje"],
+    statement: "Mujer adulta consulta por insomnio, ansiedad y dolor somático. Refiere episodios de violencia familiar y temor al regresar a casa.",
+    question: "¿Qué acción corresponde primero?",
+    options: [
+      "Tamizar riesgo, brindar soporte inicial y derivar según norma.",
+      "Solo prescribir descanso y control posterior.",
+      "Ignorar el antecedente para evitar revictimización."
+    ],
+    correct: 0,
+    feedback: "Primero se debe tamizar, brindar soporte inicial y definir derivación según el nivel de riesgo."
   }
 ];
 
-const state = {
-  current: 0,
-  completed: Number(localStorage.getItem("preSerumCompleted") || 0),
-  correct: Number(localStorage.getItem("preSerumCorrect") || 0)
-};
-
-function saveState() {
-  localStorage.setItem("preSerumCompleted", String(state.completed));
-  localStorage.setItem("preSerumCorrect", String(state.correct));
+function setActive(view) {
+  navButtons.forEach(btn => btn.classList.toggle("active", btn.dataset.view === view));
 }
 
-function updateStats(ok) {
-  state.completed += 1;
-  if (ok) state.correct += 1;
-  saveState();
+function saveProgress(key, value) {
+  localStorage.setItem(key, JSON.stringify(value));
 }
 
-function getAccuracy() {
-  return state.completed ? Math.round((state.correct / state.completed) * 100) : 0;
+function loadProgress(key, fallback) {
+  try {
+    return JSON.parse(localStorage.getItem(key)) ?? fallback;
+  } catch {
+    return fallback;
+  }
 }
-
-function renderStatsCard() {
-  return `
-    <div class="stats">
-      <div class="stat">
-        <span class="label">Casos resueltos</span>
-        <span class="value">${state.completed}</span>
-      </div>
-      <div class="stat">
-        <span class="label">Correctas</span>
-        <span class="value">${state.correct}</span>
-      </div>
-      <div class="stat">
-        <span class="label">Precisión</span>
-        <span class="value">${getAccuracy()}%</span>
-      </div>
-    </div>
-    <div class="footer-note">Tu progreso se guarda en este navegador.</div>
-  `;
-}
-
-function safeText(value, fallback = "") {
-  return typeof value === "string" && value.trim() ? value : fallback;
-}
-
-function renderCase(c) {
-  return `
-    <div class="case-card">
-      <h2>${safeText(c.title, "Caso")}</h2>
-      <p>${safeText(c.question, "Sin pregunta")}</p>
-      <div class="options">
-        ${c.options.map((opt, i) => `
-          <button class="option-btn" id="opt-${i}" onclick="answerCase(${c.id}, ${i})">${opt}</button>
-        `).join("")}
-      </div>
-      <div id="feedback" class="feedback"></div>
-    </div>
-  `;
-}
-
-function renderDashboard() {
-  return `
-    <div class="cases-grid">
-      <div class="case-card">
-        <h2>Bienvenido</h2>
-        <p>Selecciona un módulo en el panel izquierdo para comenzar.</p>
-      </div>
-    </div>
-  `;
-}
-
-function renderCases() {
-  const c = cases[state.current];
-  return `
-    <div class="cases-grid">
-      ${renderCase(c)}
-    </div>
-  `;
-}
-
-function renderSimulator() {
-  return `
-    <div class="cases-grid">
-      <div class="case-card">
-        <h2>Simulador</h2>
-        <p>Espacio para escenarios interactivos y práctica guiada.</p>
-      </div>
-    </div>
-  `;
-}
-
-function renderLibrary() {
-  return `
-    <div class="cases-grid">
-      <div class="case-card">
-        <h2>Biblioteca Normativa</h2>
-        <p>Espacio para enlaces, protocolos y material de consulta.</p>
-      </div>
-    </div>
-  `;
-}
-
-function setHeader(title, subtitle) {
-  const pageTitle = document.getElementById("page-title");
-  const pageSubtitle = document.getElementById("page-subtitle");
-  if (pageTitle) pageTitle.textContent = title;
-  if (pageSubtitle) pageSubtitle.textContent = subtitle;
-}
-
-function renderView(view) {
-  const root = document.getElementById("view-root");
-  if (!root) return;
-
-  if (view === "dashboard") {
-    setHeader("Dashboard", "Resumen general del progreso y acceso a los módulos.");
-    root.innerHTML = renderDashboard();
-  } else if (view === "cases") {
-    setHeader("Módulo de Casos", "Responde los casos y revisa la retroalimentación.");
-    root.innerHTML = renderCases();
-  } else if (view === "simulator") {
-    setHeader("Simulador", "Práctica interactiva para entrenar decisiones.");
-    root.innerHTML = renderSimulator();
-  } else if (view === "library") {
-    setHeader("Biblioteca 
