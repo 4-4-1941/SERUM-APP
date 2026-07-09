@@ -17,9 +17,7 @@
       --radius: 18px;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -133,6 +131,26 @@
       transform: translateY(-1px);
     }
 
+    .correct {
+      background: #dcfce7 !important;
+      border-color: #86efac !important;
+    }
+
+    .incorrect {
+      background: #fee2e2 !important;
+      border-color: #fca5a5 !important;
+    }
+
+    .feedback {
+      margin-top: 12px;
+      padding: 12px;
+      border-radius: 12px;
+      background: #f8fbff;
+      border: 1px solid var(--border);
+      color: var(--text);
+      display: none;
+    }
+
     .footer-note {
       margin-top: 16px;
       font-size: 13px;
@@ -171,6 +189,7 @@
     ];
 
     const state = {
+      current: 0,
       completed: Number(localStorage.getItem("preSerumCompleted") || 0),
       correct: Number(localStorage.getItem("preSerumCorrect") || 0)
     };
@@ -216,20 +235,24 @@
       return typeof value === "string" && value.trim() ? value : fallback;
     }
 
-    function renderCases() {
-      const items = cases.map((c, index) => `
+    function renderCase(c) {
+      return `
         <div class="case-card">
-          <h3>${safeText(c.title, `Caso ${index + 1}`)}</h3>
+          <h3>${safeText(c.title, "Caso")}</h3>
           <p>${safeText(c.question, "Sin pregunta")}</p>
           <div class="options">
             ${c.options.map((opt, i) => `
-              <button onclick="answerCase(${c.id}, ${i})">${opt}</button>
+              <button id="opt-${i}" onclick="answerCase(${c.id}, ${i})">${opt}</button>
             `).join("")}
           </div>
+          <div id="feedback" class="feedback"></div>
         </div>
-      `).join("");
+      `;
+    }
 
-      document.getElementById("app").innerHTML = renderStatsCard() + `<div class="grid">${items}</div>`;
+    function renderApp() {
+      const c = cases[state.current];
+      document.getElementById("app").innerHTML = renderStatsCard() + `<div class="grid">${renderCase(c)}</div>`;
     }
 
     function answerCase(caseId, selectedIndex) {
@@ -239,11 +262,23 @@
       const ok = selectedIndex === c.answer;
       updateStats(ok);
 
-      alert(ok ? "Correcto" : `Incorrecto. ${c.explanation}`);
-      renderCases();
+      const feedback = document.getElementById("feedback");
+      const buttons = Array.from(document.querySelectorAll(".options button"));
+      buttons.forEach((btn, idx) => {
+        btn.disabled = true;
+        if (idx === c.answer) btn.classList.add("correct");
+        if (idx === selectedIndex && !ok) btn.classList.add("incorrect");
+      });
+
+      feedback.style.display = "block";
+      feedback.textContent = ok ? "Correcto. " + c.explanation : "Incorrecto. " + c.explanation;
+
+      setTimeout(() => {
+        renderApp();
+      }, 900);
     }
 
-    document.addEventListener("DOMContentLoaded", renderCases);
+    document.addEventListener("DOMContentLoaded", renderApp);
   </script>
 </body>
 </html>
