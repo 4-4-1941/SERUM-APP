@@ -1,21 +1,42 @@
 const root = document.getElementById("view-root");
-const buttons = document.querySelectorAll(".nav-btn");
+const navButtons = document.querySelectorAll(".nav-btn");
+const pageTitle = document.getElementById("page-title");
+const pageSubtitle = document.getElementById("page-subtitle");
+
+function setActive(view) {
+  navButtons.forEach(btn => btn.classList.toggle("active", btn.dataset.view === view));
+}
 
 function renderDashboard() {
+  pageTitle.textContent = "Dashboard";
+  pageSubtitle.textContent = "Resumen general del progreso y acceso a los módulos.";
+
   root.innerHTML = `
-    <h2>Dashboard</h2>
-    <div class="cards">
-      ${appData.dashboard.progress.map(p => `
+    <div class="grid metrics">
+      ${appData.dashboard.metrics.map(m => `
         <div class="card">
-          <div class="card-title">${p.label}</div>
-          <div class="bar"><span style="width:${p.value}%"></span></div>
-          <div class="card-value">${p.value}%</div>
+          <span class="label">${m.label}</span>
+          <strong class="value">${m.value}</strong>
         </div>
       `).join("")}
     </div>
+
+    <h3>Progreso por bloque</h3>
+    <div class="progress-list">
+      ${appData.dashboard.progress.map(p => `
+        <div class="progress-item">
+          <div class="progress-head">
+            <span>${p.label}</span>
+            <span>${p.value}%</span>
+          </div>
+          <div class="bar"><span style="width:${p.value}%"></span></div>
+        </div>
+      `).join("")}
+    </div>
+
     <h3>Casos sugeridos</h3>
-    <div class="cases">
-      ${appData.dashboard.cases.map(c => `
+    <div class="grid cases">
+      ${appData.cases.map(c => `
         <button class="case-card" data-case="${c.id}">
           <strong>${c.title}</strong>
           <span>${c.level} · ${c.specialty}</span>
@@ -24,64 +45,85 @@ function renderDashboard() {
       `).join("")}
     </div>
   `;
+
+  bindCaseCards();
+}
+
+function bindCaseCards() {
   document.querySelectorAll(".case-card").forEach(btn => {
     btn.addEventListener("click", () => renderCase(Number(btn.dataset.case)));
   });
 }
 
 function renderCase(id) {
-  const c = appData.dashboard.cases.find(x => x.id === id);
+  const c = appData.cases.find(x => x.id === id);
+  pageTitle.textContent = c.title;
+  pageSubtitle.textContent = `${c.level} · ${c.specialty} · Caso típico de primer nivel`;
+
   root.innerHTML = `
-    <h2>${c.title}</h2>
-    <p><b>Nivel:</b> ${c.level} | <b>Especialidad:</b> ${c.specialty}</p>
     <div class="panel">
       <h3>Enunciado</h3>
-      <p>Paciente adolescente llega a un establecimiento I-2 con ideación suicida, antecedente de violencia y red de apoyo limitada.</p>
+      <p>${c.statement}</p>
     </div>
+
     <div class="panel">
-      <h3>Decisión</h3>
-      <button class="action-btn" id="decide">Intervenir y referir</button>
+      <h3>Decisión esperada</h3>
+      <p>${c.decision}</p>
+      <button id="show-feedback" class="action-btn">Ver retroalimentación</button>
     </div>
-    <div id="feedback"></div>
+
+    <div id="feedback-zone"></div>
   `;
 
-  document.getElementById("decide").addEventListener("click", () => {
-    document.getElementById("feedback").innerHTML = `
+  document.getElementById("show-feedback").addEventListener("click", () => {
+    document.getElementById("feedback-zone").innerHTML = `
       <div class="panel success">
-        <h3>Retroalimentación</h3>
-        <p>Conducta correcta: contención inicial, estabilización y referencia urgente según norma.</p>
-        <ul>${appData.norms.map(n => `<li>${n}</li>`).join("")}</ul>
+        <h3>Retroalimentación técnica</h3>
+        <ul>
+          ${appData.norms.map(n => `<li>${n}</li>`).join("")}
+        </ul>
+        <p>Conducta correcta: priorizar seguridad, estabilización y referencia según corresponda.</p>
       </div>
     `;
   });
 }
 
 function renderSimulator() {
+  pageTitle.textContent = "Simulador";
+  pageSubtitle.textContent = "Modo cronometrado y preguntas largas.";
+
   root.innerHTML = `
-    <h2>Simulador</h2>
     <div class="panel">
-      <p>Modo cronometrado, preguntas largas y resultados por bloque.</p>
-      <button class="action-btn">Iniciar examen</button>
+      <h3>Simulador cronometrado</h3>
+      <p>Configuración base para examen por tiempo y por bloque temático.</p>
+      <button class="action-btn">Iniciar simulación</button>
     </div>
   `;
 }
 
 function renderLibrary() {
+  pageTitle.textContent = "Biblioteca Normativa";
+  pageSubtitle.textContent = "Repositorio técnico de documentos y normas.";
+
   root.innerHTML = `
-    <h2>Biblioteca Normativa</h2>
     <div class="panel">
-      <ul>${appData.norms.map(n => `<li>${n}</li>`).join("")}</ul>
+      <ul>
+        ${appData.norms.map(n => `<li>${n}</li>`).join("")}
+      </ul>
     </div>
   `;
 }
 
-function setView(view) {
-  buttons.forEach(b => b.classList.toggle("active", b.dataset.view === view));
+function renderView(view) {
+  setActive(view);
   if (view === "dashboard") renderDashboard();
   if (view === "cases") renderDashboard();
   if (view === "simulator") renderSimulator();
   if (view === "library") renderLibrary();
 }
 
-buttons.forEach(btn => btn.addEventListener("click", () => setView(btn.dataset.view)));
-setView("dashboard");
+navButtons.forEach(btn => {
+  btn.addEventListener("click", () => renderView(btn.dataset.view));
+});
+
+renderDashboard();
