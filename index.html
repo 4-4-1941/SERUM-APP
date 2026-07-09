@@ -1,1 +1,439 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PRE SÉRUM PERÚ | Dashboard Casos</title>
+  <style>
+    :root{
+      --bg:#f5f7fb;
+      --panel:#ffffff;
+      --text:#16324f;
+      --muted:#6b7a90;
+      --line:#dbe3ee;
+      --primary:#2563eb;
+      --primary-2:#1d4ed8;
+      --success:#0f766e;
+      --warning:#b45309;
+      --danger:#b91c1c;
+      --chip:#eef4ff;
+      --shadow:0 10px 30px rgba(22,50,79,.08);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+    }
+    .app{
+      display:grid;
+      grid-template-columns: 280px 1fr 340px;
+      min-height:100vh;
+    }
+    .sidebar,.main,.right{
+      padding:24px;
+    }
+    .sidebar{
+      background:#0f172a;
+      color:#e2e8f0;
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+    }
+    .brand{
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:var(--radius);
+      padding:18px;
+    }
+    .brand h1{
+      margin:0 0 6px;
+      font-size:20px;
+    }
+    .brand p{
+      margin:0;
+      color:#cbd5e1;
+      font-size:13px;
+      line-height:1.4;
+    }
+    .nav{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+    .nav a{
+      text-decoration:none;
+      color:#e2e8f0;
+      padding:14px 16px;
+      border-radius:14px;
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.06);
+      font-weight:600;
+      font-size:14px;
+    }
+    .nav a.active{
+      background:linear-gradient(135deg,var(--primary),var(--primary-2));
+      border-color:transparent;
+    }
+    .meta{
+      margin-top:auto;
+      padding:16px;
+      border-radius:16px;
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.08);
+      font-size:13px;
+      line-height:1.5;
+      color:#cbd5e1;
+    }
+    .main{
+      display:flex;
+      flex-direction:column;
+      gap:20px;
+    }
+    .topbar,.section,.grid{
+      background:var(--panel);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+    .topbar{
+      padding:18px 20px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:16px;
+    }
+    .topbar h2{
+      margin:0;
+      font-size:22px;
+    }
+    .topbar p{
+      margin:4px 0 0;
+      color:var(--muted);
+      font-size:14px;
+    }
+    .btns{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .btn{
+      border:none;
+      border-radius:12px;
+      padding:12px 14px;
+      font-weight:700;
+      cursor:pointer;
+      font-size:13px;
+    }
+    .btn.primary{background:var(--primary); color:white;}
+    .btn.secondary{background:#eaf1ff; color:var(--primary);}
+    .section{
+      padding:18px 20px;
+    }
+    .section h3{
+      margin:0 0 10px;
+      font-size:16px;
+    }
+    .chips{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+    .chip{
+      background:var(--chip);
+      color:var(--primary-2);
+      padding:8px 12px;
+      border-radius:999px;
+      font-size:12px;
+      font-weight:700;
+    }
+    .cards{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:16px;
+    }
+    .card{
+      background:var(--panel);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:16px;
+      min-height:132px;
+    }
+    .card .label{
+      color:var(--muted);
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      font-weight:700;
+    }
+    .card .value{
+      font-size:30px;
+      font-weight:800;
+      margin:8px 0;
+    }
+    .card .desc{
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.45;
+    }
+    .list{
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+    .item{
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:14px 16px;
+      display:flex;
+      justify-content:space-between;
+      gap:16px;
+      align-items:flex-start;
+    }
+    .item h4{
+      margin:0 0 6px;
+      font-size:15px;
+    }
+    .item p{
+      margin:0;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.4;
+    }
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      padding:6px 10px;
+      border-radius:999px;
+      font-size:12px;
+      font-weight:800;
+      white-space:nowrap;
+    }
+    .b1{background:#dcfce7; color:#166534;}
+    .b2{background:#fef3c7; color:#92400e;}
+    .b3{background:#fee2e2; color:#991b1b;}
+    .right{
+      background:#f8fafc;
+      border-left:1px solid var(--line);
+      display:flex;
+      flex-direction:column;
+      gap:20px;
+    }
+    .panel{
+      background:var(--panel);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+    }
+    .panel h3{margin:0 0 12px; font-size:16px;}
+    .progress{
+      display:grid;
+      gap:12px;
+    }
+    .progress-row{
+      display:grid;
+      gap:6px;
+    }
+    .progress-row .top{
+      display:flex;
+      justify-content:space-between;
+      font-size:13px;
+      font-weight:700;
+    }
+    .bar{
+      height:10px;
+      background:#e5e7eb;
+      border-radius:999px;
+      overflow:hidden;
+    }
+    .fill{
+      height:100%;
+      border-radius:999px;
+      background:linear-gradient(90deg,var(--primary),#22c55e);
+    }
+    .note{
+      padding:14px;
+      border-radius:16px;
+      background:#eff6ff;
+      color:#1e3a8a;
+      font-size:13px;
+      line-height:1.5;
+      border:1px solid #dbeafe;
+    }
+    .footer{
+      color:var(--muted);
+      font-size:12px;
+      line-height:1.5;
+    }
+    @media (max-width: 1200px){
+      .app{grid-template-columns: 240px 1fr}
+      .right{grid-column:1 / -1; border-left:none}
+    }
+    @media (max-width: 860px){
+      .app{grid-template-columns:1fr}
+      .sidebar{order:2}
+      .main{order:1}
+      .right{order:3}
+      .cards{grid-template-columns:1fr}
+      .topbar{flex-direction:column; align-items:flex-start}
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <h1>PRE SÉRUM PERÚ</h1>
+        <p>Entrenamiento virtual técnico-normativo con prioridad en Psicología para primer nivel de atención.</p>
+      </div>
 
+      <nav class="nav">
+        <a class="active" href="#">Dashboard</a>
+        <a href="#">Módulo de Casos</a>
+        <a href="#">Simulador</a>
+        <a href="#">Biblioteca Normativa</a>
+        <a href="#">Analíticas</a>
+      </nav>
+
+      <div class="meta">
+        <strong>Contexto activo</strong><br>
+        I-2 · Psicología · Salud Mental Comunitaria · Referencia y Contrarreferencia
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="topbar">
+        <div>
+          <h2>Dashboard de Casos</h2>
+          <p>Revisión rápida del avance, casos pendientes y refuerzo normativo.</p>
+        </div>
+        <div class="btns">
+          <button class="btn primary">Iniciar caso</button>
+          <button class="btn secondary">Abrir simulador</button>
+        </div>
+      </div>
+
+      <section class="section">
+        <h3>Bloques transversales</h3>
+        <div class="chips">
+          <span class="chip">Salud Pública</span>
+          <span class="chip">Cuidado Integral</span>
+          <span class="chip">Gestión de Servicios</span>
+          <span class="chip">Ética e Interculturalidad</span>
+          <span class="chip">Investigación</span>
+        </div>
+      </section>
+
+      <section class="cards">
+        <div class="card">
+          <div class="label">Casos completados</div>
+          <div class="value">24</div>
+          <div class="desc">Casos clínicos y comunitarios resueltos con retroalimentación normativa.</div>
+        </div>
+        <div class="card">
+          <div class="label">Precisión promedio</div>
+          <div class="value">78%</div>
+          <div class="desc">Promedio de aciertos en decisiones, referencia y documentación.</div>
+        </div>
+        <div class="card">
+          <div class="label">Tiempo medio</div>
+          <div class="value">7:42</div>
+          <div class="desc">Duración media por caso en el módulo de lectura y decisión.</div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h3>Casos sugeridos</h3>
+        <div class="list">
+          <div class="item">
+            <div>
+              <h4>Caso 01 · Riesgo suicida en adolescente</h4>
+              <p>I-2 · Psicología · Intervención en crisis · Referencia urgente al servicio correspondiente.</p>
+            </div>
+            <span class="badge b3">Crítico</span>
+          </div>
+          <div class="item">
+            <div>
+              <h4>Caso 02 · Violencia familiar con ansiedad</h4>
+              <p>I-2 · Salud mental comunitaria · Tamizaje, soporte inicial y derivación según norma.</p>
+            </div>
+            <span class="badge b2">Medio</span>
+          </div>
+          <div class="item">
+            <div>
+              <h4>Caso 03 · Adherencia al tratamiento en adulto mayor</h4>
+              <p>I-2 · Curso de vida · Seguimiento, orientación familiar y continuidad de cuidados.</p>
+            </div>
+            <span class="badge b1">Bajo</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h3>Acciones del día</h3>
+        <div class="list">
+          <div class="item">
+            <div>
+              <h4>Revisar normativa asociada</h4>
+              <p>Lectura rápida de Ley 30947, reglamento y documentos MINSA vinculados al caso.</p>
+            </div>
+            <span class="badge b1">Norma</span>
+          </div>
+          <div class="item">
+            <div>
+              <h4>Ejecutar simulador cronometrado</h4>
+              <p>Preguntas largas con distractores complejos y timer para velocidad de lectura.</p>
+            </div>
+            <span class="badge b2">Tiempo</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <aside class="right">
+      <div class="panel">
+        <h3>Progreso por bloque</h3>
+        <div class="progress">
+          <div class="progress-row">
+            <div class="top"><span>Salud Pública</span><span>72%</span></div>
+            <div class="bar"><div class="fill" style="width:72%"></div></div>
+          </div>
+          <div class="progress-row">
+            <div class="top"><span>Cuidado Integral</span><span>81%</span></div>
+            <div class="bar"><div class="fill" style="width:81%"></div></div>
+          </div>
+          <div class="progress-row">
+            <div class="top"><span>Gestión</span><span>64%</span></div>
+            <div class="bar"><div class="fill" style="width:64%"></div></div>
+          </div>
+          <div class="progress-row">
+            <div class="top"><span>Ética</span><span>88%</span></div>
+            <div class="bar"><div class="fill" style="width:88%"></div></div>
+          </div>
+          <div class="progress-row">
+            <div class="top"><span>Investigación</span><span>55%</span></div>
+            <div class="bar"><div class="fill" style="width:55%"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h3>Retroalimentación activa</h3>
+        <div class="note">
+          Cada error debe mostrar la norma, la conducta correcta y el criterio de referencia o estabilización.
+        </div>
+      </div>
+
+      <div class="panel">
+        <h3>Biblioteca normativa</h3>
+        <div class="footer">
+          Ley N.° 30947 · D.S. N.° 007-2020-SA · Normatividad MINSA sobre salud mental · Guías y NTS relacionadas.
+        </div>
+      </div>
+    </aside>
+  </div>
+</body>
+  </html>
