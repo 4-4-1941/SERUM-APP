@@ -1,32 +1,126 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PRE SÉRUM PERÚ</title>
-  <link rel="stylesheet" href="./styles.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Casos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+    .panel, .case-card {
+      background: white;
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,.08);
+    }
+    .options {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+    button {
+      padding: 10px 14px;
+      border: 0;
+      border-radius: 8px;
+      cursor: pointer;
+      background: #2563eb;
+      color: white;
+    }
+  </style>
 </head>
 <body>
   <div id="app"></div>
-  <div class="app">
-    <aside class="sidebar">
-      <h1>PRE SÉRUM PERÚ</h1>
-      <nav>
-        <button class="nav-btn active" data-view="dashboard">Dashboard</button>
-        <button class="nav-btn" data-view="cases">Casos</button>
-        <button class="nav-btn" data-view="simulator">Simulador</button>
-        <button class="nav-btn" data-view="library">Biblioteca</button>
-      </nav>
-    </aside>
 
-    <main class="main">
-      <h2 id="page-title">Dashboard</h2>
-      <p id="page-subtitle">Resumen general</p>
-      <section id="view-root"></section>
-    </main>
-  </div>
+  <script>
+    const cases = [
+      {
+        id: 1,
+        title: "Caso 1",
+        question: "¿Qué pasa con este paciente?",
+        options: ["Respuesta A", "Respuesta B", "Respuesta C"],
+        answer: 1,
+        explanation: "Explicación corta del caso 1."
+      },
+      {
+        id: 2,
+        title: "Caso 2",
+        question: "¿Cuál es la respuesta correcta?",
+        options: ["Opción A", "Opción B", "Opción C"],
+        answer: 0,
+        explanation: "Explicación corta del caso 2."
+      }
+    ];
 
-  <script src="./data.js"></script>
-  <script src="./app.js"></script>
+    const state = {
+      completed: Number(localStorage.getItem("preSerumCompleted") || 0),
+      correct: Number(localStorage.getItem("preSerumCorrect") || 0)
+    };
+
+    function saveState() {
+      localStorage.setItem("preSerumCompleted", String(state.completed));
+      localStorage.setItem("preSerumCorrect", String(state.correct));
+    }
+
+    function updateStats(ok) {
+      state.completed += 1;
+      if (ok) state.correct += 1;
+      saveState();
+    }
+
+    function getAccuracy() {
+      return state.completed ? Math.round((state.correct / state.completed) * 100) : 0;
+    }
+
+    function renderStatsCard() {
+      return `
+        <div class="panel">
+          <h3>Estado general</h3>
+          <p>Casos resueltos: <strong>${state.completed}</strong></p>
+          <p>Respuestas correctas: <strong>${state.correct}</strong></p>
+          <p>Precisión: <strong>${getAccuracy()}%</strong></p>
+        </div>
+      `;
+    }
+
+    function safeText(value, fallback = "") {
+      return typeof value === "string" && value.trim() ? value : fallback;
+    }
+
+    function renderCases() {
+      const items = cases.map((c, index) => `
+        <div class="case-card">
+          <h3>${safeText(c.title, `Caso ${index + 1}`)}</h3>
+          <p>${safeText(c.question, "Sin pregunta")}</p>
+          <div class="options">
+            ${c.options.map((opt, i) => `
+              <button onclick="answerCase(${c.id}, ${i})">${opt}</button>
+            `).join("")}
+          </div>
+        </div>
+      `).join("");
+
+      const container = document.getElementById("app");
+      container.innerHTML = renderStatsCard() + items;
+    }
+
+    function answerCase(caseId, selectedIndex) {
+      const c = cases.find(x => x.id === caseId);
+      if (!c) return;
+
+      const ok = selectedIndex === c.answer;
+      updateStats(ok);
+
+      alert(ok ? "Correcto" : `Incorrecto. ${c.explanation}`);
+      renderCases();
+    }
+
+    document.addEventListener("DOMContentLoaded", renderCases);
+  </script>
 </body>
 </html>
