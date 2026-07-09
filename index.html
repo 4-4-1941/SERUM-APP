@@ -1,36 +1,34 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Casos</title>
-  <link rel="stylesheet" href="./styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PRE SÉRUM PERÚ</title>
+  <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
-  <div class="shell">
-    <aside class="left">
-      <div class="left-head">
-        <h1>Panel principal</h1>
-        <p>Casos, progreso y estado general en un solo lugar.</p>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <h1>PRE SÉRUM PERÚ</h1>
+        <p>Entrenamiento técnico-normativo para Psicología y salud comunitaria.</p>
       </div>
-      <div class="left-body">
-        <div class="mini-card">
-          <h3>Buscar casos</h3>
-          <p>Accede a los casos disponibles y responde de forma interactiva.</p>
-        </div>
-        <div class="mini-card">
-          <h3>Progreso</h3>
-          <p>Tu avance se conserva en este navegador para continuar después.</p>
-        </div>
-        <div class="mini-card">
-          <h3>Casos sugeridos</h3>
-          <p>La experiencia mantiene la estructura dividida que ya estabas usando.</p>
-        </div>
-      </div>
+
+      <nav class="nav">
+        <button class="nav-btn active" data-view="dashboard">Dashboard</button>
+        <button class="nav-btn" data-view="cases">Módulo de Casos</button>
+        <button class="nav-btn" data-view="simulator">Simulador</button>
+        <button class="nav-btn" data-view="library">Biblioteca Normativa</button>
+      </nav>
     </aside>
 
-    <main class="right">
-      <div id="app"></div>
+    <main class="main">
+      <header class="header">
+        <h2 id="page-title">Dashboard</h2>
+        <p id="page-subtitle">Resumen general del progreso y acceso a los módulos.</p>
+      </header>
+
+      <section id="view-root"></section>
     </main>
   </div>
 
