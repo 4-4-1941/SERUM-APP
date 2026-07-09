@@ -5,6 +5,41 @@ const pageSubtitle = document.getElementById("page-subtitle");
 
 let timerId = null;
 let timeLeft = 60;
+let score = 0;
+let currentCaseIndex = 0;
+
+const interactiveCases = [
+  {
+    id: 1,
+    title: "Riesgo suicida en adolescente",
+    level: "I-2",
+    specialty: "Psicología",
+    statement: "Adolescente de 16 años llega al establecimiento I-2 con ideación suicida, aislamiento, antecedente de violencia familiar y soporte limitado.",
+    question: "¿Cuál es la conducta más adecuada?",
+    options: [
+      "Dar consejería breve y citar en una semana.",
+      "Intervenir en crisis, estabilizar y derivar urgentemente.",
+      "Indicar reposo y observación domiciliaria."
+    ],
+    correct: 1,
+    feedback: "La conducta correcta es intervenir en crisis, estabilizar y derivar con urgencia por riesgo alto."
+  },
+  {
+    id: 2,
+    title: "Violencia familiar con ansiedad",
+    level: "I-2",
+    specialty: "Psicología",
+    statement: "Mujer adulta consulta por insomnio, ansiedad y dolor somático. Refiere episodios de violencia familiar y temor al regresar a casa.",
+    question: "¿Qué acción corresponde primero?",
+    options: [
+      "Tamizar riesgo, brindar soporte inicial y derivar según norma.",
+      "Solo prescribir descanso y control posterior.",
+      "Ignorar el antecedente para evitar revictimización."
+    ],
+    correct: 0,
+    feedback: "Primero se debe tamizar, brindar soporte inicial y definir derivación según el nivel de riesgo."
+  }
+];
 
 function setActive(view) {
   navButtons.forEach(btn => btn.classList.toggle("active", btn.dataset.view === view));
@@ -39,29 +74,26 @@ function renderDashboard() {
 
     <h3>Casos sugeridos</h3>
     <div class="grid cases">
-      ${appData.cases.map(c => `
+      ${interactiveCases.map(c => `
         <button class="case-card" data-case="${c.id}">
           <strong>${c.title}</strong>
           <span>${c.level} · ${c.specialty}</span>
-          <small>${c.summary}</small>
+          <small>${c.statement}</small>
         </button>
       `).join("")}
     </div>
   `;
 
-  bindCaseCards();
-}
-
-function bindCaseCards() {
   document.querySelectorAll(".case-card").forEach(btn => {
     btn.addEventListener("click", () => renderCase(Number(btn.dataset.case)));
   });
 }
 
 function renderCase(id) {
-  const c = appData.cases.find(x => x.id === id);
+  const c = interactiveCases.find(x => x.id === id);
+  currentCaseIndex = interactiveCases.findIndex(x => x.id === id);
   pageTitle.textContent = c.title;
-  pageSubtitle.textContent = `${c.level} · ${c.specialty} · Caso típico de primer nivel`;
+  pageSubtitle.textContent = `${c.level} · ${c.specialty} · Caso interactivo`;
 
   root.innerHTML = `
     <div class="panel">
@@ -70,24 +102,42 @@ function renderCase(id) {
     </div>
 
     <div class="panel">
-      <h3>Decisión esperada</h3>
-      <p>${c.decision}</p>
-      <button id="show-feedback" class="action-btn">Ver retroalimentación</button>
+      <h3>${c.question}</h3>
+      <div class="option-list">
+        ${c.options.map((opt, idx) => `
+          <button class="option-btn" data-opt="${idx}">${opt}</button>
+        `).join("")}
+      </div>
     </div>
 
-    <div id="feedback-zone"></div>
+    <div id="case-feedback"></div>
+
+    <div class="panel">
+      <button id="next-case" class="action-btn">Siguiente caso</button>
+    </div>
   `;
 
-  document.getElementById("show-feedback").addEventListener("click", () => {
-    document.getElementById("feedback-zone").innerHTML = `
-      <div class="panel success">
-        <h3>Retroalimentación técnica</h3>
-        <ul>
-          ${appData.norms.map(n => `<li>${n}</li>`).join("")}
-        </ul>
-        <p>Conducta correcta: priorizar seguridad, estabilización y referencia según corresponda.</p>
-      </div>
-    `;
+  document.querySelectorAll(".option-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const picked = Number(btn.dataset.opt);
+      const correct = picked === c.correct;
+      if (correct) score += 1;
+
+      document.getElementById("case-feedback").innerHTML = `
+        <div class="panel ${correct ? "success" : "error"}">
+          <h3>${correct ? "Correcto" : "Incorrecto"}</h3>
+          <p>${c.feedback}</p>
+          <p><strong>Puntaje actual:</strong> ${score}/${interactiveCases.length}</p>
+        </div>
+      `;
+
+      document.querySelectorAll(".option-btn").forEach(b => b.disabled = true);
+    });
+  });
+
+  document.getElementById("next-case").addEventListener("click", () => {
+    const nextIndex = (currentCaseIndex + 1) % interactiveCases.length;
+    renderCase(interactiveCases[nextIndex].id);
   });
 }
 
@@ -99,7 +149,6 @@ function renderSimulator() {
     <div class="panel">
       <h3>Simulador cronometrado</h3>
       <p>Tiempo restante: <strong id="timer-label">${formatTime(timeLeft)}</strong></p>
-      <p>Pregunta ejemplo: paciente con riesgo psicosocial y necesidad de derivación.</p>
       <button id="start-timer" class="action-btn">Iniciar cronómetro</button>
       <button id="stop-timer" class="action-btn secondary">Detener</button>
     </div>
@@ -117,6 +166,7 @@ function formatTime(seconds) {
 
 function startTimer() {
   stopTimer();
+  timeLeft = 60;
   timerId = setInterval(() => {
     timeLeft -= 1;
     const timerLabel = document.getElementById("timer-label");
@@ -124,9 +174,7 @@ function startTimer() {
     if (timeLeft <= 0) {
       stopTimer();
       const panel = document.querySelector(".panel");
-      if (panel) {
-        panel.insertAdjacentHTML("beforeend", `<p><strong>Tiempo agotado.</strong> Fin del simulador.</p>`);
-      }
+      if (panel) panel.insertAdjacentHTML("beforeend", `<p><strong>Tiempo agotado.</strong></p>`);
     }
   }, 1000);
 }
