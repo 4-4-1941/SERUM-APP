@@ -1,213 +1,85 @@
-const root = document.getElementById("view-root");
-const navButtons = document.querySelectorAll(".nav-btn");
-const pageTitle = document.getElementById("page-title");
-const pageSubtitle = document.getElementById("page-subtitle");
-
-let timerId = null;
-let timeLeft = 60;
-let score = 0;
-let currentCaseIndex = 0;
-
-const interactiveCases = [
+const cases = [
   {
     id: 1,
-    title: "Riesgo suicida en adolescente",
-    level: "I-2",
-    specialty: "Psicología",
-    statement: "Adolescente de 16 años llega al establecimiento I-2 con ideación suicida, aislamiento, antecedente de violencia familiar y soporte limitado.",
-    question: "¿Cuál es la conducta más adecuada?",
-    options: [
-      "Dar consejería breve y citar en una semana.",
-      "Intervenir en crisis, estabilizar y derivar urgentemente.",
-      "Indicar reposo y observación domiciliaria."
-    ],
-    correct: 1,
-    feedback: "La conducta correcta es intervenir en crisis, estabilizar y derivar con urgencia por riesgo alto."
+    title: "Caso 1",
+    question: "¿Qué pasa con este paciente?",
+    options: ["Respuesta A", "Respuesta B", "Respuesta C"],
+    answer: 1,
+    explanation: "Explicación corta del caso 1."
   },
   {
     id: 2,
-    title: "Violencia familiar con ansiedad",
-    level: "I-2",
-    specialty: "Psicología",
-    statement: "Mujer adulta consulta por insomnio, ansiedad y dolor somático. Refiere episodios de violencia familiar y temor al regresar a casa.",
-    question: "¿Qué acción corresponde primero?",
-    options: [
-      "Tamizar riesgo, brindar soporte inicial y derivar según norma.",
-      "Solo prescribir descanso y control posterior.",
-      "Ignorar el antecedente para evitar revictimización."
-    ],
-    correct: 0,
-    feedback: "Primero se debe tamizar, brindar soporte inicial y definir derivación según el nivel de riesgo."
+    title: "Caso 2",
+    question: "¿Cuál es la respuesta correcta?",
+    options: ["Opción A", "Opción B", "Opción C"],
+    answer: 0,
+    explanation: "Explicación corta del caso 2."
   }
 ];
 
-function setActive(view) {
-  navButtons.forEach(btn => btn.classList.toggle("active", btn.dataset.view === view));
+const state = {
+  completed: Number(localStorage.getItem("preSerumCompleted") || 0),
+  correct: Number(localStorage.getItem("preSerumCorrect") || 0)
+};
+
+function saveState() {
+  localStorage.setItem("preSerumCompleted", String(state.completed));
+  localStorage.setItem("preSerumCorrect", String(state.correct));
 }
 
-function renderDashboard() {
-  pageTitle.textContent = "Dashboard";
-  pageSubtitle.textContent = "Resumen general del progreso y acceso a los módulos.";
+function updateStats(ok) {
+  state.completed += 1;
+  if (ok) state.correct += 1;
+  saveState();
+}
 
-  root.innerHTML = `
-    <div class="grid metrics">
-      ${appData.dashboard.metrics.map(m => `
-        <div class="card">
-          <span class="label">${m.label}</span>
-          <strong class="value">${m.value}</strong>
-        </div>
-      `).join("")}
-    </div>
+function getAccuracy() {
+  return state.completed ? Math.round((state.correct / state.completed) * 100) : 0;
+}
 
-    <h3>Progreso por bloque</h3>
-    <div class="progress-list">
-      ${appData.dashboard.progress.map(p => `
-        <div class="progress-item">
-          <div class="progress-head">
-            <span>${p.label}</span>
-            <span>${p.value}%</span>
-          </div>
-          <div class="bar"><span style="width:${p.value}%"></span></div>
-        </div>
-      `).join("")}
-    </div>
-
-    <h3>Casos sugeridos</h3>
-    <div class="grid cases">
-      ${interactiveCases.map(c => `
-        <button class="case-card" data-case="${c.id}">
-          <strong>${c.title}</strong>
-          <span>${c.level} · ${c.specialty}</span>
-          <small>${c.statement}</small>
-        </button>
-      `).join("")}
+function renderStatsCard() {
+  return `
+    <div class="panel">
+      <h3>Estado general</h3>
+      <p>Casos resueltos: <strong>${state.completed}</strong></p>
+      <p>Respuestas correctas: <strong>${state.correct}</strong></p>
+      <p>Precisión: <strong>${getAccuracy()}%</strong></p>
     </div>
   `;
-
-  document.querySelectorAll(".case-card").forEach(btn => {
-    btn.addEventListener("click", () => renderCase(Number(btn.dataset.case)));
-  });
 }
 
-function renderCase(id) {
-  const c = interactiveCases.find(x => x.id === id);
-  currentCaseIndex = interactiveCases.findIndex(x => x.id === id);
-  pageTitle.textContent = c.title;
-  pageSubtitle.textContent = `${c.level} · ${c.specialty} · Caso interactivo`;
+function safeText(value, fallback = "") {
+  return typeof value === "string" && value.trim() ? value : fallback;
+}
 
-  root.innerHTML = `
-    <div class="panel">
-      <h3>Enunciado</h3>
-      <p>${c.statement}</p>
-    </div>
-
-    <div class="panel">
-      <h3>${c.question}</h3>
-      <div class="option-list">
-        ${c.options.map((opt, idx) => `
-          <button class="option-btn" data-opt="${idx}">${opt}</button>
+function renderCases() {
+  const items = cases.map((c, index) => `
+    <div class="case-card">
+      <h3>${safeText(c.title, `Caso ${index + 1}`)}</h3>
+      <p>${safeText(c.question, "Sin pregunta")}</p>
+      <div class="options">
+        ${c.options.map((opt, i) => `
+          <button onclick="answerCase(${c.id}, ${i})">${opt}</button>
         `).join("")}
       </div>
     </div>
+  `).join("");
 
-    <div id="case-feedback"></div>
-
-    <div class="panel">
-      <button id="next-case" class="action-btn">Siguiente caso</button>
-    </div>
-  `;
-
-  document.querySelectorAll(".option-btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const picked = Number(btn.dataset.opt);
-      const correct = picked === c.correct;
-      if (correct) score += 1;
-
-      document.getElementById("case-feedback").innerHTML = `
-        <div class="panel ${correct ? "success" : "error"}">
-          <h3>${correct ? "Correcto" : "Incorrecto"}</h3>
-          <p>${c.feedback}</p>
-          <p><strong>Puntaje actual:</strong> ${score}/${interactiveCases.length}</p>
-        </div>
-      `;
-
-      document.querySelectorAll(".option-btn").forEach(b => b.disabled = true);
-    });
-  });
-
-  document.getElementById("next-case").addEventListener("click", () => {
-    const nextIndex = (currentCaseIndex + 1) % interactiveCases.length;
-    renderCase(interactiveCases[nextIndex].id);
-  });
+  const container = document.getElementById("app");
+  if (container) {
+    container.innerHTML = renderStatsCard() + items;
+  }
 }
 
-function renderSimulator() {
-  pageTitle.textContent = "Simulador";
-  pageSubtitle.textContent = "Modo cronometrado y preguntas largas.";
+function answerCase(caseId, selectedIndex) {
+  const c = cases.find(x => x.id === caseId);
+  if (!c) return;
 
-  root.innerHTML = `
-    <div class="panel">
-      <h3>Simulador cronometrado</h3>
-      <p>Tiempo restante: <strong id="timer-label">${formatTime(timeLeft)}</strong></p>
-      <button id="start-timer" class="action-btn">Iniciar cronómetro</button>
-      <button id="stop-timer" class="action-btn secondary">Detener</button>
-    </div>
-  `;
+  const ok = selectedIndex === c.answer;
+  updateStats(ok);
 
-  document.getElementById("start-timer").addEventListener("click", startTimer);
-  document.getElementById("stop-timer").addEventListener("click", stopTimer);
+  alert(ok ? "Correcto" : `Incorrecto. ${c.explanation}`);
+  renderCases();
 }
 
-function formatTime(seconds) {
-  const m = String(Math.floor(seconds / 60)).padStart(2, "0");
-  const s = String(seconds % 60).padStart(2, "0");
-  return `${m}:${s}`;
-}
-
-function startTimer() {
-  stopTimer();
-  timeLeft = 60;
-  timerId = setInterval(() => {
-    timeLeft -= 1;
-    const timerLabel = document.getElementById("timer-label");
-    if (timerLabel) timerLabel.textContent = formatTime(timeLeft);
-    if (timeLeft <= 0) {
-      stopTimer();
-      const panel = document.querySelector(".panel");
-      if (panel) panel.insertAdjacentHTML("beforeend", `<p><strong>Tiempo agotado.</strong></p>`);
-    }
-  }, 1000);
-}
-
-function stopTimer() {
-  if (timerId) clearInterval(timerId);
-  timerId = null;
-}
-
-function renderLibrary() {
-  pageTitle.textContent = "Biblioteca Normativa";
-  pageSubtitle.textContent = "Repositorio técnico de documentos y normas.";
-
-  root.innerHTML = `
-    <div class="panel">
-      <ul>
-        ${appData.norms.map(n => `<li>${n}</li>`).join("")}
-      </ul>
-    </div>
-  `;
-}
-
-function renderView(view) {
-  stopTimer();
-  setActive(view);
-  if (view === "dashboard") renderDashboard();
-  if (view === "cases") renderDashboard();
-  if (view === "simulator") renderSimulator();
-  if (view === "library") renderLibrary();
-}
-
-navButtons.forEach(btn => {
-  btn.addEventListener("click", () => renderView(btn.dataset.view));
-});
-
-renderDashboard();
+document.addEventListener("DOMContentLoaded", renderCases);
