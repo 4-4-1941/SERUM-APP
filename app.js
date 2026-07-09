@@ -341,3 +341,9 @@ function renderView(view) {
 
 navButtons.forEach(btn => btn.addEventListener("click", () => renderView(btn.dataset.view)));
 renderDashboard();
+function resetProgress() {
+  state.completed = 0;
+  state.correct = 0;
+  saveState();
+  renderDashboard();
+}
