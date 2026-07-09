@@ -220,26 +220,36 @@ function renderDashboard() {
 }
 function renderCase(id) {
   const c = cases.find(x => x.id === id);
-  pageTitle.textContent = c.title;
-  pageSubtitle.textContent = `${c.level} · ${c.specialty}`;
+  if (!c) {
+    root.innerHTML = `
+      <div class="panel error">
+        <h3>Caso no encontrado</h3>
+        <p>El caso solicitado no existe en la lista actual.</p>
+      </div>
+    `;
+    return;
+  }
+
+  pageTitle.textContent = safeText(c.title, "Caso");
+  pageSubtitle.textContent = `${safeText(c.level, "Nivel")} · ${safeText(c.specialty, "Área")}`;
 
   root.innerHTML = `
     <div class="panel">
       <h3>Etiquetas</h3>
       <div class="chips">
-        ${c.tags.map(t => `<span class="chip">${t}</span>`).join("")}
+        ${(Array.isArray(c.tags) ? c.tags : []).map(t => `<span class="chip">${safeText(t, "tag")}</span>`).join("")}
       </div>
     </div>
 
     <div class="panel">
       <h3>Enunciado</h3>
-      <p>${c.statement}</p>
+      <p>${safeText(c.statement, "Sin enunciado")}</p>
     </div>
 
     <div class="panel">
-      <h3>${c.question}</h3>
+      <h3>${safeText(c.question, "Pregunta")}</h3>
       <div class="option-list">
-        ${c.options.map((opt, idx) => `<button class="option-btn" data-opt="${idx}">${opt}</button>`).join("")}
+        ${(Array.isArray(c.options) ? c.options : []).map((opt, idx) => `<button class="option-btn" data-opt="${idx}">${safeText(opt, "Opción")}</button>`).join("")}
       </div>
     </div>
 
@@ -253,25 +263,27 @@ function renderCase(id) {
   document.querySelectorAll(".option-btn").forEach(btn => {
     btn.addEventListener("click", () => {
       const picked = Number(btn.dataset.opt);
-      const ok = picked === c.correct;
-      if (ok) {
-        score += 1;
-        saveScore();
-      }
+      const ok = picked === Number(c.correct);
+
+      updateStats(ok);
+
       document.getElementById("feedback-zone").innerHTML = `
         <div class="panel ${ok ? "success" : "error"}">
           <h3>${ok ? "Correcto" : "Incorrecto"}</h3>
-          <p>${c.feedback}</p>
-          <p><strong>Puntaje:</strong> ${score}</p>
+          <p>${safeText(c.feedback, "Sin retroalimentación")}</p>
+          <p><strong>Completados:</strong> ${state.completed}</p>
+          <p><strong>Correctos:</strong> ${state.correct}</p>
+          <p><strong>Precisión:</strong> ${getAccuracy()}%</p>
         </div>
       `;
+
       document.querySelectorAll(".option-btn").forEach(b => b.disabled = true);
     });
   });
 
-  document.getElementById("back-dashboard").addEventListener("click", renderDashboard);
+  const back = document.getElementById("back-dashboard");
+  if (back) back.addEventListener("click", renderDashboard);
 }
-
 function renderSimulator() {
   pageTitle.textContent = "Simulador";
   pageSubtitle.textContent = "Cronómetro y práctica";
