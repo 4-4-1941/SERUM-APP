@@ -91,7 +91,40 @@ const cases = [
     feedback: "Primero se debe tamizar el riesgo y activar la ruta de atención."
   }
 ];
+const state = {
+  completed: Number(localStorage.getItem("preSerumCompleted") || 0),
+  correct: Number(localStorage.getItem("preSerumCorrect") || 0)
+};
 
+function saveState() {
+  localStorage.setItem("preSerumCompleted", String(state.completed));
+  localStorage.setItem("preSerumCorrect", String(state.correct));
+}
+
+function updateStats(ok) {
+  state.completed += 1;
+  if (ok) state.correct += 1;
+  saveState();
+}
+
+function getAccuracy() {
+  return state.completed ? Math.round((state.correct / state.completed) * 100) : 0;
+}
+
+function renderStatsCard() {
+  return `
+    <div class="panel">
+      <h3>Estado general</h3>
+      <p>Casos resueltos: <strong>${state.completed}</strong></p>
+      <p>Respuestas correctas: <strong>${state.correct}</strong></p>
+      <p>Precisión: <strong>${getAccuracy()}%</strong></p>
+    </div>
+  `;
+}
+
+function safeText(value, fallback = "") {
+  return typeof value === "string" && value.trim() ? value : fallback;
+    }
 function setActive(view) {
   navButtons.forEach(btn => btn.classList.toggle("active", btn.dataset.view === view));
 }
