@@ -44,7 +44,6 @@ function renderDashboard() {
       <div class="card"><span class="label">Normas</span><div class="value">${data.norms.length}</div></div>
       <div class="card"><span class="label">Decretos</span><div class="value">${data.decrees.length}</div></div>
     </section>
-
     <section class="two-col">
       <div class="panel">
         <h3 class="section-title">Progreso por caso</h3>
@@ -61,15 +60,12 @@ function renderDashboard() {
           }).join("")}
         </div>
       </div>
-
       <div class="panel">
         <h3 class="section-title">Bloques oficiales</h3>
         <div class="chips">
           ${data.chips.map(ch => `<span class="chip">${ch}</span>`).join("")}
         </div>
-        <p style="margin-top:14px;color:#64748b;line-height:1.5">
-          La app organiza el estudio según los bloques usados por la bibliografía oficial SERUMS publicada por el MINSA.
-        </p>
+        <p style="margin-top:14px;color:#64748b;line-height:1.5">La app organiza el estudio según los bloques temáticos SERUMS publicados por el MINSA.</p>
       </div>
     </section>
   `;
@@ -140,9 +136,7 @@ function renderCasePanel() {
     <div class="option-list">
       ${activeCase.options.map((o, i) => `<button class="option-btn" data-opt="${i}">${o}</button>`).join("")}
     </div>
-    <div class="chips" style="margin-top:12px">
-      ${activeCase.tags.map(t => `<span class="chip">${t}</span>`).join("")}
-    </div>
+    <div class="chips" style="margin-top:12px">${activeCase.tags.map(t => `<span class="chip">${t}</span>`).join("")}</div>
     <p style="margin-top:12px;color:#64748b">Tiempo: ${timeLeft}s · Intentos: ${st.attempts} · Puntaje: ${score}</p>
     <div id="case-feedback" style="margin-top:12px"></div>
   `;
@@ -201,9 +195,7 @@ function renderNorms() {
       </div>
       <div class="panel">
         <h3 class="section-title">Base oficial</h3>
-        <p style="line-height:1.6;color:#64748b">
-          La Ley N.° 23330 figura como norma base del SERUMS en GOB.PE y el MINSA publica la bibliografía oficial de evaluación 2026 con los bloques temáticos que guían el estudio [web:511][web:512][web:517].
-        </p>
+        <p style="line-height:1.6;color:#64748b">La Ley N.° 23330 figura como norma base del SERUMS en GOB.PE y el MINSA publica la bibliografía oficial de evaluación 2026 con los bloques temáticos que guían el estudio.</p>
       </div>
     </section>
   `;
@@ -233,9 +225,7 @@ function renderDecrees() {
       </div>
       <div class="panel">
         <h3 class="section-title">Enfoque</h3>
-        <p style="line-height:1.6;color:#64748b">
-          Esta sección deja preparado el proyecto para cargar más resoluciones, directivas y lineamientos oficiales sin tocar la arquitectura.
-        </p>
+        <p style="line-height:1.6;color:#64748b">Esta sección deja preparado el proyecto para cargar más resoluciones, directivas y lineamientos oficiales sin tocar la arquitectura.</p>
       </div>
     </section>
   `;
@@ -275,8 +265,7 @@ function renderResources() {
 function bindToggles() {
   root.querySelectorAll(".toggle").forEach(btn => {
     btn.addEventListener("click", () => {
-      const panel = document.getElementById(btn.dataset.target);
-      panel.classList.toggle("open");
+      document.getElementById(btn.dataset.target).classList.toggle("open");
     });
   });
 }
@@ -285,13 +274,11 @@ function renderView(view) {
   clearInterval(timerId);
   timerId = null;
   activeCase = null;
-
   if (view === "dashboard") renderDashboard();
   if (view === "cases") renderCases();
   if (view === "norms") renderNorms();
   if (view === "decrees") renderDecrees();
   if (view === "resources") renderResources();
-
   setActive(view);
   updateBadges();
 }
