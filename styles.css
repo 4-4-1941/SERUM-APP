@@ -21,7 +21,7 @@ body {
   min-height: 100vh;
 }
 
-.shell {
+.app {
   display: grid;
   grid-template-columns: 320px 1fr;
   gap: 18px;
@@ -29,63 +29,84 @@ body {
   padding: 18px;
 }
 
-.left, .right {
+.sidebar,
+.main {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   overflow: hidden;
 }
 
-.left {
+.sidebar {
   background: var(--left);
   display: flex;
   flex-direction: column;
 }
 
-.right {
+.main {
   background: var(--right);
   padding: 18px;
 }
 
-.left-head {
+.brand {
   padding: 18px;
   border-bottom: 1px solid var(--border);
   background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
 }
 
-.left-head h1 {
+.brand h1 {
   margin: 0 0 8px;
   font-size: 24px;
 }
 
-.left-head p {
+.brand p {
   margin: 0;
   color: var(--muted);
   line-height: 1.4;
 }
 
-.left-body {
+.nav {
   padding: 18px;
   display: grid;
-  gap: 14px;
+  gap: 12px;
 }
 
-.mini-card {
-  background: #f8fbff;
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 14px;
+.nav-btn {
+  width: 100%;
+  text-align: left;
+  border: 1px solid #cfe0ff;
+  background: #eff6ff;
+  color: var(--text);
+  border-radius: 12px;
+  padding: 12px 14px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  font-size: 15px;
 }
 
-.mini-card h3 {
-  margin: 0 0 8px;
-  font-size: 16px;
+.nav-btn:hover {
+  background: #dbeafe;
+  transform: translateY(-1px);
 }
 
-.mini-card p {
+.nav-btn.active {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+.header {
+  margin-bottom: 16px;
+}
+
+.header h2 {
+  margin: 0 0 6px;
+  font-size: 22px;
+}
+
+.header p {
   margin: 0;
   color: var(--muted);
-  line-height: 1.5;
 }
 
 .stats {
@@ -190,9 +211,10 @@ body {
 }
 
 @media (max-width: 900px) {
-  .shell {
+  .app {
     grid-template-columns: 1fr;
   }
+
   .stats {
     grid-template-columns: 1fr;
   }
