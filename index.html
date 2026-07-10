@@ -6,56 +6,34 @@
   <title>Serums</title>
   <style>
     :root{
-      --bg:#eef3f8;
-      --card:#ffffff;
-      --text:#17324d;
-      --muted:#5f6f82;
-      --accent:#2563eb;
-      --accent2:#0f766e;
-      --border:#d8e1ea;
-      --shadow:0 12px 30px rgba(16,24,40,.10);
-      --soft:#f4f7fb;
+      --bg:#eef3f8; --card:#ffffff; --text:#17324d; --muted:#5f6f82;
+      --accent:#2563eb; --accent2:#0f766e; --border:#d8e1ea;
+      --shadow:0 12px 30px rgba(16,24,40,.10); --soft:#f4f7fb;
     }
     *{box-sizing:border-box}
     body{
-      margin:0;
-      font-family:Arial,sans-serif;
+      margin:0;font-family:Arial,sans-serif;
       background:radial-gradient(circle at top,#f8fbff,var(--bg));
-      color:var(--text);
-      min-height:100vh;
+      color:var(--text);min-height:100vh
     }
     .wrap{max-width:1280px;margin:0 auto;padding:20px 16px 28px}
     .topbar{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:12px;
-      flex-wrap:wrap;
-      margin-bottom:16px
+      display:flex;justify-content:space-between;align-items:center;gap:12px;
+      flex-wrap:wrap;margin-bottom:16px
     }
     h1{margin:0;font-size:30px;letter-spacing:-.02em}
     .subtitle{margin:6px 0 0;color:var(--muted);font-size:14px}
     .badge{
-      background:rgba(37,99,235,.10);
-      color:var(--accent);
-      border:1px solid rgba(37,99,235,.18);
-      padding:8px 12px;
-      border-radius:999px;
-      font-size:13px;
-      font-weight:700
+      background:rgba(37,99,235,.10);color:var(--accent);
+      border:1px solid rgba(37,99,235,.18);padding:8px 12px;border-radius:999px;
+      font-size:13px;font-weight:700
     }
     .layout{
-      display:grid;
-      grid-template-columns:1.25fr .95fr;
-      gap:16px;
-      align-items:start
+      display:grid;grid-template-columns:1.25fr .95fr;gap:16px;align-items:start
     }
     .panel,.side{
-      background:var(--card);
-      border:1px solid var(--border);
-      border-radius:18px;
-      box-shadow:var(--shadow);
-      overflow:hidden
+      background:var(--card);border:1px solid var(--border);border-radius:18px;
+      box-shadow:var(--shadow);overflow:hidden
     }
     .panel-head{
       padding:16px 18px;
@@ -66,143 +44,73 @@
     .panel-head p{margin:6px 0 0;opacity:.92;font-size:13px}
     .panel-body{padding:16px 18px}
     .timer-box{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:12px;
-      background:var(--soft);
-      border:1px solid var(--border);
-      border-radius:14px;
-      padding:12px 14px;
-      margin-bottom:14px;
-      flex-wrap:wrap
+      display:flex;justify-content:space-between;align-items:center;gap:12px;
+      background:var(--soft);border:1px solid var(--border);border-radius:14px;
+      padding:12px 14px;margin-bottom:14px;flex-wrap:wrap
     }
     .timer{font-size:22px;font-weight:800;color:var(--accent2);letter-spacing:.04em}
     .small{color:var(--muted);font-size:13px}
     .filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
     .chip{
-      border:1px solid var(--border);
-      background:#fbfdff;
-      color:#345;
-      padding:8px 12px;
-      border-radius:999px;
-      font-size:13px;
-      cursor:pointer
+      border:1px solid var(--border);background:#fbfdff;color:#345;
+      padding:8px 12px;border-radius:999px;font-size:13px;cursor:pointer
     }
     .chip.active{
-      background:rgba(37,99,235,.10);
-      border-color:rgba(37,99,235,.22);
-      color:var(--accent);
-      font-weight:700
+      background:rgba(37,99,235,.10);border-color:rgba(37,99,235,.22);
+      color:var(--accent);font-weight:700
     }
     .list{display:grid;gap:10px}
     .acc-item{
-      border:1px solid var(--border);
-      border-radius:16px;
-      overflow:hidden;
-      background:#fff
+      border:1px solid var(--border);border-radius:16px;overflow:hidden;background:#fff
     }
     .acc-btn{
-      width:100%;
-      border:0;
-      background:#fbfdff;
-      cursor:pointer;
-      text-align:left;
-      padding:14px 15px;
-      display:flex;
-      justify-content:space-between;
-      gap:14px;
-      align-items:center
+      width:100%;border:0;background:#fbfdff;cursor:pointer;text-align:left;
+      padding:14px 15px;display:flex;justify-content:space-between;gap:14px;align-items:center
     }
     .acc-title{font-weight:800;color:#203246}
     .acc-meta{font-size:12px;color:var(--muted);margin-top:4px}
     .chev{font-size:18px;color:var(--muted);transition:transform .2s ease}
     .acc-item.open .chev{transform:rotate(180deg)}
     .acc-panel{
-      display:grid;
-      grid-template-rows:0fr;
-      transition:grid-template-rows .25s ease;
+      display:grid;grid-template-rows:0fr;transition:grid-template-rows .25s ease;
       border-top:1px solid transparent
     }
-    .acc-item.open .acc-panel{
-      grid-template-rows:1fr;
-      border-top-color:var(--border)
-    }
+    .acc-item.open .acc-panel{grid-template-rows:1fr;border-top-color:var(--border)}
     .acc-inner{overflow:hidden;padding:0 15px}
     .acc-item.open .acc-inner{padding:14px 15px 15px}
     .kvs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
     .pill{
-      display:inline-block;
-      background:#f4f7fb;
-      border:1px solid var(--border);
-      color:var(--muted);
-      padding:6px 10px;
-      border-radius:999px;
-      font-size:12px
+      display:inline-block;background:#f4f7fb;border:1px solid var(--border);
+      color:var(--muted);padding:6px 10px;border-radius:999px;font-size:12px
     }
     .statement,.question{margin:0 0 12px;line-height:1.58;color:#24364a}
     .section-label{
-      font-size:12px;
-      text-transform:uppercase;
-      letter-spacing:.10em;
-      color:var(--muted);
-      margin:12px 0 8px;
-      font-weight:700
+      font-size:12px;text-transform:uppercase;letter-spacing:.10em;color:var(--muted);
+      margin:12px 0 8px;font-weight:700
     }
     .options{list-style:none;padding:0;margin:0;display:grid;gap:8px}
     .option{
-      border:1px solid var(--border);
-      background:#fbfdff;
-      border-radius:12px;
-      padding:10px 12px;
-      line-height:1.45
+      border:1px solid var(--border);background:#fbfdff;border-radius:12px;
+      padding:10px 12px;line-height:1.45
     }
-    .option.correct{
-      border-color:rgba(15,118,110,.35);
-      background:rgba(15,118,110,.07)
-    }
+    .option.correct{border-color:rgba(15,118,110,.35);background:rgba(15,118,110,.07)}
     .answer{
-      margin-top:12px;
-      padding:12px;
-      border-radius:12px;
-      background:rgba(37,99,235,.08);
-      border:1px solid rgba(37,99,235,.16)
+      margin-top:12px;padding:12px;border-radius:12px;
+      background:rgba(37,99,235,.08);border:1px solid rgba(37,99,235,.16)
     }
     .answer strong{color:var(--accent)}
     .side{padding:16px}
     .side h2{margin:0 0 10px;font-size:18px}
     .side p{margin:0 0 12px;color:var(--muted);line-height:1.6;font-size:14px}
     .block{
-      border:1px solid var(--border);
-      border-radius:14px;
-      background:#fbfdff;
-      padding:12px;
-      margin-bottom:10px
+      border:1px solid var(--border);border-radius:14px;background:#fbfdff;padding:12px;margin-bottom:10px
     }
     .block h3{margin:0 0 8px;font-size:14px}
     .block ul{margin:0;padding-left:18px;color:#36485d;line-height:1.55}
-    .stats{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:10px;
-      margin-top:12px
-    }
-    .stat{
-      border:1px solid var(--border);
-      border-radius:14px;
-      background:#fbfdff;
-      padding:12px
-    }
-    .stat b{
-      display:block;
-      font-size:20px;
-      color:var(--accent2);
-      margin-bottom:3px
-    }
-    @media (max-width: 960px){
-      .layout{grid-template-columns:1fr}
-      .stats{grid-template-columns:1fr}
-    }
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+    .stat{border:1px solid var(--border);border-radius:14px;background:#fbfdff;padding:12px}
+    .stat b{display:block;font-size:20px;color:var(--accent2);margin-bottom:3px}
+    @media (max-width: 960px){ .layout{grid-template-columns:1fr} .stats{grid-template-columns:1fr} }
   </style>
 </head>
 <body>
@@ -273,7 +181,9 @@
         { id: 4, block: "Salud pública", title: "Brote diarreico en comunidad", level: "I-2", specialty: "Medicina / Salud Pública", tags: ["vigilancia", "brotes", "notificación"], statement: "En una comunidad rural se identifican 8 personas con diarrea aguda tras una actividad comunal con agua no segura.", question: "¿Cuál es la primera acción correcta?", options: ["Esperar confirmación de laboratorio antes de actuar.", "Notificar, iniciar investigación y control del evento.", "Dar tratamiento individual y cerrar el caso."], correct: 1, feedback: "En brotes, la prioridad es notificar, investigar y activar medidas de control." },
         { id: 5, block: "Cuidado integral", title: "Hipertensión no controlada", level: "I-3", specialty: "Enfermería / Medicina", tags: ["crónicos", "adherencia", "control"], statement: "Paciente de 58 años con hipertensión y tres controles elevados refiere olvido frecuente de medicamentos.", question: "¿Qué estrategia inicial corresponde?", options: ["Suspender el tratamiento y reevaluar en 6 meses.", "Refuerzo de adherencia, educación y control programado.", "Indicar solo dieta y no registrar seguimiento."], correct: 1, feedback: "El manejo inicial debe reforzar adherencia, educación y seguimiento programado." },
         { id: 6, block: "Ética e interculturalidad", title: "Consentimiento y lengua originaria", level: "I-2", specialty: "Psicología / Medicina", tags: ["consentimiento", "idioma", "derechos"], statement: "Paciente quechuahablante requiere procedimiento y no comprende la explicación en castellano.", question: "¿Qué debe hacerse?", options: ["Proceder sin explicación para no retrasar la atención.", "Brindar información comprensible y asegurar consentimiento informado.", "Pedir que firme sin aclarar dudas."], correct: 1, feedback: "La atención ética exige información comprensible y consentimiento informado." },
-        { id: 7, block: "Gestión", title: "Referencia de emergencia", level: "I-4", specialty: "Gestión / Medicina", tags: ["referencia", "estabilización", "continuidad"], statement: "Paciente con signos de shock requiere traslado a mayor complejidad.", question: "¿Qué paso es prioritario?", options: ["Enviar inmediatamente sin estabilizar.", "Estabilizar y coordinar referencia con continuidad asistencial.", "Esperar al familiar para decidir."], correct: 1, feedback: "La prioridad es estabilizar antes de coordinar la referencia." }
+        { id: 7, block: "Gestión", title: "Referencia de emergencia", level: "I-4", specialty: "Gestión / Medicina", tags: ["referencia", "estabilización", "continuidad"], statement: "Paciente con signos de shock requiere traslado a mayor complejidad.", question: "¿Qué paso es prioritario?", options: ["Enviar inmediatamente sin estabilizar.", "Estabilizar y coordinar referencia con continuidad asistencial.", "Esperar al familiar para decidir."], correct: 1, feedback: "La prioridad es estabilizar antes de coordinar la referencia." },
+        { id: 8, block: "Gestión", title: "Abastecimiento de medicamentos", level: "I-3", specialty: "Gestión", tags: ["inventario", "abastecimiento", "logística"], statement: "El centro de salud presenta quiebre de stock de insumos críticos por mala programación.", question: "¿Cuál es la respuesta más adecuada?", options: ["Esperar al siguiente mes.", "Actualizar programación y alertar abastecimiento.", "Retirar el registro de consumo."], correct: 1, feedback: "La gestión correcta es actualizar programación y comunicar el desabastecimiento." },
+        { id: 9, block: "Cuidado integral", title: "Control prenatal tardío", level: "I-2", specialty: "Obstetricia / Medicina", tags: ["prenatal", "seguimiento", "riesgo"], statement: "Gestante de 22 semanas acude por primera vez a control prenatal.", question: "¿Qué se debe hacer primero?", options: ["Aplazar la atención hasta el siguiente mes.", "Iniciar evaluación integral y clasificación de riesgo.", "Enviar a domicilio sin registro."], correct: 1, feedback: "Se debe iniciar evaluación integral y clasificación de riesgo de inmediato." }
       ],
       norms: [
         "Guía técnica de atención integral.",
@@ -427,4 +337,4 @@
     })();
   </script>
 </body>
-  </html>
+</html>
