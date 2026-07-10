@@ -2,6 +2,7 @@ window.SERUMS_DATA = {
   cases: [
     {
       id: 1,
+      career: "Psicología",
       block: "Psicología",
       title: "Riesgo suicida en adolescente",
       level: "I-2",
@@ -19,6 +20,7 @@ window.SERUMS_DATA = {
     },
     {
       id: 2,
+      career: "Psicología",
       block: "Psicología",
       title: "Violencia familiar con ansiedad",
       level: "I-2",
@@ -36,6 +38,7 @@ window.SERUMS_DATA = {
     },
     {
       id: 3,
+      career: "Psicología",
       block: "Psicología",
       title: "Ataque de pánico en consulta",
       level: "I-2",
@@ -53,6 +56,7 @@ window.SERUMS_DATA = {
     },
     {
       id: 4,
+      career: "Psicología",
       block: "Psicología",
       title: "Depresión y baja adherencia",
       level: "I-3",
@@ -70,6 +74,7 @@ window.SERUMS_DATA = {
     },
     {
       id: 5,
+      career: "Psicología",
       block: "Psicología",
       title: "Duelo complicado",
       level: "I-2",
@@ -87,6 +92,7 @@ window.SERUMS_DATA = {
     },
     {
       id: 6,
+      career: "Psicología",
       block: "Psicología",
       title: "Violencia sexual y contención",
       level: "I-2",
@@ -104,6 +110,7 @@ window.SERUMS_DATA = {
     },
     {
       id: 7,
+      career: "Psicología",
       block: "Psicología",
       title: "Ansiedad generalizada",
       level: "I-3",
@@ -121,6 +128,7 @@ window.SERUMS_DATA = {
     },
     {
       id: 8,
+      career: "Psicología",
       block: "Psicología",
       title: "Consumo problemático",
       level: "I-3",
@@ -138,6 +146,7 @@ window.SERUMS_DATA = {
     },
     {
       id: 9,
+      career: "Psicología",
       block: "Psicología",
       title: "Riesgo de violencia en pareja",
       level: "I-2",
@@ -155,6 +164,7 @@ window.SERUMS_DATA = {
     },
     {
       id: 10,
+      career: "Psicología",
       block: "Psicología",
       title: "Estrés laboral severo",
       level: "I-3",
@@ -172,6 +182,7 @@ window.SERUMS_DATA = {
     },
     {
       id: 11,
+      career: "Medicina",
       block: "Salud pública",
       title: "Brote diarreico en comunidad",
       level: "I-2",
@@ -189,6 +200,7 @@ window.SERUMS_DATA = {
     },
     {
       id: 12,
+      career: "Enfermería",
       block: "Cuidado integral",
       title: "Hipertensión no controlada",
       level: "I-3",
@@ -206,6 +218,7 @@ window.SERUMS_DATA = {
     },
     {
       id: 13,
+      career: "Psicología",
       block: "Ética e interculturalidad",
       title: "Consentimiento y lengua originaria",
       level: "I-2",
@@ -223,6 +236,7 @@ window.SERUMS_DATA = {
     },
     {
       id: 14,
+      career: "Transversal",
       block: "Gestión",
       title: "Referencia de emergencia",
       level: "I-4",
@@ -240,6 +254,7 @@ window.SERUMS_DATA = {
     },
     {
       id: 15,
+      career: "Psicología",
       block: "Psicología",
       title: "Evaluación de ansiedad en adolescente",
       level: "I-2",
@@ -257,6 +272,7 @@ window.SERUMS_DATA = {
     },
     {
       id: 16,
+      career: "Psicología",
       block: "Psicología",
       title: "Intervención breve por crisis",
       level: "I-2",
@@ -274,6 +290,7 @@ window.SERUMS_DATA = {
     },
     {
       id: 17,
+      career: "Enfermería",
       block: "Salud pública",
       title: "Cobertura de vacunación",
       level: "I-2",
@@ -291,6 +308,7 @@ window.SERUMS_DATA = {
     },
     {
       id: 18,
+      career: "Obstetricia",
       block: "Cuidado integral",
       title: "Control prenatal tardío",
       level: "I-2",
@@ -308,6 +326,7 @@ window.SERUMS_DATA = {
     },
     {
       id: 19,
+      career: "Psicología",
       block: "Psicología",
       title: "Duelo por pérdida reciente",
       level: "I-2",
@@ -325,6 +344,7 @@ window.SERUMS_DATA = {
     },
     {
       id: 20,
+      career: "Psicología",
       block: "Psicología",
       title: "Psicoeducación familiar",
       level: "I-2",
