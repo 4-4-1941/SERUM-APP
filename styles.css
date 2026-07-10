@@ -252,6 +252,31 @@ h1,h2,h3{font-family:"Source Serif 4",Georgia,serif}
 
 .option-btn:hover{background:var(--primary-soft);border-color:var(--primary)}
 
+.option-btn.selected{
+  border-color:var(--primary);
+  background:var(--primary-soft);
+  box-shadow:inset 0 0 0 1px var(--primary);
+}
+
+.option-btn.success{
+  border-color:var(--green);
+  background:#EAF6EF;
+  box-shadow:inset 0 0 0 1px var(--green);
+}
+
+.option-btn.error{
+  border-color:var(--red);
+  background:#FCEBEA;
+  box-shadow:inset 0 0 0 1px var(--red);
+}
+
+.option-btn:disabled{cursor:default}
+
+.action-btn:disabled{
+  background:#A9B7B3;
+  cursor:not-allowed;
+}
+
 .action-btn{
   margin-top:12px;
   padding:12px 16px;
