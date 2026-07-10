@@ -48,6 +48,12 @@ function renderDashboard() {
     return { career, total: casesOfCareer.length, resolved };
   });
 
+  const byBlock = data.chips.map(block => {
+    const casesOfBlock = data.cases.filter(c => c.block === block);
+    const resolved = casesOfBlock.filter(c => (caseState[c.id] || {}).correct).length;
+    return { block, total: casesOfBlock.length, resolved };
+  }).filter(b => b.total > 0);
+
   root.innerHTML = `
     <section class="grid metrics">
       <div class="card"><span class="label">Puntaje</span><div class="value">${score}</div></div>
@@ -71,11 +77,19 @@ function renderDashboard() {
         </div>
       </div>
       <div class="panel">
-        <h3 class="section-title">Bloques oficiales</h3>
-        <div class="chips">
-          ${data.chips.map(ch => `<span class="chip">${ch}</span>`).join("")}
+        <h3 class="section-title">Progreso por bloque temático</h3>
+        <div class="progress-list">
+          ${byBlock.map(bb => {
+            const pct = bb.total ? fmtPct(Math.round((bb.resolved / bb.total) * 100)) : 0;
+            return `
+              <div>
+                <div class="progress-head"><span>${bb.block}</span><span>${bb.resolved}/${bb.total} · ${pct}%</span></div>
+                <div class="bar"><span style="width:${pct}%"></span></div>
+              </div>
+            `;
+          }).join("")}
         </div>
-        <p style="margin-top:14px;color:#5B6E6A;line-height:1.5">La app organiza el estudio según los bloques temáticos SERUMS publicados por el MINSA, con prioridad en Psicología e integración interdisciplinaria de las demás carreras de la salud.</p>
+        <p style="margin-top:14px;color:#5B6E6A;line-height:1.5">Bloques temáticos oficiales SERUMS, con prioridad en Psicología e integración interdisciplinaria de las demás carreras de la salud.</p>
       </div>
     </section>
   `;
