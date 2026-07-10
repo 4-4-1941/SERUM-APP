@@ -341,9 +341,80 @@ window.SERUMS_DATA = {
       feedback: "La mejor conducta es psicoeducar, orientar señales de alarma y programar seguimiento."
     }
   ],
-  norms: [],
-  decrees: [],
-  resources: [],
+  norms: [
+    {
+      code: "Ley N.° 23330",
+      title: "Ley del Servicio Rural y Urbano Marginal de Salud",
+      summary: "Norma base que crea el SERUMS como servicio a la comunidad para profesionales de la salud recién titulados.",
+      detail: "Establece que el SERUMS es requisito indispensable para laborar en el Sector Público, postular a la Segunda Especialización y acceder a becas o ayudas estatales de perfeccionamiento. Alcanza a médicos, odontólogos, enfermeras, obstetras, químico-farmacéuticos, nutricionistas, tecnólogos médicos, trabajadores sociales, biólogos, psicólogos, médicos veterinarios e ingenieros sanitarios."
+    },
+    {
+      code: "D.S. N.° 005-97-SA",
+      title: "Reglamento de la Ley N.° 23330",
+      summary: "Reglamenta la organización, ejecución y comités responsables del proceso SERUMS.",
+      detail: "Define la estructura operativa del SERUMS mediante el Comité Central, los Comités Regionales, Subregionales y el Comité Médico, encargados de la planificación estratégica y el seguimiento del servicio a nivel nacional. Ha sido modificado en múltiples ocasiones (D.S. N.° 007-2008-SA, R.M. N.° 088-2009/MINSA, entre otras)."
+    },
+    {
+      code: "D.S. N.° 013-2024-SA",
+      title: "Evaluación para el Servicio Rural y Urbano Marginal de Salud",
+      summary: "Dispone la implementación de una evaluación formal como parte del proceso SERUMS.",
+      detail: "Incorpora un componente de evaluación de conocimientos dentro del proceso de acceso al SERUMS, reforzando la exigencia técnica para la asignación de plazas y dando origen a instructivos anuales específicos (por ejemplo, el Instructivo del Proceso SERUMS 2026-I)."
+    },
+    {
+      code: "R.M. N.° 1159-2017/MINSA",
+      title: "Directiva Administrativa N.° 246-MINSA/2017/DIGEP",
+      summary: "Establece precisiones operativas para el desarrollo del SERUMS a cargo de la DIGEP.",
+      detail: "Precisa procedimientos administrativos para la ejecución del servicio, coordinados por la Dirección General de Personal de la Salud (DIGEP), órgano del MINSA responsable de la política sectorial de personal de salud."
+    }
+  ],
+  decrees: [
+    {
+      code: "D.S. N.° 007-2008-SA",
+      title: "Modificaciones al Reglamento de la Ley N.° 23330",
+      summary: "Ajusta disposiciones del reglamento original del SERUMS.",
+      detail: "Forma parte de una serie de modificatorias reglamentarias (junto con R.M. N.° 088-2009/MINSA y normas posteriores) que actualizan los procedimientos de organización y ejecución del servicio conforme cambian las necesidades del sistema de salud."
+    },
+    {
+      code: "R.M. N.° 966-2020/MINSA",
+      title: "Guía técnica de procedimiento SERUMS",
+      summary: "Aprueba lineamientos técnicos operativos vinculados al desarrollo del servicio.",
+      detail: "Complementa el marco normativo con precisiones de procedimiento para las instancias regionales y subregionales encargadas de coordinar el SERUMS en su jurisdicción."
+    },
+    {
+      code: "Instructivo SERUMS 2026-I",
+      title: "Instructivo para el Proceso SERUMS 2026-I",
+      summary: "Documento anual que regula la postulación, requisitos y cronograma del proceso vigente.",
+      detail: "Detalla condiciones de postulación (incluyendo profesionales titulados en el extranjero y validación de documentos), el rol del Comité de Régimen Especial SERUMS (CRES) en Lima Metropolitana, y la generación de la Constancia de Inscripción SERUMS a través del aplicativo SERUMS Digital."
+    },
+    {
+      code: "R.M. N.° 428-2025/MINSA y R.M. N.° 605-2024/MINSA",
+      title: "Modificatorias recientes al Reglamento del SERUMS",
+      summary: "Actualizaciones más recientes identificadas al Reglamento de la Ley N.° 23330.",
+      detail: "Confirman que el marco normativo del SERUMS se actualiza de forma periódica; se recomienda verificar cada proceso convocatoria contra la versión vigente publicada en El Peruano y en el portal institucional del MINSA."
+    }
+  ],
+  resources: [
+    {
+      type: "Bibliografía oficial",
+      title: "Bibliografía MINSA para la evaluación SERUMS",
+      summary: "Compendio de lecturas oficiales que sustenta los bloques temáticos evaluados (salud pública, cuidado integral, ética e interculturalidad, gestión y psicología)."
+    },
+    {
+      type: "Compendio normativo",
+      title: "Normas legales y modificatorias del SERUMS",
+      summary: "Recopilación de leyes, decretos supremos y resoluciones ministeriales que reglamentan el servicio, útil para verificar la versión vigente antes de cada proceso."
+    },
+    {
+      type: "Protocolo clínico",
+      title: "Rutas de atención y referencia en crisis de salud mental",
+      summary: "Material de apoyo para el manejo de casos de riesgo suicida, violencia familiar y crisis de ansiedad en el primer nivel de atención."
+    },
+    {
+      type: "Herramienta de estudio",
+      title: "Mapa de bloques temáticos por especialidad",
+      summary: "Guía de referencia cruzada entre bloque, nivel de establecimiento (I-2, I-3, I-4) y especialidad, alineada con los casos interactivos de esta app."
+    }
+  ],
   chips: ["Psicología", "Salud pública", "Cuidado integral", "Ética e interculturalidad", "Gestión"],
   scoreKey: "score",
   caseStateKey: "caseState",
