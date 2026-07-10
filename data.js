@@ -340,3 +340,12 @@ cases: [
     feedback: "La mejor conducta es psicoeducar, orientar señales de alarma y programar seguimiento."
   }
 ]
+window.SERUMS_DATA = {
+  cases: [...],
+  norms: [...],
+  decrees: [...],
+  resources: [...],
+  scoreKey: "score",
+  caseStateKey: "caseState",
+  notesKey: "notes"
+};
