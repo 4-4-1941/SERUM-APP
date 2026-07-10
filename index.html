@@ -1,5 +1,5 @@
 <script>
-(function(){
+(function () {
   const data = window.SERUMS_DATA;
   const casesEl = document.getElementById("cases");
   const chipsEl = document.getElementById("chips");
@@ -9,41 +9,53 @@
   const casesCount = document.getElementById("casesCount");
   const openCount = document.getElementById("openCount");
   const tagCount = document.getElementById("tagCount");
+  const timerEl = document.getElementById("timer");
 
   let activeFilter = "Todos";
-  let openId = data.cases[0] ? data.cases[0].id : null;
+  let openId = data.cases && data.cases[0] ? data.cases[0].id : null;
 
-  function renderSide(){
+  function renderSide() {
     normsEl.innerHTML = (data.norms || []).map(x => `<li>${x}</li>`).join("");
     decreesEl.innerHTML = (data.decrees || []).map(x => `<li>${x}</li>`).join("");
     resourcesEl.innerHTML = (data.resources || []).map(x => `<li>${x}</li>`).join("");
     casesCount.textContent = (data.cases || []).length;
-    tagCount.textContent = (data.chips || []).length ? (data.chips.length - 1) : 0;
+    tagCount.textContent = Math.max((data.chips || []).length - 1, 0);
   }
 
-  function renderChips(){
+  function renderChips() {
     chipsEl.innerHTML = (data.chips || []).map(ch => `
-      <button class="chip ${activeFilter===ch?'active':''}" data-chip="${ch}" type="button">${ch}</button>
+      <button class="chip ${activeFilter === ch ? 'active' : ''}" data-chip="${ch}" type="button">${ch}</button>
     `).join("");
   }
 
-  function filteredCases(){
-    if(activeFilter === "Todos") return data.cases || [];
-    return (data.cases || []).filter(c => c.block === activeFilter || c.specialty === activeFilter);
+  function filteredCases() {
+    const all = data.cases || [];
+    if (activeFilter === "Todos") return all;
+    return all.filter(c => c.block === activeFilter || c.specialty === activeFilter);
   }
 
-  function renderCases(){
+  function renderCases() {
     const arr = filteredCases();
-    if(!arr.length){
-      casesEl.innerHTML = `<div class="acc-item"><div class="acc-btn"><div><div class="acc-title">No hay casos</div><div class="acc-meta">Revisa el filtro seleccionado</div></div></div></div>`;
+
+    if (!arr.length) {
+      casesEl.innerHTML = `
+        <article class="acc-item">
+          <div class="acc-btn">
+            <div>
+              <div class="acc-title">No hay casos</div>
+              <div class="acc-meta">Cambia el filtro o revisa tu data</div>
+            </div>
+          </div>
+        </article>
+      `;
       openCount.textContent = "0";
       return;
     }
 
-    if(!arr.some(c => c.id === openId)) openId = arr[0].id;
+    if (!arr.some(c => c.id === openId)) openId = arr[0].id;
 
     casesEl.innerHTML = arr.map(c => `
-      <article class="acc-item ${openId===c.id ? 'open' : ''}" data-id="${c.id}">
+      <article class="acc-item ${openId === c.id ? 'open' : ''}" data-id="${c.id}">
         <button class="acc-btn" type="button" data-action="toggle-case">
           <div>
             <div class="acc-title">${c.title}</div>
@@ -60,7 +72,7 @@
             <p class="question">${c.question || ""}</p>
             <div class="section-label">Opciones</div>
             <ul class="options">
-              ${(c.options || []).map((o,i)=>`<li class="option ${i===c.correct?'correct':''}">${String.fromCharCode(65+i)}. ${o}</li>`).join("")}
+              ${(c.options || []).map((o, i) => `<li class="option ${i === c.correct ? 'correct' : ''}">${String.fromCharCode(65 + i)}. ${o}</li>`).join("")}
             </ul>
             <div class="answer"><strong>Respuesta:</strong> ${c.feedback || ""}</div>
           </div>
@@ -72,28 +84,29 @@
   }
 
   chipsEl.addEventListener("click", (e) => {
-    const b = e.target.closest("[data-chip]");
-    if(!b) return;
-    activeFilter = b.dataset.chip;
+    const btn = e.target.closest("[data-chip]");
+    if (!btn) return;
+    activeFilter = btn.dataset.chip;
     renderChips();
     renderCases();
   });
 
   casesEl.addEventListener("click", (e) => {
     const btn = e.target.closest("[data-action='toggle-case']");
-    if(!btn) return;
+    if (!btn) return;
     const item = btn.closest(".acc-item");
+    if (!item) return;
     const id = Number(item.dataset.id);
-    openId = (openId === id) ? null : id;
+    openId = openId === id ? null : id;
     renderCases();
   });
 
-  function tick(){
+  function tick() {
     const now = new Date();
-    const hh = String(now.getHours()).padStart(2,'0');
-    const mm = String(now.getMinutes()).padStart(2,'0');
-    const ss = String(now.getSeconds()).padStart(2,'0');
-    document.getElementById("timer").textContent = `${hh}:${mm}:${ss}`;
+    const hh = String(now.getHours()).padStart(2, "0");
+    const mm = String(now.getMinutes()).padStart(2, "0");
+    const ss = String(now.getSeconds()).padStart(2, "0");
+    timerEl.textContent = `${hh}:${mm}:${ss}`;
   }
 
   renderSide();
@@ -102,4 +115,4 @@
   tick();
   setInterval(tick, 1000);
 })();
-    </script>
+</script>
