@@ -12,6 +12,9 @@ let notes = localStorage.getItem(data.notesKey) || "";
 let timerId = null;
 let timeLeft = 60;
 let activeCase = null;
+let currentList = [];      // lista filtrada vigente, para "Siguiente caso"
+let selectedOption = null; // opción marcada, aún no confirmada
+let confirmed = false;     // true tras pulsar "Confirmar respuesta"
 
 function loadProgress(key, fallback) {
   try { return JSON.parse(localStorage.getItem(key)) ?? fallback; } catch { return fallback; }
@@ -37,6 +40,14 @@ function fmtPct(n) {
 function renderDashboard() {
   pageTitle.textContent = "Tablero SERUMS";
   pageSubtitle.textContent = "Casos, normativa y progreso en una sola vista.";
+
+  const careers = [...new Set(data.cases.map(c => c.career || c.specialty))];
+  const byCareer = careers.map(career => {
+    const casesOfCareer = data.cases.filter(c => (c.career || c.specialty) === career);
+    const resolved = casesOfCareer.filter(c => (caseState[c.id] || {}).correct).length;
+    return { career, total: casesOfCareer.length, resolved };
+  });
+
   root.innerHTML = `
     <section class="grid metrics">
       <div class="card"><span class="label">Puntaje</span><div class="value">${score}</div></div>
@@ -46,14 +57,13 @@ function renderDashboard() {
     </section>
     <section class="two-col">
       <div class="panel">
-        <h3 class="section-title">Progreso por caso</h3>
+        <h3 class="section-title">Progreso por carrera</h3>
         <div class="progress-list">
-          ${data.cases.map(c => {
-            const st = caseState[c.id] || { attempts: 0, correct: false };
-            const pct = st.correct ? 100 : fmtPct(st.attempts * 35);
+          ${byCareer.map(bc => {
+            const pct = bc.total ? fmtPct(Math.round((bc.resolved / bc.total) * 100)) : 0;
             return `
               <div>
-                <div class="progress-head"><span>${c.title}</span><span>${pct}%</span></div>
+                <div class="progress-head"><span>${bc.career}</span><span>${bc.resolved}/${bc.total} · ${pct}%</span></div>
                 <div class="bar"><span style="width:${pct}%"></span></div>
               </div>
             `;
@@ -65,7 +75,7 @@ function renderDashboard() {
         <div class="chips">
           ${data.chips.map(ch => `<span class="chip">${ch}</span>`).join("")}
         </div>
-        <p style="margin-top:14px;color:#64748b;line-height:1.5">La app organiza el estudio según los bloques temáticos SERUMS publicados por el MINSA.</p>
+        <p style="margin-top:14px;color:#5B6E6A;line-height:1.5">La app organiza el estudio según los bloques temáticos SERUMS publicados por el MINSA, con prioridad en Psicología e integración interdisciplinaria de las demás carreras de la salud.</p>
       </div>
     </section>
   `;
@@ -73,15 +83,15 @@ function renderDashboard() {
 
 function renderCases() {
   pageTitle.textContent = "Casos interactivos";
-  pageSubtitle.textContent = "Abre un filtro y elige una especialidad para ver sus casos.";
+  pageSubtitle.textContent = "Elige carrera, bloque o nivel para ver sus casos.";
   root.innerHTML = `
     <section class="two-col">
       <div class="panel">
-        <input id="case-search" class="search" placeholder="Buscar caso, bloque o especialidad..." />
+        <input id="case-search" class="search" placeholder="Buscar caso, bloque o carrera..." />
 
         <details class="filter-box" open>
-          <summary>Especialidad</summary>
-          <div class="option-list" id="specialty-list"></div>
+          <summary>Carrera</summary>
+          <div class="option-list" id="career-list"></div>
         </details>
 
         <details class="filter-box">
@@ -89,46 +99,65 @@ function renderCases() {
           <div class="option-list" id="block-list"></div>
         </details>
 
+        <details class="filter-box">
+          <summary>Nivel de establecimiento</summary>
+          <div class="option-list" id="level-list"></div>
+        </details>
+
         <div class="case-list" id="case-list"></div>
       </div>
 
       <div class="panel" id="case-panel">
         <h3 class="section-title">Selecciona un caso</h3>
-        <p>Abre un filtro y elige una opción para cargar los casos relacionados.</p>
+        <p>Elige un filtro y luego un caso de la lista para comenzar.</p>
       </div>
     </section>
   `;
 
   const list = document.getElementById("case-list");
   const search = document.getElementById("case-search");
-  const specialtyList = document.getElementById("specialty-list");
+  const careerList = document.getElementById("career-list");
   const blockList = document.getElementById("block-list");
+  const levelList = document.getElementById("level-list");
 
-  const specialties = [...new Set(data.cases.map(c => c.specialty))];
+  const careers = [...new Set(data.cases.map(c => c.career || c.specialty))];
   const blocks = [...new Set(data.cases.map(c => c.block))];
+  const levels = [...new Set(data.cases.map(c => c.level))].sort();
 
-  let selectedSpecialty = "";
+  let selectedCareer = "";
   let selectedBlock = "";
+  let selectedLevel = "";
 
   function renderFilters() {
-    specialtyList.innerHTML = specialties.map(s => `
-      <button class="option-btn" data-specialty="${s}">${s}</button>
+    careerList.innerHTML = careers.map(c => `
+      <button class="option-btn" data-career="${c}">${c}</button>
     `).join("");
 
     blockList.innerHTML = blocks.map(b => `
       <button class="option-btn" data-block="${b}">${b}</button>
     `).join("");
 
-    specialtyList.querySelectorAll(".option-btn").forEach(btn => {
+    levelList.innerHTML = levels.map(l => `
+      <button class="option-btn" data-level="${l}">${l}</button>
+    `).join("");
+
+    careerList.querySelectorAll(".option-btn").forEach(btn => {
       btn.addEventListener("click", () => {
-        selectedSpecialty = btn.dataset.specialty;
+        selectedCareer = selectedCareer === btn.dataset.career ? "" : btn.dataset.career;
         draw(search.value);
       });
     });
 
     blockList.querySelectorAll(".option-btn").forEach(btn => {
       btn.addEventListener("click", () => {
-        selectedBlock = btn.dataset.block;
+        selectedBlock = selectedBlock === btn.dataset.block ? "" : btn.dataset.block;
+        draw(search.value);
+      });
+    });
+
+    levelList.querySelectorAll(".option-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        selectedLevel = selectedLevel === btn.dataset.level ? "" : btn.dataset.level;
         draw(search.value);
       });
     });
@@ -137,20 +166,27 @@ function renderCases() {
   function draw(filter = "") {
     const q = filter.toLowerCase();
     const filtered = data.cases.filter(c => {
-      const text = [c.title, c.block, c.specialty, c.statement, ...(c.tags || [])].join(" ").toLowerCase();
+      const text = [c.title, c.block, c.specialty, c.career, c.statement, ...(c.tags || [])].join(" ").toLowerCase();
       return text.includes(q) &&
-        (!selectedSpecialty || c.specialty === selectedSpecialty) &&
-        (!selectedBlock || c.block === selectedBlock);
+        (!selectedCareer || (c.career || c.specialty) === selectedCareer) &&
+        (!selectedBlock || c.block === selectedBlock) &&
+        (!selectedLevel || c.level === selectedLevel);
     });
 
-    list.innerHTML = filtered.map(c => `
-      <button class="case-card" data-id="${c.id}">
-        <span>${c.block} · ${c.level}</span>
-        <strong>${c.title}</strong>
-        <small>${c.specialty}</small>
-        <small>${c.statement}</small>
-      </button>
-    `).join("");
+    currentList = filtered;
+
+    list.innerHTML = filtered.map(c => {
+      const st = caseState[c.id];
+      const doneTag = st && st.correct ? `<span class="badge">Resuelto</span>` : "";
+      return `
+        <button class="case-card" data-id="${c.id}">
+          <span>${c.career || c.specialty} · ${c.block} · ${c.level}</span>
+          <strong>${c.title}</strong>
+          <small>${c.statement}</small>
+          ${doneTag}
+        </button>
+      `;
+    }).join("") || `<p style="color:#5B6E6A">No hay casos con este filtro.</p>`;
 
     list.querySelectorAll(".case-card").forEach(btn => {
       btn.addEventListener("click", () => openCase(Number(btn.dataset.id)));
@@ -164,6 +200,8 @@ function renderCases() {
 
 function openCase(id) {
   activeCase = data.cases.find(c => c.id === id);
+  selectedOption = null;
+  confirmed = false;
   timeLeft = 60;
   clearInterval(timerId);
   timerId = setInterval(() => {
@@ -182,30 +220,75 @@ function renderCasePanel() {
   if (!panel || !activeCase) return;
   const st = caseState[activeCase.id] || { attempts: 0, correct: false };
 
+  const optionsHtml = activeCase.options.map((o, i) => {
+    let cls = "option-btn";
+    if (confirmed) {
+      if (i === activeCase.correct) cls += " success";
+      else if (i === selectedOption) cls += " error";
+    } else if (i === selectedOption) {
+      cls += " selected";
+    }
+    return `<button class="${cls}" data-opt="${i}" ${confirmed ? "disabled" : ""}>${String.fromCharCode(65 + i)}. ${o}</button>`;
+  }).join("");
+
+  const interNote = activeCase.interdisciplinaryNote
+    ? `<p style="margin-top:10px;color:#5B6E6A"><strong>Enfoque interdisciplinario:</strong> ${activeCase.interdisciplinaryNote}</p>`
+    : "";
+
   panel.innerHTML = `
-    <div class="badge">${activeCase.block} · ${activeCase.level}</div>
+    <div class="badge">${activeCase.career || activeCase.specialty} · ${activeCase.block} · ${activeCase.level}</div>
     <h3 class="section-title">${activeCase.title}</h3>
     <p>${activeCase.statement}</p>
     <p><strong>${activeCase.question}</strong></p>
-    <div class="option-list">
-      ${activeCase.options.map((o, i) => `<button class="option-btn" data-opt="${i}">${o}</button>`).join("")}
-    </div>
+    <div class="option-list">${optionsHtml}</div>
     <div class="chips" style="margin-top:12px">${(activeCase.tags || []).map(t => `<span class="chip">${t}</span>`).join("")}</div>
-    <p style="margin-top:12px;color:#64748b">Tiempo: ${timeLeft}s · Intentos: ${st.attempts} · Puntaje: ${score}</p>
+    <p style="margin-top:12px;color:#5B6E6A">Tiempo: ${timeLeft}s · Intentos: ${st.attempts} · Puntaje: ${score}</p>
     <div id="case-feedback" style="margin-top:12px"></div>
+    <div id="case-actions" style="margin-top:12px"></div>
   `;
 
   panel.querySelectorAll(".option-btn").forEach(btn => {
-    btn.addEventListener("click", () => gradeCase(Number(btn.dataset.opt)));
+    btn.addEventListener("click", () => {
+      if (confirmed) return;
+      selectedOption = Number(btn.dataset.opt);
+      renderCasePanel();
+    });
   });
+
+  const actions = document.getElementById("case-actions");
+  const feedback = document.getElementById("case-feedback");
+
+  if (!confirmed) {
+    actions.innerHTML = `<button class="action-btn" id="confirm-btn" ${selectedOption === null ? "disabled" : ""}>Confirmar respuesta</button>`;
+    document.getElementById("confirm-btn").addEventListener("click", confirmAnswer);
+  } else {
+    const correct = selectedOption === activeCase.correct;
+    feedback.innerHTML = `
+      <div class="card ${correct ? "success" : "error"}">
+        <strong>${correct ? "Correcto" : "Incorrecto"}</strong>
+        <p>${activeCase.feedback}</p>
+      </div>
+      ${interNote}
+    `;
+    actions.innerHTML = `
+      ${!correct ? `<button class="action-btn secondary" id="retry-btn">Reintentar</button>` : ""}
+      <button class="action-btn" id="next-btn">Siguiente caso →</button>
+    `;
+    if (!correct) document.getElementById("retry-btn").addEventListener("click", retryAnswer);
+    document.getElementById("next-btn").addEventListener("click", nextCase);
+  }
 }
 
-function gradeCase(opt) {
-  if (!activeCase) return;
-  const correct = opt === activeCase.correct;
-  const st = caseState[activeCase.id] || { attempts: 0, correct: false };
+function confirmAnswer() {
+  if (!activeCase || selectedOption === null || confirmed) return;
+  confirmed = true;
+
+  const correct = selectedOption === activeCase.correct;
+  const st = caseState[activeCase.id] || { attempts: 0, correct: false, history: [] };
   st.attempts += 1;
   st.correct = st.correct || correct;
+  st.history = st.history || [];
+  st.history.push({ date: new Date().toISOString(), selectedIndex: selectedOption, correct });
   caseState[activeCase.id] = st;
 
   if (correct) score += 10;
@@ -213,17 +296,28 @@ function gradeCase(opt) {
   localStorage.setItem(data.scoreKey, String(score));
   saveProgress(data.caseStateKey, caseState);
   updateBadges();
-
-  const feedback = document.getElementById("case-feedback");
-  feedback.innerHTML = `
-    <div class="card ${correct ? "success" : "error"}">
-      <strong>${correct ? "Correcto" : "Incorrecto"}</strong>
-      <p>${activeCase.feedback}</p>
-    </div>
-  `;
-
-  if (correct) clearInterval(timerId);
+  clearInterval(timerId);
   renderCasePanel();
+}
+
+function retryAnswer() {
+  selectedOption = null;
+  confirmed = false;
+  timeLeft = 60;
+  clearInterval(timerId);
+  timerId = setInterval(() => {
+    timeLeft -= 1;
+    if (timeLeft <= 0) { timeLeft = 0; clearInterval(timerId); }
+    renderCasePanel();
+  }, 1000);
+  renderCasePanel();
+}
+
+function nextCase() {
+  if (!currentList.length) return;
+  const idx = currentList.findIndex(c => c.id === activeCase.id);
+  const next = currentList[(idx + 1) % currentList.length];
+  openCase(next.id);
 }
 
 function renderNorms() {
@@ -249,7 +343,7 @@ function renderNorms() {
       </div>
       <div class="panel">
         <h3 class="section-title">Base oficial</h3>
-        <p style="line-height:1.6;color:#64748b">La Ley N.° 23330 figura como norma base del SERUMS en GOB.PE y el MINSA publica la bibliografía oficial de evaluación 2026 con los bloques temáticos que guían el estudio.</p>
+        <p style="line-height:1.6;color:#5B6E6A">La Ley N.° 23330 figura como norma base del SERUMS, complementada por su reglamento y las modificatorias vigentes que el MINSA publica junto con la bibliografía oficial de cada proceso.</p>
       </div>
     </section>
   `;
@@ -279,7 +373,7 @@ function renderDecrees() {
       </div>
       <div class="panel">
         <h3 class="section-title">Enfoque</h3>
-        <p style="line-height:1.6;color:#64748b">Esta sección deja preparado el proyecto para cargar más resoluciones, directivas y lineamientos oficiales sin tocar la arquitectura.</p>
+        <p style="line-height:1.6;color:#5B6E6A">Esta sección deja preparado el proyecto para cargar más resoluciones, directivas y lineamientos oficiales sin tocar la arquitectura.</p>
       </div>
     </section>
   `;
