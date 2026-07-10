@@ -1,3 +1,22 @@
+window.SERUMS_DATA = {
+  cases: [
+    { /* caso 1 */ },
+    { /* caso 2 */ },
+    { /* ... */ }
+  ],
+  norms: [
+    { /* norma 1 */ }
+  ],
+  decrees: [
+    { /* decreto 1 */ }
+  ],
+  resources: [
+    { /* recurso 1 */ }
+  ],
+  scoreKey: "score",
+  caseStateKey: "caseState",
+  notesKey: "notes"
+};
 cases: [
   {
     id: 1,
