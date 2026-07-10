@@ -304,9 +304,30 @@
       const openCount = document.getElementById("openCount");
       const tagCount = document.getElementById("tagCount");
       const timerEl = document.getElementById("timer");
+      const STORAGE_KEY = "serums_state_v1";
 
-      let activeFilter = "Todos";
-      let openId = data.cases[0] ? data.cases[0].id : null;
+      let state = {
+        activeFilter: "Todos",
+        openId: data.cases[0] ? data.cases[0].id : null
+      };
+
+      function loadState(){
+        try{
+          const raw = localStorage.getItem(STORAGE_KEY);
+          if(!raw) return;
+          const parsed = JSON.parse(raw);
+          if(parsed && typeof parsed === "object"){
+            if(typeof parsed.activeFilter === "string") state.activeFilter = parsed.activeFilter;
+            if(parsed.openId !== undefined) state.openId = parsed.openId;
+          }
+        }catch(e){}
+      }
+
+      function saveState(){
+        try{
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+        }catch(e){}
+      }
 
       function renderSide(){
         normsEl.innerHTML = (data.norms || []).map(x => `<li>${x}</li>`).join("");
@@ -318,14 +339,14 @@
 
       function renderChips(){
         chipsEl.innerHTML = (data.chips || []).map(ch => `
-          <button class="chip ${activeFilter===ch?'active':''}" data-chip="${ch}" type="button">${ch}</button>
+          <button class="chip ${state.activeFilter===ch?'active':''}" data-chip="${ch}" type="button">${ch}</button>
         `).join("");
       }
 
       function filteredCases(){
         const all = data.cases || [];
-        if(activeFilter === "Todos") return all;
-        return all.filter(c => c.block === activeFilter || c.specialty === activeFilter);
+        if(state.activeFilter === "Todos") return all;
+        return all.filter(c => c.block === state.activeFilter || c.specialty === state.activeFilter);
       }
 
       function renderCases(){
@@ -336,10 +357,10 @@
           return;
         }
 
-        if(!arr.some(c => c.id === openId)) openId = arr[0].id;
+        if(!arr.some(c => String(c.id) === String(state.openId))) state.openId = arr[0].id;
 
         casesEl.innerHTML = arr.map(c => `
-          <article class="acc-item ${openId===c.id ? 'open' : ''}" data-id="${c.id}">
+          <article class="acc-item ${String(state.openId)===String(c.id) ? 'open' : ''}" data-id="${c.id}">
             <button class="acc-btn" type="button" data-action="toggle-case">
               <div>
                 <div class="acc-title">${c.title}</div>
@@ -365,152 +386,45 @@
         `).join("");
 
         openCount.textContent = "1";
+        saveState();
       }
 
       chipsEl.addEventListener("click", (e) => {
         const b = e.target.closest("[data-chip]");
         if(!b) return;
-        activeFilter = b.dataset.chip;
+        state.activeFilter = b.dataset.chip;
+        if(state.activeFilter === "Todos" && !state.openId && data.cases[0]) state.openId = data.cases[0].id;
         renderChips();
         renderCases();
+        saveState();
       });
 
       casesEl.addEventListener("click", (e) => {
         const btn = e.target.closest("[data-action='toggle-case']");
         if(!btn) return;
         const item = btn.closest(".acc-item");
-        if(!it<script>
-(function(){
-  const data = window.SERUMS_DATA;
-  const casesEl = document.getElementById("cases");
-  const chipsEl = document.getElementById("chips");
-  const normsEl = document.getElementById("norms");
-  const decreesEl = document.getElementById("decrees");
-  const resourcesEl = document.getElementById("resources");
-  const casesCount = document.getElementById("casesCount");
-  const openCount = document.getElementById("openCount");
-  const tagCount = document.getElementById("tagCount");
-  const timerEl = document.getElementById("timer");
+        if(!item) return;
+        const id = Number(item.dataset.id);
+        state.openId = String(state.openId) === String(id) ? null : id;
+        renderCases();
+        saveState();
+      });
 
-  const STORAGE_KEY = "serums_state_v1";
-
-  let state = {
-    activeFilter: "Todos",
-    openId: data.cases[0] ? data.cases[0].id : null
-  };
-
-  function loadState(){
-    try{
-      const raw = localStorage.getItem(STORAGE_KEY);
-      if(!raw) return;
-      const parsed = JSON.parse(raw);
-      if(parsed && typeof parsed === "object"){
-        if(typeof parsed.activeFilter === "string") state.activeFilter = parsed.activeFilter;
-        if(parsed.openId !== undefined) state.openId = parsed.openId;
+      function tick(){
+        const now = new Date();
+        const hh = String(now.getHours()).padStart(2,"0");
+        const mm = String(now.getMinutes()).padStart(2,"0");
+        const ss = String(now.getSeconds()).padStart(2,"0");
+        timerEl.textContent = `${hh}:${mm}:${ss}`;
       }
-    }catch(e){}
-  }
 
-  function saveState(){
-    try{
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
-    }catch(e){}
-  }
-
-  function renderSide(){
-    normsEl.innerHTML = (data.norms || []).map(x => `<li>${x}</li>`).join("");
-    decreesEl.innerHTML = (data.decrees || []).map(x => `<li>${x}</li>`).join("");
-    resourcesEl.innerHTML = (data.resources || []).map(x => `<li>${x}</li>`).join("");
-    casesCount.textContent = (data.cases || []).length;
-    tagCount.textContent = Math.max((data.chips || []).length - 1, 0);
-  }
-
-  function renderChips(){
-    chipsEl.innerHTML = (data.chips || []).map(ch => `
-      <button class="chip ${state.activeFilter===ch?'active':''}" data-chip="${ch}" type="button">${ch}</button>
-    `).join("");
-  }
-
-  function filteredCases(){
-    const all = data.cases || [];
-    if(state.activeFilter === "Todos") return all;
-    return all.filter(c => c.block === state.activeFilter || c.specialty === state.activeFilter);
-  }
-
-  function renderCases(){
-    const arr = filteredCases();
-    if(!arr.length){
-      casesEl.innerHTML = `<article class="acc-item"><div class="acc-btn"><div><div class="acc-title">No hay casos</div><div class="acc-meta">Revisa el filtro seleccionado</div></div></div></article>`;
-      openCount.textContent = "0";
-      return;
-    }
-
-    if(!arr.some(c => String(c.id) === String(state.openId))) state.openId = arr[0].id;
-
-    casesEl.innerHTML = arr.map(c => `
-      <article class="acc-item ${String(state.openId)===String(c.id) ? 'open' : ''}" data-id="${c.id}">
-        <button class="acc-btn" type="button" data-action="toggle-case">
-          <div>
-            <div class="acc-title">${c.title}</div>
-            <div class="acc-meta">${c.block} · ${c.level} · ${c.specialty}</div>
-          </div>
-          <div class="chev">⌄</div>
-        </button>
-        <div class="acc-panel">
-          <div class="acc-inner">
-            <div class="kvs">${(c.tags || []).map(t => `<span class="pill">${t}</span>`).join("")}</div>
-            <div class="section-label">Situación</div>
-            <p class="statement">${c.statement || ""}</p>
-            <div class="section-label">Pregunta</div>
-            <p class="question">${c.question || ""}</p>
-            <div class="section-label">Opciones</div>
-            <ul class="options">
-              ${(c.options || []).map((o,i)=>`<li class="option ${i===c.correct?'correct':''}">${String.fromCharCode(65+i)}. ${o}</li>`).join("")}
-            </ul>
-            <div class="answer"><strong>Respuesta:</strong> ${c.feedback || ""}</div>
-          </div>
-        </div>
-      </article>
-    `).join("");
-
-    openCount.textContent = "1";
-    saveState();
-  }
-
-  chipsEl.addEventListener("click", (e) => {
-    const b = e.target.closest("[data-chip]");
-    if(!b) return;
-    state.activeFilter = b.dataset.chip;
-    if(state.activeFilter === "Todos" && !state.openId && data.cases[0]) state.openId = data.cases[0].id;
-    renderChips();
-    renderCases();
-    saveState();
-  });
-
-  casesEl.addEventListener("click", (e) => {
-    const btn = e.target.closest("[data-action='toggle-case']");
-    if(!btn) return;
-    const item = btn.closest(".acc-item");
-    if(!item) return;
-    const id = Number(item.dataset.id);
-    state.openId = String(state.openId) === String(id) ? null : id;
-    renderCases();
-    saveState();
-  });
-
-  function tick(){
-    const now = new Date();
-    const hh = String(now.getHours()).padStart(2,"0");
-    const mm = String(now.getMinutes()).padStart(2,"0");
-    const ss = String(now.getSeconds()).padStart(2,"0");
-    timerEl.textContent = `${hh}:${mm}:${ss}`;
-  }
-
-  loadState();
-  renderSide();
-  renderChips();
-  renderCases();
-  tick();
-  setInterval(tick, 1000);
-})();
-</script>
+      loadState();
+      renderSide();
+      renderChips();
+      renderCases();
+      tick();
+      setInterval(tick, 1000);
+    })();
+  </script>
+</body>
+  </html>
