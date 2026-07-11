@@ -1958,7 +1958,296 @@ window.SERUMS_DATA = {
       ],
       correct: 1,
       feedback: "Todo procedimiento, incluso uno menor, requiere explicar riesgos y beneficios y obtener el consentimiento informado antes de proceder."
+    },
+    {
+      id: 109,
+      career: "Medicina",
+      block: "Cuidado integral",
+      title: "Reacción adversa a tratamiento antituberculoso",
+      level: "I-2",
+      specialty: "Medicina",
+      tags: ["tuberculosis", "reacción adversa", "adherencia"],
+      statement: "Paciente en tratamiento antituberculoso presenta ictericia y malestar general a las tres semanas de iniciado el esquema.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Indicar que continúe el tratamiento sin ninguna evaluación adicional.",
+        "Evaluar función hepática, suspender temporalmente si corresponde y referir según protocolo de reacciones adversas.",
+        "Suspender el tratamiento de forma definitiva sin evaluación clínica."
+      ],
+      correct: 1,
+      feedback: "Ante signos de posible hepatotoxicidad por fármacos antituberculosos se debe evaluar la función hepática, decidir suspensión temporal si corresponde y proceder según el protocolo de reacciones adversas."
+    },
+    {
+      id: 110,
+      career: "Psicología",
+      block: "Cuidado integral",
+      title: "Consejería pre-test de VIH",
+      level: "I-2",
+      specialty: "Psicología",
+      tags: ["VIH", "consejería", "confidencialidad"],
+      statement: "Un usuario acude a solicitar la prueba de VIH y muestra ansiedad marcada ante la posibilidad de un resultado positivo.",
+      question: "¿Cuál es la conducta más adecuada antes de la toma de la prueba?",
+      options: [
+        "Realizar la prueba de inmediato sin conversar previamente con el usuario.",
+        "Brindar consejería pre-test que aborde dudas, expectativas y el manejo confidencial del resultado.",
+        "Posponer la prueba hasta que el usuario deje de sentir ansiedad."
+      ],
+      correct: 1,
+      feedback: "La consejería pre-test debe abordar dudas, expectativas emocionales y la confidencialidad del proceso antes de la toma de la prueba de VIH."
+    },
+    {
+      id: 111,
+      career: "Enfermería",
+      block: "Cuidado integral",
+      title: "Exposición ocupacional a fluido biológico",
+      level: "I-2",
+      specialty: "Enfermería",
+      tags: ["VIH", "profilaxis post-exposición", "bioseguridad"],
+      statement: "Un profesional de enfermería sufre un pinchazo accidental con una aguja usada durante la atención de un paciente.",
+      question: "¿Cuál es la conducta prioritaria inmediata?",
+      options: [
+        "Continuar la atención y reportar el incidente al final del turno.",
+        "Realizar el lavado de la zona expuesta y activar de inmediato el protocolo de profilaxis post-exposición.",
+        "Esperar los resultados de laboratorio del paciente antes de tomar cualquier medida."
+      ],
+      correct: 1,
+      feedback: "Ante una exposición ocupacional a fluidos biológicos se debe lavar la zona afectada y activar de inmediato el protocolo de profilaxis post-exposición, dado que su eficacia depende de la rapidez de inicio."
+    },
+    {
+      id: 112,
+      career: "Medicina",
+      block: "Cuidado integral",
+      title: "Signo de alarma en tamizaje de cáncer de mama",
+      level: "I-2",
+      specialty: "Medicina",
+      tags: ["cáncer de mama", "tamizaje", "derivación oportuna"],
+      statement: "Mujer de 45 años refiere haber palpado una tumoración no dolorosa en la mama durante el último mes.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Indicar que espere al siguiente ciclo menstrual para reevaluar.",
+        "Realizar examen clínico y coordinar estudio de imagen y referencia oportuna para descarte de malignidad.",
+        "Tranquilizar a la paciente sin realizar ninguna evaluación adicional."
+      ],
+      correct: 1,
+      feedback: "Ante una tumoración mamaria nueva y no dolorosa se debe realizar examen clínico, solicitar estudio de imagen y referir oportunamente para descartar malignidad."
+    },
+    {
+      id: 113,
+      career: "Psicología",
+      block: "Cuidado integral",
+      title: "Acompañamiento psicológico en paciente oncológico",
+      level: "I-2",
+      specialty: "Psicología / Medicina",
+      tags: ["cáncer", "acompañamiento psicológico", "afrontamiento"],
+      statement: "Paciente recién diagnosticado con cáncer muestra negación marcada y evita hablar sobre su condición con su familia.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Confrontar directamente al paciente para que acepte el diagnóstico de inmediato.",
+        "Respetar su ritmo de afrontamiento, explorar sus temores y facilitar gradualmente la comunicación con la familia.",
+        "Evitar el tema hasta que el paciente lo mencione espontáneamente, sin ninguna intervención."
+      ],
+      correct: 1,
+      feedback: "El acompañamiento psicológico debe respetar el ritmo de afrontamiento del paciente, explorando sus temores y facilitando gradualmente la comunicación familiar, sin forzar ni evitar por completo el tema."
+    },
+    {
+      id: 114,
+      career: "Enfermería",
+      block: "Salud pública",
+      title: "Tamizaje de agudeza visual escolar",
+      level: "I-2",
+      specialty: "Enfermería / Salud Ocular",
+      tags: ["salud ocular", "tamizaje escolar", "derivación"],
+      statement: "Durante un tamizaje escolar, un niño presenta dificultad marcada para identificar letras a distancia en la prueba de agudeza visual.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Registrar el resultado sin ninguna acción adicional.",
+        "Informar a la familia, orientar sobre el hallazgo y derivar para evaluación oftalmológica.",
+        "Indicar que el niño se siente adelante en el aula sin más evaluación."
+      ],
+      correct: 1,
+      feedback: "Ante un hallazgo alterado en el tamizaje de agudeza visual se debe informar a la familia, orientar y derivar oportunamente para evaluación oftalmológica especializada."
+    },
+    {
+      id: 115,
+      career: "Medicina",
+      block: "Cuidado integral",
+      title: "Sospecha de retinopatía diabética",
+      level: "I-2",
+      specialty: "Medicina / Salud Ocular",
+      tags: ["retinopatía diabética", "salud ocular", "derivación"],
+      statement: "Paciente con diabetes de larga data refiere disminución progresiva de la visión en los últimos meses, sin haber tenido evaluación oftalmológica previa.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Indicar que la disminución visual es un cambio normal por la edad.",
+        "Derivar para evaluación oftalmológica que incluya fondo de ojo, dado el riesgo de retinopatía diabética.",
+        "Ajustar solo el tratamiento de la diabetes sin evaluar la visión."
+      ],
+      correct: 1,
+      feedback: "Todo paciente diabético con cambios visuales debe ser derivado para evaluación oftalmológica con fondo de ojo, por el riesgo de retinopatía diabética."
+    },
+    {
+      id: 116,
+      career: "Transversal",
+      block: "Gestión",
+      title: "Afiliación al Seguro Integral de Salud en zona rural",
+      level: "I-2",
+      specialty: "Gestión",
+      tags: ["SIS", "aseguramiento universal", "acceso a servicios"],
+      statement: "Una familia de una comunidad rural desconoce que puede afiliarse gratuitamente al Seguro Integral de Salud y ha postergado la atención de un menor por temor a los costos.",
+      question: "¿Cuál es la conducta más adecuada del establecimiento?",
+      options: [
+        "Indicar que regresen cuando puedan pagar la atención.",
+        "Orientar sobre el proceso de afiliación al SIS y facilitar la atención del menor sin demora.",
+        "Atender solo en caso de emergencia y remitir el resto a un seguro privado."
+      ],
+      correct: 1,
+      feedback: "El Aseguramiento Universal en Salud busca garantizar el acceso sin barreras económicas; corresponde orientar sobre la afiliación al SIS y facilitar la atención oportuna."
+    },
+    {
+      id: 117,
+      career: "Transversal",
+      block: "Gestión",
+      title: "Continuidad de atención tras cambio de residencia",
+      level: "I-2",
+      specialty: "Gestión",
+      tags: ["continuidad de atención", "historia clínica", "referencia"],
+      statement: "Un paciente con tratamiento crónico se muda a otra región y su nuevo establecimiento no cuenta con su historia clínica previa.",
+      question: "¿Cuál es la conducta más adecuada para garantizar la continuidad de su atención?",
+      options: [
+        "Iniciar la atención desde cero sin gestionar la información previa.",
+        "Gestionar la transferencia de su información clínica y coordinar con el establecimiento de origen para asegurar continuidad del tratamiento.",
+        "Indicar al paciente que regrese a su región de origen para continuar el tratamiento."
+      ],
+      correct: 1,
+      feedback: "La continuidad de la atención requiere gestionar la transferencia de información clínica entre establecimientos, evitando interrupciones en tratamientos crónicos."
+    },
+    {
+      id: 118,
+      career: "Medicina",
+      block: "Salud pública",
+      title: "Sospecha de malaria en zona endémica",
+      level: "I-2",
+      specialty: "Medicina",
+      tags: ["malaria", "enfermedad metaxénica", "diagnóstico oportuno"],
+      statement: "Paciente procedente de una zona endémica de malaria presenta fiebre intermitente, escalofríos y sudoración profusa.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Indicar solo antipirético y control ambulatorio sin estudio adicional.",
+        "Solicitar gota gruesa o prueba diagnóstica para malaria e iniciar manejo según resultado y protocolo vigente.",
+        "Esperar la aparición de más síntomas antes de estudiar el caso."
+      ],
+      correct: 1,
+      feedback: "Ante fiebre intermitente en zona endémica se debe solicitar la prueba diagnóstica de malaria de forma oportuna e iniciar el manejo según protocolo."
+    },
+    {
+      id: 119,
+      career: "Medicina",
+      block: "Salud pública",
+      title: "Mordedura de perro y riesgo de rabia",
+      level: "I-2",
+      specialty: "Medicina",
+      tags: ["zoonosis", "rabia", "profilaxis"],
+      statement: "Niño es mordido por un perro callejero de estado de vacunación desconocido, con herida superficial en el antebrazo.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Limpiar la herida y no indicar ninguna otra medida.",
+        "Lavar la herida de inmediato, evaluar el riesgo de exposición e iniciar profilaxis antirrábica según protocolo si corresponde.",
+        "Esperar a que el perro muestre síntomas de rabia antes de decidir profilaxis."
+      ],
+      correct: 1,
+      feedback: "Ante mordedura de un animal con estado de vacunación desconocido se debe lavar la herida de inmediato y evaluar el inicio de profilaxis antirrábica según protocolo vigente."
+    },
+    {
+      id: 120,
+      career: "Obstetricia",
+      block: "Ética e interculturalidad",
+      title: "Parto intercultural en comunidad amazónica",
+      level: "I-2",
+      specialty: "Obstetricia",
+      tags: ["parto intercultural", "pueblos indígenas", "pertinencia cultural"],
+      statement: "Una gestante de una comunidad amazónica solicita que su parto se atienda respetando prácticas tradicionales de su cultura, como la posición vertical y la presencia de una partera comunitaria.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Negar la solicitud e imponer el protocolo estándar sin adaptaciones.",
+        "Adaptar la atención del parto a las prácticas culturales de la gestante siempre que no comprometan su seguridad clínica.",
+        "Derivar el caso a otro establecimiento sin intentar ninguna adaptación."
+      ],
+      correct: 1,
+      feedback: "La atención del parto con pertinencia intercultural busca adaptar las prácticas culturales de la gestante, siempre que no se comprometa su seguridad clínica ni la del recién nacido."
+    },
+    {
+      id: 121,
+      career: "Psicología",
+      block: "Ética e interculturalidad",
+      title: "Barrera idiomática en la consulta psicológica",
+      level: "I-2",
+      specialty: "Psicología",
+      tags: ["pueblos indígenas", "barrera idiomática", "pertinencia cultural"],
+      statement: "Un usuario quechuahablante con manejo limitado del español acude a consulta psicológica y muestra dificultad para expresar lo que le sucede.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Continuar la consulta en español asumiendo que el usuario comprende lo esencial.",
+        "Gestionar apoyo de un intérprete o facilitador cultural para garantizar una comunicación efectiva.",
+        "Derivar sin brindar ninguna atención por la barrera idiomática."
+      ],
+      correct: 1,
+      feedback: "Ante una barrera idiomática significativa se debe gestionar el apoyo de un intérprete o facilitador cultural para garantizar una atención efectiva y culturalmente pertinente."
+    },
+    {
+      id: 122,
+      career: "Odontología",
+      block: "Salud pública",
+      title: "Fluorización comunitaria del agua",
+      level: "I-2",
+      specialty: "Odontología / Salud Pública",
+      tags: ["fluorización", "prevención comunitaria", "salud bucal"],
+      statement: "Una comunidad con alta prevalencia de caries no cuenta con acceso a agua fluorada ni a otras medidas preventivas de salud bucal.",
+      question: "¿Cuál es la conducta más adecuada a nivel comunitario?",
+      options: [
+        "Esperar que cada familia gestione su propia prevención de forma individual.",
+        "Promover estrategias de fluorización y educación en higiene oral coordinadas con las autoridades locales.",
+        "Limitar la intervención a la atención de los casos con dolor agudo."
+      ],
+      correct: 1,
+      feedback: "Ante alta prevalencia de caries sin medidas preventivas comunitarias, corresponde promover estrategias de fluorización y educación en higiene oral coordinadas con las autoridades locales."
+    },
+    {
+      id: 123,
+      career: "Obstetricia",
+      block: "Cuidado integral",
+      title: "Solicitud de anticoncepción oral de emergencia",
+      level: "I-2",
+      specialty: "Obstetricia",
+      tags: ["anticoncepción de emergencia", "salud sexual y reproductiva", "consejería"],
+      statement: "Una usuaria acude dentro de las 48 horas tras una relación sexual sin protección, solicitando anticoncepción oral de emergencia.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Negar el método por consideraciones personales del profesional.",
+        "Brindar consejería y proporcionar el método de forma oportuna, dado que su eficacia depende de la rapidez de administración.",
+        "Indicar que regrese en una semana para evaluar la necesidad del método."
+      ],
+      correct: 1,
+      feedback: "La anticoncepción oral de emergencia debe brindarse de forma oportuna tras la consejería correspondiente, ya que su eficacia depende directamente de la rapidez de administración."
+    },
+    {
+      id: 124,
+      career: "Psicología",
+      block: "Cuidado integral",
+      title: "Consejería en salud sexual a un adolescente",
+      level: "I-2",
+      specialty: "Psicología / Obstetricia",
+      tags: ["DSARE", "adolescencia", "consejería en salud sexual"],
+      statement: "Un adolescente de 15 años consulta con dudas sobre infecciones de transmisión sexual tras su primera relación sexual, mostrando temor a ser juzgado.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Minimizar sus dudas indicando que es muy joven para preocuparse por el tema.",
+        "Brindar consejería confidencial, sin juicio, con información clara adaptada a su edad.",
+        "Exigir la presencia de un adulto responsable antes de responder cualquier duda."
+      ],
+      correct: 1,
+      feedback: "La consejería en salud sexual y reproductiva a adolescentes debe ser confidencial, libre de juicio y con información clara y adecuada a su edad, respetando su autonomía progresiva."
     }
+
 
 
 
