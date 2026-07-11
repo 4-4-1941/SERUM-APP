@@ -2246,7 +2246,188 @@ window.SERUMS_DATA = {
       ],
       correct: 1,
       feedback: "La consejería en salud sexual y reproductiva a adolescentes debe ser confidencial, libre de juicio y con información clara y adecuada a su edad, respetando su autonomía progresiva."
+    },
+    {
+      id: 125,
+      career: "Psicología",
+      block: "Investigación",
+      title: "Necesidad de grupo control en un estudio experimental",
+      level: "I-2",
+      specialty: "Psicología / Investigación",
+      tags: ["diseño experimental", "grupo control", "validez interna"],
+      statement: "Un psicólogo quiere evaluar si un nuevo taller de manejo de estrés reduce los síntomas de ansiedad en el personal de salud.",
+      question: "¿Qué elemento del diseño fortalece la validez de sus conclusiones sobre la eficacia del taller?",
+      options: [
+        "Aplicar el taller a todo el personal sin ningún grupo de comparación.",
+        "Incluir un grupo control que no reciba el taller, para comparar los resultados.",
+        "Medir la ansiedad solo después del taller, sin línea base previa."
+      ],
+      correct: 1,
+      feedback: "Un grupo control permite comparar los resultados y atribuir con mayor confianza el cambio observado al taller y no a otros factores."
+    },
+    {
+      id: 126,
+      career: "Medicina",
+      block: "Investigación",
+      title: "Aleatorización y enmascaramiento en un ensayo clínico",
+      level: "I-3",
+      specialty: "Medicina / Investigación",
+      tags: ["aleatorización", "enmascaramiento", "sesgo"],
+      statement: "Un equipo de investigación diseña un ensayo clínico para comparar dos intervenciones en un centro de salud.",
+      question: "¿Qué combinación de elementos reduce mejor el riesgo de sesgo en este diseño?",
+      options: [
+        "Asignar a los participantes según el orden de llegada al establecimiento.",
+        "Aleatorizar la asignación a los grupos y, cuando sea posible, enmascarar quién recibe cada intervención.",
+        "Permitir que cada participante elija el grupo que prefiera."
+      ],
+      correct: 1,
+      feedback: "La aleatorización reduce sesgos de selección y el enmascaramiento reduce sesgos en la evaluación de resultados, fortaleciendo la validez del ensayo."
+    },
+    {
+      id: 127,
+      career: "Psicología",
+      block: "Investigación",
+      title: "Validez y confiabilidad de un instrumento psicológico",
+      level: "I-2",
+      specialty: "Psicología / Investigación",
+      tags: ["validez", "confiabilidad", "instrumentos de medición"],
+      statement: "Antes de aplicar un cuestionario de tamizaje de ansiedad en un estudio, el investigador revisa sus propiedades psicométricas.",
+      question: "¿Qué debe verificar para asegurar que el instrumento es adecuado?",
+      options: [
+        "Que el instrumento sea corto, sin importar sus propiedades psicométricas.",
+        "Que el instrumento mida lo que pretende medir (validez) y ofrezca resultados consistentes (confiabilidad).",
+        "Que el instrumento haya sido usado alguna vez en otro país, sin más verificación."
+      ],
+      correct: 1,
+      feedback: "Un instrumento adecuado debe ser válido (medir lo que pretende medir) y confiable (ofrecer resultados consistentes en distintas aplicaciones)."
+    },
+    {
+      id: 128,
+      career: "Psicología",
+      block: "Investigación",
+      title: "Prueba piloto antes de un estudio a gran escala",
+      level: "I-2",
+      specialty: "Psicología / Investigación",
+      tags: ["prueba piloto", "ajuste de instrumentos", "planificación"],
+      statement: "Un equipo ha diseñado una nueva encuesta para medir adherencia terapéutica y planea aplicarla en varios establecimientos.",
+      question: "¿Qué paso previo es recomendable antes de la aplicación masiva?",
+      options: [
+        "Aplicar directamente la encuesta a toda la muestra planificada.",
+        "Realizar una prueba piloto en un grupo reducido para identificar y corregir problemas del instrumento.",
+        "Omitir cualquier prueba previa para ahorrar tiempo."
+      ],
+      correct: 1,
+      feedback: "La prueba piloto permite identificar problemas de comprensión o aplicación del instrumento y hacer ajustes antes de la aplicación a gran escala."
+    },
+    {
+      id: 129,
+      career: "Psicología",
+      block: "Investigación",
+      title: "Interpretación de significancia estadística",
+      level: "I-2",
+      specialty: "Psicología / Investigación",
+      tags: ["significancia estadística", "análisis de datos", "interpretación"],
+      statement: "Un estudio encuentra una diferencia entre dos grupos, pero el análisis estadístico indica que no es significativa.",
+      question: "¿Cómo debe interpretarse este resultado?",
+      options: [
+        "Que la diferencia observada probablemente se debe al azar y no hay evidencia suficiente de un efecto real.",
+        "Que el estudio está mal diseñado y debe descartarse por completo.",
+        "Que la diferencia es real aunque el análisis diga lo contrario."
+      ],
+      correct: 0,
+      feedback: "Cuando una diferencia no es estadísticamente significativa, la interpretación adecuada es que no hay evidencia suficiente para afirmar que el efecto observado sea real y no producto del azar."
+    },
+    {
+      id: 130,
+      career: "Psicología",
+      block: "Investigación",
+      title: "Codificación de datos en un estudio cualitativo",
+      level: "I-2",
+      specialty: "Psicología / Investigación",
+      tags: ["codificación", "análisis cualitativo", "categorías temáticas"],
+      statement: "Un investigador ha realizado 15 entrevistas a profundidad sobre experiencias de duelo y necesita organizar la información recolectada.",
+      question: "¿Qué proceso corresponde para analizar estos datos?",
+      options: [
+        "Convertir cada respuesta en un número sin considerar su contenido.",
+        "Codificar y categorizar los relatos para identificar patrones y temas comunes.",
+        "Elegir solo las entrevistas que confirmen la hipótesis inicial."
+      ],
+      correct: 1,
+      feedback: "El análisis cualitativo requiere codificar y categorizar la información para identificar patrones y temas relevantes en los relatos de los participantes."
+    },
+    {
+      id: 131,
+      career: "Psicología",
+      block: "Investigación",
+      title: "Construcción de una matriz de consistencia",
+      level: "I-2",
+      specialty: "Psicología / Investigación",
+      tags: ["matriz de consistencia", "planificación de investigación", "coherencia metodológica"],
+      statement: "Antes de iniciar la recolección de datos, un investigador organiza sus objetivos, preguntas, variables y métodos en un solo documento.",
+      question: "¿Qué herramienta está utilizando y para qué sirve?",
+      options: [
+        "Un consentimiento informado, para proteger a los participantes.",
+        "Una matriz de consistencia, para asegurar la coherencia entre objetivos, preguntas, variables y métodos del estudio.",
+        "Un informe final, para publicar los resultados."
+      ],
+      correct: 1,
+      feedback: "La matriz de consistencia organiza y verifica la coherencia entre los objetivos, preguntas, variables y métodos de un proyecto de investigación antes de ejecutarlo."
+    },
+    {
+      id: 132,
+      career: "Transversal",
+      block: "Investigación",
+      title: "Revisión por pares antes de publicar un estudio",
+      level: "I-2",
+      specialty: "Investigación",
+      tags: ["revisión por pares", "publicación científica", "calidad metodológica"],
+      statement: "Un equipo de investigadores envía su estudio a una revista científica para su publicación.",
+      question: "¿Qué función cumple el proceso de revisión por pares en este momento?",
+      options: [
+        "Garantizar la venta del artículo a un mayor número de lectores.",
+        "Evaluar la calidad metodológica y la validez del estudio antes de su difusión.",
+        "Reemplazar la necesidad de que los autores revisen su propio trabajo."
+      ],
+      correct: 1,
+      feedback: "La revisión por pares evalúa la calidad metodológica y la validez de un estudio antes de su publicación, funcionando como un control de calidad científico."
+    },
+    {
+      id: 133,
+      career: "Psicología",
+      block: "Investigación",
+      title: "Aprobación de un comité de ética en investigación",
+      level: "I-2",
+      specialty: "Psicología / Investigación",
+      tags: ["comité de ética", "aprobación de estudio", "protección de participantes"],
+      statement: "Un psicólogo desea iniciar un estudio con pacientes de un centro de salud mental sobre su experiencia con el tratamiento recibido.",
+      question: "¿Qué paso es indispensable antes de iniciar la recolección de datos?",
+      options: [
+        "Iniciar la recolección de datos de inmediato, dado que su intención es de mejora del servicio.",
+        "Obtener la aprobación de un comité de ética en investigación que evalúe los riesgos y protecciones para los participantes.",
+        "Solicitar solo la autorización verbal del jefe del establecimiento."
+      ],
+      correct: 1,
+      feedback: "Todo estudio con participantes humanos, incluso con fines de mejora del servicio, requiere la aprobación de un comité de ética en investigación."
+    },
+    {
+      id: 134,
+      career: "Psicología",
+      block: "Investigación",
+      title: "Elección del tipo de muestreo en un estudio comunitario",
+      level: "I-2",
+      specialty: "Psicología / Investigación",
+      tags: ["muestreo", "representatividad", "diseño metodológico"],
+      statement: "Un investigador desea que los resultados de su estudio sobre salud mental comunitaria puedan generalizarse a toda la población de un distrito.",
+      question: "¿Qué tipo de muestreo es más adecuado para este objetivo?",
+      options: [
+        "Un muestreo probabilístico, que dé a cada persona de la población una probabilidad conocida de ser seleccionada.",
+        "Seleccionar únicamente a conocidos del investigador para facilitar el acceso.",
+        "Incluir solo a quienes acudan espontáneamente al establecimiento de salud."
+      ],
+      correct: 0,
+      feedback: "El muestreo probabilístico permite que los resultados sean representativos y generalizables a la población de estudio, a diferencia de los muestreos por conveniencia."
     }
+
 
 
 
