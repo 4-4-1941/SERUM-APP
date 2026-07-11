@@ -2714,7 +2714,134 @@ window.SERUMS_DATA = {
       ],
       correct: 1,
       feedback: "La mejora continua sostenible requiere un ciclo de planificar, ejecutar, evaluar resultados y ajustar el proceso, en lugar de aplicar un cambio único sin seguimiento."
+    },
+    {
+      id: 151,
+      career: "Psicología",
+      block: "Investigación",
+      title: "Variable de confusión en un estudio observacional",
+      level: "I-2",
+      specialty: "Psicología / Investigación",
+      tags: ["variable de confusión", "estudio observacional", "validez interna"],
+      statement: "Un estudio encuentra asociación entre el uso de redes sociales y síntomas depresivos en adolescentes, sin haber considerado el nivel de apoyo familiar de los participantes.",
+      question: "¿Qué problema metodológico es más relevante en este estudio?",
+      options: [
+        "El tamaño de muestra fue demasiado grande para el análisis.",
+        "El apoyo familiar podría actuar como variable de confusión no controlada, afectando la interpretación de la asociación encontrada.",
+        "El estudio no necesita considerar ninguna otra variable además de la principal."
+      ],
+      correct: 1,
+      feedback: "Una variable de confusión no controlada, como el apoyo familiar, puede explicar parcial o totalmente una asociación observada, por lo que debe identificarse y controlarse en el análisis."
+    },
+    {
+      id: 152,
+      career: "Psicología",
+      block: "Investigación",
+      title: "Elección de paradigma cuantitativo o cualitativo",
+      level: "I-2",
+      specialty: "Psicología / Investigación",
+      tags: ["paradigma de investigación", "cuantitativo", "cualitativo"],
+      statement: "Un investigador desea comprender en profundidad cómo viven el proceso de duelo un grupo pequeño de familiares de pacientes fallecidos en un establecimiento de salud.",
+      question: "¿Qué enfoque metodológico es más adecuado para este objetivo?",
+      options: [
+        "Un enfoque cuantitativo con un cuestionario estandarizado y análisis estadístico.",
+        "Un enfoque cualitativo, mediante entrevistas a profundidad que permitan explorar significados y experiencias.",
+        "Un ensayo clínico aleatorizado con grupo control."
+      ],
+      correct: 1,
+      feedback: "Cuando el objetivo es comprender en profundidad significados y experiencias subjetivas, el enfoque cualitativo mediante entrevistas a profundidad es el más adecuado."
+    },
+    {
+      id: 153,
+      career: "Transversal",
+      block: "Investigación",
+      title: "Integridad en el análisis con software estadístico",
+      level: "I-2",
+      specialty: "Investigación",
+      tags: ["software estadístico", "integridad", "análisis de datos"],
+      statement: "Un investigador nota que, al excluir ciertos datos atípicos sin justificación metodológica, sus resultados se vuelven estadísticamente significativos.",
+      question: "¿Cuál es la conducta correcta?",
+      options: [
+        "Excluir los datos atípicos sin explicación para lograr un resultado significativo.",
+        "Analizar los datos atípicos con criterios metodológicos explícitos y reportar el proceso de forma transparente, sea cual sea el resultado.",
+        "Reportar solo el análisis que arroja significancia estadística."
+      ],
+      correct: 1,
+      feedback: "La integridad en el análisis de datos exige criterios metodológicos explícitos y transparencia en el reporte, sin manipular la información para obtener un resultado deseado."
+    },
+    {
+      id: 154,
+      career: "Psicología",
+      block: "Investigación",
+      title: "Difusión responsable de resultados de investigación en salud",
+      level: "I-2",
+      specialty: "Psicología / Investigación",
+      tags: ["difusión de resultados", "comunicación científica", "responsabilidad"],
+      statement: "Un estudio preliminar con una muestra pequeña sugiere una posible asociación entre una intervención y una mejora en el bienestar psicológico, y el equipo desea comunicarlo a la comunidad.",
+      question: "¿Cuál es la conducta más adecuada al difundir estos resultados?",
+      options: [
+        "Presentar el hallazgo como una conclusión definitiva y generalizable a toda la población.",
+        "Comunicar el hallazgo con las limitaciones del estudio, evitando conclusiones definitivas que no estén respaldadas por la evidencia disponible.",
+        "Omitir el tamaño de muestra y las limitaciones para simplificar el mensaje."
+      ],
+      correct: 1,
+      feedback: "La difusión responsable de resultados preliminares debe incluir las limitaciones del estudio, evitando conclusiones definitivas no respaldadas por la evidencia disponible."
+    },
+    {
+      id: 155,
+      career: "Enfermería",
+      block: "Salud pública",
+      title: "Gestión integral de residuos sólidos en el establecimiento",
+      level: "I-2",
+      specialty: "Enfermería / Salud Pública",
+      tags: ["residuos sólidos", "gestión ambiental", "salud comunitaria"],
+      statement: "Un establecimiento de salud no segrega adecuadamente los residuos biocontaminados de los residuos comunes, y tampoco involucra a la comunidad en la disposición final de residuos domiciliarios.",
+      question: "¿Cuál es la conducta más adecuada para mejorar esta situación?",
+      options: [
+        "Delegar toda la responsabilidad de los residuos exclusivamente al personal de limpieza, sin ninguna otra acción.",
+        "Implementar la segregación adecuada de residuos según su tipo y promover la participación comunitaria en hábitos saludables de eliminación de residuos.",
+        "Reducir la generación de residuos limitando la atención de pacientes."
+      ],
+      correct: 1,
+      feedback: "La gestión integral de residuos requiere segregación adecuada según su tipo (biocontaminados, comunes, especiales) y participación comunitaria en la adopción de hábitos saludables de eliminación."
+    },
+    {
+      id: 156,
+      career: "Psicología",
+      block: "Salud pública",
+      title: "Riesgo psicosocial y salud ocupacional del personal de salud",
+      level: "I-2",
+      specialty: "Psicología / Salud Ocupacional",
+      tags: ["salud ocupacional", "riesgo psicosocial", "burnout"],
+      statement: "En un establecimiento de salud se identifica sobrecarga laboral sostenida y ausencia de tamizaje periódico de desgaste profesional en el personal.",
+      question: "¿Cuál es la conducta más adecuada según la normativa de salud ocupacional?",
+      options: [
+        "Considerar que el desgaste profesional es un problema individual sin relación con la organización del trabajo.",
+        "Implementar campañas regulares de tamizaje de estrés laboral y desgaste profesional, y ajustar factores organizacionales de riesgo.",
+        "Ignorar el riesgo psicosocial porque no está relacionado con la seguridad física del personal."
+      ],
+      correct: 1,
+      feedback: "La normativa de salud ocupacional recomienda el tamizaje regular de riesgos psicosociales como el desgaste profesional, además de intervenir sobre los factores organizacionales que lo generan."
+    },
+    {
+      id: 157,
+      career: "Enfermería",
+      block: "Cuidado integral",
+      title: "Aplicación del modelo de cuidado integral por curso de vida",
+      level: "I-2",
+      specialty: "Enfermería",
+      tags: ["curso de vida", "cuidado integral", "paquetes de atención"],
+      statement: "Un establecimiento organiza su atención por edad, pero no articula las intervenciones preventivas, curativas y educativas específicas de cada etapa de vida de manera coordinada.",
+      question: "¿Qué enfoque debe fortalecerse en este establecimiento?",
+      options: [
+        "Atender únicamente la demanda espontánea de cada grupo etario, sin paquetes de atención diferenciados.",
+        "Aplicar el modelo de cuidado integral por curso de vida, con paquetes de atención específicos y articulados desde el prenatal hasta la vejez.",
+        "Concentrar todos los recursos en la atención del adulto mayor, dado que es la etapa de mayor riesgo."
+      ],
+      correct: 1,
+      feedback: "El modelo de cuidado integral por curso de vida requiere paquetes de atención específicos y articulados para cada etapa, desde el prenatal hasta la vejez, y no solo la atención de la demanda espontánea."
     }
+
 
 
 
