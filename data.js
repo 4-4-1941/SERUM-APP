@@ -1576,7 +1576,390 @@ window.SERUMS_DATA = {
       ],
       correct: 0,
       feedback: "La gestión de recursos humanos debe abordar de forma integral la selección, capacitación y desarrollo profesional del personal para reducir la rotación y mejorar el desempeño de forma sostenible."
+    },
+    {
+      id: 88,
+      career: "Medicina",
+      block: "Cuidado integral",
+      title: "Convulsión febril en un lactante",
+      level: "I-2",
+      specialty: "Medicina",
+      tags: ["convulsión febril", "pediatría", "manejo inicial"],
+      statement: "Lactante de 14 meses presenta un episodio convulsivo generalizado de 2 minutos asociado a fiebre alta de inicio súbito.",
+      question: "¿Cuál es la conducta más adecuada tras ceder la convulsión?",
+      options: [
+        "Indicar solo antipirético oral y alta sin evaluación adicional.",
+        "Estabilizar, controlar la fiebre, evaluar signos de alarma neurológica y decidir observación o referencia.",
+        "Administrar anticonvulsivante de mantenimiento de forma inmediata sin evaluación previa."
+      ],
+      correct: 1,
+      feedback: "Tras una convulsión febril se debe estabilizar al paciente, controlar la fiebre, descartar signos de alarma neurológica y decidir observación o referencia según la evolución."
+    },
+    {
+      id: 89,
+      career: "Medicina",
+      block: "Cuidado integral",
+      title: "Sospecha de apendicitis aguda en zona rural",
+      level: "I-3",
+      specialty: "Medicina",
+      tags: ["abdomen agudo", "apendicitis", "referencia quirúrgica"],
+      statement: "Paciente joven presenta dolor abdominal progresivo localizado en fosa iliaca derecha, con signos de irritación peritoneal, en un establecimiento sin capacidad quirúrgica.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Indicar analgésicos y observación domiciliaria por 48 horas.",
+        "Estabilizar al paciente y coordinar referencia urgente a un establecimiento con capacidad quirúrgica.",
+        "Esperar a que el dolor ceda espontáneamente antes de decidir."
+      ],
+      correct: 1,
+      feedback: "Ante sospecha de abdomen agudo quirúrgico en un establecimiento sin capacidad resolutiva, corresponde estabilizar y referir con urgencia."
+    },
+    {
+      id: 90,
+      career: "Enfermería",
+      block: "Cuidado integral",
+      title: "Shock anafiláctico durante una inmunización",
+      level: "I-2",
+      specialty: "Enfermería",
+      tags: ["anafilaxia", "emergencia", "inmunización"],
+      statement: "Minutos después de recibir una vacuna, un paciente presenta dificultad respiratoria, urticaria generalizada e hipotensión.",
+      question: "¿Cuál es la conducta prioritaria?",
+      options: [
+        "Observar la evolución antes de intervenir.",
+        "Aplicar el protocolo de manejo de anafilaxia de forma inmediata y activar la referencia de emergencia.",
+        "Indicar solo un antihistamínico oral y continuar la jornada de vacunación."
+      ],
+      correct: 1,
+      feedback: "La anafilaxia es una emergencia que requiere manejo protocolizado inmediato y activación de la referencia de emergencia sin demora."
+    },
+    {
+      id: 91,
+      career: "Enfermería",
+      block: "Cuidado integral",
+      title: "Consejería en climaterio",
+      level: "I-2",
+      specialty: "Enfermería / Psicología",
+      tags: ["climaterio", "menopausia", "consejería"],
+      statement: "Mujer de 50 años consulta por bochornos frecuentes, irritabilidad y dificultad para dormir asociados al climaterio.",
+      question: "¿Cuál es la conducta más adecuada en este nivel de atención?",
+      options: [
+        "Indicar que son molestias normales que no requieren ninguna evaluación.",
+        "Evaluar la intensidad de los síntomas, brindar consejería y coordinar apoyo médico o psicológico según necesidad.",
+        "Derivar de inmediato a psiquiatría sin evaluación previa."
+      ],
+      correct: 1,
+      feedback: "El climaterio puede afectar el bienestar físico y emocional; corresponde evaluar la intensidad de los síntomas y coordinar el apoyo necesario, médico o psicológico.",
+      interdisciplinaryNote: "Psicología puede apoyar cuando los cambios de ánimo asociados al climaterio afectan de forma significativa el funcionamiento diario."
+    },
+    {
+      id: 92,
+      career: "Enfermería",
+      block: "Salud pública",
+      title: "Tamizaje comunitario de hipertensión",
+      level: "I-2",
+      specialty: "Enfermería / Salud Pública",
+      tags: ["hipertensión", "tamizaje", "prevención"],
+      statement: "Se organiza una campaña de toma de presión arterial en una comunidad con baja cobertura de controles de salud.",
+      question: "¿Qué acción corresponde ante un valor elevado detectado en el tamizaje?",
+      options: [
+        "Registrar el dato sin ninguna acción adicional.",
+        "Confirmar con una segunda toma, orientar al usuario y programar su ingreso a control si corresponde.",
+        "Indicar tratamiento farmacológico de inmediato sin confirmación previa."
+      ],
+      correct: 1,
+      feedback: "Ante un valor elevado en tamizaje se debe confirmar con una segunda toma, orientar al usuario y programar su ingreso a control según protocolo."
+    },
+    {
+      id: 93,
+      career: "Enfermería",
+      block: "Cuidado integral",
+      title: "Pie diabético en visita domiciliaria",
+      level: "I-2",
+      specialty: "Enfermería",
+      tags: ["pie diabético", "curación", "prevención de amputación"],
+      statement: "Durante una visita domiciliaria se identifica una lesión ulcerada en el pie de un paciente diabético, con signos de mala perfusión.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Realizar curación local y no dar seguimiento posterior.",
+        "Evaluar la lesión, iniciar curación según protocolo y coordinar referencia si hay signos de compromiso vascular o infeccioso.",
+        "Indicar reposo absoluto sin evaluar la lesión."
+      ],
+      correct: 1,
+      feedback: "El pie diabético con signos de mala perfusión requiere evaluación cuidadosa, curación protocolizada y referencia oportuna para prevenir complicaciones mayores."
+    },
+    {
+      id: 94,
+      career: "Obstetricia",
+      block: "Cuidado integral",
+      title: "Ruptura prematura de membranas",
+      level: "I-3",
+      specialty: "Obstetricia",
+      tags: ["RPM", "emergencia obstétrica", "referencia"],
+      statement: "Gestante de 30 semanas refiere pérdida súbita de líquido claro por vía vaginal, sin contracciones aún.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Indicar reposo domiciliario y control en una semana.",
+        "Confirmar el diagnóstico, evaluar signos de infección y coordinar referencia urgente según protocolo.",
+        "Esperar el inicio espontáneo del trabajo de parto sin más evaluación."
+      ],
+      correct: 1,
+      feedback: "Ante sospecha de ruptura prematura de membranas se debe confirmar el diagnóstico, evaluar signos de infección y referir con urgencia según protocolo."
+    },
+    {
+      id: 95,
+      career: "Obstetricia",
+      block: "Ética e interculturalidad",
+      title: "Consejería en salud sexual y reproductiva adolescente",
+      level: "I-2",
+      specialty: "Obstetricia",
+      tags: ["salud sexual", "adolescencia", "confidencialidad"],
+      statement: "Una adolescente de 16 años acude sola a solicitar información sobre métodos anticonceptivos, pidiendo que no se informe a sus padres.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Negar la atención hasta que acuda con un adulto responsable.",
+        "Brindar consejería confidencial y orientación adecuada a su edad, respetando su autonomía progresiva.",
+        "Informar a los padres sin el consentimiento de la adolescente."
+      ],
+      correct: 1,
+      feedback: "La atención en salud sexual y reproductiva a adolescentes debe respetar la confidencialidad y la autonomía progresiva, brindando orientación apropiada a su edad."
+    },
+    {
+      id: 96,
+      career: "Obstetricia",
+      block: "Cuidado integral",
+      title: "Hallazgo ecográfico anómalo en el control prenatal",
+      level: "I-3",
+      specialty: "Obstetricia / Medicina",
+      tags: ["ecografía obstétrica", "malformación", "derivación"],
+      statement: "En una ecografía de rutina se detecta un hallazgo compatible con una posible malformación fetal en una gestante de 22 semanas.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Informar el hallazgo de forma clara, brindar contención emocional y coordinar referencia especializada oportuna.",
+        "No informar el hallazgo hasta confirmar con certeza absoluta.",
+        "Derivar sin brindar ninguna explicación a la gestante."
+      ],
+      correct: 0,
+      feedback: "Ante un hallazgo ecográfico anómalo se debe informar con claridad y sensibilidad, brindar contención emocional y coordinar la referencia especializada oportuna.",
+      interdisciplinaryNote: "Psicología puede brindar contención emocional a la gestante y su pareja ante la incertidumbre de un diagnóstico prenatal."
+    },
+    {
+      id: 97,
+      career: "Obstetricia",
+      block: "Cuidado integral",
+      title: "Signos de infección puerperal",
+      level: "I-2",
+      specialty: "Obstetricia",
+      tags: ["puerperio", "infección", "seguimiento"],
+      statement: "Puérpera de 5 días presenta fiebre, loquios de mal olor y dolor abdominal bajo persistente.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Indicar reposo y control en una semana.",
+        "Evaluar signos de infección puerperal, iniciar manejo inicial y referir si el cuadro lo amerita.",
+        "Esperar la resolución espontánea de los síntomas."
+      ],
+      correct: 1,
+      feedback: "Ante sospecha de infección puerperal se debe evaluar la gravedad del cuadro, iniciar manejo inicial y referir oportunamente si corresponde."
+    },
+    {
+      id: 98,
+      career: "Odontología",
+      block: "Cuidado integral",
+      title: "Maloclusión dentaria en un niño",
+      level: "I-2",
+      specialty: "Odontología",
+      tags: ["maloclusión", "ortodoncia", "derivación"],
+      statement: "Niño de 8 años presenta una alteración marcada en la posición de sus piezas dentarias que afecta su mordida.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Indicar que la maloclusión se corregirá espontáneamente con el crecimiento.",
+        "Evaluar el caso y derivar oportunamente a especialidad de ortodoncia si corresponde.",
+        "Extraer las piezas afectadas de inmediato sin evaluación especializada."
+      ],
+      correct: 1,
+      feedback: "Ante una maloclusión significativa corresponde evaluar el caso y derivar oportunamente a ortodoncia para un manejo especializado."
+    },
+    {
+      id: 99,
+      career: "Odontología",
+      block: "Cuidado integral",
+      title: "Gingivitis en paciente con diabetes",
+      level: "I-2",
+      specialty: "Odontología / Medicina",
+      tags: ["gingivitis", "diabetes", "salud bucal"],
+      statement: "Paciente diabético presenta encías inflamadas y sangrado frecuente al cepillarse, con control glicémico irregular.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Tratar la gingivitis sin considerar el control glicémico del paciente.",
+        "Evaluar el estado bucal, tratar la gingivitis y coordinar con el equipo médico el manejo integral de la diabetes.",
+        "Indicar que la gingivitis no está relacionada con la diabetes."
+      ],
+      correct: 1,
+      feedback: "La diabetes y la enfermedad periodontal se influyen mutuamente, por lo que se debe tratar la gingivitis y coordinar el manejo integral con el equipo médico.",
+      interdisciplinaryNote: "Un control glicémico inadecuado puede empeorar la salud bucal, por lo que la coordinación con Medicina es clave."
+    },
+    {
+      id: 100,
+      career: "Odontología",
+      block: "Cuidado integral",
+      title: "Bruxismo asociado a estrés",
+      level: "I-2",
+      specialty: "Odontología / Psicología",
+      tags: ["bruxismo", "estrés", "desgaste dental"],
+      statement: "Paciente adulto presenta desgaste dental progresivo y dolor mandibular al despertar, y refiere una etapa de alta carga laboral.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Tratar únicamente el desgaste dental sin explorar el origen del bruxismo.",
+        "Evaluar el desgaste dental, indicar manejo odontológico y coordinar abordaje del estrés asociado.",
+        "Indicar que el bruxismo no requiere ninguna intervención."
+      ],
+      correct: 1,
+      feedback: "El manejo del bruxismo debe abordar tanto el componente dental como el estrés que frecuentemente lo desencadena o mantiene.",
+      interdisciplinaryNote: "Psicología puede apoyar con técnicas de manejo del estrés cuando este mantiene el bruxismo."
+    },
+    {
+      id: 101,
+      career: "Odontología",
+      block: "Salud pública",
+      title: "Programa de salud bucal escolar",
+      level: "I-2",
+      specialty: "Odontología / Salud Pública",
+      tags: ["salud bucal escolar", "promoción", "prevención comunitaria"],
+      statement: "Se planifica un programa de salud bucal dirigido a escolares de una institución educativa con alta prevalencia de caries.",
+      question: "¿Qué componente es indispensable incluir en el programa?",
+      options: [
+        "Atender solo los casos con dolor agudo.",
+        "Educación en higiene oral, aplicación de medidas preventivas y coordinación con la escuela y las familias.",
+        "Limitar el programa a la entrega de cepillos dentales sin educación adicional."
+      ],
+      correct: 1,
+      feedback: "Un programa de salud bucal escolar efectivo integra educación en higiene oral, medidas preventivas y coordinación con la comunidad educativa y las familias."
+    },
+    {
+      id: 102,
+      career: "Nutrición",
+      block: "Cuidado integral",
+      title: "Sobrepeso en gestante",
+      level: "I-2",
+      specialty: "Nutrición / Obstetricia",
+      tags: ["sobrepeso", "gestación", "consejería nutricional"],
+      statement: "Gestante de 24 semanas presenta ganancia de peso mayor a la esperada para su edad gestacional.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Indicar una dieta muy restrictiva sin considerar los riesgos de la gestación.",
+        "Evaluar el patrón alimentario, brindar consejería nutricional adecuada al embarazo y coordinar seguimiento con obstetricia.",
+        "No intervenir porque el aumento de peso es siempre normal en el embarazo."
+      ],
+      correct: 1,
+      feedback: "El sobrepeso en la gestación requiere consejería nutricional apropiada para el embarazo, sin restricciones extremas, y seguimiento coordinado con obstetricia."
+    },
+    {
+      id: 103,
+      career: "Nutrición",
+      block: "Salud pública",
+      title: "Deficiencia de vitamina A en zona rural",
+      level: "I-2",
+      specialty: "Nutrición / Salud Pública",
+      tags: ["vitamina A", "deficiencia nutricional", "salud comunitaria"],
+      statement: "En una comunidad rural se identifican varios niños con signos compatibles con deficiencia de vitamina A.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Atender los casos identificados sin evaluar el contexto alimentario comunitario.",
+        "Evaluar los patrones alimentarios locales y coordinar suplementación y educación nutricional comunitaria.",
+        "Indicar suplementación sin ninguna evaluación previa del contexto."
+      ],
+      correct: 1,
+      feedback: "Ante deficiencia de vitamina A en una comunidad se debe evaluar el contexto alimentario y coordinar suplementación junto con educación nutricional."
+    },
+    {
+      id: 104,
+      career: "Nutrición",
+      block: "Cuidado integral",
+      title: "Sarcopenia en adulto mayor",
+      level: "I-2",
+      specialty: "Nutrición",
+      tags: ["sarcopenia", "adulto mayor", "consejería alimentaria"],
+      statement: "Adulto mayor presenta pérdida progresiva de masa muscular y disminución de su ingesta alimentaria en los últimos meses.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Indicar que la pérdida muscular es inevitable en la vejez y no requiere intervención.",
+        "Evaluar el estado nutricional, brindar consejería alimentaria adecuada y promover actividad física acorde a su condición.",
+        "Aumentar drásticamente las calorías sin evaluar la composición de la dieta."
+      ],
+      correct: 1,
+      feedback: "El manejo de la sarcopenia en el adulto mayor requiere evaluación nutricional, consejería alimentaria adecuada y promoción de actividad física apropiada."
+    },
+    {
+      id: 105,
+      career: "Transversal",
+      block: "Gestión",
+      title: "Conflicto de interés en la adquisición de insumos",
+      level: "I-2",
+      specialty: "Gestión",
+      tags: ["conflicto de interés", "transparencia", "adquisiciones"],
+      statement: "Un responsable de compras del establecimiento tiene un vínculo familiar con un proveedor que participa en un proceso de adquisición de insumos.",
+      question: "¿Cuál es la conducta correcta?",
+      options: [
+        "Declarar el conflicto de interés y abstenerse de participar en la decisión.",
+        "Continuar con el proceso sin informar el vínculo familiar.",
+        "Favorecer al proveedor familiar si ofrece el mejor precio."
+      ],
+      correct: 0,
+      feedback: "Ante un conflicto de interés, la conducta correcta es declararlo de forma transparente y abstenerse de participar en la decisión."
+    },
+    {
+      id: 106,
+      career: "Transversal",
+      block: "Gestión",
+      title: "Manejo de una queja de usuario",
+      level: "I-2",
+      specialty: "Gestión",
+      tags: ["quejas", "satisfacción del usuario", "mejora continua"],
+      statement: "Un usuario presenta una queja formal por el tiempo de espera prolongado en su atención.",
+      question: "¿Cuál es la conducta más adecuada del establecimiento?",
+      options: [
+        "Ignorar la queja si no se repite con frecuencia.",
+        "Registrar la queja, analizar sus causas y usarla como insumo para la mejora continua del servicio.",
+        "Responder solo de forma verbal sin dejar registro."
+      ],
+      correct: 1,
+      feedback: "Las quejas de los usuarios deben registrarse, analizarse y utilizarse como insumo para la mejora continua de la calidad del servicio."
+    },
+    {
+      id: 107,
+      career: "Transversal",
+      block: "Salud pública",
+      title: "Coordinación intersectorial para un municipio saludable",
+      level: "I-2",
+      specialty: "Gestión / Salud Pública",
+      tags: ["municipio saludable", "intersectorialidad", "promoción"],
+      statement: "El establecimiento de salud busca impulsar junto al municipio un proyecto de espacios públicos seguros y áreas verdes.",
+      question: "¿Qué elemento es clave para el éxito de esta iniciativa?",
+      options: [
+        "Que el establecimiento de salud actúe de forma aislada, sin coordinar con el municipio.",
+        "La articulación intersectorial entre salud, municipio y comunidad para sostener la iniciativa.",
+        "Limitar la participación exclusivamente a personal médico."
+      ],
+      correct: 1,
+      feedback: "Las iniciativas de municipio saludable requieren articulación intersectorial sostenida entre salud, gobierno local y comunidad."
+    },
+    {
+      id: 108,
+      career: "Transversal",
+      block: "Ética e interculturalidad",
+      title: "Consentimiento informado en un procedimiento menor",
+      level: "I-2",
+      specialty: "Gestión / Ética",
+      tags: ["consentimiento informado", "derechos del paciente", "procedimiento"],
+      statement: "Un paciente será sometido a un procedimiento menor y el personal se dispone a realizarlo directamente sin mayor explicación.",
+      question: "¿Cuál es la conducta correcta?",
+      options: [
+        "Realizar el procedimiento directamente para no demorar la atención.",
+        "Explicar el procedimiento, sus riesgos y beneficios, y obtener el consentimiento informado antes de proceder.",
+        "Solicitar el consentimiento solo si el paciente pregunta al respecto."
+      ],
+      correct: 1,
+      feedback: "Todo procedimiento, incluso uno menor, requiere explicar riesgos y beneficios y obtener el consentimiento informado antes de proceder."
     }
+
 
 
   ],
