@@ -2426,7 +2426,296 @@ window.SERUMS_DATA = {
       ],
       correct: 0,
       feedback: "El muestreo probabilístico permite que los resultados sean representativos y generalizables a la población de estudio, a diferencia de los muestreos por conveniencia."
+    },
+    {
+      id: 135,
+      career: "Psicología",
+      block: "Ética e interculturalidad",
+      title: "Límite de la confidencialidad ante riesgo a terceros",
+      level: "I-2",
+      specialty: "Psicología",
+      tags: ["confidencialidad", "deber de alertar", "riesgo a terceros"],
+      statement: "Durante una sesión, un paciente revela un plan concreto para dañar a una persona específica de su entorno cercano.",
+      question: "¿Cuál es la conducta correcta respecto a la confidencialidad?",
+      options: [
+        "Mantener absoluta confidencialidad sin excepción alguna.",
+        "Romper la confidencialidad de forma proporcional para alertar a quien está en riesgo y a las autoridades pertinentes.",
+        "Confrontar al paciente y terminar la atención de inmediato."
+      ],
+      correct: 1,
+      feedback: "La confidencialidad tiene un límite ético y legal cuando existe un riesgo real e inminente para terceros, situación en la que corresponde alertar de forma proporcional a quien está en riesgo y a las autoridades."
+    },
+    {
+      id: 136,
+      career: "Medicina",
+      block: "Ética e interculturalidad",
+      title: "Objeción de conciencia de un profesional de salud",
+      level: "I-2",
+      specialty: "Medicina",
+      tags: ["objeción de conciencia", "derechos del paciente", "referencia oportuna"],
+      statement: "Un profesional de salud manifiesta objeción de conciencia frente a un procedimiento solicitado por una paciente dentro del marco legal vigente.",
+      question: "¿Cuál es la conducta correcta?",
+      options: [
+        "Negarse a atender sin ofrecer ninguna alternativa a la paciente.",
+        "Respetar su objeción de conciencia y garantizar la derivación oportuna a otro profesional que sí pueda atender el caso.",
+        "Realizar el procedimiento en contra de sus convicciones para evitar la derivación."
+      ],
+      correct: 1,
+      feedback: "La objeción de conciencia debe respetarse, pero el profesional tiene el deber de garantizar que la paciente sea derivada oportunamente a otro profesional disponible."
+    },
+    {
+      id: 137,
+      career: "Psicología",
+      block: "Ética e interculturalidad",
+      title: "Discriminación por orientación sexual en la atención",
+      level: "I-2",
+      specialty: "Psicología",
+      tags: ["diversidad sexual", "no discriminación", "trato digno"],
+      statement: "Un usuario homosexual refiere haber recibido comentarios despectivos de otro trabajador de salud durante una atención previa en el mismo establecimiento.",
+      question: "¿Cuál es la conducta correcta del equipo de salud?",
+      options: [
+        "Minimizar la situación indicando que fue un malentendido sin mayor acción.",
+        "Escuchar la queja, documentar el hecho y activar los mecanismos internos para abordar la discriminación.",
+        "Indicar al usuario que acuda a otro establecimiento si no está conforme."
+      ],
+      correct: 1,
+      feedback: "Ante un reporte de discriminación se debe escuchar la queja, documentarla y activar los mecanismos institucionales para abordar el hecho y prevenir su repetición."
+    },
+    {
+      id: 138,
+      career: "Enfermería",
+      block: "Ética e interculturalidad",
+      title: "Accesibilidad en la atención a un paciente con discapacidad auditiva",
+      level: "I-2",
+      specialty: "Enfermería",
+      tags: ["discapacidad", "accesibilidad", "comunicación efectiva"],
+      statement: "Un paciente con discapacidad auditiva acude a control sin acompañante y el personal no cuenta con formación en lengua de señas.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Postergar la atención hasta que el paciente consiga un intérprete por su cuenta.",
+        "Utilizar estrategias alternativas de comunicación disponibles (escritura, gestos, recursos visuales) y gestionar apoyo de interpretación si es posible.",
+        "Atender sin intentar ninguna estrategia de comunicación adicional."
+      ],
+      correct: 1,
+      feedback: "Ante una barrera de comunicación por discapacidad se deben usar estrategias alternativas disponibles y gestionar apoyo de interpretación, garantizando una atención accesible y digna."
+    },
+    {
+      id: 139,
+      career: "Psicología",
+      block: "Ética e interculturalidad",
+      title: "Autonomía del adulto mayor frente a decisión familiar paternalista",
+      level: "I-2",
+      specialty: "Psicología",
+      tags: ["autonomía", "adulto mayor", "paternalismo"],
+      statement: "La familia de un adulto mayor con capacidad de decisión conservada solicita que se le oculte información sobre su diagnóstico para 'protegerlo'.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Aceptar la solicitud de la familia y ocultar la información al paciente.",
+        "Explorar los motivos de la familia y respetar el derecho del paciente a recibir información sobre su propia salud, según su capacidad de decisión.",
+        "Informar únicamente a la familia y evitar cualquier conversación con el paciente."
+      ],
+      correct: 1,
+      feedback: "Cuando el paciente conserva su capacidad de decisión, se debe respetar su derecho a la información, explorando con empatía los motivos de la familia sin vulnerar la autonomía del paciente."
+    },
+    {
+      id: 140,
+      career: "Medicina",
+      block: "Ética e interculturalidad",
+      title: "Creencias religiosas y decisión sobre un tratamiento",
+      level: "I-3",
+      specialty: "Medicina",
+      tags: ["creencias religiosas", "consentimiento informado", "autonomía"],
+      statement: "Un paciente adulto rechaza una transfusión sanguínea por sus creencias religiosas, a pesar de que el equipo médico la considera necesaria.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Realizar la transfusión de todas formas, ignorando la voluntad del paciente.",
+        "Respetar la decisión informada del paciente, explorar alternativas terapéuticas posibles y documentar el proceso.",
+        "Negar cualquier otro tratamiento si el paciente no acepta la transfusión."
+      ],
+      correct: 1,
+      feedback: "Debe respetarse la decisión informada y competente del paciente sobre su propio cuerpo, explorando alternativas terapéuticas disponibles y documentando adecuadamente el proceso."
+    },
+    {
+      id: 141,
+      career: "Transversal",
+      block: "Ética e interculturalidad",
+      title: "Atención a un migrante extranjero sin documentos",
+      level: "I-2",
+      specialty: "Gestión / Ética",
+      tags: ["migración", "acceso a la salud", "no discriminación"],
+      statement: "Un migrante extranjero sin documentos de identidad regularizados acude a un establecimiento de salud por un problema de salud agudo.",
+      question: "¿Cuál es la conducta correcta?",
+      options: [
+        "Negar la atención hasta que regularice su situación migratoria.",
+        "Brindar la atención de urgencia requerida y orientar sobre los procesos de regularización y aseguramiento disponibles.",
+        "Atender solo si puede pagar el costo total de forma particular."
+      ],
+      correct: 1,
+      feedback: "El acceso a la atención de urgencia no debe condicionarse a la situación migratoria; corresponde atender y luego orientar sobre los procesos de regularización y aseguramiento disponibles."
+    },
+    {
+      id: 142,
+      career: "Psicología",
+      block: "Ética e interculturalidad",
+      title: "Consejería psicológica con apoyo de intérprete en lengua de señas",
+      level: "I-2",
+      specialty: "Psicología",
+      tags: ["lengua de señas", "accesibilidad", "confidencialidad"],
+      statement: "Un usuario sordo acude a consulta psicológica acompañado de un intérprete de lengua de señas peruana que además es su vecino.",
+      question: "¿Qué aspecto debe cuidarse especialmente en esta situación?",
+      options: [
+        "Ignorar la relación entre el usuario y el intérprete, ya que no afecta la atención.",
+        "Explorar con el usuario su comodidad con ese intérprete específico y resguardar la confidencialidad de lo tratado en consulta.",
+        "Suspender la atención por no contar con un intérprete profesional certificado."
+      ],
+      correct: 1,
+      feedback: "Cuando el intérprete tiene una relación personal previa con el usuario, se debe explorar su comodidad con esa situación y resguardar especialmente la confidencialidad de la información tratada."
+    },
+    {
+      id: 143,
+      career: "Transversal",
+      block: "Gestión",
+      title: "Protección de datos en la historia clínica electrónica",
+      level: "I-2",
+      specialty: "Gestión",
+      tags: ["historia clínica electrónica", "protección de datos", "confidencialidad"],
+      statement: "Un establecimiento migra sus historias clínicas a un sistema electrónico y varios trabajadores comparten una misma cuenta de acceso.",
+      question: "¿Cuál es la conducta correcta respecto a la protección de datos?",
+      options: [
+        "Continuar con cuentas compartidas porque agiliza el registro de información.",
+        "Asignar accesos individuales y trazables, protegiendo la confidencialidad de la información clínica de los pacientes.",
+        "Permitir el acceso libre al sistema a cualquier personal del establecimiento."
+      ],
+      correct: 1,
+      feedback: "La protección de datos en la historia clínica electrónica exige accesos individuales y trazables, evitando cuentas compartidas que comprometan la confidencialidad de la información."
+    },
+    {
+      id: 144,
+      career: "Transversal",
+      block: "Gestión",
+      title: "Categorización de un establecimiento de salud",
+      level: "I-2",
+      specialty: "Gestión",
+      tags: ["categorización", "nivel de atención", "capacidad resolutiva"],
+      statement: "Un establecimiento de salud recibe con frecuencia casos que exceden su capacidad resolutiva según su categoría actual.",
+      question: "¿Cuál es la conducta correcta ante esta situación recurrente?",
+      options: [
+        "Atender siempre los casos complejos, aunque excedan la capacidad del establecimiento.",
+        "Reconocer los límites de la categoría del establecimiento y fortalecer la referencia oportuna a un nivel de mayor complejidad.",
+        "Reducir la atención de todos los casos, incluidos los que sí corresponden al nivel."
+      ],
+      correct: 1,
+      feedback: "Cada establecimiento debe operar dentro de la capacidad resolutiva de su categoría, fortaleciendo la referencia oportuna cuando el caso exceda ese nivel."
+    },
+    {
+      id: 145,
+      career: "Enfermería",
+      block: "Gestión",
+      title: "Desabastecimiento de insumos médicos",
+      level: "I-2",
+      specialty: "Enfermería / Gestión",
+      tags: ["gestión logística", "desabastecimiento", "continuidad de atención"],
+      statement: "Un establecimiento se queda sin insumos clave para la atención de pacientes crónicos debido a fallas en la planificación de compras.",
+      question: "¿Cuál es la conducta más adecuada del equipo de gestión?",
+      options: [
+        "Esperar el próximo pedido regular sin tomar ninguna acción adicional.",
+        "Reportar el desabastecimiento, gestionar una solución de emergencia y revisar el proceso de planificación logística.",
+        "Suspender la atención de los pacientes afectados sin informarles el motivo."
+      ],
+      correct: 1,
+      feedback: "Ante un desabastecimiento se debe reportar la situación, gestionar una solución de emergencia y revisar el proceso de planificación logística para prevenir que se repita."
+    },
+    {
+      id: 146,
+      career: "Transversal",
+      block: "Gestión",
+      title: "Uso de indicadores de gestión en un servicio de salud",
+      level: "I-2",
+      specialty: "Gestión",
+      tags: ["indicadores de gestión", "tablero de mando", "toma de decisiones"],
+      statement: "El equipo directivo de un establecimiento desea monitorear de forma objetiva el desempeño de sus servicios de atención.",
+      question: "¿Qué herramienta es más adecuada para este propósito?",
+      options: [
+        "Confiar únicamente en la percepción subjetiva del personal sobre su propio desempeño.",
+        "Definir indicadores de gestión medibles y darles seguimiento periódico para orientar decisiones.",
+        "Evaluar el desempeño solo cuando ocurre una queja formal."
+      ],
+      correct: 1,
+      feedback: "El uso de indicadores de gestión medibles y su seguimiento periódico permite monitorear el desempeño de forma objetiva y orientar la toma de decisiones."
+    },
+    {
+      id: 147,
+      career: "Transversal",
+      block: "Gestión",
+      title: "Coordinación dentro de una Red Integrada de Salud",
+      level: "I-2",
+      specialty: "Gestión",
+      tags: ["redes integradas de salud", "coordinación", "continuidad de atención"],
+      statement: "Un paciente referido a un hospital de mayor complejidad regresa a su establecimiento de origen sin ninguna información sobre la atención recibida.",
+      question: "¿Qué falla debe corregirse en la Red Integrada de Salud?",
+      options: [
+        "Ninguna, esto es parte normal del proceso de referencia.",
+        "La falta de contrarreferencia con información clínica que permita continuar el seguimiento del paciente.",
+        "El exceso de comunicación entre los establecimientos de la red."
+      ],
+      correct: 1,
+      feedback: "Una Red Integrada de Salud funcional requiere contrarreferencia con información clínica completa, para garantizar la continuidad del seguimiento del paciente en su establecimiento de origen."
+    },
+    {
+      id: 148,
+      career: "Psicología",
+      block: "Gestión",
+      title: "Resistencia del equipo ante una nueva herramienta digital",
+      level: "I-2",
+      specialty: "Psicología / Gestión",
+      tags: ["gestión del cambio", "resistencia", "capacitación"],
+      statement: "Un centro de salud mental implementa un nuevo sistema digital de registro y varios miembros del equipo muestran resistencia a utilizarlo.",
+      question: "¿Cuál es la conducta más adecuada para gestionar este cambio?",
+      options: [
+        "Imponer el uso del sistema sin explicar sus beneficios ni brindar capacitación.",
+        "Explicar los beneficios del cambio, capacitar al equipo y acompañar el proceso de adaptación.",
+        "Abandonar la implementación ante la primera señal de resistencia."
+      ],
+      correct: 1,
+      feedback: "La gestión del cambio efectiva requiere explicar los beneficios, capacitar al equipo y acompañar el proceso de adaptación, en lugar de imponer o abandonar el cambio."
+    },
+    {
+      id: 149,
+      career: "Transversal",
+      block: "Gestión",
+      title: "Plan de contingencia ante un desastre natural",
+      level: "I-2",
+      specialty: "Gestión",
+      tags: ["plan de contingencia", "gestión del riesgo", "continuidad operativa"],
+      statement: "Un establecimiento de salud ubicado en zona de riesgo sísmico no cuenta con un plan de contingencia actualizado.",
+      question: "¿Cuál es la conducta correcta del equipo directivo?",
+      options: [
+        "Esperar a que ocurra una emergencia real para definir las acciones a seguir.",
+        "Elaborar y difundir un plan de contingencia actualizado, con roles definidos y simulacros periódicos.",
+        "Delegar toda la responsabilidad de la emergencia a instituciones externas."
+      ],
+      correct: 1,
+      feedback: "La gestión del riesgo exige contar con un plan de contingencia actualizado, con roles definidos y simulacros periódicos, antes de que ocurra una emergencia real."
+    },
+    {
+      id: 150,
+      career: "Transversal",
+      block: "Gestión",
+      title: "Ciclo de mejora continua en la calidad de atención",
+      level: "I-2",
+      specialty: "Gestión",
+      tags: ["mejora continua", "calidad", "ciclo PDCA"],
+      statement: "Un servicio de salud identifica demoras recurrentes en la atención y decide implementar cambios para reducirlas.",
+      question: "¿Qué enfoque corresponde aplicar para que la mejora sea sostenible?",
+      options: [
+        "Implementar un cambio único y definitivo, sin evaluar sus resultados posteriores.",
+        "Aplicar un ciclo de mejora continua: planificar, ejecutar, evaluar los resultados y ajustar según corresponda.",
+        "Esperar a que el problema se resuelva por sí solo con el tiempo."
+      ],
+      correct: 1,
+      feedback: "La mejora continua sostenible requiere un ciclo de planificar, ejecutar, evaluar resultados y ajustar el proceso, en lugar de aplicar un cambio único sin seguimiento."
     }
+
 
 
 
