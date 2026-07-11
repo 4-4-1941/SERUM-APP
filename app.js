@@ -15,6 +15,7 @@ let activeCase = null;
 let currentList = [];      // lista filtrada vigente, para "Siguiente caso"
 let selectedOption = null; // opción marcada, aún no confirmada
 let confirmed = false;     // true tras pulsar "Confirmar respuesta"
+let priorityReviewMode = false; // true cuando se navega desde "Repasar ahora"
 
 function loadProgress(key, fallback) {
   try { return JSON.parse(localStorage.getItem(key)) ?? fallback; } catch { return fallback; }
@@ -35,6 +36,30 @@ function updateBadges() {
 
 function fmtPct(n) {
   return Math.max(0, Math.min(100, n));
+}
+
+// Prioridad de repaso: 0 = nunca intentado (máxima prioridad),
+// 1 = intentado pero con error (ordenado por más antiguo primero),
+// 2 = ya resuelto correctamente (ordenado por más antiguo primero, para refuerzo espaciado).
+function reviewPriority(c) {
+  const st = caseState[c.id];
+  if (!st || !st.attempts) return { tier: 0, date: "" };
+  const lastDate = st.lastAttemptDate || (st.history && st.history.length ? st.history[st.history.length - 1].date : "");
+  return { tier: st.correct ? 2 : 1, date: lastDate };
+}
+
+function sortByPriority(list) {
+  return [...list].sort((a, b) => {
+    const pa = reviewPriority(a);
+    const pb = reviewPriority(b);
+    if (pa.tier !== pb.tier) return pa.tier - pb.tier;
+    return (pa.date || "").localeCompare(pb.date || "");
+  });
+}
+
+function goToReview() {
+  priorityReviewMode = true;
+  renderView("cases");
 }
 
 function renderDashboard() {
@@ -60,6 +85,10 @@ function renderDashboard() {
       <div class="card"><span class="label">Casos</span><div class="value">${data.cases.length}</div></div>
       <div class="card"><span class="label">Normas</span><div class="value">${data.norms.length}</div></div>
       <div class="card"><span class="label">Decretos</span><div class="value">${data.decrees.length}</div></div>
+    </section>
+    <section style="margin-bottom:16px">
+      <button id="review-btn" class="action-btn">Repasar ahora →</button>
+      <span style="margin-left:10px;color:#5B6E6A;font-size:13px">Prioriza casos nunca intentados y con error, empezando por los más antiguos.</span>
     </section>
     <section class="two-col">
       <div class="panel">
@@ -93,15 +122,20 @@ function renderDashboard() {
       </div>
     </section>
   `;
+  document.getElementById("review-btn").addEventListener("click", goToReview);
 }
 
 function renderCases() {
-  pageTitle.textContent = "Casos interactivos";
-  pageSubtitle.textContent = "Elige carrera, bloque o nivel para ver sus casos.";
+  pageTitle.textContent = priorityReviewMode ? "Repaso priorizado" : "Casos interactivos";
+  pageSubtitle.textContent = priorityReviewMode
+    ? "Orden sugerido: nunca intentados primero, luego con error, luego resueltos hace más tiempo."
+    : "Elige carrera, bloque o nivel para ver sus casos.";
   root.innerHTML = `
     <section class="two-col">
       <div class="panel">
         <input id="case-search" class="search" placeholder="Buscar caso, bloque o carrera..." />
+
+        <button id="priority-toggle" class="toggle">${priorityReviewMode ? "✓ Repaso priorizado activo — click para desactivar" : "Activar orden de repaso priorizado"}</button>
 
         <details class="filter-box" open>
           <summary>Carrera</summary>
@@ -127,6 +161,11 @@ function renderCases() {
       </div>
     </section>
   `;
+
+  document.getElementById("priority-toggle").addEventListener("click", () => {
+    priorityReviewMode = !priorityReviewMode;
+    renderCases();
+  });
 
   const list = document.getElementById("case-list");
   const search = document.getElementById("case-search");
@@ -179,7 +218,7 @@ function renderCases() {
 
   function draw(filter = "") {
     const q = filter.toLowerCase();
-    const filtered = data.cases.filter(c => {
+    let filtered = data.cases.filter(c => {
       const text = [c.title, c.block, c.specialty, c.career, c.statement, ...(c.tags || [])].join(" ").toLowerCase();
       return text.includes(q) &&
         (!selectedCareer || (c.career || c.specialty) === selectedCareer) &&
@@ -187,17 +226,21 @@ function renderCases() {
         (!selectedLevel || c.level === selectedLevel);
     });
 
+    if (priorityReviewMode) filtered = sortByPriority(filtered);
+
     currentList = filtered;
 
     list.innerHTML = filtered.map(c => {
       const st = caseState[c.id];
-      const doneTag = st && st.correct ? `<span class="badge">Resuelto</span>` : "";
+      let statusTag = `<span class="badge">Nuevo</span>`;
+      if (st && st.correct) statusTag = `<span class="badge">Resuelto</span>`;
+      else if (st && st.attempts) statusTag = `<span class="badge" style="background:#FCEBEA;color:#8A2A24">Con error</span>`;
       return `
         <button class="case-card" data-id="${c.id}">
           <span>${c.career || c.specialty} · ${c.block} · ${c.level}</span>
           <strong>${c.title}</strong>
           <small>${c.statement}</small>
-          ${doneTag}
+          ${statusTag}
         </button>
       `;
     }).join("") || `<p style="color:#5B6E6A">No hay casos con este filtro.</p>`;
@@ -303,6 +346,7 @@ function confirmAnswer() {
   st.correct = st.correct || correct;
   st.history = st.history || [];
   st.history.push({ date: new Date().toISOString(), selectedIndex: selectedOption, correct });
+  st.lastAttemptDate = st.history[st.history.length - 1].date;
   caseState[activeCase.id] = st;
 
   if (correct) score += 10;
@@ -445,5 +489,8 @@ function renderView(view) {
   updateBadges();
 }
 
-navButtons.forEach(btn => btn.addEventListener("click", () => renderView(btn.dataset.view)));
+navButtons.forEach(btn => btn.addEventListener("click", () => {
+  priorityReviewMode = false;
+  renderView(btn.dataset.view);
+}));
 renderView("dashboard");
