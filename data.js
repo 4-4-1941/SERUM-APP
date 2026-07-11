@@ -2840,7 +2840,333 @@ window.SERUMS_DATA = {
       ],
       correct: 1,
       feedback: "El modelo de cuidado integral por curso de vida requiere paquetes de atención específicos y articulados para cada etapa, desde el prenatal hasta la vejez, y no solo la atención de la demanda espontánea."
+    },
+    {
+      id: 158,
+      career: "Farmacia y Bioquímica",
+      block: "Cuidado integral",
+      title: "Dispensación de un medicamento de alto riesgo",
+      level: "I-2",
+      specialty: "Farmacia y Bioquímica",
+      tags: ["dispensación", "medicamentos de alto riesgo", "seguridad del paciente"],
+      statement: "Un paciente presenta una receta de un medicamento de estrecho margen terapéutico, con una dosis inusualmente alta respecto a lo habitual.",
+      question: "¿Cuál es la conducta más adecuada del profesional de farmacia?",
+      options: [
+        "Dispensar el medicamento tal como está prescrito, sin ninguna verificación adicional.",
+        "Verificar la prescripción con el profesional tratante antes de dispensar, dado el riesgo asociado a la dosis inusual.",
+        "Reducir la dosis por cuenta propia sin consultar al prescriptor."
+      ],
+      correct: 1,
+      feedback: "Ante una prescripción de un medicamento de alto riesgo con dosis inusual, corresponde verificar con el profesional tratante antes de dispensar, priorizando la seguridad del paciente."
+    },
+    {
+      id: 159,
+      career: "Farmacia y Bioquímica",
+      block: "Gestión",
+      title: "Buenas prácticas de almacenamiento de medicamentos",
+      level: "I-2",
+      specialty: "Farmacia y Bioquímica",
+      tags: ["almacenamiento", "cadena de frío", "buenas prácticas"],
+      statement: "En una inspección del almacén de farmacia se detecta que algunos medicamentos termolábiles no están conservados dentro del rango de temperatura requerido.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Continuar dispensando los medicamentos sin evaluar el impacto de la falla de conservación.",
+        "Retirar los medicamentos afectados, registrar el incidente y corregir la falla en la cadena de frío antes de continuar su uso.",
+        "Trasladar los medicamentos a temperatura ambiente de forma permanente para evitar el problema."
+      ],
+      correct: 1,
+      feedback: "Ante una falla en la cadena de frío se deben retirar los medicamentos afectados, registrar el incidente y corregir la causa antes de continuar su dispensación, para garantizar su eficacia y seguridad."
+    },
+    {
+      id: 160,
+      career: "Farmacia y Bioquímica",
+      block: "Salud pública",
+      title: "Uso racional de antibióticos y resistencia microbiana",
+      level: "I-2",
+      specialty: "Farmacia y Bioquímica",
+      tags: ["uso racional de medicamentos", "resistencia antimicrobiana", "consejería farmacéutica"],
+      statement: "Un usuario solicita un antibiótico sin receta médica para tratar síntomas compatibles con un cuadro viral.",
+      question: "¿Cuál es la conducta más adecuada del profesional de farmacia?",
+      options: [
+        "Dispensar el antibiótico solicitado sin ninguna orientación adicional.",
+        "Explicar que el cuadro descrito no amerita antibiótico, orientar sobre manejo sintomático y derivar a evaluación médica si es necesario.",
+        "Recomendar un antibiótico distinto por cuenta propia para 'asegurar' la mejoría."
+      ],
+      correct: 1,
+      feedback: "El uso racional de medicamentos exige orientar sobre el manejo adecuado del cuadro y evitar la dispensación innecesaria de antibióticos, que contribuye a la resistencia antimicrobiana."
+    },
+    {
+      id: 161,
+      career: "Trabajo Social",
+      block: "Ética e interculturalidad",
+      title: "Sospecha de abandono de un adulto mayor",
+      level: "I-2",
+      specialty: "Trabajo Social",
+      tags: ["abandono", "adulto mayor", "evaluación social"],
+      statement: "Un adulto mayor acude solo a repetidas consultas, con signos de descuido en su higiene y sin que ningún familiar lo acompañe o responda a los intentos de contacto.",
+      question: "¿Cuál es la conducta más adecuada del profesional de trabajo social?",
+      options: [
+        "Asumir que el adulto mayor prefiere estar solo y no indagar más.",
+        "Realizar una evaluación social integral, indagar la red de apoyo disponible y coordinar las medidas de protección que correspondan.",
+        "Derivar el caso sin realizar ninguna evaluación previa."
+      ],
+      correct: 1,
+      feedback: "Ante sospecha de abandono se debe realizar una evaluación social integral, indagar la red de apoyo del adulto mayor y coordinar las medidas de protección social que correspondan."
+    },
+    {
+      id: 162,
+      career: "Trabajo Social",
+      block: "Gestión",
+      title: "Articulación con redes de protección social",
+      level: "I-2",
+      specialty: "Trabajo Social",
+      tags: ["redes de protección social", "articulación intersectorial", "vulnerabilidad"],
+      statement: "Una familia en situación de pobreza extrema requiere apoyo que excede la capacidad de intervención del establecimiento de salud.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Indicar que el establecimiento de salud no puede hacer nada más por la familia.",
+        "Articular con programas sociales y redes de protección disponibles en la comunidad para complementar la atención en salud.",
+        "Resolver la situación económica de la familia con recursos personales del profesional."
+      ],
+      correct: 1,
+      feedback: "El trabajo social en salud debe articular con programas sociales y redes de protección comunitarias, complementando la atención en salud frente a necesidades que exceden el ámbito sanitario."
+    },
+    {
+      id: 163,
+      career: "Trabajo Social",
+      block: "Cuidado integral",
+      title: "Visita social en un caso de violencia familiar",
+      level: "I-2",
+      specialty: "Trabajo Social / Psicología",
+      tags: ["violencia familiar", "visita domiciliaria", "evaluación social"],
+      statement: "Una usuaria que reportó violencia familiar no acude a su cita de seguimiento programada tras la denuncia.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Cerrar el caso por inasistencia sin ninguna acción adicional.",
+        "Realizar una visita social de seguimiento, evaluando su situación de seguridad actual y la necesidad de apoyo adicional.",
+        "Esperar a que la usuaria reprograme la cita por su cuenta."
+      ],
+      correct: 1,
+      feedback: "Ante la inasistencia de una usuaria en riesgo por violencia familiar, corresponde realizar una visita social de seguimiento que evalúe su situación de seguridad actual.",
+      interdisciplinaryNote: "Psicología debe coordinar con trabajo social el seguimiento conjunto del riesgo y el acompañamiento emocional de la usuaria."
+    },
+    {
+      id: 164,
+      career: "Tecnología Médica - Laboratorio Clínico",
+      block: "Gestión",
+      title: "Control de calidad en el laboratorio clínico",
+      level: "I-2",
+      specialty: "Tecnología Médica",
+      tags: ["control de calidad", "laboratorio clínico", "confiabilidad de resultados"],
+      statement: "Un laboratorio clínico no aplica controles de calidad internos de forma regular antes de procesar las muestras de los pacientes.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Continuar procesando muestras sin control de calidad para no retrasar la entrega de resultados.",
+        "Implementar controles de calidad internos regulares antes de procesar muestras, para garantizar la confiabilidad de los resultados.",
+        "Aplicar controles de calidad solo cuando un resultado parezca inusual."
+      ],
+      correct: 1,
+      feedback: "El control de calidad interno regular es indispensable para garantizar la confiabilidad de los resultados de laboratorio, independientemente de si un resultado parece inusual o no."
+    },
+    {
+      id: 165,
+      career: "Tecnología Médica - Laboratorio Clínico",
+      block: "Salud pública",
+      title: "Bioseguridad en la toma de muestras biológicas",
+      level: "I-2",
+      specialty: "Tecnología Médica",
+      tags: ["bioseguridad", "toma de muestras", "manejo de residuos biológicos"],
+      statement: "Durante una jornada de alta demanda, el personal de laboratorio comienza a reutilizar material de protección personal para agilizar la toma de muestras.",
+      question: "¿Cuál es la conducta correcta?",
+      options: [
+        "Aceptar la reutilización de material de protección para no retrasar la atención.",
+        "Mantener el cumplimiento estricto de los protocolos de bioseguridad, sin importar la carga de trabajo.",
+        "Reutilizar el material solo con pacientes que parezcan estar sanos."
+      ],
+      correct: 1,
+      feedback: "Los protocolos de bioseguridad deben cumplirse estrictamente en toda circunstancia, independientemente de la carga de trabajo, para proteger al personal y a los pacientes."
+    },
+    {
+      id: 166,
+      career: "Tecnología Médica - Radiología",
+      block: "Cuidado integral",
+      title: "Protección radiológica en una paciente gestante",
+      level: "I-2",
+      specialty: "Tecnología Médica",
+      tags: ["protección radiológica", "gestación", "seguridad del paciente"],
+      statement: "Una paciente que desconoce su estado de gestación es programada para un estudio radiológico de abdomen.",
+      question: "¿Cuál es la conducta más adecuada antes de realizar el estudio?",
+      options: [
+        "Realizar el estudio de inmediato sin preguntar sobre la posibilidad de embarazo.",
+        "Preguntar sobre la posibilidad de gestación antes del estudio y evaluar alternativas o medidas de protección si corresponde.",
+        "Suspender todos los estudios radiológicos a cualquier mujer en edad fértil sin excepción."
+      ],
+      correct: 1,
+      feedback: "Antes de un estudio radiológico se debe indagar la posibilidad de gestación y evaluar alternativas o medidas de protección adecuadas, dado el riesgo de exposición a radiación en el embarazo."
+    },
+    {
+      id: 167,
+      career: "Tecnología Médica - Terapia Física",
+      block: "Cuidado integral",
+      title: "Plan de rehabilitación tras un accidente cerebrovascular",
+      level: "I-2",
+      specialty: "Tecnología Médica",
+      tags: ["rehabilitación", "ACV", "terapia física"],
+      statement: "Paciente con secuelas motoras tras un accidente cerebrovascular es dado de alta hospitalaria y llega al establecimiento de primer nivel para continuar su recuperación.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Indicar reposo absoluto para evitar mayor daño.",
+        "Evaluar el estado funcional y diseñar un plan de rehabilitación progresivo adaptado a sus secuelas.",
+        "Derivar directamente a un hospital sin iniciar ninguna intervención en el primer nivel."
+      ],
+      correct: 1,
+      feedback: "Tras un accidente cerebrovascular corresponde evaluar el estado funcional y diseñar un plan de rehabilitación progresivo, iniciando la intervención oportunamente en el nivel de atención correspondiente."
+    },
+    {
+      id: 168,
+      career: "Tecnología Médica - Terapia Física",
+      block: "Salud pública",
+      title: "Prevención de caídas en el adulto mayor",
+      level: "I-2",
+      specialty: "Tecnología Médica",
+      tags: ["prevención de caídas", "adulto mayor", "promoción de la salud"],
+      statement: "En un establecimiento se identifica alta frecuencia de caídas entre los adultos mayores que asisten a sus controles.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Atender solo las lesiones derivadas de las caídas ya ocurridas.",
+        "Implementar un programa de evaluación de riesgo de caídas y ejercicios preventivos de equilibrio y fuerza.",
+        "Recomendar que los adultos mayores reduzcan su actividad física por completo."
+      ],
+      correct: 1,
+      feedback: "La prevención de caídas en el adulto mayor requiere evaluar el riesgo individual e implementar programas de ejercicios de equilibrio y fuerza, no la reducción total de la actividad física."
+    },
+    {
+      id: 169,
+      career: "Tecnología Médica - Terapia del Lenguaje",
+      block: "Cuidado integral",
+      title: "Tamizaje de retraso del lenguaje en la niñez",
+      level: "I-2",
+      specialty: "Tecnología Médica",
+      tags: ["retraso del lenguaje", "tamizaje infantil", "desarrollo comunicativo"],
+      statement: "Un niño de 3 años presenta un vocabulario muy limitado para su edad y dificultad para formar frases simples, según refiere la madre en el control de rutina.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Indicar que es normal y que el niño hablará cuando esté listo, sin más evaluación.",
+        "Aplicar un tamizaje del desarrollo del lenguaje y derivar a terapia del lenguaje si corresponde.",
+        "Esperar hasta que el niño ingrese al colegio para evaluar el lenguaje."
+      ],
+      correct: 1,
+      feedback: "Ante un posible retraso del lenguaje se debe aplicar un tamizaje del desarrollo comunicativo y derivar oportunamente a terapia del lenguaje, dado que la intervención temprana mejora el pronóstico."
+    },
+    {
+      id: 170,
+      career: "Tecnología Médica - Terapia Ocupacional",
+      block: "Cuidado integral",
+      title: "Adaptación funcional tras una lesión de mano",
+      level: "I-2",
+      specialty: "Tecnología Médica",
+      tags: ["terapia ocupacional", "adaptación funcional", "independencia"],
+      statement: "Un trabajador manual sufre una lesión en la mano dominante que limita su capacidad para realizar actividades cotidianas y laborales.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Indicar que espere la recuperación completa antes de retomar cualquier actividad.",
+        "Evaluar sus actividades cotidianas y laborales, y diseñar estrategias de adaptación funcional durante su recuperación.",
+        "Recomendar cambiar de ocupación de forma inmediata sin evaluación previa."
+      ],
+      correct: 1,
+      feedback: "La terapia ocupacional busca evaluar las actividades significativas de la persona y diseñar estrategias de adaptación funcional que favorezcan su independencia durante la recuperación."
+    },
+    {
+      id: 171,
+      career: "Tecnología Médica - Optometría",
+      block: "Cuidado integral",
+      title: "Sospecha de estrabismo en un niño pequeño",
+      level: "I-2",
+      specialty: "Tecnología Médica",
+      tags: ["estrabismo", "salud ocular infantil", "derivación oportuna"],
+      statement: "Los padres de un niño de 2 años notan que uno de sus ojos se desvía con frecuencia, especialmente cuando está cansado.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Indicar que es normal en la primera infancia y que se corregirá solo con el tiempo.",
+        "Evaluar la alineación ocular y derivar oportunamente, dado que el estrabismo no tratado puede afectar el desarrollo visual.",
+        "Esperar a que el niño sea mayor para realizar cualquier evaluación."
+      ],
+      correct: 1,
+      feedback: "El estrabismo en la infancia debe evaluarse y derivarse oportunamente, ya que si no se trata a tiempo puede generar una pérdida permanente de la visión en el ojo afectado."
+    },
+    {
+      id: 172,
+      career: "Medicina Veterinaria",
+      block: "Salud pública",
+      title: "Control de zoonosis en la crianza familiar de animales",
+      level: "I-2",
+      specialty: "Medicina Veterinaria",
+      tags: ["zoonosis", "crianza familiar", "salud pública veterinaria"],
+      statement: "En una comunidad rural, varias familias crían cerdos sin ningún control sanitario, y se han reportado casos de teniasis en la población.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Atender solo los casos humanos sin intervenir en la crianza animal.",
+        "Coordinar con salud pública el control sanitario de la crianza animal y educar a las familias en prácticas de crianza segura.",
+        "Recomendar eliminar toda la crianza de animales en la comunidad de forma inmediata."
+      ],
+      correct: 1,
+      feedback: "El control de enfermedades zoonóticas requiere coordinación entre salud animal y salud pública, junto con educación comunitaria en prácticas de crianza segura."
+    },
+    {
+      id: 173,
+      career: "Medicina Veterinaria",
+      block: "Salud pública",
+      title: "Vigilancia sanitaria ante mortandad de aves de corral",
+      level: "I-2",
+      specialty: "Medicina Veterinaria",
+      tags: ["vigilancia sanitaria", "zoonosis", "notificación"],
+      statement: "Un criador reporta la muerte súbita de varias aves de corral en pocos días, sin causa aparente evidente.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Indicar que reemplace las aves fallecidas sin investigar la causa.",
+        "Notificar el evento a la autoridad sanitaria correspondiente e investigar la posible causa antes de descartar riesgo zoonótico.",
+        "Esperar a que mueran más aves para confirmar si es un problema real."
+      ],
+      correct: 1,
+      feedback: "Ante mortandad inusual de animales se debe notificar a la autoridad sanitaria e investigar la causa de forma oportuna, considerando el riesgo de enfermedades zoonóticas."
+    },
+    {
+      id: 174,
+      career: "Biología",
+      block: "Salud pública",
+      title: "Análisis de calidad del agua para consumo humano",
+      level: "I-2",
+      specialty: "Biología",
+      tags: ["calidad del agua", "análisis microbiológico", "salud ambiental"],
+      statement: "En una comunidad rural se reportan varios casos de enfermedad diarreica aguda y se sospecha contaminación de la fuente de agua utilizada.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Tratar solo los casos clínicos sin evaluar la fuente de agua.",
+        "Realizar el análisis microbiológico del agua y coordinar las medidas correctivas necesarias con las autoridades competentes.",
+        "Indicar a la población que hierva el agua de forma indefinida sin investigar la fuente del problema."
+      ],
+      correct: 1,
+      feedback: "Ante sospecha de contaminación hídrica se debe realizar el análisis microbiológico correspondiente y coordinar las medidas correctivas necesarias con las autoridades competentes."
+    },
+    {
+      id: 175,
+      career: "Ingeniería Sanitaria",
+      block: "Salud pública",
+      title: "Saneamiento básico deficiente en una comunidad rural",
+      level: "I-2",
+      specialty: "Ingeniería Sanitaria",
+      tags: ["saneamiento básico", "agua y desagüe", "salud ambiental"],
+      statement: "Una comunidad rural carece de sistema adecuado de disposición de excretas, lo que se asocia a un incremento de enfermedades de origen hídrico.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Limitar la intervención a la educación sanitaria, sin evaluar la infraestructura disponible.",
+        "Evaluar la infraestructura de saneamiento existente y coordinar la implementación de soluciones técnicas adecuadas junto con educación sanitaria.",
+        "Esperar a que la comunidad gestione por sí misma la construcción de infraestructura."
+      ],
+      correct: 1,
+      feedback: "La mejora del saneamiento básico requiere evaluar la infraestructura existente e implementar soluciones técnicas adecuadas, complementadas con educación sanitaria a la comunidad."
     }
+
 
 
 
