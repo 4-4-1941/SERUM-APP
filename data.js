@@ -1252,7 +1252,332 @@ window.SERUMS_DATA = {
       ],
       correct: 1,
       feedback: "Ante sospecha de deficiencia de yodo comunitaria se debe evaluar el consumo de sal yodada y coordinar vigilancia y educación nutricional."
+    },
+    {
+      id: 70,
+      career: "Psicología",
+      block: "Salud pública",
+      title: "Interpretación de incidencia en un tamizaje comunitario",
+      level: "I-2",
+      specialty: "Psicología / Salud Pública",
+      tags: ["epidemiología", "incidencia", "tamizaje"],
+      statement: "En un tamizaje de salud mental en una comunidad, se identifican 8 casos nuevos de depresión en un mes sobre una población de 400 personas sin el trastorno al inicio del periodo.",
+      question: "¿Qué medida epidemiológica corresponde calcular con estos datos?",
+      options: [
+        "Prevalencia, porque incluye todos los casos existentes.",
+        "Tasa de incidencia, porque mide casos nuevos en un periodo definido.",
+        "Letalidad, porque mide la gravedad del cuadro."
+      ],
+      correct: 1,
+      feedback: "La incidencia mide la aparición de casos nuevos en un periodo y población en riesgo definidos, a diferencia de la prevalencia, que incluye casos antiguos y nuevos."
+    },
+    {
+      id: 71,
+      career: "Medicina",
+      block: "Salud pública",
+      title: "Sensibilidad de una prueba de tamizaje",
+      level: "I-2",
+      specialty: "Medicina / Salud Pública",
+      tags: ["sensibilidad", "tamizaje", "validez diagnóstica"],
+      statement: "Se evalúa una prueba rápida para detectar anemia en niños antes de implementarla en un establecimiento con alta carga de casos.",
+      question: "¿Qué característica de la prueba es prioritaria verificar para evitar dejar casos sin detectar?",
+      options: [
+        "La sensibilidad, que refleja la capacidad de detectar correctamente a los enfermos.",
+        "El costo de fabricación de la prueba.",
+        "El tiempo que demora en procesarse la muestra."
+      ],
+      correct: 0,
+      feedback: "Una sensibilidad alta es clave en tamizaje poblacional porque minimiza los falsos negativos, evitando que casos reales queden sin detectar."
+    },
+    {
+      id: 72,
+      career: "Psicología",
+      block: "Salud pública",
+      title: "Riesgo relativo en un factor psicosocial",
+      level: "I-2",
+      specialty: "Psicología / Salud Pública",
+      tags: ["riesgo relativo", "factor de riesgo", "interpretación"],
+      statement: "Un estudio encuentra que los adolescentes expuestos a violencia familiar tienen un riesgo relativo de 3 para desarrollar síntomas depresivos, comparado con quienes no están expuestos.",
+      question: "¿Cómo se interpreta correctamente este resultado?",
+      options: [
+        "El 3% de los adolescentes expuestos desarrollará depresión.",
+        "Los adolescentes expuestos tienen tres veces más probabilidad de desarrollar síntomas depresivos que los no expuestos.",
+        "La violencia familiar causa depresión en todos los casos."
+      ],
+      correct: 1,
+      feedback: "El riesgo relativo compara la probabilidad de un evento entre expuestos y no expuestos; un RR de 3 indica tres veces más probabilidad en el grupo expuesto, sin implicar causalidad absoluta ni un porcentaje directo."
+    },
+    {
+      id: 73,
+      career: "Medicina",
+      block: "Salud pública",
+      title: "Niveles de prevención ante un brote respiratorio",
+      level: "I-2",
+      specialty: "Medicina / Salud Pública",
+      tags: ["niveles de prevención", "vacunación", "brote"],
+      statement: "Ante el inicio de la temporada de infecciones respiratorias, el establecimiento organiza una campaña de vacunación antes de que aparezcan casos.",
+      question: "¿A qué nivel de prevención corresponde esta acción?",
+      options: [
+        "Prevención primaria, porque busca evitar la aparición de la enfermedad.",
+        "Prevención terciaria, porque busca rehabilitar secuelas.",
+        "Prevención cuaternaria, porque busca evitar sobretratamiento."
+      ],
+      correct: 0,
+      feedback: "Vacunar antes de que existan casos es una medida de prevención primaria, orientada a evitar la aparición de la enfermedad mediante protección específica."
+    },
+    {
+      id: 74,
+      career: "Enfermería",
+      block: "Salud pública",
+      title: "Notificación epidemiológica oportuna",
+      level: "I-2",
+      specialty: "Enfermería / Salud Pública",
+      tags: ["vigilancia epidemiológica", "notificación", "sistema de salud"],
+      statement: "Un profesional identifica un caso compatible con una enfermedad de notificación obligatoria durante la atención en un establecimiento rural.",
+      question: "¿Cuál es la conducta correcta?",
+      options: [
+        "Notificar el caso según el sistema de vigilancia vigente, sin esperar confirmación de otros casos.",
+        "Esperar a que aparezcan más casos similares antes de notificar.",
+        "Registrar el caso solo en la historia clínica sin notificación adicional."
+      ],
+      correct: 0,
+      feedback: "La vigilancia epidemiológica exige notificación oportuna de casos de declaración obligatoria, permitiendo una respuesta temprana del sistema de salud."
+    },
+    {
+      id: 75,
+      career: "Psicología",
+      block: "Salud pública",
+      title: "Evaluación de causalidad en un factor de riesgo psicosocial",
+      level: "I-3",
+      specialty: "Psicología / Salud Pública",
+      tags: ["causalidad", "criterios epidemiológicos", "factor de riesgo"],
+      statement: "Un equipo de salud discute si el desempleo prolongado puede considerarse causa de un aumento en consultas por ansiedad en una comunidad.",
+      question: "¿Qué criterio es más pertinente evaluar para sustentar una relación causal, más allá de la asociación estadística?",
+      options: [
+        "Que el desempleo preceda temporalmente a la aparición de los síntomas.",
+        "Que ambas variables se midan el mismo día.",
+        "Que el estudio tenga una muestra grande, sin importar el diseño."
+      ],
+      correct: 0,
+      feedback: "La temporalidad, es decir, que la exposición preceda al efecto, es uno de los criterios centrales para sustentar una relación causal, más allá de la sola asociación estadística."
+    },
+    {
+      id: 76,
+      career: "Psicología",
+      block: "Investigación",
+      title: "Elección de diseño para explorar prevalencia de burnout",
+      level: "I-2",
+      specialty: "Psicología / Investigación",
+      tags: ["diseño de investigación", "estudio descriptivo", "salud ocupacional"],
+      statement: "Un psicólogo desea conocer qué proporción del personal de salud de su establecimiento presenta síntomas de burnout en un momento determinado.",
+      question: "¿Qué tipo de diseño es más adecuado para este objetivo?",
+      options: [
+        "Un estudio experimental con grupo control.",
+        "Un estudio descriptivo transversal.",
+        "Un ensayo clínico aleatorizado."
+      ],
+      correct: 1,
+      feedback: "Cuando el objetivo es describir la frecuencia de un fenómeno en un momento dado, sin manipular variables, el diseño descriptivo transversal es el más adecuado."
+    },
+    {
+      id: 77,
+      career: "Psicología",
+      block: "Investigación",
+      title: "Consentimiento informado en un estudio con adolescentes",
+      level: "I-2",
+      specialty: "Psicología / Investigación",
+      tags: ["consentimiento informado", "ética en investigación", "menores de edad"],
+      statement: "Se planea un estudio sobre ansiedad escolar que incluirá a adolescentes menores de edad como participantes.",
+      question: "¿Qué debe garantizarse antes de iniciar la recolección de datos?",
+      options: [
+        "Obtener el asentimiento del adolescente y el consentimiento informado de su tutor legal.",
+        "Aplicar los instrumentos sin informar a los adolescentes para no sesgar los resultados.",
+        "Solicitar únicamente la autorización de la dirección del colegio."
+      ],
+      correct: 0,
+      feedback: "En investigación con menores de edad se requiere el consentimiento informado del tutor legal y, adicionalmente, el asentimiento del propio adolescente, informando objetivos y riesgos del estudio."
+    },
+    {
+      id: 78,
+      career: "Medicina",
+      block: "Investigación",
+      title: "Elección entre estudio de casos y controles y cohorte",
+      level: "I-3",
+      specialty: "Medicina / Investigación",
+      tags: ["casos y controles", "cohorte", "diseño observacional"],
+      statement: "Un equipo de investigación quiere estudiar una enfermedad poco frecuente y busca un diseño observacional eficiente en tiempo y recursos.",
+      question: "¿Qué diseño es más apropiado para este objetivo?",
+      options: [
+        "Un estudio de casos y controles, que parte de los casos existentes y compara exposiciones previas.",
+        "Un ensayo clínico aleatorizado.",
+        "Un estudio de cohorte prospectivo de varios años."
+      ],
+      correct: 0,
+      feedback: "Para enfermedades poco frecuentes, el estudio de casos y controles es más eficiente porque parte de los casos ya existentes, sin requerir el seguimiento prolongado de una cohorte."
+    },
+    {
+      id: 79,
+      career: "Psicología",
+      block: "Investigación",
+      title: "Triangulación de métodos en un estudio mixto",
+      level: "I-2",
+      specialty: "Psicología / Investigación",
+      tags: ["métodos mixtos", "triangulación", "validez"],
+      statement: "Un investigador combina encuestas cuantitativas con entrevistas a profundidad para estudiar la adherencia terapéutica en un centro de salud mental.",
+      question: "¿Qué propósito cumple la combinación de ambos métodos?",
+      options: [
+        "Aumentar la validez de los hallazgos al contrastar información desde distintos enfoques.",
+        "Reducir el tiempo total de la investigación.",
+        "Evitar la necesidad de un comité de ética."
+      ],
+      correct: 0,
+      feedback: "La triangulación de métodos cualitativos y cuantitativos fortalece la validez del estudio al permitir contrastar y complementar los hallazgos desde distintos enfoques."
+    },
+    {
+      id: 80,
+      career: "Psicología",
+      block: "Investigación",
+      title: "Conflicto de interés en una publicación",
+      level: "I-2",
+      specialty: "Psicología / Investigación",
+      tags: ["ética en publicaciones", "conflicto de interés", "transparencia"],
+      statement: "Un investigador recibe financiamiento de una institución con interés directo en los resultados de su estudio sobre eficacia terapéutica.",
+      question: "¿Qué debe hacer al publicar los resultados?",
+      options: [
+        "Declarar explícitamente la fuente de financiamiento y el posible conflicto de interés.",
+        "Omitir la fuente de financiamiento para evitar cuestionamientos.",
+        "Publicar solo los resultados favorables a la institución financiadora."
+      ],
+      correct: 0,
+      feedback: "La transparencia exige declarar toda fuente de financiamiento y posibles conflictos de interés, permitiendo que los lectores evalúen la objetividad del estudio."
+    },
+    {
+      id: 81,
+      career: "Psicología",
+      block: "Investigación",
+      title: "Estructura de un informe de investigación clínica",
+      level: "I-2",
+      specialty: "Psicología / Investigación",
+      tags: ["IMRD", "redacción científica", "informe de investigación"],
+      statement: "Un psicólogo debe redactar el informe final de una investigación aplicada realizada en su establecimiento de salud.",
+      question: "¿Qué estructura debe seguir para facilitar su comprensión y réplica?",
+      options: [
+        "Introducción, metodología, resultados y discusión.",
+        "Solo resultados y conclusiones, sin detallar el método.",
+        "Un resumen narrativo sin apartados diferenciados."
+      ],
+      correct: 0,
+      feedback: "La estructura IMRD (introducción, metodología, resultados y discusión) es el formato estándar que facilita la comprensión, evaluación y réplica de un estudio."
+    },
+    {
+      id: 82,
+      career: "Psicología",
+      block: "Gestión",
+      title: "Diferencia entre plan estratégico y plan operativo",
+      level: "I-2",
+      specialty: "Psicología / Gestión",
+      tags: ["PEI", "POI", "planificación institucional"],
+      statement: "El equipo de un centro de salud mental comunitario debe definir tanto su rumbo institucional a varios años como las actividades concretas del próximo trimestre.",
+      question: "¿Cómo deben organizarse correctamente estos dos niveles de planificación?",
+      options: [
+        "El Plan Estratégico Institucional define el rumbo a largo plazo, y el Plan Operativo Institucional lo traduce en acciones concretas de corto plazo.",
+        "Ambos documentos son intercambiables y cubren el mismo horizonte temporal.",
+        "El plan operativo debe definirse antes que el plan estratégico."
+      ],
+      correct: 0,
+      feedback: "El PEI establece la estrategia y objetivos de largo plazo, mientras que el POI traduce esa estrategia en acciones operativas concretas de corto plazo."
+    },
+    {
+      id: 83,
+      career: "Psicología",
+      block: "Gestión",
+      title: "Aplicación del análisis FODA en un servicio de salud mental",
+      level: "I-2",
+      specialty: "Psicología / Gestión",
+      tags: ["FODA", "diagnóstico institucional", "planificación"],
+      statement: "Antes de definir nuevas estrategias, el equipo de un servicio de psicología quiere identificar qué factores internos y externos influyen en su desempeño.",
+      question: "¿Qué herramienta es más adecuada para este diagnóstico?",
+      options: [
+        "El análisis FODA, que examina fortalezas, oportunidades, debilidades y amenazas.",
+        "Un informe financiero exclusivamente.",
+        "Una encuesta de satisfacción sin análisis adicional."
+      ],
+      correct: 0,
+      feedback: "El análisis FODA permite diagnosticar la situación interna (fortalezas y debilidades) y externa (oportunidades y amenazas) para orientar la estrategia del servicio."
+    },
+    {
+      id: 84,
+      career: "Enfermería",
+      block: "Gestión",
+      title: "Sistema de referencia y contrarreferencia",
+      level: "I-2",
+      specialty: "Enfermería / Gestión",
+      tags: ["referencia", "contrarreferencia", "niveles de atención"],
+      statement: "Un paciente atendido en un establecimiento de primer nivel requiere evaluación especializada no disponible en ese centro.",
+      question: "¿Cuál es la conducta correcta según el sistema de referencia y contrarreferencia?",
+      options: [
+        "Derivar al paciente al nivel de atención adecuado y asegurar su retorno con la información pertinente para el seguimiento.",
+        "Atender el caso sin derivar, aunque no se cuente con los recursos necesarios.",
+        "Derivar al paciente sin enviar información clínica al establecimiento receptor."
+      ],
+      correct: 0,
+      feedback: "El sistema de referencia y contrarreferencia busca que el paciente sea atendido en el nivel adecuado y que retorne con la información necesaria para continuar su seguimiento."
+    },
+    {
+      id: 85,
+      career: "Psicología",
+      block: "Gestión",
+      title: "Implementación de telesalud en zona rural",
+      level: "I-2",
+      specialty: "Psicología / Gestión",
+      tags: ["telesalud", "confidencialidad", "acceso a servicios"],
+      statement: "Un servicio de psicología busca implementar atención remota para pacientes de comunidades alejadas del establecimiento.",
+      question: "¿Qué condición es indispensable garantizar antes de implementar la telesalud?",
+      options: [
+        "La protección de datos personales y el consentimiento informado del paciente.",
+        "Que todos los pacientes cuenten con un dispositivo de última generación.",
+        "Eliminar por completo la atención presencial."
+      ],
+      correct: 0,
+      feedback: "La telesalud requiere garantizar la protección de datos personales y el consentimiento informado del paciente, cumpliendo la normativa vigente de confidencialidad."
+    },
+    {
+      id: 86,
+      career: "Psicología",
+      block: "Gestión",
+      title: "Auditoría de calidad en un servicio de salud mental",
+      level: "I-2",
+      specialty: "Psicología / Gestión",
+      tags: ["auditoría", "calidad de atención", "mejora continua"],
+      statement: "El equipo directivo de un centro de salud mental programa una revisión periódica del cumplimiento de protocolos clínicos y administrativos.",
+      question: "¿Cuál es la finalidad principal de esta actividad?",
+      options: [
+        "Evaluar el cumplimiento de estándares y detectar áreas de mejora en la atención.",
+        "Sancionar de forma automática al personal involucrado.",
+        "Reducir el número de pacientes atendidos."
+      ],
+      correct: 0,
+      feedback: "La auditoría en salud tiene como finalidad evaluar el cumplimiento de estándares de calidad y detectar oportunidades de mejora, no sancionar de forma automática."
+    },
+    {
+      id: 87,
+      career: "Psicología",
+      block: "Gestión",
+      title: "Gestión de recursos humanos en un equipo de salud mental",
+      level: "I-2",
+      specialty: "Psicología / Gestión",
+      tags: ["recursos humanos", "capacitación", "desarrollo profesional"],
+      statement: "Un centro de salud mental comunitaria identifica alta rotación de personal y bajo desempeño en algunas áreas.",
+      question: "¿Qué acción de gestión de recursos humanos aborda mejor este problema de forma sostenible?",
+      options: [
+        "Fortalecer la selección, capacitación continua y evaluación del desarrollo profesional del personal.",
+        "Contratar personal nuevo sin evaluar las causas de la rotación.",
+        "Reducir las evaluaciones de desempeño para evitar conflictos."
+      ],
+      correct: 0,
+      feedback: "La gestión de recursos humanos debe abordar de forma integral la selección, capacitación y desarrollo profesional del personal para reducir la rotación y mejorar el desempeño de forma sostenible."
     }
+
 
   ],
   norms: [
@@ -1329,7 +1654,7 @@ window.SERUMS_DATA = {
       summary: "Guía de referencia cruzada entre bloque, nivel de establecimiento (I-2, I-3, I-4) y especialidad, alineada con los casos interactivos de esta app."
     }
   ],
-  chips: ["Psicología", "Salud pública", "Cuidado integral", "Ética e interculturalidad", "Gestión"],
+  chips: ["Psicología", "Salud pública", "Cuidado integral", "Ética e interculturalidad", "Investigación", "Gestión"],
   scoreKey: "score",
   caseStateKey: "caseState",
   notesKey: "notes"
