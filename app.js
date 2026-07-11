@@ -17,6 +17,104 @@ let selectedOption = null; // opción marcada, aún no confirmada
 let confirmed = false;     // true tras pulsar "Confirmar respuesta"
 let priorityReviewMode = false; // true cuando se navega desde "Repasar ahora"
 
+// ---------- Simulacro (100 preguntas, 5 bloques oficiales SERUMS) ----------
+const OFFICIAL_BLOCKS = ["Salud pública", "Cuidado integral", "Ética e interculturalidad", "Investigación", "Gestión"];
+const SIMULACRO_TARGET = 100;
+const SIMULACRO_SECONDS_PER_Q = 60; // ritmo de referencia ~1 min/pregunta
+let simulacroQueue = [];
+let simulacroIndex = 0;
+let simulacroResults = []; // {caseId, career, block, correct}
+let simulacroSelected = null;
+let simulacroConfirmed = false;
+let simulacroTimerId = null;
+let simulacroTimeLeft = 0;
+let simulacroPhase = "intro"; // intro | running | finished
+let simulacroHistory = loadProgress("simulacroHistory", []);
+
+function shuffle(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+// Muestreo estratificado: reparte cupos entre los 5 bloques oficiales,
+// respetando el máximo disponible en cada uno (sin repetir preguntas),
+// y redistribuye el remanente entre los bloques con más casos disponibles.
+function buildSimulacroQueue() {
+  const pools = {};
+  OFFICIAL_BLOCKS.forEach(b => { pools[b] = shuffle(data.cases.filter(c => c.block === b)); });
+  // Casos que no caen en un bloque oficial (p. ej. "Psicología" como bloque propio)
+  // se integran también como pool adicional para completar cupos si hace falta.
+  const extraPool = shuffle(data.cases.filter(c => !OFFICIAL_BLOCKS.includes(c.block)));
+
+  const totalAvailable = data.cases.length;
+  const target = Math.min(SIMULACRO_TARGET, totalAvailable);
+  const baseQuota = Math.floor(target / OFFICIAL_BLOCKS.length);
+  // Tope de sobrecupo por bloque (evita que un bloque con muchos casos domine el simulacro)
+  const capPerBlock = Math.ceil(baseQuota * 1.5);
+
+  let queue = [];
+  let remainder = target;
+  const taken = {};
+
+  OFFICIAL_BLOCKS.forEach(b => {
+    const take = Math.min(baseQuota, pools[b].length);
+    queue = queue.concat(pools[b].slice(0, take));
+    taken[b] = take;
+    remainder -= take;
+  });
+
+  // Completar remanente respetando el tope por bloque, en orden aleatorio de bloques
+  let blocksCycle = shuffle(OFFICIAL_BLOCKS);
+  let progress = true;
+  while (remainder > 0 && progress) {
+    progress = false;
+    for (const b of blocksCycle) {
+      if (remainder <= 0) break;
+      if (taken[b] < Math.min(capPerBlock, pools[b].length)) {
+        queue.push(pools[b][taken[b]]);
+        taken[b] += 1;
+        remainder -= 1;
+        progress = true;
+      }
+    }
+  }
+
+  // Si aún falta (bloques oficiales en su tope), usar el pool extra (p. ej. Psicología)
+  if (remainder > 0 && extraPool.length) {
+    const take = Math.min(remainder, extraPool.length);
+    queue = queue.concat(extraPool.slice(0, take));
+    remainder -= take;
+  }
+
+  // Último recurso: si sigue faltando, exceder el tope en bloques oficiales con margen real
+  if (remainder > 0) {
+    progress = true;
+    while (remainder > 0 && progress) {
+      progress = false;
+      for (const b of blocksCycle) {
+        if (remainder <= 0) break;
+        if (taken[b] < pools[b].length) {
+          queue.push(pools[b][taken[b]]);
+          taken[b] += 1;
+          remainder -= 1;
+          progress = true;
+        }
+      }
+    }
+  }
+
+  return shuffle(queue);
+}
+
+function goToSimulacro() {
+  priorityReviewMode = false;
+  renderView("simulacro");
+}
+
 function loadProgress(key, fallback) {
   try { return JSON.parse(localStorage.getItem(key)) ?? fallback; } catch { return fallback; }
 }
@@ -378,6 +476,251 @@ function nextCase() {
   openCase(next.id);
 }
 
+function renderSimulacro() {
+  if (simulacroPhase === "running" && simulacroQueue.length) {
+    if (!simulacroTimerId) {
+      simulacroTimerId = setInterval(() => {
+        simulacroTimeLeft -= 1;
+        if (simulacroTimeLeft <= 0) {
+          simulacroTimeLeft = 0;
+          clearInterval(simulacroTimerId);
+          finishSimulacro();
+          return;
+        }
+        updateSimulacroTimerDisplay();
+      }, 1000);
+    }
+    return renderSimulacroRunning();
+  }
+  if (simulacroPhase === "finished") return renderSimulacroResults();
+  renderSimulacroIntro();
+}
+
+function renderSimulacroIntro() {
+  pageTitle.textContent = "Simulacro SERUMS";
+  pageSubtitle.textContent = "100 preguntas, 5 bloques oficiales, cronómetro y puntaje final.";
+
+  const totalAvailable = data.cases.length;
+  const target = Math.min(SIMULACRO_TARGET, totalAvailable);
+  const lastAttempts = simulacroHistory.slice(-5).reverse();
+
+  root.innerHTML = `
+    <section class="two-col">
+      <div class="panel">
+        <h3 class="section-title">Cómo funciona</h3>
+        <ul style="margin:0;padding-left:18px;color:#5B6E6A;line-height:1.7">
+          <li>${target} preguntas seleccionadas al azar, repartidas entre los 5 bloques oficiales SERUMS (Salud Pública, Cuidado Integral, Ética e Interculturalidad, Investigación, Gestión).</li>
+          <li>Cada intento genera una selección y un orden distintos — no se repite igual entre dispositivos ni entre intentos.</li>
+          <li>Cronómetro total de ${Math.round(target * SIMULACRO_SECONDS_PER_Q / 60)} minutos (ritmo de referencia de 1 min/pregunta).</li>
+          <li>Una sola oportunidad de respuesta por pregunta, sin reintentos — igual que el examen real.</li>
+          <li>Sin penalización por error: cada acierto suma un punto.</li>
+        </ul>
+        <button class="action-btn" id="start-simulacro-btn">Iniciar simulacro →</button>
+      </div>
+      <div class="panel">
+        <h3 class="section-title">Tus últimos intentos</h3>
+        ${lastAttempts.length ? `
+          <div class="progress-list">
+            ${lastAttempts.map(a => `
+              <div>
+                <div class="progress-head"><span>${new Date(a.date).toLocaleDateString("es-PE")}</span><span>${a.correctCount}/${a.total} · ${a.pct}%</span></div>
+                <div class="bar"><span style="width:${a.pct}%"></span></div>
+              </div>
+            `).join("")}
+          </div>
+        ` : `<p style="color:#5B6E6A">Aún no rindes ningún simulacro.</p>`}
+      </div>
+    </section>
+  `;
+
+  document.getElementById("start-simulacro-btn").addEventListener("click", startSimulacro);
+}
+
+function startSimulacro() {
+  simulacroQueue = buildSimulacroQueue();
+  simulacroIndex = 0;
+  simulacroResults = [];
+  simulacroSelected = null;
+  simulacroConfirmed = false;
+  simulacroTimeLeft = simulacroQueue.length * SIMULACRO_SECONDS_PER_Q;
+  simulacroPhase = "running";
+
+  clearInterval(simulacroTimerId);
+  simulacroTimerId = setInterval(() => {
+    simulacroTimeLeft -= 1;
+    if (simulacroTimeLeft <= 0) {
+      simulacroTimeLeft = 0;
+      clearInterval(simulacroTimerId);
+      finishSimulacro();
+      return;
+    }
+    updateSimulacroTimerDisplay();
+  }, 1000);
+
+  renderSimulacroRunning();
+}
+
+function updateSimulacroTimerDisplay() {
+  const el = document.getElementById("simulacro-timer");
+  if (!el) return;
+  const m = Math.floor(simulacroTimeLeft / 60);
+  const s = simulacroTimeLeft % 60;
+  el.textContent = `${m}:${String(s).padStart(2, "0")}`;
+}
+
+function renderSimulacroRunning() {
+  pageTitle.textContent = `Simulacro · Pregunta ${simulacroIndex + 1} de ${simulacroQueue.length}`;
+  pageSubtitle.textContent = "Responde con calma; no hay reintentos en este modo.";
+
+  const c = simulacroQueue[simulacroIndex];
+  const pct = fmtPct(Math.round((simulacroIndex / simulacroQueue.length) * 100));
+
+  const optionsHtml = c.options.map((o, i) => {
+    let cls = "option-btn";
+    if (simulacroConfirmed) {
+      if (i === c.correct) cls += " success";
+      else if (i === simulacroSelected) cls += " error";
+    } else if (i === simulacroSelected) {
+      cls += " selected";
+    }
+    return `<button class="${cls}" data-opt="${i}" ${simulacroConfirmed ? "disabled" : ""}>${String.fromCharCode(65 + i)}. ${o}</button>`;
+  }).join("");
+
+  root.innerHTML = `
+    <section class="panel">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+        <span class="badge">${c.career || c.specialty} · ${c.block}</span>
+        <span class="badge" id="simulacro-timer" style="background:#F1E9D8;color:#8A6D3B">--:--</span>
+      </div>
+      <div class="bar" style="margin-bottom:14px"><span style="width:${pct}%"></span></div>
+      <h3 class="section-title">${c.title}</h3>
+      <p>${c.statement}</p>
+      <p><strong>${c.question}</strong></p>
+      <div class="option-list">${optionsHtml}</div>
+      <div id="simulacro-feedback" style="margin-top:12px"></div>
+      <div id="simulacro-actions" style="margin-top:12px"></div>
+    </section>
+  `;
+
+  updateSimulacroTimerDisplay();
+
+  root.querySelectorAll(".option-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      if (simulacroConfirmed) return;
+      simulacroSelected = Number(btn.dataset.opt);
+      renderSimulacroRunning();
+    });
+  });
+
+  const actions = document.getElementById("simulacro-actions");
+  const feedback = document.getElementById("simulacro-feedback");
+
+  if (!simulacroConfirmed) {
+    actions.innerHTML = `<button class="action-btn" id="confirm-sim-btn" ${simulacroSelected === null ? "disabled" : ""}>Confirmar respuesta</button>`;
+    document.getElementById("confirm-sim-btn").addEventListener("click", confirmSimulacroAnswer);
+  } else {
+    const correct = simulacroSelected === c.correct;
+    feedback.innerHTML = `
+      <div class="card ${correct ? "success" : "error"}">
+        <strong>${correct ? "Correcto" : "Incorrecto"}</strong>
+        <p>${c.feedback}</p>
+      </div>
+    `;
+    const isLast = simulacroIndex === simulacroQueue.length - 1;
+    actions.innerHTML = `<button class="action-btn" id="next-sim-btn">${isLast ? "Ver resultados →" : "Siguiente pregunta →"}</button>`;
+    document.getElementById("next-sim-btn").addEventListener("click", nextSimulacroQuestion);
+  }
+}
+
+function confirmSimulacroAnswer() {
+  if (simulacroSelected === null || simulacroConfirmed) return;
+  simulacroConfirmed = true;
+  const c = simulacroQueue[simulacroIndex];
+  const correct = simulacroSelected === c.correct;
+  simulacroResults.push({ caseId: c.id, career: c.career || c.specialty, block: c.block, correct });
+  renderSimulacroRunning();
+}
+
+function nextSimulacroQuestion() {
+  if (simulacroIndex < simulacroQueue.length - 1) {
+    simulacroIndex += 1;
+    simulacroSelected = null;
+    simulacroConfirmed = false;
+    renderSimulacroRunning();
+  } else {
+    clearInterval(simulacroTimerId);
+    finishSimulacro();
+  }
+}
+
+function finishSimulacro() {
+  simulacroPhase = "finished";
+  const total = simulacroQueue.length;
+  const correctCount = simulacroResults.filter(r => r.correct).length;
+  const pct = total ? fmtPct(Math.round((correctCount / total) * 100)) : 0;
+
+  const byBlock = {};
+  simulacroResults.forEach(r => {
+    byBlock[r.block] = byBlock[r.block] || { correct: 0, total: 0 };
+    byBlock[r.block].total += 1;
+    if (r.correct) byBlock[r.block].correct += 1;
+  });
+
+  const record = {
+    date: new Date().toISOString(),
+    total,
+    correctCount,
+    pct,
+    byBlock
+  };
+  simulacroHistory.push(record);
+  saveProgress("simulacroHistory", simulacroHistory);
+
+  renderSimulacroResults();
+}
+
+function renderSimulacroResults() {
+  pageTitle.textContent = "Resultados del simulacro";
+  pageSubtitle.textContent = "Resumen de tu último intento.";
+
+  const last = simulacroHistory[simulacroHistory.length - 1];
+  if (!last) { simulacroPhase = "intro"; return renderSimulacroIntro(); }
+
+  root.innerHTML = `
+    <section class="grid metrics">
+      <div class="card"><span class="label">Puntaje</span><div class="value">${last.correctCount}/${last.total}</div></div>
+      <div class="card"><span class="label">Porcentaje</span><div class="value">${last.pct}%</div></div>
+      <div class="card"><span class="label">Fecha</span><div class="value" style="font-size:18px">${new Date(last.date).toLocaleDateString("es-PE")}</div></div>
+    </section>
+    <section class="two-col">
+      <div class="panel">
+        <h3 class="section-title">Desglose por bloque oficial</h3>
+        <div class="progress-list">
+          ${Object.entries(last.byBlock).map(([block, v]) => {
+            const p = v.total ? fmtPct(Math.round((v.correct / v.total) * 100)) : 0;
+            return `
+              <div>
+                <div class="progress-head"><span>${block}</span><span>${v.correct}/${v.total} · ${p}%</span></div>
+                <div class="bar"><span style="width:${p}%"></span></div>
+              </div>
+            `;
+          }).join("")}
+        </div>
+      </div>
+      <div class="panel">
+        <h3 class="section-title">Siguiente paso</h3>
+        <p style="color:#5B6E6A;line-height:1.6">Cada intento queda guardado en tu historial. Repite el simulacro cuando quieras: la selección de preguntas y su orden cambian cada vez.</p>
+        <button class="action-btn" id="retry-simulacro-btn">Rendir otro simulacro</button>
+      </div>
+    </section>
+  `;
+
+  document.getElementById("retry-simulacro-btn").addEventListener("click", () => {
+    simulacroPhase = "intro";
+    renderSimulacroIntro();
+  });
+}
+
 function renderNorms() {
   pageTitle.textContent = "Normativa SERUMS";
   pageSubtitle.textContent = "Ley base, bibliografía oficial y normas de evaluación.";
@@ -480,8 +823,13 @@ function renderView(view) {
   clearInterval(timerId);
   timerId = null;
   activeCase = null;
+  if (view !== "simulacro") {
+    clearInterval(simulacroTimerId);
+    simulacroTimerId = null;
+  }
   if (view === "dashboard") renderDashboard();
   if (view === "cases") renderCases();
+  if (view === "simulacro") renderSimulacro();
   if (view === "norms") renderNorms();
   if (view === "decrees") renderDecrees();
   if (view === "resources") renderResources();
