@@ -4267,7 +4267,312 @@ window.SERUMS_DATA = {
       ],
       correct: 1,
       feedback: "El registro completo y oportuno en los sistemas de información en salud es clave para la toma de decisiones y la vigilancia epidemiológica, y debe fortalecerse activamente."
+    },
+    {
+      id: 237,
+      career: "Transversal",
+      block: "Gestión",
+      title: "Conservación del archivo pasivo de historias clínicas",
+      level: "I-2",
+      specialty: "Gestión",
+      tags: ["historia clínica", "archivo pasivo", "gestión documentaria"],
+      statement: "El servicio de admisión de un establecimiento reorganiza su archivo, separando las historias clínicas de pacientes sin atenciones recientes hacia el archivo pasivo.",
+      question: "¿A partir de qué criterio de tiempo sin uso corresponde trasladar una historia clínica al archivo pasivo?",
+      options: [
+        "Más de 1 año sin ser solicitada.",
+        "Más de 5 años sin ser solicitada.",
+        "Más de 10 años sin ser solicitada.",
+        "Más de 15 años sin ser solicitada."
+      ],
+      correct: 1,
+      feedback: "La normativa de gestión documentaria en salud establece el traslado al archivo pasivo cuando la historia clínica no ha sido solicitada por más de 5 años."
+    },
+    {
+      id: 238,
+      career: "Transversal",
+      block: "Gestión",
+      title: "Tipo de auditoría tras un evento adverso grave",
+      level: "I-2",
+      specialty: "Gestión",
+      tags: ["auditoría de la calidad", "evento adverso", "tipos de auditoría"],
+      statement: "En un establecimiento fallece una gestante junto con su recién nacido durante una complicación obstétrica súbita, generando dudas sobre la calidad de la atención brindada.",
+      question: "¿Qué tipo de auditoría de la calidad de la atención corresponde iniciar ante este evento?",
+      options: [
+        "Auditoría regular, programada según el cronograma anual del establecimiento.",
+        "Auditoría de caso, orientada a un evento específico que amerita revisión inmediata.",
+        "Auditoría externa, realizada exclusivamente por un ente ajeno al establecimiento.",
+        "Auditoría dirimente, aplicable solo cuando existe discrepancia entre dos auditorías previas."
+      ],
+      correct: 1,
+      feedback: "Ante un evento adverso grave y puntual corresponde la auditoría de caso, orientada específicamente a revisar ese evento, a diferencia de la auditoría regular (programada), la externa (realizada por un ente ajeno) o la dirimente (para resolver discrepancias entre auditorías previas)."
+    },
+    {
+      id: 239,
+      career: "Transversal",
+      block: "Gestión",
+      title: "Diferencia entre queja y otros mecanismos de atención al usuario",
+      level: "I-2",
+      specialty: "Gestión",
+      tags: ["mecanismos de atención al usuario", "queja", "gestión de la calidad"],
+      statement: "Un usuario desea presentar un reclamo formal porque considera que no se respetó el orden de llegada durante su atención.",
+      question: "¿Qué mecanismo de atención al usuario corresponde utilizar en este caso?",
+      options: [
+        "Consulta, para solicitar información sobre el procedimiento de atención.",
+        "Sugerencia, para proponer una mejora al proceso de atención.",
+        "Queja, para expresar formalmente su disconformidad con la atención recibida.",
+        "Consejería, para recibir orientación personalizada sobre su caso."
+      ],
+      correct: 2,
+      feedback: "Cuando un usuario expresa disconformidad formal por una atención específica que considera inadecuada, el mecanismo correspondiente es la queja, distinta de la consulta (solicitud de información), la sugerencia (propuesta de mejora) o la consejería (orientación personalizada)."
+    },
+    {
+      id: 240,
+      career: "Medicina",
+      block: "Salud pública",
+      title: "Tipo de campaña según su objetivo en salud pública",
+      level: "I-2",
+      specialty: "Medicina / Salud Pública",
+      tags: ["tipos de campaña", "tamizaje", "niveles de intervención"],
+      statement: "Una mujer con múltiples parejas sexuales previas y sin controles ginecológicos regulares es invitada a una campaña de despistaje de VPH mediante pruebas moleculares, sin presentar síntomas actuales.",
+      question: "¿Qué tipo de campaña corresponde a esta intervención?",
+      options: [
+        "Campaña de promoción, orientada a fomentar estilos de vida saludables.",
+        "Campaña de prevención, orientada a la detección temprana en población asintomática de riesgo.",
+        "Campaña de tratamiento, orientada a resolver un cuadro clínico ya diagnosticado.",
+        "Campaña de pronóstico, orientada a estimar la evolución de una enfermedad confirmada."
+      ],
+      correct: 1,
+      feedback: "El despistaje mediante pruebas diagnósticas en población asintomática con factores de riesgo corresponde a una campaña de prevención (detección temprana), distinta de la promoción (fomento de estilos de vida), el tratamiento (manejo de un caso confirmado) o el pronóstico (estimación evolutiva)."
+    },
+    {
+      id: 241,
+      career: "Transversal",
+      block: "Gestión",
+      title: "Naturaleza del Plan Operativo Institucional Multianual",
+      level: "I-2",
+      specialty: "Gestión",
+      tags: ["POI multianual", "planificación", "instrumentos de gestión"],
+      statement: "El sector salud elabora un documento que programa las metas físicas y el costeo esperado para los próximos tres años de gestión.",
+      question: "¿Cómo se define este documento?",
+      options: [
+        "Un instrumento de articulación entre distintos niveles de gobierno.",
+        "Un instrumento de gestión que programa metas físicas y costeo a mediano plazo.",
+        "Una herramienta de articulación exclusiva para el sector privado.",
+        "Una herramienta de rendición de cuentas posterior a la ejecución presupuestal."
+      ],
+      correct: 1,
+      feedback: "El POI Multianual es un instrumento de gestión que programa metas físicas y costeo esperado para los siguientes tres años, distinto de un instrumento o herramienta de articulación entre niveles de gobierno."
+    },
+    {
+      id: 242,
+      career: "Transversal",
+      block: "Gestión",
+      title: "Cultura organizacional frente a otros conceptos institucionales",
+      level: "I-2",
+      specialty: "Gestión",
+      tags: ["cultura organizacional", "clima organizacional", "valores institucionales"],
+      statement: "En un establecimiento de salud se observa una forma característica y arraigada de pensar y actuar del personal, basada en principios, creencias, conductas y normas compartidas a lo largo de los años.",
+      question: "¿A qué concepto corresponde lo descrito?",
+      options: [
+        "Clima organizacional, que refleja la percepción coyuntural del ambiente laboral.",
+        "Valores institucionales, entendidos únicamente como el listado formal declarado por la institución.",
+        "Cultura organizacional, entendida como la forma característica y arraigada de pensar y actuar de la institución.",
+        "Principios institucionales, entendidos como normas exclusivamente legales de la entidad."
+      ],
+      correct: 2,
+      feedback: "La cultura organizacional es la forma característica y arraigada de pensar y actuar en una institución, basada en principios, valores, creencias y normas compartidas, distinta del clima organizacional (percepción coyuntural del ambiente) o los valores institucionales (declaración formal)."
+    },
+    {
+      id: 243,
+      career: "Psicología",
+      block: "Cuidado integral",
+      title: "Interpretación de un tamizaje M-CHAT-R alterado",
+      level: "I-2",
+      specialty: "Psicología",
+      tags: ["M-CHAT-R", "tamizaje de autismo", "derivación oportuna"],
+      statement: "Un niño de 2 años es derivado a psicología desde el servicio de Crecimiento y Desarrollo por alteraciones en el lenguaje, hipersensibilidad a ruidos, dificultades para socializar y aleteo de manos, obteniendo un puntaje de riesgo alto en el M-CHAT-R.",
+      question: "¿Cuál es la conducta más adecuada ante este resultado?",
+      options: [
+        "Considerar el puntaje como definitivo y descartar cualquier otra evaluación posterior.",
+        "Interpretar el resultado como riesgo elevado de trastorno del espectro autista y derivar oportunamente para evaluación diagnóstica especializada.",
+        "Esperar hasta los 4 años para repetir el tamizaje, dado que antes no es confiable.",
+        "Indicar que los signos corresponden únicamente a un retraso transitorio del lenguaje sin mayor implicancia."
+      ],
+      correct: 1,
+      feedback: "Un puntaje de riesgo alto en el M-CHAT-R, junto con signos clínicos compatibles, debe interpretarse como riesgo elevado de trastorno del espectro autista y derivarse oportunamente para evaluación diagnóstica especializada, dado que el tamizaje no reemplaza el diagnóstico."
+    },
+    {
+      id: 244,
+      career: "Transversal",
+      block: "Salud pública",
+      title: "Etapa de las Funciones Esenciales de Salud Pública en la sectorización",
+      level: "I-2",
+      specialty: "Salud Pública",
+      tags: ["FESP renovadas", "sectorización", "modelo de cuidado por curso de vida"],
+      statement: "Un establecimiento sectoriza su jurisdicción para realizar intervenciones de promoción y prevención según el Modelo de Cuidado Integral de la Familia y Comunidad por Curso de Vida.",
+      question: "¿A qué etapa de las Funciones Esenciales de Salud Pública renovadas corresponde esta acción?",
+      options: [
+        "Evaluación, orientada a medir resultados de intervenciones ya ejecutadas.",
+        "Desarrollo de políticas, orientada a la formulación normativa general del sector.",
+        "Acceso, orientada a organizar la llegada de los servicios de salud a la población de su jurisdicción.",
+        "Asignación de recursos, orientada exclusivamente a la distribución presupuestal."
+      ],
+      correct: 2,
+      feedback: "La sectorización para organizar cómo los servicios de salud llegan a la población de una jurisdicción corresponde a la etapa de acceso, distinta de la evaluación, el desarrollo de políticas o la asignación de recursos."
+    },
+    {
+      id: 245,
+      career: "Transversal",
+      block: "Salud pública",
+      title: "Determinante social de la salud en el diagnóstico situacional",
+      level: "I-2",
+      specialty: "Salud Pública",
+      tags: ["determinantes sociales", "nivel educativo", "diagnóstico situacional"],
+      statement: "Al elaborar el diagnóstico situacional de una institución educativa, se analiza cómo el nivel alcanzado por la población influye en su calidad de vida y en el desarrollo económico y social del país.",
+      question: "¿A qué determinante social de la salud corresponde este análisis?",
+      options: [
+        "Nivel epidemiológico, referido a la carga de enfermedad de la población.",
+        "Nivel etiológico, referido a las causas biológicas de la enfermedad.",
+        "Nivel intercultural, referido a la diversidad de costumbres de la población.",
+        "Nivel educativo, referido al grado de instrucción alcanzado por la población."
+      ],
+      correct: 3,
+      feedback: "El nivel educativo alcanzado por la población es un determinante social de la salud que influye en la calidad de vida y el desarrollo económico y social, distinto de los niveles epidemiológico, etiológico o intercultural."
+    },
+    {
+      id: 246,
+      career: "Psicología",
+      block: "Investigación",
+      title: "Asentimiento informado en un estudio con menores de edad",
+      level: "I-2",
+      specialty: "Psicología / Investigación",
+      tags: ["asentimiento informado", "consentimiento informado", "investigación con menores"],
+      statement: "Un investigador solicitará la participación de escolares menores de edad en un estudio sobre obesidad infantil en su institución educativa.",
+      question: "¿Qué documento deben firmar los padres para autorizar la participación voluntaria de sus hijos, adicional al asentimiento del propio menor?",
+      options: [
+        "Un compromiso paterno, sin validez para fines de investigación.",
+        "Un consentimiento informado, otorgado por el padre o tutor legal del menor.",
+        "Una carta de investigación, emitida por la institución educativa.",
+        "Un asentimiento informado, que en este caso deben firmar los propios padres."
+      ],
+      correct: 1,
+      feedback: "En investigación con menores de edad, el padre o tutor legal firma el consentimiento informado, mientras que el asentimiento informado lo brinda el propio menor según su capacidad de comprensión; ambos documentos son necesarios y no intercambiables."
+    },
+    {
+      id: 247,
+      career: "Transversal",
+      block: "Ética e interculturalidad",
+      title: "Derecho de una persona indigente sin documentos de identidad",
+      level: "I-2",
+      specialty: "Ética",
+      tags: ["derechos del paciente", "indigencia", "acceso a servicios de salud"],
+      statement: "Personal de serenazgo traslada a un establecimiento de salud a un adulto mayor en situación de indigencia, sin familiares ni documentos de identidad, que presenta un problema de salud agudo.",
+      question: "¿Qué derecho del paciente se prioriza al brindarle atención inmediata en esta situación?",
+      options: [
+        "El consentimiento informado, que requiere en este caso la firma de un familiar.",
+        "El acceso a servicios de salud, que no puede condicionarse a la identificación documentaria en una situación de urgencia.",
+        "El acceso a la información, referido a la explicación detallada de procedimientos.",
+        "El derecho a la recuperación, entendido como garantía de curación completa."
+      ],
+      correct: 1,
+      feedback: "El derecho de acceso a servicios de salud no puede condicionarse a contar con documentos de identidad o acompañante, especialmente ante una situación de urgencia en una persona en situación de indigencia."
+    },
+    {
+      id: 248,
+      career: "Trabajo Social",
+      block: "Ética e interculturalidad",
+      title: "Veracidad en el informe social ante una autoridad judicial",
+      level: "I-2",
+      specialty: "Trabajo Social",
+      tags: ["informe social", "veracidad", "violencia sexual"],
+      statement: "Tras la atención de una adolescente de 13 años por violencia sexual, se elabora un informe social requerido por el Poder Judicial para el proceso correspondiente.",
+      question: "¿Qué principio se vulnera si el informe contiene información que falta a la verdad?",
+      options: [
+        "Beneficencia, entendida como actuar en el mejor interés de la paciente.",
+        "Responsabilidad, entendida como el cumplimiento formal de plazos administrativos.",
+        "Ética, específicamente el principio de veracidad en la información reportada.",
+        "Justicia, entendida exclusivamente como la equidad en el acceso a los servicios."
+      ],
+      correct: 2,
+      feedback: "Faltar a la verdad en un informe social requerido por una autoridad judicial vulnera específicamente el principio ético de veracidad, más allá de otros principios como la beneficencia o la justicia en el acceso."
+    },
+    {
+      id: 249,
+      career: "Obstetricia",
+      block: "Cuidado integral",
+      title: "Estimulación prenatal y desarrollo del feto",
+      level: "I-2",
+      specialty: "Obstetricia",
+      tags: ["estimulación prenatal", "desarrollo psicomotor", "curso de vida"],
+      statement: "Una gestante de 26 semanas participa en sesiones de estimulación prenatal, técnicas de relajación y actividades junto a su pareja, orientadas a favorecer un ambiente uterino propicio para el desarrollo fetal.",
+      question: "¿Qué dimensiones del desarrollo del feto se busca favorecer principalmente con estas actividades, además del desarrollo psicomotor y social?",
+      options: [
+        "El desarrollo conductual, entendido únicamente como la adquisición de reflejos motores.",
+        "El desarrollo emocional, como parte de un adecuado desarrollo integral en el curso de vida.",
+        "El desarrollo cognitivo exclusivamente ligado a la estimulación auditiva.",
+        "El desarrollo intelectual, medido mediante pruebas estandarizadas postnatales."
+      ],
+      correct: 1,
+      feedback: "La estimulación prenatal busca favorecer, junto al desarrollo psicomotor y social, el desarrollo emocional del feto, como parte de un enfoque integral del desarrollo en el curso de vida."
+    },
+    {
+      id: 250,
+      career: "Transversal",
+      block: "Salud pública",
+      title: "Ejes estratégicos de la participación comunitaria en salud",
+      level: "I-2",
+      specialty: "Salud Pública",
+      tags: ["participación comunitaria", "planeación en salud", "ejes estratégicos"],
+      statement: "Un equipo de gestión en salud busca fortalecer la planeación participativa con la comunidad para mejorar la pertinencia de sus intervenciones.",
+      question: "¿Qué combinación de elementos garantiza principalmente el éxito de la participación comunitaria en la planeación en salud?",
+      options: [
+        "Los cambios en la realidad económico-social y las ordenanzas municipales vigentes.",
+        "La actitud política y el esfuerzo exclusivo de la administración local.",
+        "El abordaje territorial, los espacios participativos y la familia como base de la intervención.",
+        "La participación comunitaria limitada a las escuelas saludables del distrito."
+      ],
+      correct: 2,
+      feedback: "El abordaje territorial, la generación de espacios participativos genuinos y la familia como unidad base de intervención son los ejes estratégicos que garantizan una participación comunitaria efectiva en la planeación en salud."
+    },
+    {
+      id: 251,
+      career: "Transversal",
+      block: "Salud pública",
+      title: "La familia como unidad de intervención en promoción de la salud",
+      level: "I-2",
+      specialty: "Salud Pública",
+      tags: ["familia saludable", "promoción de la salud", "unidad de intervención"],
+      statement: "Un establecimiento implementa el programa 'familia saludable' como estrategia central de sus intervenciones de promoción de la salud en la comunidad.",
+      question: "¿Por qué se considera a la familia la unidad de mayor eficacia para este tipo de intervención?",
+      options: [
+        "Porque permite concentrar los recursos exclusivamente en el jefe de familia.",
+        "Porque la familia funciona como unidad de análisis exclusivamente epidemiológico.",
+        "Porque la familia es la unidad de intervención de mayor eficacia para instalar hábitos y estilos de vida saludables sostenibles.",
+        "Porque la familia es la unidad de riesgo prioritaria para la vigilancia de enfermedades transmisibles."
+      ],
+      correct: 2,
+      feedback: "La familia se considera la unidad de intervención de mayor eficacia en promoción de la salud porque permite instalar hábitos y estilos de vida saludables de forma sostenible en su dinámica cotidiana."
+    },
+    {
+      id: 252,
+      career: "Transversal",
+      block: "Ética e interculturalidad",
+      title: "Principios éticos ante un diagnóstico confidencial",
+      level: "I-2",
+      specialty: "Ética",
+      tags: ["ética en la función pública", "confidencialidad", "principios éticos"],
+      statement: "Un profesional de salud atiende a un paciente con un diagnóstico que, por el tipo de enfermedad, requiere especial reserva de la información.",
+      question: "¿Qué combinación de principios éticos debe cumplirse principalmente en este caso?",
+      options: [
+        "Solidaridad, orden, deber y derecho, como marco general de la función pública.",
+        "Respeto, probidad y eficiencia, orientados a la reserva y el manejo adecuado de la información confidencial.",
+        "Fraternidad, moral, deber y orden, como principios generales sin relación específica a la confidencialidad.",
+        "Silencio absoluto y manejo unilateral de la información, sin considerar al paciente."
+      ],
+      correct: 1,
+      feedback: "Ante un diagnóstico que requiere especial reserva, deben cumplirse los principios de respeto, probidad y eficiencia, que orientan el manejo adecuado y confidencial de la información sensible del paciente."
     }
+
 
 
 
