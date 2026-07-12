@@ -235,17 +235,17 @@ function renderCases() {
 
         <button id="priority-toggle" class="toggle">${priorityReviewMode ? "✓ Repaso priorizado activo — click para desactivar" : "Activar orden de repaso priorizado"}</button>
 
-        <details class="filter-box" open>
+        <details class="filter-box" id="filter-career" open>
           <summary>Carrera</summary>
           <div class="option-list" id="career-list"></div>
         </details>
 
-        <details class="filter-box">
+        <details class="filter-box" id="filter-block">
           <summary>Bloque temático</summary>
           <div class="option-list" id="block-list"></div>
         </details>
 
-        <details class="filter-box">
+        <details class="filter-box" id="filter-level">
           <summary>Nivel de establecimiento</summary>
           <div class="option-list" id="level-list"></div>
         </details>
@@ -296,6 +296,8 @@ function renderCases() {
       btn.addEventListener("click", () => {
         selectedCareer = selectedCareer === btn.dataset.career ? "" : btn.dataset.career;
         draw(search.value);
+        document.getElementById("filter-career").open = false;
+        scrollToCaseList();
       });
     });
 
@@ -303,6 +305,8 @@ function renderCases() {
       btn.addEventListener("click", () => {
         selectedBlock = selectedBlock === btn.dataset.block ? "" : btn.dataset.block;
         draw(search.value);
+        document.getElementById("filter-block").open = false;
+        scrollToCaseList();
       });
     });
 
@@ -310,8 +314,17 @@ function renderCases() {
       btn.addEventListener("click", () => {
         selectedLevel = selectedLevel === btn.dataset.level ? "" : btn.dataset.level;
         draw(search.value);
+        document.getElementById("filter-level").open = false;
+        scrollToCaseList();
       });
     });
+  }
+
+  function scrollToCaseList() {
+    // Pequeño retraso para que el DOM ya haya pintado la lista filtrada antes de desplazar
+    setTimeout(() => {
+      list.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 60);
   }
 
   function draw(filter = "") {
@@ -590,7 +603,10 @@ function renderSimulacroRunning() {
     <section class="panel">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
         <span class="badge">${c.career || c.specialty} · ${c.block}</span>
-        <span class="badge" id="simulacro-timer" style="background:#F1E9D8;color:#8A6D3B">--:--</span>
+        <div style="display:flex;gap:8px;align-items:center">
+          <span class="badge" id="simulacro-timer" style="background:#F1E9D8;color:#8A6D3B">--:--</span>
+          <button class="action-btn secondary" id="finish-early-btn" style="margin:0;padding:6px 10px;font-size:12px">Finalizar ahora</button>
+        </div>
       </div>
       <div class="bar" style="margin-bottom:14px"><span style="width:${pct}%"></span></div>
       <h3 class="section-title">${c.title}</h3>
@@ -603,6 +619,14 @@ function renderSimulacroRunning() {
   `;
 
   updateSimulacroTimerDisplay();
+
+  document.getElementById("finish-early-btn").addEventListener("click", () => {
+    const answered = simulacroResults.length;
+    if (confirm(`Llevas ${answered} de ${simulacroQueue.length} preguntas respondidas. ¿Finalizar el simulacro ahora con ese avance?`)) {
+      clearInterval(simulacroTimerId);
+      finishSimulacro();
+    }
+  });
 
   root.querySelectorAll(".option-btn").forEach(btn => {
     btn.addEventListener("click", () => {
@@ -655,7 +679,7 @@ function nextSimulacroQuestion() {
 
 function finishSimulacro() {
   simulacroPhase = "finished";
-  const total = simulacroQueue.length;
+  const total = simulacroResults.length; // preguntas efectivamente respondidas (permite cierre anticipado)
   const correctCount = simulacroResults.filter(r => r.correct).length;
   const pct = total ? fmtPct(Math.round((correctCount / total) * 100)) : 0;
 
