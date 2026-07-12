@@ -3165,7 +3165,387 @@ window.SERUMS_DATA = {
       ],
       correct: 1,
       feedback: "La mejora del saneamiento básico requiere evaluar la infraestructura existente e implementar soluciones técnicas adecuadas, complementadas con educación sanitaria a la comunidad."
+    },
+    {
+      id: 176,
+      career: "Farmacia y Bioquímica",
+      block: "Salud pública",
+      title: "Reporte de una reacción adversa a medicamento",
+      level: "I-2",
+      specialty: "Farmacia y Bioquímica",
+      tags: ["farmacovigilancia", "reacción adversa", "notificación"],
+      statement: "Un paciente refiere haber presentado una reacción cutánea severa tras iniciar un nuevo medicamento dispensado en el establecimiento.",
+      question: "¿Cuál es la conducta correcta del profesional de farmacia?",
+      options: [
+        "Registrar el caso solo en la historia clínica sin ninguna otra acción.",
+        "Notificar la reacción adversa al sistema de farmacovigilancia y orientar al paciente sobre los siguientes pasos.",
+        "Indicar al paciente que suspenda el medicamento sin informar a nadie más."
+      ],
+      correct: 1,
+      feedback: "Toda reacción adversa a medicamentos debe notificarse al sistema de farmacovigilancia, además de orientar adecuadamente al paciente sobre el manejo posterior."
+    },
+    {
+      id: 177,
+      career: "Farmacia y Bioquímica",
+      block: "Cuidado integral",
+      title: "Atención farmacéutica en un adulto mayor polimedicado",
+      level: "I-2",
+      specialty: "Farmacia y Bioquímica",
+      tags: ["polifarmacia", "adulto mayor", "conciliación de medicamentos"],
+      statement: "Un adulto mayor recibe seis medicamentos distintos prescritos por diferentes profesionales, sin que exista una revisión conjunta de su tratamiento.",
+      question: "¿Cuál es la conducta más adecuada del profesional de farmacia?",
+      options: [
+        "Dispensar cada medicamento por separado sin revisar posibles interacciones.",
+        "Realizar una conciliación de medicamentos que identifique interacciones y duplicidades, coordinando con los prescriptores si es necesario.",
+        "Suspender por cuenta propia los medicamentos que considere innecesarios."
+      ],
+      correct: 1,
+      feedback: "En pacientes polimedicados corresponde realizar una conciliación de medicamentos que identifique interacciones y duplicidades, coordinando los ajustes necesarios con los profesionales prescriptores."
+    },
+    {
+      id: 178,
+      career: "Trabajo Social",
+      block: "Cuidado integral",
+      title: "Visita social a una gestante adolescente en situación de riesgo",
+      level: "I-2",
+      specialty: "Trabajo Social",
+      tags: ["gestante adolescente", "visita social", "riesgo psicosocial"],
+      statement: "Una gestante adolescente no acude a sus controles prenatales y su familia reporta que dejó de asistir al colegio recientemente.",
+      question: "¿Cuál es la conducta más adecuada del profesional de trabajo social?",
+      options: [
+        "Esperar a que la adolescente acuda por su cuenta al establecimiento.",
+        "Realizar una visita social para evaluar el contexto familiar y educativo, y coordinar el retorno a controles y apoyo interdisciplinario.",
+        "Notificar únicamente a la escuela sin evaluar la situación de salud."
+      ],
+      correct: 1,
+      feedback: "Ante el abandono de controles y de la escolaridad en una gestante adolescente, corresponde realizar una visita social que evalúe el contexto y coordine el apoyo interdisciplinario necesario."
+    },
+    {
+      id: 179,
+      career: "Trabajo Social",
+      block: "Gestión",
+      title: "Articulación con instituciones educativas",
+      level: "I-2",
+      specialty: "Trabajo Social",
+      tags: ["articulación educativa", "trabajo intersectorial", "seguimiento comunitario"],
+      statement: "Varios niños identificados con signos de desnutrición en el establecimiento no reciben seguimiento porque sus familias no acuden regularmente y el colegio no ha sido informado.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Continuar citando a las familias sin involucrar a otras instituciones.",
+        "Coordinar con la institución educativa un seguimiento conjunto de los casos, articulando salud y educación.",
+        "Cerrar los casos por inasistencia reiterada de las familias."
+      ],
+      correct: 1,
+      feedback: "El trabajo social debe articular con instituciones educativas para dar seguimiento conjunto a casos que requieren intervención sostenida, fortaleciendo la intersectorialidad."
+    },
+    {
+      id: 180,
+      career: "Tecnología Médica - Laboratorio Clínico",
+      block: "Cuidado integral",
+      title: "Resultado crítico de laboratorio",
+      level: "I-2",
+      specialty: "Tecnología Médica",
+      tags: ["valor crítico", "comunicación oportuna", "seguridad del paciente"],
+      statement: "Un resultado de laboratorio muestra un valor de glucosa extremadamente bajo, compatible con riesgo vital inmediato para el paciente.",
+      question: "¿Cuál es la conducta correcta del profesional de laboratorio?",
+      options: [
+        "Registrar el resultado en el sistema y esperar a que el médico lo revise en su próxima ronda.",
+        "Comunicar el valor crítico de forma inmediata y directa al personal clínico responsable del paciente.",
+        "Repetir la prueba varias veces antes de informar cualquier resultado."
+      ],
+      correct: 1,
+      feedback: "Ante un valor crítico de laboratorio se debe comunicar de forma inmediata y directa al personal clínico, dado el riesgo vital que puede representar la demora."
+    },
+    {
+      id: 181,
+      career: "Tecnología Médica - Laboratorio Clínico",
+      block: "Gestión",
+      title: "Cadena de custodia de una muestra biológica",
+      level: "I-2",
+      specialty: "Tecnología Médica",
+      tags: ["cadena de custodia", "trazabilidad", "calidad del proceso"],
+      statement: "Una muestra biológica llega al laboratorio sin el rotulado completo que permita identificar con certeza al paciente correspondiente.",
+      question: "¿Cuál es la conducta correcta?",
+      options: [
+        "Procesar la muestra asumiendo a qué paciente corresponde según el orden de llegada.",
+        "Rechazar la muestra y solicitar su recolección nuevamente con el rotulado e identificación completos.",
+        "Procesar la muestra y aclarar la identificación después de emitir el resultado."
+      ],
+      correct: 1,
+      feedback: "Ante una muestra sin identificación completa y confiable, corresponde rechazarla y solicitar una nueva recolección, para evitar errores graves de atribución de resultados."
+    },
+    {
+      id: 182,
+      career: "Tecnología Médica - Radiología",
+      block: "Salud pública",
+      title: "Protección radiológica ocupacional del personal",
+      level: "I-2",
+      specialty: "Tecnología Médica",
+      tags: ["protección radiológica", "salud ocupacional", "dosimetría"],
+      statement: "El personal que opera el equipo de rayos X en un establecimiento no cuenta con dosímetros personales ni realiza controles periódicos de exposición.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Continuar la operación del equipo sin ningún control de exposición.",
+        "Implementar el uso de dosímetros personales y controles periódicos de exposición según la normativa de protección radiológica.",
+        "Reducir las horas de trabajo del personal sin implementar medidas de control específicas."
+      ],
+      correct: 1,
+      feedback: "La protección radiológica ocupacional exige el uso de dosímetros personales y controles periódicos de exposición, conforme a la normativa vigente."
+    },
+    {
+      id: 183,
+      career: "Tecnología Médica - Radiología",
+      block: "Cuidado integral",
+      title: "Estudio de imagen en un paciente politraumatizado",
+      level: "I-3",
+      specialty: "Tecnología Médica",
+      tags: ["trauma", "estudio de imagen", "priorización"],
+      statement: "Un paciente politraumatizado inestable requiere estudios de imagen para definir la conducta de referencia urgente.",
+      question: "¿Cuál es la conducta más adecuada del profesional de radiología?",
+      options: [
+        "Priorizar los estudios de imagen esenciales para la toma de decisiones, coordinando con el equipo tratante sin retrasar la estabilización del paciente.",
+        "Realizar todos los estudios de imagen posibles antes de cualquier decisión clínica.",
+        "Esperar a que el paciente esté completamente estable para iniciar cualquier estudio."
+      ],
+      correct: 0,
+      feedback: "En un paciente politraumatizado inestable se deben priorizar los estudios de imagen esenciales, coordinando estrechamente con el equipo tratante para no retrasar decisiones críticas."
+    },
+    {
+      id: 184,
+      career: "Tecnología Médica - Terapia Física",
+      block: "Cuidado integral",
+      title: "Rehabilitación cardiaca tras un infarto",
+      level: "I-2",
+      specialty: "Tecnología Médica",
+      tags: ["rehabilitación cardiaca", "actividad física progresiva", "seguimiento"],
+      statement: "Un paciente que sufrió un infarto de miocardio es dado de alta y muestra temor a realizar cualquier actividad física por miedo a un nuevo evento.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Indicar reposo prolongado hasta que el temor desaparezca por sí solo.",
+        "Diseñar un programa de rehabilitación cardiaca con actividad física progresiva y supervisada, abordando también su temor.",
+        "Recomendar que reanude su actividad física habitual sin ninguna supervisión ni progresión."
+      ],
+      correct: 1,
+      feedback: "La rehabilitación cardiaca requiere un programa de actividad física progresiva y supervisada, abordando también el temor del paciente para favorecer su adherencia."
+    },
+    {
+      id: 185,
+      career: "Tecnología Médica - Terapia del Lenguaje",
+      block: "Cuidado integral",
+      title: "Sospecha de disfagia en un adulto mayor",
+      level: "I-2",
+      specialty: "Tecnología Médica",
+      tags: ["disfagia", "seguridad para tragar", "adulto mayor"],
+      statement: "Un adulto mayor presenta tos frecuente durante las comidas y ha perdido peso en los últimos meses.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Indicar que coma más lento sin ninguna evaluación especializada.",
+        "Evaluar la seguridad de la deglución y coordinar un plan de manejo para prevenir complicaciones como la aspiración.",
+        "Esperar a que la pérdida de peso sea más marcada antes de evaluar."
+      ],
+      correct: 1,
+      feedback: "Ante sospecha de disfagia se debe evaluar la seguridad de la deglución y coordinar un plan de manejo oportuno, dado el riesgo de aspiración y desnutrición."
+    },
+    {
+      id: 186,
+      career: "Tecnología Médica - Terapia del Lenguaje",
+      block: "Psicología",
+      title: "Tartamudez y su impacto emocional en un escolar",
+      level: "I-2",
+      specialty: "Tecnología Médica / Psicología",
+      tags: ["tartamudez", "impacto emocional", "abordaje interdisciplinario"],
+      statement: "Un escolar con tartamudez evita participar en clase por temor a ser objeto de burlas de sus compañeros.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Indicar a la familia que el niño simplemente hable más despacio.",
+        "Brindar terapia del lenguaje específica y coordinar apoyo psicológico ante el impacto emocional y social identificado.",
+        "Recomendar que el niño evite hablar en público de forma permanente."
+      ],
+      correct: 1,
+      feedback: "El manejo de la tartamudez debe combinar la terapia del lenguaje específica con el abordaje del impacto emocional y social que genera en el niño.",
+      interdisciplinaryNote: "Psicología puede apoyar el manejo de la ansiedad social y el temor a la burla asociados a la tartamudez."
+    },
+    {
+      id: 187,
+      career: "Tecnología Médica - Terapia Ocupacional",
+      block: "Cuidado integral",
+      title: "Independencia funcional en un niño con trastorno del espectro autista",
+      level: "I-2",
+      specialty: "Tecnología Médica",
+      tags: ["TEA", "actividades de la vida diaria", "terapia ocupacional"],
+      statement: "Un niño con trastorno del espectro autista presenta dificultad marcada para realizar actividades básicas de autocuidado, como vestirse y comer de forma independiente.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Realizar estas actividades por el niño de forma permanente para evitar su frustración.",
+        "Diseñar un plan de intervención estructurado que promueva gradualmente su independencia en actividades de la vida diaria.",
+        "Indicar que estas dificultades no requieren ninguna intervención específica."
+      ],
+      correct: 1,
+      feedback: "La terapia ocupacional en el trastorno del espectro autista debe diseñar un plan estructurado que promueva gradualmente la independencia en actividades de la vida diaria."
+    },
+    {
+      id: 188,
+      career: "Tecnología Médica - Terapia Ocupacional",
+      block: "Cuidado integral",
+      title: "Adaptación del entorno para un adulto mayor con movilidad reducida",
+      level: "I-2",
+      specialty: "Tecnología Médica",
+      tags: ["adaptación del entorno", "adulto mayor", "prevención de caídas"],
+      statement: "Un adulto mayor con movilidad reducida vive en una vivienda con obstáculos que dificultan su desplazamiento seguro y aumentan el riesgo de caídas.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Indicar que se mude a un lugar más seguro sin evaluar su vivienda actual.",
+        "Evaluar el entorno domiciliario y proponer adaptaciones que reduzcan el riesgo de caídas y favorezcan su independencia.",
+        "Recomendar que reduzca al mínimo su desplazamiento dentro de la vivienda."
+      ],
+      correct: 1,
+      feedback: "La terapia ocupacional debe evaluar el entorno domiciliario y proponer adaptaciones concretas que reduzcan riesgos y favorezcan la independencia funcional del adulto mayor."
+    },
+    {
+      id: 189,
+      career: "Tecnología Médica - Optometría",
+      block: "Cuidado integral",
+      title: "Baja visión en un adulto mayor",
+      level: "I-2",
+      specialty: "Tecnología Médica",
+      tags: ["baja visión", "adulto mayor", "rehabilitación visual"],
+      statement: "Un adulto mayor con baja visión irreversible refiere dificultad creciente para realizar sus actividades cotidianas, como leer o cocinar.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Indicar que no hay nada más que hacer, dado que la baja visión es irreversible.",
+        "Evaluar ayudas ópticas y no ópticas de baja visión que faciliten sus actividades cotidianas.",
+        "Recomendar que abandone por completo las actividades que le resultan difíciles."
+      ],
+      correct: 1,
+      feedback: "Aunque la baja visión sea irreversible, existen ayudas ópticas y no ópticas que pueden facilitar significativamente las actividades cotidianas de la persona."
+    },
+    {
+      id: 190,
+      career: "Tecnología Médica - Optometría",
+      block: "Salud pública",
+      title: "Salud visual ocupacional en trabajo con pantallas",
+      level: "I-2",
+      specialty: "Tecnología Médica",
+      tags: ["salud visual ocupacional", "fatiga visual", "prevención"],
+      statement: "Varios trabajadores administrativos que usan pantallas de forma prolongada reportan fatiga visual y dolor de cabeza frecuente.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Indicar que reduzcan el uso de pantallas sin ninguna otra recomendación.",
+        "Evaluar la salud visual del personal y orientar en pausas visuales, iluminación adecuada y otras medidas preventivas.",
+        "Recomendar el uso de cualquier lente sin evaluación previa."
+      ],
+      correct: 1,
+      feedback: "Ante fatiga visual ocupacional se debe evaluar la salud visual del personal y orientar en medidas preventivas específicas, como pausas visuales e iluminación adecuada."
+    },
+    {
+      id: 191,
+      career: "Medicina Veterinaria",
+      block: "Salud pública",
+      title: "Sospecha de leptospirosis tras inundación",
+      level: "I-2",
+      specialty: "Medicina Veterinaria",
+      tags: ["leptospirosis", "zoonosis", "desastres naturales"],
+      statement: "Tras una inundación en una zona rural, se reportan casos humanos compatibles con leptospirosis y presencia de roedores en la zona afectada.",
+      question: "¿Cuál es la conducta más adecuada del profesional veterinario?",
+      options: [
+        "Atender exclusivamente a los animales de la zona sin coordinar con salud pública.",
+        "Coordinar con salud pública el control de roedores y la vigilancia epidemiológica conjunta del evento.",
+        "Esperar a que se confirmen más casos humanos antes de intervenir."
+      ],
+      correct: 1,
+      feedback: "Ante sospecha de leptospirosis tras un desastre, se debe coordinar con salud pública el control de roedores y la vigilancia epidemiológica conjunta, dado el carácter zoonótico de la enfermedad."
+    },
+    {
+      id: 192,
+      career: "Medicina Veterinaria",
+      block: "Salud pública",
+      title: "Programa de control de la población canina",
+      level: "I-2",
+      specialty: "Medicina Veterinaria",
+      tags: ["control canino", "rabia", "salud pública veterinaria"],
+      statement: "Una comunidad presenta una alta población de perros callejeros sin control sanitario ni esquema de vacunación antirrábica.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Eliminar a los animales callejeros como única medida de control.",
+        "Implementar un programa de vacunación antirrábica y esterilización, con participación comunitaria.",
+        "No intervenir hasta que se reporte un caso humano de rabia."
+      ],
+      correct: 1,
+      feedback: "El control de la población canina debe basarse en programas de vacunación antirrábica y esterilización con participación comunitaria, no en la eliminación de animales."
+    },
+    {
+      id: 193,
+      career: "Biología",
+      block: "Salud pública",
+      title: "Vigilancia entomológica de vectores de dengue",
+      level: "I-2",
+      specialty: "Biología",
+      tags: ["vigilancia entomológica", "dengue", "control vectorial"],
+      statement: "Se requiere establecer un sistema de monitoreo de la presencia de larvas de Aedes aegypti en una comunidad con riesgo de dengue.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Realizar el monitoreo solo después de que se reporten los primeros casos de dengue.",
+        "Implementar un sistema de vigilancia entomológica periódica que permita identificar y actuar sobre los criaderos antes de un brote.",
+        "Limitar la vigilancia a las viviendas que reporten síntomas compatibles con dengue."
+      ],
+      correct: 1,
+      feedback: "La vigilancia entomológica periódica permite identificar criaderos y actuar preventivamente, antes de que ocurra un brote de dengue en la comunidad."
+    },
+    {
+      id: 194,
+      career: "Biología",
+      block: "Gestión",
+      title: "Control de calidad en un banco de sangre",
+      level: "I-2",
+      specialty: "Biología",
+      tags: ["banco de sangre", "control de calidad", "seguridad transfusional"],
+      statement: "Un banco de sangre no realiza de forma consistente todas las pruebas de tamizaje requeridas antes de liberar las unidades para transfusión.",
+      question: "¿Cuál es la conducta correcta?",
+      options: [
+        "Liberar las unidades de sangre según la urgencia del pedido, sin esperar todas las pruebas.",
+        "Garantizar que todas las pruebas de tamizaje se completen antes de liberar cualquier unidad para transfusión.",
+        "Realizar las pruebas solo en donantes que parezcan tener factores de riesgo."
+      ],
+      correct: 1,
+      feedback: "La seguridad transfusional exige que todas las pruebas de tamizaje se completen antes de liberar una unidad de sangre, sin excepciones basadas en la apariencia del donante o la urgencia."
+    },
+    {
+      id: 195,
+      career: "Ingeniería Sanitaria",
+      block: "Salud pública",
+      title: "Manejo de residuos sólidos hospitalarios",
+      level: "I-2",
+      specialty: "Ingeniería Sanitaria",
+      tags: ["residuos hospitalarios", "gestión ambiental", "bioseguridad"],
+      statement: "Un establecimiento de salud dispone sus residuos biocontaminados junto con los residuos comunes por falta de un sistema de segregación adecuado.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Continuar con la disposición conjunta para simplificar el proceso.",
+        "Implementar un sistema de segregación, tratamiento y disposición final adecuado para los residuos biocontaminados según la normativa vigente.",
+        "Delegar todo el manejo de residuos a una empresa externa sin ninguna supervisión."
+      ],
+      correct: 1,
+      feedback: "Los residuos biocontaminados deben segregarse, tratarse y disponerse conforme a la normativa vigente, para evitar riesgos sanitarios y ambientales."
+    },
+    {
+      id: 196,
+      career: "Ingeniería Sanitaria",
+      block: "Cuidado integral",
+      title: "Disposición de excretas en una comunidad sin alcantarillado",
+      level: "I-2",
+      specialty: "Ingeniería Sanitaria",
+      tags: ["disposición de excretas", "saneamiento rural", "salud ambiental"],
+      statement: "Una comunidad rural dispone de sus excretas a cielo abierto por no contar con sistema de alcantarillado, lo que incrementa el riesgo de enfermedades diarreicas.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Esperar la construcción de un sistema de alcantarillado convencional antes de intervenir.",
+        "Evaluar e implementar soluciones sanitarias adecuadas al contexto rural, como letrinas o sistemas alternativos, junto con educación sanitaria.",
+        "Limitar la intervención a la educación sobre higiene de manos, sin abordar la disposición de excretas."
+      ],
+      correct: 1,
+      feedback: "En zonas rurales sin alcantarillado se deben evaluar e implementar soluciones sanitarias adecuadas al contexto, como letrinas o sistemas alternativos, junto con educación sanitaria comunitaria."
     }
+
 
 
 
