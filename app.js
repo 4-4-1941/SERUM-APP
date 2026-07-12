@@ -686,6 +686,8 @@ function renderSimulacroResults() {
   const last = simulacroHistory[simulacroHistory.length - 1];
   if (!last) { simulacroPhase = "intro"; return renderSimulacroIntro(); }
 
+  const savedName = localStorage.getItem("preserum_userName") || "";
+
   root.innerHTML = `
     <section class="grid metrics">
       <div class="card"><span class="label">Puntaje</span><div class="value">${last.correctCount}/${last.total}</div></div>
@@ -708,6 +710,15 @@ function renderSimulacroResults() {
         </div>
       </div>
       <div class="panel">
+        <h3 class="section-title">Exportar constancia</h3>
+        <p style="color:#5B6E6A;line-height:1.6;margin-bottom:10px">Genera un PDF de este resultado para guardar o compartir. Tu nombre queda guardado en este dispositivo para tus próximas constancias.</p>
+        <input id="export-name" class="search" placeholder="Tu nombre (opcional)" value="${savedName}" style="margin-bottom:10px" />
+        <button class="action-btn" id="export-pdf-btn">Descargar constancia (PDF)</button>
+        <p style="color:#5B6E6A;font-size:12px;margin-top:8px">Se abrirá el diálogo de impresión de tu navegador; elige "Guardar como PDF".</p>
+      </div>
+    </section>
+    <section style="margin-top:16px">
+      <div class="panel">
         <h3 class="section-title">Siguiente paso</h3>
         <p style="color:#5B6E6A;line-height:1.6">Cada intento queda guardado en tu historial. Repite el simulacro cuando quieras: la selección de preguntas y su orden cambian cada vez.</p>
         <button class="action-btn" id="retry-simulacro-btn">Rendir otro simulacro</button>
@@ -715,10 +726,44 @@ function renderSimulacroResults() {
     </section>
   `;
 
+  document.getElementById("export-pdf-btn").addEventListener("click", () => {
+    const name = document.getElementById("export-name").value.trim();
+    localStorage.setItem("preserum_userName", name);
+    exportSimulacroPDF(last, name);
+  });
+
   document.getElementById("retry-simulacro-btn").addEventListener("click", () => {
     simulacroPhase = "intro";
     renderSimulacroIntro();
   });
+}
+
+function exportSimulacroPDF(record, name) {
+  const printRoot = document.getElementById("print-report");
+  const blockRows = Object.entries(record.byBlock).map(([block, v]) => {
+    const p = v.total ? Math.round((v.correct / v.total) * 100) : 0;
+    return `<tr><td>${block}</td><td>${v.correct}/${v.total}</td><td>${p}%</td></tr>`;
+  }).join("");
+
+  printRoot.innerHTML = `
+    <div class="print-page">
+      <h1>PRE SÉRUM PERÚ</h1>
+      <h2>Constancia de Autoevaluación — Simulacro SERUMS</h2>
+      <p class="print-meta">${name ? "Nombre: " + name + " · " : ""}Fecha: ${new Date(record.date).toLocaleDateString("es-PE", { day: "2-digit", month: "long", year: "numeric" })}</p>
+      <div class="print-score">
+        <div><span>Puntaje</span><strong>${record.correctCount} / ${record.total}</strong></div>
+        <div><span>Porcentaje</span><strong>${record.pct}%</strong></div>
+      </div>
+      <h3>Desglose por bloque oficial</h3>
+      <table class="print-table">
+        <thead><tr><th>Bloque temático</th><th>Aciertos</th><th>%</th></tr></thead>
+        <tbody>${blockRows}</tbody>
+      </table>
+      <p class="print-note">Este documento es una autoevaluación generada por la aplicación PRE SÉRUM PERÚ con fines de estudio personal. No constituye un resultado oficial del proceso SERUMS ni un documento emitido por el MINSA.</p>
+    </div>
+  `;
+
+  window.print();
 }
 
 function renderNorms() {
