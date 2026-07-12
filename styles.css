@@ -45,6 +45,15 @@ h1,h2,h3{font-family:"Source Serif 4",Georgia,serif}
 
 .brand{position:relative}
 
+.brand-logo{
+  width:72px;
+  height:72px;
+  border-radius:50%;
+  display:block;
+  margin-bottom:14px;
+  box-shadow:0 0 0 2px rgba(234,243,240,.15), 0 6px 16px rgba(0,0,0,.35);
+}
+
 .brand::before{
   content:"";
   position:absolute;
