@@ -394,3 +394,58 @@ textarea.input{
 @media (prefers-reduced-motion:reduce){
   *{transition:none !important}
 }
+
+/* ---------- Exportación de constancia (impresión / Guardar como PDF) ---------- */
+.print-only{display:none}
+
+@media print{
+  body *{visibility:hidden}
+  #print-report, #print-report *{visibility:visible}
+  #print-report{
+    display:block !important;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+  }
+  .print-page{
+    padding:40px;
+    font-family:"IBM Plex Sans",Arial,sans-serif;
+    color:#152726;
+  }
+  .print-page h1{
+    font-family:"Source Serif 4",Georgia,serif;
+    font-size:26px;
+    margin:0 0 4px;
+    color:#0C3B34;
+  }
+  .print-page h2{
+    font-family:"Source Serif 4",Georgia,serif;
+    font-size:17px;
+    margin:0 0 18px;
+    color:#145C52;
+    font-weight:500;
+  }
+  .print-meta{font-size:13px;color:#5B6E6A;margin-bottom:22px}
+  .print-score{
+    display:flex;
+    gap:40px;
+    margin-bottom:26px;
+    padding:16px 0;
+    border-top:1px solid #DCE4E1;
+    border-bottom:1px solid #DCE4E1;
+  }
+  .print-score div{display:flex;flex-direction:column;gap:4px}
+  .print-score span{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:#5B6E6A}
+  .print-score strong{font-family:"Source Serif 4",Georgia,serif;font-size:24px;color:#0C3B34}
+  .print-page h3{font-size:14px;margin:0 0 10px;color:#0C3B34}
+  .print-table{width:100%;border-collapse:collapse;margin-bottom:26px}
+  .print-table th,.print-table td{
+    text-align:left;
+    padding:8px 10px;
+    border-bottom:1px solid #DCE4E1;
+    font-size:13px;
+  }
+  .print-table th{color:#5B6E6A;font-weight:600;text-transform:uppercase;font-size:11px;letter-spacing:.05em}
+  .print-note{font-size:11px;color:#5B6E6A;line-height:1.6;margin-top:20px}
+}
