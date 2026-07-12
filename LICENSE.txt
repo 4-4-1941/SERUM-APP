@@ -1,0 +1,15 @@
+Copyright © 2026 Richard Castillejo Ponce. Todos los derechos reservados.
+
+Este repositorio y su contenido (código fuente, banco de casos clínicos,
+diseño, identidad visual y documentación) son propiedad intelectual de
+Richard Castillejo Ponce.
+
+No se autoriza la reproducción, distribución, modificación, publicación
+ni uso comercial de este proyecto, total o parcial, sin el permiso previo
+y por escrito del autor.
+
+El hecho de que este repositorio sea públicamente accesible en GitHub
+no constituye una licencia de uso, copia o redistribución de su contenido.
+
+Para solicitudes de uso, colaboración o licenciamiento, contactar
+directamente al autor.
