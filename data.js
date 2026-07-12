@@ -3544,7 +3544,731 @@ window.SERUMS_DATA = {
       ],
       correct: 1,
       feedback: "En zonas rurales sin alcantarillado se deben evaluar e implementar soluciones sanitarias adecuadas al contexto, como letrinas o sistemas alternativos, junto con educación sanitaria comunitaria."
+    },
+    {
+      id: 197,
+      career: "Psicología",
+      block: "Psicología",
+      title: "Trastorno de pánico con agorafobia",
+      level: "I-2",
+      specialty: "Psicología",
+      tags: ["trastorno de pánico", "agorafobia", "evitación"],
+      statement: "Paciente presenta episodios recurrentes de pánico y ha comenzado a evitar salir de casa por temor a que ocurran en lugares públicos.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Indicar que evite por completo las situaciones temidas hasta que los episodios cesen.",
+        "Evaluar el cuadro, psicoeducar sobre el pánico y ofrecer intervención gradual que aborde la evitación.",
+        "Minimizar el cuadro considerándolo una reacción pasajera sin intervención."
+      ],
+      correct: 1,
+      feedback: "El trastorno de pánico con agorafobia requiere psicoeducación y una intervención gradual que aborde la evitación, evitando reforzar el patrón de evitación con reposo total."
+    },
+    {
+      id: 198,
+      career: "Psicología",
+      block: "Psicología",
+      title: "Duelo prolongado tras la pérdida de un hijo",
+      level: "I-2",
+      specialty: "Psicología",
+      tags: ["duelo complicado", "pérdida", "acompañamiento"],
+      statement: "Una madre presenta añoranza intensa y dificultad marcada para retomar su vida cotidiana dos años después de la muerte de su hijo.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Indicar que ya debería haber superado el duelo por el tiempo transcurrido.",
+        "Evaluar signos de duelo prolongado y ofrecer un espacio terapéutico especializado en procesos de duelo complicado.",
+        "Recomendar evitar hablar del hijo fallecido para no revivir el dolor."
+      ],
+      correct: 1,
+      feedback: "Cuando el duelo interfiere significativamente con la vida cotidiana tras un tiempo prolongado, corresponde evaluar un posible duelo complicado y ofrecer intervención especializada."
+    },
+    {
+      id: 199,
+      career: "Psicología",
+      block: "Psicología",
+      title: "Autolesión no suicida en una adolescente",
+      level: "I-2",
+      specialty: "Psicología",
+      tags: ["autolesión no suicida", "adolescencia", "regulación emocional"],
+      statement: "Una adolescente presenta cortes superficiales autoinfligidos en los brazos, que refiere usar para 'sentir alivio' ante emociones intensas, sin intención suicida expresada.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Ignorar el hallazgo si no hay intención suicida expresada.",
+        "Evaluar el riesgo, explorar la función emocional de la conducta e iniciar intervención en regulación emocional.",
+        "Exigir que prometa no volver a hacerlo y dar de alta sin seguimiento."
+      ],
+      correct: 1,
+      feedback: "La autolesión no suicida requiere evaluación de riesgo e intervención centrada en la regulación emocional, independientemente de la ausencia de intención suicida expresada."
+    },
+    {
+      id: 200,
+      career: "Psicología",
+      block: "Psicología",
+      title: "Trastorno obsesivo-compulsivo con rituales de verificación",
+      level: "I-2",
+      specialty: "Psicología",
+      tags: ["TOC", "rituales", "funcionalidad"],
+      statement: "Paciente dedica varias horas al día a verificar repetidamente que las puertas y ventanas de su casa estén cerradas, afectando su desempeño laboral.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Indicar que simplemente deje de realizar las verificaciones por su cuenta.",
+        "Evaluar el cuadro obsesivo-compulsivo y su impacto funcional, ofreciendo intervención especializada.",
+        "Minimizar el cuadro como un simple hábito de orden."
+      ],
+      correct: 1,
+      feedback: "Un patrón de rituales que afecta el funcionamiento diario debe evaluarse como posible trastorno obsesivo-compulsivo y abordarse con intervención especializada."
+    },
+    {
+      id: 201,
+      career: "Psicología",
+      block: "Cuidado integral",
+      title: "Crisis vital asociada a la jubilación",
+      level: "I-2",
+      specialty: "Psicología",
+      tags: ["jubilación", "crisis vital", "adulto mayor"],
+      statement: "Un adulto recientemente jubilado presenta tristeza, sensación de pérdida de propósito y aislamiento progresivo desde el cese de su actividad laboral.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Indicar que es normal y que se le pasará solo con el tiempo.",
+        "Explorar el significado de la pérdida del rol laboral y acompañar la construcción de nuevos proyectos vitales.",
+        "Recomendar que busque empleo de inmediato para resolver el malestar."
+      ],
+      correct: 1,
+      feedback: "La crisis vital asociada a la jubilación requiere explorar el significado de la pérdida del rol laboral y acompañar la construcción de nuevos proyectos vitales significativos."
+    },
+    {
+      id: 202,
+      career: "Psicología",
+      block: "Ética e interculturalidad",
+      title: "Celotipia y conductas de control en la pareja",
+      level: "I-2",
+      specialty: "Psicología",
+      tags: ["celos patológicos", "control", "riesgo de violencia"],
+      statement: "Una usuaria refiere que su pareja revisa constantemente su teléfono, controla sus salidas y se muestra celoso ante cualquier interacción social.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Indicar que son celos normales propios de una relación de pareja.",
+        "Evaluar el riesgo asociado a las conductas de control descritas, dado que pueden ser un indicador temprano de violencia.",
+        "Sugerir que ella modifique su comportamiento para evitar los celos de su pareja."
+      ],
+      correct: 1,
+      feedback: "Las conductas de control y celotipia intensa deben evaluarse como posible indicador temprano de violencia de pareja, sin normalizarlas ni responsabilizar a la víctima."
+    },
+    {
+      id: 203,
+      career: "Medicina",
+      block: "Cuidado integral",
+      title: "Signos de alarma en dengue",
+      level: "I-2",
+      specialty: "Medicina",
+      tags: ["dengue", "signos de alarma", "manejo clínico"],
+      statement: "Paciente con dengue confirmado presenta dolor abdominal intenso, vómitos persistentes y sangrado de encías al tercer día de fiebre.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Indicar manejo domiciliario con hidratación oral únicamente.",
+        "Reconocer los signos de alarma, hospitalizar u observar estrechamente y coordinar referencia si corresponde.",
+        "Esperar a que la fiebre ceda antes de tomar cualquier decisión adicional."
+      ],
+      correct: 1,
+      feedback: "La presencia de signos de alarma en dengue exige observación estrecha u hospitalización, con referencia oportuna según la gravedad del caso."
+    },
+    {
+      id: 204,
+      career: "Medicina",
+      block: "Cuidado integral",
+      title: "Exacerbación de EPOC",
+      level: "I-2",
+      specialty: "Medicina",
+      tags: ["EPOC", "exacerbación", "manejo respiratorio"],
+      statement: "Paciente con diagnóstico previo de EPOC presenta aumento de la disnea, cambio en el color del esputo y mayor uso de musculatura accesoria.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Indicar que continúe su tratamiento habitual sin ninguna reevaluación.",
+        "Evaluar la gravedad de la exacerbación, iniciar manejo inicial y decidir referencia según la respuesta clínica.",
+        "Aumentar el broncodilatador sin evaluar otros signos clínicos."
+      ],
+      correct: 1,
+      feedback: "Ante una exacerbación de EPOC se debe evaluar la gravedad, iniciar manejo inicial adecuado y decidir la referencia según la evolución clínica del paciente."
+    },
+    {
+      id: 205,
+      career: "Medicina",
+      block: "Cuidado integral",
+      title: "Hipoglucemia severa en paciente diabético",
+      level: "I-2",
+      specialty: "Medicina",
+      tags: ["hipoglucemia", "diabetes", "manejo de emergencia"],
+      statement: "Paciente diabético en tratamiento con insulina presenta confusión, sudoración profusa y temblor, con glicemia capilar muy baja.",
+      question: "¿Cuál es la conducta prioritaria?",
+      options: [
+        "Administrar más insulina para corregir la glicemia.",
+        "Corregir la hipoglucemia de inmediato según protocolo y luego evaluar la causa del episodio.",
+        "Esperar a que el paciente se recupere espontáneamente antes de intervenir."
+      ],
+      correct: 1,
+      feedback: "La hipoglucemia severa es una emergencia que debe corregirse de inmediato según protocolo, evaluando posteriormente la causa que la originó."
+    },
+    {
+      id: 206,
+      career: "Medicina",
+      block: "Cuidado integral",
+      title: "Cefalea con signos de alarma",
+      level: "I-3",
+      specialty: "Medicina",
+      tags: ["cefalea", "signos de alarma", "referencia urgente"],
+      statement: "Paciente presenta la cefalea más intensa de su vida, de inicio súbito, asociada a vómitos y rigidez de nuca.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Indicar analgésico oral y control ambulatorio en una semana.",
+        "Reconocer los signos de alarma, estabilizar y coordinar referencia urgente para descartar una causa grave.",
+        "Esperar la evolución espontánea antes de decidir cualquier acción."
+      ],
+      correct: 1,
+      feedback: "Una cefalea de inicio súbito con signos de alarma exige estabilización y referencia urgente, dado el riesgo de una causa grave subyacente."
+    },
+    {
+      id: 207,
+      career: "Enfermería",
+      block: "Cuidado integral",
+      title: "Cuidado de un paciente con colostomía reciente",
+      level: "I-2",
+      specialty: "Enfermería",
+      tags: ["colostomía", "cuidado del estoma", "educación al paciente"],
+      statement: "Un paciente con colostomía reciente muestra rechazo a observar y manipular su propio estoma durante las curaciones.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Realizar siempre la curación sin involucrar al paciente en el proceso.",
+        "Brindar educación progresiva y acompañamiento emocional para favorecer la aceptación y el autocuidado del estoma.",
+        "Indicar que debe acostumbrarse de inmediato sin ningún apoyo adicional."
+      ],
+      correct: 1,
+      feedback: "El cuidado del estoma requiere educación progresiva y acompañamiento emocional que favorezca la aceptación y el autocuidado por parte del paciente."
+    },
+    {
+      id: 208,
+      career: "Enfermería",
+      block: "Cuidado integral",
+      title: "Educación en autoaplicación de insulina",
+      level: "I-2",
+      specialty: "Enfermería",
+      tags: ["insulina", "educación en salud", "autocuidado"],
+      statement: "Un paciente con diabetes tipo 1 recién diagnosticado deberá aplicarse insulina de forma autónoma en casa por primera vez.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Entregar la insulina con instrucciones escritas únicamente, sin demostración práctica.",
+        "Realizar educación práctica sobre la técnica de aplicación, rotación de sitios y reconocimiento de signos de hipoglucemia.",
+        "Indicar que un familiar aplique la insulina de forma permanente sin educar al paciente."
+      ],
+      correct: 1,
+      feedback: "La educación en autoaplicación de insulina debe ser práctica, incluyendo técnica de aplicación, rotación de sitios y reconocimiento de hipoglucemia, para favorecer la autonomía del paciente."
+    },
+    {
+      id: 209,
+      career: "Enfermería",
+      block: "Gestión",
+      title: "Clasificación de pacientes en el triaje de emergencia",
+      level: "I-2",
+      specialty: "Enfermería",
+      tags: ["triaje", "priorización", "emergencia"],
+      statement: "En un servicio de emergencia con alta demanda, varios pacientes esperan atención simultáneamente con distintos niveles de gravedad.",
+      question: "¿Cuál es la conducta correcta?",
+      options: [
+        "Atender según el orden de llegada, sin evaluar la gravedad de cada caso.",
+        "Aplicar un sistema de triaje que priorice la atención según la gravedad clínica de cada paciente.",
+        "Atender primero a quienes reclaman con mayor insistencia."
+      ],
+      correct: 1,
+      feedback: "El triaje debe priorizar la atención según la gravedad clínica de cada paciente, y no según el orden de llegada o la insistencia del reclamo."
+    },
+    {
+      id: 210,
+      career: "Enfermería",
+      block: "Cuidado integral",
+      title: "Apego precoz entre la madre y el recién nacido",
+      level: "I-2",
+      specialty: "Enfermería / Obstetricia",
+      tags: ["apego precoz", "recién nacido", "contacto piel a piel"],
+      statement: "Tras un parto sin complicaciones, el personal se dispone a trasladar al recién nacido para procedimientos de rutina antes de cualquier contacto con la madre.",
+      question: "¿Cuál es la conducta más adecuada, siempre que no existan contraindicaciones clínicas?",
+      options: [
+        "Realizar todos los procedimientos de rutina antes de cualquier contacto entre madre e hijo.",
+        "Favorecer el contacto piel a piel inmediato y postergar los procedimientos de rutina no urgentes.",
+        "Trasladar al recién nacido a otra sala sin informar a la madre del motivo."
+      ],
+      correct: 1,
+      feedback: "Siempre que no existan contraindicaciones clínicas, se debe favorecer el contacto piel a piel inmediato entre madre e hijo, postergando los procedimientos de rutina no urgentes."
+    },
+    {
+      id: 211,
+      career: "Obstetricia",
+      block: "Cuidado integral",
+      title: "Diabetes gestacional",
+      level: "I-2",
+      specialty: "Obstetricia",
+      tags: ["diabetes gestacional", "tamizaje", "consejería"],
+      statement: "Gestante de 26 semanas presenta un resultado alterado en la prueba de tolerancia a la glucosa realizada en su control prenatal.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Indicar que espere al siguiente control sin ninguna intervención adicional.",
+        "Confirmar el diagnóstico, brindar consejería nutricional y coordinar seguimiento especializado del embarazo.",
+        "Indicar reposo absoluto como única medida de manejo."
+      ],
+      correct: 1,
+      feedback: "Ante un tamizaje alterado de diabetes gestacional se debe confirmar el diagnóstico, brindar consejería nutricional y coordinar el seguimiento especializado necesario.",
+      interdisciplinaryNote: "Nutrición cumple un rol central en el manejo dietético de la diabetes gestacional."
+    },
+    {
+      id: 212,
+      career: "Obstetricia",
+      block: "Cuidado integral",
+      title: "Dificultad en la técnica de lactancia materna",
+      level: "I-2",
+      specialty: "Obstetricia",
+      tags: ["lactancia materna", "técnica de posición", "consejería"],
+      statement: "Una madre primeriza refiere que su bebé se suelta constantemente del pecho y llora durante la lactancia, a pesar de sentir que produce suficiente leche.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Indicar iniciar fórmula de inmediato sin evaluar la técnica utilizada.",
+        "Observar la sesión de lactancia, corregir la posición y el agarre, y reforzar la consejería.",
+        "Indicar que continúe igual porque el problema se resolverá con el tiempo."
+      ],
+      correct: 1,
+      feedback: "Ante dificultades en la lactancia se debe observar la sesión, corregir la posición y el agarre, y reforzar la consejería antes de considerar otras alternativas."
+    },
+    {
+      id: 213,
+      career: "Obstetricia",
+      block: "Cuidado integral",
+      title: "Prevención de osteoporosis en el climaterio",
+      level: "I-2",
+      specialty: "Obstetricia",
+      tags: ["climaterio", "osteoporosis", "prevención"],
+      statement: "Una mujer en climaterio consulta sobre cómo prevenir la pérdida de masa ósea asociada a esta etapa.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Indicar que la pérdida ósea es inevitable y no requiere ninguna medida preventiva.",
+        "Orientar sobre actividad física con carga, consumo adecuado de calcio y vitamina D, y evaluación según factores de riesgo individuales.",
+        "Recomendar reposo para evitar fracturas."
+      ],
+      correct: 1,
+      feedback: "La prevención de osteoporosis en el climaterio incluye actividad física con carga, adecuado consumo de calcio y vitamina D, y evaluación individualizada según factores de riesgo."
+    },
+    {
+      id: 214,
+      career: "Odontología",
+      block: "Cuidado integral",
+      title: "Periodontitis severa con movilidad dentaria",
+      level: "I-2",
+      specialty: "Odontología",
+      tags: ["periodontitis", "salud bucal", "derivación especializada"],
+      statement: "Paciente adulto presenta sangrado gingival severo, movilidad dentaria y mal aliento persistente de larga evolución.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Indicar solo mayor frecuencia de cepillado sin evaluación adicional.",
+        "Evaluar el estado periodontal, iniciar manejo inicial y derivar a periodoncia si el caso lo amerita.",
+        "Extraer las piezas con movilidad de inmediato sin evaluación previa."
+      ],
+      correct: 1,
+      feedback: "Ante sospecha de periodontitis severa se debe evaluar el estado periodontal, iniciar manejo inicial y derivar oportunamente a periodoncia si corresponde."
+    },
+    {
+      id: 215,
+      career: "Odontología",
+      block: "Cuidado integral",
+      title: "Manejo de conducta en odontopediatría",
+      level: "I-2",
+      specialty: "Odontología",
+      tags: ["odontopediatría", "manejo de conducta", "miedo infantil"],
+      statement: "Un niño de 5 años llora intensamente y se resiste a abrir la boca ante su primera atención odontológica.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Sujetar al niño con fuerza para completar el procedimiento de inmediato.",
+        "Aplicar técnicas de manejo de conducta apropiadas para la edad, generando confianza antes de proceder.",
+        "Suspender la atención de forma indefinida sin ningún intento adicional."
+      ],
+      correct: 1,
+      feedback: "El manejo de conducta en odontopediatría requiere generar confianza mediante técnicas apropiadas para la edad, evitando tanto la sujeción forzada como la suspensión indefinida de la atención."
+    },
+    {
+      id: 216,
+      career: "Odontología",
+      block: "Cuidado integral",
+      title: "Lesión bucal persistente como señal de alarma",
+      level: "I-2",
+      specialty: "Odontología",
+      tags: ["cáncer oral", "lesión persistente", "derivación oportuna"],
+      statement: "Paciente presenta una úlcera bucal que no cicatriza después de tres semanas, sin causa traumática identificable.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Indicar enjuagues antisépticos y control en un mes adicional sin más evaluación.",
+        "Evaluar la lesión con sospecha de malignidad y derivar oportunamente para biopsia si corresponde.",
+        "Asumir que es una lesión traumática menor sin mayor seguimiento."
+      ],
+      correct: 1,
+      feedback: "Una lesión bucal persistente sin causa identificable y sin cicatrización debe evaluarse con sospecha de malignidad y derivarse oportunamente para estudio histopatológico."
+    },
+    {
+      id: 217,
+      career: "Nutrición",
+      block: "Cuidado integral",
+      title: "Soporte nutricional en un paciente oncológico",
+      level: "I-2",
+      specialty: "Nutrición",
+      tags: ["cáncer", "soporte nutricional", "pérdida de peso"],
+      statement: "Un paciente en tratamiento oncológico presenta pérdida marcada de peso y disminución del apetito asociada a los efectos del tratamiento.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Indicar que la pérdida de peso es esperada y no requiere intervención nutricional.",
+        "Evaluar el estado nutricional y diseñar un plan de soporte adaptado a la tolerancia del paciente durante el tratamiento.",
+        "Forzar una dieta hipercalórica estricta sin considerar la tolerancia del paciente."
+      ],
+      correct: 1,
+      feedback: "El soporte nutricional en el paciente oncológico debe adaptarse a su tolerancia durante el tratamiento, evitando tanto la falta de intervención como planes rígidos que no consideren su condición."
+    },
+    {
+      id: 218,
+      career: "Nutrición",
+      block: "Cuidado integral",
+      title: "Alimentación de la madre durante la lactancia",
+      level: "I-2",
+      specialty: "Nutrición",
+      tags: ["lactancia materna", "nutrición materna", "consejería alimentaria"],
+      statement: "Una madre en periodo de lactancia exclusiva refiere haber reducido drásticamente su alimentación por temor a no poder bajar de peso.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Apoyar la restricción severa para que logre su objetivo de peso rápidamente.",
+        "Brindar consejería sobre una alimentación adecuada durante la lactancia, que cubra sus requerimientos sin restricciones severas.",
+        "Indicar que suspenda la lactancia si desea bajar de peso más rápido."
+      ],
+      correct: 1,
+      feedback: "Durante la lactancia se debe brindar consejería sobre una alimentación adecuada que cubra los requerimientos maternos, evitando restricciones severas que puedan afectar la producción de leche y la salud materna."
+    },
+    {
+      id: 219,
+      career: "Nutrición",
+      block: "Cuidado integral",
+      title: "Rol nutricional en un trastorno de la conducta alimentaria",
+      level: "I-2",
+      specialty: "Nutrición / Psicología",
+      tags: ["trastorno de conducta alimentaria", "rehabilitación nutricional", "trabajo interdisciplinario"],
+      statement: "Una paciente en tratamiento por un trastorno de conducta alimentaria requiere un plan de rehabilitación nutricional gradual y coordinado con su equipo de salud mental.",
+      question: "¿Cuál es la conducta más adecuada del profesional de nutrición?",
+      options: [
+        "Diseñar el plan nutricional de forma aislada, sin coordinar con el equipo de salud mental.",
+        "Diseñar un plan de rehabilitación nutricional gradual, coordinado estrechamente con el equipo de psicología y medicina.",
+        "Indicar un plan de alimentación estricto y rápido para normalizar el peso cuanto antes."
+      ],
+      correct: 1,
+      feedback: "El manejo nutricional en un trastorno de conducta alimentaria debe ser gradual y estar estrechamente coordinado con el equipo interdisciplinario de salud mental y medicina.",
+      interdisciplinaryNote: "Psicología aporta el abordaje emocional y conductual que debe acompañar la rehabilitación nutricional gradual."
+    },
+    {
+      id: 220,
+      career: "Farmacia y Bioquímica",
+      block: "Cuidado integral",
+      title: "Interacción medicamentosa relevante",
+      level: "I-2",
+      specialty: "Farmacia y Bioquímica",
+      tags: ["interacción medicamentosa", "seguridad del paciente", "conciliación"],
+      statement: "Un paciente presenta una nueva prescripción que, combinada con un medicamento que ya toma, genera un riesgo conocido de interacción grave.",
+      question: "¿Cuál es la conducta correcta del profesional de farmacia?",
+      options: [
+        "Dispensar ambos medicamentos sin advertir la interacción.",
+        "Identificar la interacción, informar al prescriptor y al paciente, y sugerir alternativas si es necesario.",
+        "Dispensar solo uno de los medicamentos sin informar al paciente ni al prescriptor."
+      ],
+      correct: 1,
+      feedback: "Ante una interacción medicamentosa relevante se debe informar tanto al prescriptor como al paciente, sugiriendo alternativas seguras cuando sea necesario."
+    },
+    {
+      id: 221,
+      career: "Farmacia y Bioquímica",
+      block: "Ética e interculturalidad",
+      title: "Receta médica ilegible o incompleta",
+      level: "I-2",
+      specialty: "Farmacia y Bioquímica",
+      tags: ["prescripción", "seguridad del paciente", "verificación"],
+      statement: "Una receta médica presenta información ilegible sobre la dosis del medicamento prescrito.",
+      question: "¿Cuál es la conducta correcta?",
+      options: [
+        "Interpretar la dosis según lo más probable y dispensar de inmediato.",
+        "Comunicarse con el prescriptor para confirmar la dosis exacta antes de dispensar el medicamento.",
+        "Dispensar la dosis mínima posible para evitar cualquier riesgo, sin confirmar con el prescriptor."
+      ],
+      correct: 1,
+      feedback: "Ante una receta ilegible o incompleta se debe confirmar con el prescriptor antes de dispensar, para evitar errores de dosificación que pongan en riesgo al paciente."
+    },
+    {
+      id: 222,
+      career: "Trabajo Social",
+      block: "Ética e interculturalidad",
+      title: "Evaluación social en un caso de discapacidad",
+      level: "I-2",
+      specialty: "Trabajo Social",
+      tags: ["discapacidad", "evaluación social", "inclusión"],
+      statement: "Una familia con un miembro con discapacidad severa desconoce los programas y beneficios sociales a los que podría acceder.",
+      question: "¿Cuál es la conducta más adecuada del profesional de trabajo social?",
+      options: [
+        "Indicar que investiguen por su cuenta los programas disponibles.",
+        "Realizar una evaluación social integral y orientar sobre los programas y beneficios disponibles para la familia.",
+        "Derivar el caso sin brindar ninguna orientación inicial."
+      ],
+      correct: 1,
+      feedback: "Ante una familia con un miembro con discapacidad se debe realizar una evaluación social integral y orientar activamente sobre los programas y beneficios disponibles."
+    },
+    {
+      id: 223,
+      career: "Trabajo Social",
+      block: "Gestión",
+      title: "Gestión de apoyo económico en fase terminal",
+      level: "I-2",
+      specialty: "Trabajo Social",
+      tags: ["fase terminal", "apoyo social", "gestión de recursos"],
+      statement: "La familia de un paciente en fase terminal no cuenta con recursos económicos suficientes para cubrir los gastos asociados a su cuidado.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Indicar que ese tema no corresponde al ámbito de salud.",
+        "Evaluar la situación socioeconómica de la familia y gestionar el acceso a los programas de apoyo disponibles.",
+        "Recomendar que la familia solicite un préstamo por su cuenta."
+      ],
+      correct: 1,
+      feedback: "El trabajo social debe evaluar la situación socioeconómica de la familia y gestionar activamente el acceso a los programas de apoyo disponibles, especialmente en situaciones de fase terminal."
+    },
+    {
+      id: 224,
+      career: "Tecnología Médica - Laboratorio Clínico",
+      block: "Cuidado integral",
+      title: "Hallazgo compatible con leucemia en un hemograma",
+      level: "I-2",
+      specialty: "Tecnología Médica",
+      tags: ["hemograma", "sospecha de leucemia", "comunicación oportuna"],
+      statement: "Un hemograma de rutina muestra alteraciones marcadas en el recuento y la morfología de las células blancas, compatibles con un posible proceso leucémico.",
+      question: "¿Cuál es la conducta correcta del profesional de laboratorio?",
+      options: [
+        "Registrar el resultado en el sistema sin ninguna comunicación adicional.",
+        "Comunicar el hallazgo de forma oportuna y directa al personal clínico responsable del paciente.",
+        "Repetir la prueba varias veces sin comunicar el hallazgo inicial."
+      ],
+      correct: 1,
+      feedback: "Ante un hallazgo hematológico compatible con un proceso leucémico se debe comunicar de forma oportuna y directa al personal clínico, dada la urgencia de la evaluación posterior."
+    },
+    {
+      id: 225,
+      career: "Tecnología Médica - Radiología",
+      block: "Cuidado integral",
+      title: "Hallazgo sospechoso en una mamografía de tamizaje",
+      level: "I-2",
+      specialty: "Tecnología Médica",
+      tags: ["mamografía", "tamizaje", "derivación oportuna"],
+      statement: "Una mamografía de tamizaje muestra una imagen sospechosa que requiere evaluación complementaria según los criterios de clasificación estandarizados.",
+      question: "¿Cuál es la conducta correcta?",
+      options: [
+        "Informar el resultado como normal para no generar preocupación en la paciente.",
+        "Clasificar el hallazgo según los criterios estandarizados y coordinar la evaluación complementaria oportuna.",
+        "Repetir la mamografía en un año sin ninguna evaluación adicional."
+      ],
+      correct: 1,
+      feedback: "Ante un hallazgo sospechoso en una mamografía se debe clasificar según los criterios estandarizados y coordinar oportunamente la evaluación complementaria correspondiente."
+    },
+    {
+      id: 226,
+      career: "Tecnología Médica - Terapia Física",
+      block: "Cuidado integral",
+      title: "Rehabilitación de una lesión deportiva de rodilla",
+      level: "I-2",
+      specialty: "Tecnología Médica",
+      tags: ["lesión deportiva", "rehabilitación", "retorno a la actividad"],
+      statement: "Un deportista con una lesión de rodilla desea retomar su actividad deportiva lo antes posible, antes de completar el proceso de rehabilitación.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Autorizar el retorno inmediato para no afectar su participación deportiva.",
+        "Explicar los riesgos de un retorno prematuro y diseñar un plan de rehabilitación progresivo antes de autorizar la vuelta a la actividad.",
+        "Indicar reposo absoluto indefinido sin ningún plan de rehabilitación activo."
+      ],
+      correct: 1,
+      feedback: "El retorno a la actividad deportiva debe basarse en un plan de rehabilitación progresivo, explicando al paciente los riesgos de un retorno prematuro antes de la recuperación adecuada."
+    },
+    {
+      id: 227,
+      career: "Tecnología Médica - Terapia del Lenguaje",
+      block: "Cuidado integral",
+      title: "Afasia tras un accidente cerebrovascular",
+      level: "I-2",
+      specialty: "Tecnología Médica",
+      tags: ["afasia", "ACV", "rehabilitación del lenguaje"],
+      statement: "Un paciente tras un accidente cerebrovascular presenta dificultad marcada para expresar y comprender el lenguaje, generándole frustración evidente.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Evitar comunicarse con el paciente hasta que el lenguaje se recupere espontáneamente.",
+        "Evaluar el tipo de afasia y diseñar un plan de rehabilitación del lenguaje, usando estrategias de comunicación de apoyo mientras tanto.",
+        "Hablar por el paciente en todo momento para evitar su frustración."
+      ],
+      correct: 1,
+      feedback: "Ante una afasia post-ACV se debe evaluar su tipo y diseñar un plan de rehabilitación del lenguaje, utilizando estrategias de comunicación de apoyo que reduzcan la frustración del paciente."
+    },
+    {
+      id: 228,
+      career: "Tecnología Médica - Terapia Ocupacional",
+      block: "Psicología",
+      title: "Terapia ocupacional en un paciente con depresión severa",
+      level: "I-2",
+      specialty: "Tecnología Médica / Psicología",
+      tags: ["salud mental", "actividades significativas", "terapia ocupacional"],
+      statement: "Un paciente con depresión severa ha abandonado por completo actividades que antes disfrutaba y pasa la mayor parte del día en cama.",
+      question: "¿Cuál es la conducta más adecuada de terapia ocupacional?",
+      options: [
+        "Esperar a que el estado de ánimo mejore por sí solo antes de intervenir.",
+        "Diseñar un plan gradual de reactivación en actividades significativas, coordinado con el tratamiento en salud mental.",
+        "Exigir que retome de inmediato todas sus actividades previas."
+      ],
+      correct: 1,
+      feedback: "La terapia ocupacional en depresión severa debe diseñar un plan gradual de reactivación en actividades significativas, coordinado con el tratamiento integral en salud mental.",
+      interdisciplinaryNote: "Psicología aporta el manejo terapéutico de fondo de la depresión que debe acompañar la reactivación conductual."
+    },
+    {
+      id: 229,
+      career: "Tecnología Médica - Optometría",
+      block: "Cuidado integral",
+      title: "Tamizaje de glaucoma en un paciente con factores de riesgo",
+      level: "I-2",
+      specialty: "Tecnología Médica",
+      tags: ["glaucoma", "tamizaje", "salud ocular"],
+      statement: "Un paciente con antecedente familiar de glaucoma y edad mayor a 40 años no ha tenido nunca una evaluación de la presión intraocular.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Indicar que no requiere evaluación porque no presenta síntomas visuales actuales.",
+        "Realizar tamizaje de glaucoma, dado el antecedente familiar y la edad, y derivar según hallazgos.",
+        "Esperar a que presente pérdida de visión evidente para evaluar."
+      ],
+      correct: 1,
+      feedback: "El glaucoma suele ser asintomático en etapas iniciales; ante factores de riesgo como el antecedente familiar y la edad, corresponde realizar tamizaje oportuno."
+    },
+    {
+      id: 230,
+      career: "Medicina Veterinaria",
+      block: "Salud pública",
+      title: "Riesgo ocupacional de brucelosis en trabajadores de granja",
+      level: "I-2",
+      specialty: "Medicina Veterinaria",
+      tags: ["brucelosis", "salud ocupacional", "zoonosis"],
+      statement: "Trabajadores de una granja lechera manipulan animales y productos sin ningún equipo de protección personal, en una zona con casos previos de brucelosis animal.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Continuar las labores sin ninguna medida de protección adicional.",
+        "Implementar medidas de bioseguridad y protección personal, además de vigilancia sanitaria del hato y de los trabajadores expuestos.",
+        "Suspender toda actividad ganadera en la zona de forma indefinida."
+      ],
+      correct: 1,
+      feedback: "Ante riesgo de brucelosis se deben implementar medidas de bioseguridad y protección personal para los trabajadores, junto con vigilancia sanitaria del hato y de las personas expuestas."
+    },
+    {
+      id: 231,
+      career: "Medicina Veterinaria",
+      block: "Salud pública",
+      title: "Vigilancia de encefalitis equina en zona de riesgo",
+      level: "I-2",
+      specialty: "Medicina Veterinaria",
+      tags: ["encefalitis equina", "vigilancia sanitaria", "vectores"],
+      statement: "Se reportan casos de enfermedad neurológica en caballos de una zona con alta presencia de mosquitos vectores.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Atender solo a los animales enfermos sin notificar el evento.",
+        "Notificar el evento a la autoridad sanitaria, investigar la causa y coordinar el control vectorial correspondiente.",
+        "Esperar a que se presenten casos humanos antes de tomar cualquier acción."
+      ],
+      correct: 1,
+      feedback: "Ante sospecha de una enfermedad transmitida por vectores en animales se debe notificar, investigar la causa y coordinar el control vectorial de forma oportuna, dado su potencial riesgo para la salud humana."
+    },
+    {
+      id: 232,
+      career: "Biología",
+      block: "Cuidado integral",
+      title: "Diagnóstico microbiológico de tuberculosis",
+      level: "I-2",
+      specialty: "Biología",
+      tags: ["tuberculosis", "baciloscopía", "diagnóstico oportuno"],
+      statement: "Un paciente sintomático respiratorio de más de dos semanas de evolución requiere estudio diagnóstico para descartar tuberculosis.",
+      question: "¿Cuál es la conducta más adecuada del profesional de biología en el laboratorio?",
+      options: [
+        "Procesar la muestra sin priorización especial, según el orden habitual de llegada.",
+        "Procesar la baciloscopía de forma prioritaria y comunicar el resultado oportunamente para iniciar manejo si corresponde.",
+        "Solicitar que el paciente regrese en una semana para la toma de muestra."
+      ],
+      correct: 1,
+      feedback: "Ante sospecha de tuberculosis se debe priorizar el procesamiento de la baciloscopía y comunicar el resultado oportunamente, dada la relevancia de un diagnóstico y tratamiento tempranos."
+    },
+    {
+      id: 233,
+      career: "Biología",
+      block: "Salud pública",
+      title: "Control de calidad microbiológica de alimentos en un mercado",
+      level: "I-2",
+      specialty: "Biología",
+      tags: ["inocuidad alimentaria", "control microbiológico", "salud pública"],
+      statement: "Se reportan varios casos de enfermedad diarreica aguda asociados al consumo de alimentos de un mercado local.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Cerrar el mercado de forma indefinida sin ninguna investigación previa.",
+        "Realizar análisis microbiológico de los alimentos sospechosos y coordinar las medidas correctivas con la autoridad sanitaria.",
+        "Esperar a que se reporten más casos antes de investigar."
+      ],
+      correct: 1,
+      feedback: "Ante sospecha de enfermedad transmitida por alimentos se debe realizar el análisis microbiológico correspondiente y coordinar las medidas correctivas con la autoridad sanitaria."
+    },
+    {
+      id: 234,
+      career: "Ingeniería Sanitaria",
+      block: "Salud pública",
+      title: "Contaminación de una fuente de agua por agroquímicos",
+      level: "I-2",
+      specialty: "Ingeniería Sanitaria",
+      tags: ["contaminación hídrica", "agroquímicos", "salud ambiental"],
+      statement: "Una comunidad rural utiliza como fuente de agua un río cercano a terrenos de cultivo con uso intensivo de agroquímicos.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Indicar que la población continúe usando la fuente sin ninguna evaluación.",
+        "Evaluar la calidad del agua, coordinar medidas de mitigación y orientar sobre fuentes alternativas mientras se resuelve el problema.",
+        "Prohibir toda actividad agrícola en la zona sin evaluación previa."
+      ],
+      correct: 1,
+      feedback: "Ante sospecha de contaminación hídrica por agroquímicos se debe evaluar la calidad del agua, coordinar medidas de mitigación y orientar sobre fuentes alternativas mientras se soluciona el problema."
+    },
+    {
+      id: 235,
+      career: "Ingeniería Sanitaria",
+      block: "Cuidado integral",
+      title: "Ventilación deficiente en un establecimiento de salud",
+      level: "I-2",
+      specialty: "Ingeniería Sanitaria",
+      tags: ["ventilación", "infraestructura sanitaria", "prevención de infecciones"],
+      statement: "Un establecimiento de salud atiende pacientes con sospecha de tuberculosis en ambientes cerrados sin ventilación adecuada.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Continuar la atención sin evaluar las condiciones de ventilación del ambiente.",
+        "Evaluar y mejorar la ventilación de los ambientes de atención, como medida de control de infecciones de transmisión aérea.",
+        "Trasladar la atención a un ambiente aún más reducido para facilitar el control."
+      ],
+      correct: 1,
+      feedback: "La ventilación adecuada de los ambientes de atención es una medida clave de control de infecciones de transmisión aérea, como la tuberculosis, y debe evaluarse y mejorarse cuando sea deficiente."
+    },
+    {
+      id: 236,
+      career: "Transversal",
+      block: "Gestión",
+      title: "Gestión de la información en salud (HIS/SIS)",
+      level: "I-2",
+      specialty: "Gestión",
+      tags: ["sistemas de información", "HIS", "toma de decisiones"],
+      statement: "Un establecimiento registra su información clínica y epidemiológica de forma incompleta e inconsistente en el sistema de información en salud.",
+      question: "¿Cuál es la conducta más adecuada?",
+      options: [
+        "Continuar con el registro incompleto porque no afecta la atención directa del paciente.",
+        "Fortalecer el registro completo y oportuno de la información en el sistema, dado su rol en la toma de decisiones y la vigilancia epidemiológica.",
+        "Delegar el registro exclusivamente al personal administrativo sin supervisión clínica."
+      ],
+      correct: 1,
+      feedback: "El registro completo y oportuno en los sistemas de información en salud es clave para la toma de decisiones y la vigilancia epidemiológica, y debe fortalecerse activamente."
     }
+
 
 
 
