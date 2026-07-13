@@ -267,12 +267,13 @@ window.SERUMS_DATA = {
       "statement": "Paciente de 58 años con hipertensión y tres controles elevados refiere olvido frecuente de medicamentos.",
       "question": "¿Qué estrategia inicial corresponde?",
       "options": [
-        "Suspender el tratamiento y reevaluar en 6 meses.",
-        "Refuerzo de adherencia, educación y control programado.",
-        "Indicar solo dieta y no registrar seguimiento."
+        "Reforzar la adherencia, educar sobre el tratamiento y programar un control cercano.",
+        "Cambiar de inmediato a una combinación de tres antihipertensivos sin explorar la causa del mal control.",
+        "Indicar que continúe con el mismo esquema y el mismo intervalo de controles habitual.",
+        "Suspender el tratamiento farmacológico y manejar solo con cambios en el estilo de vida."
       ],
-      "correct": 1,
-      "feedback": "El manejo inicial debe reforzar adherencia, educación y seguimiento programado."
+      "correct": 0,
+      "feedback": "Ante mal control por olvido de tomas se debe reforzar adherencia y educación con seguimiento cercano; suspender el tratamiento, mantener el mismo esquema sin cambios o retirar el fármaco no abordan la causa real del descontrol."
     },
     {
       "id": 13,
@@ -401,12 +402,13 @@ window.SERUMS_DATA = {
       "statement": "Gestante de 28 semanas asiste por primera vez a control prenatal.",
       "question": "¿Cuál es la acción inicial más adecuada?",
       "options": [
-        "Iniciar evaluación integral y clasificación de riesgo.",
-        "Decirle que espere hasta el parto.",
-        "Dar alta por atención tardía."
+        "Programar la primera ecografía como único paso antes de cualquier otra evaluación.",
+        "Iniciar evaluación integral y clasificación de riesgo obstétrico, aunque el control sea tardío.",
+        "Indicar que continúe sus controles según el cronograma estándar sin priorizar la evaluación inicial.",
+        "Registrar el ingreso tardío y postergar la evaluación de riesgo hasta el siguiente control."
       ],
-      "correct": 0,
-      "feedback": "Debe iniciarse evaluación integral y clasificación de riesgo obstétrico."
+      "correct": 1,
+      "feedback": "Ante un control prenatal tardío corresponde iniciar de inmediato la evaluación integral y clasificación de riesgo; limitarse a la ecografía, mantener el cronograma estándar o postergar la evaluación de riesgo retrasan la identificación de complicaciones."
     },
     {
       "id": 19,
@@ -833,12 +835,13 @@ window.SERUMS_DATA = {
       "statement": "Lactante de 8 meses presenta tos, dificultad respiratoria y tiraje subcostal desde hace dos días.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Indicar manejo domiciliario sin reevaluación.",
-        "Clasificar signos de alarma, estabilizar y referir según el nivel de gravedad.",
-        "Esperar 48 horas adicionales antes de decidir."
+        "Iniciar antibiótico oral ambulatorio sin clasificar previamente la gravedad del cuadro.",
+        "Indicar nebulizaciones domiciliarias como única medida inicial.",
+        "Clasificar los signos de alarma, estabilizar al lactante y referir según el nivel de gravedad.",
+        "Programar una reevaluación en 48 horas sin ninguna intervención en el momento."
       ],
-      "correct": 1,
-      "feedback": "Ante signos de dificultad respiratoria en un lactante se debe clasificar la gravedad, estabilizar y referir oportunamente."
+      "correct": 2,
+      "feedback": "Ante signos de dificultad respiratoria en un lactante se debe clasificar la gravedad, estabilizar y referir oportunamente; el manejo domiciliario, el antibiótico sin clasificación previa o las nebulizaciones aisladas no sustituyen esa clasificación."
     },
     {
       "id": 38,
@@ -856,11 +859,12 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta prioritaria?",
       "options": [
         "Indicar solo ajuste de dieta y control en una semana.",
-        "Estabilizar signos vitales e hidratación, y coordinar referencia urgente a mayor complejidad.",
-        "Aumentar la dosis de metformina sin evaluación adicional."
+        "Administrar insulina en dosis única, sin monitoreo posterior ni plan de referencia.",
+        "Aumentar la dosis de metformina sin evaluar el estado de descompensación actual.",
+        "Estabilizar signos vitales, iniciar hidratación y coordinar referencia urgente a mayor complejidad."
       ],
-      "correct": 1,
-      "feedback": "La sospecha de descompensación diabética grave exige estabilización inicial y referencia urgente a mayor complejidad."
+      "correct": 3,
+      "feedback": "La sospecha de descompensación diabética grave exige estabilización, hidratación y referencia urgente; el ajuste solo de dieta, una dosis única de insulina sin monitoreo o aumentar metformina sin evaluación no son adecuados."
     },
     {
       "id": 39,
@@ -899,12 +903,13 @@ window.SERUMS_DATA = {
       "statement": "Paciente de zona rural presenta mordedura de serpiente con dolor local, edema progresivo y sangrado de encías.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Aplicar torniquete ajustado y esperar evolución.",
-        "Estabilizar, evitar maniobras contraindicadas y coordinar referencia urgente para suero antiofídico.",
-        "Indicar solo analgésico oral y observación domiciliaria."
+        "Estabilizar al paciente, evitar maniobras contraindicadas y coordinar referencia urgente para suero antiofídico.",
+        "Realizar incisión y succión en el sitio de la mordedura antes de referir.",
+        "Aplicar hielo local de forma prolongada como medida principal de manejo.",
+        "Indicar observación domiciliaria con analgésico oral, dado que el edema es progresivo pero leve."
       ],
-      "correct": 1,
-      "feedback": "El manejo correcto es estabilizar, evitar maniobras como torniquetes o incisiones, y referir con urgencia para suero antiofídico."
+      "correct": 0,
+      "feedback": "El manejo correcto de una mordedura de serpiente es estabilizar, evitar maniobras contraindicadas (torniquete, incisión, succión, hielo prolongado) y referir con urgencia para suero antiofídico."
     },
     {
       "id": 41,
@@ -965,12 +970,13 @@ window.SERUMS_DATA = {
       "statement": "Gestante de 30 semanas presenta palidez marcada, fatiga intensa y hemoglobina muy por debajo del rango normal.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Indicar solo suplementación oral y control en un mes.",
-        "Evaluar gravedad, iniciar manejo según protocolo y coordinar referencia si corresponde.",
-        "Esperar el parto para tratar la anemia."
+        "Indicar transfusión sanguínea inmediata sin evaluar previamente la gravedad ni la tolerancia clínica.",
+        "Evaluar la gravedad, iniciar manejo según protocolo y coordinar referencia si corresponde.",
+        "Iniciar solo suplementación oral de hierro y control en un mes.",
+        "Esperar al parto para definir el manejo de la anemia."
       ],
       "correct": 1,
-      "feedback": "La anemia severa en gestante requiere evaluación de gravedad, manejo protocolizado y referencia oportuna si el caso lo amerita.",
+      "feedback": "La anemia severa en gestante requiere evaluar la gravedad, manejo protocolizado y referencia si corresponde; una transfusión sin evaluación previa, solo suplementación oral o esperar al parto no son adecuados.",
       "interdisciplinaryNote": "Nutrición aporta el plan de suplementación y consejería alimentaria complementaria al manejo médico."
     },
     {
@@ -989,11 +995,12 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta prioritaria?",
       "options": [
         "Indicar reposo domiciliario y control ambulatorio en una semana.",
-        "Estabilizar signos vitales, iniciar manejo inicial y evaluar necesidad de referencia urgente.",
-        "Aumentar la dosis del tratamiento habitual sin evaluación clínica."
+        "Duplicar de inmediato la dosis de su tratamiento antihipertensivo habitual, sin evaluación clínica.",
+        "Estabilizar signos vitales, iniciar manejo inicial y evaluar la necesidad de referencia urgente.",
+        "Solicitar solo exámenes de laboratorio antes de iniciar cualquier manejo."
       ],
-      "correct": 1,
-      "feedback": "Ante una probable crisis hipertensiva se debe estabilizar, iniciar manejo inicial y evaluar la referencia urgente según gravedad."
+      "correct": 2,
+      "feedback": "Ante una probable crisis hipertensiva se debe estabilizar, iniciar manejo inicial y evaluar la referencia urgente; el reposo ambulatorio, duplicar la dosis sin evaluación o pedir solo exámenes retrasan el manejo necesario."
     },
     {
       "id": 45,
@@ -1010,12 +1017,13 @@ window.SERUMS_DATA = {
       "statement": "Niño de 3 años presenta diarrea acuosa frecuente, decaimiento y ojos hundidos en las últimas horas.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Indicar solo dieta blanda sin evaluar el grado de deshidratación.",
-        "Clasificar el grado de deshidratación e iniciar rehidratación según corresponda.",
-        "Esperar 24 horas adicionales antes de intervenir."
+        "Clasificar el grado de deshidratación e iniciar la rehidratación oral o endovenosa según corresponda.",
+        "Iniciar antibiótico de forma empírica, sin clasificar previamente la deshidratación.",
+        "Esperar 24 horas adicionales de evolución antes de intervenir.",
+        "Indicar solo dieta blanda, sin evaluar el grado de deshidratación."
       ],
-      "correct": 1,
-      "feedback": "Se debe clasificar el grado de deshidratación e iniciar la rehidratación oral o endovenosa según corresponda."
+      "correct": 0,
+      "feedback": "Se debe clasificar el grado de deshidratación e iniciar la rehidratación correspondiente; la dieta blanda sin evaluación, el antibiótico empírico o esperar más horas no abordan la deshidratación de forma oportuna."
     },
     {
       "id": 46,
@@ -1054,12 +1062,13 @@ window.SERUMS_DATA = {
       "statement": "Niño de 2 años no logra hitos de lenguaje esperados para su edad durante el control de Crecimiento y Desarrollo.",
       "question": "¿Qué acción corresponde?",
       "options": [
-        "Indicar que es normal y no requiere seguimiento adicional.",
-        "Documentar el hallazgo, orientar a la familia y derivar para evaluación especializada.",
-        "Esperar el siguiente control sin ninguna acción."
+        "Indicar solo ejercicios de estimulación en casa, sin derivación especializada.",
+        "Esperar el siguiente control de CRED para reevaluar, sin ninguna acción en el momento.",
+        "Atribuir el hallazgo a que el niño es bilingüe, sin explorar otras causas.",
+        "Documentar el hallazgo, orientar a la familia y derivar para evaluación especializada del lenguaje."
       ],
-      "correct": 1,
-      "feedback": "Ante un hito de desarrollo no alcanzado se debe documentar, orientar a la familia y derivar oportunamente."
+      "correct": 3,
+      "feedback": "Ante un hito de lenguaje no alcanzado se debe documentar, orientar a la familia y derivar para evaluación especializada; la estimulación aislada, esperar el siguiente control o atribuirlo al bilingüismo sin explorar más no son adecuados."
     },
     {
       "id": 48,
@@ -1076,12 +1085,13 @@ window.SERUMS_DATA = {
       "statement": "Paciente postrado en cuidado domiciliario presenta una lesión en la zona sacra con signos de deterioro progresivo.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Indicar solo cambios de posición sin evaluar la lesión.",
-        "Evaluar la lesión, iniciar curación según protocolo y educar en cambios posturales y cuidado de piel.",
-        "Cubrir la lesión y no realizar seguimiento posterior."
+        "Aplicar únicamente antibiótico tópico, sin educar en cambios posturales.",
+        "Evaluar la lesión, iniciar curación según protocolo vigente y educar en cambios posturales y cuidado de piel.",
+        "Indicar solo cambios de posición, sin evaluar ni curar la lesión existente.",
+        "Cubrir la lesión con un apósito simple, sin ningún seguimiento posterior."
       ],
       "correct": 1,
-      "feedback": "Se debe evaluar la lesión, iniciar la curación según protocolo vigente y educar en prevención de nuevas úlceras."
+      "feedback": "La lesión debe evaluarse, curarse según protocolo y acompañarse de educación en cambios posturales; el antibiótico tópico aislado, los cambios de posición sin curar o cubrir sin seguimiento no son suficientes."
     },
     {
       "id": 49,
@@ -1098,12 +1108,13 @@ window.SERUMS_DATA = {
       "statement": "Paciente en fase terminal presenta dolor no controlado y la familia muestra signos de agotamiento en el cuidado.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Enfocarse solo en el control del dolor sin considerar a la familia.",
         "Evaluar el control del dolor, brindar soporte a la familia cuidadora y coordinar acompañamiento interdisciplinario.",
-        "Indicar que la familia continúe sin apoyo adicional."
+        "Aumentar la dosis de analgésico sin evaluar el resto del cuadro ni a la familia cuidadora.",
+        "Enfocarse únicamente en el soporte emocional a la familia, sin reevaluar el control del dolor.",
+        "Indicar que la familia continúe el cuidado sin apoyo adicional del equipo de salud."
       ],
-      "correct": 1,
-      "feedback": "Los cuidados paliativos requieren control del dolor y soporte a la familia cuidadora de forma interdisciplinaria.",
+      "correct": 0,
+      "feedback": "Los cuidados paliativos requieren control del dolor junto con soporte a la familia cuidadora y coordinación interdisciplinaria; aumentar solo el analgésico, atender solo lo emocional o dejar sin apoyo a la familia son incompletos.",
       "interdisciplinaryNote": "Psicología puede brindar soporte emocional a la familia cuidadora y acompañamiento en el proceso de duelo anticipado."
     },
     {
@@ -1121,12 +1132,13 @@ window.SERUMS_DATA = {
       "statement": "Madre primeriza refiere dolor al amamantar y duda sobre si su producción de leche es suficiente para su recién nacido.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Indicar iniciar fórmula de inmediato sin evaluar la técnica.",
-        "Evaluar la técnica de lactancia, corregir el agarre y brindar consejería de refuerzo.",
-        "Decir que el dolor es normal y no requiere evaluación."
+        "Indicar iniciar fórmula de inmediato, sin evaluar previamente la técnica utilizada.",
+        "Recomendar espaciar las tomas para permitir mayor producción de leche entre sesiones.",
+        "Decir que el dolor al amamantar es siempre normal y no amerita evaluación.",
+        "Evaluar la técnica de lactancia, corregir el agarre y brindar consejería de refuerzo."
       ],
-      "correct": 1,
-      "feedback": "Se debe evaluar la técnica de lactancia, corregir el agarre y reforzar la consejería antes de considerar otras opciones."
+      "correct": 3,
+      "feedback": "Ante dificultades en la lactancia se debe evaluar la técnica, corregir agarre y reforzar consejería; iniciar fórmula sin evaluar, espaciar tomas o normalizar el dolor sin evaluación no son adecuados."
     },
     {
       "id": 51,
@@ -1143,12 +1155,13 @@ window.SERUMS_DATA = {
       "statement": "Durante una visita domiciliaria se encuentra que el paciente diabético ha suspendido su tratamiento por falta de recursos.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Registrar el hallazgo sin ninguna acción adicional.",
-        "Evaluar la causa de la suspensión, reforzar educación y coordinar apoyo social o clínico según corresponda.",
-        "Indicar que retome el tratamiento sin explorar la causa."
+        "Evaluar la causa de la suspensión del tratamiento, reforzar la educación y coordinar el apoyo social o clínico necesario.",
+        "Indicar que retome el tratamiento sin explorar la causa de la suspensión.",
+        "Registrar el hallazgo para la siguiente visita programada, sin ninguna acción inmediata.",
+        "Solicitar que la familia asuma el costo del tratamiento, sin evaluar otras alternativas de apoyo."
       ],
-      "correct": 1,
-      "feedback": "Se debe explorar la causa de la suspensión del tratamiento y coordinar el apoyo necesario para restablecer la adherencia."
+      "correct": 0,
+      "feedback": "Se debe evaluar la causa de la suspensión del tratamiento y coordinar el apoyo necesario; indicar que retome sin explorar la causa, registrar sin acción o trasladar el costo a la familia no resuelven el problema de fondo."
     },
     {
       "id": 52,
@@ -1187,12 +1200,13 @@ window.SERUMS_DATA = {
       "statement": "Paciente en tratamiento antituberculoso ha faltado a la toma supervisada en los últimos días.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Suspender el tratamiento por incumplimiento.",
-        "Realizar búsqueda activa, explorar barreras de adherencia y reforzar la estrategia de tratamiento supervisado.",
-        "Esperar a que el paciente regrese por su cuenta."
+        "Suspender el tratamiento por incumplimiento de las tomas programadas.",
+        "Realizar búsqueda activa del paciente, explorar las barreras de adherencia y reforzar el tratamiento supervisado.",
+        "Indicar que un familiar recoja los medicamentos, sin explorar la causa de las faltas.",
+        "Esperar a que el paciente regrese por su cuenta al establecimiento."
       ],
       "correct": 1,
-      "feedback": "Se debe realizar búsqueda activa del paciente, explorar las barreras de adherencia y reforzar el tratamiento supervisado."
+      "feedback": "Ante inasistencias al tratamiento antituberculoso se debe realizar búsqueda activa y explorar barreras de adherencia; suspender el tratamiento, delegarlo sin explorar la causa o esperar pasivamente no siguen la estrategia de tratamiento supervisado."
     },
     {
       "id": 54,
@@ -1209,12 +1223,13 @@ window.SERUMS_DATA = {
       "statement": "Gestante de 32 semanas presenta contracciones regulares y dilatación cervical incipiente en un establecimiento de baja complejidad.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Indicar reposo domiciliario y control en una semana.",
-        "Estabilizar, iniciar manejo según protocolo de amenaza de parto pretérmino y coordinar referencia inmediata.",
-        "Atender el parto en el establecimiento sin coordinar referencia."
+        "Atender el parto en el establecimiento actual, dado que la dilatación es aún incipiente.",
+        "Indicar reposo domiciliario estricto y control ambulatorio en una semana.",
+        "Estabilizar a la gestante, iniciar manejo según protocolo de amenaza de parto pretérmino y coordinar referencia inmediata.",
+        "Iniciar solo tocolisis, sin coordinar ninguna referencia a mayor complejidad."
       ],
-      "correct": 1,
-      "feedback": "Ante amenaza de parto pretérmino se debe estabilizar, iniciar el manejo protocolizado y coordinar referencia inmediata."
+      "correct": 2,
+      "feedback": "Ante amenaza de parto pretérmino corresponde estabilizar, manejar según protocolo y referir de inmediato; atender el parto localmente, indicar solo reposo o iniciar tocolisis sin coordinar referencia no son adecuados."
     },
     {
       "id": 55,
@@ -1255,11 +1270,12 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta prioritaria?",
       "options": [
         "Indicar reposo domiciliario y control ambulatorio en una semana.",
-        "Estabilizar signos vitales, iniciar manejo según protocolo de preeclampsia y referir con urgencia.",
-        "Esperar la evolución espontánea antes de decidir traslado."
+        "Iniciar solo tratamiento antihipertensivo oral, sin evaluar signos de gravedad adicionales.",
+        "Esperar la evolución espontánea del cuadro antes de decidir el traslado.",
+        "Estabilizar signos vitales, iniciar manejo según protocolo de preeclampsia y referir con carácter urgente."
       ],
-      "correct": 1,
-      "feedback": "La sospecha de preeclampsia exige estabilización, manejo protocolizado inicial y referencia urgente a mayor complejidad."
+      "correct": 3,
+      "feedback": "La preeclampsia exige estabilización, manejo protocolizado y referencia urgente; el reposo ambulatorio, el tratamiento oral aislado o esperar la evolución espontánea subestiman la gravedad del cuadro."
     },
     {
       "id": 57,
@@ -1276,12 +1292,13 @@ window.SERUMS_DATA = {
       "statement": "Puérpera inmediata presenta sangrado vaginal abundante y signos de inestabilidad hemodinámica tras el parto.",
       "question": "¿Cuál es la conducta prioritaria?",
       "options": [
-        "Esperar a que el sangrado disminuya de forma espontánea.",
-        "Aplicar manejo activo según protocolo de hemorragia posparto y coordinar referencia urgente.",
-        "Indicar solo reposo sin intervención inmediata."
+        "Aplicar el manejo activo según protocolo de hemorragia posparto y coordinar referencia urgente si no cede.",
+        "Esperar a que el sangrado disminuya de forma espontánea antes de intervenir.",
+        "Indicar solo reposo y observación, sin ninguna intervención activa inmediata.",
+        "Trasladar de inmediato sin aplicar antes ninguna medida de manejo activo en el establecimiento."
       ],
-      "correct": 1,
-      "feedback": "La hemorragia posparto es una emergencia obstétrica que requiere manejo activo inmediato y referencia urgente si no cede."
+      "correct": 0,
+      "feedback": "La hemorragia posparto exige manejo activo inmediato y referencia si no cede; esperar la resolución espontánea, solo observar o trasladar sin aplicar manejo previo retrasan una intervención crítica."
     },
     {
       "id": 58,
@@ -1343,12 +1360,13 @@ window.SERUMS_DATA = {
       "statement": "Paciente presenta dolor dental intenso, aumento de volumen facial y fiebre asociada a una pieza dentaria en mal estado.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Indicar solo analgésico y esperar evolución sin evaluación clínica.",
-        "Evaluar la extensión de la infección, iniciar manejo inicial y referir si hay compromiso sistémico.",
-        "Extraer la pieza de inmediato sin evaluar signos de alarma."
+        "Evaluar la extensión de la infección, iniciar manejo inicial y referir si existe compromiso sistémico.",
+        "Extraer la pieza dentaria de inmediato, sin evaluar previamente signos de alarma.",
+        "Indicar solo analgésico y esperar evolución, sin evaluación clínica adicional.",
+        "Iniciar antibiótico sin ninguna evaluación del compromiso facial o sistémico."
       ],
-      "correct": 1,
-      "feedback": "Ante un absceso dentoalveolar se debe evaluar la extensión de la infección, iniciar manejo inicial y referir si hay compromiso sistémico."
+      "correct": 0,
+      "feedback": "Ante un absceso dentoalveolar se debe evaluar la extensión de la infección, iniciar manejo inicial y referir si hay compromiso sistémico; extraer sin evaluar, solo analgésico o antibiótico sin evaluación no son adecuados."
     },
     {
       "id": 61,
@@ -1389,12 +1407,13 @@ window.SERUMS_DATA = {
       "statement": "Gestante de 20 semanas presenta sangrado gingival frecuente y no ha recibido atención odontológica durante el embarazo.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Indicar que espere hasta después del parto para cualquier atención.",
-        "Evaluar el estado bucal, brindar tratamiento seguro para la gestación y educar en higiene oral.",
-        "Realizar únicamente procedimientos de urgencia sin educación preventiva."
+        "Evaluar el estado bucal, brindar el tratamiento seguro para la etapa gestacional y educar en higiene oral.",
+        "Indicar que espere hasta después del parto para cualquier atención odontológica.",
+        "Realizar únicamente procedimientos de urgencia, sin educación preventiva adicional.",
+        "Postergar cualquier tratamiento hasta el segundo trimestre, sin evaluar el estado actual."
       ],
-      "correct": 1,
-      "feedback": "La atención odontológica segura durante la gestación incluye evaluación, tratamiento oportuno y educación en higiene bucal."
+      "correct": 0,
+      "feedback": "La atención odontológica segura durante la gestación incluye evaluación, tratamiento oportuno y educación en higiene bucal; postergar hasta el parto, limitarse a urgencias o postergar según trimestre sin evaluar no son adecuados."
     },
     {
       "id": 63,
@@ -1434,12 +1453,13 @@ window.SERUMS_DATA = {
       "statement": "Niño de 9 años sufre una caída y presenta avulsión parcial de una pieza dentaria permanente hace 30 minutos.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Indicar que espere varios días antes de recibir atención.",
-        "Realizar manejo inicial de urgencia y referir oportunamente para preservar la pieza dentaria.",
-        "Extraer la pieza de inmediato sin evaluar la posibilidad de conservarla."
+        "Extraer la pieza de inmediato, sin evaluar la posibilidad de conservarla.",
+        "Indicar que espere varios días antes de recibir cualquier atención.",
+        "Reimplantar la pieza sin ningún manejo previo de urgencia ni referencia posterior.",
+        "Realizar el manejo inicial de urgencia y referir oportunamente para intentar preservar la pieza dentaria."
       ],
-      "correct": 1,
-      "feedback": "El traumatismo dentoalveolar reciente requiere manejo inicial de urgencia y referencia oportuna para intentar preservar la pieza."
+      "correct": 3,
+      "feedback": "El traumatismo dentoalveolar reciente requiere manejo inicial de urgencia y referencia oportuna para intentar preservar la pieza; extraer sin evaluar, esperar días o reimplantar sin manejo previo no son adecuados."
     },
     {
       "id": 65,
@@ -1456,12 +1476,13 @@ window.SERUMS_DATA = {
       "statement": "Niño de 3 años presenta talla muy por debajo de lo esperado para su edad, sin signos de enfermedad aguda evidente.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Indicar que la talla baja es solo constitucional y no requiere seguimiento.",
-        "Evaluar el estado nutricional, indagar factores asociados e iniciar plan de recuperación nutricional con seguimiento.",
-        "Solicitar únicamente exámenes de laboratorio sin intervención nutricional."
+        "Evaluar el estado nutricional, indagar los factores asociados e iniciar un plan de recuperación nutricional con seguimiento.",
+        "Indicar que la talla baja es solo constitucional y no requiere ningún seguimiento.",
+        "Solicitar únicamente exámenes de laboratorio, sin intervención nutricional inmediata.",
+        "Iniciar suplementación calórica intensiva, sin evaluar antes los factores asociados."
       ],
-      "correct": 1,
-      "feedback": "Ante sospecha de desnutrición crónica se debe evaluar el estado nutricional, indagar causas asociadas e iniciar un plan de recuperación con seguimiento."
+      "correct": 0,
+      "feedback": "Ante sospecha de desnutrición crónica se debe evaluar el estado nutricional, indagar causas asociadas e iniciar un plan de recuperación con seguimiento; asumir que es constitucional, pedir solo laboratorio o suplementar sin evaluar no son adecuados."
     },
     {
       "id": 66,
@@ -1478,12 +1499,13 @@ window.SERUMS_DATA = {
       "statement": "Niño de 18 meses presenta palidez y hemoglobina baja para su edad en un control de rutina.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Indicar solo alimentos ricos en hierro sin suplementación.",
-        "Iniciar suplementación con hierro según norma, junto con consejería alimentaria y seguimiento.",
-        "Esperar el siguiente control sin ninguna intervención."
+        "Iniciar suplementación con hierro según norma técnica, junto con consejería alimentaria y seguimiento.",
+        "Indicar solo alimentos ricos en hierro, sin suplementación farmacológica.",
+        "Esperar al siguiente control de rutina, sin ninguna intervención inmediata.",
+        "Iniciar suplementación con dosis altas de hierro, sin considerar el esquema normado."
       ],
-      "correct": 1,
-      "feedback": "El manejo de la anemia ferropénica infantil incluye suplementación con hierro según norma técnica, consejería alimentaria y seguimiento."
+      "correct": 0,
+      "feedback": "El manejo de la anemia ferropénica infantil incluye suplementación con hierro según norma, consejería alimentaria y seguimiento; solo alimentos sin suplemento, esperar el siguiente control o dosis altas sin esquema normado no son adecuados."
     },
     {
       "id": 67,
@@ -1500,12 +1522,13 @@ window.SERUMS_DATA = {
       "statement": "Escolar de 10 años presenta un índice de masa corporal muy por encima de lo esperado para su edad, con hábitos alimentarios poco saludables.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Indicar una dieta muy restrictiva sin considerar el contexto familiar.",
-        "Evaluar hábitos alimentarios y actividad física, y trabajar un plan gradual junto con la familia.",
-        "Esperar a que el niño crezca para que se regule por sí solo."
+        "Indicar una dieta muy restrictiva, sin considerar el contexto familiar del escolar.",
+        "Esperar a que el niño crezca para que el peso se regule por sí solo.",
+        "Enfocar el plan únicamente en la actividad física, sin abordar los hábitos alimentarios.",
+        "Evaluar los hábitos alimentarios y de actividad física, y trabajar un plan gradual junto con la familia."
       ],
-      "correct": 1,
-      "feedback": "El abordaje de la obesidad infantil debe considerar los hábitos alimentarios, la actividad física y un plan gradual con participación familiar.",
+      "correct": 3,
+      "feedback": "El abordaje de la obesidad infantil debe considerar hábitos alimentarios, actividad física y un plan gradual con participación familiar; la dieta restrictiva, esperar el crecimiento o enfocarse solo en actividad física no son adecuados.",
       "interdisciplinaryNote": "Psicología puede apoyar si se identifican patrones de alimentación emocional o dinámicas familiares que dificultan el cambio de hábitos."
     },
     {
@@ -1523,12 +1546,13 @@ window.SERUMS_DATA = {
       "statement": "Paciente con diabetes recientemente diagnosticada desconoce cómo adaptar su alimentación habitual al nuevo diagnóstico.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Entregar una lista genérica de alimentos prohibidos sin más orientación.",
         "Evaluar los hábitos alimentarios actuales y brindar consejería personalizada y culturalmente pertinente.",
-        "Indicar que evite comer en exceso sin mayor detalle."
+        "Entregar una lista genérica de alimentos prohibidos, sin más orientación individualizada.",
+        "Indicar una dieta estándar preestablecida, sin considerar los hábitos previos del paciente.",
+        "Recomendar evitar el exceso de dulces, sin abordar el resto del patrón alimentario."
       ],
-      "correct": 1,
-      "feedback": "La consejería nutricional debe partir de los hábitos actuales del paciente y ser personalizada y culturalmente pertinente."
+      "correct": 0,
+      "feedback": "La consejería nutricional debe partir de los hábitos actuales y ser personalizada y culturalmente pertinente; una lista genérica, una dieta estándar o una recomendación parcial no cumplen ese criterio."
     },
     {
       "id": 69,
@@ -1963,12 +1987,13 @@ window.SERUMS_DATA = {
       "statement": "Lactante de 14 meses presenta un episodio convulsivo generalizado de 2 minutos asociado a fiebre alta de inicio súbito.",
       "question": "¿Cuál es la conducta más adecuada tras ceder la convulsión?",
       "options": [
-        "Indicar solo antipirético oral y alta sin evaluación adicional.",
-        "Estabilizar, controlar la fiebre, evaluar signos de alarma neurológica y decidir observación o referencia.",
-        "Administrar anticonvulsivante de mantenimiento de forma inmediata sin evaluación previa."
+        "Estabilizar al lactante, controlar la fiebre, evaluar signos de alarma neurológica y decidir observación o referencia.",
+        "Administrar anticonvulsivante de mantenimiento de forma inmediata, sin evaluación previa.",
+        "Solicitar estudios de imagen cerebral de urgencia como primera medida, antes de estabilizar al paciente.",
+        "Indicar solo antipirético oral y alta, sin ninguna evaluación adicional."
       ],
-      "correct": 1,
-      "feedback": "Tras una convulsión febril se debe estabilizar al paciente, controlar la fiebre, descartar signos de alarma neurológica y decidir observación o referencia según la evolución."
+      "correct": 0,
+      "feedback": "Tras una convulsión febril se debe estabilizar, controlar la fiebre, descartar signos de alarma neurológica y decidir observación o referencia; el alta sin evaluación, el anticonvulsivante de mantenimiento inmediato o la imagen antes de estabilizar no son adecuados."
     },
     {
       "id": 89,
@@ -1985,12 +2010,13 @@ window.SERUMS_DATA = {
       "statement": "Paciente joven presenta dolor abdominal progresivo localizado en fosa iliaca derecha, con signos de irritación peritoneal, en un establecimiento sin capacidad quirúrgica.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Indicar analgésicos y observación domiciliaria por 48 horas.",
         "Estabilizar al paciente y coordinar referencia urgente a un establecimiento con capacidad quirúrgica.",
-        "Esperar a que el dolor ceda espontáneamente antes de decidir."
+        "Indicar analgésicos y observación domiciliaria por 48 horas.",
+        "Iniciar antibiótico empírico ambulatorio como manejo definitivo del cuadro.",
+        "Esperar a que el dolor ceda espontáneamente antes de decidir cualquier acción."
       ],
-      "correct": 1,
-      "feedback": "Ante sospecha de abdomen agudo quirúrgico en un establecimiento sin capacidad resolutiva, corresponde estabilizar y referir con urgencia."
+      "correct": 0,
+      "feedback": "Ante sospecha de abdomen agudo quirúrgico sin capacidad resolutiva local se debe estabilizar y referir con urgencia; la observación domiciliaria, el antibiótico ambulatorio como manejo definitivo o esperar la evolución espontánea retrasan la resolución quirúrgica."
     },
     {
       "id": 90,
@@ -2007,12 +2033,13 @@ window.SERUMS_DATA = {
       "statement": "Minutos después de recibir una vacuna, un paciente presenta dificultad respiratoria, urticaria generalizada e hipotensión.",
       "question": "¿Cuál es la conducta prioritaria?",
       "options": [
-        "Observar la evolución antes de intervenir.",
+        "Indicar solo un antihistamínico oral y continuar la jornada de vacunación.",
         "Aplicar el protocolo de manejo de anafilaxia de forma inmediata y activar la referencia de emergencia.",
-        "Indicar solo un antihistamínico oral y continuar la jornada de vacunación."
+        "Observar la evolución del paciente durante unos minutos antes de intervenir.",
+        "Administrar el tratamiento de emergencia solo si aparecen signos de compromiso respiratorio más severo."
       ],
       "correct": 1,
-      "feedback": "La anafilaxia es una emergencia que requiere manejo protocolizado inmediato y activación de la referencia de emergencia sin demora."
+      "feedback": "La anafilaxia es una emergencia que exige manejo protocolizado inmediato y referencia de emergencia; el antihistamínico oral aislado, observar antes de intervenir o esperar mayor compromiso respiratorio retrasan una intervención que puede ser vital."
     },
     {
       "id": 91,
@@ -2029,12 +2056,13 @@ window.SERUMS_DATA = {
       "statement": "Mujer de 50 años consulta por bochornos frecuentes, irritabilidad y dificultad para dormir asociados al climaterio.",
       "question": "¿Cuál es la conducta más adecuada en este nivel de atención?",
       "options": [
-        "Indicar que son molestias normales que no requieren ninguna evaluación.",
         "Evaluar la intensidad de los síntomas, brindar consejería y coordinar apoyo médico o psicológico según necesidad.",
-        "Derivar de inmediato a psiquiatría sin evaluación previa."
+        "Derivar de inmediato a psiquiatría, sin evaluación previa del cuadro.",
+        "Iniciar terapia hormonal de forma inmediata, sin evaluar antes la intensidad ni el contexto de los síntomas.",
+        "Indicar que son molestias normales que no requieren ninguna evaluación."
       ],
-      "correct": 1,
-      "feedback": "El climaterio puede afectar el bienestar físico y emocional; corresponde evaluar la intensidad de los síntomas y coordinar el apoyo necesario, médico o psicológico.",
+      "correct": 0,
+      "feedback": "El climaterio puede afectar el bienestar físico y emocional; corresponde evaluar la intensidad de los síntomas y coordinar el apoyo necesario, médico o psicológico, sin normalizar sin evaluar, derivar de inmediato a psiquiatría o iniciar hormonas sin evaluación previa.",
       "interdisciplinaryNote": "Psicología puede apoyar cuando los cambios de ánimo asociados al climaterio afectan de forma significativa el funcionamiento diario."
     },
     {
@@ -2074,12 +2102,13 @@ window.SERUMS_DATA = {
       "statement": "Durante una visita domiciliaria se identifica una lesión ulcerada en el pie de un paciente diabético, con signos de mala perfusión.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Realizar curación local y no dar seguimiento posterior.",
         "Evaluar la lesión, iniciar curación según protocolo y coordinar referencia si hay signos de compromiso vascular o infeccioso.",
-        "Indicar reposo absoluto sin evaluar la lesión."
+        "Realizar curación local, sin dar ningún seguimiento posterior a la evolución de la lesión.",
+        "Indicar reposo absoluto, sin evaluar la lesión de forma directa.",
+        "Iniciar antibiótico oral de forma empírica, sin evaluar el compromiso vascular de la lesión."
       ],
-      "correct": 1,
-      "feedback": "El pie diabético con signos de mala perfusión requiere evaluación cuidadosa, curación protocolizada y referencia oportuna para prevenir complicaciones mayores."
+      "correct": 0,
+      "feedback": "El pie diabético con signos de mala perfusión requiere evaluación cuidadosa, curación protocolizada y referencia oportuna; la curación sin seguimiento, el reposo sin evaluar o el antibiótico empírico sin evaluar el compromiso vascular no son adecuados."
     },
     {
       "id": 94,
@@ -2096,12 +2125,13 @@ window.SERUMS_DATA = {
       "statement": "Gestante de 30 semanas refiere pérdida súbita de líquido claro por vía vaginal, sin contracciones aún.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Indicar reposo domiciliario y control en una semana.",
         "Confirmar el diagnóstico, evaluar signos de infección y coordinar referencia urgente según protocolo.",
-        "Esperar el inicio espontáneo del trabajo de parto sin más evaluación."
+        "Indicar reposo domiciliario y control en una semana.",
+        "Esperar el inicio espontáneo del trabajo de parto, sin más evaluación.",
+        "Iniciar antibiótico profiláctico ambulatorio, sin confirmar antes el diagnóstico de ruptura de membranas."
       ],
-      "correct": 1,
-      "feedback": "Ante sospecha de ruptura prematura de membranas se debe confirmar el diagnóstico, evaluar signos de infección y referir con urgencia según protocolo."
+      "correct": 0,
+      "feedback": "Ante sospecha de ruptura prematura de membranas se debe confirmar el diagnóstico, evaluar signos de infección y referir con urgencia según protocolo; el reposo domiciliario, esperar el trabajo de parto espontáneo o el antibiótico sin confirmación diagnóstica no son adecuados."
     },
     {
       "id": 95,
