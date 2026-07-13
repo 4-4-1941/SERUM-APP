@@ -357,7 +357,11 @@ function renderCases() {
     }).join("") || `<p style="color:#5B6E6A">No hay casos con este filtro.</p>`;
 
     list.querySelectorAll(".case-card").forEach(btn => {
-      btn.addEventListener("click", () => openCase(Number(btn.dataset.id)));
+      btn.addEventListener("click", () => {
+        openCase(Number(btn.dataset.id));
+        const panel = document.getElementById("case-panel");
+        if (panel) setTimeout(() => panel.scrollIntoView({ behavior: "smooth", block: "start" }), 60);
+      });
     });
   }
 
