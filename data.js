@@ -610,12 +610,13 @@ window.SERUMS_DATA = {
       "statement": "Paciente refiere dificultad para conciliar el sueño desde hace tres meses, asociada a preocupación excesiva por su situación laboral.",
       "question": "¿Qué abordaje inicial es el más adecuado?",
       "options": [
-        "Indicar automedicación con cualquier sedante disponible.",
+        "Indicar automedicación con cualquier sedante disponible, sin evaluar la ansiedad de base.",
+        "Decir que el insomnio se resolverá espontáneamente, sin necesidad de intervención.",
         "Evaluar la ansiedad de base, orientar en higiene del sueño y considerar intervención psicológica.",
-        "Decir que el insomnio se resolverá solo con el tiempo."
+        "Prescribir un hipnótico de uso prolongado como primera línea de manejo."
       ],
-      "correct": 1,
-      "feedback": "El manejo inicial debe abordar la ansiedad de base, la higiene del sueño y valorar intervención psicológica específica."
+      "correct": 2,
+      "feedback": "El manejo inicial debe abordar la ansiedad de base, orientar en higiene del sueño y considerar intervención psicológica; automedicar, esperar sin intervenir o iniciar un hipnótico prolongado como primera línea no son adecuados."
     },
     {
       "id": 28,
@@ -655,11 +656,12 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta prioritaria?",
       "options": [
         "Indicar reposo domiciliario y control en un mes.",
-        "Considerar urgencia psiquiátrica, garantizar seguridad del binomio madre-hijo y derivar de inmediato.",
-        "Recomendar únicamente apoyo familiar sin evaluación clínica."
+        "Recomendar únicamente apoyo familiar, sin evaluación clínica.",
+        "Iniciar manejo ambulatorio de baja frecuencia, sin evaluar el riesgo para el recién nacido.",
+        "Considerar urgencia psiquiátrica, garantizar la seguridad del binomio madre-hijo y derivar de inmediato."
       ],
-      "correct": 1,
-      "feedback": "La psicosis puerperal es una urgencia que exige garantizar la seguridad del binomio madre-hijo y derivación inmediata.",
+      "correct": 3,
+      "feedback": "La psicosis puerperal es una urgencia que exige garantizar la seguridad del binomio madre-hijo y derivación inmediata; el reposo domiciliario, el apoyo familiar sin evaluación clínica o el manejo ambulatorio de baja frecuencia subestiman el riesgo.",
       "interdisciplinaryNote": "Obstetricia debe mantener vigilancia del puerperio mientras se coordina la atención en salud mental."
     },
     {
@@ -745,12 +747,13 @@ window.SERUMS_DATA = {
       "statement": "Adulto mayor de 78 años presenta pérdida progresiva de memoria en los últimos meses, sin alteración aguda de la conciencia.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Asumir que es normal por la edad y no evaluar más.",
         "Evaluar el cuadro cognitivo, descartar causas reversibles y coordinar valoración interdisciplinaria.",
-        "Indicar tratamiento sedante sin evaluación previa."
+        "Asumir que es normal por la edad y no evaluar más.",
+        "Indicar tratamiento sedante, sin evaluación previa.",
+        "Iniciar manejo farmacológico específico para demencia, sin haber descartado causas reversibles."
       ],
-      "correct": 1,
-      "feedback": "El deterioro cognitivo progresivo requiere evaluación estructurada, descarte de causas reversibles y valoración interdisciplinaria.",
+      "correct": 0,
+      "feedback": "El deterioro cognitivo progresivo requiere evaluación estructurada, descarte de causas reversibles y valoración interdisciplinaria; asumir que es normal por la edad, sedar sin evaluar o iniciar fármacos específicos sin descartar causas reversibles no son adecuados.",
       "interdisciplinaryNote": "Medicina debe descartar causas metabólicas, farmacológicas o vasculares antes de asumir un cuadro demencial primario."
     },
     {
@@ -2170,12 +2173,13 @@ window.SERUMS_DATA = {
       "statement": "En una ecografía de rutina se detecta un hallazgo compatible con una posible malformación fetal en una gestante de 22 semanas.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Informar el hallazgo de forma clara, brindar contención emocional y coordinar referencia especializada oportuna.",
         "No informar el hallazgo hasta confirmar con certeza absoluta.",
-        "Derivar sin brindar ninguna explicación a la gestante."
+        "Informar el hallazgo de forma clara, brindar contención emocional y coordinar referencia especializada oportuna.",
+        "Derivar sin brindar ninguna explicación a la gestante.",
+        "Repetir la ecografía varias veces antes de comunicar cualquier hallazgo a la gestante."
       ],
-      "correct": 0,
-      "feedback": "Ante un hallazgo ecográfico anómalo se debe informar con claridad y sensibilidad, brindar contención emocional y coordinar la referencia especializada oportuna.",
+      "correct": 1,
+      "feedback": "Ante un hallazgo ecográfico anómalo se debe informar con claridad y sensibilidad, brindar contención y coordinar la referencia oportuna; ocultar el hallazgo, derivar sin explicación o repetir el estudio sin comunicar nada no son adecuados.",
       "interdisciplinaryNote": "Psicología puede brindar contención emocional a la gestante y su pareja ante la incertidumbre de un diagnóstico prenatal."
     },
     {
@@ -2194,11 +2198,12 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
         "Indicar reposo y control en una semana.",
+        "Esperar la resolución espontánea de los síntomas.",
         "Evaluar signos de infección puerperal, iniciar manejo inicial y referir si el cuadro lo amerita.",
-        "Esperar la resolución espontánea de los síntomas."
+        "Iniciar antibiótico oral ambulatorio, sin evaluar la gravedad del cuadro."
       ],
-      "correct": 1,
-      "feedback": "Ante sospecha de infección puerperal se debe evaluar la gravedad del cuadro, iniciar manejo inicial y referir oportunamente si corresponde."
+      "correct": 2,
+      "feedback": "Ante sospecha de infección puerperal se debe evaluar la gravedad, iniciar manejo inicial y referir oportunamente; el reposo sin evaluar, esperar resolución espontánea o iniciar antibiótico sin evaluar gravedad no son adecuados."
     },
     {
       "id": 98,
@@ -2216,11 +2221,12 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
         "Indicar que la maloclusión se corregirá espontáneamente con el crecimiento.",
-        "Evaluar el caso y derivar oportunamente a especialidad de ortodoncia si corresponde.",
-        "Extraer las piezas afectadas de inmediato sin evaluación especializada."
+        "Extraer las piezas afectadas de inmediato, sin evaluación especializada.",
+        "Recomendar el uso de un aparato de ortodoncia genérico, sin evaluación previa.",
+        "Evaluar el caso y derivar oportunamente a especialidad de ortodoncia si corresponde."
       ],
-      "correct": 1,
-      "feedback": "Ante una maloclusión significativa corresponde evaluar el caso y derivar oportunamente a ortodoncia para un manejo especializado."
+      "correct": 3,
+      "feedback": "Ante una maloclusión significativa corresponde evaluar y derivar oportunamente a ortodoncia; esperar corrección espontánea, extraer sin evaluación o recomendar un aparato genérico sin evaluación previa no son adecuados."
     },
     {
       "id": 99,
@@ -2239,10 +2245,11 @@ window.SERUMS_DATA = {
       "options": [
         "Tratar la gingivitis sin considerar el control glicémico del paciente.",
         "Evaluar el estado bucal, tratar la gingivitis y coordinar con el equipo médico el manejo integral de la diabetes.",
-        "Indicar que la gingivitis no está relacionada con la diabetes."
+        "Indicar que la gingivitis no está relacionada con la diabetes.",
+        "Postergar el tratamiento dental hasta que el paciente logre un control glicémico óptimo."
       ],
       "correct": 1,
-      "feedback": "La diabetes y la enfermedad periodontal se influyen mutuamente, por lo que se debe tratar la gingivitis y coordinar el manejo integral con el equipo médico.",
+      "feedback": "La diabetes y la enfermedad periodontal se influyen mutuamente; se debe tratar la gingivitis y coordinar el manejo integral con el equipo médico, sin ignorar el control glicémico ni negar la relación entre ambas condiciones.",
       "interdisciplinaryNote": "Un control glicémico inadecuado puede empeorar la salud bucal, por lo que la coordinación con Medicina es clave."
     },
     {
@@ -2260,12 +2267,13 @@ window.SERUMS_DATA = {
       "statement": "Paciente adulto presenta desgaste dental progresivo y dolor mandibular al despertar, y refiere una etapa de alta carga laboral.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Tratar únicamente el desgaste dental sin explorar el origen del bruxismo.",
+        "Tratar únicamente el desgaste dental, sin explorar el origen del bruxismo.",
+        "Indicar que el bruxismo no requiere ninguna intervención.",
         "Evaluar el desgaste dental, indicar manejo odontológico y coordinar abordaje del estrés asociado.",
-        "Indicar que el bruxismo no requiere ninguna intervención."
+        "Recomendar el uso permanente de un protector nocturno, sin evaluar el componente de estrés."
       ],
-      "correct": 1,
-      "feedback": "El manejo del bruxismo debe abordar tanto el componente dental como el estrés que frecuentemente lo desencadena o mantiene.",
+      "correct": 2,
+      "feedback": "El manejo del bruxismo debe abordar tanto el componente dental como el estrés que lo desencadena; tratar solo el desgaste, ignorar el cuadro o indicar un protector sin abordar el estrés no son suficientes.",
       "interdisciplinaryNote": "Psicología puede apoyar con técnicas de manejo del estrés cuando este mantiene el bruxismo."
     },
     {
@@ -2305,12 +2313,13 @@ window.SERUMS_DATA = {
       "statement": "Gestante de 24 semanas presenta ganancia de peso mayor a la esperada para su edad gestacional.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Indicar una dieta muy restrictiva sin considerar los riesgos de la gestación.",
-        "Evaluar el patrón alimentario, brindar consejería nutricional adecuada al embarazo y coordinar seguimiento con obstetricia.",
-        "No intervenir porque el aumento de peso es siempre normal en el embarazo."
+        "Indicar una dieta muy restrictiva, sin considerar los riesgos de la gestación.",
+        "No intervenir porque el aumento de peso es siempre normal en el embarazo.",
+        "Indicar solo actividad física intensa, sin evaluar el patrón alimentario.",
+        "Evaluar el patrón alimentario, brindar consejería nutricional adecuada al embarazo y coordinar seguimiento con obstetricia."
       ],
-      "correct": 1,
-      "feedback": "El sobrepeso en la gestación requiere consejería nutricional apropiada para el embarazo, sin restricciones extremas, y seguimiento coordinado con obstetricia."
+      "correct": 3,
+      "feedback": "El sobrepeso en la gestación requiere consejería nutricional apropiada y seguimiento coordinado con obstetricia; la dieta restrictiva, no intervenir o solo indicar actividad física intensa no son adecuados."
     },
     {
       "id": 103,
@@ -2351,10 +2360,11 @@ window.SERUMS_DATA = {
       "options": [
         "Indicar que la pérdida muscular es inevitable en la vejez y no requiere intervención.",
         "Evaluar el estado nutricional, brindar consejería alimentaria adecuada y promover actividad física acorde a su condición.",
-        "Aumentar drásticamente las calorías sin evaluar la composición de la dieta."
+        "Aumentar drásticamente las calorías, sin evaluar la composición de la dieta.",
+        "Recomendar reposo para evitar mayor pérdida de masa muscular."
       ],
       "correct": 1,
-      "feedback": "El manejo de la sarcopenia en el adulto mayor requiere evaluación nutricional, consejería alimentaria adecuada y promoción de actividad física apropiada."
+      "feedback": "El manejo de la sarcopenia requiere evaluación nutricional, consejería adecuada y actividad física apropiada; asumirla como inevitable, aumentar calorías sin evaluar la dieta o solo indicar reposo no son adecuados."
     },
     {
       "id": 105,
@@ -2460,11 +2470,12 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
         "Indicar que continúe el tratamiento sin ninguna evaluación adicional.",
+        "Suspender el tratamiento de forma definitiva, sin evaluación clínica.",
         "Evaluar función hepática, suspender temporalmente si corresponde y referir según protocolo de reacciones adversas.",
-        "Suspender el tratamiento de forma definitiva sin evaluación clínica."
+        "Cambiar de inmediato a un esquema alternativo, sin evaluar previamente la función hepática."
       ],
-      "correct": 1,
-      "feedback": "Ante signos de posible hepatotoxicidad por fármacos antituberculosos se debe evaluar la función hepática, decidir suspensión temporal si corresponde y proceder según el protocolo de reacciones adversas."
+      "correct": 2,
+      "feedback": "Ante posible hepatotoxicidad por fármacos antituberculosos se debe evaluar la función hepática, decidir suspensión temporal si corresponde y proceder según protocolo; continuar sin evaluar, suspender definitivamente sin evaluación o cambiar de esquema sin evaluar la función hepática no son adecuados."
     },
     {
       "id": 110,
@@ -2481,12 +2492,13 @@ window.SERUMS_DATA = {
       "statement": "Un usuario acude a solicitar la prueba de VIH y muestra ansiedad marcada ante la posibilidad de un resultado positivo.",
       "question": "¿Cuál es la conducta más adecuada antes de la toma de la prueba?",
       "options": [
-        "Realizar la prueba de inmediato sin conversar previamente con el usuario.",
+        "Realizar la prueba de inmediato, sin conversar previamente con el usuario.",
         "Brindar consejería pre-test que aborde dudas, expectativas y el manejo confidencial del resultado.",
-        "Posponer la prueba hasta que el usuario deje de sentir ansiedad."
+        "Posponer la prueba hasta que el usuario deje de sentir ansiedad.",
+        "Solicitar la autorización de un familiar antes de realizar la prueba."
       ],
       "correct": 1,
-      "feedback": "La consejería pre-test debe abordar dudas, expectativas emocionales y la confidencialidad del proceso antes de la toma de la prueba de VIH."
+      "feedback": "La consejería pre-test debe abordar dudas, expectativas emocionales y confidencialidad antes de la prueba; realizarla sin conversar, posponerla indefinidamente por la ansiedad o exigir autorización de terceros no son adecuados."
     },
     {
       "id": 111,
@@ -2503,12 +2515,13 @@ window.SERUMS_DATA = {
       "statement": "Un profesional de enfermería sufre un pinchazo accidental con una aguja usada durante la atención de un paciente.",
       "question": "¿Cuál es la conducta prioritaria inmediata?",
       "options": [
-        "Continuar la atención y reportar el incidente al final del turno.",
         "Realizar el lavado de la zona expuesta y activar de inmediato el protocolo de profilaxis post-exposición.",
-        "Esperar los resultados de laboratorio del paciente antes de tomar cualquier medida."
+        "Continuar la atención y reportar el incidente al final del turno.",
+        "Esperar los resultados de laboratorio del paciente antes de tomar cualquier medida.",
+        "Aplicar únicamente un antiséptico local, sin activar ningún protocolo adicional."
       ],
-      "correct": 1,
-      "feedback": "Ante una exposición ocupacional a fluidos biológicos se debe lavar la zona afectada y activar de inmediato el protocolo de profilaxis post-exposición, dado que su eficacia depende de la rapidez de inicio."
+      "correct": 0,
+      "feedback": "Ante una exposición ocupacional se debe lavar la zona afectada y activar de inmediato la profilaxis post-exposición, dado que su eficacia depende de la rapidez; continuar sin actuar, esperar resultados o usar solo antiséptico no son adecuados."
     },
     {
       "id": 112,
@@ -2526,11 +2539,12 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
         "Indicar que espere al siguiente ciclo menstrual para reevaluar.",
-        "Realizar examen clínico y coordinar estudio de imagen y referencia oportuna para descarte de malignidad.",
-        "Tranquilizar a la paciente sin realizar ninguna evaluación adicional."
+        "Tranquilizar a la paciente, sin realizar ninguna evaluación adicional.",
+        "Solicitar solo una ecografía mamaria de control en un año.",
+        "Realizar examen clínico y coordinar estudio de imagen y referencia oportuna para descarte de malignidad."
       ],
-      "correct": 1,
-      "feedback": "Ante una tumoración mamaria nueva y no dolorosa se debe realizar examen clínico, solicitar estudio de imagen y referir oportunamente para descartar malignidad."
+      "correct": 3,
+      "feedback": "Ante una tumoración mamaria nueva se debe examinar clínicamente, solicitar imagen y referir oportunamente; esperar el ciclo, tranquilizar sin evaluar o solo pedir control anual no descartan malignidad de forma oportuna."
     },
     {
       "id": 113,
@@ -2549,10 +2563,11 @@ window.SERUMS_DATA = {
       "options": [
         "Confrontar directamente al paciente para que acepte el diagnóstico de inmediato.",
         "Respetar su ritmo de afrontamiento, explorar sus temores y facilitar gradualmente la comunicación con la familia.",
-        "Evitar el tema hasta que el paciente lo mencione espontáneamente, sin ninguna intervención."
+        "Evitar el tema hasta que el paciente lo mencione espontáneamente, sin ninguna intervención.",
+        "Informar directamente a la familia, sin involucrar al paciente en la conversación."
       ],
       "correct": 1,
-      "feedback": "El acompañamiento psicológico debe respetar el ritmo de afrontamiento del paciente, explorando sus temores y facilitando gradualmente la comunicación familiar, sin forzar ni evitar por completo el tema."
+      "feedback": "El acompañamiento debe respetar el ritmo de afrontamiento, explorando temores y facilitando gradualmente la comunicación familiar; confrontar, evitar el tema por completo o informar solo a la familia sin incluir al paciente no son adecuados."
     },
     {
       "id": 114,
@@ -2592,11 +2607,12 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
         "Indicar que la disminución visual es un cambio normal por la edad.",
+        "Ajustar solo el tratamiento de la diabetes, sin evaluar la visión.",
         "Derivar para evaluación oftalmológica que incluya fondo de ojo, dado el riesgo de retinopatía diabética.",
-        "Ajustar solo el tratamiento de la diabetes sin evaluar la visión."
+        "Indicar el uso de lentes correctivos, sin evaluación oftalmológica especializada."
       ],
-      "correct": 1,
-      "feedback": "Todo paciente diabético con cambios visuales debe ser derivado para evaluación oftalmológica con fondo de ojo, por el riesgo de retinopatía diabética."
+      "correct": 2,
+      "feedback": "Todo paciente diabético con cambios visuales debe derivarse para evaluación oftalmológica con fondo de ojo; atribuirlo a la edad, ajustar solo el tratamiento de base o indicar lentes sin evaluación especializada no son adecuados."
     },
     {
       "id": 116,
@@ -2767,12 +2783,13 @@ window.SERUMS_DATA = {
       "statement": "Una usuaria acude dentro de las 48 horas tras una relación sexual sin protección, solicitando anticoncepción oral de emergencia.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Negar el método por consideraciones personales del profesional.",
         "Brindar consejería y proporcionar el método de forma oportuna, dado que su eficacia depende de la rapidez de administración.",
-        "Indicar que regrese en una semana para evaluar la necesidad del método."
+        "Negar el método por consideraciones personales del profesional.",
+        "Indicar que regrese en una semana para evaluar la necesidad del método.",
+        "Solicitar autorización de la pareja antes de proporcionar el método."
       ],
-      "correct": 1,
-      "feedback": "La anticoncepción oral de emergencia debe brindarse de forma oportuna tras la consejería correspondiente, ya que su eficacia depende directamente de la rapidez de administración."
+      "correct": 0,
+      "feedback": "La anticoncepción oral de emergencia debe brindarse de forma oportuna, dado que su eficacia depende de la rapidez de administración; negarla, postergarla o condicionarla a la autorización de la pareja no son adecuados."
     },
     {
       "id": 124,
@@ -2790,11 +2807,12 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
         "Minimizar sus dudas indicando que es muy joven para preocuparse por el tema.",
-        "Brindar consejería confidencial, sin juicio, con información clara adaptada a su edad.",
-        "Exigir la presencia de un adulto responsable antes de responder cualquier duda."
+        "Exigir la presencia de un adulto responsable antes de responder cualquier duda.",
+        "Derivar de inmediato a un especialista, sin brindar ninguna orientación inicial.",
+        "Brindar consejería confidencial, sin juicio, con información clara adaptada a su edad."
       ],
-      "correct": 1,
-      "feedback": "La consejería en salud sexual y reproductiva a adolescentes debe ser confidencial, libre de juicio y con información clara y adecuada a su edad, respetando su autonomía progresiva."
+      "correct": 3,
+      "feedback": "La consejería en salud sexual a adolescentes debe ser confidencial, sin juicio y adaptada a su edad; minimizar sus dudas, exigir un adulto presente o derivar sin orientación inicial no son adecuados."
     },
     {
       "id": 125,
@@ -3517,10 +3535,11 @@ window.SERUMS_DATA = {
       "options": [
         "Atender únicamente la demanda espontánea de cada grupo etario, sin paquetes de atención diferenciados.",
         "Aplicar el modelo de cuidado integral por curso de vida, con paquetes de atención específicos y articulados desde el prenatal hasta la vejez.",
-        "Concentrar todos los recursos en la atención del adulto mayor, dado que es la etapa de mayor riesgo."
+        "Concentrar todos los recursos en la atención del adulto mayor, dado que es la etapa de mayor riesgo.",
+        "Priorizar exclusivamente la atención curativa por encima de la preventiva en cada etapa."
       ],
       "correct": 1,
-      "feedback": "El modelo de cuidado integral por curso de vida requiere paquetes de atención específicos y articulados para cada etapa, desde el prenatal hasta la vejez, y no solo la atención de la demanda espontánea."
+      "feedback": "El modelo de cuidado integral por curso de vida requiere paquetes de atención articulados desde el prenatal hasta la vejez; atender solo la demanda espontánea, concentrar recursos en un solo grupo etario o priorizar solo lo curativo no cumplen ese enfoque."
     },
     {
       "id": 158,
@@ -3538,11 +3557,12 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta más adecuada del profesional de farmacia?",
       "options": [
         "Dispensar el medicamento tal como está prescrito, sin ninguna verificación adicional.",
+        "Reducir la dosis por cuenta propia, sin consultar al prescriptor.",
         "Verificar la prescripción con el profesional tratante antes de dispensar, dado el riesgo asociado a la dosis inusual.",
-        "Reducir la dosis por cuenta propia sin consultar al prescriptor."
+        "Dispensar solo la mitad de la cantidad prescrita como medida de precaución, sin consultar al prescriptor."
       ],
-      "correct": 1,
-      "feedback": "Ante una prescripción de un medicamento de alto riesgo con dosis inusual, corresponde verificar con el profesional tratante antes de dispensar, priorizando la seguridad del paciente."
+      "correct": 2,
+      "feedback": "Ante una dosis inusual de un medicamento de alto riesgo se debe verificar con el prescriptor antes de dispensar; dispensar sin verificar, reducir la dosis por cuenta propia o entregar solo la mitad sin consultar no son adecuados."
     },
     {
       "id": 159,
@@ -3647,12 +3667,13 @@ window.SERUMS_DATA = {
       "statement": "Una usuaria que reportó violencia familiar no acude a su cita de seguimiento programada tras la denuncia.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Cerrar el caso por inasistencia sin ninguna acción adicional.",
+        "Cerrar el caso por inasistencia, sin ninguna acción adicional.",
         "Realizar una visita social de seguimiento, evaluando su situación de seguridad actual y la necesidad de apoyo adicional.",
-        "Esperar a que la usuaria reprograme la cita por su cuenta."
+        "Esperar a que la usuaria reprograme la cita por su cuenta.",
+        "Notificar solo a la policía, sin realizar una evaluación social directa."
       ],
       "correct": 1,
-      "feedback": "Ante la inasistencia de una usuaria en riesgo por violencia familiar, corresponde realizar una visita social de seguimiento que evalúe su situación de seguridad actual.",
+      "feedback": "Ante la inasistencia de una usuaria en riesgo se debe realizar una visita social de seguimiento que evalúe su seguridad actual; cerrar el caso, esperar que reprograme o notificar solo a la policía sin evaluación social no son adecuados.",
       "interdisciplinaryNote": "Psicología debe coordinar con trabajo social el seguimiento conjunto del riesgo y el acompañamiento emocional de la usuaria."
     },
     {
@@ -3714,12 +3735,13 @@ window.SERUMS_DATA = {
       "statement": "Una paciente que desconoce su estado de gestación es programada para un estudio radiológico de abdomen.",
       "question": "¿Cuál es la conducta más adecuada antes de realizar el estudio?",
       "options": [
-        "Realizar el estudio de inmediato sin preguntar sobre la posibilidad de embarazo.",
         "Preguntar sobre la posibilidad de gestación antes del estudio y evaluar alternativas o medidas de protección si corresponde.",
-        "Suspender todos los estudios radiológicos a cualquier mujer en edad fértil sin excepción."
+        "Realizar el estudio de inmediato, sin preguntar sobre la posibilidad de embarazo.",
+        "Suspender todos los estudios radiológicos a cualquier mujer en edad fértil, sin excepción.",
+        "Realizar el estudio con protección abdominal estándar, sin indagar sobre la gestación."
       ],
-      "correct": 1,
-      "feedback": "Antes de un estudio radiológico se debe indagar la posibilidad de gestación y evaluar alternativas o medidas de protección adecuadas, dado el riesgo de exposición a radiación en el embarazo."
+      "correct": 0,
+      "feedback": "Antes de un estudio radiológico se debe indagar la posibilidad de gestación y evaluar alternativas o protección adecuada; realizarlo sin preguntar, suspender todo estudio sin excepción o aplicar solo protección estándar sin indagar no son adecuados."
     },
     {
       "id": 167,
@@ -3737,11 +3759,12 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
         "Indicar reposo absoluto para evitar mayor daño.",
-        "Evaluar el estado funcional y diseñar un plan de rehabilitación progresivo adaptado a sus secuelas.",
-        "Derivar directamente a un hospital sin iniciar ninguna intervención en el primer nivel."
+        "Derivar directamente a un hospital, sin iniciar ninguna intervención en el primer nivel.",
+        "Indicar que retome sus actividades previas de forma inmediata, sin evaluación funcional.",
+        "Evaluar el estado funcional y diseñar un plan de rehabilitación progresivo adaptado a sus secuelas."
       ],
-      "correct": 1,
-      "feedback": "Tras un accidente cerebrovascular corresponde evaluar el estado funcional y diseñar un plan de rehabilitación progresivo, iniciando la intervención oportunamente en el nivel de atención correspondiente."
+      "correct": 3,
+      "feedback": "Tras un ACV corresponde evaluar el estado funcional y diseñar un plan de rehabilitación progresivo; el reposo absoluto, derivar sin iniciar nada en el primer nivel o exigir actividad inmediata sin evaluación no son adecuados."
     },
     {
       "id": 168,
@@ -3782,10 +3805,11 @@ window.SERUMS_DATA = {
       "options": [
         "Indicar que es normal y que el niño hablará cuando esté listo, sin más evaluación.",
         "Aplicar un tamizaje del desarrollo del lenguaje y derivar a terapia del lenguaje si corresponde.",
-        "Esperar hasta que el niño ingrese al colegio para evaluar el lenguaje."
+        "Esperar hasta que el niño ingrese al colegio para evaluar el lenguaje.",
+        "Recomendar que la familia hable menos con el niño para estimular su propio lenguaje."
       ],
       "correct": 1,
-      "feedback": "Ante un posible retraso del lenguaje se debe aplicar un tamizaje del desarrollo comunicativo y derivar oportunamente a terapia del lenguaje, dado que la intervención temprana mejora el pronóstico."
+      "feedback": "Ante un posible retraso del lenguaje se debe aplicar tamizaje y derivar oportunamente; asumir que hablará cuando esté listo, esperar al colegio o recomendar hablarle menos no son adecuados."
     },
     {
       "id": 170,
@@ -3803,11 +3827,12 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
         "Indicar que espere la recuperación completa antes de retomar cualquier actividad.",
+        "Recomendar cambiar de ocupación de forma inmediata, sin evaluación previa.",
         "Evaluar sus actividades cotidianas y laborales, y diseñar estrategias de adaptación funcional durante su recuperación.",
-        "Recomendar cambiar de ocupación de forma inmediata sin evaluación previa."
+        "Indicar reposo absoluto de la mano afectada hasta la recuperación total."
       ],
-      "correct": 1,
-      "feedback": "La terapia ocupacional busca evaluar las actividades significativas de la persona y diseñar estrategias de adaptación funcional que favorezcan su independencia durante la recuperación."
+      "correct": 2,
+      "feedback": "La terapia ocupacional debe evaluar actividades significativas y diseñar adaptaciones funcionales durante la recuperación; esperar recuperación completa, cambiar de ocupación de inmediato o indicar reposo absoluto no son adecuados."
     },
     {
       "id": 171,
@@ -3826,10 +3851,11 @@ window.SERUMS_DATA = {
       "options": [
         "Indicar que es normal en la primera infancia y que se corregirá solo con el tiempo.",
         "Evaluar la alineación ocular y derivar oportunamente, dado que el estrabismo no tratado puede afectar el desarrollo visual.",
-        "Esperar a que el niño sea mayor para realizar cualquier evaluación."
+        "Esperar a que el niño sea mayor para realizar cualquier evaluación.",
+        "Recomendar ejercicios oculares en casa, sin evaluación especializada previa."
       ],
       "correct": 1,
-      "feedback": "El estrabismo en la infancia debe evaluarse y derivarse oportunamente, ya que si no se trata a tiempo puede generar una pérdida permanente de la visión en el ojo afectado."
+      "feedback": "El estrabismo en la infancia debe evaluarse y derivarse oportunamente por su riesgo sobre el desarrollo visual; asumir que se corrige solo, esperar a que sea mayor o indicar ejercicios sin evaluación no son adecuados."
     },
     {
       "id": 172,
@@ -3956,12 +3982,13 @@ window.SERUMS_DATA = {
       "statement": "Un adulto mayor recibe seis medicamentos distintos prescritos por diferentes profesionales, sin que exista una revisión conjunta de su tratamiento.",
       "question": "¿Cuál es la conducta más adecuada del profesional de farmacia?",
       "options": [
-        "Dispensar cada medicamento por separado sin revisar posibles interacciones.",
-        "Realizar una conciliación de medicamentos que identifique interacciones y duplicidades, coordinando con los prescriptores si es necesario.",
-        "Suspender por cuenta propia los medicamentos que considere innecesarios."
+        "Dispensar cada medicamento por separado, sin revisar posibles interacciones.",
+        "Suspender por cuenta propia los medicamentos que considere innecesarios.",
+        "Indicar a la familia que reduzca el número de medicamentos, sin consultar a los prescriptores.",
+        "Realizar una conciliación de medicamentos que identifique interacciones y duplicidades, coordinando con los prescriptores si es necesario."
       ],
-      "correct": 1,
-      "feedback": "En pacientes polimedicados corresponde realizar una conciliación de medicamentos que identifique interacciones y duplicidades, coordinando los ajustes necesarios con los profesionales prescriptores."
+      "correct": 3,
+      "feedback": "En pacientes polimedicados corresponde una conciliación de medicamentos que identifique interacciones y coordine ajustes con los prescriptores; dispensar por separado, suspender por cuenta propia o pedir a la familia reducir medicamentos sin consultar no son adecuados."
     },
     {
       "id": 178,
@@ -3980,10 +4007,11 @@ window.SERUMS_DATA = {
       "options": [
         "Esperar a que la adolescente acuda por su cuenta al establecimiento.",
         "Realizar una visita social para evaluar el contexto familiar y educativo, y coordinar el retorno a controles y apoyo interdisciplinario.",
-        "Notificar únicamente a la escuela sin evaluar la situación de salud."
+        "Notificar únicamente a la escuela, sin evaluar la situación de salud.",
+        "Derivar el caso a la fiscalía, sin una evaluación social previa."
       ],
       "correct": 1,
-      "feedback": "Ante el abandono de controles y de la escolaridad en una gestante adolescente, corresponde realizar una visita social que evalúe el contexto y coordine el apoyo interdisciplinario necesario."
+      "feedback": "Ante el abandono de controles y escolaridad en una gestante adolescente corresponde una visita social que evalúe el contexto y coordine apoyo interdisciplinario; esperar que acuda sola, notificar solo a la escuela o derivar a fiscalía sin evaluación no son adecuados."
     },
     {
       "id": 179,
@@ -4023,11 +4051,12 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta correcta del profesional de laboratorio?",
       "options": [
         "Registrar el resultado en el sistema y esperar a que el médico lo revise en su próxima ronda.",
-        "Comunicar el valor crítico de forma inmediata y directa al personal clínico responsable del paciente.",
-        "Repetir la prueba varias veces antes de informar cualquier resultado."
+        "Repetir la prueba varias veces antes de informar cualquier resultado.",
+        "Enviar el resultado por el sistema de mensajería habitual del establecimiento, sin contacto directo.",
+        "Comunicar el valor crítico de forma inmediata y directa al personal clínico responsable del paciente."
       ],
-      "correct": 1,
-      "feedback": "Ante un valor crítico de laboratorio se debe comunicar de forma inmediata y directa al personal clínico, dado el riesgo vital que puede representar la demora."
+      "correct": 3,
+      "feedback": "Ante un valor crítico de laboratorio se debe comunicar de forma inmediata y directa al personal clínico; registrar sin avisar, repetir varias veces sin comunicar o usar solo el sistema de mensajería habitual retrasan una respuesta que puede ser vital."
     },
     {
       "id": 181,
@@ -4090,10 +4119,11 @@ window.SERUMS_DATA = {
       "options": [
         "Priorizar los estudios de imagen esenciales para la toma de decisiones, coordinando con el equipo tratante sin retrasar la estabilización del paciente.",
         "Realizar todos los estudios de imagen posibles antes de cualquier decisión clínica.",
-        "Esperar a que el paciente esté completamente estable para iniciar cualquier estudio."
+        "Esperar a que el paciente esté completamente estable para iniciar cualquier estudio.",
+        "Priorizar el estudio más rápido disponible, sin coordinar con el equipo tratante."
       ],
       "correct": 0,
-      "feedback": "En un paciente politraumatizado inestable se deben priorizar los estudios de imagen esenciales, coordinando estrechamente con el equipo tratante para no retrasar decisiones críticas."
+      "feedback": "En un paciente politraumatizado inestable se deben priorizar los estudios esenciales coordinando con el equipo tratante; realizar todos los estudios posibles, esperar estabilidad completa o priorizar solo por rapidez sin coordinar no son adecuados."
     },
     {
       "id": 184,
