@@ -408,6 +408,7 @@ function renderCasePanel() {
     : "";
 
   panel.innerHTML = `
+    <button id="back-to-filters-btn" class="toggle" style="margin-bottom:12px;margin-top:0">← Volver a carreras / filtros</button>
     <div class="badge">${activeCase.career || activeCase.specialty} · ${activeCase.block} · ${activeCase.level}</div>
     <h3 class="section-title">${activeCase.title}</h3>
     <p>${activeCase.statement}</p>
@@ -418,6 +419,16 @@ function renderCasePanel() {
     <div id="case-feedback" style="margin-top:12px"></div>
     <div id="case-actions" style="margin-top:12px"></div>
   `;
+
+  const backBtn = document.getElementById("back-to-filters-btn");
+  if (backBtn) {
+    backBtn.addEventListener("click", () => {
+      const careerFilter = document.getElementById("filter-career");
+      if (careerFilter) careerFilter.open = true;
+      const search = document.getElementById("case-search");
+      if (search) search.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  }
 
   panel.querySelectorAll(".option-btn").forEach(btn => {
     btn.addEventListener("click", () => {
@@ -794,6 +805,61 @@ function exportSimulacroPDF(record, name) {
   window.print();
 }
 
+function renderGlossary() {
+  pageTitle.textContent = "Conceptos clave";
+  pageSubtitle.textContent = "Repaso rápido de términos y definiciones frecuentes en la evaluación SERUMS.";
+
+  root.innerHTML = `
+    <section class="panel">
+      <input id="glossary-search" class="search" placeholder="Buscar un término (ej. incidencia, PEI, FODA, VPN)..." />
+      <div class="chips" id="glossary-chips" style="margin-bottom:16px"></div>
+      <div id="glossary-list"></div>
+    </section>
+  `;
+
+  const search = document.getElementById("glossary-search");
+  const chipsBox = document.getElementById("glossary-chips");
+  const list = document.getElementById("glossary-list");
+  let activeCategory = "";
+
+  chipsBox.innerHTML = data.glossary.map(g => `<span class="chip" data-cat="${g.category}" style="cursor:pointer">${g.category}</span>`).join("");
+  chipsBox.querySelectorAll(".chip").forEach(chip => {
+    chip.addEventListener("click", () => {
+      activeCategory = activeCategory === chip.dataset.cat ? "" : chip.dataset.cat;
+      chipsBox.querySelectorAll(".chip").forEach(c => c.style.outline = "");
+      if (activeCategory) chip.style.outline = "2px solid var(--primary)";
+      draw(search.value);
+    });
+  });
+
+  function draw(filter = "") {
+    const q = filter.toLowerCase();
+    let html = "";
+    data.glossary.forEach(g => {
+      if (activeCategory && g.category !== activeCategory) return;
+      const filtered = g.terms.filter(t =>
+        !q || t.term.toLowerCase().includes(q) || t.definition.toLowerCase().includes(q)
+      );
+      if (!filtered.length) return;
+      html += `<h3 class="section-title" style="margin-top:18px">${g.category}</h3>`;
+      html += `<div class="norm-list">`;
+      filtered.forEach(t => {
+        html += `
+          <article class="norm-card">
+            <h3 style="margin:0 0 6px;font-size:16px;color:var(--primary-dark)">${t.term}</h3>
+            <p style="margin:0;color:#33403D">${t.definition}</p>
+          </article>
+        `;
+      });
+      html += `</div>`;
+    });
+    list.innerHTML = html || `<p style="color:#5B6E6A">No se encontraron términos con ese filtro.</p>`;
+  }
+
+  search.addEventListener("input", e => draw(e.target.value));
+  draw();
+}
+
 function renderNorms() {
   pageTitle.textContent = "Normativa SERUMS";
   pageSubtitle.textContent = "Ley base, bibliografía oficial y normas de evaluación.";
@@ -903,6 +969,7 @@ function renderView(view) {
   if (view === "dashboard") renderDashboard();
   if (view === "cases") renderCases();
   if (view === "simulacro") renderSimulacro();
+  if (view === "glossary") renderGlossary();
   if (view === "norms") renderNorms();
   if (view === "decrees") renderDecrees();
   if (view === "resources") renderResources();
