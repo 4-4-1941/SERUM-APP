@@ -246,11 +246,12 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la primera acción correcta?",
       "options": [
         "Esperar confirmación de laboratorio antes de actuar.",
-        "Notificar, iniciar investigación y control del evento.",
-        "Dar tratamiento individual y cerrar el caso."
+        "Notificar, iniciar investigación epidemiológica y activar medidas de control del evento.",
+        "Dar tratamiento individual a cada caso y cerrar el evento sin notificación.",
+        "Indicar hervir el agua a la población, sin notificar ni investigar la fuente."
       ],
       "correct": 1,
-      "feedback": "En brotes, la prioridad es notificar, investigar y activar medidas de control."
+      "feedback": "Ante un brote diarreico se debe notificar, investigar y activar el control del evento de inmediato; esperar confirmación de laboratorio, tratar sin notificar o solo indicar hervir el agua sin investigar la fuente retrasan la respuesta."
     },
     {
       "id": 12,
@@ -380,12 +381,13 @@ window.SERUMS_DATA = {
       "statement": "Una microred presenta coberturas bajas de vacunación infantil en dos comunidades.",
       "question": "¿Qué prioridad corresponde?",
       "options": [
-        "Registrar el problema y planificar seguimiento comunitario.",
-        "Esperar a que la demanda aumente sola.",
-        "Suspender el reporte por baja asistencia."
+        "Esperar a que la demanda de vacunación aumente por sí sola.",
+        "Suspender el reporte de coberturas por la baja asistencia registrada.",
+        "Registrar el problema, priorizar la intervención y planificar seguimiento comunitario activo.",
+        "Solicitar más dosis de vacuna, sin investigar la causa de la baja cobertura."
       ],
-      "correct": 0,
-      "feedback": "Se debe registrar, intervenir y planificar seguimiento comunitario."
+      "correct": 2,
+      "feedback": "Ante coberturas bajas de vacunación se debe registrar el problema, priorizar la intervención y planificar seguimiento comunitario activo; esperar que la demanda aumente sola, suspender el reporte o pedir más dosis sin investigar la causa no son adecuados."
     },
     {
       "id": 18,
@@ -817,11 +819,12 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la primera acción correcta?",
       "options": [
         "Esperar confirmación serológica de todos los casos antes de actuar.",
-        "Notificar el evento, iniciar control vectorial y vigilancia epidemiológica activa.",
-        "Indicar solo hidratación oral sin notificación."
+        "Indicar solo hidratación oral a los afectados, sin notificación del evento.",
+        "Fumigar de forma aislada, sin notificar el evento a la autoridad sanitaria.",
+        "Notificar el evento, iniciar control vectorial y vigilancia epidemiológica activa."
       ],
-      "correct": 1,
-      "feedback": "Ante un brote de dengue la prioridad es notificar, iniciar control vectorial y activar la vigilancia epidemiológica."
+      "correct": 3,
+      "feedback": "Ante un brote de dengue con criaderos identificados se debe notificar, iniciar control vectorial y vigilancia activa; esperar confirmación serológica de todos los casos, solo hidratar sin notificar o fumigar de forma aislada sin notificar no son adecuados."
     },
     {
       "id": 37,
@@ -884,12 +887,13 @@ window.SERUMS_DATA = {
       "statement": "Paciente presenta tos con expectoración de más de dos semanas de evolución, pérdida de peso y sudoración nocturna.",
       "question": "¿Qué acción corresponde primero?",
       "options": [
-        "Indicar antibiótico común sin estudio adicional.",
+        "Indicar antibiótico común, sin ningún estudio adicional.",
         "Solicitar baciloscopía o prueba diagnóstica, notificar el caso sintomático respiratorio y dar seguimiento.",
-        "Esperar a que el síntoma desaparezca por sí solo."
+        "Esperar a que el síntoma desaparezca por sí solo antes de estudiar el caso.",
+        "Iniciar tratamiento antituberculoso empírico, sin confirmación diagnóstica previa."
       ],
       "correct": 1,
-      "feedback": "Ante un sintomático respiratorio se debe solicitar la prueba diagnóstica correspondiente, notificar y dar seguimiento según norma."
+      "feedback": "Ante un sintomático respiratorio se debe solicitar la prueba diagnóstica, notificar y dar seguimiento; el antibiótico sin estudio, esperar a que ceda el síntoma o iniciar tratamiento antituberculoso empírico sin confirmación no son adecuados."
     },
     {
       "id": 40,
@@ -929,12 +933,13 @@ window.SERUMS_DATA = {
       "statement": "Varias personas que asistieron a un evento social presentan náuseas, vómitos y dolor abdominal horas después de consumir alimentos compartidos.",
       "question": "¿Cuál es la primera acción correcta?",
       "options": [
-        "Tratar solo síntomas individuales sin investigar el origen.",
+        "Tratar solo los síntomas de cada persona, sin investigar el origen del brote.",
         "Notificar el evento, investigar la fuente alimentaria y activar medidas de control.",
-        "Esperar más casos antes de notificar."
+        "Esperar a que se presenten más casos antes de notificar el evento.",
+        "Cerrar el establecimiento que organizó el evento, sin investigación previa."
       ],
       "correct": 1,
-      "feedback": "Ante una probable enfermedad transmitida por alimentos se debe notificar, investigar la fuente y activar el control correspondiente."
+      "feedback": "Ante una probable ETA se debe notificar, investigar la fuente alimentaria y activar el control; tratar solo síntomas, esperar más casos o cerrar el local sin investigación previa no son adecuados."
     },
     {
       "id": 42,
@@ -1043,12 +1048,13 @@ window.SERUMS_DATA = {
       "statement": "Durante un control se identifica que un niño de 18 meses no ha recibido dosis correspondientes a su edad.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Indicar que espere hasta el siguiente control programado.",
-        "Verificar el carné, completar el esquema faltante y registrar el seguimiento.",
-        "Aplicar todas las vacunas pendientes en una sola visita sin verificar el carné."
+        "Indicar que espere hasta el siguiente control programado regularmente.",
+        "Verificar el carné, completar el esquema faltante según norma y registrar el seguimiento.",
+        "Aplicar todas las vacunas pendientes en una sola visita, sin verificar el carné.",
+        "Derivar a un establecimiento de mayor nivel para completar el esquema."
       ],
       "correct": 1,
-      "feedback": "Corresponde verificar el carné de vacunación, completar el esquema faltante según norma técnica y registrar el seguimiento."
+      "feedback": "Corresponde verificar el carné, completar el esquema faltante según norma y registrar el seguimiento; esperar el siguiente control, aplicar todo sin verificar el carné o derivar sin necesidad no son adecuados."
     },
     {
       "id": 47,
@@ -1181,12 +1187,13 @@ window.SERUMS_DATA = {
       "statement": "El establecimiento de salud atiende un número creciente de casos durante un brote epidémico activo en la zona.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Continuar la atención habitual sin medidas adicionales.",
+        "Continuar la atención habitual, sin medidas adicionales.",
         "Reforzar las medidas de bioseguridad, triaje y protección del personal según protocolo vigente.",
-        "Suspender la atención a todos los pacientes indistintamente."
+        "Suspender la atención a todos los pacientes de forma indiscriminada.",
+        "Delegar el triaje exclusivamente al personal de seguridad del establecimiento."
       ],
       "correct": 1,
-      "feedback": "Ante un brote activo se deben reforzar las medidas de bioseguridad, el triaje y la protección del personal de salud."
+      "feedback": "Ante un brote activo se deben reforzar bioseguridad, triaje y protección del personal; continuar sin medidas, suspender toda atención o delegar el triaje solo a seguridad no son adecuados."
     },
     {
       "id": 53,
@@ -1433,12 +1440,13 @@ window.SERUMS_DATA = {
       "statement": "En una evaluación comunitaria se identifica alta prevalencia de caries en escolares de una institución educativa rural.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Atender solo los casos con dolor y no intervenir en el resto.",
+        "Atender solo los casos con dolor y no intervenir en el resto de escolares.",
         "Implementar actividades preventivas comunitarias, educación en higiene oral y consejería alimentaria.",
-        "Esperar que las familias soliciten atención de forma espontánea."
+        "Esperar que las familias soliciten atención de forma espontánea.",
+        "Entregar solo folletos informativos sobre higiene oral, sin actividades preventivas adicionales."
       ],
       "correct": 1,
-      "feedback": "Ante alta prevalencia de caries corresponde implementar actividades preventivas comunitarias junto con educación y consejería alimentaria.",
+      "feedback": "Ante alta prevalencia de caries corresponde implementar prevención comunitaria, educación y consejería; atender solo el dolor, esperar demanda espontánea o solo repartir folletos sin actividades no son adecuados.",
       "interdisciplinaryNote": "Nutrición complementa la prevención orientando sobre el consumo de azúcares y hábitos alimentarios comunitarios."
     },
     {
@@ -1572,12 +1580,13 @@ window.SERUMS_DATA = {
       "statement": "En una comunidad andina se identifican varios casos de aumento de volumen en el cuello compatibles con bocio.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Atender los casos de forma aislada sin evaluar el contexto comunitario.",
+        "Atender los casos de forma aislada, sin evaluar el contexto comunitario.",
         "Evaluar el consumo de sal yodada en la comunidad y coordinar acciones de vigilancia y educación nutricional.",
-        "Indicar cirugía a todos los casos identificados sin evaluación previa."
+        "Indicar cirugía a todos los casos identificados, sin evaluación previa.",
+        "Solicitar solo exámenes hormonales individuales, sin evaluar el contexto comunitario."
       ],
       "correct": 1,
-      "feedback": "Ante sospecha de deficiencia de yodo comunitaria se debe evaluar el consumo de sal yodada y coordinar vigilancia y educación nutricional."
+      "feedback": "Ante sospecha de deficiencia de yodo comunitaria se debe evaluar el consumo de sal yodada y coordinar vigilancia y educación nutricional; atender aislado, indicar cirugía sin evaluación o pedir solo hormonas sin ver el contexto no son adecuados."
     },
     {
       "id": 70,
@@ -1595,11 +1604,12 @@ window.SERUMS_DATA = {
       "question": "¿Qué medida epidemiológica corresponde calcular con estos datos?",
       "options": [
         "Prevalencia, porque incluye todos los casos existentes.",
+        "Letalidad, porque mide la gravedad del cuadro.",
         "Tasa de incidencia, porque mide casos nuevos en un periodo definido.",
-        "Letalidad, porque mide la gravedad del cuadro."
+        "Razón, porque compara dos grupos independientes entre sí."
       ],
-      "correct": 1,
-      "feedback": "La incidencia mide la aparición de casos nuevos en un periodo y población en riesgo definidos, a diferencia de la prevalencia, que incluye casos antiguos y nuevos."
+      "correct": 2,
+      "feedback": "La incidencia mide la aparición de casos nuevos en un periodo y población en riesgo definidos; la prevalencia incluye casos antiguos y nuevos, la letalidad mide gravedad, y la razón compara grupos, no mide aparición de casos nuevos."
     },
     {
       "id": 71,
@@ -1617,11 +1627,12 @@ window.SERUMS_DATA = {
       "question": "¿Qué característica de la prueba es prioritaria verificar para evitar dejar casos sin detectar?",
       "options": [
         "La sensibilidad, que refleja la capacidad de detectar correctamente a los enfermos.",
+        "La especificidad, que refleja la capacidad de descartar correctamente a los sanos.",
         "El costo de fabricación de la prueba.",
         "El tiempo que demora en procesarse la muestra."
       ],
       "correct": 0,
-      "feedback": "Una sensibilidad alta es clave en tamizaje poblacional porque minimiza los falsos negativos, evitando que casos reales queden sin detectar."
+      "feedback": "Una sensibilidad alta es clave en tamizaje poblacional porque minimiza los falsos negativos, evitando que casos reales queden sin detectar; la especificidad se relaciona con los falsos positivos, no con dejar de detectar enfermos."
     },
     {
       "id": 72,
@@ -1640,10 +1651,11 @@ window.SERUMS_DATA = {
       "options": [
         "El 3% de los adolescentes expuestos desarrollará depresión.",
         "Los adolescentes expuestos tienen tres veces más probabilidad de desarrollar síntomas depresivos que los no expuestos.",
-        "La violencia familiar causa depresión en todos los casos."
+        "La violencia familiar causa depresión en todos los casos expuestos.",
+        "El riesgo relativo de 3 indica que el 30% de los expuestos presentará el desenlace."
       ],
       "correct": 1,
-      "feedback": "El riesgo relativo compara la probabilidad de un evento entre expuestos y no expuestos; un RR de 3 indica tres veces más probabilidad en el grupo expuesto, sin implicar causalidad absoluta ni un porcentaje directo."
+      "feedback": "Un RR de 3 indica tres veces más probabilidad en el grupo expuesto respecto al no expuesto; no equivale a un porcentaje directo, no implica causalidad absoluta ni que todos los expuestos desarrollen el desenlace."
     },
     {
       "id": 73,
@@ -1660,12 +1672,13 @@ window.SERUMS_DATA = {
       "statement": "Ante el inicio de la temporada de infecciones respiratorias, el establecimiento organiza una campaña de vacunación antes de que aparezcan casos.",
       "question": "¿A qué nivel de prevención corresponde esta acción?",
       "options": [
-        "Prevención primaria, porque busca evitar la aparición de la enfermedad.",
+        "Prevención primaria, porque busca evitar la aparición de la enfermedad mediante protección específica.",
+        "Prevención secundaria, porque busca la detección temprana de casos asintomáticos.",
         "Prevención terciaria, porque busca rehabilitar secuelas.",
         "Prevención cuaternaria, porque busca evitar sobretratamiento."
       ],
       "correct": 0,
-      "feedback": "Vacunar antes de que existan casos es una medida de prevención primaria, orientada a evitar la aparición de la enfermedad mediante protección específica."
+      "feedback": "Vacunar antes de que existan casos es prevención primaria, orientada a evitar la aparición de la enfermedad; la secundaria detecta casos tempranos, la terciaria rehabilita secuelas y la cuaternaria evita sobretratamiento."
     },
     {
       "id": 74,
@@ -1682,12 +1695,13 @@ window.SERUMS_DATA = {
       "statement": "Un profesional identifica un caso compatible con una enfermedad de notificación obligatoria durante la atención en un establecimiento rural.",
       "question": "¿Cuál es la conducta correcta?",
       "options": [
-        "Notificar el caso según el sistema de vigilancia vigente, sin esperar confirmación de otros casos.",
         "Esperar a que aparezcan más casos similares antes de notificar.",
-        "Registrar el caso solo en la historia clínica sin notificación adicional."
+        "Registrar el caso solo en la historia clínica, sin notificación adicional.",
+        "Notificar el caso según el sistema de vigilancia vigente, sin esperar confirmación de otros casos.",
+        "Notificar únicamente si el caso presenta signos de gravedad clínica."
       ],
-      "correct": 0,
-      "feedback": "La vigilancia epidemiológica exige notificación oportuna de casos de declaración obligatoria, permitiendo una respuesta temprana del sistema de salud."
+      "correct": 2,
+      "feedback": "La vigilancia epidemiológica exige notificación oportuna de casos de declaración obligatoria, sin esperar confirmación de más casos; registrar solo en la historia clínica o notificar solo si hay gravedad clínica no cumplen ese criterio."
     },
     {
       "id": 75,
@@ -1704,12 +1718,13 @@ window.SERUMS_DATA = {
       "statement": "Un equipo de salud discute si el desempleo prolongado puede considerarse causa de un aumento en consultas por ansiedad en una comunidad.",
       "question": "¿Qué criterio es más pertinente evaluar para sustentar una relación causal, más allá de la asociación estadística?",
       "options": [
-        "Que el desempleo preceda temporalmente a la aparición de los síntomas.",
-        "Que ambas variables se midan el mismo día.",
-        "Que el estudio tenga una muestra grande, sin importar el diseño."
+        "Que el desempleo preceda temporalmente a la aparición de los síntomas de ansiedad.",
+        "Que ambas variables se midan exactamente el mismo día.",
+        "Que el estudio tenga una muestra grande, sin importar el diseño utilizado.",
+        "Que exista una fuerte creencia popular sobre la relación entre ambas variables."
       ],
       "correct": 0,
-      "feedback": "La temporalidad, es decir, que la exposición preceda al efecto, es uno de los criterios centrales para sustentar una relación causal, más allá de la sola asociación estadística."
+      "feedback": "La temporalidad (que la exposición preceda al efecto) es uno de los criterios centrales de Bradford Hill para sustentar causalidad; medir el mismo día, solo el tamaño muestral o la creencia popular no sustentan una relación causal."
     },
     {
       "id": 76,
@@ -2085,10 +2100,11 @@ window.SERUMS_DATA = {
       "options": [
         "Registrar el dato sin ninguna acción adicional.",
         "Confirmar con una segunda toma, orientar al usuario y programar su ingreso a control si corresponde.",
-        "Indicar tratamiento farmacológico de inmediato sin confirmación previa."
+        "Indicar tratamiento farmacológico de inmediato, sin confirmación previa.",
+        "Descartar el hallazgo si el usuario refiere no tener síntomas."
       ],
       "correct": 1,
-      "feedback": "Ante un valor elevado en tamizaje se debe confirmar con una segunda toma, orientar al usuario y programar su ingreso a control según protocolo."
+      "feedback": "Ante un valor elevado en tamizaje se debe confirmar con una segunda toma, orientar y programar ingreso a control; registrar sin acción, medicar sin confirmar o descartar por ausencia de síntomas no son adecuados."
     },
     {
       "id": 93,
@@ -2291,12 +2307,13 @@ window.SERUMS_DATA = {
       "statement": "Se planifica un programa de salud bucal dirigido a escolares de una institución educativa con alta prevalencia de caries.",
       "question": "¿Qué componente es indispensable incluir en el programa?",
       "options": [
-        "Atender solo los casos con dolor agudo.",
+        "Atender solo los casos con dolor agudo, sin programa preventivo adicional.",
         "Educación en higiene oral, aplicación de medidas preventivas y coordinación con la escuela y las familias.",
-        "Limitar el programa a la entrega de cepillos dentales sin educación adicional."
+        "Limitar el programa a la entrega de cepillos dentales, sin educación adicional.",
+        "Enfocar el programa únicamente en el tratamiento restaurador de las piezas afectadas."
       ],
       "correct": 1,
-      "feedback": "Un programa de salud bucal escolar efectivo integra educación en higiene oral, medidas preventivas y coordinación con la comunidad educativa y las familias."
+      "feedback": "Un programa de salud bucal escolar efectivo integra educación, prevención y coordinación con la escuela y familias; atender solo el dolor, entregar solo cepillos o enfocarse solo en tratamiento restaurador no son suficientes."
     },
     {
       "id": 102,
@@ -2336,12 +2353,13 @@ window.SERUMS_DATA = {
       "statement": "En una comunidad rural se identifican varios niños con signos compatibles con deficiencia de vitamina A.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Atender los casos identificados sin evaluar el contexto alimentario comunitario.",
+        "Atender los casos identificados, sin evaluar el contexto alimentario comunitario.",
         "Evaluar los patrones alimentarios locales y coordinar suplementación y educación nutricional comunitaria.",
-        "Indicar suplementación sin ninguna evaluación previa del contexto."
+        "Indicar suplementación, sin ninguna evaluación previa del contexto.",
+        "Derivar todos los casos a un especialista, sin intervención comunitaria previa."
       ],
       "correct": 1,
-      "feedback": "Ante deficiencia de vitamina A en una comunidad se debe evaluar el contexto alimentario y coordinar suplementación junto con educación nutricional."
+      "feedback": "Ante deficiencia de vitamina A comunitaria se debe evaluar patrones alimentarios y coordinar suplementación y educación; atender aislado, suplementar sin evaluar contexto o derivar todo sin intervención comunitaria no son adecuados."
     },
     {
       "id": 104,
@@ -2427,10 +2445,11 @@ window.SERUMS_DATA = {
       "options": [
         "Que el establecimiento de salud actúe de forma aislada, sin coordinar con el municipio.",
         "La articulación intersectorial entre salud, municipio y comunidad para sostener la iniciativa.",
-        "Limitar la participación exclusivamente a personal médico."
+        "Limitar la participación exclusivamente a personal médico del establecimiento.",
+        "Que el municipio asuma la iniciativa sin ninguna participación del sector salud."
       ],
       "correct": 1,
-      "feedback": "Las iniciativas de municipio saludable requieren articulación intersectorial sostenida entre salud, gobierno local y comunidad."
+      "feedback": "Las iniciativas de municipio saludable requieren articulación intersectorial sostenida; actuar de forma aislada, limitar a personal médico o que el municipio actúe solo sin salud no son adecuados."
     },
     {
       "id": 108,
@@ -2584,12 +2603,13 @@ window.SERUMS_DATA = {
       "statement": "Durante un tamizaje escolar, un niño presenta dificultad marcada para identificar letras a distancia en la prueba de agudeza visual.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Registrar el resultado sin ninguna acción adicional.",
+        "Registrar el resultado, sin ninguna acción adicional.",
         "Informar a la familia, orientar sobre el hallazgo y derivar para evaluación oftalmológica.",
-        "Indicar que el niño se siente adelante en el aula sin más evaluación."
+        "Indicar que el niño se siente adelante en el aula, sin más evaluación.",
+        "Repetir la prueba en un año, sin informar a la familia del resultado actual."
       ],
       "correct": 1,
-      "feedback": "Ante un hallazgo alterado en el tamizaje de agudeza visual se debe informar a la familia, orientar y derivar oportunamente para evaluación oftalmológica especializada."
+      "feedback": "Ante un hallazgo alterado en tamizaje visual se debe informar a la familia, orientar y derivar oportunamente; registrar sin acción, cambiar de asiento sin evaluar o repetir en un año sin informar no son adecuados."
     },
     {
       "id": 115,
@@ -2673,12 +2693,13 @@ window.SERUMS_DATA = {
       "statement": "Paciente procedente de una zona endémica de malaria presenta fiebre intermitente, escalofríos y sudoración profusa.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Indicar solo antipirético y control ambulatorio sin estudio adicional.",
+        "Indicar solo antipirético y control ambulatorio, sin estudio adicional.",
         "Solicitar gota gruesa o prueba diagnóstica para malaria e iniciar manejo según resultado y protocolo vigente.",
-        "Esperar la aparición de más síntomas antes de estudiar el caso."
+        "Esperar la aparición de más síntomas antes de estudiar el caso.",
+        "Iniciar tratamiento antimalárico empírico, sin confirmación diagnóstica previa."
       ],
       "correct": 1,
-      "feedback": "Ante fiebre intermitente en zona endémica se debe solicitar la prueba diagnóstica de malaria de forma oportuna e iniciar el manejo según protocolo."
+      "feedback": "Ante fiebre intermitente en zona endémica se debe solicitar la prueba diagnóstica de malaria oportunamente e iniciar manejo según protocolo; solo antipirético, esperar más síntomas o tratamiento empírico sin confirmación no son adecuados."
     },
     {
       "id": 119,
@@ -2695,12 +2716,13 @@ window.SERUMS_DATA = {
       "statement": "Niño es mordido por un perro callejero de estado de vacunación desconocido, con herida superficial en el antebrazo.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Limpiar la herida y no indicar ninguna otra medida.",
+        "Limpiar la herida y no indicar ninguna otra medida adicional.",
         "Lavar la herida de inmediato, evaluar el riesgo de exposición e iniciar profilaxis antirrábica según protocolo si corresponde.",
-        "Esperar a que el perro muestre síntomas de rabia antes de decidir profilaxis."
+        "Esperar a que el perro muestre síntomas de rabia antes de decidir la profilaxis.",
+        "Iniciar profilaxis antirrábica únicamente si la herida es de gran extensión."
       ],
       "correct": 1,
-      "feedback": "Ante mordedura de un animal con estado de vacunación desconocido se debe lavar la herida de inmediato y evaluar el inicio de profilaxis antirrábica según protocolo vigente."
+      "feedback": "Ante mordedura de animal con estado de vacunación desconocido se debe lavar la herida y evaluar profilaxis antirrábica según protocolo; solo limpiar sin más medidas, esperar signos en el animal o condicionar la profilaxis solo a la extensión no son adecuados."
     },
     {
       "id": 120,
@@ -2763,10 +2785,11 @@ window.SERUMS_DATA = {
       "options": [
         "Esperar que cada familia gestione su propia prevención de forma individual.",
         "Promover estrategias de fluorización y educación en higiene oral coordinadas con las autoridades locales.",
-        "Limitar la intervención a la atención de los casos con dolor agudo."
+        "Limitar la intervención a la atención de los casos con dolor agudo.",
+        "Distribuir solo pasta dental fluorada, sin ninguna estrategia comunitaria adicional."
       ],
       "correct": 1,
-      "feedback": "Ante alta prevalencia de caries sin medidas preventivas comunitarias, corresponde promover estrategias de fluorización y educación en higiene oral coordinadas con las autoridades locales."
+      "feedback": "Ante alta prevalencia de caries sin medidas preventivas se debe promover fluorización y educación coordinada con autoridades locales; esperar gestión individual, atender solo el dolor o distribuir solo pasta dental no son suficientes."
     },
     {
       "id": 123,
@@ -3491,10 +3514,11 @@ window.SERUMS_DATA = {
       "options": [
         "Delegar toda la responsabilidad de los residuos exclusivamente al personal de limpieza, sin ninguna otra acción.",
         "Implementar la segregación adecuada de residuos según su tipo y promover la participación comunitaria en hábitos saludables de eliminación de residuos.",
-        "Reducir la generación de residuos limitando la atención de pacientes."
+        "Reducir la generación de residuos limitando la atención de pacientes.",
+        "Incinerar todos los residuos del establecimiento sin clasificación previa."
       ],
       "correct": 1,
-      "feedback": "La gestión integral de residuos requiere segregación adecuada según su tipo (biocontaminados, comunes, especiales) y participación comunitaria en la adopción de hábitos saludables de eliminación."
+      "feedback": "La gestión integral de residuos requiere segregación adecuada y participación comunitaria; delegar todo al personal de limpieza, limitar la atención o incinerar sin clasificación no son adecuados."
     },
     {
       "id": 156,
@@ -3511,12 +3535,13 @@ window.SERUMS_DATA = {
       "statement": "En un establecimiento de salud se identifica sobrecarga laboral sostenida y ausencia de tamizaje periódico de desgaste profesional en el personal.",
       "question": "¿Cuál es la conducta más adecuada según la normativa de salud ocupacional?",
       "options": [
-        "Considerar que el desgaste profesional es un problema individual sin relación con la organización del trabajo.",
+        "Considerar que el desgaste profesional es un problema individual, sin relación con la organización del trabajo.",
         "Implementar campañas regulares de tamizaje de estrés laboral y desgaste profesional, y ajustar factores organizacionales de riesgo.",
-        "Ignorar el riesgo psicosocial porque no está relacionado con la seguridad física del personal."
+        "Ignorar el riesgo psicosocial porque no está relacionado con la seguridad física del personal.",
+        "Rotar al personal afectado a otro establecimiento, sin intervenir sobre la organización del trabajo actual."
       ],
       "correct": 1,
-      "feedback": "La normativa de salud ocupacional recomienda el tamizaje regular de riesgos psicosociales como el desgaste profesional, además de intervenir sobre los factores organizacionales que lo generan."
+      "feedback": "La normativa de salud ocupacional recomienda tamizaje regular de riesgos psicosociales y ajustar factores organizacionales; considerarlo individual, ignorarlo o rotar personal sin intervenir en la organización no son adecuados."
     },
     {
       "id": 157,
