@@ -4141,11 +4141,12 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
         "Indicar reposo prolongado hasta que el temor desaparezca por sí solo.",
+        "Recomendar que reanude su actividad física habitual, sin ninguna supervisión ni progresión.",
         "Diseñar un programa de rehabilitación cardiaca con actividad física progresiva y supervisada, abordando también su temor.",
-        "Recomendar que reanude su actividad física habitual sin ninguna supervisión ni progresión."
+        "Indicar solo terapia psicológica para el temor, sin ningún programa de actividad física supervisada."
       ],
-      "correct": 1,
-      "feedback": "La rehabilitación cardiaca requiere un programa de actividad física progresiva y supervisada, abordando también el temor del paciente para favorecer su adherencia."
+      "correct": 2,
+      "feedback": "La rehabilitación cardiaca requiere un programa de actividad física progresiva y supervisada, abordando también el temor del paciente; el reposo prolongado, reanudar sin supervisión o solo terapia psicológica sin actividad física no son adecuados."
     },
     {
       "id": 185,
@@ -4162,12 +4163,13 @@ window.SERUMS_DATA = {
       "statement": "Un adulto mayor presenta tos frecuente durante las comidas y ha perdido peso en los últimos meses.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Indicar que coma más lento sin ninguna evaluación especializada.",
+        "Indicar que coma más lento, sin ninguna evaluación especializada.",
         "Evaluar la seguridad de la deglución y coordinar un plan de manejo para prevenir complicaciones como la aspiración.",
-        "Esperar a que la pérdida de peso sea más marcada antes de evaluar."
+        "Esperar a que la pérdida de peso sea más marcada antes de evaluar.",
+        "Indicar una dieta líquida exclusiva, sin evaluación previa de la deglución."
       ],
       "correct": 1,
-      "feedback": "Ante sospecha de disfagia se debe evaluar la seguridad de la deglución y coordinar un plan de manejo oportuno, dado el riesgo de aspiración y desnutrición."
+      "feedback": "Ante sospecha de disfagia se debe evaluar la seguridad de la deglución y coordinar un plan de manejo; comer más lento sin evaluación, esperar mayor pérdida de peso o indicar dieta líquida sin evaluación previa no son adecuados."
     },
     {
       "id": 186,
@@ -4209,11 +4211,12 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
         "Realizar estas actividades por el niño de forma permanente para evitar su frustración.",
-        "Diseñar un plan de intervención estructurado que promueva gradualmente su independencia en actividades de la vida diaria.",
-        "Indicar que estas dificultades no requieren ninguna intervención específica."
+        "Indicar que estas dificultades no requieren ninguna intervención específica.",
+        "Exigir que el niño logre la independencia completa en un plazo breve y definido.",
+        "Diseñar un plan de intervención estructurado que promueva gradualmente su independencia en actividades de la vida diaria."
       ],
-      "correct": 1,
-      "feedback": "La terapia ocupacional en el trastorno del espectro autista debe diseñar un plan estructurado que promueva gradualmente la independencia en actividades de la vida diaria."
+      "correct": 3,
+      "feedback": "La terapia ocupacional en TEA debe diseñar un plan estructurado que promueva gradualmente la independencia; hacer las actividades por el niño, no intervenir o exigir independencia inmediata no son adecuados."
     },
     {
       "id": 188,
@@ -4230,12 +4233,13 @@ window.SERUMS_DATA = {
       "statement": "Un adulto mayor con movilidad reducida vive en una vivienda con obstáculos que dificultan su desplazamiento seguro y aumentan el riesgo de caídas.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Indicar que se mude a un lugar más seguro sin evaluar su vivienda actual.",
+        "Indicar que se mude a un lugar más seguro, sin evaluar su vivienda actual.",
         "Evaluar el entorno domiciliario y proponer adaptaciones que reduzcan el riesgo de caídas y favorezcan su independencia.",
-        "Recomendar que reduzca al mínimo su desplazamiento dentro de la vivienda."
+        "Recomendar que reduzca al mínimo su desplazamiento dentro de la vivienda.",
+        "Indicar el uso permanente de silla de ruedas, sin evaluar antes el entorno domiciliario."
       ],
       "correct": 1,
-      "feedback": "La terapia ocupacional debe evaluar el entorno domiciliario y proponer adaptaciones concretas que reduzcan riesgos y favorezcan la independencia funcional del adulto mayor."
+      "feedback": "La terapia ocupacional debe evaluar el entorno domiciliario y proponer adaptaciones concretas; sugerir mudanza sin evaluar, reducir el desplazamiento o indicar silla de ruedas sin evaluación previa no son adecuados."
     },
     {
       "id": 189,
@@ -4253,11 +4257,12 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
         "Indicar que no hay nada más que hacer, dado que la baja visión es irreversible.",
+        "Recomendar que abandone por completo las actividades que le resultan difíciles.",
         "Evaluar ayudas ópticas y no ópticas de baja visión que faciliten sus actividades cotidianas.",
-        "Recomendar que abandone por completo las actividades que le resultan difíciles."
+        "Indicar que otra persona realice esas actividades en su lugar de forma permanente."
       ],
-      "correct": 1,
-      "feedback": "Aunque la baja visión sea irreversible, existen ayudas ópticas y no ópticas que pueden facilitar significativamente las actividades cotidianas de la persona."
+      "correct": 2,
+      "feedback": "Aunque la baja visión sea irreversible, existen ayudas ópticas y no ópticas que facilitan las actividades cotidianas; decir que no hay nada más que hacer, recomendar abandonar actividades o que otro las haga en su lugar no son adecuados."
     },
     {
       "id": 190,
@@ -4406,12 +4411,13 @@ window.SERUMS_DATA = {
       "statement": "Una comunidad rural dispone de sus excretas a cielo abierto por no contar con sistema de alcantarillado, lo que incrementa el riesgo de enfermedades diarreicas.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Esperar la construcción de un sistema de alcantarillado convencional antes de intervenir.",
         "Evaluar e implementar soluciones sanitarias adecuadas al contexto rural, como letrinas o sistemas alternativos, junto con educación sanitaria.",
-        "Limitar la intervención a la educación sobre higiene de manos, sin abordar la disposición de excretas."
+        "Esperar la construcción de un sistema de alcantarillado convencional antes de intervenir.",
+        "Limitar la intervención a la educación sobre higiene de manos, sin abordar la disposición de excretas.",
+        "Prohibir la defecación al aire libre sin ofrecer ninguna alternativa sanitaria a la comunidad."
       ],
-      "correct": 1,
-      "feedback": "En zonas rurales sin alcantarillado se deben evaluar e implementar soluciones sanitarias adecuadas al contexto, como letrinas o sistemas alternativos, junto con educación sanitaria comunitaria."
+      "correct": 0,
+      "feedback": "En zonas rurales sin alcantarillado se deben evaluar e implementar soluciones sanitarias adecuadas al contexto, junto con educación; esperar el alcantarillado convencional, limitarse a higiene de manos o prohibir sin alternativas no son adecuados."
     },
     {
       "id": 197,
@@ -4521,11 +4527,12 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
         "Indicar que es normal y que se le pasará solo con el tiempo.",
-        "Explorar el significado de la pérdida del rol laboral y acompañar la construcción de nuevos proyectos vitales.",
-        "Recomendar que busque empleo de inmediato para resolver el malestar."
+        "Recomendar que busque empleo de inmediato para resolver el malestar.",
+        "Sugerir que se mantenga completamente ocupado para no pensar en la pérdida del rol laboral.",
+        "Explorar el significado de la pérdida del rol laboral y acompañar la construcción de nuevos proyectos vitales."
       ],
-      "correct": 1,
-      "feedback": "La crisis vital asociada a la jubilación requiere explorar el significado de la pérdida del rol laboral y acompañar la construcción de nuevos proyectos vitales significativos."
+      "correct": 3,
+      "feedback": "La crisis vital de la jubilación requiere explorar el significado de la pérdida del rol laboral y acompañar nuevos proyectos vitales; minimizarla, buscar empleo de inmediato o llenar el tiempo sin explorar el significado no son adecuados."
     },
     {
       "id": 202,
@@ -4566,10 +4573,11 @@ window.SERUMS_DATA = {
       "options": [
         "Indicar manejo domiciliario con hidratación oral únicamente.",
         "Reconocer los signos de alarma, hospitalizar u observar estrechamente y coordinar referencia si corresponde.",
-        "Esperar a que la fiebre ceda antes de tomar cualquier decisión adicional."
+        "Esperar a que la fiebre ceda antes de tomar cualquier decisión adicional.",
+        "Iniciar antiinflamatorios no esteroideos para el dolor abdominal, sin evaluar los signos de alarma."
       ],
       "correct": 1,
-      "feedback": "La presencia de signos de alarma en dengue exige observación estrecha u hospitalización, con referencia oportuna según la gravedad del caso."
+      "feedback": "Ante signos de alarma en dengue se debe observar estrechamente u hospitalizar, con referencia oportuna; el manejo domiciliario, esperar a que ceda la fiebre o usar AINEs sin evaluar los signos no son adecuados."
     },
     {
       "id": 204,
@@ -4586,12 +4594,13 @@ window.SERUMS_DATA = {
       "statement": "Paciente con diagnóstico previo de EPOC presenta aumento de la disnea, cambio en el color del esputo y mayor uso de musculatura accesoria.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Indicar que continúe su tratamiento habitual sin ninguna reevaluación.",
+        "Indicar que continúe su tratamiento habitual, sin ninguna reevaluación.",
+        "Aumentar el broncodilatador, sin evaluar otros signos clínicos.",
         "Evaluar la gravedad de la exacerbación, iniciar manejo inicial y decidir referencia según la respuesta clínica.",
-        "Aumentar el broncodilatador sin evaluar otros signos clínicos."
+        "Iniciar antibiótico de amplio espectro de forma sistemática, sin evaluar la gravedad del cuadro."
       ],
-      "correct": 1,
-      "feedback": "Ante una exacerbación de EPOC se debe evaluar la gravedad, iniciar manejo inicial adecuado y decidir la referencia según la evolución clínica del paciente."
+      "correct": 2,
+      "feedback": "Ante una exacerbación de EPOC se debe evaluar la gravedad, iniciar manejo inicial y decidir referencia según evolución; continuar sin reevaluar, aumentar el broncodilatador sin evaluar o dar antibiótico sistemático no son adecuados."
     },
     {
       "id": 205,
@@ -4610,10 +4619,11 @@ window.SERUMS_DATA = {
       "options": [
         "Administrar más insulina para corregir la glicemia.",
         "Corregir la hipoglucemia de inmediato según protocolo y luego evaluar la causa del episodio.",
-        "Esperar a que el paciente se recupere espontáneamente antes de intervenir."
+        "Esperar a que el paciente se recupere espontáneamente antes de intervenir.",
+        "Suspender de forma permanente el tratamiento con insulina, sin evaluar la causa del episodio."
       ],
       "correct": 1,
-      "feedback": "La hipoglucemia severa es una emergencia que debe corregirse de inmediato según protocolo, evaluando posteriormente la causa que la originó."
+      "feedback": "La hipoglucemia severa debe corregirse de inmediato según protocolo, evaluando luego su causa; administrar más insulina, esperar recuperación espontánea o suspender el tratamiento sin evaluar no son adecuados."
     },
     {
       "id": 206,
@@ -4632,10 +4642,11 @@ window.SERUMS_DATA = {
       "options": [
         "Indicar analgésico oral y control ambulatorio en una semana.",
         "Reconocer los signos de alarma, estabilizar y coordinar referencia urgente para descartar una causa grave.",
-        "Esperar la evolución espontánea antes de decidir cualquier acción."
+        "Esperar la evolución espontánea antes de decidir cualquier acción.",
+        "Indicar reposo en ambiente oscuro como única medida, sin evaluación adicional."
       ],
       "correct": 1,
-      "feedback": "Una cefalea de inicio súbito con signos de alarma exige estabilización y referencia urgente, dado el riesgo de una causa grave subyacente."
+      "feedback": "Una cefalea de inicio súbito con signos de alarma exige estabilización y referencia urgente; el analgésico ambulatorio, esperar evolución o solo indicar reposo en oscuridad subestiman una posible causa grave."
     },
     {
       "id": 207,
@@ -4653,11 +4664,12 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
         "Realizar siempre la curación sin involucrar al paciente en el proceso.",
-        "Brindar educación progresiva y acompañamiento emocional para favorecer la aceptación y el autocuidado del estoma.",
-        "Indicar que debe acostumbrarse de inmediato sin ningún apoyo adicional."
+        "Indicar que debe acostumbrarse de inmediato, sin ningún apoyo adicional.",
+        "Delegar la educación sobre el estoma únicamente a un familiar cercano.",
+        "Brindar educación progresiva y acompañamiento emocional para favorecer la aceptación y el autocuidado del estoma."
       ],
-      "correct": 1,
-      "feedback": "El cuidado del estoma requiere educación progresiva y acompañamiento emocional que favorezca la aceptación y el autocuidado por parte del paciente."
+      "correct": 3,
+      "feedback": "El cuidado del estoma requiere educación progresiva y acompañamiento emocional; hacer la curación sin involucrar al paciente, exigir adaptación inmediata o delegar todo a un familiar no favorecen el autocuidado."
     },
     {
       "id": 208,
@@ -4676,10 +4688,11 @@ window.SERUMS_DATA = {
       "options": [
         "Entregar la insulina con instrucciones escritas únicamente, sin demostración práctica.",
         "Realizar educación práctica sobre la técnica de aplicación, rotación de sitios y reconocimiento de signos de hipoglucemia.",
-        "Indicar que un familiar aplique la insulina de forma permanente sin educar al paciente."
+        "Indicar que un familiar aplique la insulina de forma permanente, sin educar al paciente.",
+        "Aplicar la primera dosis por el personal de salud, sin educar al paciente para las siguientes."
       ],
       "correct": 1,
-      "feedback": "La educación en autoaplicación de insulina debe ser práctica, incluyendo técnica de aplicación, rotación de sitios y reconocimiento de hipoglucemia, para favorecer la autonomía del paciente."
+      "feedback": "La educación en autoaplicación de insulina debe ser práctica, incluyendo técnica, rotación de sitios e hipoglucemia; solo instrucciones escritas, delegar a un familiar o aplicar sin educar al paciente no favorecen su autonomía."
     },
     {
       "id": 209,
@@ -4718,12 +4731,13 @@ window.SERUMS_DATA = {
       "statement": "Tras un parto sin complicaciones, el personal se dispone a trasladar al recién nacido para procedimientos de rutina antes de cualquier contacto con la madre.",
       "question": "¿Cuál es la conducta más adecuada, siempre que no existan contraindicaciones clínicas?",
       "options": [
-        "Realizar todos los procedimientos de rutina antes de cualquier contacto entre madre e hijo.",
         "Favorecer el contacto piel a piel inmediato y postergar los procedimientos de rutina no urgentes.",
-        "Trasladar al recién nacido a otra sala sin informar a la madre del motivo."
+        "Realizar todos los procedimientos de rutina antes de cualquier contacto entre madre e hijo.",
+        "Trasladar al recién nacido a otra sala, sin informar a la madre del motivo.",
+        "Permitir el contacto piel a piel solo después de completar el aseo del recién nacido."
       ],
-      "correct": 1,
-      "feedback": "Siempre que no existan contraindicaciones clínicas, se debe favorecer el contacto piel a piel inmediato entre madre e hijo, postergando los procedimientos de rutina no urgentes."
+      "correct": 0,
+      "feedback": "Siempre que no haya contraindicaciones se debe favorecer el contacto piel a piel inmediato, postergando procedimientos no urgentes; realizarlos antes del contacto, trasladar sin informar o esperar el aseo completo no son adecuados."
     },
     {
       "id": 211,
@@ -4740,12 +4754,13 @@ window.SERUMS_DATA = {
       "statement": "Gestante de 26 semanas presenta un resultado alterado en la prueba de tolerancia a la glucosa realizada en su control prenatal.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Indicar que espere al siguiente control sin ninguna intervención adicional.",
+        "Indicar que espere al siguiente control, sin ninguna intervención adicional.",
+        "Indicar reposo absoluto como única medida de manejo.",
         "Confirmar el diagnóstico, brindar consejería nutricional y coordinar seguimiento especializado del embarazo.",
-        "Indicar reposo absoluto como única medida de manejo."
+        "Iniciar insulina de inmediato sin confirmar antes el diagnóstico con la prueba correspondiente."
       ],
-      "correct": 1,
-      "feedback": "Ante un tamizaje alterado de diabetes gestacional se debe confirmar el diagnóstico, brindar consejería nutricional y coordinar el seguimiento especializado necesario.",
+      "correct": 2,
+      "feedback": "Ante un tamizaje alterado de diabetes gestacional se debe confirmar el diagnóstico, brindar consejería y coordinar seguimiento especializado; esperar al siguiente control, indicar reposo absoluto o iniciar insulina sin confirmación no son adecuados.",
       "interdisciplinaryNote": "Nutrición cumple un rol central en el manejo dietético de la diabetes gestacional."
     },
     {
@@ -4763,12 +4778,13 @@ window.SERUMS_DATA = {
       "statement": "Una madre primeriza refiere que su bebé se suelta constantemente del pecho y llora durante la lactancia, a pesar de sentir que produce suficiente leche.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Indicar iniciar fórmula de inmediato sin evaluar la técnica utilizada.",
         "Observar la sesión de lactancia, corregir la posición y el agarre, y reforzar la consejería.",
-        "Indicar que continúe igual porque el problema se resolverá con el tiempo."
+        "Indicar iniciar fórmula de inmediato, sin evaluar la técnica utilizada.",
+        "Indicar que continúe igual porque el problema se resolverá con el tiempo.",
+        "Recomendar el uso de pezoneras de forma permanente, sin evaluar antes la técnica de lactancia."
       ],
-      "correct": 1,
-      "feedback": "Ante dificultades en la lactancia se debe observar la sesión, corregir la posición y el agarre, y reforzar la consejería antes de considerar otras alternativas."
+      "correct": 0,
+      "feedback": "Ante dificultades en la lactancia se debe observar la sesión, corregir posición y agarre, y reforzar la consejería; iniciar fórmula sin evaluar, esperar que se resuelva solo o usar pezoneras sin evaluación no son adecuados."
     },
     {
       "id": 213,
@@ -4786,11 +4802,12 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
         "Indicar que la pérdida ósea es inevitable y no requiere ninguna medida preventiva.",
-        "Orientar sobre actividad física con carga, consumo adecuado de calcio y vitamina D, y evaluación según factores de riesgo individuales.",
-        "Recomendar reposo para evitar fracturas."
+        "Recomendar reposo para evitar fracturas.",
+        "Indicar suplementación de calcio en dosis altas, sin evaluación de factores de riesgo individuales.",
+        "Orientar sobre actividad física con carga, consumo adecuado de calcio y vitamina D, y evaluación según factores de riesgo individuales."
       ],
-      "correct": 1,
-      "feedback": "La prevención de osteoporosis en el climaterio incluye actividad física con carga, adecuado consumo de calcio y vitamina D, y evaluación individualizada según factores de riesgo."
+      "correct": 3,
+      "feedback": "La prevención de osteoporosis en el climaterio incluye actividad física con carga, calcio y vitamina D, y evaluación individualizada; asumirla como inevitable, indicar reposo o suplementar sin evaluar el riesgo no son adecuados."
     },
     {
       "id": 214,
@@ -4807,12 +4824,13 @@ window.SERUMS_DATA = {
       "statement": "Paciente adulto presenta sangrado gingival severo, movilidad dentaria y mal aliento persistente de larga evolución.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Indicar solo mayor frecuencia de cepillado sin evaluación adicional.",
+        "Indicar solo mayor frecuencia de cepillado, sin evaluación adicional.",
         "Evaluar el estado periodontal, iniciar manejo inicial y derivar a periodoncia si el caso lo amerita.",
-        "Extraer las piezas con movilidad de inmediato sin evaluación previa."
+        "Extraer las piezas con movilidad de inmediato, sin evaluación previa.",
+        "Indicar el uso de enjuague antiséptico como único tratamiento, sin evaluación periodontal."
       ],
       "correct": 1,
-      "feedback": "Ante sospecha de periodontitis severa se debe evaluar el estado periodontal, iniciar manejo inicial y derivar oportunamente a periodoncia si corresponde."
+      "feedback": "Ante sospecha de periodontitis severa se debe evaluar, iniciar manejo inicial y derivar a periodoncia si corresponde; solo indicar cepillado, extraer sin evaluación o usar solo enjuague no son adecuados."
     },
     {
       "id": 215,
@@ -4831,10 +4849,11 @@ window.SERUMS_DATA = {
       "options": [
         "Sujetar al niño con fuerza para completar el procedimiento de inmediato.",
         "Aplicar técnicas de manejo de conducta apropiadas para la edad, generando confianza antes de proceder.",
-        "Suspender la atención de forma indefinida sin ningún intento adicional."
+        "Suspender la atención de forma indefinida, sin ningún intento adicional.",
+        "Sedar al niño de forma rutinaria para evitar el manejo conductual."
       ],
       "correct": 1,
-      "feedback": "El manejo de conducta en odontopediatría requiere generar confianza mediante técnicas apropiadas para la edad, evitando tanto la sujeción forzada como la suspensión indefinida de la atención."
+      "feedback": "El manejo de conducta en odontopediatría requiere generar confianza con técnicas apropiadas para la edad; sujetar con fuerza, suspender indefinidamente o sedar de forma rutinaria no son adecuados."
     },
     {
       "id": 216,
@@ -4851,12 +4870,13 @@ window.SERUMS_DATA = {
       "statement": "Paciente presenta una úlcera bucal que no cicatriza después de tres semanas, sin causa traumática identificable.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Indicar enjuagues antisépticos y control en un mes adicional sin más evaluación.",
+        "Indicar enjuagues antisépticos y control en un mes adicional, sin más evaluación.",
         "Evaluar la lesión con sospecha de malignidad y derivar oportunamente para biopsia si corresponde.",
-        "Asumir que es una lesión traumática menor sin mayor seguimiento."
+        "Asumir que es una lesión traumática menor, sin mayor seguimiento.",
+        "Indicar un corticoide tópico como único tratamiento, sin evaluación adicional de la lesión."
       ],
       "correct": 1,
-      "feedback": "Una lesión bucal persistente sin causa identificable y sin cicatrización debe evaluarse con sospecha de malignidad y derivarse oportunamente para estudio histopatológico."
+      "feedback": "Una lesión bucal persistente sin causa identificable debe evaluarse con sospecha de malignidad y derivarse para biopsia; enjuagues sin evaluación, asumirla como traumática menor o tratarla con corticoide sin evaluación no son adecuados."
     },
     {
       "id": 217,
@@ -4875,10 +4895,11 @@ window.SERUMS_DATA = {
       "options": [
         "Indicar que la pérdida de peso es esperada y no requiere intervención nutricional.",
         "Evaluar el estado nutricional y diseñar un plan de soporte adaptado a la tolerancia del paciente durante el tratamiento.",
-        "Forzar una dieta hipercalórica estricta sin considerar la tolerancia del paciente."
+        "Forzar una dieta hipercalórica estricta, sin considerar la tolerancia del paciente.",
+        "Indicar suplementos nutricionales orales, sin una evaluación previa del estado nutricional."
       ],
       "correct": 1,
-      "feedback": "El soporte nutricional en el paciente oncológico debe adaptarse a su tolerancia durante el tratamiento, evitando tanto la falta de intervención como planes rígidos que no consideren su condición."
+      "feedback": "El soporte nutricional oncológico debe adaptarse a la tolerancia del paciente durante el tratamiento; asumir la pérdida como esperada sin intervenir, forzar una dieta estricta o suplementar sin evaluación no son adecuados."
     },
     {
       "id": 218,
@@ -4897,10 +4918,11 @@ window.SERUMS_DATA = {
       "options": [
         "Apoyar la restricción severa para que logre su objetivo de peso rápidamente.",
         "Brindar consejería sobre una alimentación adecuada durante la lactancia, que cubra sus requerimientos sin restricciones severas.",
-        "Indicar que suspenda la lactancia si desea bajar de peso más rápido."
+        "Indicar que suspenda la lactancia si desea bajar de peso más rápido.",
+        "Recomendar un ayuno intermitente prolongado durante la lactancia exclusiva."
       ],
       "correct": 1,
-      "feedback": "Durante la lactancia se debe brindar consejería sobre una alimentación adecuada que cubra los requerimientos maternos, evitando restricciones severas que puedan afectar la producción de leche y la salud materna."
+      "feedback": "Durante la lactancia se debe brindar consejería sobre alimentación adecuada sin restricciones severas; apoyar la restricción severa, sugerir suspender la lactancia o el ayuno prolongado no son adecuados."
     },
     {
       "id": 219,
@@ -4919,10 +4941,11 @@ window.SERUMS_DATA = {
       "options": [
         "Diseñar el plan nutricional de forma aislada, sin coordinar con el equipo de salud mental.",
         "Diseñar un plan de rehabilitación nutricional gradual, coordinado estrechamente con el equipo de psicología y medicina.",
-        "Indicar un plan de alimentación estricto y rápido para normalizar el peso cuanto antes."
+        "Indicar un plan de alimentación estricto y rápido para normalizar el peso cuanto antes.",
+        "Delegar la decisión del plan nutricional únicamente a la familia de la paciente."
       ],
       "correct": 1,
-      "feedback": "El manejo nutricional en un trastorno de conducta alimentaria debe ser gradual y estar estrechamente coordinado con el equipo interdisciplinario de salud mental y medicina.",
+      "feedback": "El manejo nutricional en un TCA debe ser gradual y coordinado con salud mental; diseñarlo de forma aislada, normalizar el peso rápido o delegar la decisión solo a la familia no son adecuados.",
       "interdisciplinaryNote": "Psicología aporta el abordaje emocional y conductual que debe acompañar la rehabilitación nutricional gradual."
     },
     {
@@ -4941,11 +4964,12 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta correcta del profesional de farmacia?",
       "options": [
         "Dispensar ambos medicamentos sin advertir la interacción.",
+        "Dispensar solo uno de los medicamentos, sin informar al paciente ni al prescriptor.",
         "Identificar la interacción, informar al prescriptor y al paciente, y sugerir alternativas si es necesario.",
-        "Dispensar solo uno de los medicamentos sin informar al paciente ni al prescriptor."
+        "Indicar al paciente que espacie la toma de ambos medicamentos por su cuenta, sin informar al prescriptor."
       ],
-      "correct": 1,
-      "feedback": "Ante una interacción medicamentosa relevante se debe informar tanto al prescriptor como al paciente, sugiriendo alternativas seguras cuando sea necesario."
+      "correct": 2,
+      "feedback": "Ante una interacción medicamentosa relevante se debe informar al prescriptor y al paciente, sugiriendo alternativas; dispensar sin advertir, dispensar solo uno sin informar o indicar espaciar tomas por cuenta propia no son adecuados."
     },
     {
       "id": 221,
@@ -5028,12 +5052,13 @@ window.SERUMS_DATA = {
       "statement": "Un hemograma de rutina muestra alteraciones marcadas en el recuento y la morfología de las células blancas, compatibles con un posible proceso leucémico.",
       "question": "¿Cuál es la conducta correcta del profesional de laboratorio?",
       "options": [
-        "Registrar el resultado en el sistema sin ninguna comunicación adicional.",
+        "Registrar el resultado en el sistema, sin ninguna comunicación adicional.",
         "Comunicar el hallazgo de forma oportuna y directa al personal clínico responsable del paciente.",
-        "Repetir la prueba varias veces sin comunicar el hallazgo inicial."
+        "Repetir la prueba varias veces sin comunicar el hallazgo inicial.",
+        "Esperar el resultado de otras pruebas antes de comunicar cualquier hallazgo."
       ],
       "correct": 1,
-      "feedback": "Ante un hallazgo hematológico compatible con un proceso leucémico se debe comunicar de forma oportuna y directa al personal clínico, dada la urgencia de la evaluación posterior."
+      "feedback": "Ante un hallazgo hematológico compatible con leucemia se debe comunicar de forma oportuna y directa al clínico; registrar sin comunicar, repetir sin comunicar o esperar otras pruebas retrasan la evaluación urgente."
     },
     {
       "id": 225,
@@ -5052,10 +5077,11 @@ window.SERUMS_DATA = {
       "options": [
         "Informar el resultado como normal para no generar preocupación en la paciente.",
         "Clasificar el hallazgo según los criterios estandarizados y coordinar la evaluación complementaria oportuna.",
-        "Repetir la mamografía en un año sin ninguna evaluación adicional."
+        "Repetir la mamografía en un año, sin ninguna evaluación adicional.",
+        "Indicar una biopsia inmediata sin clasificar antes el hallazgo según los criterios estandarizados."
       ],
       "correct": 1,
-      "feedback": "Ante un hallazgo sospechoso en una mamografía se debe clasificar según los criterios estandarizados y coordinar oportunamente la evaluación complementaria correspondiente."
+      "feedback": "Ante un hallazgo sospechoso en mamografía se debe clasificar según criterios estandarizados y coordinar evaluación complementaria; informar como normal, repetir en un año sin evaluar o biopsiar sin clasificar no son adecuados."
     },
     {
       "id": 226,
@@ -5074,10 +5100,11 @@ window.SERUMS_DATA = {
       "options": [
         "Autorizar el retorno inmediato para no afectar su participación deportiva.",
         "Explicar los riesgos de un retorno prematuro y diseñar un plan de rehabilitación progresivo antes de autorizar la vuelta a la actividad.",
-        "Indicar reposo absoluto indefinido sin ningún plan de rehabilitación activo."
+        "Indicar reposo absoluto indefinido, sin ningún plan de rehabilitación activo.",
+        "Autorizar el retorno solo si el deportista firma una exoneración de responsabilidad."
       ],
       "correct": 1,
-      "feedback": "El retorno a la actividad deportiva debe basarse en un plan de rehabilitación progresivo, explicando al paciente los riesgos de un retorno prematuro antes de la recuperación adecuada."
+      "feedback": "El retorno deportivo debe basarse en un plan de rehabilitación progresivo, explicando riesgos del retorno prematuro; autorizar de inmediato, indicar reposo indefinido sin plan o exigir una exoneración no reemplazan la rehabilitación adecuada."
     },
     {
       "id": 227,
@@ -5096,10 +5123,11 @@ window.SERUMS_DATA = {
       "options": [
         "Evitar comunicarse con el paciente hasta que el lenguaje se recupere espontáneamente.",
         "Evaluar el tipo de afasia y diseñar un plan de rehabilitación del lenguaje, usando estrategias de comunicación de apoyo mientras tanto.",
-        "Hablar por el paciente en todo momento para evitar su frustración."
+        "Hablar por el paciente en todo momento para evitar su frustración.",
+        "Indicar únicamente ejercicios escritos, sin evaluar el tipo de afasia presente."
       ],
       "correct": 1,
-      "feedback": "Ante una afasia post-ACV se debe evaluar su tipo y diseñar un plan de rehabilitación del lenguaje, utilizando estrategias de comunicación de apoyo que reduzcan la frustración del paciente."
+      "feedback": "Ante una afasia post-ACV se debe evaluar su tipo y diseñar rehabilitación con estrategias de apoyo; evitar comunicarse, hablar por el paciente en todo momento o usar solo ejercicios escritos sin evaluar el tipo no son adecuados."
     },
     {
       "id": 228,
@@ -5142,10 +5170,11 @@ window.SERUMS_DATA = {
       "options": [
         "Indicar que no requiere evaluación porque no presenta síntomas visuales actuales.",
         "Realizar tamizaje de glaucoma, dado el antecedente familiar y la edad, y derivar según hallazgos.",
-        "Esperar a que presente pérdida de visión evidente para evaluar."
+        "Esperar a que presente pérdida de visión evidente para evaluar.",
+        "Indicar el uso de lentes con filtro, sin evaluación de la presión intraocular."
       ],
       "correct": 1,
-      "feedback": "El glaucoma suele ser asintomático en etapas iniciales; ante factores de riesgo como el antecedente familiar y la edad, corresponde realizar tamizaje oportuno."
+      "feedback": "El glaucoma suele ser asintomático inicialmente; ante factores de riesgo corresponde tamizar y derivar según hallazgos, sin esperar síntomas evidentes ni indicar lentes sin evaluar la presión intraocular."
     },
     {
       "id": 230,
@@ -5208,10 +5237,11 @@ window.SERUMS_DATA = {
       "options": [
         "Procesar la muestra sin priorización especial, según el orden habitual de llegada.",
         "Procesar la baciloscopía de forma prioritaria y comunicar el resultado oportunamente para iniciar manejo si corresponde.",
-        "Solicitar que el paciente regrese en una semana para la toma de muestra."
+        "Solicitar que el paciente regrese en una semana para la toma de muestra.",
+        "Procesar la muestra solo si el paciente presenta fiebre en el momento de la consulta."
       ],
       "correct": 1,
-      "feedback": "Ante sospecha de tuberculosis se debe priorizar el procesamiento de la baciloscopía y comunicar el resultado oportunamente, dada la relevancia de un diagnóstico y tratamiento tempranos."
+      "feedback": "Ante sospecha de tuberculosis se debe priorizar el procesamiento de la baciloscopía y comunicar el resultado oportunamente; procesar sin prioridad, postergar la toma de muestra o condicionarla a la presencia de fiebre no son adecuados."
     },
     {
       "id": 233,
@@ -5274,10 +5304,11 @@ window.SERUMS_DATA = {
       "options": [
         "Continuar la atención sin evaluar las condiciones de ventilación del ambiente.",
         "Evaluar y mejorar la ventilación de los ambientes de atención, como medida de control de infecciones de transmisión aérea.",
-        "Trasladar la atención a un ambiente aún más reducido para facilitar el control."
+        "Trasladar la atención a un ambiente aún más reducido para facilitar el control.",
+        "Indicar el uso exclusivo de mascarillas al personal, sin mejorar la ventilación del ambiente."
       ],
       "correct": 1,
-      "feedback": "La ventilación adecuada de los ambientes de atención es una medida clave de control de infecciones de transmisión aérea, como la tuberculosis, y debe evaluarse y mejorarse cuando sea deficiente."
+      "feedback": "La ventilación adecuada es clave en el control de infecciones de transmisión aérea como la tuberculosis; continuar sin evaluar, trasladar a un ambiente más reducido o solo usar mascarillas sin mejorar la ventilación no son adecuados."
     },
     {
       "id": 236,
