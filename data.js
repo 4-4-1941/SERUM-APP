@@ -5785,5 +5785,301 @@ window.SERUMS_DATA = {
   ],
   "scoreKey": "score",
   "caseStateKey": "caseState",
-  "notesKey": "notes"
+  "notesKey": "notes",
+  "glossary": [
+    {
+      "category": "Epidemiología y Salud Pública",
+      "terms": [
+        {
+          "term": "Incidencia",
+          "definition": "Número de casos nuevos de una enfermedad que aparecen en una población durante un periodo determinado. Mide la velocidad de aparición de la enfermedad."
+        },
+        {
+          "term": "Prevalencia",
+          "definition": "Número total de casos (nuevos y antiguos) de una enfermedad presentes en una población en un momento o periodo dado. Depende de la incidencia y de la duración de la enfermedad."
+        },
+        {
+          "term": "Tasa",
+          "definition": "Medida que incluye el factor tiempo en el denominador (por ejemplo, casos por 1000 habitantes-año). Expresa la velocidad con la que ocurre un evento."
+        },
+        {
+          "term": "Proporción",
+          "definition": "Relación entre una parte y el total, sin incluir el factor tiempo en el denominador. Se expresa habitualmente como porcentaje."
+        },
+        {
+          "term": "Riesgo relativo (RR)",
+          "definition": "Compara la probabilidad de que ocurra un evento en el grupo expuesto frente al grupo no expuesto. Un RR de 2 indica el doble de probabilidad en los expuestos."
+        },
+        {
+          "term": "Sensibilidad",
+          "definition": "Capacidad de una prueba diagnóstica para detectar correctamente a los verdaderos enfermos (minimiza los falsos negativos)."
+        },
+        {
+          "term": "Especificidad",
+          "definition": "Capacidad de una prueba diagnóstica para identificar correctamente a los verdaderos sanos (minimiza los falsos positivos)."
+        },
+        {
+          "term": "Valor predictivo positivo (VPP)",
+          "definition": "Probabilidad de que una persona con resultado positivo en la prueba realmente tenga la enfermedad."
+        },
+        {
+          "term": "Valor predictivo negativo (VPN)",
+          "definition": "Probabilidad de que una persona con resultado negativo en la prueba realmente no tenga la enfermedad."
+        },
+        {
+          "term": "Prevención primaria",
+          "definition": "Busca evitar la aparición de la enfermedad mediante promoción de la salud y protección específica (ej. vacunación)."
+        },
+        {
+          "term": "Prevención secundaria",
+          "definition": "Busca la detección temprana de la enfermedad, generalmente asintomática, mediante tamizaje (ej. Papanicolaou)."
+        },
+        {
+          "term": "Prevención terciaria",
+          "definition": "Busca reducir las secuelas y complicaciones de una enfermedad ya establecida mediante rehabilitación."
+        },
+        {
+          "term": "Prevención cuaternaria",
+          "definition": "Busca evitar la sobreintervención médica y la medicalización excesiva, protegiendo al paciente de procedimientos innecesarios."
+        },
+        {
+          "term": "Endemia",
+          "definition": "Presencia habitual y esperada de una enfermedad en una población, con un nivel de ocurrencia relativamente constante en el tiempo."
+        },
+        {
+          "term": "Epidemia",
+          "definition": "Incremento inusual y repentino de casos de una enfermedad por encima de lo esperado en una población y periodo determinados."
+        },
+        {
+          "term": "Pandemia",
+          "definition": "Propagación de una enfermedad a nivel mundial, afectando a varios países o continentes."
+        },
+        {
+          "term": "Historia natural de la enfermedad",
+          "definition": "Curso que sigue una enfermedad desde su inicio (fase prepatogénica) hasta su resolución, sin intervención médica."
+        },
+        {
+          "term": "Vigilancia epidemiológica",
+          "definition": "Recolección, análisis e interpretación sistemática y continua de datos de salud, para orientar la planificación y respuesta oportuna."
+        },
+        {
+          "term": "Criterios de Bradford Hill",
+          "definition": "Conjunto de criterios (temporalidad, consistencia, fuerza de asociación, plausibilidad biológica, entre otros) usados para evaluar si una asociación es causal."
+        }
+      ]
+    },
+    {
+      "category": "Categorización de Establecimientos de Salud",
+      "terms": [
+        {
+          "term": "Categoría I-1",
+          "definition": "Puesto o posta de salud. Atención básica, generalmente sin médico permanente; primer contacto con la comunidad."
+        },
+        {
+          "term": "Categoría I-2",
+          "definition": "Puesto de salud con médico. Similar al I-1 pero con presencia médica en el establecimiento."
+        },
+        {
+          "term": "Categoría I-3",
+          "definition": "Centro de salud sin internamiento. Mayor capacidad resolutiva ambulatoria que el I-2, sin camas de hospitalización."
+        },
+        {
+          "term": "Categoría I-4",
+          "definition": "Centro de salud con internamiento. Similar al I-3, pero con camas para observación y hospitalización de corta estancia."
+        },
+        {
+          "term": "Categoría II-1 / II-2",
+          "definition": "Hospitales con especialidades básicas (medicina interna, cirugía, gineco-obstetricia, pediatría), con niveles crecientes de complejidad y especialización."
+        },
+        {
+          "term": "Categoría III-1",
+          "definition": "Hospital de alta complejidad, con especialidades y subespecialidades médico-quirúrgicas."
+        },
+        {
+          "term": "Categoría III-2",
+          "definition": "Instituto especializado. Máximo nivel de complejidad y capacidad resolutiva, con función de referencia nacional."
+        },
+        {
+          "term": "Sistema de referencia y contrarreferencia",
+          "definition": "Mecanismo que traslada al paciente al nivel de atención adecuado (referencia) y lo retorna con información clínica para continuar su seguimiento (contrarreferencia)."
+        },
+        {
+          "term": "Cartera de servicios",
+          "definition": "Conjunto de servicios de salud que un establecimiento está autorizado y en capacidad de ofrecer a la población, según su categoría."
+        },
+        {
+          "term": "UPSS",
+          "definition": "Unidad Productora de Servicios de Salud: unidad básica de organización de un establecimiento que concentra recursos para producir un tipo específico de servicio (consulta externa, hospitalización, emergencia, etc.)."
+        }
+      ]
+    },
+    {
+      "category": "Gestión en Salud",
+      "terms": [
+        {
+          "term": "PEI (Plan Estratégico Institucional)",
+          "definition": "Documento que establece los objetivos y la estrategia de una institución a largo plazo (usualmente varios años)."
+        },
+        {
+          "term": "POI (Plan Operativo Institucional)",
+          "definition": "Documento que traduce el PEI en actividades, metas y presupuesto concretos para el corto plazo (un año)."
+        },
+        {
+          "term": "POI Multianual",
+          "definition": "Instrumento de gestión que programa metas físicas y costeo para un horizonte de mediano plazo, usualmente los siguientes tres años."
+        },
+        {
+          "term": "Análisis FODA",
+          "definition": "Herramienta de diagnóstico que identifica Fortalezas, Oportunidades, Debilidades y Amenazas de una organización, para orientar la estrategia."
+        },
+        {
+          "term": "Misión, visión y valores",
+          "definition": "La misión explica la razón de ser de la institución; la visión describe el futuro deseado a largo plazo; los valores son los principios que guían su conducta."
+        },
+        {
+          "term": "ROF (Reglamento de Organización y Funciones)",
+          "definition": "Documento que define la estructura orgánica, funciones y responsabilidades de una institución."
+        },
+        {
+          "term": "MOP / MOF",
+          "definition": "Manual de Organización y Procedimientos (o Funciones): describe cómo se ejecutan los procesos y procedimientos dentro de la institución."
+        },
+        {
+          "term": "Cultura organizacional",
+          "definition": "Forma característica y arraigada de pensar y actuar de una institución, basada en creencias, valores y normas compartidas a lo largo del tiempo."
+        },
+        {
+          "term": "Clima organizacional",
+          "definition": "Percepción coyuntural del ambiente de trabajo por parte del personal; a diferencia de la cultura, es más cambiante y situacional."
+        },
+        {
+          "term": "Redes Integradas de Salud (RIS)",
+          "definition": "Modelo de organización que articula y coordina la atención entre distintos establecimientos de salud de una jurisdicción, para dar continuidad al usuario."
+        },
+        {
+          "term": "Aseguramiento Universal en Salud (AUS)",
+          "definition": "Política que busca garantizar el acceso de toda la población a servicios de salud de calidad, sin barreras económicas, a través del SIS u otros seguros."
+        },
+        {
+          "term": "Auditoría de caso",
+          "definition": "Revisión orientada a un evento específico (por ejemplo, un evento adverso grave) que amerita análisis inmediato, a diferencia de la auditoría regular programada."
+        },
+        {
+          "term": "Telesalud",
+          "definition": "Uso de tecnologías de la información y comunicación para brindar servicios de salud a distancia, incluyendo teleconsulta y teleorientación."
+        }
+      ]
+    },
+    {
+      "category": "Investigación",
+      "terms": [
+        {
+          "term": "Estudio descriptivo",
+          "definition": "Diseño que caracteriza la frecuencia o distribución de un fenómeno en una población, sin establecer relaciones causales."
+        },
+        {
+          "term": "Estudio analítico",
+          "definition": "Diseño que compara grupos para identificar asociaciones o diferencias entre variables (ej. casos y controles, cohortes)."
+        },
+        {
+          "term": "Estudio experimental",
+          "definition": "Diseño en el que el investigador manipula una variable y controla condiciones, permitiendo inferir relaciones de causa y efecto (ej. ensayo clínico aleatorizado)."
+        },
+        {
+          "term": "Estudio de casos y controles",
+          "definition": "Diseño observacional que parte de los casos existentes y compara su exposición previa con la de un grupo control; eficiente para enfermedades poco frecuentes."
+        },
+        {
+          "term": "Estudio de cohorte",
+          "definition": "Diseño observacional que sigue a un grupo de personas expuestas y no expuestas a lo largo del tiempo para observar la aparición de un evento."
+        },
+        {
+          "term": "Validez",
+          "definition": "Grado en que un instrumento mide realmente lo que pretende medir."
+        },
+        {
+          "term": "Confiabilidad",
+          "definition": "Grado en que un instrumento produce resultados consistentes en mediciones repetidas."
+        },
+        {
+          "term": "Consentimiento informado",
+          "definition": "Documento mediante el cual una persona adulta (o el tutor legal de un menor) autoriza su participación en un estudio o procedimiento, tras haber sido informada de objetivos, riesgos y beneficios."
+        },
+        {
+          "term": "Asentimiento informado",
+          "definition": "Autorización que brinda el propio menor de edad para participar en una investigación, adicional al consentimiento informado de su tutor legal."
+        },
+        {
+          "term": "Muestreo probabilístico",
+          "definition": "Método de selección de participantes en el que cada persona de la población tiene una probabilidad conocida de ser elegida, permitiendo generalizar los resultados."
+        },
+        {
+          "term": "Matriz de consistencia",
+          "definition": "Herramienta que organiza y verifica la coherencia entre los objetivos, preguntas, variables y métodos de un proyecto de investigación."
+        },
+        {
+          "term": "Estructura IMRD",
+          "definition": "Formato estándar de un informe de investigación: Introducción, Metodología, Resultados y Discusión."
+        },
+        {
+          "term": "Triangulación de métodos",
+          "definition": "Combinación de métodos cuantitativos y cualitativos (u otras fuentes de datos) en un mismo estudio, para aumentar la validez de los hallazgos."
+        }
+      ]
+    },
+    {
+      "category": "Bioética",
+      "terms": [
+        {
+          "term": "Autonomía",
+          "definition": "Principio que reconoce el derecho de cada persona a tomar decisiones informadas sobre su propio cuerpo y tratamiento."
+        },
+        {
+          "term": "Beneficencia",
+          "definition": "Principio que exige actuar siempre buscando el mayor beneficio y bienestar del paciente."
+        },
+        {
+          "term": "No maleficencia",
+          "definition": "Principio que exige evitar causar daño físico o psicológico al paciente."
+        },
+        {
+          "term": "Justicia",
+          "definition": "Principio que exige distribuir los recursos y la atención de salud de manera equitativa, sin discriminación."
+        },
+        {
+          "term": "Confidencialidad",
+          "definition": "Deber de proteger la información personal y clínica del paciente, compartiéndola solo con fines terapéuticos autorizados."
+        }
+      ]
+    },
+    {
+      "category": "Documentación Clínica y Sistemas de Información",
+      "terms": [
+        {
+          "term": "Historia Clínica (HC)",
+          "definition": "Documento médico legal, en soporte físico o electrónico, donde se registran los datos, la evolución y los actos de atención de un paciente."
+        },
+        {
+          "term": "Historia Clínica Electrónica (HCE)",
+          "definition": "Historia clínica soportada en medios electrónicos, que permite su almacenamiento y recuperación digital, refrendada mediante firma digital conforme a la normativa vigente."
+        },
+        {
+          "term": "Historia Clínica Informatizada",
+          "definition": "Historia clínica que utiliza medios electrónicos para su almacenamiento y recuperación, pero que NO emplea firma digital para refrendar su contenido; se diferencia de la HCE precisamente por la ausencia de firma digital."
+        },
+        {
+          "term": "FUA (Formato Único de Atención)",
+          "definition": "Documento que registra las prestaciones brindadas a un asegurado, utilizado para la valorización y el reporte de la atención ante el ente financiador (por ejemplo, el SIS)."
+        },
+        {
+          "term": "HIS (Health Information System)",
+          "definition": "Sistema de información en salud que recolecta y consolida datos clínicos, epidemiológicos y administrativos para la gestión y toma de decisiones."
+        },
+        {
+          "term": "CIE-10",
+          "definition": "Clasificación Internacional de Enfermedades, décima versión: sistema estandarizado de códigos alfanuméricos para registrar diagnósticos y motivos de consulta."
+        }
+      ]
+    }
+  ]
 };
