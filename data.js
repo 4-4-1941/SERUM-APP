@@ -3626,12 +3626,13 @@ window.SERUMS_DATA = {
       "statement": "Un usuario solicita un antibiótico sin receta médica para tratar síntomas compatibles con un cuadro viral.",
       "question": "¿Cuál es la conducta más adecuada del profesional de farmacia?",
       "options": [
-        "Dispensar el antibiótico solicitado sin ninguna orientación adicional.",
+        "Dispensar el antibiótico solicitado, sin ninguna orientación adicional.",
         "Explicar que el cuadro descrito no amerita antibiótico, orientar sobre manejo sintomático y derivar a evaluación médica si es necesario.",
-        "Recomendar un antibiótico distinto por cuenta propia para 'asegurar' la mejoría."
+        "Recomendar un antibiótico distinto por cuenta propia para \"asegurar\" la mejoría.",
+        "Indicar que tome el antibiótico solo si los síntomas empeoran en los próximos días."
       ],
       "correct": 1,
-      "feedback": "El uso racional de medicamentos exige orientar sobre el manejo adecuado del cuadro y evitar la dispensación innecesaria de antibióticos, que contribuye a la resistencia antimicrobiana."
+      "feedback": "El uso racional de medicamentos exige orientar sobre el manejo adecuado y evitar antibióticos innecesarios; dispensarlo sin orientación, sustituirlo por cuenta propia o condicionarlo al empeoramiento no son adecuados."
     },
     {
       "id": 161,
@@ -3739,11 +3740,12 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta correcta?",
       "options": [
         "Aceptar la reutilización de material de protección para no retrasar la atención.",
+        "Reutilizar el material solo con pacientes que parezcan estar sanos.",
         "Mantener el cumplimiento estricto de los protocolos de bioseguridad, sin importar la carga de trabajo.",
-        "Reutilizar el material solo con pacientes que parezcan estar sanos."
+        "Reducir el uso de material de protección solo en procedimientos de rutina para ahorrar insumos."
       ],
-      "correct": 1,
-      "feedback": "Los protocolos de bioseguridad deben cumplirse estrictamente en toda circunstancia, independientemente de la carga de trabajo, para proteger al personal y a los pacientes."
+      "correct": 2,
+      "feedback": "Los protocolos de bioseguridad deben cumplirse estrictamente sin importar la carga de trabajo; reutilizar el material, incluso solo con pacientes aparentemente sanos, o reducir su uso en procedimientos de rutina no son adecuados."
     },
     {
       "id": 166,
@@ -3808,10 +3810,11 @@ window.SERUMS_DATA = {
       "options": [
         "Atender solo las lesiones derivadas de las caídas ya ocurridas.",
         "Implementar un programa de evaluación de riesgo de caídas y ejercicios preventivos de equilibrio y fuerza.",
-        "Recomendar que los adultos mayores reduzcan su actividad física por completo."
+        "Recomendar que los adultos mayores reduzcan su actividad física por completo.",
+        "Indicar el uso de silla de ruedas de forma preventiva a todos los adultos mayores del programa."
       ],
       "correct": 1,
-      "feedback": "La prevención de caídas en el adulto mayor requiere evaluar el riesgo individual e implementar programas de ejercicios de equilibrio y fuerza, no la reducción total de la actividad física."
+      "feedback": "La prevención de caídas requiere evaluar el riesgo individual e implementar ejercicios de equilibrio y fuerza; atender solo lesiones, reducir toda actividad física o indicar silla de ruedas preventivamente no son adecuados."
     },
     {
       "id": 169,
@@ -3897,12 +3900,13 @@ window.SERUMS_DATA = {
       "statement": "En una comunidad rural, varias familias crían cerdos sin ningún control sanitario, y se han reportado casos de teniasis en la población.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Atender solo los casos humanos sin intervenir en la crianza animal.",
+        "Atender solo los casos humanos, sin intervenir en la crianza animal.",
         "Coordinar con salud pública el control sanitario de la crianza animal y educar a las familias en prácticas de crianza segura.",
-        "Recomendar eliminar toda la crianza de animales en la comunidad de forma inmediata."
+        "Recomendar eliminar toda la crianza de animales en la comunidad de forma inmediata.",
+        "Indicar tratamiento antiparasitario a la población, sin intervenir en la crianza animal."
       ],
       "correct": 1,
-      "feedback": "El control de enfermedades zoonóticas requiere coordinación entre salud animal y salud pública, junto con educación comunitaria en prácticas de crianza segura."
+      "feedback": "El control de zoonosis requiere coordinación entre salud animal y pública, junto con educación en crianza segura; atender solo lo humano, eliminar la crianza o solo tratar sin intervenir en la crianza no son adecuados."
     },
     {
       "id": 173,
@@ -3919,12 +3923,13 @@ window.SERUMS_DATA = {
       "statement": "Un criador reporta la muerte súbita de varias aves de corral en pocos días, sin causa aparente evidente.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Indicar que reemplace las aves fallecidas sin investigar la causa.",
+        "Indicar que reemplace las aves fallecidas, sin investigar la causa.",
         "Notificar el evento a la autoridad sanitaria correspondiente e investigar la posible causa antes de descartar riesgo zoonótico.",
-        "Esperar a que mueran más aves para confirmar si es un problema real."
+        "Esperar a que mueran más aves para confirmar si es un problema real.",
+        "Recomendar la venta inmediata de las aves restantes antes de que enfermen."
       ],
       "correct": 1,
-      "feedback": "Ante mortandad inusual de animales se debe notificar a la autoridad sanitaria e investigar la causa de forma oportuna, considerando el riesgo de enfermedades zoonóticas."
+      "feedback": "Ante mortandad inusual de animales se debe notificar e investigar la causa antes de descartar riesgo zoonótico; reemplazar sin investigar, esperar más muertes o vender las aves restantes no son adecuados."
     },
     {
       "id": 174,
@@ -3941,12 +3946,13 @@ window.SERUMS_DATA = {
       "statement": "En una comunidad rural se reportan varios casos de enfermedad diarreica aguda y se sospecha contaminación de la fuente de agua utilizada.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Tratar solo los casos clínicos sin evaluar la fuente de agua.",
+        "Tratar solo los casos clínicos, sin evaluar la fuente de agua.",
         "Realizar el análisis microbiológico del agua y coordinar las medidas correctivas necesarias con las autoridades competentes.",
-        "Indicar a la población que hierva el agua de forma indefinida sin investigar la fuente del problema."
+        "Indicar a la población que hierva el agua de forma indefinida, sin investigar la fuente del problema.",
+        "Clorar la fuente de agua de inmediato, sin un análisis microbiológico previo."
       ],
       "correct": 1,
-      "feedback": "Ante sospecha de contaminación hídrica se debe realizar el análisis microbiológico correspondiente y coordinar las medidas correctivas necesarias con las autoridades competentes."
+      "feedback": "Ante sospecha de contaminación hídrica se debe analizar el agua y coordinar medidas correctivas; tratar solo casos clínicos, hervir indefinidamente sin investigar o clorar sin análisis previo no son adecuados."
     },
     {
       "id": 175,
@@ -3965,10 +3971,11 @@ window.SERUMS_DATA = {
       "options": [
         "Limitar la intervención a la educación sanitaria, sin evaluar la infraestructura disponible.",
         "Evaluar la infraestructura de saneamiento existente y coordinar la implementación de soluciones técnicas adecuadas junto con educación sanitaria.",
-        "Esperar a que la comunidad gestione por sí misma la construcción de infraestructura."
+        "Esperar a que la comunidad gestione por sí misma la construcción de infraestructura.",
+        "Solicitar la construcción de un sistema de alcantarillado convencional como única solución posible."
       ],
       "correct": 1,
-      "feedback": "La mejora del saneamiento básico requiere evaluar la infraestructura existente e implementar soluciones técnicas adecuadas, complementadas con educación sanitaria a la comunidad."
+      "feedback": "En zonas rurales sin saneamiento se debe evaluar la infraestructura e implementar soluciones técnicas junto con educación; limitarse a educar, esperar gestión comunitaria propia o exigir solo alcantarillado convencional no son adecuados."
     },
     {
       "id": 176,
@@ -3985,12 +3992,13 @@ window.SERUMS_DATA = {
       "statement": "Un paciente refiere haber presentado una reacción cutánea severa tras iniciar un nuevo medicamento dispensado en el establecimiento.",
       "question": "¿Cuál es la conducta correcta del profesional de farmacia?",
       "options": [
-        "Registrar el caso solo en la historia clínica sin ninguna otra acción.",
+        "Registrar el caso solo en la historia clínica, sin ninguna otra acción.",
         "Notificar la reacción adversa al sistema de farmacovigilancia y orientar al paciente sobre los siguientes pasos.",
-        "Indicar al paciente que suspenda el medicamento sin informar a nadie más."
+        "Indicar al paciente que suspenda el medicamento, sin informar a nadie más.",
+        "Recomendar que el paciente acuda a otro establecimiento para continuar el tratamiento."
       ],
       "correct": 1,
-      "feedback": "Toda reacción adversa a medicamentos debe notificarse al sistema de farmacovigilancia, además de orientar adecuadamente al paciente sobre el manejo posterior."
+      "feedback": "Toda reacción adversa debe notificarse al sistema de farmacovigilancia y orientar al paciente; solo registrar en la historia clínica, indicar suspender sin informar a nadie o derivar a otro establecimiento sin notificar no son adecuados."
     },
     {
       "id": 177,
@@ -4120,12 +4128,13 @@ window.SERUMS_DATA = {
       "statement": "El personal que opera el equipo de rayos X en un establecimiento no cuenta con dosímetros personales ni realiza controles periódicos de exposición.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Continuar la operación del equipo sin ningún control de exposición.",
+        "Continuar la operación del equipo, sin ningún control de exposición.",
         "Implementar el uso de dosímetros personales y controles periódicos de exposición según la normativa de protección radiológica.",
-        "Reducir las horas de trabajo del personal sin implementar medidas de control específicas."
+        "Reducir las horas de trabajo del personal, sin implementar medidas de control específicas.",
+        "Rotar al personal cada mes entre distintas áreas, sin implementar dosimetría."
       ],
       "correct": 1,
-      "feedback": "La protección radiológica ocupacional exige el uso de dosímetros personales y controles periódicos de exposición, conforme a la normativa vigente."
+      "feedback": "La protección radiológica ocupacional exige dosímetros personales y controles periódicos; continuar sin control, solo reducir horas o rotar personal sin dosimetría no cumplen la normativa."
     },
     {
       "id": 183,
@@ -4304,12 +4313,13 @@ window.SERUMS_DATA = {
       "statement": "Varios trabajadores administrativos que usan pantallas de forma prolongada reportan fatiga visual y dolor de cabeza frecuente.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Indicar que reduzcan el uso de pantallas sin ninguna otra recomendación.",
+        "Indicar que reduzcan el uso de pantallas, sin ninguna otra recomendación.",
         "Evaluar la salud visual del personal y orientar en pausas visuales, iluminación adecuada y otras medidas preventivas.",
-        "Recomendar el uso de cualquier lente sin evaluación previa."
+        "Recomendar el uso de cualquier lente, sin evaluación previa.",
+        "Indicar el uso de lentes oscuros durante toda la jornada laboral, sin evaluación visual."
       ],
       "correct": 1,
-      "feedback": "Ante fatiga visual ocupacional se debe evaluar la salud visual del personal y orientar en medidas preventivas específicas, como pausas visuales e iluminación adecuada."
+      "feedback": "Ante fatiga visual ocupacional se debe evaluar la salud visual y orientar en medidas preventivas específicas; solo reducir pantallas, recomendar cualquier lente sin evaluación o lentes oscuros todo el día no son adecuados."
     },
     {
       "id": 191,
@@ -4326,12 +4336,13 @@ window.SERUMS_DATA = {
       "statement": "Tras una inundación en una zona rural, se reportan casos humanos compatibles con leptospirosis y presencia de roedores en la zona afectada.",
       "question": "¿Cuál es la conducta más adecuada del profesional veterinario?",
       "options": [
-        "Atender exclusivamente a los animales de la zona sin coordinar con salud pública.",
+        "Atender exclusivamente a los animales de la zona, sin coordinar con salud pública.",
         "Coordinar con salud pública el control de roedores y la vigilancia epidemiológica conjunta del evento.",
-        "Esperar a que se confirmen más casos humanos antes de intervenir."
+        "Esperar a que se confirmen más casos humanos antes de intervenir.",
+        "Recomendar la evacuación total de la zona afectada, sin coordinación con salud pública."
       ],
       "correct": 1,
-      "feedback": "Ante sospecha de leptospirosis tras un desastre, se debe coordinar con salud pública el control de roedores y la vigilancia epidemiológica conjunta, dado el carácter zoonótico de la enfermedad."
+      "feedback": "Ante sospecha de leptospirosis tras un desastre se debe coordinar con salud pública el control de roedores y la vigilancia conjunta; atender solo animales, esperar más casos o evacuar sin coordinación no son adecuados."
     },
     {
       "id": 192,
@@ -4350,10 +4361,11 @@ window.SERUMS_DATA = {
       "options": [
         "Eliminar a los animales callejeros como única medida de control.",
         "Implementar un programa de vacunación antirrábica y esterilización, con participación comunitaria.",
-        "No intervenir hasta que se reporte un caso humano de rabia."
+        "No intervenir hasta que se reporte un caso humano de rabia.",
+        "Indicar a la población que recoja a todos los animales callejeros en sus casas."
       ],
       "correct": 1,
-      "feedback": "El control de la población canina debe basarse en programas de vacunación antirrábica y esterilización con participación comunitaria, no en la eliminación de animales."
+      "feedback": "El control de la población canina debe basarse en vacunación y esterilización con participación comunitaria; eliminar animales, no intervenir hasta un caso humano o recoger animales en casas no son adecuados."
     },
     {
       "id": 193,
@@ -4372,10 +4384,11 @@ window.SERUMS_DATA = {
       "options": [
         "Realizar el monitoreo solo después de que se reporten los primeros casos de dengue.",
         "Implementar un sistema de vigilancia entomológica periódica que permita identificar y actuar sobre los criaderos antes de un brote.",
-        "Limitar la vigilancia a las viviendas que reporten síntomas compatibles con dengue."
+        "Limitar la vigilancia a las viviendas que reporten síntomas compatibles con dengue.",
+        "Fumigar toda la comunidad de forma mensual, sin vigilancia entomológica previa."
       ],
       "correct": 1,
-      "feedback": "La vigilancia entomológica periódica permite identificar criaderos y actuar preventivamente, antes de que ocurra un brote de dengue en la comunidad."
+      "feedback": "La vigilancia entomológica periódica permite actuar preventivamente antes de un brote; monitorear solo tras casos, limitarse a viviendas sintomáticas o fumigar sin vigilancia previa no son adecuados."
     },
     {
       "id": 194,
@@ -4416,10 +4429,11 @@ window.SERUMS_DATA = {
       "options": [
         "Continuar con la disposición conjunta para simplificar el proceso.",
         "Implementar un sistema de segregación, tratamiento y disposición final adecuado para los residuos biocontaminados según la normativa vigente.",
-        "Delegar todo el manejo de residuos a una empresa externa sin ninguna supervisión."
+        "Delegar todo el manejo de residuos a una empresa externa, sin ninguna supervisión.",
+        "Reducir la generación de residuos biocontaminados limitando los procedimientos invasivos."
       ],
       "correct": 1,
-      "feedback": "Los residuos biocontaminados deben segregarse, tratarse y disponerse conforme a la normativa vigente, para evitar riesgos sanitarios y ambientales."
+      "feedback": "Los residuos biocontaminados deben segregarse, tratarse y disponerse según normativa; la disposición conjunta, delegar sin supervisión o reducir solo procedimientos invasivos no resuelven el manejo adecuado."
     },
     {
       "id": 196,
@@ -5216,12 +5230,13 @@ window.SERUMS_DATA = {
       "statement": "Trabajadores de una granja lechera manipulan animales y productos sin ningún equipo de protección personal, en una zona con casos previos de brucelosis animal.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Continuar las labores sin ninguna medida de protección adicional.",
+        "Continuar las labores, sin ninguna medida de protección adicional.",
         "Implementar medidas de bioseguridad y protección personal, además de vigilancia sanitaria del hato y de los trabajadores expuestos.",
-        "Suspender toda actividad ganadera en la zona de forma indefinida."
+        "Suspender toda actividad ganadera en la zona de forma indefinida.",
+        "Indicar el uso de protección personal solo durante el ordeño, sin vigilancia sanitaria adicional."
       ],
       "correct": 1,
-      "feedback": "Ante riesgo de brucelosis se deben implementar medidas de bioseguridad y protección personal para los trabajadores, junto con vigilancia sanitaria del hato y de las personas expuestas."
+      "feedback": "Ante riesgo de brucelosis se deben implementar bioseguridad y vigilancia sanitaria del hato y trabajadores; continuar sin protección, suspender toda actividad o proteger solo durante el ordeño no son adecuados."
     },
     {
       "id": 231,
@@ -5238,12 +5253,13 @@ window.SERUMS_DATA = {
       "statement": "Se reportan casos de enfermedad neurológica en caballos de una zona con alta presencia de mosquitos vectores.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Atender solo a los animales enfermos sin notificar el evento.",
+        "Atender solo a los animales enfermos, sin notificar el evento.",
         "Notificar el evento a la autoridad sanitaria, investigar la causa y coordinar el control vectorial correspondiente.",
-        "Esperar a que se presenten casos humanos antes de tomar cualquier acción."
+        "Esperar a que se presenten casos humanos antes de tomar cualquier acción.",
+        "Sacrificar a todos los caballos de la zona, sin investigación previa de la causa."
       ],
       "correct": 1,
-      "feedback": "Ante sospecha de una enfermedad transmitida por vectores en animales se debe notificar, investigar la causa y coordinar el control vectorial de forma oportuna, dado su potencial riesgo para la salud humana."
+      "feedback": "Ante enfermedad neurológica animal transmitida por vectores se debe notificar, investigar y controlar vectores; atender sin notificar, esperar casos humanos o sacrificar sin investigación no son adecuados."
     },
     {
       "id": 232,
@@ -5283,12 +5299,13 @@ window.SERUMS_DATA = {
       "statement": "Se reportan varios casos de enfermedad diarreica aguda asociados al consumo de alimentos de un mercado local.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Cerrar el mercado de forma indefinida sin ninguna investigación previa.",
+        "Cerrar el mercado de forma indefinida, sin ninguna investigación previa.",
         "Realizar análisis microbiológico de los alimentos sospechosos y coordinar las medidas correctivas con la autoridad sanitaria.",
-        "Esperar a que se reporten más casos antes de investigar."
+        "Esperar a que se reporten más casos antes de investigar.",
+        "Prohibir la venta de todos los alimentos del mercado, sin identificar la fuente específica."
       ],
       "correct": 1,
-      "feedback": "Ante sospecha de enfermedad transmitida por alimentos se debe realizar el análisis microbiológico correspondiente y coordinar las medidas correctivas con la autoridad sanitaria."
+      "feedback": "Ante sospecha de ETA se debe analizar los alimentos sospechosos y coordinar medidas correctivas; cerrar sin investigar, esperar más casos o prohibir todo sin identificar la fuente no son adecuados."
     },
     {
       "id": 234,
@@ -5305,12 +5322,13 @@ window.SERUMS_DATA = {
       "statement": "Una comunidad rural utiliza como fuente de agua un río cercano a terrenos de cultivo con uso intensivo de agroquímicos.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Indicar que la población continúe usando la fuente sin ninguna evaluación.",
+        "Indicar que la población continúe usando la fuente, sin ninguna evaluación.",
         "Evaluar la calidad del agua, coordinar medidas de mitigación y orientar sobre fuentes alternativas mientras se resuelve el problema.",
-        "Prohibir toda actividad agrícola en la zona sin evaluación previa."
+        "Prohibir toda actividad agrícola en la zona, sin evaluación previa.",
+        "Indicar a la población que consuma únicamente agua embotellada de forma permanente, sin evaluar la fuente."
       ],
       "correct": 1,
-      "feedback": "Ante sospecha de contaminación hídrica por agroquímicos se debe evaluar la calidad del agua, coordinar medidas de mitigación y orientar sobre fuentes alternativas mientras se soluciona el problema."
+      "feedback": "Ante sospecha de contaminación por agroquímicos se debe evaluar el agua, mitigar y orientar sobre alternativas; continuar sin evaluar, prohibir toda la agricultura sin evaluación o exigir agua embotellada permanente no son adecuados."
     },
     {
       "id": 235,
