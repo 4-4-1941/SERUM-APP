@@ -5794,6 +5794,30 @@ window.SERUMS_DATA = {
       "title": "Modificatorias recientes al Reglamento del SERUMS",
       "summary": "Actualizaciones más recientes identificadas al Reglamento de la Ley N.° 23330.",
       "detail": "Confirman que el marco normativo del SERUMS se actualiza de forma periódica; se recomienda verificar cada proceso convocatoria contra la versión vigente publicada en El Peruano y en el portal institucional del MINSA."
+    },
+    {
+      "code": "NTS N.° 214-MINSA/DGIESP-2024",
+      "title": "Norma Técnica de Salud para la Atención Integral de Salud Neonatal",
+      "summary": "Aprobada por R.M. N.° 545-2024/MINSA. Establece los procedimientos para la atención inmediata, integral y de seguimiento del recién nacido, incluyendo signos de alarma y coordinación con la atención materna.",
+      "detail": "Sistematiza las intervenciones sanitarias para garantizar la adaptación extrauterina y reducir riesgos, daños y muerte neonatal, incluyendo el contacto piel a piel, la lactancia materna exclusiva y el seguimiento del recién nacido de alto riesgo."
+    },
+    {
+      "code": "NTS N.° 215-MINSA-DGIESP-2024",
+      "title": "Norma Técnica de Salud: Seguridad y Salud en el Trabajo del Sistema de Salud",
+      "summary": "Aprobada por R.M. N.° 826-2024-MINSA. Establece los componentes del Sistema de Gestión de Seguridad y Salud en el Trabajo (SGSST) y los criterios de vigilancia de la salud de los trabajadores del sistema de salud.",
+      "detail": "Aplica a IAFAS, IPRESS, gobiernos regionales y locales, sanidad de las Fuerzas Armadas y la Policía Nacional, entre otras entidades. Regula la conformación de Comités de Seguridad y Salud en el Trabajo (CSST) y la prevención de accidentes laborales y enfermedades profesionales en el personal de salud."
+    },
+    {
+      "code": "NTS N.° 227-MINSA/CDC-2025",
+      "title": "Norma Técnica de Salud para la Vigilancia Epidemiológica de la Muerte Materna en el Perú",
+      "summary": "Aprobada por R.M. N.° 272-2025/MINSA. Establece las disposiciones y procedimientos para la vigilancia epidemiológica de la muerte materna a nivel nacional.",
+      "detail": "Estandariza la notificación, investigación epidemiológica y autopsia verbal de muerte materna, incorporando la notificación de muerte materna tardía y por secuela obstétrica, así como la búsqueda activa comunitaria."
+    },
+    {
+      "code": "NTS N.° 228-MINSA/CDC-2025",
+      "title": "Norma Técnica de Salud para la Vigilancia Epidemiológica en el Contexto de la Eliminación de la Malaria en el Perú",
+      "summary": "Aprobada por R.M. N.° 273-2025/MINSA. Estandariza los procedimientos de investigación epidemiológica orientados a la eliminación de la malaria en el país.",
+      "detail": "Define los escenarios de riesgo y los procedimientos de investigación epidemiológica de casos de malaria, en el marco de las Redes Integradas de Salud (RIS) y con participación de agentes comunitarios de salud."
     }
   ],
   "resources": [
