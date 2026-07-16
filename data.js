@@ -292,11 +292,12 @@ window.SERUMS_DATA = {
       "question": "¿Qué debe hacerse?",
       "options": [
         "Proceder sin explicación para no retrasar la atención.",
-        "Brindar información comprensible y asegurar consentimiento informado.",
-        "Pedir que firme sin aclarar dudas."
+        "Brindar información comprensible en su idioma o con apoyo de intérprete, y asegurar el consentimiento informado.",
+        "Pedir que firme el documento sin aclarar dudas, dado que acompaña a un familiar.",
+        "Posponer el procedimiento de forma indefinida hasta que aprenda español."
       ],
       "correct": 1,
-      "feedback": "La atención ética exige información comprensible y consentimiento informado."
+      "feedback": "Ante una barrera idiomática se debe brindar información comprensible (en su idioma o con intérprete) y asegurar el consentimiento informado; proceder sin explicar, firmar sin aclarar dudas o postergar indefinidamente no son adecuados."
     },
     {
       "id": 14,
@@ -544,12 +545,13 @@ window.SERUMS_DATA = {
       "statement": "Niño de 8 años presenta lesiones en distintas fases de curación y evita hablar sobre el origen de las mismas.",
       "question": "¿Cuál es la conducta correcta?",
       "options": [
-        "Ignorar el hallazgo si el acompañante lo justifica.",
-        "Documentar hallazgos, activar protocolo de protección y notificar según norma.",
-        "Confrontar directamente al acompañante frente al niño."
+        "Ignorar el hallazgo si el acompañante lo justifica con una explicación verosímil.",
+        "Confrontar directamente al acompañante frente al niño para obtener una confesión.",
+        "Documentar los hallazgos, activar el protocolo de protección y notificar según norma.",
+        "Solicitar una evaluación en un mes para observar si las lesiones se repiten."
       ],
-      "correct": 1,
-      "feedback": "Ante sospecha de maltrato infantil corresponde documentar, activar el protocolo de protección y notificar a la autoridad competente."
+      "correct": 2,
+      "feedback": "Ante sospecha de maltrato infantil se debe documentar, activar protección y notificar según norma; ignorar el hallazgo, confrontar frente al niño o postergar la evaluación no son adecuados."
     },
     {
       "id": 25,
@@ -635,12 +637,13 @@ window.SERUMS_DATA = {
       "statement": "Persona migrante de zona altoandina a la ciudad presenta tristeza persistente, aislamiento y añoranza intensa de su lugar de origen.",
       "question": "¿Cuál es la intervención más pertinente?",
       "options": [
-        "Indicar que debe olvidar su lugar de origen para adaptarse.",
-        "Reconocer el duelo migratorio, validar su proceso cultural y ofrecer acompañamiento psicológico.",
-        "Derivar sin brindar ninguna orientación previa."
+        "Indicar que debe olvidar su lugar de origen para adaptarse más rápido.",
+        "Derivar sin brindar ninguna orientación previa sobre lo que le sucede.",
+        "Recomendar que evite todo contacto con personas de su lugar de origen para evitar la añoranza.",
+        "Reconocer el duelo migratorio, validar su proceso cultural y ofrecer acompañamiento psicológico."
       ],
-      "correct": 1,
-      "feedback": "El duelo migratorio debe reconocerse y abordarse con sensibilidad cultural y acompañamiento psicológico adecuado."
+      "correct": 3,
+      "feedback": "El duelo migratorio debe reconocerse y abordarse con acompañamiento psicológico y sensibilidad cultural; pedir que olvide su origen, no orientar o aislarlo de su comunidad de origen no son adecuados."
     },
     {
       "id": 29,
@@ -704,12 +707,13 @@ window.SERUMS_DATA = {
       "statement": "Escolar de 12 años presenta tristeza persistente, rechazo a asistir al colegio y refiere ser víctima de burlas reiteradas por sus compañeros.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Indicar que ignore las burlas y continúe asistiendo normalmente.",
+        "Indicar que ignore las burlas y continúe asistiendo normalmente al colegio.",
         "Evaluar el impacto emocional, coordinar con la escuela y brindar acompañamiento psicológico.",
-        "Recomendar cambio de colegio sin evaluación previa."
+        "Recomendar cambio de colegio de inmediato, sin evaluación previa del caso.",
+        "Sugerir que evite contar lo sucedido a sus padres para no preocuparlos."
       ],
       "correct": 1,
-      "feedback": "Ante acoso escolar con síntomas depresivos se debe evaluar el impacto emocional, coordinar con la institución educativa y brindar acompañamiento."
+      "feedback": "Ante acoso escolar con síntomas depresivos se debe evaluar el impacto emocional, coordinar con la escuela y acompañar psicológicamente; ignorar las burlas, cambiar de colegio sin evaluación u ocultarlo a la familia no son adecuados."
     },
     {
       "id": 32,
@@ -796,12 +800,13 @@ window.SERUMS_DATA = {
       "statement": "Pareja acude relatando discusiones con agresiones mutuas recientes, sin lesiones graves hasta el momento.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Atender a la pareja junta desde la primera sesión sin evaluar riesgo individual.",
+        "Atender a la pareja junta desde la primera sesión, sin evaluar riesgo individual.",
         "Evaluar el riesgo de cada persona por separado antes de decidir el abordaje y posible derivación.",
-        "Indicar que resuelvan el conflicto por su cuenta."
+        "Indicar que resuelvan el conflicto por su cuenta antes de una próxima cita.",
+        "Derivar directamente a terapia de pareja, sin evaluación individual previa."
       ],
       "correct": 1,
-      "feedback": "Ante violencia de pareja se debe evaluar el riesgo de cada persona por separado antes de definir el abordaje."
+      "feedback": "Ante violencia cruzada en pareja se debe evaluar el riesgo de cada persona por separado antes de definir el abordaje; atenderlos juntos desde el inicio, dejarlos resolverlo solos o derivar a terapia de pareja sin evaluación individual no son adecuados."
     },
     {
       "id": 36,
@@ -1256,12 +1261,13 @@ window.SERUMS_DATA = {
       "statement": "Usuaria desea iniciar un método anticonceptivo, pero su pareja se opone y ejerce presión para que no lo haga.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Negar el método hasta contar con autorización de la pareja.",
+        "Negar el método hasta contar con la autorización de la pareja.",
         "Respetar la autonomía de la usuaria, brindar consejería confidencial y ofrecer el método que decida.",
-        "Indicar que espere a que la pareja cambie de opinión."
+        "Indicar que espere a que la pareja cambie de opinión antes de decidir.",
+        "Sugerir que informe a su pareja del método antes de que el profesional lo entregue."
       ],
       "correct": 1,
-      "feedback": "Debe respetarse la autonomía reproductiva de la usuaria, brindando consejería confidencial y el método que ella decida.",
+      "feedback": "Debe respetarse la autonomía reproductiva de la usuaria con consejería confidencial; negar el método, esperar la aprobación de la pareja o exigir que le informe antes de entregarlo no son adecuados.",
       "interdisciplinaryNote": "Psicología puede apoyar si se identifican señales de violencia o control en la relación de pareja."
     },
     {
@@ -1325,12 +1331,13 @@ window.SERUMS_DATA = {
       "statement": "Adolescente de 15 años acude a su primer control prenatal acompañada de su madre, mostrándose retraída durante la consulta.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Atender solo el aspecto obstétrico sin explorar el contexto psicosocial.",
+        "Atender solo el aspecto obstétrico, sin explorar el contexto psicosocial.",
         "Brindar atención obstétrica integral, explorar el contexto psicosocial y de riesgo, y coordinar apoyo interdisciplinario.",
-        "Indicar que la madre responda todas las preguntas en su lugar."
+        "Indicar que la madre responda todas las preguntas en su lugar.",
+        "Postergar la exploración psicosocial hasta que la adolescente se muestre más cómoda por sí sola."
       ],
       "correct": 1,
-      "feedback": "El embarazo adolescente requiere atención obstétrica integral junto con exploración del contexto psicosocial y apoyo interdisciplinario.",
+      "feedback": "El embarazo adolescente requiere atención obstétrica integral y exploración psicosocial coordinada; atender solo lo obstétrico, dejar que la madre responda por ella o postergar la exploración psicosocial no son adecuados.",
       "interdisciplinaryNote": "Psicología debe explorar posibles señales de violencia, abuso o riesgo psicosocial asociado al embarazo adolescente."
     },
     {
@@ -1350,10 +1357,11 @@ window.SERUMS_DATA = {
       "options": [
         "Repetir el mismo patrón de atención para no prolongar la consulta.",
         "Explicar los procedimientos en lenguaje comprensible, respetar su autonomía y garantizar un trato digno.",
-        "Realizar los procedimientos sin informar previamente para agilizar la atención."
+        "Realizar los procedimientos sin informar previamente, para agilizar la atención.",
+        "Informar solo lo esencial, dado que ya tiene experiencia previa con controles."
       ],
       "correct": 1,
-      "feedback": "La atención debe garantizar información comprensible, respeto a la autonomía de la gestante y un trato digno en todo momento."
+      "feedback": "La atención debe garantizar información comprensible, autonomía y trato digno; repetir el mismo patrón deficiente, no informar previamente o informar solo lo mínimo no cumplen ese estándar."
     },
     {
       "id": 60,
@@ -1742,11 +1750,12 @@ window.SERUMS_DATA = {
       "question": "¿Qué tipo de diseño es más adecuado para este objetivo?",
       "options": [
         "Un estudio experimental con grupo control.",
+        "Un ensayo clínico aleatorizado.",
         "Un estudio descriptivo transversal.",
-        "Un ensayo clínico aleatorizado."
+        "Un estudio de cohorte prospectivo de cinco años."
       ],
-      "correct": 1,
-      "feedback": "Cuando el objetivo es describir la frecuencia de un fenómeno en un momento dado, sin manipular variables, el diseño descriptivo transversal es el más adecuado."
+      "correct": 2,
+      "feedback": "Cuando el objetivo es describir la frecuencia de un fenómeno en un momento dado, sin manipular variables, el diseño descriptivo transversal es el más adecuado; el experimental, el ensayo aleatorizado o la cohorte prospectiva no corresponden a este objetivo."
     },
     {
       "id": 77,
@@ -1765,10 +1774,11 @@ window.SERUMS_DATA = {
       "options": [
         "Obtener el asentimiento del adolescente y el consentimiento informado de su tutor legal.",
         "Aplicar los instrumentos sin informar a los adolescentes para no sesgar los resultados.",
-        "Solicitar únicamente la autorización de la dirección del colegio."
+        "Solicitar únicamente la autorización de la dirección del colegio.",
+        "Obtener solo el consentimiento del tutor legal, sin requerir el asentimiento del adolescente."
       ],
       "correct": 0,
-      "feedback": "En investigación con menores de edad se requiere el consentimiento informado del tutor legal y, adicionalmente, el asentimiento del propio adolescente, informando objetivos y riesgos del estudio."
+      "feedback": "En investigación con menores se requiere el consentimiento informado del tutor legal y el asentimiento del propio menor; omitir informar, pedir solo autorización institucional o prescindir del asentimiento del menor no son adecuados."
     },
     {
       "id": 78,
@@ -1785,12 +1795,13 @@ window.SERUMS_DATA = {
       "statement": "Un equipo de investigación quiere estudiar una enfermedad poco frecuente y busca un diseño observacional eficiente en tiempo y recursos.",
       "question": "¿Qué diseño es más apropiado para este objetivo?",
       "options": [
-        "Un estudio de casos y controles, que parte de los casos existentes y compara exposiciones previas.",
         "Un ensayo clínico aleatorizado.",
-        "Un estudio de cohorte prospectivo de varios años."
+        "Un estudio de casos y controles, que parte de los casos existentes y compara exposiciones previas.",
+        "Un estudio de cohorte prospectivo de varios años.",
+        "Un estudio descriptivo transversal de prevalencia."
       ],
-      "correct": 0,
-      "feedback": "Para enfermedades poco frecuentes, el estudio de casos y controles es más eficiente porque parte de los casos ya existentes, sin requerir el seguimiento prolongado de una cohorte."
+      "correct": 1,
+      "feedback": "Para enfermedades poco frecuentes, el estudio de casos y controles es más eficiente porque parte de los casos existentes; el ensayo aleatorizado, la cohorte prospectiva o un descriptivo transversal no son igual de eficientes para este objetivo."
     },
     {
       "id": 79,
@@ -1807,12 +1818,13 @@ window.SERUMS_DATA = {
       "statement": "Un investigador combina encuestas cuantitativas con entrevistas a profundidad para estudiar la adherencia terapéutica en un centro de salud mental.",
       "question": "¿Qué propósito cumple la combinación de ambos métodos?",
       "options": [
-        "Aumentar la validez de los hallazgos al contrastar información desde distintos enfoques.",
         "Reducir el tiempo total de la investigación.",
-        "Evitar la necesidad de un comité de ética."
+        "Evitar la necesidad de un comité de ética.",
+        "Aumentar la validez de los hallazgos al contrastar información desde distintos enfoques.",
+        "Simplificar el análisis estadístico al combinar ambos tipos de datos."
       ],
-      "correct": 0,
-      "feedback": "La triangulación de métodos cualitativos y cuantitativos fortalece la validez del estudio al permitir contrastar y complementar los hallazgos desde distintos enfoques."
+      "correct": 2,
+      "feedback": "La triangulación de métodos fortalece la validez al contrastar hallazgos desde distintos enfoques; no reduce necesariamente el tiempo, no exime del comité de ética ni simplifica por sí sola el análisis estadístico."
     },
     {
       "id": 80,
@@ -1829,12 +1841,13 @@ window.SERUMS_DATA = {
       "statement": "Un investigador recibe financiamiento de una institución con interés directo en los resultados de su estudio sobre eficacia terapéutica.",
       "question": "¿Qué debe hacer al publicar los resultados?",
       "options": [
-        "Declarar explícitamente la fuente de financiamiento y el posible conflicto de interés.",
         "Omitir la fuente de financiamiento para evitar cuestionamientos.",
-        "Publicar solo los resultados favorables a la institución financiadora."
+        "Declarar explícitamente la fuente de financiamiento y el posible conflicto de interés.",
+        "Publicar solo los resultados favorables a la institución financiadora.",
+        "Mencionar el financiamiento solo si un revisor lo solicita expresamente."
       ],
-      "correct": 0,
-      "feedback": "La transparencia exige declarar toda fuente de financiamiento y posibles conflictos de interés, permitiendo que los lectores evalúen la objetividad del estudio."
+      "correct": 1,
+      "feedback": "La transparencia exige declarar toda fuente de financiamiento y conflicto de interés al publicar; omitirla, publicar solo lo favorable o mencionarla solo si un revisor la pide no son adecuados."
     },
     {
       "id": 81,
@@ -1851,12 +1864,13 @@ window.SERUMS_DATA = {
       "statement": "Un psicólogo debe redactar el informe final de una investigación aplicada realizada en su establecimiento de salud.",
       "question": "¿Qué estructura debe seguir para facilitar su comprensión y réplica?",
       "options": [
-        "Introducción, metodología, resultados y discusión.",
         "Solo resultados y conclusiones, sin detallar el método.",
-        "Un resumen narrativo sin apartados diferenciados."
+        "Un resumen narrativo sin apartados diferenciados.",
+        "Introducción, metodología, resultados y discusión.",
+        "Metodología y discusión únicamente, sin una sección de resultados separada."
       ],
-      "correct": 0,
-      "feedback": "La estructura IMRD (introducción, metodología, resultados y discusión) es el formato estándar que facilita la comprensión, evaluación y réplica de un estudio."
+      "correct": 2,
+      "feedback": "La estructura IMRD (introducción, metodología, resultados y discusión) facilita la comprensión y réplica de un estudio; omitir el método, no diferenciar apartados o prescindir de resultados separados no cumplen ese objetivo."
     },
     {
       "id": 82,
@@ -2169,10 +2183,11 @@ window.SERUMS_DATA = {
       "options": [
         "Negar la atención hasta que acuda con un adulto responsable.",
         "Brindar consejería confidencial y orientación adecuada a su edad, respetando su autonomía progresiva.",
-        "Informar a los padres sin el consentimiento de la adolescente."
+        "Informar a los padres sin el consentimiento de la adolescente.",
+        "Brindar la orientación solicitada, pero solo si promete informar a sus padres después."
       ],
       "correct": 1,
-      "feedback": "La atención en salud sexual y reproductiva a adolescentes debe respetar la confidencialidad y la autonomía progresiva, brindando orientación apropiada a su edad."
+      "feedback": "La atención a adolescentes en salud sexual debe ser confidencial y respetar su autonomía progresiva; negar la atención, informar a los padres sin consentimiento o condicionar la orientación a que ella informe después no son adecuados."
     },
     {
       "id": 96,
@@ -2466,12 +2481,13 @@ window.SERUMS_DATA = {
       "statement": "Un paciente será sometido a un procedimiento menor y el personal se dispone a realizarlo directamente sin mayor explicación.",
       "question": "¿Cuál es la conducta correcta?",
       "options": [
-        "Realizar el procedimiento directamente para no demorar la atención.",
+        "Realizar el procedimiento directamente, para no demorar la atención.",
         "Explicar el procedimiento, sus riesgos y beneficios, y obtener el consentimiento informado antes de proceder.",
-        "Solicitar el consentimiento solo si el paciente pregunta al respecto."
+        "Solicitar el consentimiento solo si el paciente pregunta al respecto.",
+        "Informar brevemente después de realizado el procedimiento, dado que es de bajo riesgo."
       ],
       "correct": 1,
-      "feedback": "Todo procedimiento, incluso uno menor, requiere explicar riesgos y beneficios y obtener el consentimiento informado antes de proceder."
+      "feedback": "Todo procedimiento, incluso menor, requiere explicar riesgos/beneficios y obtener consentimiento informado antes de proceder; hacerlo directamente, condicionar el consentimiento a que pregunte o informar después no son adecuados."
     },
     {
       "id": 109,
@@ -2739,12 +2755,13 @@ window.SERUMS_DATA = {
       "statement": "Una gestante de una comunidad amazónica solicita que su parto se atienda respetando prácticas tradicionales de su cultura, como la posición vertical y la presencia de una partera comunitaria.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Negar la solicitud e imponer el protocolo estándar sin adaptaciones.",
-        "Adaptar la atención del parto a las prácticas culturales de la gestante siempre que no comprometan su seguridad clínica.",
-        "Derivar el caso a otro establecimiento sin intentar ninguna adaptación."
+        "Negar la solicitud e imponer el protocolo estándar, sin adaptaciones.",
+        "Adaptar la atención del parto a las prácticas culturales de la gestante, siempre que no comprometan su seguridad clínica.",
+        "Derivar el caso a otro establecimiento, sin intentar ninguna adaptación.",
+        "Aceptar todas las prácticas solicitadas sin evaluar su compatibilidad con la seguridad clínica."
       ],
       "correct": 1,
-      "feedback": "La atención del parto con pertinencia intercultural busca adaptar las prácticas culturales de la gestante, siempre que no se comprometa su seguridad clínica ni la del recién nacido."
+      "feedback": "La atención con pertinencia intercultural adapta prácticas culturales sin comprometer la seguridad clínica; negar sin adaptación, derivar sin intentarlo o aceptar todo sin evaluar seguridad no son adecuados."
     },
     {
       "id": 121,
@@ -2761,12 +2778,13 @@ window.SERUMS_DATA = {
       "statement": "Un usuario quechuahablante con manejo limitado del español acude a consulta psicológica y muestra dificultad para expresar lo que le sucede.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Continuar la consulta en español asumiendo que el usuario comprende lo esencial.",
+        "Continuar la consulta en español, asumiendo que el usuario comprende lo esencial.",
         "Gestionar apoyo de un intérprete o facilitador cultural para garantizar una comunicación efectiva.",
-        "Derivar sin brindar ninguna atención por la barrera idiomática."
+        "Derivar sin brindar ninguna atención, por la barrera idiomática.",
+        "Solicitar que un familiar traduzca el contenido completo de la consulta psicológica."
       ],
       "correct": 1,
-      "feedback": "Ante una barrera idiomática significativa se debe gestionar el apoyo de un intérprete o facilitador cultural para garantizar una atención efectiva y culturalmente pertinente."
+      "feedback": "Ante barrera idiomática significativa se debe gestionar apoyo de intérprete o facilitador cultural; continuar asumiendo comprensión, derivar sin atender o delegar la traducción a un familiar no garantizan una comunicación efectiva y confidencial."
     },
     {
       "id": 122,
@@ -2854,10 +2872,11 @@ window.SERUMS_DATA = {
       "options": [
         "Aplicar el taller a todo el personal sin ningún grupo de comparación.",
         "Incluir un grupo control que no reciba el taller, para comparar los resultados.",
-        "Medir la ansiedad solo después del taller, sin línea base previa."
+        "Medir la ansiedad solo después del taller, sin línea base previa.",
+        "Aplicar el taller solo a quienes voluntariamente decidan participar, sin grupo control."
       ],
       "correct": 1,
-      "feedback": "Un grupo control permite comparar los resultados y atribuir con mayor confianza el cambio observado al taller y no a otros factores."
+      "feedback": "Un grupo control permite comparar resultados y atribuir con mayor confianza el cambio al taller; aplicarlo sin comparación, medir solo después sin línea base o incluir solo voluntarios sin grupo control debilitan esa conclusión."
     },
     {
       "id": 126,
@@ -2876,10 +2895,11 @@ window.SERUMS_DATA = {
       "options": [
         "Asignar a los participantes según el orden de llegada al establecimiento.",
         "Aleatorizar la asignación a los grupos y, cuando sea posible, enmascarar quién recibe cada intervención.",
-        "Permitir que cada participante elija el grupo que prefiera."
+        "Permitir que cada participante elija el grupo que prefiera.",
+        "Asignar a los participantes según la gravedad percibida de su cuadro clínico."
       ],
       "correct": 1,
-      "feedback": "La aleatorización reduce sesgos de selección y el enmascaramiento reduce sesgos en la evaluación de resultados, fortaleciendo la validez del ensayo."
+      "feedback": "La aleatorización reduce sesgos de selección y el enmascaramiento reduce sesgos en la evaluación de resultados; asignar por orden de llegada, por elección propia o por gravedad percibida introduce sesgos evitables."
     },
     {
       "id": 127,
@@ -2898,10 +2918,11 @@ window.SERUMS_DATA = {
       "options": [
         "Que el instrumento sea corto, sin importar sus propiedades psicométricas.",
         "Que el instrumento mida lo que pretende medir (validez) y ofrezca resultados consistentes (confiabilidad).",
-        "Que el instrumento haya sido usado alguna vez en otro país, sin más verificación."
+        "Que el instrumento haya sido usado alguna vez en otro país, sin más verificación.",
+        "Que el instrumento sea de aplicación exclusivamente autoadministrada."
       ],
       "correct": 1,
-      "feedback": "Un instrumento adecuado debe ser válido (medir lo que pretende medir) y confiable (ofrecer resultados consistentes en distintas aplicaciones)."
+      "feedback": "Un instrumento adecuado debe ser válido (medir lo que pretende medir) y confiable (resultados consistentes); que sea corto, que se haya usado en otro país o que sea autoadministrado no garantizan por sí solos su idoneidad."
     },
     {
       "id": 128,
@@ -2920,10 +2941,11 @@ window.SERUMS_DATA = {
       "options": [
         "Aplicar directamente la encuesta a toda la muestra planificada.",
         "Realizar una prueba piloto en un grupo reducido para identificar y corregir problemas del instrumento.",
-        "Omitir cualquier prueba previa para ahorrar tiempo."
+        "Omitir cualquier prueba previa para ahorrar tiempo.",
+        "Solicitar la opinión de un solo experto sobre el instrumento, sin aplicarlo a nadie."
       ],
       "correct": 1,
-      "feedback": "La prueba piloto permite identificar problemas de comprensión o aplicación del instrumento y hacer ajustes antes de la aplicación a gran escala."
+      "feedback": "La prueba piloto permite identificar y corregir problemas del instrumento antes de la aplicación masiva; aplicar directamente a toda la muestra, omitir toda prueba previa o pedir solo la opinión de un experto sin aplicarlo no cumplen esa función."
     },
     {
       "id": 129,
@@ -2942,10 +2964,11 @@ window.SERUMS_DATA = {
       "options": [
         "Que la diferencia observada probablemente se debe al azar y no hay evidencia suficiente de un efecto real.",
         "Que el estudio está mal diseñado y debe descartarse por completo.",
-        "Que la diferencia es real aunque el análisis diga lo contrario."
+        "Que la diferencia es real aunque el análisis diga lo contrario.",
+        "Que se debe aumentar la muestra hasta obtener significancia estadística."
       ],
       "correct": 0,
-      "feedback": "Cuando una diferencia no es estadísticamente significativa, la interpretación adecuada es que no hay evidencia suficiente para afirmar que el efecto observado sea real y no producto del azar."
+      "feedback": "Cuando una diferencia no es estadísticamente significativa, la interpretación adecuada es que probablemente se deba al azar; descartar el estudio por completo, afirmar que la diferencia es real o solo aumentar la muestra para forzar significancia no son adecuados."
     },
     {
       "id": 130,
@@ -2964,10 +2987,11 @@ window.SERUMS_DATA = {
       "options": [
         "Convertir cada respuesta en un número sin considerar su contenido.",
         "Codificar y categorizar los relatos para identificar patrones y temas comunes.",
-        "Elegir solo las entrevistas que confirmen la hipótesis inicial."
+        "Elegir solo las entrevistas que confirmen la hipótesis inicial.",
+        "Resumir cada entrevista en una sola palabra clave, sin mayor análisis."
       ],
       "correct": 1,
-      "feedback": "El análisis cualitativo requiere codificar y categorizar la información para identificar patrones y temas relevantes en los relatos de los participantes."
+      "feedback": "El análisis cualitativo requiere codificar y categorizar la información para identificar patrones; convertir todo en números, elegir solo entrevistas que confirmen la hipótesis o resumir en una palabra clave no son adecuados."
     },
     {
       "id": 131,
@@ -2986,10 +3010,11 @@ window.SERUMS_DATA = {
       "options": [
         "Un consentimiento informado, para proteger a los participantes.",
         "Una matriz de consistencia, para asegurar la coherencia entre objetivos, preguntas, variables y métodos del estudio.",
-        "Un informe final, para publicar los resultados."
+        "Un informe final, para publicar los resultados.",
+        "Un cronograma de actividades, para organizar los tiempos del estudio."
       ],
       "correct": 1,
-      "feedback": "La matriz de consistencia organiza y verifica la coherencia entre los objetivos, preguntas, variables y métodos de un proyecto de investigación antes de ejecutarlo."
+      "feedback": "La matriz de consistencia organiza y verifica la coherencia entre objetivos, preguntas, variables y métodos; el consentimiento informado, el informe final o el cronograma cumplen funciones distintas dentro del proyecto."
     },
     {
       "id": 132,
@@ -3008,10 +3033,11 @@ window.SERUMS_DATA = {
       "options": [
         "Garantizar la venta del artículo a un mayor número de lectores.",
         "Evaluar la calidad metodológica y la validez del estudio antes de su difusión.",
-        "Reemplazar la necesidad de que los autores revisen su propio trabajo."
+        "Reemplazar la necesidad de que los autores revisen su propio trabajo.",
+        "Determinar el orden de autoría del artículo científico."
       ],
       "correct": 1,
-      "feedback": "La revisión por pares evalúa la calidad metodológica y la validez de un estudio antes de su publicación, funcionando como un control de calidad científico."
+      "feedback": "La revisión por pares evalúa la calidad metodológica y la validez del estudio antes de su publicación; no busca aumentar ventas, no reemplaza la revisión propia de los autores ni determina el orden de autoría."
     },
     {
       "id": 133,
@@ -3030,10 +3056,11 @@ window.SERUMS_DATA = {
       "options": [
         "Iniciar la recolección de datos de inmediato, dado que su intención es de mejora del servicio.",
         "Obtener la aprobación de un comité de ética en investigación que evalúe los riesgos y protecciones para los participantes.",
-        "Solicitar solo la autorización verbal del jefe del establecimiento."
+        "Solicitar solo la autorización verbal del jefe del establecimiento.",
+        "Informar verbalmente a los pacientes sin documentar su autorización."
       ],
       "correct": 1,
-      "feedback": "Todo estudio con participantes humanos, incluso con fines de mejora del servicio, requiere la aprobación de un comité de ética en investigación."
+      "feedback": "Todo estudio con participantes humanos requiere aprobación de un comité de ética en investigación; iniciar de inmediato, pedir solo autorización verbal del jefe o informar sin documentar no son adecuados, incluso con fines de mejora del servicio."
     },
     {
       "id": 134,
@@ -3052,10 +3079,11 @@ window.SERUMS_DATA = {
       "options": [
         "Un muestreo probabilístico, que dé a cada persona de la población una probabilidad conocida de ser seleccionada.",
         "Seleccionar únicamente a conocidos del investigador para facilitar el acceso.",
-        "Incluir solo a quienes acudan espontáneamente al establecimiento de salud."
+        "Incluir solo a quienes acudan espontáneamente al establecimiento de salud.",
+        "Un muestreo por cuotas basado en la disponibilidad de los participantes."
       ],
       "correct": 0,
-      "feedback": "El muestreo probabilístico permite que los resultados sean representativos y generalizables a la población de estudio, a diferencia de los muestreos por conveniencia."
+      "feedback": "El muestreo probabilístico permite que los resultados sean representativos y generalizables; seleccionar conocidos, incluir solo a quienes acuden espontáneamente o usar cuotas por disponibilidad no permiten esa generalización."
     },
     {
       "id": 135,
@@ -3072,12 +3100,13 @@ window.SERUMS_DATA = {
       "statement": "Durante una sesión, un paciente revela un plan concreto para dañar a una persona específica de su entorno cercano.",
       "question": "¿Cuál es la conducta correcta respecto a la confidencialidad?",
       "options": [
-        "Mantener absoluta confidencialidad sin excepción alguna.",
+        "Mantener absoluta confidencialidad, sin excepción alguna.",
         "Romper la confidencialidad de forma proporcional para alertar a quien está en riesgo y a las autoridades pertinentes.",
-        "Confrontar al paciente y terminar la atención de inmediato."
+        "Confrontar al paciente y terminar la atención de inmediato.",
+        "Registrar el plan en la historia clínica, sin alertar a nadie fuera del establecimiento."
       ],
       "correct": 1,
-      "feedback": "La confidencialidad tiene un límite ético y legal cuando existe un riesgo real e inminente para terceros, situación en la que corresponde alertar de forma proporcional a quien está en riesgo y a las autoridades."
+      "feedback": "Ante riesgo real e inminente para terceros se debe romper la confidencialidad de forma proporcional y alertar; mantenerla absoluta, confrontar y terminar la atención o solo registrar sin alertar a nadie no protegen a la persona en riesgo."
     },
     {
       "id": 136,
@@ -3094,12 +3123,13 @@ window.SERUMS_DATA = {
       "statement": "Un profesional de salud manifiesta objeción de conciencia frente a un procedimiento solicitado por una paciente dentro del marco legal vigente.",
       "question": "¿Cuál es la conducta correcta?",
       "options": [
-        "Negarse a atender sin ofrecer ninguna alternativa a la paciente.",
+        "Negarse a atender, sin ofrecer ninguna alternativa a la paciente.",
         "Respetar su objeción de conciencia y garantizar la derivación oportuna a otro profesional que sí pueda atender el caso.",
-        "Realizar el procedimiento en contra de sus convicciones para evitar la derivación."
+        "Realizar el procedimiento en contra de sus convicciones, para evitar la derivación.",
+        "Postergar la atención de forma indefinida hasta resolver su objeción personal."
       ],
       "correct": 1,
-      "feedback": "La objeción de conciencia debe respetarse, pero el profesional tiene el deber de garantizar que la paciente sea derivada oportunamente a otro profesional disponible."
+      "feedback": "La objeción de conciencia debe respetarse garantizando derivación oportuna; negarse sin alternativa, realizar el procedimiento contra sus convicciones o postergar indefinidamente no son adecuados."
     },
     {
       "id": 137,
@@ -3116,12 +3146,13 @@ window.SERUMS_DATA = {
       "statement": "Un usuario homosexual refiere haber recibido comentarios despectivos de otro trabajador de salud durante una atención previa en el mismo establecimiento.",
       "question": "¿Cuál es la conducta correcta del equipo de salud?",
       "options": [
-        "Minimizar la situación indicando que fue un malentendido sin mayor acción.",
+        "Minimizar la situación indicando que fue un malentendido, sin mayor acción.",
         "Escuchar la queja, documentar el hecho y activar los mecanismos internos para abordar la discriminación.",
-        "Indicar al usuario que acuda a otro establecimiento si no está conforme."
+        "Indicar al usuario que acuda a otro establecimiento si no está conforme.",
+        "Solicitar disculpas verbales del trabajador involucrado, sin ningún otro procedimiento adicional."
       ],
       "correct": 1,
-      "feedback": "Ante un reporte de discriminación se debe escuchar la queja, documentarla y activar los mecanismos institucionales para abordar el hecho y prevenir su repetición."
+      "feedback": "Ante un reporte de discriminación se debe escuchar, documentar y activar mecanismos institucionales; minimizarlo, remitir al usuario a otro lugar o solo pedir disculpas verbales no abordan el hecho de forma institucional."
     },
     {
       "id": 138,
@@ -3140,10 +3171,11 @@ window.SERUMS_DATA = {
       "options": [
         "Postergar la atención hasta que el paciente consiga un intérprete por su cuenta.",
         "Utilizar estrategias alternativas de comunicación disponibles (escritura, gestos, recursos visuales) y gestionar apoyo de interpretación si es posible.",
-        "Atender sin intentar ninguna estrategia de comunicación adicional."
+        "Atender sin intentar ninguna estrategia de comunicación adicional.",
+        "Solicitar que el paciente regrese acompañado en una próxima cita."
       ],
       "correct": 1,
-      "feedback": "Ante una barrera de comunicación por discapacidad se deben usar estrategias alternativas disponibles y gestionar apoyo de interpretación, garantizando una atención accesible y digna."
+      "feedback": "Ante barrera de comunicación por discapacidad se deben usar estrategias alternativas y gestionar interpretación; postergar la atención, no intentar nada o citar para otro día no garantizan una atención accesible inmediata."
     },
     {
       "id": 139,
@@ -3162,10 +3194,11 @@ window.SERUMS_DATA = {
       "options": [
         "Aceptar la solicitud de la familia y ocultar la información al paciente.",
         "Explorar los motivos de la familia y respetar el derecho del paciente a recibir información sobre su propia salud, según su capacidad de decisión.",
-        "Informar únicamente a la familia y evitar cualquier conversación con el paciente."
+        "Informar únicamente a la familia y evitar cualquier conversación con el paciente.",
+        "Informar al paciente solo si la familia lo autoriza expresamente."
       ],
       "correct": 1,
-      "feedback": "Cuando el paciente conserva su capacidad de decisión, se debe respetar su derecho a la información, explorando con empatía los motivos de la familia sin vulnerar la autonomía del paciente."
+      "feedback": "Cuando el paciente conserva capacidad de decisión se debe respetar su derecho a la información; ocultarla, informar solo a la familia o condicionar la información a la autorización familiar no respetan la autonomía del paciente."
     },
     {
       "id": 140,
@@ -3184,10 +3217,11 @@ window.SERUMS_DATA = {
       "options": [
         "Realizar la transfusión de todas formas, ignorando la voluntad del paciente.",
         "Respetar la decisión informada del paciente, explorar alternativas terapéuticas posibles y documentar el proceso.",
-        "Negar cualquier otro tratamiento si el paciente no acepta la transfusión."
+        "Negar cualquier otro tratamiento si el paciente no acepta la transfusión.",
+        "Solicitar la autorización de un familiar para decidir en lugar del paciente."
       ],
       "correct": 1,
-      "feedback": "Debe respetarse la decisión informada y competente del paciente sobre su propio cuerpo, explorando alternativas terapéuticas disponibles y documentando adecuadamente el proceso."
+      "feedback": "Debe respetarse la decisión informada y competente del paciente, explorando alternativas terapéuticas; transfundir ignorando su voluntad, negar todo otro tratamiento o decidir a través de un familiar no son adecuados."
     },
     {
       "id": 141,
@@ -3206,10 +3240,11 @@ window.SERUMS_DATA = {
       "options": [
         "Negar la atención hasta que regularice su situación migratoria.",
         "Brindar la atención de urgencia requerida y orientar sobre los procesos de regularización y aseguramiento disponibles.",
-        "Atender solo si puede pagar el costo total de forma particular."
+        "Atender solo si puede pagar el costo total de forma particular.",
+        "Derivar a un consulado extranjero antes de brindar cualquier atención."
       ],
       "correct": 1,
-      "feedback": "El acceso a la atención de urgencia no debe condicionarse a la situación migratoria; corresponde atender y luego orientar sobre los procesos de regularización y aseguramiento disponibles."
+      "feedback": "El acceso a la urgencia no debe condicionarse a la situación migratoria; negar la atención, exigir pago particular o derivar al consulado antes de atender no son adecuados."
     },
     {
       "id": 142,
@@ -3228,10 +3263,11 @@ window.SERUMS_DATA = {
       "options": [
         "Ignorar la relación entre el usuario y el intérprete, ya que no afecta la atención.",
         "Explorar con el usuario su comodidad con ese intérprete específico y resguardar la confidencialidad de lo tratado en consulta.",
-        "Suspender la atención por no contar con un intérprete profesional certificado."
+        "Suspender la atención por no contar con un intérprete profesional certificado.",
+        "Solicitar que el intérprete espere fuera del consultorio y continuar sin apoyo de comunicación."
       ],
       "correct": 1,
-      "feedback": "Cuando el intérprete tiene una relación personal previa con el usuario, se debe explorar su comodidad con esa situación y resguardar especialmente la confidencialidad de la información tratada."
+      "feedback": "Cuando el intérprete tiene relación personal previa se debe explorar la comodidad del usuario y resguardar la confidencialidad; ignorar la relación, suspender la atención o excluir al intérprete sin apoyo no son adecuados."
     },
     {
       "id": 143,
@@ -3426,10 +3462,11 @@ window.SERUMS_DATA = {
       "options": [
         "El tamaño de muestra fue demasiado grande para el análisis.",
         "El apoyo familiar podría actuar como variable de confusión no controlada, afectando la interpretación de la asociación encontrada.",
-        "El estudio no necesita considerar ninguna otra variable además de la principal."
+        "El estudio no necesita considerar ninguna otra variable además de la principal.",
+        "El diseño transversal impide calcular cualquier tipo de asociación estadística."
       ],
       "correct": 1,
-      "feedback": "Una variable de confusión no controlada, como el apoyo familiar, puede explicar parcial o totalmente una asociación observada, por lo que debe identificarse y controlarse en el análisis."
+      "feedback": "Una variable de confusión no controlada, como el apoyo familiar, puede explicar parcial o totalmente una asociación observada; el tamaño de muestra grande, ignorar otras variables o el diseño transversal en sí no son el problema principal aquí."
     },
     {
       "id": 152,
@@ -3448,10 +3485,11 @@ window.SERUMS_DATA = {
       "options": [
         "Un enfoque cuantitativo con un cuestionario estandarizado y análisis estadístico.",
         "Un enfoque cualitativo, mediante entrevistas a profundidad que permitan explorar significados y experiencias.",
-        "Un ensayo clínico aleatorizado con grupo control."
+        "Un ensayo clínico aleatorizado con grupo control.",
+        "Un estudio de cohorte que siga a los familiares durante varios años."
       ],
       "correct": 1,
-      "feedback": "Cuando el objetivo es comprender en profundidad significados y experiencias subjetivas, el enfoque cualitativo mediante entrevistas a profundidad es el más adecuado."
+      "feedback": "Cuando el objetivo es comprender en profundidad significados y experiencias subjetivas, el enfoque cualitativo mediante entrevistas es el más adecuado; el cuantitativo, el ensayo aleatorizado o una cohorte de seguimiento no cumplen ese propósito."
     },
     {
       "id": 153,
@@ -3470,10 +3508,11 @@ window.SERUMS_DATA = {
       "options": [
         "Excluir los datos atípicos sin explicación para lograr un resultado significativo.",
         "Analizar los datos atípicos con criterios metodológicos explícitos y reportar el proceso de forma transparente, sea cual sea el resultado.",
-        "Reportar solo el análisis que arroja significancia estadística."
+        "Reportar solo el análisis que arroja significancia estadística.",
+        "Excluir los datos atípicos únicamente si el asesor del estudio lo sugiere."
       ],
       "correct": 1,
-      "feedback": "La integridad en el análisis de datos exige criterios metodológicos explícitos y transparencia en el reporte, sin manipular la información para obtener un resultado deseado."
+      "feedback": "La integridad en el análisis exige criterios metodológicos explícitos y transparencia en el reporte; excluir datos sin explicación, reportar solo lo significativo o excluir solo si lo sugiere el asesor no son adecuados."
     },
     {
       "id": 154,
@@ -3492,10 +3531,11 @@ window.SERUMS_DATA = {
       "options": [
         "Presentar el hallazgo como una conclusión definitiva y generalizable a toda la población.",
         "Comunicar el hallazgo con las limitaciones del estudio, evitando conclusiones definitivas que no estén respaldadas por la evidencia disponible.",
-        "Omitir el tamaño de muestra y las limitaciones para simplificar el mensaje."
+        "Omitir el tamaño de muestra y las limitaciones para simplificar el mensaje.",
+        "Esperar a que el estudio se replique en otros países antes de comunicar cualquier hallazgo."
       ],
       "correct": 1,
-      "feedback": "La difusión responsable de resultados preliminares debe incluir las limitaciones del estudio, evitando conclusiones definitivas no respaldadas por la evidencia disponible."
+      "feedback": "La difusión responsable de hallazgos preliminares debe incluir las limitaciones del estudio; presentarlo como definitivo, omitir el tamaño de muestra o esperar réplicas internacionales antes de comunicar nada no son adecuados."
     },
     {
       "id": 155,
@@ -3651,10 +3691,11 @@ window.SERUMS_DATA = {
       "options": [
         "Asumir que el adulto mayor prefiere estar solo y no indagar más.",
         "Realizar una evaluación social integral, indagar la red de apoyo disponible y coordinar las medidas de protección que correspondan.",
-        "Derivar el caso sin realizar ninguna evaluación previa."
+        "Derivar el caso, sin realizar ninguna evaluación previa.",
+        "Solicitar que el propio adulto mayor contacte a sus familiares."
       ],
       "correct": 1,
-      "feedback": "Ante sospecha de abandono se debe realizar una evaluación social integral, indagar la red de apoyo del adulto mayor y coordinar las medidas de protección social que correspondan."
+      "feedback": "Ante sospecha de abandono se debe evaluar socialmente, indagar la red de apoyo y coordinar protección; asumir que prefiere soledad, derivar sin evaluar o pedirle al propio adulto mayor que contacte a su familia no son adecuados."
     },
     {
       "id": 162,
@@ -4590,10 +4631,11 @@ window.SERUMS_DATA = {
       "options": [
         "Indicar que son celos normales propios de una relación de pareja.",
         "Evaluar el riesgo asociado a las conductas de control descritas, dado que pueden ser un indicador temprano de violencia.",
-        "Sugerir que ella modifique su comportamiento para evitar los celos de su pareja."
+        "Sugerir que ella modifique su comportamiento para evitar los celos de su pareja.",
+        "Recomendar que hable con su pareja para que confíe más en ella."
       ],
       "correct": 1,
-      "feedback": "Las conductas de control y celotipia intensa deben evaluarse como posible indicador temprano de violencia de pareja, sin normalizarlas ni responsabilizar a la víctima."
+      "feedback": "Las conductas de control y celotipia intensa deben evaluarse como posible indicador temprano de violencia; normalizarlas, responsabilizar a la víctima o pedirle que genere más confianza no son adecuados."
     },
     {
       "id": 203,
@@ -5027,10 +5069,11 @@ window.SERUMS_DATA = {
       "options": [
         "Interpretar la dosis según lo más probable y dispensar de inmediato.",
         "Comunicarse con el prescriptor para confirmar la dosis exacta antes de dispensar el medicamento.",
-        "Dispensar la dosis mínima posible para evitar cualquier riesgo, sin confirmar con el prescriptor."
+        "Dispensar la dosis mínima posible para evitar cualquier riesgo, sin confirmar con el prescriptor.",
+        "Solicitar al paciente que consiga una nueva receta más legible antes de dispensar."
       ],
       "correct": 1,
-      "feedback": "Ante una receta ilegible o incompleta se debe confirmar con el prescriptor antes de dispensar, para evitar errores de dosificación que pongan en riesgo al paciente."
+      "feedback": "Ante una receta ilegible se debe confirmar con el prescriptor antes de dispensar; interpretar la dosis, dispensar la mínima sin confirmar o exigir al paciente conseguir otra receta no son adecuados."
     },
     {
       "id": 222,
@@ -5049,10 +5092,11 @@ window.SERUMS_DATA = {
       "options": [
         "Indicar que investiguen por su cuenta los programas disponibles.",
         "Realizar una evaluación social integral y orientar sobre los programas y beneficios disponibles para la familia.",
-        "Derivar el caso sin brindar ninguna orientación inicial."
+        "Derivar el caso, sin brindar ninguna orientación inicial.",
+        "Entregar un listado genérico de programas, sin evaluación previa de la situación familiar."
       ],
       "correct": 1,
-      "feedback": "Ante una familia con un miembro con discapacidad se debe realizar una evaluación social integral y orientar activamente sobre los programas y beneficios disponibles."
+      "feedback": "Ante una familia con un miembro con discapacidad se debe evaluar socialmente y orientar activamente sobre programas disponibles; pedirles que investiguen solos, derivar sin orientación o dar un listado genérico sin evaluación no son adecuados."
     },
     {
       "id": 223,
