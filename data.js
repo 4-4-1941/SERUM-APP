@@ -5815,6 +5815,466 @@ window.SERUMS_DATA = {
       ],
       "correct": 1,
       "feedback": "Ante un diagnóstico que requiere especial reserva, deben cumplirse los principios de respeto, probidad y eficiencia, que orientan el manejo adecuado y confidencial de la información sensible del paciente."
+    },
+    {
+      "id": 253,
+      "career": "Transversal",
+      "block": "Gestión",
+      "title": "Historia clínica informatizada",
+      "level": "I-2",
+      "specialty": "Gestión / Informática en salud",
+      "tags": [
+        "historia clínica",
+        "informática en salud",
+        "normativa"
+      ],
+      "statement": "Un establecimiento registra las atenciones en un sistema electrónico que permite almacenar y recuperar la información, pero el sistema no cuenta con firma digital.",
+      "question": "¿Cómo se clasifica este tipo de registro según la normativa vigente?",
+      "options": [
+        "Historia Clínica Electrónica, al tratarse de un sistema digital de registro.",
+        "Historia Clínica Informatizada, por almacenar y recuperar información sin firma digital.",
+        "Historia Clínica convencional, ya que no cumple los requisitos de un sistema electrónico.",
+        "HIS, al ser un sistema de información en salud de uso administrativo."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque la NTS N° 139 define como Historia Clínica Informatizada al registro que almacena y recupera información en medios electrónicos sin firma digital; ese matiz normativo es lo que diferencia la categoría. Llamarla Historia Clínica Electrónica ignora que ese término exige firma digital; considerarla convencional desconoce que sí usa un soporte electrónico; confundirla con el HIS mezcla un sistema de registro clínico con un sistema de información administrativa."
+    },
+    {
+      "id": 254,
+      "career": "Obstetricia",
+      "block": "Salud pública",
+      "title": "Vigilancia epidemiológica de muerte materna",
+      "level": "I-3",
+      "specialty": "Salud Pública / Obstetricia",
+      "tags": [
+        "muerte materna",
+        "vigilancia epidemiológica",
+        "notificación"
+      ],
+      "statement": "Una gestante fallece a los 20 días posparto por una causa relacionada con el embarazo, en un establecimiento I-3.",
+      "question": "¿Cuál es la acción prioritaria según la vigilancia epidemiológica de muerte materna?",
+      "options": [
+        "Registrar el caso únicamente en el libro de partos del establecimiento.",
+        "Notificar el caso de forma obligatoria e inmediata para su investigación epidemiológica.",
+        "Esperar el resultado de la autopsia antes de reportar el caso.",
+        "Derivar el caso a la instancia legal sin realizar notificación epidemiológica."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque la NTS N° 227 establece la notificación obligatoria e inmediata de toda muerte materna para activar su investigación epidemiológica, dado que el fallecimiento ocurre dentro del periodo de vigilancia (hasta 42 días posparto) y está asociado al embarazo. Registrar solo en el libro de partos no cumple con la notificación exigida; esperar la autopsia retrasa una investigación que debe iniciarse de inmediato; derivar solo a la vía legal omite el circuito epidemiológico obligatorio."
+    },
+    {
+      "id": 255,
+      "career": "Medicina",
+      "block": "Salud pública",
+      "title": "Vigilancia epidemiológica para eliminación de malaria",
+      "level": "I-3",
+      "specialty": "Salud Pública / Epidemiología",
+      "tags": [
+        "malaria",
+        "vigilancia epidemiológica",
+        "eliminación"
+      ],
+      "statement": "En una zona clasificada como de baja transmisión se detecta un caso confirmado de malaria sin antecedente de viaje reciente a zona endémica.",
+      "question": "¿Qué corresponde hacer según la vigilancia para la eliminación de malaria?",
+      "options": [
+        "Tratar al paciente y cerrar el caso sin notificación, por tratarse de un solo caso.",
+        "Notificar e investigar el caso para clasificarlo como autóctono o importado y activar la respuesta de eliminación.",
+        "Fumigar la vivienda de inmediato, sin esperar la confirmación diagnóstica del caso.",
+        "Esperar los resultados de referencia nacional antes de iniciar cualquier acción local."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque la NTS N° 228 exige notificar e investigar todo caso en zonas de baja transmisión para clasificarlo (autóctono o importado) y activar la respuesta oportuna, dado que esa clasificación determina el riesgo de reintroducción de la transmisión local. Tratar y cerrar sin notificar deja sin vigilancia un posible foco activo; fumigar antes de confirmar el diagnóstico salta un paso necesario del protocolo; esperar la referencia nacional sin actuar localmente retrasa la respuesta que debe iniciarse de inmediato."
+    },
+    {
+      "id": 256,
+      "career": "Transversal",
+      "block": "Gestión",
+      "title": "Seguridad y salud en el trabajo del personal de salud",
+      "level": "I-2",
+      "specialty": "Gestión / Seguridad ocupacional",
+      "tags": [
+        "seguridad y salud en el trabajo",
+        "accidente punzocortante",
+        "bioseguridad"
+      ],
+      "statement": "Un profesional de salud sufre un accidente punzocortante con una aguja usada durante su turno.",
+      "question": "¿Qué corresponde hacer de inmediato según la normativa de seguridad y salud en el trabajo?",
+      "options": [
+        "Notificar el incidente, activar el protocolo post-exposición e iniciar profilaxis según el riesgo evaluado.",
+        "Continuar con las labores habituales y reportar el incidente al finalizar el turno.",
+        "Autoevaluarse el riesgo sin notificar el caso al servicio correspondiente.",
+        "Esperar la aparición de síntomas antes de iniciar cualquier intervención."
+      ],
+      "correct": 0,
+      "feedback": "Es correcta porque la NTS N° 215 establece que todo accidente punzocortante debe notificarse de inmediato para activar el protocolo post-exposición y evaluar la profilaxis pertinente dentro de la ventana de tiempo eficaz. Reportar al final del turno retrasa una intervención que es tiempo-dependiente; autoevaluarse sin notificar omite el registro y seguimiento institucional obligatorios; esperar síntomas ignora que la profilaxis post-exposición pierde eficacia con el tiempo."
+    },
+    {
+      "id": 257,
+      "career": "Enfermería",
+      "block": "Salud pública",
+      "title": "Atención integral de salud neonatal",
+      "level": "I-2",
+      "specialty": "Salud Pública / Enfermería",
+      "tags": [
+        "salud neonatal",
+        "controles",
+        "tamizaje"
+      ],
+      "statement": "Un recién nacido a término, sin signos de alarma, es dado de alta tras el parto.",
+      "question": "¿Qué corresponde asegurar antes del alta según la atención integral de salud neonatal?",
+      "options": [
+        "Dar el alta sin programar ningún control posterior, al no presentar signos de alarma.",
+        "Programar los controles según el esquema establecido, incluyendo los tamizajes correspondientes.",
+        "Derivar a especialista de forma sistemática, sin indicación clínica específica.",
+        "Indicar únicamente lactancia materna, sin programar controles de seguimiento."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque la NTS N° 214 establece un esquema de controles y tamizajes obligatorios (metabólico, auditivo, entre otros) independientemente de la ausencia de signos de alarma al momento del alta. Dar de alta sin programar controles omite tamizajes con ventana de detección limitada; derivar a especialista sin indicación clínica no corresponde al flujo estándar; limitar la indicación a la lactancia deja sin programar los controles obligatorios del esquema."
+    },
+    {
+      "id": 258,
+      "career": "Obstetricia",
+      "block": "Salud pública",
+      "title": "Tamizaje de VIH en gestante",
+      "level": "I-2",
+      "specialty": "Salud Pública / DPVIH",
+      "tags": [
+        "VIH",
+        "tamizaje",
+        "consejería"
+      ],
+      "statement": "Gestante acude a su primer control prenatal y no ha sido tamizada para VIH.",
+      "question": "¿Qué corresponde según la estrategia de prevención de VIH en gestantes?",
+      "options": [
+        "Ofrecer la prueba de tamizaje de VIH con consejería, como parte de la atención prenatal de rutina.",
+        "Postergar el tamizaje hasta el tercer trimestre, salvo que la gestante lo solicite antes.",
+        "Realizar la prueba solo si la gestante refiere factores de riesgo evidentes.",
+        "Omitir el tamizaje si la gestante expresa no considerarse en riesgo."
+      ],
+      "correct": 0,
+      "feedback": "Es correcta porque la estrategia DPVIH incorpora el tamizaje de VIH con consejería como parte rutinaria del primer control prenatal, independientemente de factores de riesgo referidos, dado el impacto de la detección temprana en la prevención de transmisión vertical. Postergarlo al tercer trimestre retrasa una intervención con beneficio mayor cuanto más temprana; condicionarlo a factores de riesgo evidentes subestima que buena parte de los casos no los refiere; omitirlo por percepción propia de bajo riesgo no sustituye el tamizaje universal recomendado."
+    },
+    {
+      "id": 259,
+      "career": "Farmacia y Bioquímica",
+      "block": "Gestión",
+      "title": "Gestión de medicamentos e insumos",
+      "level": "I-3",
+      "specialty": "Gestión / DIGEMID",
+      "tags": [
+        "medicamentos",
+        "abastecimiento",
+        "gestión farmacéutica"
+      ],
+      "statement": "Un establecimiento presenta desabastecimiento recurrente de un medicamento esencial del petitorio.",
+      "question": "¿Qué acción corresponde según la gestión de medicamentos e insumos?",
+      "options": [
+        "Comprar el medicamento de forma directa a un proveedor externo, sin reportar el desabastecimiento.",
+        "Reportar el desabastecimiento al nivel correspondiente y activar el plan de contingencia establecido.",
+        "Suspender la atención de los pacientes que requieren ese medicamento, sin informar el motivo.",
+        "Sustituir el medicamento por cualquier otro disponible, sin evaluar equivalencia terapéutica."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque la gestión de medicamentos exige reportar el desabastecimiento al nivel correspondiente y activar el plan de contingencia, de forma que la respuesta quede registrada y pueda replicarse la solución a nivel de red. Comprar directo sin reportar evade el circuito de gestión establecido; suspender la atención sin informar afecta la continuidad del cuidado sin buscar alternativa; sustituir sin evaluar equivalencia terapéutica puede comprometer la eficacia del tratamiento."
+    },
+    {
+      "id": 260,
+      "career": "Enfermería",
+      "block": "Salud pública",
+      "title": "Ruptura de cadena de frío en vacunas",
+      "level": "I-2",
+      "specialty": "Salud Pública / DMUNI",
+      "tags": [
+        "inmunizaciones",
+        "cadena de frío",
+        "vacunas"
+      ],
+      "statement": "Un corte de energía afecta la refrigeradora de vacunas de un establecimiento durante seis horas.",
+      "question": "¿Qué corresponde hacer con las vacunas expuestas?",
+      "options": [
+        "Utilizar las vacunas con normalidad, sin verificar la temperatura registrada durante el corte.",
+        "Verificar la temperatura registrada, evaluar la vida útil de las vacunas expuestas según protocolo y decidir su descarte si corresponde.",
+        "Descartar todas las vacunas del establecimiento sin verificar la temperatura registrada.",
+        "Esperar el próximo lote de vacunas, sin evaluar el estado de las actuales."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque la normativa de cadena de frío exige verificar la temperatura registrada durante el evento y evaluar la vida útil de cada biológico expuesto según su termoestabilidad, antes de decidir su uso o descarte. Usarlas sin verificar arriesga aplicar dosis con potencia comprometida; descartar todas sin verificar genera una pérdida innecesaria de biológicos aún viables; esperar el próximo lote sin evaluar las actuales deja sin resolver el estado del stock disponible."
+    },
+    {
+      "id": 261,
+      "career": "Medicina",
+      "block": "Salud pública",
+      "title": "Dengue con signos de alarma",
+      "level": "I-3",
+      "specialty": "Salud Pública / DPCEM",
+      "tags": [
+        "dengue",
+        "metaxénicas",
+        "signos de alarma"
+      ],
+      "statement": "Paciente en zona endémica de dengue presenta fiebre de tres días y dolor abdominal intenso.",
+      "question": "¿Cuál es el manejo correspondiente según la vigilancia de enfermedades metaxénicas?",
+      "options": [
+        "Indicar manejo ambulatorio con control por consultorio externo en una semana.",
+        "Hospitalizar y monitorizar de forma estrecha los signos de alarma.",
+        "Indicar únicamente antipiréticos, sin evaluación adicional del cuadro.",
+        "Derivar a mayor complejidad sin estabilización previa en el establecimiento."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque el dolor abdominal intenso constituye un signo de alarma de dengue que exige hospitalización y monitoreo estrecho para detectar progresión a un cuadro grave. El manejo ambulatorio con control diferido no vigila la evolución en la ventana crítica; limitar la conducta a antipiréticos no aborda el signo de alarma ya presente; derivar sin estabilizar previamente expone al paciente durante el traslado."
+    },
+    {
+      "id": 262,
+      "career": "Transversal",
+      "block": "Gestión",
+      "title": "Continuidad de atención y aseguramiento SIS",
+      "level": "I-3",
+      "specialty": "Gestión / DGAIN",
+      "tags": [
+        "aseguramiento",
+        "SIS",
+        "continuidad de atención"
+      ],
+      "statement": "Paciente afiliado al SIS requiere referencia a un establecimiento de mayor complejidad y desconoce si el procedimiento está cubierto.",
+      "question": "¿Qué corresponde según la gestión del aseguramiento e intercambio prestacional?",
+      "options": [
+        "Condicionar la atención al pago previo del procedimiento por parte del paciente.",
+        "Verificar la cobertura del plan de beneficios y coordinar la continuidad de la atención sin interrumpirla por trámites administrativos.",
+        "Derivar al paciente sin verificar previamente su cobertura.",
+        "Negar la atención hasta que el paciente complete el trámite administrativo por su cuenta."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque la gestión del aseguramiento exige verificar la cobertura del plan de beneficios y coordinar la continuidad asistencial, correspondiendo al establecimiento gestionar el trámite sin trasladar esa carga al paciente ni interrumpir la atención. Condicionar la atención al pago contradice el principio de aseguramiento público; derivar sin verificar cobertura genera incertidumbre evitable en la red; negar la atención hasta que el paciente resuelva el trámite solo desatiende la continuidad asistencial."
+    },
+    {
+      "id": 263,
+      "career": "Tecnología Médica - Terapia del Lenguaje",
+      "block": "Cuidado integral",
+      "title": "Adecuación intercultural en la atención",
+      "level": "I-2",
+      "specialty": "Salud Pública / Interculturalidad",
+      "tags": [
+        "pueblos indígenas",
+        "interculturalidad",
+        "adecuación cultural"
+      ],
+      "statement": "Un establecimiento ubicado en zona con población indígena no cuenta con señalización ni protocolos adaptados a las prácticas culturales locales.",
+      "question": "¿Qué corresponde según el enfoque de adecuación intercultural de los servicios?",
+      "options": [
+        "Mantener el protocolo estándar del establecimiento, sin realizar ninguna adecuación.",
+        "Adecuar la prestación del servicio incorporando las prácticas y necesidades culturales de la población, sin renunciar a la calidad técnica.",
+        "Delegar la adecuación cultural únicamente al personal de origen local del establecimiento.",
+        "Limitar la adecuación a la traducción de carteles, sin modificar la organización del servicio."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque la adecuación intercultural implica incorporar las prácticas y necesidades culturales de la población en la organización del servicio, manteniendo el estándar técnico de la atención. Mantener el protocolo estándar ignora la pertinencia cultural exigida; delegar la adecuación solo al personal local no compromete a la institución en su conjunto; limitarla a traducir carteles reduce la adecuación intercultural a un gesto simbólico insuficiente."
+    },
+    {
+      "id": 264,
+      "career": "Odontología",
+      "block": "Cuidado integral",
+      "title": "Prevención de caries en escolar",
+      "level": "I-2",
+      "specialty": "Salud Bucal",
+      "tags": [
+        "salud bucal",
+        "prevención",
+        "caries"
+      ],
+      "statement": "Escolar de 8 años presenta caries múltiples sin antecedente de controles odontológicos previos.",
+      "question": "¿Cuál es el enfoque más adecuado según el programa de salud bucal?",
+      "options": [
+        "Aplicar sellantes y flúor, y derivar a tratamiento restaurador según necesidad, priorizando la prevención.",
+        "Realizar únicamente las exodoncias necesarias, sin abordar medidas preventivas.",
+        "Indicar solo educación en higiene oral, sin evaluación clínica de las piezas afectadas.",
+        "Postergar cualquier intervención hasta que el escolar presente dolor evidente."
+      ],
+      "correct": 0,
+      "feedback": "Es correcta porque el programa de salud bucal prioriza la prevención (sellantes, flúor) junto con el tratamiento restaurador según la necesidad clínica identificada, evitando enfocarse solo en lo curativo. Limitarse a exodoncias es una medida extrema que no atiende piezas recuperables; solo educar sin evaluación clínica deja sin tratar las caries ya presentes; postergar hasta que haya dolor permite la progresión evitable del daño dental."
+    },
+    {
+      "id": 265,
+      "career": "Tecnología Médica - Optometría",
+      "block": "Salud pública",
+      "title": "Tamizaje de enfermedades oculares en adulto mayor",
+      "level": "I-2",
+      "specialty": "Salud Pública / DENOT",
+      "tags": [
+        "salud ocular",
+        "tamizaje",
+        "enfermedades no transmisibles"
+      ],
+      "statement": "Adulto mayor refiere disminución progresiva de agudeza visual en los últimos meses, sin evaluación oftalmológica previa.",
+      "question": "¿Qué corresponde según el tamizaje de enfermedades oculares no transmisibles?",
+      "options": [
+        "Indicar que la disminución visual es esperable por la edad y no requiere evaluación adicional.",
+        "Realizar tamizaje visual y derivar para descartar catarata, glaucoma u otra causa tratable.",
+        "Prescribir lentes correctivos de forma directa, sin evaluación de causas subyacentes.",
+        "Derivar únicamente si el paciente refiere dolor ocular asociado."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque el tamizaje de enfermedades oculares no transmisibles exige evaluar y derivar ante disminución progresiva de agudeza visual, para descartar causas tratables como catarata o glaucoma antes de que generen daño irreversible. Atribuirlo solo a la edad omite causas prevenibles de ceguera; prescribir lentes sin evaluar la causa de fondo puede enmascarar una patología progresiva; condicionar la derivación a la presencia de dolor deja sin detectar cuadros que cursan sin ese síntoma."
+    },
+    {
+      "id": 266,
+      "career": "Obstetricia",
+      "block": "Cuidado integral",
+      "title": "Consejería en salud sexual y reproductiva en adolescente",
+      "level": "I-2",
+      "specialty": "Salud Sexual y Reproductiva",
+      "tags": [
+        "salud sexual y reproductiva",
+        "adolescencia",
+        "confidencialidad"
+      ],
+      "statement": "Adolescente de 16 años solicita información y acceso a métodos anticonceptivos, sin acompañamiento de sus padres.",
+      "question": "¿Qué corresponde según el enfoque de salud sexual y reproductiva del adolescente?",
+      "options": [
+        "Exigir la presencia de un adulto responsable como condición para cualquier atención.",
+        "Brindar consejería y acceso al método anticonceptivo, respetando la confidencialidad y autonomía progresiva del adolescente.",
+        "Negar el método por tratarse de una persona menor de edad.",
+        "Derivar a otro establecimiento sin brindar consejería en la consulta actual."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque el enfoque de salud sexual y reproductiva reconoce la autonomía progresiva del adolescente y su derecho a la confidencialidad, correspondiendo brindar consejería y acceso al método solicitado. Exigir un adulto como condición vulnera ese derecho reconocido; negar el método por la edad contradice el marco normativo vigente; derivar sin brindar consejería en la consulta actual retrasa una atención que puede resolverse en el mismo momento."
+    },
+    {
+      "id": 267,
+      "career": "Enfermería",
+      "block": "Salud pública",
+      "title": "Sintomático respiratorio y tuberculosis",
+      "level": "I-2",
+      "specialty": "Salud Pública / DPCTB",
+      "tags": [
+        "tuberculosis",
+        "sintomático respiratorio",
+        "tamizaje"
+      ],
+      "statement": "Paciente refiere tos con expectoración de más de 15 días de duración.",
+      "question": "¿Qué corresponde según la estrategia de control de tuberculosis?",
+      "options": [
+        "Indicar tratamiento antibiótico empírico, sin solicitar estudio diagnóstico previo.",
+        "Identificarlo como sintomático respiratorio, solicitar baciloscopía u otra prueba diagnóstica y notificar el caso.",
+        "Esperar la evolución del cuadro durante dos semanas adicionales antes de evaluar.",
+        "Derivar a mayor complejidad sin realizar el tamizaje correspondiente en el establecimiento."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque más de 15 días de tos con expectoración define a un sintomático respiratorio, lo que obliga a solicitar baciloscopía u otra prueba diagnóstica y notificar el caso según la estrategia DPCTB. El antibiótico empírico sin estudio previo retrasa el diagnóstico específico; esperar más tiempo prolonga la transmisión potencial sin diagnóstico; derivar sin tamizaje en el propio establecimiento omite un paso que corresponde al primer nivel de atención."
+    },
+    {
+      "id": 268,
+      "career": "Transversal",
+      "block": "Salud pública",
+      "title": "Anemia infantil y promoción de la salud",
+      "level": "I-2",
+      "specialty": "Promoción de la Salud",
+      "tags": [
+        "promoción de la salud",
+        "anemia",
+        "determinantes sociales"
+      ],
+      "statement": "Una comunidad presenta alta prevalencia de anemia infantil, asociada a prácticas alimentarias inadecuadas y acceso limitado a alimentos ricos en hierro.",
+      "question": "¿Cuál es el enfoque más adecuado según promoción de la salud?",
+      "options": [
+        "Limitar la intervención a la suplementación farmacológica individual, sin trabajo comunitario.",
+        "Desarrollar una intervención comunitaria participativa que aborde los determinantes sociales asociados, además de la suplementación.",
+        "Realizar una campaña puntual de difusión, sin seguimiento posterior.",
+        "Derivar todos los casos a un nivel de mayor complejidad, sin intervención en el primer nivel."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque la promoción de la salud exige abordar los determinantes sociales de la anemia (prácticas alimentarias, acceso a alimentos) mediante intervención comunitaria participativa, complementando la suplementación farmacológica sin depender solo de ella. Limitarse a la suplementación individual no modifica las prácticas ni el acceso de fondo; una campaña puntual sin seguimiento no genera cambio sostenido; derivar todos los casos ignora que la anemia se maneja principalmente en el primer nivel."
+    },
+    {
+      "id": 269,
+      "career": "Obstetricia",
+      "block": "Salud pública",
+      "title": "Tamizaje alterado de cáncer de cuello uterino",
+      "level": "I-2",
+      "specialty": "Salud Pública / DPCAN",
+      "tags": [
+        "cáncer",
+        "tamizaje",
+        "cuello uterino"
+      ],
+      "statement": "Mujer de 35 años presenta resultado alterado en su tamizaje de cáncer de cuello uterino (Papanicolaou).",
+      "question": "¿Qué corresponde según la estrategia de control de cáncer?",
+      "options": [
+        "Repetir el tamizaje en un año, sin derivar para evaluación adicional.",
+        "Derivar de forma oportuna para confirmación diagnóstica y seguimiento especializado.",
+        "Tranquilizar a la paciente indicando que no requiere ninguna acción adicional.",
+        "Iniciar tratamiento de forma directa, sin contar con confirmación diagnóstica."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque un tamizaje alterado exige derivación oportuna para confirmación diagnóstica (colposcopia, biopsia según corresponda) y seguimiento especializado, dado que el tamizaje por sí solo no confirma el diagnóstico. Repetir en un año retrasa la confirmación de un hallazgo ya alterado; tranquilizar sin acción adicional desestima un resultado que requiere seguimiento; iniciar tratamiento sin confirmación diagnóstica expone a un manejo no sustentado en el diagnóstico definitivo."
+    },
+    {
+      "id": 270,
+      "career": "Transversal",
+      "block": "Gestión",
+      "title": "Interconsulta mediante telesalud",
+      "level": "I-2",
+      "specialty": "Gestión / Telesalud",
+      "tags": [
+        "telesalud",
+        "interconsulta",
+        "referencia"
+      ],
+      "statement": "Un establecimiento I-2 sin especialista disponible atiende un caso clínico complejo que requiere opinión especializada.",
+      "question": "¿Qué corresponde según la estrategia de telesalud?",
+      "options": [
+        "Derivar físicamente al paciente sin evaluar primero la opción de teleconsulta.",
+        "Activar la teleconsulta con el especialista de la red de referencia correspondiente.",
+        "Esperar la próxima visita periódica del especialista al establecimiento.",
+        "Manejar el caso en el nivel actual, sin ninguna interconsulta."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque la estrategia de telesalud está diseñada para resolver casos complejos en establecimientos sin especialista mediante teleconsulta con la red de referencia, evitando traslados innecesarios cuando la opinión especializada puede resolverse a distancia. Derivar físicamente sin evaluar la teleconsulta desaprovecha un recurso disponible; esperar la visita periódica retrasa una atención que puede resolverse antes; manejar el caso sin interconsulta expone al paciente a un manejo sin respaldo especializado."
+    },
+    {
+      "id": 271,
+      "career": "Enfermería",
+      "block": "Cuidado integral",
+      "title": "Control de crecimiento y desarrollo por curso de vida",
+      "level": "I-2",
+      "specialty": "Cuidado Integral / DIVICI",
+      "tags": [
+        "curso de vida",
+        "CRED",
+        "cuidado integral"
+      ],
+      "statement": "Niño de 2 años acude a su control de crecimiento y desarrollo.",
+      "question": "¿Qué corresponde según el enfoque de cuidado integral por curso de vida?",
+      "options": [
+        "Limitar el control a pesar y tallar, sin evaluar otros hitos del desarrollo.",
+        "Evaluar el cumplimiento integral del plan de atención según la etapa de vida correspondiente, incluyendo hitos de desarrollo.",
+        "Derivar al niño sin realizar antes la evaluación correspondiente al control.",
+        "Limitar el control a la verificación del esquema de vacunación."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque el enfoque por curso de vida integra en el control de crecimiento y desarrollo la evaluación de todos los componentes del plan según la etapa (antropometría, hitos de desarrollo, tamizajes), no solo un componente aislado. Limitarse a pesar y tallar deja sin evaluar el desarrollo psicomotor; derivar sin evaluación previa omite un paso que corresponde al primer nivel; reducir el control solo a vacunación desatiende los demás componentes del cuidado integral."
+    },
+    {
+      "id": 272,
+      "career": "Tecnología Médica - Terapia Física",
+      "block": "Cuidado integral",
+      "title": "Certificación de discapacidad",
+      "level": "I-3",
+      "specialty": "Cuidado Integral / DISCAP",
+      "tags": [
+        "discapacidad",
+        "certificación",
+        "rehabilitación"
+      ],
+      "statement": "Paciente con discapacidad física secuelar solicita su certificado de discapacidad en el establecimiento.",
+      "question": "¿Qué corresponde según el proceso de certificación de discapacidad?",
+      "options": [
+        "Certificar la discapacidad sin realizar una evaluación funcional previa.",
+        "Realizar la evaluación y certificación de la discapacidad, articulando la derivación a servicios de rehabilitación según necesidad.",
+        "Derivar al paciente a otro nivel sin emitir la certificación correspondiente.",
+        "Negar el certificado por no contar con un especialista en el establecimiento."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque el proceso DISCAP exige una evaluación funcional que sustente la certificación de discapacidad, articulada con la derivación a servicios de rehabilitación según la necesidad identificada, favoreciendo un enfoque de inclusión. Certificar sin evaluación previa carece de sustento técnico; derivar sin certificar retrasa un trámite que puede resolverse en el nivel actual; negar el certificado por falta de especialista desconoce que el proceso puede gestionarse dentro de la red de referencia."
     }
   ],
   "norms": [
