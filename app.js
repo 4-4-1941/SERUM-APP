@@ -371,7 +371,11 @@ function renderCases() {
 }
 
 function openCase(id) {
-  activeCase = data.cases.find(c => c.id === id);
+  const original = data.cases.find(c => c.id === id);
+  const order = original.options.map((_, i) => i);
+  const shuffledOrder = shuffle(order);
+  const newCorrect = shuffledOrder.indexOf(original.correct);
+  activeCase = { ...original, options: shuffledOrder.map(i => original.options[i]), correct: newCorrect };
   selectedOption = null;
   confirmed = false;
   timeLeft = 60;
