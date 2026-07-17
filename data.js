@@ -251,7 +251,7 @@ window.SERUMS_DATA = {
         "Indicar hervir el agua a la población, sin notificar ni investigar la fuente."
       ],
       "correct": 1,
-      "feedback": "Ante un brote diarreico se debe notificar, investigar y activar el control del evento de inmediato; esperar confirmación de laboratorio, tratar sin notificar o solo indicar hervir el agua sin investigar la fuente retrasan la respuesta."
+      "feedback": "Es correcta porque un brote de diarrea aguda vinculado a una fuente de agua no segura en 8 personas cumple el criterio operativo de brote, lo que obliga a notificar e iniciar investigación epidemiológica de campo antes de contar con confirmación de laboratorio. Tratar sin notificar deja sin identificar la fuente para otros expuestos; esperar confirmación de laboratorio retrasa una respuesta que debe iniciarse con la sola sospecha clínico-epidemiológica; indicar hervir el agua sin investigar ni notificar corrige el síntoma pero no controla el evento."
     },
     {
       "id": 12,
@@ -830,7 +830,7 @@ window.SERUMS_DATA = {
         "Indicar solo hidratación oral a los afectados, sin notificación del evento."
       ],
       "correct": 0,
-      "feedback": "Ante un brote de dengue con criaderos identificados se debe notificar, iniciar control vectorial y vigilancia activa; esperar confirmación serológica de todos los casos, solo hidratar sin notificar o fumigar de forma aislada sin notificar no son adecuados."
+      "feedback": "Es correcta porque la presencia de criaderos de Aedes aegypti junto a múltiples casos febriles articulares configura un evento de notificación obligatoria que exige control vectorial inmediato y vigilancia activa para identificar más casos. Esperar confirmación serológica de todos los casos retrasa un control vectorial que es tiempo-sensible; fumigar de forma aislada sin notificar desarticula la respuesta de la vigilancia epidemiológica; solo hidratar sin notificar deja sin intervenir el vector transmisor."
     },
     {
       "id": 37,
@@ -853,7 +853,7 @@ window.SERUMS_DATA = {
         "Iniciar antibiótico oral ambulatorio sin clasificar previamente la gravedad del cuadro."
       ],
       "correct": 0,
-      "feedback": "Ante signos de dificultad respiratoria en un lactante se debe clasificar la gravedad, estabilizar y referir oportunamente; el manejo domiciliario, el antibiótico sin clasificación previa o las nebulizaciones aisladas no sustituyen esa clasificación."
+      "feedback": "Es correcta porque el tiraje subcostal es un signo de dificultad respiratoria que exige clasificar la gravedad, estabilizar y referir según el nivel, antes de considerar manejo ambulatorio. Programar reevaluación en 48 horas ignora un signo de alarma ya presente; las nebulizaciones aisladas no sustituyen la clasificación de gravedad; el antibiótico oral sin clasificar previamente puede subtratar un cuadro que en realidad requiere manejo hospitalario."
     },
     {
       "id": 38,
@@ -876,7 +876,7 @@ window.SERUMS_DATA = {
         "Estabilizar signos vitales, iniciar hidratación y coordinar referencia urgente a mayor complejidad."
       ],
       "correct": 3,
-      "feedback": "La sospecha de descompensación diabética grave exige estabilización, hidratación y referencia urgente; el ajuste solo de dieta, una dosis única de insulina sin monitoreo o aumentar metformina sin evaluación no son adecuados."
+      "feedback": "Es correcta porque glicemia muy elevada con taquipnea y aliento cetónico son signos clínicos compatibles con cetoacidosis diabética, una emergencia que requiere estabilización, hidratación y referencia urgente, no manejo ambulatorio. Aumentar metformina no corrige una descompensación aguda ni actúa en el plazo necesario; el ajuste solo de dieta subestima la gravedad del cuadro; una dosis única de insulina sin monitoreo posterior expone a hipoglucemia o a manejo incompleto de la acidosis."
     },
     {
       "id": 39,
@@ -899,7 +899,7 @@ window.SERUMS_DATA = {
         "Indicar antibiótico común, sin ningún estudio adicional."
       ],
       "correct": 1,
-      "feedback": "Ante un sintomático respiratorio se debe solicitar la prueba diagnóstica, notificar y dar seguimiento; el antibiótico sin estudio, esperar a que ceda el síntoma o iniciar tratamiento antituberculoso empírico sin confirmación no son adecuados."
+      "feedback": "Es correcta porque más de dos semanas de tos con pérdida de peso y sudoración nocturna cumplen la definición de sintomático respiratorio, lo que obliga a solicitar baciloscopía u otra prueba diagnóstica y notificar antes de cualquier tratamiento. El antibiótico común no cubre M. tuberculosis y retrasa el diagnóstico; iniciar tratamiento antituberculoso empírico sin confirmación expone a toxicidad innecesaria y a subregistro epidemiológico; esperar a que el síntoma desaparezca prolonga la transmisión comunitaria."
     },
     {
       "id": 40,
@@ -922,7 +922,7 @@ window.SERUMS_DATA = {
         "Realizar incisión y succión en el sitio de la mordedura antes de referir."
       ],
       "correct": 0,
-      "feedback": "El manejo correcto de una mordedura de serpiente es estabilizar, evitar maniobras contraindicadas (torniquete, incisión, succión, hielo prolongado) y referir con urgencia para suero antiofídico."
+      "feedback": "Es correcta porque el sangrado de encías sugiere compromiso sistémico de la coagulación por el veneno, lo que exige estabilización, evitar maniobras contraindicadas y referencia urgente para suero antiofídico, único tratamiento específico disponible. La observación domiciliaria subestima un signo sistémico ya presente; el hielo prolongado agrava la necrosis local sin neutralizar el veneno; la incisión y succión son maniobras sin sustento clínico y con riesgo de infección y mayor daño tisular."
     },
     {
       "id": 41,
@@ -945,7 +945,7 @@ window.SERUMS_DATA = {
         "Notificar el evento, investigar la fuente alimentaria y activar medidas de control."
       ],
       "correct": 3,
-      "feedback": "Ante una probable ETA se debe notificar, investigar la fuente alimentaria y activar el control; tratar solo síntomas, esperar más casos o cerrar el local sin investigación previa no son adecuados."
+      "feedback": "Es correcta porque múltiples casos con síntomas digestivos tras un alimento compartido cumplen criterio de enfermedad transmitida por alimentos, lo que exige notificar e investigar la fuente para contener la exposición de otros comensales. Tratar solo los síntomas sin investigar deja expuestos a más consumidores del mismo alimento; esperar más casos retrasa la contención; cerrar el establecimiento sin investigación previa no identifica el alimento o proceso responsable."
     },
     {
       "id": 42,
@@ -968,7 +968,7 @@ window.SERUMS_DATA = {
         "Suturar la herida en el establecimiento sin evaluar más."
       ],
       "correct": 2,
-      "feedback": "Ante trauma penetrante con inestabilidad se debe estabilizar y coordinar referencia inmediata a mayor complejidad; suturar sin evaluar, esperar evolución espontánea o trasladar sin ninguna estabilización previa no son adecuados."
+      "feedback": "Es correcta porque la inestabilidad hemodinámica en trauma penetrante abdominal define una emergencia que excede la capacidad resolutiva del nivel, requiriendo estabilización inicial y referencia inmediata a mayor capacidad. Suturar la herida sin evaluar ignora la posible lesión intraabdominal subyacente; esperar evolución espontánea en un paciente inestable conlleva alto riesgo vital; trasladar sin ninguna estabilización previa aumenta el riesgo durante el traslado."
     },
     {
       "id": 43,
@@ -991,7 +991,7 @@ window.SERUMS_DATA = {
         "Indicar transfusión sanguínea inmediata sin evaluar previamente la gravedad ni la tolerancia clínica."
       ],
       "correct": 2,
-      "feedback": "La anemia severa en gestante requiere evaluar la gravedad, manejo protocolizado y referencia si corresponde; una transfusión sin evaluación previa, solo suplementación oral o esperar al parto no son adecuados.",
+      "feedback": "Es correcta porque una hemoglobina muy por debajo del rango normal en gestante de 30 semanas define anemia severa, que exige evaluar la magnitud del déficit, iniciar manejo protocolizado y referir si hay compromiso materno-fetal. La transfusión inmediata sin evaluar previamente la tolerancia clínica expone a riesgos evitables de un procedimiento invasivo; la suplementación oral sola es insuficiente para corregir una anemia ya severa en el plazo necesario; esperar al parto deja sin corrección un déficit con riesgo materno-fetal actual.",
       "interdisciplinaryNote": "Nutrición aporta el plan de suplementación y consejería alimentaria complementaria al manejo médico."
     },
     {
@@ -1015,7 +1015,7 @@ window.SERUMS_DATA = {
         "Estabilizar signos vitales, iniciar manejo inicial y evaluar la necesidad de referencia urgente."
       ],
       "correct": 3,
-      "feedback": "Ante una probable crisis hipertensiva se debe estabilizar, iniciar manejo inicial y evaluar la referencia urgente; el reposo ambulatorio, duplicar la dosis sin evaluación o pedir solo exámenes retrasan el manejo necesario."
+      "feedback": "Es correcta porque la cefalea intensa y la visión borrosa asociadas a cifras tensionales muy elevadas sugieren daño de órgano blanco en curso, lo que exige estabilización inmediata y evaluación de referencia urgente. Duplicar la dosis habitual sin evaluación puede generar una caída tensional brusca no controlada; solicitar solo laboratorio retrasa una intervención clínica que no puede esperar los resultados; el reposo domiciliario subestima los signos de daño de órgano blanco ya presentes."
     },
     {
       "id": 45,
@@ -1038,7 +1038,7 @@ window.SERUMS_DATA = {
         "Clasificar el grado de deshidratación e iniciar la rehidratación oral o endovenosa según corresponda."
       ],
       "correct": 3,
-      "feedback": "Se debe clasificar el grado de deshidratación e iniciar la rehidratación correspondiente; la dieta blanda sin evaluación, el antibiótico empírico o esperar más horas no abordan la deshidratación de forma oportuna."
+      "feedback": "Es correcta porque el decaimiento y los ojos hundidos son signos clínicos que permiten clasificar el grado de deshidratación, clasificación de la cual depende si corresponde rehidratación oral o endovenosa. La dieta blanda sin evaluar no corrige el déficit hídrico ya evidente; el antibiótico empírico no está indicado en la mayoría de diarreas acuosas y no sustituye la rehidratación; esperar 24 horas adicionales permite progresión hacia una deshidratación de mayor gravedad."
     },
     {
       "id": 46,
@@ -1642,7 +1642,7 @@ window.SERUMS_DATA = {
         "El tiempo que demora en procesarse la muestra."
       ],
       "correct": 2,
-      "feedback": "Una sensibilidad alta es clave en tamizaje poblacional porque minimiza los falsos negativos, evitando que casos reales queden sin detectar; la especificidad se relaciona con los falsos positivos, no con dejar de detectar enfermos."
+      "feedback": "Es correcta porque la sensibilidad determina la proporción de enfermos correctamente identificados por la prueba; en tamizaje poblacional con alta carga de casos, priorizarla minimiza los falsos negativos, que en ese escenario son el riesgo más costoso (casos reales sin detectar). La especificidad reduce los falsos positivos pero no evita dejar enfermos sin detectar; el costo de fabricación y el tiempo de procesamiento son relevantes operativamente, pero no determinan la capacidad diagnóstica de la prueba."
     },
     {
       "id": 72,
@@ -1688,7 +1688,7 @@ window.SERUMS_DATA = {
         "Prevención terciaria, porque busca rehabilitar secuelas."
       ],
       "correct": 0,
-      "feedback": "Vacunar antes de que existan casos es prevención primaria, orientada a evitar la aparición de la enfermedad; la secundaria detecta casos tempranos, la terciaria rehabilita secuelas y la cuaternaria evita sobretratamiento."
+      "feedback": "Es correcta porque vacunar antes de la aparición de casos actúa sobre población sana para evitar la enfermedad, que es la definición central de prevención primaria. La prevención secundaria actúa sobre casos ya presentes pero asintomáticos, no antes de que existan; la terciaria rehabilita secuelas de una enfermedad ya establecida; la cuaternaria previene el sobretratamiento o la sobremedicalización, no la aparición de la enfermedad."
     },
     {
       "id": 74,
@@ -1803,7 +1803,7 @@ window.SERUMS_DATA = {
         "Un ensayo clínico aleatorizado."
       ],
       "correct": 1,
-      "feedback": "Para enfermedades poco frecuentes, el estudio de casos y controles es más eficiente porque parte de los casos existentes; el ensayo aleatorizado, la cohorte prospectiva o un descriptivo transversal no son igual de eficientes para este objetivo."
+      "feedback": "Es correcta porque en enfermedades poco frecuentes el estudio de casos y controles parte de los casos ya existentes en vez de esperar a que aparezcan en una cohorte, lo que lo hace más eficiente en tiempo y recursos para ese objetivo. Un estudio de cohorte prospectivo requeriría seguir a una población muy grande durante años para acumular pocos casos; un descriptivo transversal no permite establecer la secuencia temporal entre exposición y enfermedad; un ensayo clínico aleatorizado no aplica a un objetivo observacional sobre una exposición no manipulable."
     },
     {
       "id": 79,
@@ -2033,7 +2033,7 @@ window.SERUMS_DATA = {
         "Administrar anticonvulsivante de mantenimiento de forma inmediata, sin evaluación previa."
       ],
       "correct": 1,
-      "feedback": "Tras una convulsión febril se debe estabilizar, controlar la fiebre, descartar signos de alarma neurológica y decidir observación o referencia; el alta sin evaluación, el anticonvulsivante de mantenimiento inmediato o la imagen antes de estabilizar no son adecuados."
+      "feedback": "Es correcta porque tras una convulsión febril corresponde estabilizar, controlar la fiebre y descartar signos de alarma neurológica antes de decidir observación o referencia. El alta sin evaluación adicional omite el descarte de esos signos; el anticonvulsivante de mantenimiento inmediato no está indicado tras un único episodio; solicitar imagen cerebral de urgencia antes de estabilizar invierte la prioridad clínica del caso."
     },
     {
       "id": 89,
@@ -2056,7 +2056,7 @@ window.SERUMS_DATA = {
         "Iniciar antibiótico empírico ambulatorio como manejo definitivo del cuadro."
       ],
       "correct": 2,
-      "feedback": "Ante sospecha de abdomen agudo quirúrgico sin capacidad resolutiva local se debe estabilizar y referir con urgencia; la observación domiciliaria, el antibiótico ambulatorio como manejo definitivo o esperar la evolución espontánea retrasan la resolución quirúrgica."
+      "feedback": "Es correcta porque el dolor en fosa iliaca derecha con signos de irritación peritoneal define un abdomen agudo quirúrgico que, en un establecimiento sin capacidad resolutiva, exige estabilización y referencia urgente para el manejo definitivo. El antibiótico ambulatorio no resuelve la causa quirúrgica de fondo; la observación domiciliaria expone a progresión hacia complicaciones mayores; esperar a que el dolor ceda espontáneamente retrasa un diagnóstico tiempo-dependiente."
     },
     {
       "id": 90,
@@ -2520,7 +2520,7 @@ window.SERUMS_DATA = {
         "Indicar que continúe el tratamiento sin ninguna evaluación adicional."
       ],
       "correct": 0,
-      "feedback": "Ante posible hepatotoxicidad por fármacos antituberculosos se debe evaluar la función hepática, decidir suspensión temporal si corresponde y proceder según protocolo; continuar sin evaluar, suspender definitivamente sin evaluación o cambiar de esquema sin evaluar la función hepática no son adecuados."
+      "feedback": "Es correcta porque la ictericia y el malestar a las tres semanas de tratamiento antituberculoso son compatibles con hepatotoxicidad farmacológica, que exige evaluar la función hepática antes de decidir una suspensión (no necesariamente definitiva) y seguir el protocolo correspondiente. Cambiar de esquema sin evaluar la función hepática no identifica el fármaco responsable; suspender de forma definitiva sin evaluación puede ser una medida excesiva si la alteración es leve y reversible; continuar sin evaluar arriesga progresión del daño hepático."
     },
     {
       "id": 110,
@@ -2589,7 +2589,7 @@ window.SERUMS_DATA = {
         "Tranquilizar a la paciente, sin realizar ninguna evaluación adicional."
       ],
       "correct": 0,
-      "feedback": "Ante una tumoración mamaria nueva se debe examinar clínicamente, solicitar imagen y referir oportunamente; esperar el ciclo, tranquilizar sin evaluar o solo pedir control anual no descartan malignidad de forma oportuna."
+      "feedback": "Es correcta porque una tumoración mamaria nueva y no dolorosa en mujer de 45 años es un hallazgo que exige examen clínico, estudio de imagen y referencia oportuna para descartar malignidad, independientemente del ciclo menstrual. Esperar al siguiente ciclo retrasa la evaluación de un hallazgo cuya significancia no depende del ciclo hormonal; un control anual no corresponde al ritmo de seguimiento que amerita un hallazgo nuevo; tranquilizar sin evaluar desestima un signo de alarma real."
     },
     {
       "id": 113,
@@ -2658,7 +2658,7 @@ window.SERUMS_DATA = {
         "Ajustar solo el tratamiento de la diabetes, sin evaluar la visión."
       ],
       "correct": 2,
-      "feedback": "Todo paciente diabético con cambios visuales debe derivarse para evaluación oftalmológica con fondo de ojo; atribuirlo a la edad, ajustar solo el tratamiento de base o indicar lentes sin evaluación especializada no son adecuados."
+      "feedback": "Es correcta porque la diabetes de larga data con cambios visuales progresivos conlleva alto riesgo de retinopatía diabética, complicación que puede cursar asintomática hasta estadios avanzados, por lo que corresponde fondo de ojo especializado independientemente del control glicémico. Atribuirlo a la edad ignora la asociación conocida entre duración de la diabetes y retinopatía; ajustar solo el tratamiento de base no detecta el daño retiniano ya instaurado; indicar lentes sin evaluación oftalmológica no descarta la causa retiniana del déficit visual."
     },
     {
       "id": 116,
@@ -2727,7 +2727,7 @@ window.SERUMS_DATA = {
         "Solicitar gota gruesa o prueba diagnóstica para malaria e iniciar manejo según resultado y protocolo vigente."
       ],
       "correct": 3,
-      "feedback": "Ante fiebre intermitente en zona endémica se debe solicitar la prueba diagnóstica de malaria oportunamente e iniciar manejo según protocolo; solo antipirético, esperar más síntomas o tratamiento empírico sin confirmación no son adecuados."
+      "feedback": "Es correcta porque la fiebre intermitente con escalofríos y sudoración profusa en zona endémica exige confirmar el diagnóstico con gota gruesa u otra prueba antes de iniciar tratamiento específico, dado que el manejo difiere según la especie de Plasmodium involucrada. El tratamiento empírico sin confirmación puede tratar la especie equivocada o enmascarar el diagnóstico; solo antipirético sin estudio deja sin tratar una infección potencialmente grave; esperar más síntomas retrasa el diagnóstico de una enfermedad que puede progresar a un cuadro complicado."
     },
     {
       "id": 119,
@@ -2750,7 +2750,7 @@ window.SERUMS_DATA = {
         "Limpiar la herida y no indicar ninguna otra medida adicional."
       ],
       "correct": 0,
-      "feedback": "Ante mordedura de animal con estado de vacunación desconocido se debe lavar la herida y evaluar profilaxis antirrábica según protocolo; solo limpiar sin más medidas, esperar signos en el animal o condicionar la profilaxis solo a la extensión no son adecuados."
+      "feedback": "Es correcta porque toda mordedura de animal con estado de vacunación desconocido implica riesgo de exposición rábica, independientemente de la extensión de la herida, por lo que corresponde lavado inmediato y evaluación de profilaxis según protocolo. Condicionar la profilaxis solo a heridas extensas ignora que el riesgo depende del estado del animal, no del tamaño de la herida; esperar signos de rabia en el animal es peligroso porque la enfermedad es letal una vez sintomática; limpiar sin evaluación adicional omite la valoración de riesgo que define la conducta a seguir."
     },
     {
       "id": 120,
@@ -2911,7 +2911,7 @@ window.SERUMS_DATA = {
         "Permitir que cada participante elija el grupo que prefiera."
       ],
       "correct": 1,
-      "feedback": "La aleatorización reduce sesgos de selección y el enmascaramiento reduce sesgos en la evaluación de resultados; asignar por orden de llegada, por elección propia o por gravedad percibida introduce sesgos evitables."
+      "feedback": "Es correcta porque la aleatorización distribuye equitativamente los factores de confusión conocidos y desconocidos entre grupos, y el enmascaramiento reduce el sesgo en la evaluación de resultados; combinadas son las medidas metodológicas más robustas contra el sesgo en un ensayo clínico. Asignar por orden de llegada o por elección del participante introduce sesgo de selección; asignar según gravedad percibida introduce un factor de confusión que distorsiona la comparación entre grupos."
     },
     {
       "id": 127,
@@ -3141,7 +3141,7 @@ window.SERUMS_DATA = {
         "Postergar la atención de forma indefinida hasta resolver su objeción personal."
       ],
       "correct": 1,
-      "feedback": "La objeción de conciencia debe respetarse garantizando derivación oportuna; negarse sin alternativa, realizar el procedimiento contra sus convicciones o postergar indefinidamente no son adecuados."
+      "feedback": "Es correcta porque el marco normativo reconoce la objeción de conciencia individual, pero condiciona su ejercicio a garantizar que la paciente sea derivada oportunamente a un profesional que sí pueda atender, preservando su derecho a la prestación. Negarse sin ofrecer alternativa vulnera el derecho de la paciente a la atención; realizar el procedimiento contra sus convicciones no es lo que exige la norma, que prevé la derivación y no obligar al profesional; postergar indefinidamente la atención bajo la objeción personal excede el ejercicio legítimo del derecho."
     },
     {
       "id": 137,
@@ -3233,7 +3233,7 @@ window.SERUMS_DATA = {
         "Negar cualquier otro tratamiento si el paciente no acepta la transfusión."
       ],
       "correct": 0,
-      "feedback": "Debe respetarse la decisión informada y competente del paciente, explorando alternativas terapéuticas; transfundir ignorando su voluntad, negar todo otro tratamiento o decidir a través de un familiar no son adecuados."
+      "feedback": "Es correcta porque un paciente adulto competente tiene derecho a rechazar un tratamiento, incluida una transfusión, tras un consentimiento informado, correspondiendo explorar alternativas terapéuticas viables y documentar el proceso. Transfundir ignorando su voluntad vulnera la autonomía de un paciente competente; solicitar autorización de un familiar sustituye indebidamente la decisión de un paciente capaz; negar cualquier otro tratamiento condiciona la atención de forma desproporcionada respecto a la decisión específica que tomó el paciente."
     },
     {
       "id": 141,
@@ -4684,7 +4684,7 @@ window.SERUMS_DATA = {
         "Reconocer los signos de alarma, hospitalizar u observar estrechamente y coordinar referencia si corresponde."
       ],
       "correct": 3,
-      "feedback": "Ante signos de alarma en dengue se debe observar estrechamente u hospitalizar, con referencia oportuna; el manejo domiciliario, esperar a que ceda la fiebre o usar AINEs sin evaluar los signos no son adecuados."
+      "feedback": "Es correcta porque el dolor abdominal intenso, los vómitos persistentes y el sangrado de encías son signos de alarma de dengue que exigen hospitalización u observación estrecha, con referencia si hay progresión a un cuadro grave. Los antiinflamatorios no esteroideos están contraindicados en dengue por el riesgo de sangrado que ya se busca vigilar; el manejo domiciliario con solo hidratación oral no permite el monitoreo estrecho que exige un signo de alarma; esperar a que ceda la fiebre ignora que los signos de alarma suelen aparecer justamente en ese momento del curso clínico."
     },
     {
       "id": 204,
@@ -4707,7 +4707,7 @@ window.SERUMS_DATA = {
         "Aumentar el broncodilatador, sin evaluar otros signos clínicos."
       ],
       "correct": 2,
-      "feedback": "Ante una exacerbación de EPOC se debe evaluar la gravedad, iniciar manejo inicial y decidir referencia según evolución; continuar sin reevaluar, aumentar el broncodilatador sin evaluar o dar antibiótico sistemático no son adecuados."
+      "feedback": "Es correcta porque el cambio en el esputo junto al aumento de disnea y el mayor uso de musculatura accesoria son criterios de exacerbación que requieren evaluar la gravedad antes de decidir el manejo inicial y la necesidad de referencia. El antibiótico sistemático sin evaluar gravedad no está indicado en toda exacerbación; aumentar solo el broncodilatador sin evaluar otros signos puede ser insuficiente si existen criterios de gravedad; continuar el tratamiento habitual sin reevaluación ignora el cambio clínico ya presente."
     },
     {
       "id": 205,
@@ -4730,7 +4730,7 @@ window.SERUMS_DATA = {
         "Administrar más insulina para corregir la glicemia."
       ],
       "correct": 2,
-      "feedback": "La hipoglucemia severa debe corregirse de inmediato según protocolo, evaluando luego su causa; administrar más insulina, esperar recuperación espontánea o suspender el tratamiento sin evaluar no son adecuados."
+      "feedback": "Es correcta porque la hipoglucemia severa con confusión y sudoración es una emergencia que debe corregirse de inmediato según protocolo, evaluando después su causa para prevenir recurrencias. Administrar más insulina agravaría peligrosamente la hipoglucemia; esperar recuperación espontánea arriesga daño neurológico por hipoglucemia prolongada; suspender el tratamiento de forma permanente sin evaluar la causa es una decisión desproporcionada que no corrige la emergencia actual."
     },
     {
       "id": 206,
@@ -4753,7 +4753,7 @@ window.SERUMS_DATA = {
         "Indicar reposo en ambiente oscuro como única medida, sin evaluación adicional."
       ],
       "correct": 2,
-      "feedback": "Una cefalea de inicio súbito con signos de alarma exige estabilización y referencia urgente; el analgésico ambulatorio, esperar evolución o solo indicar reposo en oscuridad subestiman una posible causa grave."
+      "feedback": "Es correcta porque una cefalea de inicio súbito e intensidad máxima, con vómitos y rigidez de nuca, es compatible con una causa grave subyacente que exige estabilización y referencia urgente para estudio de imagen y descarte etiológico. El analgésico ambulatorio y el reposo en oscuridad tratan el síntoma sin descartar la causa grave; esperar la evolución espontánea retrasa un diagnóstico tiempo-dependiente en un cuadro potencialmente letal."
     },
     {
       "id": 207,
@@ -5538,7 +5538,7 @@ window.SERUMS_DATA = {
         "Campaña de pronóstico, orientada a estimar la evolución de una enfermedad confirmada."
       ],
       "correct": 1,
-      "feedback": "El despistaje mediante pruebas diagnósticas en población asintomática con factores de riesgo corresponde a una campaña de prevención (detección temprana), distinta de la promoción (fomento de estilos de vida), el tratamiento (manejo de un caso confirmado) o el pronóstico (estimación evolutiva)."
+      "feedback": "Es correcta porque el despistaje mediante pruebas diagnósticas en población asintomática con factores de riesgo corresponde a una campaña de prevención orientada a la detección temprana, distinta de la promoción (fomento de estilos de vida), el tratamiento (manejo de un caso ya confirmado) o el pronóstico (estimación evolutiva de una enfermedad). La promoción no usa pruebas diagnósticas sino educación; el tratamiento presupone un diagnóstico ya hecho, ausente aquí; el pronóstico no aplica porque no existe aún una enfermedad confirmada."
     },
     {
       "id": 241,
