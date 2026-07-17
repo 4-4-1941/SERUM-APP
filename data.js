@@ -21,7 +21,7 @@ window.SERUMS_DATA = {
         "Iniciar psicoterapia ambulatoria de base semanal sin evaluar el riesgo inmediato."
       ],
       "correct": 1,
-      "feedback": "Ante riesgo suicida con ideación activa, aislamiento y soporte familiar limitado corresponde intervención en crisis inmediata y derivación urgente; un seguimiento diferido (aunque incluya contención o psicoterapia) subestima la gravedad del riesgo actual."
+      "feedback": "Es correcta porque la ideación activa sumada a aislamiento y bajo soporte familiar configura un riesgo suicida alto que exige intervención en crisis, estabilización y derivación urgente, sin espacio para diferir la atención. La contención con seguimiento a una semana subestima la urgencia; la psicoterapia ambulatoria omite evaluar el riesgo inmediato; programarla en el flujo regular retrasa la atención."
     },
     {
       "id": 2,
@@ -44,7 +44,7 @@ window.SERUMS_DATA = {
         "Tamizar el riesgo de violencia, brindar soporte inicial y derivar según la ruta establecida."
       ],
       "correct": 3,
-      "feedback": "Corresponde tamizar el riesgo de violencia y activar la ruta de atención; iniciar fármacos sin explorar el contexto, ignorar el antecedente o saltar directo a lo legal sin evaluación clínica dejan de lado pasos esenciales del abordaje."
+      "feedback": "Es correcta porque el protocolo exige tamizar el riesgo de violencia y activar la ruta de atención antes de cualquier otra intervención, ya que los síntomas somáticos y ansiosos son secundarios al riesgo no evaluado. Derivar solo a la vía legal salta la evaluación clínica; registrar sin actuar ignora el antecedente relevante; medicar antes de explorar el contexto trata el síntoma sin abordar su causa."
     },
     {
       "id": 3,
@@ -67,7 +67,7 @@ window.SERUMS_DATA = {
         "Administrar un ansiolítico de inmediato sin evaluar antecedentes ni gravedad del cuadro."
       ],
       "correct": 1,
-      "feedback": "Ante un ataque de pánico en consulta se debe brindar contención y evaluación breve en el momento; medicar sin evaluar, limitarse a una técnica aislada o postergar toda intervención no son la conducta más adecuada."
+      "feedback": "Es correcta porque un episodio agudo de pánico requiere contención y evaluación breve en el momento, integrando manejo sintomático sin descuidar el diagnóstico diferencial. Aplicar solo una técnica de respiración carece de sustento evaluativo; medicar sin conocer antecedentes ni gravedad es riesgoso; posponer la evaluación deja sin atención el episodio agudo."
     },
     {
       "id": 4,
@@ -90,7 +90,7 @@ window.SERUMS_DATA = {
         "Derivar de inmediato a un nivel de mayor complejidad sin abordar antes la adherencia."
       ],
       "correct": 1,
-      "feedback": "Ante baja adherencia se debe psicoeducar y explorar sus causas antes de decidir cualquier ajuste; modificar dosis, mantener el plan sin cambios o derivar sin abordar la adherencia no resuelven la causa de fondo."
+      "feedback": "Es correcta porque la baja adherencia debe abordarse identificando primero sus causas mediante psicoeducación y seguimiento cercano, antes de modificar el plan terapéutico. Aumentar la dosis sin diagnóstico de causa no resuelve el problema de fondo; mantener el plan sin cambios ignora la falla ya evidenciada; escalar de nivel sin agotar el manejo actual es prematuro."
     },
     {
       "id": 5,
@@ -113,7 +113,7 @@ window.SERUMS_DATA = {
         "Evaluar el impacto funcional del duelo y brindar apoyo psicológico especializado."
       ],
       "correct": 3,
-      "feedback": "Un duelo complicado con impacto funcional requiere evaluación y apoyo psicológico especializado; esperar resolución espontánea, condicionar la derivación a síntomas físicos o evitar el tema no atienden la complicación del proceso."
+      "feedback": "Es correcta porque a los tres meses el aislamiento y la intensidad sintomática indican impacto funcional compatible con duelo complicado, lo que exige evaluación y apoyo especializado. Confiar en resolución espontánea ignora la persistencia sintomática; evitar el tema impide el procesamiento necesario; condicionar la derivación a síntomas físicos usa un criterio irrelevante."
     },
     {
       "id": 6,
@@ -136,7 +136,7 @@ window.SERUMS_DATA = {
         "Derivar el caso sin brindar ninguna contención emocional previa."
       ],
       "correct": 1,
-      "feedback": "En violencia sexual, la contención emocional y la activación de la ruta de atención son prioritarias; exigir relatos detallados de inmediato, promover el silencio o derivar sin contención pueden revictimizar a la persona."
+      "feedback": "Es correcta porque el manejo de violencia sexual prioriza la escucha respetuosa y la contención antes de activar la ruta de atención, evitando la revictimización. Derivar sin contención previa desatiende el estado emocional inmediato; promover el silencio contradice el abordaje recomendado; exigir un relato detallado de inmediato puede revictimizar."
     },
     {
       "id": 7,
@@ -159,7 +159,7 @@ window.SERUMS_DATA = {
         "Minimizar los síntomas por considerarlos parte del estrés cotidiano."
       ],
       "correct": 2,
-      "feedback": "El manejo inicial de la ansiedad generalizada requiere psicoeducación y evaluación clínica estructurada; el reposo absoluto, minimizar el cuadro o medicar sin evaluación no corresponden al abordaje adecuado."
+      "feedback": "Es correcta porque un cuadro de varios meses de evolución con síntomas físicos y cognitivos requiere evaluación clínica estructurada y psicoeducación como base del manejo. El reposo absoluto no aborda la ansiedad de fondo; medicar sin evaluación previa es inadecuado; minimizar un cuadro ya persistente desestima su relevancia funcional."
     },
     {
       "id": 8,
@@ -182,7 +182,7 @@ window.SERUMS_DATA = {
         "Confrontar directamente al paciente exigiendo el cese inmediato del consumo."
       ],
       "correct": 1,
-      "feedback": "El tamizaje y la intervención breve motivacional son el abordaje inicial recomendado; la confrontación directa, desestimar el caso ante la negación o derivar sin evaluar gravedad no siguen el modelo de intervención breve."
+      "feedback": "Es correcta porque, ante negación del paciente con evidencia funcional de consumo problemático (ausentismo), el modelo de intervención breve motivacional es la estrategia validada para trabajar la ambivalencia. Escalar a residencial sin evaluar gravedad es desproporcionado; confrontar de forma directiva contradice el enfoque motivacional; desestimar el caso pese a la evidencia familiar ignora datos objetivos."
     },
     {
       "id": 9,
@@ -205,7 +205,7 @@ window.SERUMS_DATA = {
         "Evaluar el riesgo de violencia, brindar contención y activar la ruta de atención."
       ],
       "correct": 3,
-      "feedback": "Ante un relato compatible con violencia de pareja se debe evaluar el riesgo y activar la ruta correspondiente; centrarse solo en el síntoma inicial, sugerir diálogo con el agresor o solo documentar sin evaluar no abordan el riesgo real."
+      "feedback": "Es correcta porque el control coercitivo y el temor a represalias son indicadores de riesgo que requieren evaluación, contención y activación de ruta de atención de forma inmediata. Enfocarse solo en el síntoma superficial deja sin abordar el riesgo real; sugerir diálogo con el agresor expone a mayor riesgo; documentar sin actuar no protege a la paciente."
     },
     {
       "id": 10,
@@ -228,7 +228,7 @@ window.SERUMS_DATA = {
         "Psicoeducar, evaluar riesgos asociados al desgaste laboral y orientar sobre medidas de afrontamiento."
       ],
       "correct": 3,
-      "feedback": "El estrés laboral severo requiere psicoeducación, evaluación de riesgos y orientación en afrontamiento; aumentar la carga, minimizar el cuadro o derivar a descanso sin evaluar no son la conducta más adecuada."
+      "feedback": "Es correcta porque el cuadro de desgaste (irritabilidad, agotamiento, errores) requiere psicoeducación y evaluación de riesgos antes de decidir una medida más drástica como el descanso médico. Derivar a descanso médico sin evaluación previa es prematuro; minimizar el cuadro ignora el riesgo asociado a los errores frecuentes; aumentar la carga agrava el factor causal."
     },
     {
       "id": 11,
@@ -343,7 +343,7 @@ window.SERUMS_DATA = {
         "Indicar únicamente técnicas de relajación, sin ninguna evaluación clínica previa."
       ],
       "correct": 0,
-      "feedback": "Ante posible ansiedad en un adolescente corresponde el tamizaje y la evaluación clínica inicial; atribuirlo solo a la edad, derivar a sanción disciplinaria o intervenir sin evaluar no son adecuados."
+      "feedback": "Es correcta porque el bajo rendimiento e irritabilidad sostenidos ameritan tamizaje y evaluación clínica antes de cualquier otra acción, para diferenciar un cuadro ansioso de un proceso evolutivo normal. Atribuirlo solo a la edad naturaliza síntomas sin sustento evaluativo; aplicar relajación sin diagnóstico previo es insuficiente; derivar a sanción disciplinaria traslada el problema a una vía ajena al origen clínico."
     },
     {
       "id": 16,
@@ -366,7 +366,7 @@ window.SERUMS_DATA = {
         "Brindar acompañamiento, contención emocional y evaluación del riesgo actual."
       ],
       "correct": 3,
-      "feedback": "Una intervención breve por crisis exige acompañamiento, contención y evaluación de riesgo en el momento; postergar la atención, limitarse a información administrativa o derivar sin evaluar no cumplen ese objetivo."
+      "feedback": "Es correcta porque la negativa a irse sola y la expresión de no poder continuar son señales de riesgo actual que exigen acompañamiento, contención y evaluación inmediata. Derivar sin evaluar el riesgo omite un paso esencial; limitarse a información administrativa no atiende la crisis; postergar la atención ignora la urgencia expresada."
     },
     {
       "id": 17,
@@ -435,7 +435,7 @@ window.SERUMS_DATA = {
         "Indicar que es una reacción esperada y dar de alta sin ningún seguimiento."
       ],
       "correct": 0,
-      "feedback": "Ante un duelo reciente con posible impacto funcional se debe evaluar y ofrecer acompañamiento; dar de alta sin seguimiento, evitar el tema o condicionar la derivación a síntomas físicos no son adecuados."
+      "feedback": "Es correcta porque la persistencia de llanto, alteración del sueño y dificultad funcional para trabajar indica que el duelo reciente puede requerir evaluación de impacto funcional y acompañamiento psicológico activo, no solo observación pasiva. Dar de alta sin seguimiento normaliza el cuadro sin verificar impacto; evitar el tema impide el procesamiento necesario; condicionar la derivación a síntomas físicos añade un criterio irrelevante."
     },
     {
       "id": 20,
@@ -458,7 +458,7 @@ window.SERUMS_DATA = {
         "Brindar psicoeducación a la familia, orientar sobre señales de alarma y programar seguimiento."
       ],
       "correct": 3,
-      "feedback": "La psicoeducación familiar con orientación en señales de alarma y seguimiento es la conducta más adecuada; desentenderse, derivar sin explicación o centrarse solo en disciplina no cumplen ese objetivo."
+      "feedback": "Es correcta porque ante cambios conductuales en un adolescente la familia necesita psicoeducación, señales de alarma claras y seguimiento programado para intervenir oportunamente. Desentenderse expone al adolescente sin supervisión; derivar sin explicación deja a la familia sin herramientas; centrarse solo en disciplina ignora el componente emocional de fondo."
     },
     {
       "id": 21,
@@ -481,7 +481,7 @@ window.SERUMS_DATA = {
         "Evaluar los síntomas de estrés postraumático y ofrecer intervención o derivación oportuna."
       ],
       "correct": 3,
-      "feedback": "Ante síntomas compatibles con estrés postraumático corresponde evaluar y ofrecer intervención o derivación oportuna; asumir que son transitorios, indicar solo reposo o promover evitación indefinida no abordan el cuadro."
+      "feedback": "Es correcta porque pesadillas, evitación y sobresalto tres semanas después de un accidente son criterios compatibles con estrés postraumático agudo, que requiere evaluación formal e intervención o derivación oportuna. Asumir que son transitorios sin evaluar arriesga cronificación; el reposo absoluto no aborda el mecanismo del trauma; promover evitación indefinida refuerza el patrón fóbico en vez de tratarlo."
     },
     {
       "id": 22,
@@ -504,7 +504,7 @@ window.SERUMS_DATA = {
         "Citar en un mes para observar la evolución de los síntomas."
       ],
       "correct": 1,
-      "feedback": "Un primer episodio psicótico exige evaluación de riesgo, estabilización y derivación urgente; diferir la evaluación, indicar solo socialización o manejar con baja frecuencia sin priorizar la derivación subestiman la gravedad del cuadro.",
+      "feedback": "Es correcta porque ideas delirantes de persecución, desorganización del lenguaje y aislamiento de dos semanas configuran un primer episodio psicótico, cuadro que exige evaluación de riesgo, estabilización y derivación urgente a salud mental especializada. Manejar ambulatoriamente sin priorizar la derivación retrasa el tratamiento; indicar solo socialización ignora la naturaleza clínica del cuadro; citar en un mes deja sin manejo un episodio agudo de alto riesgo.",
       "interdisciplinaryNote": "Medicina debe descartar causas orgánicas (tóxicas, metabólicas) antes de confirmar origen psiquiátrico primario."
     },
     {
@@ -528,7 +528,7 @@ window.SERUMS_DATA = {
         "Evaluar el riesgo médico y psicológico de forma conjunta y coordinar derivación especializada."
       ],
       "correct": 3,
-      "feedback": "Ante sospecha de trastorno de conducta alimentaria se requiere evaluación conjunta del riesgo médico y psicológico; forzar la alimentación, esperar a que lo mencione espontáneamente o abordar solo lo nutricional no son adecuados.",
+      "feedback": "Es correcta porque la pérdida marcada de peso, restricción alimentaria y ocultamiento al comer son signos de alarma de un posible trastorno de conducta alimentaria, que requiere evaluación conjunta médica y psicológica más coordinación especializada. Abordar solo lo nutricional fragmenta el manejo; forzar la alimentación puede agravar el cuadro; esperar que lo mencione espontáneamente retrasa una intervención ya necesaria.",
       "interdisciplinaryNote": "Nutrición aporta la valoración antropométrica y de riesgo médico que debe acompañar el manejo psicológico."
     },
     {
@@ -575,7 +575,7 @@ window.SERUMS_DATA = {
         "Documentar el relato y continuar la consulta según el motivo original, sin evaluación adicional."
       ],
       "correct": 1,
-      "feedback": "El riesgo heteroagresivo con plan concreto exige evaluación inmediata, medidas de seguridad y derivación urgente; diferir la cita, confiar en una promesa verbal o no profundizar la evaluación no garantizan la seguridad."
+      "feedback": "Es correcta porque un plan concreto y medios disponibles para dañar a un tercero constituyen riesgo heteroagresivo inminente, que exige evaluación inmediata, medidas de seguridad para los involucrados y derivación urgente. Citar para la siguiente semana no contiene el riesgo actual; confiar en una promesa verbal no es una medida de seguridad válida; documentar sin profundizar deja sin protección a la posible víctima."
     },
     {
       "id": 26,
@@ -598,7 +598,7 @@ window.SERUMS_DATA = {
         "Esperar a que el episodio remita espontáneamente antes de intervenir."
       ],
       "correct": 1,
-      "feedback": "Un episodio maníaco requiere evaluación de riesgo, estabilización y derivación especializada; el reposo sin evaluación, la relajación como única medida o esperar la remisión espontánea no son adecuados."
+      "feedback": "Es correcta porque euforia marcada, disminución de sueño, gasto excesivo y habla acelerada durante cinco días son criterios de episodio maníaco, que requiere evaluación de riesgo, estabilización y derivación especializada. La relajación no aborda la fisiopatología del episodio; el reposo sin evaluación no contiene los riesgos asociados; esperar remisión espontánea prolonga la exposición a decisiones de alto riesgo."
     },
     {
       "id": 27,
@@ -691,7 +691,7 @@ window.SERUMS_DATA = {
         "Evaluar el impacto funcional del uso, establecer límites junto a la familia y ofrecer intervención psicológica."
       ],
       "correct": 3,
-      "feedback": "El uso problemático de videojuegos con impacto funcional requiere evaluación, límites acordados con la familia e intervención psicológica; normalizarlo, prohibir abruptamente o delegar todo a la familia no son adecuados."
+      "feedback": "Es correcta porque la reducción de sueño, la caída del rendimiento y la irritabilidad al limitar el uso son indicadores de impacto funcional que ameritan evaluación, límites acordados con la familia e intervención psicológica. Normalizarlo ignora el deterioro funcional ya presente; prohibir de forma abrupta sin acompañamiento puede intensificar la irritabilidad; delegar todo a la familia sin soporte profesional deja sin abordar la dimensión clínica."
     },
     {
       "id": 31,
@@ -737,7 +737,7 @@ window.SERUMS_DATA = {
         "Dar de alta definitiva si el paciente se muestra tranquilo durante la consulta."
       ],
       "correct": 1,
-      "feedback": "El seguimiento posterior a un intento de suicidio exige evaluar el riesgo actual y el plan de seguridad; el alta basada solo en la apariencia, evitar preguntar por ideación o centrarse solo en fármacos no son adecuados."
+      "feedback": "Es correcta porque tras un intento de suicidio reciente el control ambulatorio debe priorizar la evaluación del riesgo actual, el refuerzo de la red de apoyo y la verificación del plan de seguridad acordado. Evitar preguntar por ideación deja sin detectar un riesgo persistente; centrarse solo en la adherencia farmacológica omite el componente de seguridad; dar de alta por apariencia tranquila ignora que la calma no descarta riesgo."
     },
     {
       "id": 33,
@@ -784,7 +784,7 @@ window.SERUMS_DATA = {
         "Indicar exposición inmediata a todas las situaciones temidas, sin ninguna gradualidad."
       ],
       "correct": 2,
-      "feedback": "La ansiedad social con impacto funcional requiere intervención gradual y estructurada; la exposición inmediata sin gradualidad, minimizar el cuadro o promover la evitación total no son adecuadas."
+      "feedback": "Es correcta porque el temor a ser juzgado con impacto ya demostrado en el desempeño académico indica ansiedad social clínicamente significativa, que se maneja con intervención psicológica gradual y estructurada. Minimizarla como timidez retrasa el tratamiento necesario; promover evitación total refuerza el círculo fóbico; la exposición inmediata sin gradualidad puede intensificar el malestar y generar abandono."
     },
     {
       "id": 35,
@@ -1409,7 +1409,7 @@ window.SERUMS_DATA = {
         "Reconocer la ansiedad del paciente, aplicar técnicas de manejo conductual y coordinar apoyo psicológico si es necesario."
       ],
       "correct": 3,
-      "feedback": "La fobia dental debe abordarse reconociendo la ansiedad y aplicando manejo conductual, coordinando apoyo psicológico si corresponde; forzar el procedimiento, postergar indefinidamente o sedar sin abordar la ansiedad no son adecuados.",
+      "feedback": "Es correcta porque una fobia dental de años de evolución con dolor evidente requiere reconocer la ansiedad, aplicar manejo conductual y coordinar apoyo psicológico si el componente fóbico lo amerita. Realizar el procedimiento de inmediato sin abordar el miedo puede reforzar la fobia; postergar indefinidamente permite que el problema dental se agrave; sedar sin trabajar la ansiedad no resuelve la causa de la evitación.",
       "interdisciplinaryNote": "Psicología puede aportar técnicas de manejo de ansiedad y desensibilización para facilitar la atención odontológica."
     },
     {
@@ -4292,7 +4292,7 @@ window.SERUMS_DATA = {
         "Abordar únicamente el componente del lenguaje, sin considerar el impacto emocional identificado."
       ],
       "correct": 0,
-      "feedback": "El manejo de la tartamudez debe combinar terapia del lenguaje con abordaje del impacto emocional; la corrección constante, la evitación de hablar en público o ignorar lo emocional no son adecuados.",
+      "feedback": "Es correcta porque la tartamudez con evitación social y temor a burlas requiere terapia del lenguaje específica junto con abordaje del impacto emocional identificado, no un manejo fragmentado. Corregir constantemente el habla puede aumentar la ansiedad comunicativa; recomendar evitar hablar en público refuerza la evitación; abordar solo el lenguaje sin lo emocional deja sin resolver el impacto social.",
       "interdisciplinaryNote": "Psicología puede apoyar el manejo de la ansiedad social y el temor a la burla asociados a la tartamudez."
     },
     {
@@ -4546,7 +4546,7 @@ window.SERUMS_DATA = {
         "Evaluar el cuadro, psicoeducar sobre el pánico y ofrecer intervención gradual que aborde la evitación."
       ],
       "correct": 3,
-      "feedback": "El trastorno de pánico con agorafobia requiere psicoeducación e intervención gradual sobre la evitación; promover la evitación total, minimizar el cuadro o exponer sin gradualidad no son adecuados."
+      "feedback": "Es correcta porque los episodios recurrentes de pánico con evitación de salir de casa configuran un cuadro de agorafobia asociada, que requiere psicoeducación e intervención gradual dirigida a la evitación. Promover la evitación total mantiene el mecanismo del trastorno; minimizarlo como pasajero retrasa el tratamiento necesario; la exposición intensiva sin gradualidad puede resultar contraproducente."
     },
     {
       "id": 198,
@@ -4569,7 +4569,7 @@ window.SERUMS_DATA = {
         "Indicar que ya debería haber superado el proceso por el tiempo transcurrido."
       ],
       "correct": 0,
-      "feedback": "Un duelo que interfiere de forma prolongada con la vida cotidiana debe evaluarse como posible duelo complicado y abordarse con espacio terapéutico especializado; las demás opciones no reconocen la complicación del proceso."
+      "feedback": "Es correcta porque la interferencia marcada con la vida cotidiana dos años después de la pérdida excede el curso esperado de un duelo normal y corresponde evaluar signos de duelo complicado, ofreciendo espacio terapéutico especializado. Considerarlo duelo normal ignora la cronicidad y el deterioro funcional; evitar mencionar al hijo impide el procesamiento del duelo; indicar que 'ya debería haberlo superado' desconoce la variabilidad individual y puede generar culpa."
     },
     {
       "id": 199,
@@ -4592,7 +4592,7 @@ window.SERUMS_DATA = {
         "Derivar de inmediato a hospitalización sin evaluación previa del riesgo."
       ],
       "correct": 2,
-      "feedback": "La autolesión no suicida requiere evaluación de riesgo e intervención en regulación emocional; ignorarla por ausencia de intención suicida, exigir una promesa o derivar sin evaluar no son adecuados."
+      "feedback": "Es correcta porque la autolesión no suicida usada para regular emociones intensas requiere evaluación de riesgo y trabajo específico en regulación emocional, independientemente de la ausencia de intención suicida expresada. Ignorarla por no haber intención suicida subestima el riesgo asociado a la conducta; exigir una promesa no es una medida clínica válida; derivar a hospitalización sin evaluación previa es desproporcionado."
     },
     {
       "id": 200,
@@ -4615,7 +4615,7 @@ window.SERUMS_DATA = {
         "Minimizar el cuadro considerándolo un simple hábito de orden personal."
       ],
       "correct": 2,
-      "feedback": "Un patrón de rituales con impacto funcional debe evaluarse como posible trastorno obsesivo-compulsivo y abordarse con intervención especializada; pedirle fuerza de voluntad, minimizarlo o evitar salir de casa no son adecuados."
+      "feedback": "Es correcta porque las verificaciones repetidas con afectación del desempeño laboral configuran un cuadro compatible con trastorno obsesivo-compulsivo, que amerita evaluación formal e intervención especializada. Evitar salir de casa evade el problema sin tratarlo; pedir fuerza de voluntad desconoce la naturaleza involuntaria del ritual; minimizarlo como hábito ignora el impacto funcional ya evidenciado."
     },
     {
       "id": 201,
@@ -5261,7 +5261,7 @@ window.SERUMS_DATA = {
         "Limitar la intervención a actividades recreativas, sin coordinación con el tratamiento de salud mental."
       ],
       "correct": 0,
-      "feedback": "La terapia ocupacional en depresión severa debe diseñar un plan gradual y coordinado con salud mental; esperar mejoría espontánea, exigir la reactivación total de golpe o intervenir sin coordinación no son adecuados.",
+      "feedback": "Es correcta porque el abandono total de actividades significativas en depresión severa se aborda en terapia ocupacional con reactivación conductual gradual, coordinada con el tratamiento en salud mental. Esperar mejoría espontánea retrasa una intervención basada en evidencia; exigir la reactivación total de golpe puede resultar abrumador; limitar la intervención a lo recreativo sin coordinación fragmenta el manejo.",
       "interdisciplinaryNote": "Psicología aporta el manejo terapéutico de fondo de la depresión que debe acompañar la reactivación conductual."
     },
     {
