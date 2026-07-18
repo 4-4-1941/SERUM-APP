@@ -274,7 +274,7 @@ window.SERUMS_DATA = {
         "Indicar que continúe con el mismo esquema y el mismo intervalo de controles habitual."
       ],
       "correct": 1,
-      "feedback": "Ante mal control por olvido de tomas se debe reforzar adherencia y educación con seguimiento cercano; suspender el tratamiento, mantener el mismo esquema sin cambios o retirar el fármaco no abordan la causa real del descontrol."
+      "feedback": "Es correcta porque el olvido frecuente de dosis, no la ineficacia del fármaco, es la causa identificada del mal control, lo que exige reforzar adherencia y educación con seguimiento cercano antes de modificar el esquema terapéutico. Suspender el tratamiento retira una terapia efectiva sin abordar la causa real; mantener el mismo esquema sin ningún refuerzo repite la falla ya evidenciada; escalar a triple terapia sin explorar la causa expone a efectos adversos innecesarios para un problema que es de adherencia, no de dosis insuficiente."
     },
     {
       "id": 13,
@@ -389,7 +389,7 @@ window.SERUMS_DATA = {
         "Esperar a que la demanda de vacunación aumente por sí sola."
       ],
       "correct": 1,
-      "feedback": "Ante coberturas bajas de vacunación se debe registrar el problema, priorizar la intervención y planificar seguimiento comunitario activo; esperar que la demanda aumente sola, suspender el reporte o pedir más dosis sin investigar la causa no son adecuados."
+      "feedback": "Es correcta porque una cobertura baja en dos comunidades requiere documentar el problema antes de decidir la intervención, y luego un seguimiento comunitario activo que sostenga la mejora en el tiempo, no una acción puntual. Suspender el reporte de coberturas elimina la evidencia necesaria para gestionar el problema; solicitar más dosis sin investigar la causa no resuelve una brecha que puede ser de acceso o de percepción comunitaria; esperar que la demanda aumente por sí sola ignora que la estrategia de vacunación es proactiva, no de demanda espontánea."
     },
     {
       "id": 18,
@@ -412,7 +412,7 @@ window.SERUMS_DATA = {
         "Iniciar evaluación integral y clasificación de riesgo obstétrico, aunque el control sea tardío."
       ],
       "correct": 3,
-      "feedback": "Ante un control prenatal tardío corresponde iniciar de inmediato la evaluación integral y clasificación de riesgo; limitarse a la ecografía, mantener el cronograma estándar o postergar la evaluación de riesgo retrasan la identificación de complicaciones."
+      "feedback": "Es correcta porque un ingreso tardío al control prenatal no exime de una clasificación de riesgo obstétrico completa e inmediata, dado que las semanas ya transcurridas sin evaluación pueden ocultar complicaciones ya presentes que deben identificarse cuanto antes. Programar solo la primera ecografía deja sin evaluar otros componentes del riesgo obstétrico; mantener el cronograma estándar ignora que ya se perdió tiempo de seguimiento; postergar la evaluación de riesgo hasta el siguiente control prolonga innecesariamente una brecha de vigilancia ya existente."
     },
     {
       "id": 19,
@@ -1061,7 +1061,7 @@ window.SERUMS_DATA = {
         "Indicar que espere hasta el siguiente control programado regularmente."
       ],
       "correct": 0,
-      "feedback": "Corresponde verificar el carné, completar el esquema faltante según norma y registrar el seguimiento; esperar el siguiente control, aplicar todo sin verificar el carné o derivar sin necesidad no son adecuados."
+      "feedback": "Es correcta porque toda dosis pendiente debe verificarse contra el carné y completarse siguiendo el esquema y los intervalos mínimos establecidos por norma, registrando el seguimiento para asegurar la continuidad. Aplicar todas las vacunas pendientes sin verificar el carné arriesga duplicar dosis o vulnerar intervalos mínimos entre biológicos; esperar el siguiente control programado prolonga innecesariamente la ventana de susceptibilidad; derivar a mayor nivel no es necesario cuando el esquema puede completarse en el propio establecimiento."
     },
     {
       "id": 47,
@@ -1084,7 +1084,7 @@ window.SERUMS_DATA = {
         "Documentar el hallazgo, orientar a la familia y derivar para evaluación especializada del lenguaje."
       ],
       "correct": 3,
-      "feedback": "Ante un hito de lenguaje no alcanzado se debe documentar, orientar a la familia y derivar para evaluación especializada; la estimulación aislada, esperar el siguiente control o atribuirlo al bilingüismo sin explorar más no son adecuados."
+      "feedback": "Es correcta porque un hito de lenguaje no alcanzado en el control de CRED debe documentarse y derivarse para evaluación especializada, ya que un retraso real requiere intervención temprana para no comprometer el desarrollo posterior. Atribuirlo al bilingüismo sin explorar otras causas descarta prematuramente un signo de alarma; la estimulación aislada en casa no sustituye una evaluación especializada si el hallazgo persiste; esperar el siguiente control retrasa una intervención cuya eficacia depende de la precocidad."
     },
     {
       "id": 48,
@@ -1107,7 +1107,7 @@ window.SERUMS_DATA = {
         "Indicar solo cambios de posición, sin evaluar ni curar la lesión existente."
       ],
       "correct": 0,
-      "feedback": "La lesión debe evaluarse, curarse según protocolo y acompañarse de educación en cambios posturales; el antibiótico tópico aislado, los cambios de posición sin curar o cubrir sin seguimiento no son suficientes."
+      "feedback": "Es correcta porque una lesión en zona sacra con deterioro progresivo requiere evaluar su estadio, curarla según protocolo vigente y educar en cambios posturales que prevengan nuevas lesiones, abordando causa y consecuencia a la vez. El antibiótico tópico aislado no sustituye el manejo local ni educativo; cubrir con apósito simple sin seguimiento no monitorea la evolución de una lesión ya en deterioro; los cambios de posición sin curar la lesión existente dejan sin tratar el daño ya establecido."
     },
     {
       "id": 49,
@@ -1130,7 +1130,7 @@ window.SERUMS_DATA = {
         "Enfocarse únicamente en el soporte emocional a la familia, sin reevaluar el control del dolor."
       ],
       "correct": 1,
-      "feedback": "Los cuidados paliativos requieren control del dolor junto con soporte a la familia cuidadora y coordinación interdisciplinaria; aumentar solo el analgésico, atender solo lo emocional o dejar sin apoyo a la familia son incompletos.",
+      "feedback": "Es correcta porque en cuidados paliativos el dolor no controlado y el agotamiento familiar son dos problemas simultáneos que requieren reevaluación del dolor junto con soporte a la familia cuidadora y coordinación interdisciplinaria, sin priorizar uno sobre otro. Aumentar solo el analgésico sin evaluar a la familia deja sin atender un riesgo de claudicación del cuidador; dejar que la familia continúe sin apoyo adicional ignora signos ya evidentes de agotamiento; enfocarse solo en lo emocional sin reevaluar el dolor deja sin resolver un síntoma con impacto directo en la calidad de vida del paciente.",
       "interdisciplinaryNote": "Psicología puede brindar soporte emocional a la familia cuidadora y acompañamiento en el proceso de duelo anticipado."
     },
     {
@@ -1154,7 +1154,7 @@ window.SERUMS_DATA = {
         "Indicar iniciar fórmula de inmediato, sin evaluar previamente la técnica utilizada."
       ],
       "correct": 2,
-      "feedback": "Ante dificultades en la lactancia se debe evaluar la técnica, corregir agarre y reforzar consejería; iniciar fórmula sin evaluar, espaciar tomas o normalizar el dolor sin evaluación no son adecuados."
+      "feedback": "Es correcta porque el dolor al amamantar suele originarse en un agarre inadecuado, por lo que corresponde evaluar la técnica y corregirla antes de asumir otras causas o recurrir a sustitutos de la leche materna. Normalizar el dolor sin evaluación deja sin corregir una técnica que puede lesionar el pezón; espaciar las tomas reduce el estímulo de succión que regula la producción por demanda, pudiendo empeorar la percepción de baja producción; iniciar fórmula sin evaluar la técnica interrumpe la lactancia exclusiva sin haber corregido primero la causa real del problema."
     },
     {
       "id": 51,
@@ -1177,7 +1177,7 @@ window.SERUMS_DATA = {
         "Evaluar la causa de la suspensión del tratamiento, reforzar la educación y coordinar el apoyo social o clínico necesario."
       ],
       "correct": 3,
-      "feedback": "Se debe evaluar la causa de la suspensión del tratamiento y coordinar el apoyo necesario; indicar que retome sin explorar la causa, registrar sin acción o trasladar el costo a la familia no resuelven el problema de fondo."
+      "feedback": "Es correcta porque la suspensión del tratamiento por falta de recursos tiene una causa social identificable que debe explorarse antes de decidir cualquier intervención, coordinando el apoyo social o clínico pertinente. Indicar que retome el tratamiento sin explorar la causa no resuelve la barrera de acceso; trasladar el costo a la familia asume una capacidad de pago no verificada; registrar sin acción inmediata deja al paciente sin tratamiento durante todo el intervalo hasta la próxima visita."
     },
     {
       "id": 52,
@@ -1200,7 +1200,7 @@ window.SERUMS_DATA = {
         "Delegar el triaje exclusivamente al personal de seguridad del establecimiento."
       ],
       "correct": 2,
-      "feedback": "Ante un brote activo se deben reforzar bioseguridad, triaje y protección del personal; continuar sin medidas, suspender toda atención o delegar el triaje solo a seguridad no son adecuados."
+      "feedback": "Es correcta porque un brote activo con demanda creciente exige reforzar bioseguridad, triaje diferenciado y protección del personal, articulando la respuesta clínica con el control de la transmisión. Continuar la atención habitual sin medidas adicionales expone a mayor contagio dentro del establecimiento; suspender toda atención de forma indiscriminada desatiende a pacientes con necesidades no relacionadas al brote; delegar el triaje exclusivamente a personal de seguridad, sin criterio clínico, no garantiza una clasificación adecuada de la gravedad."
     },
     {
       "id": 53,
@@ -1223,7 +1223,7 @@ window.SERUMS_DATA = {
         "Esperar a que el paciente regrese por su cuenta al establecimiento."
       ],
       "correct": 2,
-      "feedback": "Ante inasistencias al tratamiento antituberculoso se debe realizar búsqueda activa y explorar barreras de adherencia; suspender el tratamiento, delegarlo sin explorar la causa o esperar pasivamente no siguen la estrategia de tratamiento supervisado."
+      "feedback": "Es correcta porque el tratamiento antituberculoso supervisado exige que las inasistencias activen búsqueda activa del paciente y exploración de las barreras de adherencia, para sostener la supervisión directa que es clave para evitar resistencia y abandono. Suspender el tratamiento por incumplimiento interrumpe un esquema cuya continuidad es crítica para evitar farmacorresistencia; delegar la recogida a un familiar sin explorar la causa no restablece la supervisión directa de la toma; esperar que el paciente regrese por su cuenta es pasivo frente a un riesgo de abandono que la estrategia busca prevenir activamente."
     },
     {
       "id": 54,
@@ -1246,7 +1246,7 @@ window.SERUMS_DATA = {
         "Estabilizar a la gestante, iniciar manejo según protocolo de amenaza de parto pretérmino y coordinar referencia inmediata."
       ],
       "correct": 3,
-      "feedback": "Ante amenaza de parto pretérmino corresponde estabilizar, manejar según protocolo y referir de inmediato; atender el parto localmente, indicar solo reposo o iniciar tocolisis sin coordinar referencia no son adecuados."
+      "feedback": "Es correcta porque la amenaza de parto pretérmino con dilatación incipiente en un establecimiento de baja complejidad excede la capacidad resolutiva neonatal del nivel, por lo que corresponde estabilizar, iniciar el manejo protocolizado y coordinar la referencia de inmediato antes de que progrese el trabajo de parto. Atender el parto localmente expone al recién nacido pretérmino a un nivel sin capacidad de manejo neonatal adecuado; el reposo domiciliario no corresponde a un cuadro ya en curso con contracciones regulares; iniciar solo tocólisis sin coordinar referencia retrasa el traslado mientras aún es posible."
     },
     {
       "id": 55,
@@ -1269,7 +1269,7 @@ window.SERUMS_DATA = {
         "Indicar que espere a que la pareja cambie de opinión antes de decidir."
       ],
       "correct": 2,
-      "feedback": "Debe respetarse la autonomía reproductiva de la usuaria con consejería confidencial; negar el método, esperar la aprobación de la pareja o exigir que le informe antes de entregarlo no son adecuados.",
+      "feedback": "Es correcta porque la decisión sobre métodos anticonceptivos es un derecho autónomo de la usuaria que no requiere autorización de la pareja, correspondiendo consejería confidencial y respeto a su decisión final. Negar el método hasta contar con autorización de la pareja vulnera ese derecho; sugerir que informe a su pareja antes de entregarlo condiciona indebidamente el acceso al método; esperar a que la pareja cambie de opinión posterga una decisión que corresponde únicamente a la usuaria.",
       "interdisciplinaryNote": "Psicología puede apoyar si se identifican señales de violencia o control en la relación de pareja."
     },
     {
@@ -1293,7 +1293,7 @@ window.SERUMS_DATA = {
         "Estabilizar signos vitales, iniciar manejo según protocolo de preeclampsia y referir con carácter urgente."
       ],
       "correct": 3,
-      "feedback": "La preeclampsia exige estabilización, manejo protocolizado y referencia urgente; el reposo ambulatorio, el tratamiento oral aislado o esperar la evolución espontánea subestiman la gravedad del cuadro."
+      "feedback": "Es correcta porque la cefalea intensa persistente y el edema marcado junto a presión elevada son signos compatibles con preeclampsia con criterios de severidad, que exigen estabilización, manejo protocolizado y referencia urgente, dado el riesgo materno-fetal inminente. El tratamiento antihipertensivo oral aislado no aborda el riesgo de progresión a un cuadro más grave; el reposo domiciliario subestima signos de gravedad ya presentes; esperar la evolución espontánea del cuadro retrasa una intervención en una emergencia obstétrica tiempo-dependiente."
     },
     {
       "id": 57,
@@ -1316,7 +1316,7 @@ window.SERUMS_DATA = {
         "Indicar solo reposo y observación, sin ninguna intervención activa inmediata."
       ],
       "correct": 0,
-      "feedback": "La hemorragia posparto exige manejo activo inmediato y referencia si no cede; esperar la resolución espontánea, solo observar o trasladar sin aplicar manejo previo retrasan una intervención crítica."
+      "feedback": "Es correcta porque la hemorragia posparto con inestabilidad hemodinámica exige manejo activo inmediato según protocolo en el propio establecimiento, y solo referir si el sangrado no cede pese al manejo instaurado. Trasladar sin aplicar antes ninguna medida expone a la paciente a mayor pérdida sanguínea durante el traslado; esperar que el sangrado disminuya espontáneamente ignora la inestabilidad ya presente; indicar solo reposo y observación sin intervención activa no controla una hemorragia en curso."
     },
     {
       "id": 58,
@@ -1339,7 +1339,7 @@ window.SERUMS_DATA = {
         "Postergar la exploración psicosocial hasta que la adolescente se muestre más cómoda por sí sola."
       ],
       "correct": 0,
-      "feedback": "El embarazo adolescente requiere atención obstétrica integral y exploración psicosocial coordinada; atender solo lo obstétrico, dejar que la madre responda por ella o postergar la exploración psicosocial no son adecuados.",
+      "feedback": "Es correcta porque el embarazo adolescente requiere, además de la atención obstétrica, explorar el contexto psicosocial y coordinar apoyo interdisciplinario, dado que estos factores inciden directamente en el pronóstico materno-fetal. Atender solo el aspecto obstétrico deja sin abordar factores de riesgo psicosocial relevantes en esta población; dejar que la madre responda por ella invisibiliza la voz de la propia adolescente; postergar la exploración psicosocial hasta que se sienta más cómoda retrasa la identificación de riesgos que pueden requerir intervención temprana.",
       "interdisciplinaryNote": "Psicología debe explorar posibles señales de violencia, abuso o riesgo psicosocial asociado al embarazo adolescente."
     },
     {
@@ -1363,7 +1363,7 @@ window.SERUMS_DATA = {
         "Repetir el mismo patrón de atención para no prolongar la consulta."
       ],
       "correct": 2,
-      "feedback": "La atención debe garantizar información comprensible, autonomía y trato digno; repetir el mismo patrón deficiente, no informar previamente o informar solo lo mínimo no cumplen ese estándar."
+      "feedback": "Es correcta porque la prevención de violencia obstétrica exige explicar los procedimientos en lenguaje comprensible, respetar la autonomía de la gestante y garantizar un trato digno, precisamente para romper el patrón de atención deficiente que refiere haber vivido antes. Repetir el mismo patrón de atención perpetúa la experiencia que la propia gestante identifica como problemática; realizar procedimientos sin informar previamente vulnera su derecho al consentimiento informado; informar solo lo esencial asumiendo experiencia previa no garantiza la comprensión real de cada procedimiento actual."
     },
     {
       "id": 60,
@@ -1711,7 +1711,7 @@ window.SERUMS_DATA = {
         "Notificar únicamente si el caso presenta signos de gravedad clínica."
       ],
       "correct": 2,
-      "feedback": "La vigilancia epidemiológica exige notificación oportuna de casos de declaración obligatoria, sin esperar confirmación de más casos; registrar solo en la historia clínica o notificar solo si hay gravedad clínica no cumplen ese criterio."
+      "feedback": "Es correcta porque las enfermedades de notificación obligatoria deben reportarse ante la sola sospecha clínica compatible, sin esperar confirmación de laboratorio ni la aparición de más casos, dado que la vigilancia depende de la oportunidad del reporte. Registrar solo en la historia clínica no activa el sistema de vigilancia epidemiológica; notificar solo si hay signos de gravedad clínica deja sin reportar casos leves que igual son relevantes para la vigilancia; esperar más casos similares retrasa una respuesta que debe iniciarse con el primer caso identificado."
     },
     {
       "id": 75,
@@ -1941,7 +1941,7 @@ window.SERUMS_DATA = {
         "Derivar al paciente al nivel de atención adecuado y asegurar su retorno con la información pertinente para el seguimiento."
       ],
       "correct": 3,
-      "feedback": "El sistema de referencia y contrarreferencia exige derivar al nivel adecuado y asegurar el retorno con información para el seguimiento; atender sin recursos, derivar sin información clínica o cerrar el caso sin esperar el retorno no son adecuados."
+      "feedback": "Es correcta porque el sistema de referencia y contrarreferencia exige derivar al nivel adecuado acompañando información clínica pertinente, y asegurar el retorno del paciente con la contrarreferencia para dar continuidad al cuidado en el establecimiento de origen. Derivar sin enviar información clínica deja al establecimiento receptor sin el contexto necesario; cerrar el caso sin esperar el retorno interrumpe la continuidad asistencial; atender sin derivar pese a no contar con los recursos necesarios expone al paciente a un manejo inadecuado."
     },
     {
       "id": 85,
@@ -2079,7 +2079,7 @@ window.SERUMS_DATA = {
         "Observar la evolución del paciente durante unos minutos antes de intervenir."
       ],
       "correct": 2,
-      "feedback": "La anafilaxia es una emergencia que exige manejo protocolizado inmediato y referencia de emergencia; el antihistamínico oral aislado, observar antes de intervenir o esperar mayor compromiso respiratorio retrasan una intervención que puede ser vital."
+      "feedback": "Es correcta porque la anafilaxia es una emergencia con riesgo vital inminente que exige manejo protocolizado inmediato y activación de la referencia de emergencia, sin esperar mayor deterioro clínico. El antihistamínico oral aislado no revierte el compromiso respiratorio ni hemodinámico de la anafilaxia; observar antes de intervenir retrasa un tratamiento tiempo-dependiente; esperar mayor compromiso respiratorio para actuar aumenta el riesgo de un desenlace fatal evitable."
     },
     {
       "id": 91,
@@ -2102,7 +2102,7 @@ window.SERUMS_DATA = {
         "Indicar que son molestias normales que no requieren ninguna evaluación."
       ],
       "correct": 1,
-      "feedback": "El climaterio puede afectar el bienestar físico y emocional; corresponde evaluar la intensidad de los síntomas y coordinar el apoyo necesario, médico o psicológico, sin normalizar sin evaluar, derivar de inmediato a psiquiatría o iniciar hormonas sin evaluación previa.",
+      "feedback": "Es correcta porque el climaterio puede generar síntomas físicos y emocionales que ameritan evaluar su intensidad antes de decidir el manejo, coordinando apoyo médico o psicológico según la necesidad identificada, sin asumir un manejo único. Derivar de inmediato a psiquiatría sin evaluación previa es desproporcionado para síntomas que pueden manejarse en el nivel actual; iniciar terapia hormonal sin evaluar antes la intensidad ni el contexto omite una valoración de riesgos y beneficios individual; normalizar los síntomas sin evaluación desestima un cuadro que puede afectar significativamente la calidad de vida.",
       "interdisciplinaryNote": "Psicología puede apoyar cuando los cambios de ánimo asociados al climaterio afectan de forma significativa el funcionamiento diario."
     },
     {
@@ -2126,7 +2126,7 @@ window.SERUMS_DATA = {
         "Registrar el dato sin ninguna acción adicional."
       ],
       "correct": 1,
-      "feedback": "Ante un valor elevado en tamizaje se debe confirmar con una segunda toma, orientar y programar ingreso a control; registrar sin acción, medicar sin confirmar o descartar por ausencia de síntomas no son adecuados."
+      "feedback": "Es correcta porque un valor elevado en tamizaje comunitario requiere confirmarse con una segunda toma antes de orientar e ingresar al paciente a control, ya que el tamizaje por sí solo no establece el diagnóstico. Descartar el hallazgo por ausencia de síntomas ignora que la hipertensión suele ser asintomática; iniciar tratamiento farmacológico sin confirmación puede sobretratar una lectura aislada; registrar sin ninguna acción adicional deja sin seguimiento un hallazgo que requiere confirmación."
     },
     {
       "id": 93,
@@ -2149,7 +2149,7 @@ window.SERUMS_DATA = {
         "Evaluar la lesión, iniciar curación según protocolo y coordinar referencia si hay signos de compromiso vascular o infeccioso."
       ],
       "correct": 3,
-      "feedback": "El pie diabético con signos de mala perfusión requiere evaluación cuidadosa, curación protocolizada y referencia oportuna; la curación sin seguimiento, el reposo sin evaluar o el antibiótico empírico sin evaluar el compromiso vascular no son adecuados."
+      "feedback": "Es correcta porque una úlcera con signos de mala perfusión en pie diabético requiere evaluar el compromiso vascular e infeccioso, curación protocolizada y referencia oportuna si esos signos están presentes, dado el riesgo de progresión a un cuadro más grave. El antibiótico oral empírico sin evaluar el compromiso vascular no aborda la causa isquémica subyacente; el reposo absoluto sin evaluar directamente la lesión no permite clasificar su gravedad; la curación local sin seguimiento posterior no monitorea la evolución de una lesión con signos ya preocupantes."
     },
     {
       "id": 94,
@@ -2172,7 +2172,7 @@ window.SERUMS_DATA = {
         "Iniciar antibiótico profiláctico ambulatorio, sin confirmar antes el diagnóstico de ruptura de membranas."
       ],
       "correct": 1,
-      "feedback": "Ante sospecha de ruptura prematura de membranas se debe confirmar el diagnóstico, evaluar signos de infección y referir con urgencia según protocolo; el reposo domiciliario, esperar el trabajo de parto espontáneo o el antibiótico sin confirmación diagnóstica no son adecuados."
+      "feedback": "Es correcta porque la sospecha de ruptura prematura de membranas exige confirmar el diagnóstico y evaluar signos de infección antes de decidir el manejo, coordinando referencia urgente según protocolo dado el riesgo de infección ascendente y parto pretérmino. Esperar el inicio espontáneo del trabajo de parto sin más evaluación deja sin vigilar el riesgo infeccioso; el reposo domiciliario no corresponde a un cuadro que requiere evaluación y manejo hospitalario; iniciar antibiótico profiláctico sin confirmar el diagnóstico expone a tratamiento innecesario o a subestimar otras causas de pérdida de líquido."
     },
     {
       "id": 95,
@@ -2195,7 +2195,7 @@ window.SERUMS_DATA = {
         "Brindar la orientación solicitada, pero solo si promete informar a sus padres después."
       ],
       "correct": 2,
-      "feedback": "La atención a adolescentes en salud sexual debe ser confidencial y respetar su autonomía progresiva; negar la atención, informar a los padres sin consentimiento o condicionar la orientación a que ella informe después no son adecuados."
+      "feedback": "Es correcta porque la atención en salud sexual y reproductiva a adolescentes debe ser confidencial y respetar su autonomía progresiva, sin condicionar la orientación a la participación de terceros, en línea con el enfoque de derechos reconocido para esta población. Informar a los padres sin su consentimiento vulnera la confidencialidad a la que tiene derecho; negar la atención hasta que acuda acompañada retrasa una orientación que puede y debe brindarse en el momento; condicionar la orientación a que ella misma informe después no es una condición legítima para brindar el servicio."
     },
     {
       "id": 96,
@@ -2218,7 +2218,7 @@ window.SERUMS_DATA = {
         "Informar el hallazgo de forma clara, brindar contención emocional y coordinar referencia especializada oportuna."
       ],
       "correct": 3,
-      "feedback": "Ante un hallazgo ecográfico anómalo se debe informar con claridad y sensibilidad, brindar contención y coordinar la referencia oportuna; ocultar el hallazgo, derivar sin explicación o repetir el estudio sin comunicar nada no son adecuados.",
+      "feedback": "Es correcta porque un hallazgo ecográfico anómalo debe comunicarse con claridad y sensibilidad en el momento oportuno, junto con contención emocional y coordinación de la referencia especializada que permita confirmar o descartar el hallazgo, sin retrasos innecesarios. Repetir la ecografía varias veces sin comunicar nada prolonga la incertidumbre de la gestante sin justificación clínica; derivar sin ninguna explicación la deja sin comprensión de su propia condición; no informar hasta tener certeza absoluta contradice el derecho a la información oportuna sobre hallazgos relevantes ya detectados.",
       "interdisciplinaryNote": "Psicología puede brindar contención emocional a la gestante y su pareja ante la incertidumbre de un diagnóstico prenatal."
     },
     {
@@ -2242,7 +2242,7 @@ window.SERUMS_DATA = {
         "Esperar la resolución espontánea de los síntomas."
       ],
       "correct": 0,
-      "feedback": "Ante sospecha de infección puerperal se debe evaluar la gravedad, iniciar manejo inicial y referir oportunamente; el reposo sin evaluar, esperar resolución espontánea o iniciar antibiótico sin evaluar gravedad no son adecuados."
+      "feedback": "Es correcta porque la fiebre, los loquios de mal olor y el dolor abdominal bajo persistente en el puerperio son signos compatibles con infección puerperal, que exigen evaluar la gravedad del cuadro, iniciar manejo inicial y referir oportunamente si lo amerita, dado el riesgo de progresión a un cuadro séptico. El reposo sin evaluar no corrige un proceso infeccioso en curso; esperar la resolución espontánea de los síntomas retrasa un tratamiento que es tiempo-dependiente; iniciar antibiótico oral ambulatorio sin evaluar la gravedad puede ser insuficiente si el cuadro ya requiere manejo hospitalario."
     },
     {
       "id": 98,
@@ -2566,7 +2566,7 @@ window.SERUMS_DATA = {
         "Continuar la atención y reportar el incidente al final del turno."
       ],
       "correct": 2,
-      "feedback": "Ante una exposición ocupacional se debe lavar la zona afectada y activar de inmediato la profilaxis post-exposición, dado que su eficacia depende de la rapidez; continuar sin actuar, esperar resultados o usar solo antiséptico no son adecuados."
+      "feedback": "Es correcta porque la eficacia de la profilaxis post-exposición depende críticamente de la rapidez de inicio, por lo que corresponde lavar la zona expuesta y activar el protocolo de inmediato, sin esperar resultados de laboratorio del paciente fuente. Aplicar solo antiséptico local sin activar el protocolo deja sin abordar el riesgo de transmisión de patógenos por vía sanguínea; esperar los resultados de laboratorio retrasa una profilaxis cuya ventana de eficacia es limitada; continuar la atención y reportar al final del turno pierde tiempo valioso dentro de esa ventana."
     },
     {
       "id": 112,
@@ -2635,7 +2635,7 @@ window.SERUMS_DATA = {
         "Indicar que el niño se siente adelante en el aula, sin más evaluación."
       ],
       "correct": 2,
-      "feedback": "Ante un hallazgo alterado en tamizaje visual se debe informar a la familia, orientar y derivar oportunamente; registrar sin acción, cambiar de asiento sin evaluar o repetir en un año sin informar no son adecuados."
+      "feedback": "Es correcta porque una dificultad marcada en agudeza visual detectada en tamizaje escolar debe informarse a la familia y derivarse para evaluación oftalmológica, dado que muchos defectos refractivos no corregidos afectan el rendimiento escolar y son tratables si se detectan a tiempo. Registrar sin ninguna acción adicional deja sin corregir un défict con impacto funcional; cambiar de asiento en el aula no corrige la causa del problema visual; repetir la prueba en un año sin informar posterga innecesariamente una derivación que ya está indicada."
     },
     {
       "id": 115,
@@ -2773,7 +2773,7 @@ window.SERUMS_DATA = {
         "Adaptar la atención del parto a las prácticas culturales de la gestante, siempre que no comprometan su seguridad clínica."
       ],
       "correct": 3,
-      "feedback": "La atención con pertinencia intercultural adapta prácticas culturales sin comprometer la seguridad clínica; negar sin adaptación, derivar sin intentarlo o aceptar todo sin evaluar seguridad no son adecuados."
+      "feedback": "Es correcta porque la pertinencia intercultural en la atención del parto exige adaptar las prácticas solicitadas siempre que no comprometan la seguridad clínica del binomio madre-hijo, integrando ambos enfoques en vez de anteponer uno sobre otro. Aceptar todas las prácticas sin evaluar su compatibilidad con la seguridad clínica puede exponer a riesgos evitables; negar la solicitud e imponer el protocolo estándar desconoce el derecho a la atención con enfoque intercultural; derivar sin intentar ninguna adaptación evita resolver la solicitud en el propio establecimiento cuando sí sería posible."
     },
     {
       "id": 121,
@@ -2842,7 +2842,7 @@ window.SERUMS_DATA = {
         "Negar el método por consideraciones personales del profesional."
       ],
       "correct": 1,
-      "feedback": "La anticoncepción oral de emergencia debe brindarse de forma oportuna, dado que su eficacia depende de la rapidez de administración; negarla, postergarla o condicionarla a la autorización de la pareja no son adecuados."
+      "feedback": "Es correcta porque la eficacia de la anticoncepción oral de emergencia depende directamente de la rapidez con que se administra tras la relación sexual sin protección, por lo que corresponde brindarla de forma oportuna dentro de la consulta actual. Indicar que regrese en una semana reduce significativamente su eficacia por el tiempo transcurrido; solicitar autorización de la pareja condiciona indebidamente un derecho autónomo de la usuaria; negar el método por consideraciones personales del profesional antepone una postura individual al derecho de la usuaria a acceder a la prestación."
     },
     {
       "id": 124,
@@ -3187,7 +3187,7 @@ window.SERUMS_DATA = {
         "Atender sin intentar ninguna estrategia de comunicación adicional."
       ],
       "correct": 0,
-      "feedback": "Ante barrera de comunicación por discapacidad se deben usar estrategias alternativas y gestionar interpretación; postergar la atención, no intentar nada o citar para otro día no garantizan una atención accesible inmediata."
+      "feedback": "Es correcta porque la accesibilidad comunicativa debe garantizarse en el momento de la atención, usando los recursos alternativos disponibles y gestionando interpretación si es posible, en vez de trasladar la responsabilidad de superar la barrera al propio paciente. Postergar la atención hasta que el paciente consiga un intérprete por su cuenta traslada una responsabilidad institucional al paciente; solicitar que regrese acompañado condiciona la atención a un tercero no siempre disponible; atender sin intentar ninguna estrategia de comunicación vulnera el derecho a una atención comprensible."
     },
     {
       "id": 139,
@@ -3348,7 +3348,7 @@ window.SERUMS_DATA = {
         "Esperar el próximo pedido regular sin tomar ninguna acción adicional."
       ],
       "correct": 1,
-      "feedback": "Ante un desabastecimiento se debe reportar, gestionar una solución de emergencia y revisar la planificación logística; esperar el pedido regular, suspender la atención sin informar o trasladar el problema al paciente no son adecuados."
+      "feedback": "Es correcta porque el desabastecimiento por falla de planificación exige tanto una solución de emergencia inmediata como una revisión del proceso logístico de fondo, para no repetir la falla en próximos ciclos de abastecimiento. Solicitar que los pacientes consigan los insumos por su cuenta traslada indebidamente una falla institucional al paciente; suspender la atención sin informar afecta la continuidad del cuidado sin buscar alternativa; esperar el próximo pedido regular sin ninguna acción no resuelve la brecha inmediata de atención."
     },
     {
       "id": 146,
@@ -3578,7 +3578,7 @@ window.SERUMS_DATA = {
         "Incinerar todos los residuos del establecimiento sin clasificación previa."
       ],
       "correct": 2,
-      "feedback": "La gestión integral de residuos requiere segregación adecuada y participación comunitaria; delegar todo al personal de limpieza, limitar la atención o incinerar sin clasificación no son adecuados."
+      "feedback": "Es correcta porque la gestión integral de residuos requiere segregación técnica según el tipo de residuo, además de un componente educativo que involucre a la comunidad en la disposición de sus propios residuos domiciliarios. Delegar toda la responsabilidad al personal de limpieza sin más acción ignora el componente educativo comunitario necesario; incinerar todos los residuos sin clasificación previa no corresponde al manejo diferenciado exigido por norma; limitar la atención de pacientes para reducir residuos antepone una medida operativa a la calidad de la atención, sin resolver el problema de gestión de fondo."
     },
     {
       "id": 156,
@@ -3624,7 +3624,7 @@ window.SERUMS_DATA = {
         "Priorizar exclusivamente la atención curativa por encima de la preventiva en cada etapa."
       ],
       "correct": 1,
-      "feedback": "El modelo de cuidado integral por curso de vida requiere paquetes de atención articulados desde el prenatal hasta la vejez; atender solo la demanda espontánea, concentrar recursos en un solo grupo etario o priorizar solo lo curativo no cumplen ese enfoque."
+      "feedback": "Es correcta porque el modelo de cuidado integral por curso de vida exige paquetes de atención preventivos, curativos y educativos articulados y específicos para cada etapa, no solo una organización administrativa por edad. Atender únicamente la demanda espontánea deja sin cobertura las intervenciones preventivas propias de cada etapa; concentrar recursos solo en el adulto mayor descuida otras etapas igualmente prioritarias del curso de vida; priorizar solo lo curativo invierte el enfoque preventivo que caracteriza al modelo."
     },
     {
       "id": 158,
@@ -4776,7 +4776,7 @@ window.SERUMS_DATA = {
         "Brindar educación progresiva y acompañamiento emocional para favorecer la aceptación y el autocuidado del estoma."
       ],
       "correct": 3,
-      "feedback": "El cuidado del estoma requiere educación progresiva y acompañamiento emocional; hacer la curación sin involucrar al paciente, exigir adaptación inmediata o delegar todo a un familiar no favorecen el autocuidado."
+      "feedback": "Es correcta porque la aceptación de un estoma reciente suele requerir un proceso educativo progresivo junto con acompañamiento emocional, en vez de una exposición forzada o una exclusión del paciente del proceso de curación. Exigir que se acostumbre de inmediato sin apoyo desconoce el proceso de adaptación psicológica que suele acompañar este cambio corporal; delegar la educación únicamente a un familiar no fortalece la autonomía del propio paciente; realizar siempre la curación sin involucrarlo mantiene una dependencia que dificulta el autocuidado a largo plazo."
     },
     {
       "id": 208,
@@ -4799,7 +4799,7 @@ window.SERUMS_DATA = {
         "Realizar educación práctica sobre la técnica de aplicación, rotación de sitios y reconocimiento de signos de hipoglucemia."
       ],
       "correct": 3,
-      "feedback": "La educación en autoaplicación de insulina debe ser práctica, incluyendo técnica, rotación de sitios e hipoglucemia; solo instrucciones escritas, delegar a un familiar o aplicar sin educar al paciente no favorecen su autonomía."
+      "feedback": "Es correcta porque la educación en autoaplicación de insulina debe ser práctica y demostrativa, cubriendo técnica de inyección, rotación de sitios y reconocimiento de hipoglucemia, ya que el paciente deberá manejar estos aspectos de forma autónoma. Entregar solo instrucciones escritas sin demostración práctica no garantiza la correcta ejecución de la técnica; delegar la aplicación a un familiar de forma permanente limita la autonomía que el paciente necesita desarrollar; aplicar la primera dosis sin educar para las siguientes deja al paciente sin las competencias necesarias para su manejo en casa."
     },
     {
       "id": 209,
@@ -4822,7 +4822,7 @@ window.SERUMS_DATA = {
         "Atender primero a quienes tengan seguro privado, para agilizar el flujo de pacientes."
       ],
       "correct": 2,
-      "feedback": "El triaje debe priorizar según gravedad clínica, no por orden de llegada, insistencia del reclamo ni tipo de seguro del paciente."
+      "feedback": "Es correcta porque el triaje debe basarse en criterios clínicos objetivos de gravedad, garantizando que los casos más críticos sean atendidos primero independientemente del orden de llegada o de otros factores no clínicos. Atender por orden de llegada no prioriza según urgencia real; atender según la insistencia del reclamo introduce un criterio subjetivo ajeno a la gravedad; atender primero según el tipo de seguro vulnera el principio de equidad que rige la clasificación por gravedad clínica."
     },
     {
       "id": 210,
@@ -4845,7 +4845,7 @@ window.SERUMS_DATA = {
         "Favorecer el contacto piel a piel inmediato y postergar los procedimientos de rutina no urgentes."
       ],
       "correct": 3,
-      "feedback": "Siempre que no haya contraindicaciones se debe favorecer el contacto piel a piel inmediato, postergando procedimientos no urgentes; realizarlos antes del contacto, trasladar sin informar o esperar el aseo completo no son adecuados."
+      "feedback": "Es correcta porque, en ausencia de contraindicaciones, el contacto piel a piel inmediato favorece el apego, la termorregulación y el inicio de la lactancia, por lo que los procedimientos de rutina no urgentes deben postergarse para priorizarlo. Completar el aseo antes del contacto retrasa innecesariamente un momento con beneficios fisiológicos y afectivos comprobados; trasladar al recién nacido sin informar a la madre vulnera su derecho a la información y al vínculo inmediato; realizar todos los procedimientos de rutina antes del contacto invierte la prioridad que recomienda la evidencia sobre apego precoz."
     },
     {
       "id": 211,
@@ -4868,7 +4868,7 @@ window.SERUMS_DATA = {
         "Indicar que espere al siguiente control, sin ninguna intervención adicional."
       ],
       "correct": 2,
-      "feedback": "Ante un tamizaje alterado de diabetes gestacional se debe confirmar el diagnóstico, brindar consejería y coordinar seguimiento especializado; esperar al siguiente control, indicar reposo absoluto o iniciar insulina sin confirmación no son adecuados.",
+      "feedback": "Es correcta porque un tamizaje alterado de diabetes gestacional debe confirmarse con la prueba diagnóstica correspondiente antes de decidir un manejo farmacológico, y el primer paso terapéutico es la consejería nutricional junto con el seguimiento especializado del embarazo. Iniciar insulina de inmediato sin confirmar el diagnóstico expone a tratamiento no sustentado en el resultado definitivo; el reposo absoluto no es la medida indicada para el manejo de la diabetes gestacional; esperar al siguiente control sin ninguna intervención retrasa el manejo de un hallazgo que ya requiere seguimiento.",
       "interdisciplinaryNote": "Nutrición cumple un rol central en el manejo dietético de la diabetes gestacional."
     },
     {
@@ -4892,7 +4892,7 @@ window.SERUMS_DATA = {
         "Recomendar el uso de pezoneras de forma permanente, sin evaluar antes la técnica de lactancia."
       ],
       "correct": 0,
-      "feedback": "Ante dificultades en la lactancia se debe observar la sesión, corregir posición y agarre, y reforzar la consejería; iniciar fórmula sin evaluar, esperar que se resuelva solo o usar pezoneras sin evaluación no son adecuados."
+      "feedback": "Es correcta porque el rechazo del pecho pese a percibir producción suficiente suele originarse en la posición y el agarre durante la toma, por lo que corresponde observar la sesión de lactancia directamente y corregir la técnica antes de recurrir a otras medidas. Iniciar fórmula sin evaluar la técnica interrumpe innecesariamente la lactancia exclusiva; asumir que se resolverá con el tiempo sin intervención deja sin corregir una técnica que puede perpetuar la dificultad; recomendar pezoneras de forma permanente sin evaluar antes la técnica puede introducir una barrera adicional en vez de resolver la causa de fondo."
     },
     {
       "id": 213,
@@ -4915,7 +4915,7 @@ window.SERUMS_DATA = {
         "Indicar suplementación de calcio en dosis altas, sin evaluación de factores de riesgo individuales."
       ],
       "correct": 2,
-      "feedback": "La prevención de osteoporosis en el climaterio incluye actividad física con carga, calcio y vitamina D, y evaluación individualizada; asumirla como inevitable, indicar reposo o suplementar sin evaluar el riesgo no son adecuados."
+      "feedback": "Es correcta porque la prevención de osteoporosis en el climaterio requiere un enfoque combinado de actividad física con carga, aporte adecuado de calcio y vitamina D, y una evaluación individualizada de factores de riesgo que determine la necesidad de medidas adicionales. Considerarla inevitable sin ninguna medida preventiva desestima intervenciones con evidencia de eficacia; recomendar reposo es contraproducente porque la inactividad acelera la pérdida de masa ósea; suplementar calcio en dosis altas sin evaluar el riesgo individual puede no ser adecuado ni suficiente sin el componente de actividad física y evaluación."
     },
     {
       "id": 214,
@@ -5745,7 +5745,7 @@ window.SERUMS_DATA = {
         "El desarrollo conductual, entendido únicamente como la adquisición de reflejos motores."
       ],
       "correct": 0,
-      "feedback": "La estimulación prenatal busca favorecer, junto al desarrollo psicomotor y social, el desarrollo emocional del feto, como parte de un enfoque integral del desarrollo en el curso de vida."
+      "feedback": "Es correcta porque la estimulación prenatal, además de favorecer el desarrollo psicomotor y social ya reconocidos, busca promover el desarrollo emocional del feto como parte de un enfoque integral del desarrollo desde la etapa prenatal, coherente con el modelo de cuidado por curso de vida. Reducirlo al desarrollo intelectual medido con pruebas postnatales anticipa una evaluación que no corresponde a esta etapa; limitarlo a la estimulación auditiva desconoce que la intervención integra múltiples canales sensoriales y vinculares; reducirlo a la adquisición de reflejos motores ignora la dimensión emocional y vincular que se busca fortalecer con la participación de la pareja."
     },
     {
       "id": 250,
