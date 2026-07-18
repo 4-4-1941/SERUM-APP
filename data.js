@@ -1503,7 +1503,7 @@ window.SERUMS_DATA = {
         "Indicar que la talla baja es solo constitucional y no requiere ningún seguimiento."
       ],
       "correct": 0,
-      "feedback": "Ante sospecha de desnutrición crónica se debe evaluar el estado nutricional, indagar causas asociadas e iniciar un plan de recuperación con seguimiento; asumir que es constitucional, pedir solo laboratorio o suplementar sin evaluar no son adecuados."
+      "feedback": "Es correcta porque una talla marcadamente por debajo de lo esperado sin enfermedad aguda evidente es compatible con desnutrición crónica, un déficit acumulado que requiere evaluar el estado nutricional, indagar los factores asociados e iniciar un plan de recuperación con seguimiento, dado que la corrección de la talla es un proceso lento que exige monitoreo continuo. Iniciar suplementación calórica intensiva sin evaluar antes los factores asociados no aborda la causa de fondo del déficit; solicitar solo exámenes de laboratorio sin intervención nutricional inmediata retrasa el manejo de un cuadro ya evidente clínicamente; asumir que la talla baja es solo constitucional sin seguimiento descarta prematuramente una causa nutricional corregible."
     },
     {
       "id": 66,
@@ -1526,7 +1526,7 @@ window.SERUMS_DATA = {
         "Iniciar suplementación con hierro según norma técnica, junto con consejería alimentaria y seguimiento."
       ],
       "correct": 3,
-      "feedback": "El manejo de la anemia ferropénica infantil incluye suplementación con hierro según norma, consejería alimentaria y seguimiento; solo alimentos sin suplemento, esperar el siguiente control o dosis altas sin esquema normado no son adecuados."
+      "feedback": "Es correcta porque la anemia ferropénica infantil se maneja con suplementación de hierro según el esquema y dosis establecidos por norma técnica, junto con consejería alimentaria que sostenga la ingesta de hierro dietético y seguimiento que verifique la respuesta al tratamiento. Indicar solo alimentos ricos en hierro sin suplementación farmacológica es insuficiente para corregir un déficit ya instaurado en el plazo necesario; esperar al siguiente control de rutina sin intervención inmediata retrasa la corrección de un déficit con impacto en el neurodesarrollo; iniciar dosis altas sin considerar el esquema normado expone a efectos adversos gastrointestinales sin mejorar la eficacia del tratamiento."
     },
     {
       "id": 67,
@@ -1549,7 +1549,7 @@ window.SERUMS_DATA = {
         "Esperar a que el niño crezca para que el peso se regule por sí solo."
       ],
       "correct": 1,
-      "feedback": "El abordaje de la obesidad infantil debe considerar hábitos alimentarios, actividad física y un plan gradual con participación familiar; la dieta restrictiva, esperar el crecimiento o enfocarse solo en actividad física no son adecuados.",
+      "feedback": "Es correcta porque el abordaje de la obesidad infantil debe evaluar tanto los hábitos alimentarios como los de actividad física, y trabajar un plan gradual con participación activa de la familia, dado que los hábitos del escolar dependen en gran medida del entorno familiar en el que se desenvuelve. Enfocar el plan únicamente en la actividad física sin abordar los hábitos alimentarios deja sin intervenir un componente igual de determinante; indicar una dieta muy restrictiva sin considerar el contexto familiar puede ser insostenible y contraproducente en un niño en crecimiento; esperar a que el niño crezca para que el peso se regule por sí solo desestima un cuadro que requiere intervención activa y oportuna.",
       "interdisciplinaryNote": "Psicología puede apoyar si se identifican patrones de alimentación emocional o dinámicas familiares que dificultan el cambio de hábitos."
     },
     {
@@ -1573,7 +1573,7 @@ window.SERUMS_DATA = {
         "Indicar una dieta estándar preestablecida, sin considerar los hábitos previos del paciente."
       ],
       "correct": 2,
-      "feedback": "La consejería nutricional debe partir de los hábitos actuales y ser personalizada y culturalmente pertinente; una lista genérica, una dieta estándar o una recomendación parcial no cumplen ese criterio."
+      "feedback": "Es correcta porque la consejería nutricional en diabetes debe partir de la evaluación de los hábitos alimentarios actuales del paciente, para brindar una orientación personalizada y culturalmente pertinente que sea sostenible en su contexto real, en vez de imponer un patrón genérico. Recomendar evitar el exceso de dulces sin abordar el resto del patrón alimentario deja sin ajustar aspectos igualmente relevantes de la dieta; entregar una lista genérica de alimentos prohibidos no considera los hábitos ni preferencias individuales del paciente; indicar una dieta estándar preestablecida sin considerar los hábitos previos reduce la probabilidad de adherencia sostenida al cambio."
     },
     {
       "id": 69,
@@ -1596,7 +1596,7 @@ window.SERUMS_DATA = {
         "Evaluar el consumo de sal yodada en la comunidad y coordinar acciones de vigilancia y educación nutricional."
       ],
       "correct": 3,
-      "feedback": "Ante sospecha de deficiencia de yodo comunitaria se debe evaluar el consumo de sal yodada y coordinar vigilancia y educación nutricional; atender aislado, indicar cirugía sin evaluación o pedir solo hormonas sin ver el contexto no son adecuados."
+      "feedback": "Es correcta porque varios casos de bocio en una comunidad sugieren un problema poblacional de deficiencia de yodo, que debe abordarse evaluando el consumo de sal yodada en la comunidad y coordinando acciones de vigilancia y educación nutricional, en vez de manejar cada caso de forma aislada. Atender los casos de forma aislada sin evaluar el contexto comunitario no identifica la causa poblacional del problema; indicar cirugía a todos los casos sin evaluación previa es una medida desproporcionada frente a un problema nutricional corregible; solicitar solo exámenes hormonales individuales sin evaluar el contexto comunitario deja sin abordar la fuente del déficit a nivel poblacional."
     },
     {
       "id": 70,
@@ -2359,7 +2359,7 @@ window.SERUMS_DATA = {
         "Indicar solo actividad física intensa, sin evaluar el patrón alimentario."
       ],
       "correct": 1,
-      "feedback": "El sobrepeso en la gestación requiere consejería nutricional apropiada y seguimiento coordinado con obstetricia; la dieta restrictiva, no intervenir o solo indicar actividad física intensa no son adecuados."
+      "feedback": "Es correcta porque una ganancia de peso mayor a la esperada en el embarazo debe evaluarse a través del patrón alimentario de la gestante, brindando consejería nutricional apropiada a su condición gestacional y coordinando el seguimiento con obstetricia, dado el riesgo de complicaciones asociadas a una ganancia de peso excesiva. Asumir que el aumento de peso es siempre normal en el embarazo desestima un patrón que ya excede lo esperado para la edad gestacional; indicar una dieta muy restrictiva sin considerar los riesgos de la gestación puede comprometer el aporte de nutrientes necesarios para el feto; indicar solo actividad física intensa sin evaluar el patrón alimentario aborda un solo componente del manejo, dejando sin ajustar la alimentación de fondo."
     },
     {
       "id": 103,
@@ -2382,7 +2382,7 @@ window.SERUMS_DATA = {
         "Derivar todos los casos a un especialista, sin intervención comunitaria previa."
       ],
       "correct": 0,
-      "feedback": "Ante deficiencia de vitamina A comunitaria se debe evaluar patrones alimentarios y coordinar suplementación y educación; atender aislado, suplementar sin evaluar contexto o derivar todo sin intervención comunitaria no son adecuados."
+      "feedback": "Es correcta porque varios niños con signos compatibles con deficiencia de vitamina A en una comunidad sugieren un problema poblacional que debe abordarse evaluando los patrones alimentarios locales y coordinando suplementación junto con educación nutricional comunitaria, en vez de intervenir cada caso de forma aislada. Indicar suplementación sin ninguna evaluación previa del contexto no identifica la causa alimentaria de fondo del déficit; atender los casos identificados sin evaluar el contexto alimentario comunitario deja sin prevenir nuevos casos en la misma población; derivar todos los casos a un especialista sin intervención comunitaria previa desatiende un problema que puede y debe abordarse desde el primer nivel con enfoque poblacional."
     },
     {
       "id": 104,
@@ -2405,7 +2405,7 @@ window.SERUMS_DATA = {
         "Recomendar reposo para evitar mayor pérdida de masa muscular."
       ],
       "correct": 0,
-      "feedback": "El manejo de la sarcopenia requiere evaluación nutricional, consejería adecuada y actividad física apropiada; asumirla como inevitable, aumentar calorías sin evaluar la dieta o solo indicar reposo no son adecuados."
+      "feedback": "Es correcta porque la sarcopenia en el adulto mayor con menor ingesta alimentaria requiere evaluar el estado nutricional, brindar consejería alimentaria adecuada y promover actividad física acorde a su condición, dado que la combinación de ambos factores es la que ha demostrado enlentecer la pérdida de masa muscular. Indicar que la pérdida muscular es inevitable en la vejez y no requiere intervención desestima una condición sobre la que sí es posible intervenir; aumentar drásticamente las calorías sin evaluar la composición de la dieta no garantiza el aporte proteico específico que la sarcopenia requiere; recomendar reposo para evitar mayor pérdida de masa muscular es contraproducente, ya que la inactividad acelera precisamente esa pérdida."
     },
     {
       "id": 105,
@@ -5007,7 +5007,7 @@ window.SERUMS_DATA = {
         "Evaluar el estado nutricional y diseñar un plan de soporte adaptado a la tolerancia del paciente durante el tratamiento."
       ],
       "correct": 3,
-      "feedback": "El soporte nutricional oncológico debe adaptarse a la tolerancia del paciente durante el tratamiento; asumir la pérdida como esperada sin intervenir, forzar una dieta estricta o suplementar sin evaluación no son adecuados."
+      "feedback": "Es correcta porque el soporte nutricional en un paciente oncológico debe basarse en una evaluación previa de su estado nutricional y diseñarse de forma adaptada a su tolerancia durante el tratamiento, dado que los efectos adversos del tratamiento condicionan directamente lo que el paciente puede recibir en cada momento. Forzar una dieta hipercalórica estricta sin considerar la tolerancia del paciente puede resultar contraproducente y generar rechazo alimentario; indicar suplementos nutricionales orales sin una evaluación previa del estado nutricional no ajusta la intervención a la necesidad real del paciente; indicar que la pérdida de peso es esperada y no requiere intervención desestima un factor con impacto directo en el pronóstico y la tolerancia al tratamiento oncológico."
     },
     {
       "id": 218,
@@ -5030,7 +5030,7 @@ window.SERUMS_DATA = {
         "Apoyar la restricción severa para que logre su objetivo de peso rápidamente."
       ],
       "correct": 1,
-      "feedback": "Durante la lactancia se debe brindar consejería sobre alimentación adecuada sin restricciones severas; apoyar la restricción severa, sugerir suspender la lactancia o el ayuno prolongado no son adecuados."
+      "feedback": "Es correcta porque durante la lactancia exclusiva los requerimientos nutricionales de la madre aumentan para sostener la producción de leche, por lo que corresponde brindar consejería sobre una alimentación que cubra esos requerimientos sin recurrir a restricciones severas que puedan comprometer tanto su propia salud como la producción láctea. Recomendar un ayuno intermitente prolongado durante la lactancia exclusiva no considera el aumento de requerimientos propio de esta etapa; indicar que suspenda la lactancia para bajar de peso más rápido antepone un objetivo estético a los beneficios reconocidos de la lactancia exclusiva; apoyar la restricción severa para lograr el objetivo de peso rápidamente puede comprometer tanto la producción de leche como el estado nutricional de la madre."
     },
     {
       "id": 219,
@@ -5053,7 +5053,7 @@ window.SERUMS_DATA = {
         "Indicar un plan de alimentación estricto y rápido para normalizar el peso cuanto antes."
       ],
       "correct": 0,
-      "feedback": "El manejo nutricional en un TCA debe ser gradual y coordinado con salud mental; diseñarlo de forma aislada, normalizar el peso rápido o delegar la decisión solo a la familia no son adecuados.",
+      "feedback": "Es correcta porque el manejo nutricional en un trastorno de la conducta alimentaria debe ser gradual y coordinarse estrechamente con el equipo de psicología y medicina, dado que la rehabilitación nutricional en estos casos conlleva riesgos médicos específicos que requieren manejo interdisciplinario cuidadoso. Diseñar el plan nutricional de forma aislada sin coordinar con el equipo de salud mental desconoce la complejidad psicológica que acompaña al trastorno; delegar la decisión del plan nutricional únicamente a la familia de la paciente traslada una responsabilidad clínica que corresponde al equipo tratante; indicar un plan de alimentación estricto y rápido para normalizar el peso cuanto antes ignora el riesgo médico de una realimentación acelerada y no gradual.",
       "interdisciplinaryNote": "Psicología aporta el abordaje emocional y conductual que debe acompañar la rehabilitación nutricional gradual."
     },
     {
