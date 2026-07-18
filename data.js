@@ -3716,7 +3716,7 @@ window.SERUMS_DATA = {
         "Solicitar que el propio adulto mayor contacte a sus familiares."
       ],
       "correct": 1,
-      "feedback": "Ante sospecha de abandono se debe evaluar socialmente, indagar la red de apoyo y coordinar protección; asumir que prefiere soledad, derivar sin evaluar o pedirle al propio adulto mayor que contacte a su familia no son adecuados."
+      "feedback": "Es correcta porque signos de descuido en la higiene junto con ausencia sostenida de contacto familiar son indicadores compatibles con abandono, que requieren una evaluación social integral para indagar la red de apoyo real disponible y coordinar las medidas de protección pertinentes, sin asumir conclusiones antes de esa evaluación. Derivar el caso sin evaluación previa deja sin caracterizar la situación real del adulto mayor; asumir que prefiere estar solo sin indagar más naturaliza un posible descuido sin sustento; solicitar que el propio adulto mayor contacte a sus familiares traslada la responsabilidad de protección a la persona potencialmente en riesgo."
     },
     {
       "id": 162,
@@ -3739,7 +3739,7 @@ window.SERUMS_DATA = {
         "Derivar el caso exclusivamente a una ONG, sin coordinación con programas estatales."
       ],
       "correct": 1,
-      "feedback": "El trabajo social debe articular con redes de protección social comunitarias; decir que no hay nada más que hacer, resolverlo con recursos personales o derivar solo a una ONG sin coordinación estatal no son adecuados."
+      "feedback": "Es correcta porque cuando la necesidad de una familia excede la capacidad resolutiva del sector salud, corresponde articular con programas sociales y redes de protección de la comunidad, complementando así la atención sanitaria con el soporte social que la situación requiere. Resolver la situación con recursos personales del profesional no es sostenible ni corresponde a su rol institucional; indicar que el establecimiento no puede hacer nada más desconoce la posibilidad de articulación intersectorial; derivar exclusivamente a una ONG sin coordinar con programas estatales limita el acceso a beneficios que podrían complementarse entre ambas fuentes."
     },
     {
       "id": 163,
@@ -3762,7 +3762,7 @@ window.SERUMS_DATA = {
         "Esperar a que la usuaria reprograme la cita por su cuenta."
       ],
       "correct": 1,
-      "feedback": "Ante la inasistencia de una usuaria en riesgo se debe realizar una visita social de seguimiento que evalúe su seguridad actual; cerrar el caso, esperar que reprograme o notificar solo a la policía sin evaluación social no son adecuados.",
+      "feedback": "Es correcta porque la inasistencia de una usuaria que reportó violencia familiar puede indicar un riesgo de seguridad activo, por lo que corresponde una visita social de seguimiento que evalúe directamente su situación actual y la necesidad de apoyo adicional, en vez de asumir simplemente que dejó de acudir por decisión propia. Notificar solo a la policía sin evaluación social directa no verifica la condición actual de la usuaria; cerrar el caso por inasistencia desatiende un posible riesgo activo; esperar que la usuaria reprograme por su cuenta es pasivo frente a una situación que puede implicar riesgo inminente.",
       "interdisciplinaryNote": "Psicología debe coordinar con trabajo social el seguimiento conjunto del riesgo y el acompañamiento emocional de la usuaria."
     },
     {
@@ -4108,7 +4108,7 @@ window.SERUMS_DATA = {
         "Esperar a que la adolescente acuda por su cuenta al establecimiento."
       ],
       "correct": 1,
-      "feedback": "Ante el abandono de controles y escolaridad en una gestante adolescente corresponde una visita social que evalúe el contexto y coordine apoyo interdisciplinario; esperar que acuda sola, notificar solo a la escuela o derivar a fiscalía sin evaluación no son adecuados."
+      "feedback": "Es correcta porque el abandono simultáneo de controles prenatales y de la escolaridad en una gestante adolescente sugiere un contexto de riesgo que requiere una visita social para evaluarlo directamente, coordinando tanto el retorno a controles como un apoyo interdisciplinario que aborde ambas dimensiones. Notificar únicamente a la escuela sin evaluar la situación de salud deja sin abordar el riesgo obstétrico; derivar a fiscalía sin evaluación social previa es una medida desproporcionada sin sustento diagnóstico aún; esperar a que la adolescente acuda por su cuenta es pasivo frente a un patrón de abandono ya evidenciado en dos ámbitos distintos."
     },
     {
       "id": 179,
@@ -4131,7 +4131,7 @@ window.SERUMS_DATA = {
         "Cerrar los casos por inasistencia reiterada de las familias."
       ],
       "correct": 1,
-      "feedback": "El trabajo social debe articular con instituciones educativas para el seguimiento conjunto; seguir citando solo a la familia, cerrar casos por inasistencia o notificar sin proponer acción conjunta no son adecuados."
+      "feedback": "Es correcta porque cuando el seguimiento de casos de desnutrición depende de la asistencia irregular de las familias, corresponde coordinar con la institución educativa un seguimiento conjunto que articule salud y educación, aprovechando el contacto cotidiano que el colegio sí tiene con los niños. Continuar citando a las familias sin involucrar a otras instituciones repite una estrategia que ya no está funcionando; cerrar los casos por inasistencia reiterada abandona el seguimiento de niños con desnutrición ya identificada; notificar a la escuela sin proponer ninguna acción conjunta informa el problema pero no articula una solución compartida."
     },
     {
       "id": 180,
@@ -5123,7 +5123,7 @@ window.SERUMS_DATA = {
         "Realizar una evaluación social integral y orientar sobre los programas y beneficios disponibles para la familia."
       ],
       "correct": 3,
-      "feedback": "Ante una familia con un miembro con discapacidad se debe evaluar socialmente y orientar activamente sobre programas disponibles; pedirles que investiguen solos, derivar sin orientación o dar un listado genérico sin evaluación no son adecuados."
+      "feedback": "Es correcta porque una familia que desconoce los programas y beneficios disponibles para un miembro con discapacidad severa requiere una evaluación social integral que identifique su situación específica, y una orientación activa sobre los programas pertinentes a esa situación particular. Entregar un listado genérico sin evaluación previa no ajusta la orientación a la necesidad real de la familia; indicar que investiguen por su cuenta traslada una función de orientación que corresponde al profesional; derivar el caso sin brindar ninguna orientación inicial retrasa un apoyo que puede iniciarse en la misma consulta."
     },
     {
       "id": 223,
@@ -5146,7 +5146,7 @@ window.SERUMS_DATA = {
         "Solicitar una colecta entre el personal del establecimiento para cubrir los gastos."
       ],
       "correct": 0,
-      "feedback": "El trabajo social debe evaluar la situación socioeconómica y gestionar apoyo institucional disponible; decir que no corresponde a salud, sugerir un préstamo personal o improvisar una colecta interna no son adecuados."
+      "feedback": "Es correcta porque ante la falta de recursos económicos de una familia para el cuidado de un paciente en fase terminal, corresponde evaluar la situación socioeconómica específica y gestionar el acceso a los programas de apoyo institucionales disponibles, que es la vía sostenible y formal para atender esta necesidad. Recomendar que la familia solicite un préstamo por su cuenta traslada la solución a una vía que puede generar mayor carga financiera; indicar que ese tema no corresponde al ámbito de salud desconoce el rol del trabajo social dentro del equipo de cuidados paliativos; solicitar una colecta entre el personal es una medida informal y no sostenible frente a una necesidad que requiere una respuesta institucional."
     },
     {
       "id": 224,
@@ -5722,7 +5722,7 @@ window.SERUMS_DATA = {
         "Ética, específicamente el principio de veracidad en la información reportada."
       ],
       "correct": 3,
-      "feedback": "Faltar a la verdad en un informe social requerido por una autoridad judicial vulnera específicamente el principio ético de veracidad, más allá de otros principios como la beneficencia o la justicia en el acceso."
+      "feedback": "Es correcta porque un informe social que falta a la verdad, más allá de sus consecuencias legales o de proceso, vulnera específicamente el principio ético de veracidad, que exige que la información reportada corresponda fielmente a lo observado y evaluado por el profesional, especialmente en un caso de violencia sexual donde el informe puede tener implicancias determinantes en el proceso judicial de la adolescente. La justicia entendida como equidad en el acceso a servicios no es el principio directamente vulnerado por una falsedad en el contenido del informe; la beneficencia se refiere a actuar en el mejor interés de la paciente, un principio distinto aunque relacionado; la responsabilidad entendida como cumplimiento de plazos administrativos no corresponde al contenido veraz de la información, sino a la oportunidad de su entrega."
     },
     {
       "id": 249,
