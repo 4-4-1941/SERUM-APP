@@ -3786,7 +3786,7 @@ window.SERUMS_DATA = {
         "Delegar el control de calidad únicamente a una auditoría externa anual."
       ],
       "correct": 2,
-      "feedback": "El control de calidad interno regular es indispensable para la confiabilidad de resultados; continuar sin control, aplicarlo solo ante resultados inusuales o delegarlo solo a una auditoría externa anual no son adecuados."
+      "feedback": "Es correcta porque el control de calidad interno debe aplicarse de forma regular antes de procesar las muestras, dado que es la única forma de detectar desviaciones del sistema analítico antes de que afecten resultados de pacientes reales, y no solo cuando un resultado ya parece inusual. Continuar sin control para no retrasar la entrega prioriza la rapidez sobre la confiabilidad de los resultados; aplicarlo solo ante resultados inusuales deja sin detectar errores sistemáticos que no se manifiestan de forma evidente; delegarlo únicamente a una auditoría externa anual no sustituye el control diario que exige la operación del laboratorio."
     },
     {
       "id": 165,
@@ -3809,7 +3809,7 @@ window.SERUMS_DATA = {
         "Reutilizar el material solo con pacientes que parezcan estar sanos."
       ],
       "correct": 2,
-      "feedback": "Los protocolos de bioseguridad deben cumplirse estrictamente sin importar la carga de trabajo; reutilizar el material, incluso solo con pacientes aparentemente sanos, o reducir su uso en procedimientos de rutina no son adecuados."
+      "feedback": "Es correcta porque los protocolos de bioseguridad protegen tanto al personal como a los pacientes de riesgos de contaminación cruzada, por lo que deben cumplirse estrictamente sin importar la carga de trabajo, ya que el riesgo biológico no disminuye por la premura de la atención. Aceptar la reutilización para no retrasar la atención antepone la eficiencia operativa a la seguridad biológica; reducir su uso solo en procedimientos de rutina asume erróneamente que esos procedimientos tienen menor riesgo; reutilizar el material solo con pacientes que parezcan sanos ignora que la apariencia clínica no descarta portación de agentes infecciosos."
     },
     {
       "id": 166,
@@ -3832,7 +3832,7 @@ window.SERUMS_DATA = {
         "Realizar el estudio de inmediato, sin preguntar sobre la posibilidad de embarazo."
       ],
       "correct": 0,
-      "feedback": "Antes de un estudio radiológico se debe indagar la posibilidad de gestación y evaluar alternativas o protección adecuada; realizarlo sin preguntar, suspender todo estudio sin excepción o aplicar solo protección estándar sin indagar no son adecuados."
+      "feedback": "Es correcta porque toda mujer en edad fértil programada para un estudio radiológico debe ser consultada sobre la posibilidad de gestación antes de la exposición, dado el riesgo del feto ante la radiación ionizante, evaluando alternativas diagnósticas o medidas de protección específicas según el caso. Realizar el estudio con protección abdominal estándar sin indagar la gestación no ajusta la protección al riesgo real si la paciente está gestando; suspender todos los estudios a cualquier mujer en edad fértil sin excepción es una medida desproporcionada que niega estudios necesarios a quienes no están gestando; realizar el estudio sin preguntar expone a un riesgo evitable con una simple indagación previa."
     },
     {
       "id": 167,
@@ -3855,7 +3855,7 @@ window.SERUMS_DATA = {
         "Indicar que retome sus actividades previas de forma inmediata, sin evaluación funcional."
       ],
       "correct": 0,
-      "feedback": "Tras un ACV corresponde evaluar el estado funcional y diseñar un plan de rehabilitación progresivo; el reposo absoluto, derivar sin iniciar nada en el primer nivel o exigir actividad inmediata sin evaluación no son adecuados."
+      "feedback": "Es correcta porque tras un accidente cerebrovascular corresponde evaluar el estado funcional específico del paciente y diseñar un plan de rehabilitación progresivo adaptado a sus secuelas particulares, dado que la recuperación motora depende de una intervención activa y temprana en el primer nivel. El reposo absoluto no favorece la recuperación motora y puede favorecer complicaciones por inmovilidad; derivar directamente a un hospital sin iniciar nada en el primer nivel desaprovecha la capacidad resolutiva ya disponible; exigir que retome actividades previas de inmediato sin evaluación funcional expone al paciente a riesgos por sobreestimar su capacidad actual."
     },
     {
       "id": 168,
@@ -3878,7 +3878,7 @@ window.SERUMS_DATA = {
         "Recomendar que los adultos mayores reduzcan su actividad física por completo."
       ],
       "correct": 0,
-      "feedback": "La prevención de caídas requiere evaluar el riesgo individual e implementar ejercicios de equilibrio y fuerza; atender solo lesiones, reducir toda actividad física o indicar silla de ruedas preventivamente no son adecuados."
+      "feedback": "Es correcta porque la prevención de caídas requiere identificar el riesgo individual de cada adulto mayor y aplicar ejercicios específicos de equilibrio y fuerza, que son las intervenciones con mayor evidencia para reducir la incidencia de caídas en esta población. Atender solo las lesiones ya ocurridas es una respuesta reactiva que no previene nuevos eventos; indicar silla de ruedas de forma preventiva a todos acelera la pérdida de capacidad funcional en quienes aún pueden desplazarse; recomendar reducir por completo la actividad física es contraproducente, ya que la inactividad aumenta el riesgo de caídas al debilitar la musculatura."
     },
     {
       "id": 169,
@@ -3901,7 +3901,7 @@ window.SERUMS_DATA = {
         "Recomendar que la familia hable menos con el niño para estimular su propio lenguaje."
       ],
       "correct": 0,
-      "feedback": "Ante un posible retraso del lenguaje se debe aplicar tamizaje y derivar oportunamente; asumir que hablará cuando esté listo, esperar al colegio o recomendar hablarle menos no son adecuados."
+      "feedback": "Es correcta porque un vocabulario muy limitado junto con dificultad para formar frases simples a los 3 años son signos de alarma del desarrollo del lenguaje que ameritan tamizaje formal y derivación oportuna si corresponde, dado que la intervención temprana mejora significativamente el pronóstico. Asumir que es normal y que hablará cuando esté listo, sin evaluación, descarta prematuramente un posible retraso; esperar hasta el ingreso escolar pierde años valiosos de intervención temprana; recomendar que la familia le hable menos contradice la evidencia sobre estimulación lingüística, que es protectora, no perjudicial."
     },
     {
       "id": 170,
@@ -3924,7 +3924,7 @@ window.SERUMS_DATA = {
         "Indicar reposo absoluto de la mano afectada hasta la recuperación total."
       ],
       "correct": 2,
-      "feedback": "La terapia ocupacional debe evaluar actividades significativas y diseñar adaptaciones funcionales durante la recuperación; esperar recuperación completa, cambiar de ocupación de inmediato o indicar reposo absoluto no son adecuados."
+      "feedback": "Es correcta porque la terapia ocupacional debe evaluar las actividades cotidianas y laborales concretas que la lesión limita, diseñando estrategias de adaptación funcional que permitan al trabajador mantener su desempeño durante la recuperación, en vez de suspender toda actividad. Recomendar cambiar de ocupación de inmediato sin evaluación previa es una decisión desproporcionada sin sustento en la evaluación funcional; indicar que espere la recuperación completa antes de retomar cualquier actividad prolonga innecesariamente la limitación funcional; indicar reposo absoluto de la mano hasta la recuperación total no corresponde al enfoque activo de adaptación que caracteriza a la terapia ocupacional."
     },
     {
       "id": 171,
@@ -3947,7 +3947,7 @@ window.SERUMS_DATA = {
         "Evaluar la alineación ocular y derivar oportunamente, dado que el estrabismo no tratado puede afectar el desarrollo visual."
       ],
       "correct": 3,
-      "feedback": "El estrabismo en la infancia debe evaluarse y derivarse oportunamente por su riesgo sobre el desarrollo visual; asumir que se corrige solo, esperar a que sea mayor o indicar ejercicios sin evaluación no son adecuados."
+      "feedback": "Es correcta porque el estrabismo no corregido a tiempo puede generar pérdida de agudeza visual en el ojo desviado por falta de estimulación visual adecuada durante el periodo crítico del desarrollo, por lo que corresponde evaluar la alineación ocular y derivar oportunamente. Indicar que es normal en la primera infancia y que se corregirá solo con el tiempo ignora el riesgo de daño visual permanente si no se trata a tiempo; esperar a que el niño sea mayor pierde la ventana crítica de desarrollo visual en la que el tratamiento es más efectivo; recomendar ejercicios oculares en casa sin evaluación especializada no sustituye el diagnóstico y manejo específico que requiere el caso."
     },
     {
       "id": 172,
@@ -3970,7 +3970,7 @@ window.SERUMS_DATA = {
         "Coordinar con salud pública el control sanitario de la crianza animal y educar a las familias en prácticas de crianza segura."
       ],
       "correct": 3,
-      "feedback": "El control de zoonosis requiere coordinación entre salud animal y pública, junto con educación en crianza segura; atender solo lo humano, eliminar la crianza o solo tratar sin intervenir en la crianza no son adecuados."
+      "feedback": "Es correcta porque el control de zoonosis como la teniasis requiere una intervención conjunta entre salud animal y salud pública, que combine el control sanitario de la crianza porcina con educación a las familias en prácticas de crianza segura, abordando tanto la fuente animal como el comportamiento humano de riesgo. Indicar tratamiento antiparasitario a la población sin intervenir en la crianza animal trata el efecto sin controlar la fuente de reinfección; atender solo los casos humanos deja sin intervenir el reservorio animal que sostiene la transmisión; recomendar eliminar toda la crianza de animales es una medida desproporcionada frente a un problema que puede controlarse con manejo sanitario adecuado."
     },
     {
       "id": 173,
@@ -3993,7 +3993,7 @@ window.SERUMS_DATA = {
         "Esperar a que mueran más aves para confirmar si es un problema real."
       ],
       "correct": 2,
-      "feedback": "Ante mortandad inusual de animales se debe notificar e investigar la causa antes de descartar riesgo zoonótico; reemplazar sin investigar, esperar más muertes o vender las aves restantes no son adecuados."
+      "feedback": "Es correcta porque la mortandad súbita de aves sin causa aparente evidente puede corresponder a un evento de origen infeccioso con potencial riesgo zoonótico, por lo que corresponde notificar a la autoridad sanitaria e investigar la causa antes de descartar ese riesgo, en vez de asumir una explicación sin sustento. Recomendar la venta inmediata de las aves restantes puede diseminar un posible agente patógeno a otras zonas; indicar que reemplace las aves sin investigar la causa deja sin identificar un riesgo que podría repetirse o extenderse; esperar a que mueran más aves para confirmar retrasa una respuesta que debe ser oportuna ante un evento ya inusual."
     },
     {
       "id": 174,
@@ -4016,7 +4016,7 @@ window.SERUMS_DATA = {
         "Realizar el análisis microbiológico del agua y coordinar las medidas correctivas necesarias con las autoridades competentes."
       ],
       "correct": 3,
-      "feedback": "Ante sospecha de contaminación hídrica se debe analizar el agua y coordinar medidas correctivas; tratar solo casos clínicos, hervir indefinidamente sin investigar o clorar sin análisis previo no son adecuados."
+      "feedback": "Es correcta porque ante sospecha de contaminación de una fuente de agua asociada a casos de diarrea aguda corresponde realizar el análisis microbiológico que confirme o descarte la contaminación, y coordinar las medidas correctivas pertinentes con las autoridades competentes según el resultado obtenido. Indicar que hiervan el agua de forma indefinida sin investigar la fuente no resuelve el problema de fondo ni permite dimensionar el riesgo real; clorar la fuente de inmediato sin análisis previo puede ser una medida insuficiente o inadecuada según el tipo de contaminación; tratar solo los casos clínicos sin evaluar la fuente deja expuesta a la población a la misma fuente contaminada."
     },
     {
       "id": 175,
@@ -4039,7 +4039,7 @@ window.SERUMS_DATA = {
         "Esperar a que la comunidad gestione por sí misma la construcción de infraestructura."
       ],
       "correct": 0,
-      "feedback": "En zonas rurales sin saneamiento se debe evaluar la infraestructura e implementar soluciones técnicas junto con educación; limitarse a educar, esperar gestión comunitaria propia o exigir solo alcantarillado convencional no son adecuados."
+      "feedback": "Es correcta porque el saneamiento básico deficiente requiere primero evaluar la infraestructura existente para identificar soluciones técnicas viables y adecuadas al contexto rural, complementadas con educación sanitaria que sostenga su uso correcto, en vez de imponer una solución estándar o esperar pasivamente. Solicitar un sistema de alcantarillado convencional como única solución posible ignora que existen alternativas técnicas más viables en contextos rurales dispersos; limitar la intervención a la educación sanitaria sin evaluar la infraestructura no resuelve la causa estructural del problema; esperar a que la comunidad gestione por sí misma la construcción desatiende el rol técnico que corresponde al sector."
     },
     {
       "id": 176,
@@ -4154,7 +4154,7 @@ window.SERUMS_DATA = {
         "Enviar el resultado por el sistema de mensajería habitual del establecimiento, sin contacto directo."
       ],
       "correct": 0,
-      "feedback": "Ante un valor crítico de laboratorio se debe comunicar de forma inmediata y directa al personal clínico; registrar sin avisar, repetir varias veces sin comunicar o usar solo el sistema de mensajería habitual retrasan una respuesta que puede ser vital."
+      "feedback": "Es correcta porque un valor crítico de laboratorio con riesgo vital inmediato debe comunicarse de forma inmediata y directa al personal clínico responsable, dado que el tiempo de respuesta ante ese hallazgo puede determinar el desenlace del paciente. Repetir la prueba varias veces antes de informar retrasa una intervención que no puede esperar confirmaciones adicionales; registrar el resultado y esperar a la próxima ronda médica ignora la urgencia del hallazgo; enviarlo solo por el sistema de mensajería habitual, sin contacto directo, no garantiza que sea visto con la inmediatez que la situación exige."
     },
     {
       "id": 181,
@@ -4177,7 +4177,7 @@ window.SERUMS_DATA = {
         "Procesar la muestra asumiendo a qué paciente corresponde según el orden de llegada."
       ],
       "correct": 1,
-      "feedback": "Ante una muestra sin identificación confiable se debe rechazar y solicitar nueva recolección; procesar asumiendo el paciente, aclarar después o marcarla como pendiente sin rechazarla no garantizan la trazabilidad correcta."
+      "feedback": "Es correcta porque una muestra sin rotulado completo compromete la trazabilidad y la certeza sobre a qué paciente corresponde, por lo que debe rechazarse y solicitarse su recolección nuevamente con identificación completa, evitando así el riesgo de asociar un resultado al paciente equivocado. Procesar la muestra y aclarar la identificación después invierte el orden correcto, arriesgando emitir un resultado ya asociado a un paciente incorrecto; marcarla como pendiente de identificación sin rechazarla mantiene el riesgo de error mientras se procesa; asumir el paciente según el orden de llegada es una suposición sin sustento que puede generar un error de identificación grave."
     },
     {
       "id": 182,
@@ -4200,7 +4200,7 @@ window.SERUMS_DATA = {
         "Continuar la operación del equipo, sin ningún control de exposición."
       ],
       "correct": 0,
-      "feedback": "La protección radiológica ocupacional exige dosímetros personales y controles periódicos; continuar sin control, solo reducir horas o rotar personal sin dosimetría no cumplen la normativa."
+      "feedback": "Es correcta porque la protección radiológica ocupacional exige dosímetros personales que midan la exposición acumulada de cada trabajador y controles periódicos que permitan verificar que se mantiene dentro de los límites normativos, siendo esta la única forma objetiva de vigilar la exposición real del personal. Reducir las horas de trabajo sin implementar medidas de control específicas no mide ni controla la exposición real recibida; rotar al personal entre áreas sin dosimetría tampoco permite cuantificar la exposición de cada trabajador; continuar la operación sin ningún control de exposición deja al personal sin ninguna vigilancia de un riesgo ocupacional acumulativo."
     },
     {
       "id": 183,
@@ -4223,7 +4223,7 @@ window.SERUMS_DATA = {
         "Esperar a que el paciente esté completamente estable para iniciar cualquier estudio."
       ],
       "correct": 0,
-      "feedback": "En un paciente politraumatizado inestable se deben priorizar los estudios esenciales coordinando con el equipo tratante; realizar todos los estudios posibles, esperar estabilidad completa o priorizar solo por rapidez sin coordinar no son adecuados."
+      "feedback": "Es correcta porque en un paciente politraumatizado inestable el tiempo es un factor crítico, por lo que corresponde priorizar los estudios de imagen esenciales para la toma de decisiones, coordinando con el equipo tratante de forma que la obtención de imágenes no retrase la estabilización ni la referencia urgente. Realizar todos los estudios posibles antes de cualquier decisión clínica prolonga innecesariamente el tiempo hasta una intervención que puede ser urgente; priorizar solo por rapidez sin coordinar con el equipo tratante puede no responder a la pregunta clínica realmente relevante; esperar estabilidad completa antes de iniciar cualquier estudio puede retrasar el diagnóstico de lesiones que están causando precisamente la inestabilidad."
     },
     {
       "id": 184,
@@ -4246,7 +4246,7 @@ window.SERUMS_DATA = {
         "Indicar reposo prolongado hasta que el temor desaparezca por sí solo."
       ],
       "correct": 2,
-      "feedback": "La rehabilitación cardiaca requiere un programa de actividad física progresiva y supervisada, abordando también el temor del paciente; el reposo prolongado, reanudar sin supervisión o solo terapia psicológica sin actividad física no son adecuados."
+      "feedback": "Es correcta porque la rehabilitación cardiaca tras un infarto requiere un programa de actividad física progresiva y supervisada que reintroduzca el esfuerzo de forma segura, abordando en paralelo el temor del paciente, que es una barrera frecuente y esperable tras un evento cardiovascular agudo. Recomendar que reanude su actividad habitual sin supervisión ni progresión expone a un esfuerzo no calibrado a su capacidad cardiovascular actual; indicar solo terapia psicológica sin programa de actividad física deja sin abordar la reincorporación funcional que el paciente necesita; indicar reposo prolongado hasta que el temor desaparezca por sí solo retrasa una recuperación cuya evidencia respalda precisamente la actividad progresiva temprana."
     },
     {
       "id": 185,
@@ -4269,7 +4269,7 @@ window.SERUMS_DATA = {
         "Esperar a que la pérdida de peso sea más marcada antes de evaluar."
       ],
       "correct": 0,
-      "feedback": "Ante sospecha de disfagia se debe evaluar la seguridad de la deglución y coordinar un plan de manejo; comer más lento sin evaluación, esperar mayor pérdida de peso o indicar dieta líquida sin evaluación previa no son adecuados."
+      "feedback": "Es correcta porque la tos frecuente durante las comidas junto con pérdida de peso son signos de alarma de disfagia con riesgo de aspiración, que exigen evaluar la seguridad de la deglución antes de decidir cualquier modificación de la dieta, dado el riesgo de complicaciones respiratorias graves. Indicar que coma más lento sin evaluación especializada no aborda el mecanismo de riesgo subyacente; indicar una dieta líquida exclusiva sin evaluación previa puede ser inadecuada si el riesgo está justamente en los líquidos, según el tipo de disfagia; esperar a que la pérdida de peso sea más marcada retrasa la identificación de un riesgo de aspiración ya presente."
     },
     {
       "id": 186,
@@ -4316,7 +4316,7 @@ window.SERUMS_DATA = {
         "Exigir que el niño logre la independencia completa en un plazo breve y definido."
       ],
       "correct": 2,
-      "feedback": "La terapia ocupacional en TEA debe diseñar un plan estructurado que promueva gradualmente la independencia; hacer las actividades por el niño, no intervenir o exigir independencia inmediata no son adecuados."
+      "feedback": "Es correcta porque la independencia en actividades de autocuidado en un niño con trastorno del espectro autista se favorece mediante un plan de intervención estructurado que promueva avances graduales, respetando el ritmo de aprendizaje propio de cada niño en este tipo de trastorno. Indicar que estas dificultades no requieren intervención específica desestima un área central de trabajo en terapia ocupacional para esta población; realizar las actividades por el niño de forma permanente para evitar su frustración perpetúa la dependencia en vez de reducirla; exigir independencia completa en un plazo breve y definido no respeta el ritmo de aprendizaje individual y puede generar frustración adicional."
     },
     {
       "id": 188,
@@ -4339,7 +4339,7 @@ window.SERUMS_DATA = {
         "Evaluar el entorno domiciliario y proponer adaptaciones que reduzcan el riesgo de caídas y favorezcan su independencia."
       ],
       "correct": 3,
-      "feedback": "La terapia ocupacional debe evaluar el entorno domiciliario y proponer adaptaciones concretas; sugerir mudanza sin evaluar, reducir el desplazamiento o indicar silla de ruedas sin evaluación previa no son adecuados."
+      "feedback": "Es correcta porque la adaptación del entorno domiciliario, tras una evaluación directa de los obstáculos existentes, es la intervención específica de terapia ocupacional que reduce el riesgo de caídas mientras favorece la independencia del adulto mayor dentro de su propio espacio. Indicar que se mude sin evaluar su vivienda actual es una medida desproporcionada que no explora primero soluciones dentro del mismo domicilio; indicar silla de ruedas permanente sin evaluar el entorno puede limitar innecesariamente la movilidad que aún conserva; recomendar que reduzca al mínimo su desplazamiento reduce su funcionalidad en vez de adaptarla de forma segura."
     },
     {
       "id": 189,
@@ -4362,7 +4362,7 @@ window.SERUMS_DATA = {
         "Recomendar que abandone por completo las actividades que le resultan difíciles."
       ],
       "correct": 1,
-      "feedback": "Aunque la baja visión sea irreversible, existen ayudas ópticas y no ópticas que facilitan las actividades cotidianas; decir que no hay nada más que hacer, recomendar abandonar actividades o que otro las haga en su lugar no son adecuados."
+      "feedback": "Es correcta porque, aunque la baja visión sea irreversible, existen ayudas ópticas y no ópticas que pueden mejorar significativamente el desempeño en actividades cotidianas, por lo que corresponde evaluarlas específicamente para el caso. Indicar que no hay nada más que hacer desestima el margen de mejora funcional que sí existe pese a la irreversibilidad visual; indicar que otra persona realice esas actividades de forma permanente fomenta una dependencia evitable; recomendar que abandone las actividades difíciles reduce innecesariamente su autonomía cuando existen alternativas de apoyo disponibles."
     },
     {
       "id": 190,
@@ -4385,7 +4385,7 @@ window.SERUMS_DATA = {
         "Indicar el uso de lentes oscuros durante toda la jornada laboral, sin evaluación visual."
       ],
       "correct": 0,
-      "feedback": "Ante fatiga visual ocupacional se debe evaluar la salud visual y orientar en medidas preventivas específicas; solo reducir pantallas, recomendar cualquier lente sin evaluación o lentes oscuros todo el día no son adecuados."
+      "feedback": "Es correcta porque la fatiga visual y el dolor de cabeza asociados al uso prolongado de pantallas requieren evaluar la salud visual de cada trabajador y orientar en medidas preventivas específicas, dado que estas medidas combinadas son las que han demostrado reducir el síndrome visual informático. Indicar solo que reduzcan el uso de pantallas sin otra recomendación no es viable en un contexto laboral que depende de ellas; recomendar cualquier lente sin evaluación previa puede no corregir la causa específica de la fatiga visual de cada trabajador; indicar lentes oscuros durante toda la jornada no aborda la causa ergonómica ni visual del problema descrito."
     },
     {
       "id": 191,
@@ -4408,7 +4408,7 @@ window.SERUMS_DATA = {
         "Esperar a que se confirmen más casos humanos antes de intervenir."
       ],
       "correct": 0,
-      "feedback": "Ante sospecha de leptospirosis tras un desastre se debe coordinar con salud pública el control de roedores y la vigilancia conjunta; atender solo animales, esperar más casos o evacuar sin coordinación no son adecuados."
+      "feedback": "Es correcta porque tras una inundación con presencia de roedores y casos humanos compatibles con leptospirosis, corresponde coordinar con salud pública el control de roedores y la vigilancia epidemiológica conjunta del evento, dado que el control efectivo requiere abordar tanto el reservorio animal como los casos humanos de forma articulada. Recomendar la evacuación total sin coordinación con salud pública es una medida desproporcionada frente a un problema que puede controlarse con medidas específicas; atender exclusivamente a los animales de la zona deja sin intervenir el riesgo de transmisión a las personas; esperar a que se confirmen más casos humanos retrasa una respuesta que debe iniciarse con la sola sospecha del evento."
     },
     {
       "id": 192,
@@ -4431,7 +4431,7 @@ window.SERUMS_DATA = {
         "Indicar a la población que recoja a todos los animales callejeros en sus casas."
       ],
       "correct": 2,
-      "feedback": "El control de la población canina debe basarse en vacunación y esterilización con participación comunitaria; eliminar animales, no intervenir hasta un caso humano o recoger animales en casas no son adecuados."
+      "feedback": "Es correcta porque el control de la población canina sin dueño responsable se aborda mediante vacunación antirrábica y esterilización con participación comunitaria activa, siendo esta la estrategia con evidencia de sostenibilidad para reducir tanto el riesgo de rabia como el crecimiento no controlado de la población. No intervenir hasta que se reporte un caso humano de rabia expone a la comunidad a un riesgo prevenible mientras se espera un desenlace grave; eliminar a los animales callejeros como única medida no aborda el riesgo sanitario de fondo ni es sostenible en el tiempo; indicar que la población recoja a todos los animales en sus casas no es una medida viable ni sanitariamente controlada a esa escala."
     },
     {
       "id": 193,
@@ -4454,7 +4454,7 @@ window.SERUMS_DATA = {
         "Realizar el monitoreo solo después de que se reporten los primeros casos de dengue."
       ],
       "correct": 0,
-      "feedback": "La vigilancia entomológica periódica permite actuar preventivamente antes de un brote; monitorear solo tras casos, limitarse a viviendas sintomáticas o fumigar sin vigilancia previa no son adecuados."
+      "feedback": "Es correcta porque la vigilancia entomológica periódica permite identificar criaderos de Aedes aegypti y actuar sobre ellos antes de que se acumule la densidad vectorial suficiente para sostener un brote, siendo esta la estrategia preventiva de referencia frente al monitoreo reactivo. Limitar la vigilancia a viviendas con síntomas compatibles con dengue es una estrategia reactiva que no previene la transmisión antes de que aparezcan casos; fumigar toda la comunidad de forma mensual sin vigilancia previa no identifica ni prioriza los criaderos reales, y genera un uso innecesario de insecticida; monitorear solo después de los primeros casos pierde la ventana de control preventivo que caracteriza a la vigilancia entomológica."
     },
     {
       "id": 194,
@@ -4477,7 +4477,7 @@ window.SERUMS_DATA = {
         "Realizar las pruebas solo en donantes que parezcan tener factores de riesgo."
       ],
       "correct": 0,
-      "feedback": "La seguridad transfusional exige completar todas las pruebas de tamizaje antes de liberar unidades; liberar por urgencia, testear solo a donantes con riesgo aparente o completar pruebas después de transfundir no son adecuados."
+      "feedback": "Es correcta porque la seguridad transfusional exige que todas las pruebas de tamizaje se completen antes de liberar cualquier unidad de sangre para transfusión, sin excepciones basadas en la urgencia del pedido, dado que transfundir sangre no tamizada expone al receptor a un riesgo de transmisión de infecciones que puede evitarse con el protocolo completo. Completar las pruebas después de la transfusión en casos de extrema urgencia invierte el orden que precisamente busca prevenir el riesgo; liberar unidades según la urgencia del pedido, sin esperar todas las pruebas, prioriza la rapidez sobre la seguridad del receptor; testear solo a donantes con factores de riesgo aparentes deja sin tamizar a donantes con infecciones asintomáticas no evidentes clínicamente."
     },
     {
       "id": 195,
@@ -4500,7 +4500,7 @@ window.SERUMS_DATA = {
         "Implementar un sistema de segregación, tratamiento y disposición final adecuado para los residuos biocontaminados según la normativa vigente."
       ],
       "correct": 3,
-      "feedback": "Los residuos biocontaminados deben segregarse, tratarse y disponerse según normativa; la disposición conjunta, delegar sin supervisión o reducir solo procedimientos invasivos no resuelven el manejo adecuado."
+      "feedback": "Es correcta porque los residuos biocontaminados requieren un sistema de segregación, tratamiento y disposición final diferenciado según la normativa vigente, dado su potencial infeccioso, que los distingue de los residuos comunes y exige un manejo específico en cada etapa del proceso. Delegar todo el manejo a una empresa externa sin ninguna supervisión no exime al establecimiento de su responsabilidad sobre la segregación inicial; continuar con la disposición conjunta para simplificar el proceso mantiene el riesgo biológico sin control; reducir la generación de residuos limitando procedimientos invasivos no resuelve el manejo de los residuos biocontaminados que sí se generan de forma necesaria en la atención."
     },
     {
       "id": 196,
@@ -4523,7 +4523,7 @@ window.SERUMS_DATA = {
         "Prohibir la defecación al aire libre sin ofrecer ninguna alternativa sanitaria a la comunidad."
       ],
       "correct": 0,
-      "feedback": "En zonas rurales sin alcantarillado se deben evaluar e implementar soluciones sanitarias adecuadas al contexto, junto con educación; esperar el alcantarillado convencional, limitarse a higiene de manos o prohibir sin alternativas no son adecuados."
+      "feedback": "Es correcta porque en contextos rurales sin alcantarillado corresponde evaluar e implementar soluciones sanitarias adecuadas al contexto junto con educación sanitaria que sostenga su uso correcto, dado que ambos componentes son necesarios para reducir el riesgo de enfermedades diarreicas de forma sostenible. Esperar la construcción de un sistema de alcantarillado convencional antes de intervenir prolonga la exposición al riesgo mientras existen alternativas técnicas viables más inmediatas; limitar la intervención a la educación sobre higiene de manos sin abordar la disposición de excretas deja sin resolver la fuente principal del problema; prohibir la defecación al aire libre sin ofrecer una alternativa sanitaria concreta no resuelve la necesidad básica que motiva la práctica."
     },
     {
       "id": 197,
@@ -5169,7 +5169,7 @@ window.SERUMS_DATA = {
         "Esperar el resultado de otras pruebas antes de comunicar cualquier hallazgo."
       ],
       "correct": 1,
-      "feedback": "Ante un hallazgo hematológico compatible con leucemia se debe comunicar de forma oportuna y directa al clínico; registrar sin comunicar, repetir sin comunicar o esperar otras pruebas retrasan la evaluación urgente."
+      "feedback": "Es correcta porque alteraciones marcadas en el recuento y morfología de células blancas compatibles con un posible proceso leucémico constituyen un hallazgo crítico que debe comunicarse de forma oportuna y directa al personal clínico, dado que el diagnóstico y manejo tempranos de una leucemia son determinantes para el pronóstico del paciente. Registrar el resultado sin ninguna comunicación adicional retrasa la evaluación clínica de un hallazgo con alta relevancia diagnóstica; repetir la prueba varias veces sin comunicar el hallazgo inicial prolonga innecesariamente el tiempo hasta que el clínico pueda actuar; esperar el resultado de otras pruebas antes de comunicar cualquier hallazgo retrasa una alerta que debe emitirse apenas se detecta la alteración."
     },
     {
       "id": 225,
@@ -5192,7 +5192,7 @@ window.SERUMS_DATA = {
         "Indicar una biopsia inmediata sin clasificar antes el hallazgo según los criterios estandarizados."
       ],
       "correct": 1,
-      "feedback": "Ante un hallazgo sospechoso en mamografía se debe clasificar según criterios estandarizados y coordinar evaluación complementaria; informar como normal, repetir en un año sin evaluar o biopsiar sin clasificar no son adecuados."
+      "feedback": "Es correcta porque un hallazgo sospechoso en mamografía debe clasificarse según los criterios estandarizados para definir de forma objetiva el nivel de sospecha y la conducta específica a seguir, coordinando la evaluación complementaria oportuna según esa clasificación. Informar el resultado como normal para no generar preocupación oculta un hallazgo real con riesgo de retrasar un diagnóstico oportuno; repetir la mamografía en un año sin evaluación adicional posterga innecesariamente el estudio de un hallazgo ya identificado como sospechoso; indicar una biopsia inmediata sin clasificar antes el hallazgo salta un paso diagnóstico que orienta la conducta según el nivel real de sospecha."
     },
     {
       "id": 226,
@@ -5215,7 +5215,7 @@ window.SERUMS_DATA = {
         "Indicar reposo absoluto indefinido, sin ningún plan de rehabilitación activo."
       ],
       "correct": 1,
-      "feedback": "El retorno deportivo debe basarse en un plan de rehabilitación progresivo, explicando riesgos del retorno prematuro; autorizar de inmediato, indicar reposo indefinido sin plan o exigir una exoneración no reemplazan la rehabilitación adecuada."
+      "feedback": "Es correcta porque el retorno a la actividad deportiva tras una lesión de rodilla debe basarse en un plan de rehabilitación progresivo que restaure la función y estabilidad articular, informando al deportista sobre los riesgos concretos de un retorno prematuro antes de autorizar la vuelta. Autorizar el retorno inmediato para no afectar su participación deportiva prioriza el calendario deportivo sobre la integridad articular del paciente; autorizar el retorno solo con una exoneración de responsabilidad no sustituye la evaluación funcional real ni reduce el riesgo clínico; indicar reposo absoluto indefinido sin ningún plan de rehabilitación activo no favorece la recuperación funcional necesaria para un retorno seguro."
     },
     {
       "id": 227,
@@ -5238,7 +5238,7 @@ window.SERUMS_DATA = {
         "Evaluar el tipo de afasia y diseñar un plan de rehabilitación del lenguaje, usando estrategias de comunicación de apoyo mientras tanto."
       ],
       "correct": 3,
-      "feedback": "Ante una afasia post-ACV se debe evaluar su tipo y diseñar rehabilitación con estrategias de apoyo; evitar comunicarse, hablar por el paciente en todo momento o usar solo ejercicios escritos sin evaluar el tipo no son adecuados."
+      "feedback": "Es correcta porque el manejo de la afasia post-ACV requiere primero evaluar el tipo específico de afasia presente, dado que existen distintos patrones con manejo diferenciado, y diseñar un plan de rehabilitación del lenguaje usando en paralelo estrategias de comunicación de apoyo que reduzcan la frustración del paciente mientras se recupera. Hablar por el paciente en todo momento para evitar su frustración limita las oportunidades de práctica comunicativa que la rehabilitación requiere; evitar comunicarse hasta una recuperación espontánea desatiende al paciente durante todo el proceso de rehabilitación activa; indicar únicamente ejercicios escritos sin evaluar el tipo de afasia puede no ajustarse al canal de comunicación realmente afectado en ese paciente."
     },
     {
       "id": 228,
@@ -5285,7 +5285,7 @@ window.SERUMS_DATA = {
         "Esperar a que presente pérdida de visión evidente para evaluar."
       ],
       "correct": 2,
-      "feedback": "El glaucoma suele ser asintomático inicialmente; ante factores de riesgo corresponde tamizar y derivar según hallazgos, sin esperar síntomas evidentes ni indicar lentes sin evaluar la presión intraocular."
+      "feedback": "Es correcta porque el glaucoma suele cursar de forma asintomática en sus etapas iniciales, por lo que ante antecedente familiar y edad mayor a 40 años corresponde realizar tamizaje de la presión intraocular y derivar según los hallazgos, sin esperar a que aparezcan síntomas visuales evidentes que suelen indicar daño ya avanzado. Indicar lentes con filtro sin evaluación de la presión intraocular no aborda el riesgo específico de glaucoma que motiva la consulta; indicar que no requiere evaluación por ausencia de síntomas actuales ignora precisamente el curso asintomático típico de la enfermedad en sus fases iniciales; esperar a que presente pérdida de visión evidente para evaluar retrasa el diagnóstico hasta un punto donde el daño del nervio óptico puede ser irreversible."
     },
     {
       "id": 230,
@@ -5308,7 +5308,7 @@ window.SERUMS_DATA = {
         "Suspender toda actividad ganadera en la zona de forma indefinida."
       ],
       "correct": 0,
-      "feedback": "Ante riesgo de brucelosis se deben implementar bioseguridad y vigilancia sanitaria del hato y trabajadores; continuar sin protección, suspender toda actividad o proteger solo durante el ordeño no son adecuados."
+      "feedback": "Es correcta porque el riesgo de brucelosis en trabajadores expuestos a animales y productos de una zona con casos previos requiere implementar medidas de bioseguridad y protección personal, junto con vigilancia sanitaria tanto del hato como de los propios trabajadores expuestos, abordando la exposición desde ambos extremos de la cadena de transmisión. Indicar protección solo durante el ordeño, sin vigilancia sanitaria adicional, ignora otras vías de exposición presentes en el manejo cotidiano del ganado; continuar las labores sin ninguna medida de protección adicional mantiene un riesgo ocupacional ya identificado; suspender toda actividad ganadera de forma indefinida es una medida desproporcionada frente a un riesgo que puede controlarse con bioseguridad adecuada."
     },
     {
       "id": 231,
@@ -5331,7 +5331,7 @@ window.SERUMS_DATA = {
         "Sacrificar a todos los caballos de la zona, sin investigación previa de la causa."
       ],
       "correct": 0,
-      "feedback": "Ante enfermedad neurológica animal transmitida por vectores se debe notificar, investigar y controlar vectores; atender sin notificar, esperar casos humanos o sacrificar sin investigación no son adecuados."
+      "feedback": "Es correcta porque enfermedad neurológica en caballos en zona con alta presencia de mosquitos vectores sugiere un posible evento de encefalitis equina con riesgo zoonótico, por lo que corresponde notificar a la autoridad sanitaria, investigar la causa y coordinar el control vectorial correspondiente antes de que el evento se extienda. Esperar a que se presenten casos humanos antes de actuar retrasa una respuesta que debe anticiparse al salto zoonótico; atender solo a los animales enfermos sin notificar deja sin activar la vigilancia epidemiológica necesaria; sacrificar a todos los caballos sin investigación previa de la causa es una medida desproporcionada y no sustentada en un diagnóstico confirmado."
     },
     {
       "id": 232,
@@ -5354,7 +5354,7 @@ window.SERUMS_DATA = {
         "Procesar la muestra sin priorización especial, según el orden habitual de llegada."
       ],
       "correct": 0,
-      "feedback": "Ante sospecha de tuberculosis se debe priorizar el procesamiento de la baciloscopía y comunicar el resultado oportunamente; procesar sin prioridad, postergar la toma de muestra o condicionarla a la presencia de fiebre no son adecuados."
+      "feedback": "Es correcta porque en un sintomático respiratorio de más de dos semanas la baciloscopía debe procesarse de forma prioritaria y su resultado comunicarse oportunamente, dado que el diagnóstico temprano de tuberculosis es clave tanto para el manejo individual como para el control de la transmisión comunitaria. Solicitar que el paciente regrese en una semana para la toma de muestra retrasa innecesariamente el inicio del proceso diagnóstico; procesar la muestra solo si el paciente presenta fiebre en el momento de la consulta introduce un criterio no relacionado con la indicación real del estudio; procesarla sin priorización especial, según el orden habitual, no reconoce la urgencia diagnóstica que amerita un sintomático respiratorio."
     },
     {
       "id": 233,
@@ -5377,7 +5377,7 @@ window.SERUMS_DATA = {
         "Esperar a que se reporten más casos antes de investigar."
       ],
       "correct": 1,
-      "feedback": "Ante sospecha de ETA se debe analizar los alimentos sospechosos y coordinar medidas correctivas; cerrar sin investigar, esperar más casos o prohibir todo sin identificar la fuente no son adecuados."
+      "feedback": "Es correcta porque ante varios casos de enfermedad diarreica aguda asociados al consumo de alimentos de un mercado corresponde analizar microbiológicamente los alimentos sospechosos y coordinar las medidas correctivas con la autoridad sanitaria, identificando la fuente específica antes de tomar medidas más amplias. Prohibir la venta de todos los alimentos sin identificar la fuente específica es una medida desproporcionada que afecta a comerciantes no involucrados en el problema; cerrar el mercado de forma indefinida sin investigación previa tampoco identifica ni corrige la causa real del brote; esperar a que se reporten más casos antes de investigar retrasa una respuesta que debe iniciarse con los casos ya identificados."
     },
     {
       "id": 234,
@@ -5400,7 +5400,7 @@ window.SERUMS_DATA = {
         "Evaluar la calidad del agua, coordinar medidas de mitigación y orientar sobre fuentes alternativas mientras se resuelve el problema."
       ],
       "correct": 3,
-      "feedback": "Ante sospecha de contaminación por agroquímicos se debe evaluar el agua, mitigar y orientar sobre alternativas; continuar sin evaluar, prohibir toda la agricultura sin evaluación o exigir agua embotellada permanente no son adecuados."
+      "feedback": "Es correcta porque la cercanía de una fuente de agua a terrenos con uso intensivo de agroquímicos exige evaluar su calidad para confirmar o descartar contaminación, coordinar medidas de mitigación según el resultado y orientar sobre fuentes alternativas mientras se resuelve el problema de fondo, protegiendo así a la población durante el proceso. Indicar que la población continúe usando la fuente sin evaluación mantiene una exposición potencialmente riesgosa sin verificarla; prohibir toda actividad agrícola en la zona sin evaluación previa es una medida desproporcionada que no se sustenta aún en un resultado confirmado; exigir agua embotellada de forma permanente sin evaluar la fuente no resuelve el problema estructural ni es sostenible en el tiempo."
     },
     {
       "id": 235,
@@ -5423,7 +5423,7 @@ window.SERUMS_DATA = {
         "Continuar la atención sin evaluar las condiciones de ventilación del ambiente."
       ],
       "correct": 0,
-      "feedback": "La ventilación adecuada es clave en el control de infecciones de transmisión aérea como la tuberculosis; continuar sin evaluar, trasladar a un ambiente más reducido o solo usar mascarillas sin mejorar la ventilación no son adecuados."
+      "feedback": "Es correcta porque la ventilación adecuada es una medida de control ambiental clave para reducir la transmisión de infecciones por vía aérea como la tuberculosis, por lo que en ambientes que atienden pacientes con esa sospecha corresponde evaluar y mejorar la ventilación, complementando así otras medidas de bioseguridad ya existentes. Indicar el uso exclusivo de mascarillas sin mejorar la ventilación aborda solo una barrera de protección individual, dejando sin corregir el riesgo ambiental de fondo; trasladar la atención a un ambiente aún más reducido puede aumentar la concentración de partículas infecciosas en el aire; continuar la atención sin evaluar las condiciones de ventilación mantiene un riesgo de transmisión ya identificado en el establecimiento."
     },
     {
       "id": 236,
