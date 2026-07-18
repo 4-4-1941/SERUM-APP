@@ -3647,7 +3647,7 @@ window.SERUMS_DATA = {
         "Dispensar el medicamento tal como está prescrito, sin ninguna verificación adicional."
       ],
       "correct": 0,
-      "feedback": "Ante una dosis inusual de un medicamento de alto riesgo se debe verificar con el prescriptor antes de dispensar; dispensar sin verificar, reducir la dosis por cuenta propia o entregar solo la mitad sin consultar no son adecuados."
+      "feedback": "Es correcta porque un medicamento de estrecho margen terapéutico con dosis inusualmente alta representa un riesgo real de toxicidad, por lo que el profesional de farmacia debe verificar la prescripción con el prescriptor antes de dispensar, ya que solo él puede confirmar si la dosis es intencional o un error de prescripción. Reducir la dosis por cuenta propia invade una decisión clínica que no corresponde al ámbito de dispensación; entregar solo la mitad sin consultar no resuelve la duda sobre la intención real de la prescripción; dispensar tal como está prescrito sin verificación expone al paciente a un riesgo de toxicidad evitable."
     },
     {
       "id": 159,
@@ -3670,7 +3670,7 @@ window.SERUMS_DATA = {
         "Retirar solo los medicamentos vencidos, manteniendo el resto pese a la falla de conservación."
       ],
       "correct": 0,
-      "feedback": "Ante falla en la cadena de frío se deben retirar los medicamentos afectados, registrar y corregir la causa; continuar dispensando, trasladarlos a temperatura ambiente permanentemente o retirar solo los vencidos no son adecuados."
+      "feedback": "Es correcta porque una falla en la cadena de frío compromete la estabilidad y eficacia de los medicamentos termolábiles, por lo que corresponde retirarlos de circulación, registrar el incidente para trazabilidad y corregir la causa de la falla antes de reanudar su uso. Continuar dispensándolos sin evaluar el impacto expone a los pacientes a productos con potencia comprometida; trasladarlos a temperatura ambiente de forma permanente no corrige el problema, solo lo evita sin resolver la causa; retirar solo los vencidos, manteniendo el resto pese a la falla de conservación, ignora que la exposición térmica afecta también a los no vencidos."
     },
     {
       "id": 160,
@@ -3693,7 +3693,7 @@ window.SERUMS_DATA = {
         "Dispensar el antibiótico solicitado, sin ninguna orientación adicional."
       ],
       "correct": 2,
-      "feedback": "El uso racional de medicamentos exige orientar sobre el manejo adecuado y evitar antibióticos innecesarios; dispensarlo sin orientación, sustituirlo por cuenta propia o condicionarlo al empeoramiento no son adecuados."
+      "feedback": "Es correcta porque el cuadro descrito es compatible con una infección viral, para la cual los antibióticos no tienen indicación, por lo que corresponde explicar esto al usuario, orientar sobre manejo sintomático y derivar a evaluación médica si el cuadro no mejora o presenta signos de alarma, contribuyendo así al uso racional de antibióticos y a la prevención de resistencia microbiana. Indicar que lo tome solo si los síntomas empeoran normaliza un uso no indicado del antibiótico; recomendar otro antibiótico por cuenta propia sustituye indebidamente una decisión que corresponde a evaluación médica; dispensarlo sin ninguna orientación contribuye directamente al uso irracional de antimicrobianos y al riesgo de resistencia."
     },
     {
       "id": 161,
@@ -4062,7 +4062,7 @@ window.SERUMS_DATA = {
         "Registrar el caso solo en la historia clínica, sin ninguna otra acción."
       ],
       "correct": 0,
-      "feedback": "Toda reacción adversa debe notificarse al sistema de farmacovigilancia y orientar al paciente; solo registrar en la historia clínica, indicar suspender sin informar a nadie o derivar a otro establecimiento sin notificar no son adecuados."
+      "feedback": "Es correcta porque toda sospecha de reacción adversa a medicamento debe notificarse al sistema de farmacovigilancia, que depende de estos reportes para detectar señales de seguridad, además de orientar al paciente sobre los siguientes pasos a seguir con su tratamiento. Recomendar que acuda a otro establecimiento sin notificar traslada la responsabilidad sin activar el sistema de vigilancia; indicar que suspenda el medicamento sin informar a nadie más pierde la oportunidad de registrar una señal de seguridad relevante; registrar el caso solo en la historia clínica sin notificar al sistema correspondiente no contribuye a la vigilancia poblacional de reacciones adversas."
     },
     {
       "id": 177,
@@ -4085,7 +4085,7 @@ window.SERUMS_DATA = {
         "Indicar a la familia que reduzca el número de medicamentos, sin consultar a los prescriptores."
       ],
       "correct": 0,
-      "feedback": "En pacientes polimedicados corresponde una conciliación de medicamentos que identifique interacciones y coordine ajustes con los prescriptores; dispensar por separado, suspender por cuenta propia o pedir a la familia reducir medicamentos sin consultar no son adecuados."
+      "feedback": "Es correcta porque un adulto mayor polimedicado por múltiples prescriptores sin revisión conjunta tiene alto riesgo de interacciones y duplicidades terapéuticas, por lo que corresponde realizar una conciliación de medicamentos que las identifique y coordinar los ajustes necesarios con los prescriptores involucrados. Dispensar cada medicamento por separado sin revisar interacciones omite precisamente el riesgo que motiva la conciliación; suspender por cuenta propia los medicamentos que se consideren innecesarios excede el ámbito de decisión del profesional de farmacia; indicar a la familia que reduzca el número de medicamentos sin consultar a los prescriptores traslada una decisión clínica a quien no tiene competencia para tomarla."
     },
     {
       "id": 178,
@@ -5077,7 +5077,7 @@ window.SERUMS_DATA = {
         "Dispensar ambos medicamentos sin advertir la interacción."
       ],
       "correct": 0,
-      "feedback": "Ante una interacción medicamentosa relevante se debe informar al prescriptor y al paciente, sugiriendo alternativas; dispensar sin advertir, dispensar solo uno sin informar o indicar espaciar tomas por cuenta propia no son adecuados."
+      "feedback": "Es correcta porque una interacción medicamentosa grave conocida debe comunicarse tanto al prescriptor como al paciente, sugiriendo alternativas terapéuticas si es necesario, de forma que la decisión final sobre el ajuste del tratamiento se tome de manera informada y coordinada. Dispensar solo uno de los medicamentos sin informar a nadie decide unilateralmente algo que corresponde definir entre prescriptor y paciente; indicar que espacie la toma por su cuenta sin informar al prescriptor no garantiza que esa medida sea suficiente para evitar la interacción; dispensar ambos sin advertir la interacción expone al paciente a un riesgo conocido y evitable."
     },
     {
       "id": 221,
@@ -5100,7 +5100,7 @@ window.SERUMS_DATA = {
         "Solicitar al paciente que consiga una nueva receta más legible antes de dispensar."
       ],
       "correct": 2,
-      "feedback": "Ante una receta ilegible se debe confirmar con el prescriptor antes de dispensar; interpretar la dosis, dispensar la mínima sin confirmar o exigir al paciente conseguir otra receta no son adecuados."
+      "feedback": "Es correcta porque una dosis ilegible en la receta introduce ambigüedad sobre la intención real del prescriptor, por lo que corresponde confirmar directamente con él antes de dispensar, evitando así un error de interpretación con consecuencias potencialmente graves. Interpretar la dosis según lo más probable y dispensar de inmediato asume un riesgo innecesario sobre una información que puede confirmarse; dispensar la dosis mínima posible sin confirmar no garantiza que corresponda a la indicación real del prescriptor; solicitar al paciente que consiga una nueva receta más legible traslada al paciente una gestión que puede resolverse de forma más directa y rápida contactando al prescriptor."
     },
     {
       "id": 222,
