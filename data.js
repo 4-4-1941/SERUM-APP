@@ -320,7 +320,7 @@ window.SERUMS_DATA = {
         "Estabilizar y coordinar referencia con continuidad asistencial."
       ],
       "correct": 3,
-      "feedback": "Ante un paciente en shock se debe estabilizar y coordinar la referencia con continuidad asistencial; trasladar sin estabilizar, esperar al familiar o condicionar el traslado solo a la disponibilidad de cama sin iniciar estabilización no son adecuados."
+      "feedback": "Es correcta porque un paciente en shock requiere primero estabilización antes o en paralelo a coordinar la referencia, asegurando además la continuidad asistencial mediante la información clínica que acompaña al traslado. Trasladar solo tras confirmar cama sin iniciar estabilización prioriza un trámite administrativo sobre la condición vital del paciente; esperar al familiar retrasa una decisión que no depende del consentimiento familiar en una emergencia; enviarlo de inmediato sin estabilizar expone al paciente a mayor deterioro durante el traslado."
     },
     {
       "id": 15,
@@ -2428,7 +2428,7 @@ window.SERUMS_DATA = {
         "Informar el vínculo solo si otro postor lo denuncia."
       ],
       "correct": 1,
-      "feedback": "Ante un conflicto de interés se debe declarar y abstenerse de participar en la decisión; continuar sin informar, favorecer al proveedor familiar o informar solo si otro lo denuncia no son adecuados."
+      "feedback": "Es correcta porque el conflicto de interés exige declararlo de forma proactiva ante la institución y abstenerse de participar en la decisión, sin esperar a que sea otro quien lo denuncie, protegiendo así la transparencia del proceso de adquisición. Continuar sin informar oculta un vínculo que compromete la imparcialidad del proceso; favorecer al proveedor familiar aun con mejor precio no elimina el conflicto de interés de fondo; informar solo si otro postor lo denuncia invierte la responsabilidad, que es proactiva y no reactiva."
     },
     {
       "id": 106,
@@ -2451,7 +2451,7 @@ window.SERUMS_DATA = {
         "Trasladar la queja directamente a instancias legales sin análisis previo."
       ],
       "correct": 1,
-      "feedback": "Las quejas deben registrarse, analizarse y usarse para la mejora continua; ignorarlas, responder solo verbalmente sin registro o escalarlas directamente a lo legal sin análisis no son adecuados."
+      "feedback": "Es correcta porque toda queja formal debe registrarse, analizarse en sus causas de fondo y usarse como insumo del ciclo de mejora continua del servicio, en vez de tratarse como un hecho aislado. Ignorarla si no se repite desestima información valiosa incluso de un solo evento; responder solo verbalmente sin registro impide su trazabilidad y análisis posterior; trasladarla directamente a instancias legales sin análisis previo omite la oportunidad de resolverla y aprender de ella en el propio establecimiento."
     },
     {
       "id": 107,
@@ -2474,7 +2474,7 @@ window.SERUMS_DATA = {
         "Que el municipio asuma la iniciativa sin ninguna participación del sector salud."
       ],
       "correct": 1,
-      "feedback": "Las iniciativas de municipio saludable requieren articulación intersectorial sostenida; actuar de forma aislada, limitar a personal médico o que el municipio actúe solo sin salud no son adecuados."
+      "feedback": "Es correcta porque las iniciativas de municipios saludables dependen de la articulación sostenida entre salud, gobierno local y comunidad, ya que ningún sector por sí solo cuenta con todos los recursos y competencias necesarios para sostener cambios en el entorno físico y social. Que el establecimiento actúe de forma aislada desaprovecha recursos y competencias municipales; limitar la participación a personal médico excluye actores clave de la intervención; que el municipio actúe solo sin salud deja fuera el componente sanitario que sustenta la iniciativa."
     },
     {
       "id": 108,
@@ -2497,7 +2497,7 @@ window.SERUMS_DATA = {
         "Explicar el procedimiento, sus riesgos y beneficios, y obtener el consentimiento informado antes de proceder."
       ],
       "correct": 3,
-      "feedback": "Todo procedimiento, incluso menor, requiere explicar riesgos/beneficios y obtener consentimiento informado antes de proceder; hacerlo directamente, condicionar el consentimiento a que pregunte o informar después no son adecuados."
+      "feedback": "Es correcta porque el consentimiento informado exige explicar el procedimiento, sus riesgos y beneficios antes de realizarlo, independientemente de que se trate de un procedimiento menor, dado que todo acto médico conlleva algún grado de riesgo que el paciente tiene derecho a conocer. Realizarlo directamente para no demorar la atención antepone la eficiencia operativa al derecho del paciente a decidir; informar después del procedimiento invierte el momento en que el consentimiento pierde su función; condicionar la explicación a que el paciente pregunte traslada indebidamente la iniciativa informativa que corresponde al profesional."
     },
     {
       "id": 109,
@@ -2681,7 +2681,7 @@ window.SERUMS_DATA = {
         "Atender solo en caso de emergencia y remitir el resto a un seguro privado."
       ],
       "correct": 0,
-      "feedback": "El Aseguramiento Universal exige orientar sobre la afiliación al SIS y facilitar la atención sin demora; condicionar al pago, atender solo emergencias o afiliar sin informar a la familia no son adecuados."
+      "feedback": "Es correcta porque el Aseguramiento Universal en Salud exige orientar activamente sobre el proceso de afiliación al SIS y facilitar la atención del menor sin condicionarla al trámite administrativo, dado que la barrera económica percibida ya generó una postergación evitable de la atención. Indicar que regresen cuando puedan pagar perpetúa la barrera que motivó la postergación inicial; atender solo en caso de emergencia y remitir el resto a un seguro privado desconoce el derecho a la cobertura pública gratuita; afiliar sin informar a la familia no resuelve el desconocimiento de fondo que originó el problema."
     },
     {
       "id": 117,
@@ -2704,7 +2704,7 @@ window.SERUMS_DATA = {
         "Iniciar la atención desde cero sin gestionar la información previa."
       ],
       "correct": 1,
-      "feedback": "La continuidad de atención requiere gestionar la transferencia de información y coordinar con el establecimiento de origen; iniciar desde cero, pedirle que regrese a su región o que él mismo consiga su historia no son adecuados."
+      "feedback": "Es correcta porque la continuidad de atención en una Red Integrada de Salud exige que el nuevo establecimiento gestione activamente la transferencia de información clínica y coordine con el de origen, sin trasladar esa carga logística al paciente. Indicarle que regrese a su región de origen fragmenta la continuidad de un tratamiento crónico; solicitar que él mismo consiga su historia clínica traslada una responsabilidad institucional al paciente; iniciar la atención desde cero sin gestionar la información previa puede repetir estudios o desconocer decisiones terapéuticas ya tomadas."
     },
     {
       "id": 118,
@@ -3049,7 +3049,7 @@ window.SERUMS_DATA = {
         "Evaluar la calidad metodológica y la validez del estudio antes de su difusión."
       ],
       "correct": 3,
-      "feedback": "La revisión por pares evalúa la calidad metodológica y la validez del estudio antes de su publicación; no busca aumentar ventas, no reemplaza la revisión propia de los autores ni determina el orden de autoría."
+      "feedback": "Es correcta porque la revisión por pares evalúa la calidad metodológica y la validez de un estudio antes de su difusión, funcionando como filtro de calidad científica independiente del propio equipo autor. Determinar el orden de autoría no es función de este proceso, sino un acuerdo previo entre los investigadores; no busca incrementar la venta del artículo, que es un objetivo editorial ajeno a su propósito científico; tampoco reemplaza la revisión que los propios autores deben hacer de su trabajo antes de enviarlo."
     },
     {
       "id": 133,
@@ -3256,7 +3256,7 @@ window.SERUMS_DATA = {
         "Brindar la atención de urgencia requerida y orientar sobre los procesos de regularización y aseguramiento disponibles."
       ],
       "correct": 3,
-      "feedback": "El acceso a la urgencia no debe condicionarse a la situación migratoria; negar la atención, exigir pago particular o derivar al consulado antes de atender no son adecuados."
+      "feedback": "Es correcta porque el acceso a la atención de urgencia no puede condicionarse a la situación migratoria de la persona, correspondiendo brindar la atención requerida y, en paralelo, orientar sobre los procesos de regularización y aseguramiento disponibles. Derivar a un consulado antes de atender antepone un trámite administrativo a una necesidad de salud aguda; exigir pago particular condiciona la urgencia a la capacidad económica; negar la atención hasta que regularice su situación migratoria vulnera el derecho a la atención de urgencia, que es independiente de ese estatus."
     },
     {
       "id": 142,
@@ -3302,7 +3302,7 @@ window.SERUMS_DATA = {
         "Permitir el acceso libre al sistema a cualquier personal del establecimiento."
       ],
       "correct": 2,
-      "feedback": "La protección de datos exige accesos individuales y trazables; las cuentas compartidas (sea para todo el personal o solo administrativo) o el acceso libre comprometen la confidencialidad de la información clínica."
+      "feedback": "Es correcta porque la protección de datos en salud exige accesos individuales y trazables a la historia clínica electrónica, de forma que cada acción quede identificada con la persona responsable, protegiendo la confidencialidad de la información del paciente. Mantener cuentas compartidas, sea para todo el personal o solo para el administrativo, impide identificar quién accedió o modificó cada registro; permitir el acceso libre a cualquier personal amplía innecesariamente la exposición de información sensible sin ningún control de trazabilidad."
     },
     {
       "id": 144,
@@ -3325,7 +3325,7 @@ window.SERUMS_DATA = {
         "Reconocer los límites de la categoría del establecimiento y fortalecer la referencia oportuna a un nivel de mayor complejidad."
       ],
       "correct": 3,
-      "feedback": "Cada establecimiento debe operar según la capacidad de su categoría, fortaleciendo la referencia oportuna; atender siempre lo complejo, reducir toda la atención o pedir recategorización sin fortalecer la referencia no son adecuados."
+      "feedback": "Es correcta porque cada establecimiento debe operar dentro de la capacidad resolutiva definida por su categoría, y cuando esa capacidad se excede de forma recurrente corresponde fortalecer la referencia oportuna a un nivel de mayor complejidad, en vez de forzar una atención que no puede resolver con seguridad. Atender siempre los casos complejos aunque excedan la capacidad expone al paciente a un manejo inadecuado; reducir la atención de todos los casos, incluidos los que sí corresponden al nivel, afecta innecesariamente a la población que sí puede resolverse ahí; solicitar recategorización sin fortalecer antes la referencia no resuelve el problema inmediato mientras se tramita el cambio."
     },
     {
       "id": 145,
@@ -3371,7 +3371,7 @@ window.SERUMS_DATA = {
         "Delegar la evaluación exclusivamente a un consultor externo sin indicadores definidos."
       ],
       "correct": 2,
-      "feedback": "Los indicadores de gestión medibles con seguimiento periódico permiten monitorear el desempeño objetivamente; la percepción subjetiva, evaluar solo ante quejas o delegar todo a un externo sin indicadores no cumplen ese objetivo."
+      "feedback": "Es correcta porque monitorear el desempeño de forma objetiva requiere indicadores de gestión medibles con seguimiento periódico, que permitan comparar resultados en el tiempo y orientar decisiones basadas en evidencia, no solo en percepción. Confiar únicamente en la percepción subjetiva del personal carece de un referente objetivo comparable; evaluar solo cuando ocurre una queja formal deja sin monitoreo el desempeño cotidiano; delegar la evaluación a un consultor externo sin indicadores definidos no asegura continuidad ni apropiación institucional del monitoreo."
     },
     {
       "id": 147,
@@ -3394,7 +3394,7 @@ window.SERUMS_DATA = {
         "El exceso de comunicación entre los establecimientos de la red."
       ],
       "correct": 0,
-      "feedback": "Una Red Integrada de Salud funcional requiere contrarreferencia con información clínica completa; considerarlo normal, atribuirlo a exceso de comunicación o a falta de transporte no identifican la falla real de continuidad."
+      "feedback": "Es correcta porque una Red Integrada de Salud funcional depende de la contrarreferencia, es decir, del retorno de información clínica desde el establecimiento receptor hacia el de origen, para que este último pueda continuar el seguimiento del paciente con conocimiento de lo actuado. Considerarlo parte normal del proceso normaliza una falla real de continuidad; atribuirlo a exceso de comunicación es contrario a lo observado; atribuirlo a la falta de un vehículo exclusivo no aborda el problema real, que es de flujo de información, no de transporte."
     },
     {
       "id": 148,
@@ -3440,7 +3440,7 @@ window.SERUMS_DATA = {
         "Elaborar y difundir un plan de contingencia actualizado, con roles definidos y simulacros periódicos."
       ],
       "correct": 3,
-      "feedback": "La gestión del riesgo exige un plan de contingencia actualizado, difundido, con roles y simulacros; esperar la emergencia real, delegar todo a externos o no difundir el plan hasta que ocurra algo no son adecuados."
+      "feedback": "Es correcta porque la gestión del riesgo de desastres exige un plan de contingencia actualizado, difundido a todo el personal, con roles claramente definidos y validado mediante simulacros periódicos, de forma que la respuesta sea efectiva cuando ocurra realmente una emergencia. Delegar toda la responsabilidad a instituciones externas desatiende el rol que corresponde al propio establecimiento; elaborar el plan sin difundirlo lo vuelve inútil en el momento de una emergencia real, porque el personal no lo conoce; esperar a que ocurra la emergencia para definir acciones expone a una respuesta improvisada y tardía."
     },
     {
       "id": 150,
@@ -3463,7 +3463,7 @@ window.SERUMS_DATA = {
         "Aplicar varios cambios simultáneos sin un orden ni evaluación posterior."
       ],
       "correct": 1,
-      "feedback": "La mejora continua sostenible requiere un ciclo de planificar, ejecutar, evaluar y ajustar; un cambio único sin seguimiento, esperar que se resuelva solo o aplicar varios cambios sin orden ni evaluación no son adecuados."
+      "feedback": "Es correcta porque la mejora sostenible de un proceso requiere un ciclo continuo de planificar, ejecutar, evaluar los resultados y ajustar según lo observado, en vez de un cambio puntual sin seguimiento posterior. Implementar un cambio único sin evaluar sus resultados no permite verificar si efectivamente redujo las demoras; esperar que el problema se resuelva solo desatiende una causa que requiere intervención activa; aplicar varios cambios simultáneos sin orden ni evaluación impide identificar cuál de ellos generó el efecto observado."
     },
     {
       "id": 151,
@@ -3532,7 +3532,7 @@ window.SERUMS_DATA = {
         "Excluir los datos atípicos únicamente si el asesor del estudio lo sugiere."
       ],
       "correct": 1,
-      "feedback": "La integridad en el análisis exige criterios metodológicos explícitos y transparencia en el reporte; excluir datos sin explicación, reportar solo lo significativo o excluir solo si lo sugiere el asesor no son adecuados."
+      "feedback": "Es correcta porque la integridad en el análisis estadístico exige que cualquier exclusión de datos atípicos se sustente en criterios metodológicos explícitos, definidos preferentemente antes de conocer su efecto en el resultado, y que el proceso completo se reporte de forma transparente sin importar si el resultado es o no significativo. Excluir datos sin explicación para lograr significancia constituye manipulación de resultados; reportar solo el análisis significativo es un sesgo de publicación selectiva; excluirlos únicamente porque el asesor lo sugiere, sin criterio metodológico propio, no sustenta la decisión técnicamente."
     },
     {
       "id": 154,
@@ -5446,7 +5446,7 @@ window.SERUMS_DATA = {
         "Delegar el registro exclusivamente al personal administrativo sin supervisión clínica."
       ],
       "correct": 0,
-      "feedback": "El registro completo y oportuno en los sistemas de información en salud es clave para la gestión y vigilancia epidemiológica; continuar incompleto, delegarlo sin supervisión clínica o registrar solo lo que se considere relevante no son adecuados."
+      "feedback": "Es correcta porque el registro completo y oportuno en los sistemas de información en salud sustenta tanto la toma de decisiones gerenciales como la vigilancia epidemiológica, que dependen de datos consistentes para reflejar la situación real de la población atendida. Registrar solo los casos considerados clínicamente relevantes introduce un sesgo de selección en la información disponible; continuar con el registro incompleto asumiendo que no afecta la atención directa desconoce su impacto en decisiones de gestión y vigilancia a nivel de red; delegarlo exclusivamente al personal administrativo sin supervisión clínica puede perder precisión diagnóstica en el registro."
     },
     {
       "id": 237,
@@ -5469,7 +5469,7 @@ window.SERUMS_DATA = {
         "Más de 5 años sin ser solicitada."
       ],
       "correct": 3,
-      "feedback": "La normativa de gestión documentaria en salud establece el traslado al archivo pasivo cuando la historia clínica no ha sido solicitada por más de 5 años."
+      "feedback": "Es correcta porque la normativa de gestión documentaria en salud establece el traslado al archivo pasivo cuando la historia clínica no ha sido solicitada por más de cinco años, un plazo definido específicamente para equilibrar la conservación necesaria con la gestión eficiente del espacio de archivo. Los plazos de 1, 10 o 15 años no corresponden al criterio normativo establecido para esta clasificación documentaria."
     },
     {
       "id": 238,
@@ -5492,7 +5492,7 @@ window.SERUMS_DATA = {
         "Auditoría externa, realizada exclusivamente por un ente ajeno al establecimiento."
       ],
       "correct": 1,
-      "feedback": "Ante un evento adverso grave y puntual corresponde la auditoría de caso, orientada específicamente a revisar ese evento, a diferencia de la auditoría regular (programada), la externa (realizada por un ente ajeno) o la dirimente (para resolver discrepancias entre auditorías previas)."
+      "feedback": "Es correcta porque un evento adverso grave y puntual, como el descrito, activa una auditoría de caso, orientada específicamente a revisar ese evento particular de forma inmediata, a diferencia de otros tipos de auditoría con propósitos distintos. La auditoría regular sigue un cronograma programado que no corresponde a la urgencia de revisar un evento puntual; la auditoría externa se realiza por un ente ajeno al establecimiento y no es la primera respuesta ante un evento interno; la auditoría dirimente se aplica solo cuando existe discrepancia entre auditorías previas, situación que aún no se ha dado en este caso."
     },
     {
       "id": 239,
@@ -5515,7 +5515,7 @@ window.SERUMS_DATA = {
         "Consulta, para solicitar información sobre el procedimiento de atención."
       ],
       "correct": 2,
-      "feedback": "Cuando un usuario expresa disconformidad formal por una atención específica que considera inadecuada, el mecanismo correspondiente es la queja, distinta de la consulta (solicitud de información), la sugerencia (propuesta de mejora) o la consejería (orientación personalizada)."
+      "feedback": "Es correcta porque el reclamo por disconformidad formal con un aspecto específico de la atención recibida corresponde al mecanismo de queja, distinto de otros mecanismos de atención al usuario que cumplen funciones diferentes. La consulta se usa para solicitar información sobre un procedimiento, no para expresar disconformidad; la sugerencia propone una mejora sin implicar necesariamente una disconformidad puntual; la consejería brinda orientación personalizada sobre un caso, no canaliza un reclamo formal."
     },
     {
       "id": 240,
@@ -5561,7 +5561,7 @@ window.SERUMS_DATA = {
         "Un instrumento de articulación entre distintos niveles de gobierno."
       ],
       "correct": 1,
-      "feedback": "El POI Multianual es un instrumento de gestión que programa metas físicas y costeo esperado para los siguientes tres años, distinto de un instrumento o herramienta de articulación entre niveles de gobierno."
+      "feedback": "Es correcta porque el Plan Operativo Institucional Multianual es un instrumento de gestión que programa las metas físicas y el costeo esperado para un periodo de mediano plazo, orientando la planificación institucional antes de su ejecución. No es una herramienta de rendición de cuentas, que se aplica después de ejecutado el presupuesto; no es exclusiva del sector privado, ya que corresponde a la gestión pública; tampoco es en sí mismo un instrumento de articulación entre niveles de gobierno, sino de programación institucional interna."
     },
     {
       "id": 242,
@@ -5584,7 +5584,7 @@ window.SERUMS_DATA = {
         "Principios institucionales, entendidos como normas exclusivamente legales de la entidad."
       ],
       "correct": 2,
-      "feedback": "La cultura organizacional es la forma característica y arraigada de pensar y actuar en una institución, basada en principios, valores, creencias y normas compartidas, distinta del clima organizacional (percepción coyuntural del ambiente) o los valores institucionales (declaración formal)."
+      "feedback": "Es correcta porque la cultura organizacional es la forma característica y arraigada de pensar y actuar dentro de una institución, construida a partir de principios, valores, creencias y normas compartidas a lo largo del tiempo, diferenciándose de otros conceptos institucionales relacionados. El clima organizacional refleja la percepción coyuntural y cambiante del ambiente laboral en un momento dado, no algo arraigado; los valores institucionales suelen entenderse como el listado formal declarado, mientras que la cultura es la práctica real; los principios institucionales, entendidos solo como normas legales, no capturan la dimensión de creencias y conductas compartidas."
     },
     {
       "id": 243,
@@ -5630,7 +5630,7 @@ window.SERUMS_DATA = {
         "Desarrollo de políticas, orientada a la formulación normativa general del sector."
       ],
       "correct": 1,
-      "feedback": "La sectorización para organizar cómo los servicios de salud llegan a la población de una jurisdicción corresponde a la etapa de acceso, distinta de la evaluación, el desarrollo de políticas o la asignación de recursos."
+      "feedback": "Es correcta porque sectorizar la jurisdicción para organizar cómo llegan los servicios de salud a la población corresponde a la función de acceso dentro de las Funciones Esenciales de Salud Pública renovadas, al tratarse de una acción orientada a garantizar equidad en la llegada de las intervenciones. La evaluación mide resultados de intervenciones ya ejecutadas, no la organización previa del acceso; la asignación de recursos se refiere a la distribución presupuestal, no a la sectorización territorial; el desarrollo de políticas corresponde a la formulación normativa general, no a esta acción operativa específica."
     },
     {
       "id": 245,
@@ -5653,7 +5653,7 @@ window.SERUMS_DATA = {
         "Nivel etiológico, referido a las causas biológicas de la enfermedad."
       ],
       "correct": 2,
-      "feedback": "El nivel educativo alcanzado por la población es un determinante social de la salud que influye en la calidad de vida y el desarrollo económico y social, distinto de los niveles epidemiológico, etiológico o intercultural."
+      "feedback": "Es correcta porque el nivel de instrucción alcanzado por la población es, en sí mismo, un determinante social de la salud reconocido por su influencia en la calidad de vida y en el desarrollo económico y social, más allá de su relación indirecta con la salud biomédica. El nivel epidemiológico se refiere a la carga de enfermedad, no al grado de instrucción; el nivel etiológico alude a causas biológicas de enfermedad, ajeno a este análisis; el nivel intercultural se refiere a la diversidad de costumbres, no al grado de instrucción alcanzado."
     },
     {
       "id": 246,
@@ -5699,7 +5699,7 @@ window.SERUMS_DATA = {
         "El acceso a la información, referido a la explicación detallada de procedimientos."
       ],
       "correct": 2,
-      "feedback": "El derecho de acceso a servicios de salud no puede condicionarse a contar con documentos de identidad o acompañante, especialmente ante una situación de urgencia en una persona en situación de indigencia."
+      "feedback": "Es correcta porque el acceso a servicios de salud es un derecho que no puede condicionarse a contar con documentos de identidad o acompañante, particularmente ante una situación de urgencia en una persona en situación de indigencia, donde exigir esos requisitos previos retrasaría una atención necesaria. El consentimiento informado no requiere en este caso la firma de un familiar ausente, sino que se maneja según los protocolos de urgencia sin representante; no existe un derecho a la recuperación entendido como garantía de curación completa, ya que la medicina no puede garantizar resultados; el derecho a la información se refiere a la explicación de procedimientos, aspecto secundario frente al derecho de acceso que se prioriza en la urgencia inicial."
     },
     {
       "id": 248,
@@ -5768,7 +5768,7 @@ window.SERUMS_DATA = {
         "Los cambios en la realidad económico-social y las ordenanzas municipales vigentes."
       ],
       "correct": 2,
-      "feedback": "El abordaje territorial, la generación de espacios participativos genuinos y la familia como unidad base de intervención son los ejes estratégicos que garantizan una participación comunitaria efectiva en la planeación en salud."
+      "feedback": "Es correcta porque la participación comunitaria efectiva en la planeación en salud se sostiene en la combinación del abordaje territorial, la generación de espacios participativos genuinos y la familia como unidad base de intervención, articulados entre sí y no como elementos aislados. Limitar la participación solo a las escuelas saludables reduce el alcance territorial necesario; depender exclusivamente de la actitud política y el esfuerzo de la administración local deja fuera el rol activo de la comunidad misma; los cambios económico-sociales y las ordenanzas municipales son factores de contexto, pero no sustituyen los ejes estratégicos que sostienen la participación comunitaria en sí."
     },
     {
       "id": 251,
@@ -5791,7 +5791,7 @@ window.SERUMS_DATA = {
         "Porque la familia funciona como unidad de análisis exclusivamente epidemiológico."
       ],
       "correct": 1,
-      "feedback": "La familia se considera la unidad de intervención de mayor eficacia en promoción de la salud porque permite instalar hábitos y estilos de vida saludables de forma sostenible en su dinámica cotidiana."
+      "feedback": "Es correcta porque la familia constituye la unidad de intervención de mayor eficacia en promoción de la salud debido a que permite instalar hábitos y estilos de vida saludables de forma sostenible dentro de la dinámica cotidiana compartida por sus integrantes. Concentrar los recursos exclusivamente en el jefe de familia ignora la dinámica compartida que sostiene el cambio de hábitos; considerarla solo unidad de riesgo para vigilancia de enfermedades transmisibles reduce su rol a un enfoque exclusivamente epidemiológico; limitarla a unidad de análisis epidemiológico deja fuera su función como espacio de intervención educativa y conductual."
     },
     {
       "id": 252,
@@ -5814,7 +5814,7 @@ window.SERUMS_DATA = {
         "Silencio absoluto y manejo unilateral de la información, sin considerar al paciente."
       ],
       "correct": 1,
-      "feedback": "Ante un diagnóstico que requiere especial reserva, deben cumplirse los principios de respeto, probidad y eficiencia, que orientan el manejo adecuado y confidencial de la información sensible del paciente."
+      "feedback": "Es correcta porque el manejo de un diagnóstico que requiere especial reserva debe regirse por los principios de respeto, probidad y eficiencia, que en conjunto orientan la confidencialidad sin comprometer la calidad de la atención. Los principios de fraternidad, moral, deber y orden son demasiado generales y no se vinculan específicamente al manejo de información confidencial; lo mismo ocurre con solidaridad, orden, deber y derecho, que constituyen un marco general de la función pública sin relación directa con la reserva de datos sensibles; el silencio absoluto y el manejo unilateral, sin considerar al paciente, contradicen el principio de respeto a su autonomía informativa."
     },
     {
       "id": 253,
