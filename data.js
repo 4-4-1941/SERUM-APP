@@ -1386,7 +1386,7 @@ window.SERUMS_DATA = {
         "Indicar solo analgésico y esperar evolución, sin evaluación clínica adicional."
       ],
       "correct": 0,
-      "feedback": "Ante un absceso dentoalveolar se debe evaluar la extensión de la infección, iniciar manejo inicial y referir si hay compromiso sistémico; extraer sin evaluar, solo analgésico o antibiótico sin evaluación no son adecuados."
+      "feedback": "Es correcta porque un absceso dentoalveolar con aumento de volumen facial y fiebre indica posible diseminación de la infección más allá del espacio periapical, lo que exige evaluar su extensión antes de decidir el manejo, y referir si hay compromiso sistémico que exceda la capacidad resolutiva local. Iniciar antibiótico sin evaluar el compromiso facial no dimensiona la gravedad real del cuadro; extraer la pieza de inmediato sin evaluar signos de alarma puede diseminar la infección en un contexto agudo mal controlado; indicar solo analgésico y esperar evolución subestima un proceso infeccioso con potencial de complicarse."
     },
     {
       "id": 61,
@@ -1433,7 +1433,7 @@ window.SERUMS_DATA = {
         "Indicar que espere hasta después del parto para cualquier atención odontológica."
       ],
       "correct": 2,
-      "feedback": "La atención odontológica segura durante la gestación incluye evaluación, tratamiento oportuno y educación en higiene bucal; postergar hasta el parto, limitarse a urgencias o postergar según trimestre sin evaluar no son adecuados."
+      "feedback": "Es correcta porque el sangrado gingival frecuente en el embarazo puede corresponder a gingivitis gestacional, cuadro que debe evaluarse y tratarse de forma segura para la etapa gestacional, junto con educación en higiene oral que sostenga la mejora. Postergar todo tratamiento hasta el segundo trimestre sin evaluar retrasa una intervención que puede iniciarse antes según el caso; limitarse a procedimientos de urgencia sin educación preventiva no aborda la causa de fondo del sangrado; indicar que espere hasta después del parto desatiende un cuadro activo con tratamiento seguro disponible durante la gestación."
     },
     {
       "id": 63,
@@ -1456,7 +1456,7 @@ window.SERUMS_DATA = {
         "Atender solo los casos con dolor y no intervenir en el resto de escolares."
       ],
       "correct": 2,
-      "feedback": "Ante alta prevalencia de caries corresponde implementar prevención comunitaria, educación y consejería; atender solo el dolor, esperar demanda espontánea o solo repartir folletos sin actividades no son adecuados.",
+      "feedback": "Es correcta porque una alta prevalencia de caries a nivel comunitario requiere una respuesta poblacional que combine actividades preventivas, educación en higiene oral y consejería alimentaria, en vez de esperar que cada caso llegue por demanda espontánea o dolor. Esperar que las familias soliciten atención de forma espontánea desatiende el enfoque proactivo que exige un problema de salud pública; entregar solo folletos sin actividades preventivas no genera cambio de comportamiento por sí solo; atender solo los casos con dolor deja sin intervención preventiva a la mayoría de escolares afectados que aún no presentan síntomas.",
       "interdisciplinaryNote": "Nutrición complementa la prevención orientando sobre el consumo de azúcares y hábitos alimentarios comunitarios."
     },
     {
@@ -1480,7 +1480,7 @@ window.SERUMS_DATA = {
         "Indicar que espere varios días antes de recibir cualquier atención."
       ],
       "correct": 2,
-      "feedback": "El traumatismo dentoalveolar reciente requiere manejo inicial de urgencia y referencia oportuna para intentar preservar la pieza; extraer sin evaluar, esperar días o reimplantar sin manejo previo no son adecuados."
+      "feedback": "Es correcta porque una avulsión parcial reciente tiene alta probabilidad de preservación si se maneja con urgencia y se deriva oportunamente, dado que el pronóstico de la pieza depende críticamente del tiempo transcurrido y del manejo inicial adecuado. Extraer la pieza de inmediato sin evaluar la posibilidad de conservarla descarta una opción viable dado el corto tiempo transcurrido; reimplantarla sin manejo previo de urgencia ni referencia posterior omite pasos protocolares que afectan el pronóstico a largo plazo; esperar varios días desaprovecha la ventana de tiempo crítica para la viabilidad de la pieza."
     },
     {
       "id": 65,
@@ -2265,7 +2265,7 @@ window.SERUMS_DATA = {
         "Recomendar el uso de un aparato de ortodoncia genérico, sin evaluación previa."
       ],
       "correct": 0,
-      "feedback": "Ante una maloclusión significativa corresponde evaluar y derivar oportunamente a ortodoncia; esperar corrección espontánea, extraer sin evaluación o recomendar un aparato genérico sin evaluación previa no son adecuados."
+      "feedback": "Es correcta porque una maloclusión marcada que afecta la mordida debe evaluarse clínicamente y derivarse oportunamente a ortodoncia, ya que su manejo especializado requiere valoración del patrón de crecimiento y no todos los casos se resuelven espontáneamente. Extraer las piezas afectadas sin evaluación especializada es una medida desproporcionada e irreversible; asumir que la maloclusión se corregirá espontáneamente con el crecimiento ignora que muchos casos requieren intervención activa; recomendar un aparato genérico sin evaluación previa expone a un tratamiento no ajustado a la necesidad específica del caso."
     },
     {
       "id": 99,
@@ -2288,7 +2288,7 @@ window.SERUMS_DATA = {
         "Postergar el tratamiento dental hasta que el paciente logre un control glicémico óptimo."
       ],
       "correct": 2,
-      "feedback": "La diabetes y la enfermedad periodontal se influyen mutuamente; se debe tratar la gingivitis y coordinar el manejo integral con el equipo médico, sin ignorar el control glicémico ni negar la relación entre ambas condiciones.",
+      "feedback": "Es correcta porque la relación bidireccional entre diabetes y enfermedad periodontal exige tratar la gingivitis y, en paralelo, coordinar con el equipo médico el manejo integral de la diabetes, ya que el control glicémico irregular puede tanto agravar el cuadro bucal como verse afectado por la infección periodontal no tratada. Tratar la gingivitis sin considerar el control glicémico ignora un factor que puede perpetuar la inflamación; indicar que la gingivitis no está relacionada con la diabetes desconoce esa asociación bidireccional bien establecida; postergar el tratamiento dental hasta lograr un control glicémico óptimo retrasa una intervención que, de hecho, puede contribuir a mejorar ese mismo control.",
       "interdisciplinaryNote": "Un control glicémico inadecuado puede empeorar la salud bucal, por lo que la coordinación con Medicina es clave."
     },
     {
@@ -2312,7 +2312,7 @@ window.SERUMS_DATA = {
         "Evaluar el desgaste dental, indicar manejo odontológico y coordinar abordaje del estrés asociado."
       ],
       "correct": 3,
-      "feedback": "El manejo del bruxismo debe abordar tanto el componente dental como el estrés que lo desencadena; tratar solo el desgaste, ignorar el cuadro o indicar un protector sin abordar el estrés no son suficientes.",
+      "feedback": "Es correcta porque el bruxismo asociado a una etapa de estrés requiere un abordaje conjunto: manejo odontológico del desgaste dental y, en paralelo, coordinar el abordaje del componente psicoemocional que lo desencadena, sin el cual el desgaste tiende a persistir. Indicar que no requiere intervención desestima el daño dental progresivo ya presente; recomendar un protector nocturno permanente sin evaluar el estrés atiende solo la consecuencia, no la causa; tratar únicamente el desgaste dental sin explorar el origen deja sin abordar el factor que perpetúa el bruxismo.",
       "interdisciplinaryNote": "Psicología puede apoyar con técnicas de manejo del estrés cuando este mantiene el bruxismo."
     },
     {
@@ -2336,7 +2336,7 @@ window.SERUMS_DATA = {
         "Atender solo los casos con dolor agudo, sin programa preventivo adicional."
       ],
       "correct": 1,
-      "feedback": "Un programa de salud bucal escolar efectivo integra educación, prevención y coordinación con la escuela y familias; atender solo el dolor, entregar solo cepillos o enfocarse solo en tratamiento restaurador no son suficientes."
+      "feedback": "Es correcta porque un programa de salud bucal escolar efectivo debe integrar educación en higiene oral, aplicación de medidas preventivas y coordinación con la escuela y las familias, de forma que la prevención se sostenga más allá de una intervención puntual. Enfocar el programa únicamente en tratamiento restaurador prioriza lo curativo sobre lo preventivo; limitarlo a la entrega de cepillos sin educación no garantiza un cambio de comportamiento; atender solo los casos con dolor agudo deja sin cobertura preventiva a la mayoría de escolares con riesgo aún no sintomático."
     },
     {
       "id": 102,
@@ -2819,7 +2819,7 @@ window.SERUMS_DATA = {
         "Distribuir solo pasta dental fluorada, sin ninguna estrategia comunitaria adicional."
       ],
       "correct": 1,
-      "feedback": "Ante alta prevalencia de caries sin medidas preventivas se debe promover fluorización y educación coordinada con autoridades locales; esperar gestión individual, atender solo el dolor o distribuir solo pasta dental no son suficientes."
+      "feedback": "Es correcta porque una comunidad con alta prevalencia de caries y sin acceso a agua fluorada requiere una estrategia poblacional de fluorización coordinada con las autoridades locales, complementada con educación en higiene oral, dado que las medidas individuales no alcanzan el impacto poblacional necesario. Esperar que cada familia gestione su propia prevención de forma individual no resuelve un problema de acceso estructural a nivel comunitario; limitar la intervención a la atención de los casos con dolor agudo es reactivo y no previene nuevos casos; distribuir solo pasta dental fluorada sin ninguna estrategia comunitaria adicional tiene un alcance limitado frente a la magnitud del problema descrito."
     },
     {
       "id": 123,
@@ -4938,7 +4938,7 @@ window.SERUMS_DATA = {
         "Indicar el uso de enjuague antiséptico como único tratamiento, sin evaluación periodontal."
       ],
       "correct": 2,
-      "feedback": "Ante sospecha de periodontitis severa se debe evaluar, iniciar manejo inicial y derivar a periodoncia si corresponde; solo indicar cepillado, extraer sin evaluación o usar solo enjuague no son adecuados."
+      "feedback": "Es correcta porque el sangrado gingival severo, la movilidad dentaria y el mal aliento persistente son signos compatibles con periodontitis avanzada, que requiere evaluación del estado periodontal, manejo inicial y derivación a periodoncia si el caso lo amerita por su severidad. Extraer las piezas con movilidad de inmediato sin evaluación previa es una medida desproporcionada que puede evitarse con manejo periodontal oportuno; indicar solo mayor frecuencia de cepillado sin evaluación adicional no aborda un proceso ya establecido; usar únicamente enjuague antiséptico sin evaluación periodontal no sustituye el manejo clínico que requiere el caso."
     },
     {
       "id": 215,
@@ -4961,7 +4961,7 @@ window.SERUMS_DATA = {
         "Sedar al niño de forma rutinaria para evitar el manejo conductual."
       ],
       "correct": 0,
-      "feedback": "El manejo de conducta en odontopediatría requiere generar confianza con técnicas apropiadas para la edad; sujetar con fuerza, suspender indefinidamente o sedar de forma rutinaria no son adecuados."
+      "feedback": "Es correcta porque el manejo de conducta en odontopediatría busca generar confianza mediante técnicas apropiadas para la edad antes de proceder, ya que la cooperación del niño mejora tanto la calidad de la atención como su relación futura con la atención odontológica. Sujetar al niño con fuerza para completar el procedimiento de inmediato puede generar trauma psicológico asociado a la atención dental; suspender la atención de forma indefinida sin ningún intento adicional deja sin resolver una necesidad de salud bucal real; sedar de forma rutinaria para evitar el manejo conductual es una medida desproporcionada cuando existen técnicas conductuales de primera línea disponibles."
     },
     {
       "id": 216,
@@ -4984,7 +4984,7 @@ window.SERUMS_DATA = {
         "Indicar enjuagues antisépticos y control en un mes adicional, sin más evaluación."
       ],
       "correct": 0,
-      "feedback": "Una lesión bucal persistente sin causa identificable debe evaluarse con sospecha de malignidad y derivarse para biopsia; enjuagues sin evaluación, asumirla como traumática menor o tratarla con corticoide sin evaluación no son adecuados."
+      "feedback": "Es correcta porque una úlcera bucal que no cicatriza en tres semanas sin causa traumática identificable es un signo de alarma que debe evaluarse con sospecha de malignidad y derivarse oportunamente para biopsia, dado que el diagnóstico definitivo de una lesión persistente requiere estudio histopatológico. Asumir que es una lesión traumática menor sin mayor seguimiento ignora que ya se descartó una causa traumática identificable; indicar un corticoide tópico como único tratamiento sin evaluación adicional puede enmascarar la evolución de una lesión que requiere diagnóstico; indicar enjuagues antisépticos y control en un mes adicional retrasa innecesariamente la derivación de un signo de alarma ya presente por tres semanas."
     },
     {
       "id": 217,
