@@ -40,6 +40,17 @@ function shuffle(arr) {
   return a;
 }
 
+// Devuelve una copia del caso con sus opciones en orden aleatorio y el índice
+// "correct" ya remapeado a esa nueva posición. Se usa tanto en la práctica
+// individual (openCase) como en el Simulacro, para que la respuesta correcta
+// no quede siempre en la misma letra.
+function shuffleCaseOptions(original) {
+  const order = original.options.map((_, i) => i);
+  const shuffledOrder = shuffle(order);
+  const newCorrect = shuffledOrder.indexOf(original.correct);
+  return { ...original, options: shuffledOrder.map(i => original.options[i]), correct: newCorrect };
+}
+
 // Muestreo estratificado: reparte cupos entre los 5 bloques oficiales,
 // respetando el máximo disponible en cada uno (sin repetir preguntas),
 // y redistribuye el remanente entre los bloques con más casos disponibles.
@@ -107,7 +118,7 @@ function buildSimulacroQueue() {
     }
   }
 
-  return shuffle(queue);
+  return shuffle(queue).map(shuffleCaseOptions);
 }
 
 function goToSimulacro() {
@@ -372,10 +383,7 @@ function renderCases() {
 
 function openCase(id) {
   const original = data.cases.find(c => c.id === id);
-  const order = original.options.map((_, i) => i);
-  const shuffledOrder = shuffle(order);
-  const newCorrect = shuffledOrder.indexOf(original.correct);
-  activeCase = { ...original, options: shuffledOrder.map(i => original.options[i]), correct: newCorrect };
+  activeCase = shuffleCaseOptions(original);
   selectedOption = null;
   confirmed = false;
   timeLeft = 60;
@@ -790,7 +798,7 @@ function exportSimulacroPDF(record, name) {
 
   printRoot.innerHTML = `
     <div class="print-page">
-      <h1>PRE SÉRUM PERÚ</h1>
+      <h1>PRE SERUMS PERÚ</h1>
       <h2>Constancia de Autoevaluación — Simulacro SERUMS</h2>
       <p class="print-meta">${name ? "Nombre: " + name + " · " : ""}Fecha: ${new Date(record.date).toLocaleDateString("es-PE", { day: "2-digit", month: "long", year: "numeric" })}</p>
       <div class="print-score">
@@ -802,7 +810,7 @@ function exportSimulacroPDF(record, name) {
         <thead><tr><th>Bloque temático</th><th>Aciertos</th><th>%</th></tr></thead>
         <tbody>${blockRows}</tbody>
       </table>
-      <p class="print-note">Este documento es una autoevaluación generada por la aplicación PRE SÉRUM PERÚ con fines de estudio personal. No constituye un resultado oficial del proceso SERUMS ni un documento emitido por el MINSA.</p>
+      <p class="print-note">Este documento es una autoevaluación generada por la aplicación PRE SERUMS PERÚ con fines de estudio personal. No constituye un resultado oficial del proceso SERUMS ni un documento emitido por el MINSA.</p>
     </div>
   `;
 
