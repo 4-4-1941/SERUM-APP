@@ -297,7 +297,7 @@ window.SERUMS_DATA = {
         "Brindar información comprensible en su idioma o con apoyo de intérprete, y asegurar el consentimiento informado."
       ],
       "correct": 3,
-      "feedback": "Ante una barrera idiomática se debe brindar información comprensible (en su idioma o con intérprete) y asegurar el consentimiento informado; proceder sin explicar, firmar sin aclarar dudas o postergar indefinidamente no son adecuados."
+      "feedback": "Es correcta porque una barrera idiomática no exime del derecho al consentimiento informado, por lo que corresponde brindar información comprensible en el propio idioma o con apoyo de intérprete antes de proceder, garantizando que la decisión sea realmente informada. Pedir que firme sin aclarar dudas, solo porque acompaña a un familiar, no verifica que ella misma haya comprendido; proceder sin explicación alguna vulnera directamente su derecho a la información; posponer el procedimiento de forma indefinida hasta que aprenda español niega una solución inmediata (intérprete) que sí está disponible."
     },
     {
       "id": 14,
@@ -552,7 +552,7 @@ window.SERUMS_DATA = {
         "Documentar los hallazgos, activar el protocolo de protección y notificar según norma."
       ],
       "correct": 3,
-      "feedback": "Ante sospecha de maltrato infantil se debe documentar, activar protección y notificar según norma; ignorar el hallazgo, confrontar frente al niño o postergar la evaluación no son adecuados."
+      "feedback": "Es correcta porque lesiones en distintas fases de curación junto con evitación para hablar del origen son signos de alarma compatibles con maltrato, que exigen documentar los hallazgos, activar el protocolo de protección y notificar según norma, sin depender de una confesión ni de que se repita el patrón. Solicitar una nueva evaluación en un mes sin actuar ahora deja al niño expuesto durante ese periodo; confrontar al acompañante frente al niño puede generar represalias o mayor riesgo para el menor; ignorar el hallazgo ante una explicación verosímil desestima signos objetivos ya documentables."
     },
     {
       "id": 25,
@@ -621,7 +621,7 @@ window.SERUMS_DATA = {
         "Decir que el insomnio se resolverá espontáneamente, sin necesidad de intervención."
       ],
       "correct": 0,
-      "feedback": "El manejo inicial debe abordar la ansiedad de base, orientar en higiene del sueño y considerar intervención psicológica; automedicar, esperar sin intervenir o iniciar un hipnótico prolongado como primera línea no son adecuados."
+      "feedback": "Es correcta porque un insomnio de tres meses asociado a preocupación excesiva sugiere un componente ansioso de base, que debe evaluarse junto con higiene del sueño y considerar intervención psicológica antes de recurrir a manejo farmacológico prolongado. Prescribir un hipnótico de uso prolongado como primera línea no aborda la causa ansiosa de fondo y conlleva riesgo de dependencia; automedicar con cualquier sedante sin evaluación es una conducta de riesgo; asumir que se resolverá espontáneamente ignora un cuadro ya sostenido en el tiempo con impacto funcional."
     },
     {
       "id": 28,
@@ -644,7 +644,7 @@ window.SERUMS_DATA = {
         "Derivar sin brindar ninguna orientación previa sobre lo que le sucede."
       ],
       "correct": 2,
-      "feedback": "El duelo migratorio debe reconocerse y abordarse con acompañamiento psicológico y sensibilidad cultural; pedir que olvide su origen, no orientar o aislarlo de su comunidad de origen no son adecuados."
+      "feedback": "Es correcta porque el duelo migratorio es un proceso psicológico reconocido ante la pérdida del entorno de origen, que debe abordarse validando su significado cultural y ofreciendo acompañamiento psicológico, sin patologizarlo ni forzar su superación. Recomendar evitar todo contacto con personas de su lugar de origen elimina una fuente de apoyo identitario relevante; indicar que debe olvidar su origen para adaptarse desconoce el valor legítimo de ese vínculo; derivar sin brindar ninguna orientación previa deja al usuario sin comprender lo que le sucede antes de ser remitido."
     },
     {
       "id": 29,
@@ -667,7 +667,7 @@ window.SERUMS_DATA = {
         "Iniciar manejo ambulatorio de baja frecuencia, sin evaluar el riesgo para el recién nacido."
       ],
       "correct": 1,
-      "feedback": "La psicosis puerperal es una urgencia que exige garantizar la seguridad del binomio madre-hijo y derivación inmediata; el reposo domiciliario, el apoyo familiar sin evaluación clínica o el manejo ambulatorio de baja frecuencia subestiman el riesgo.",
+      "feedback": "Es correcta porque ideas delirantes de daño al recién nacido junto con insomnio marcado y desorganización conductual en el puerperio son signos de una urgencia psiquiátrica con riesgo directo para el binomio madre-hijo, que exige garantizar la seguridad de ambos y derivar de inmediato. Indicar reposo domiciliario con control en un mes subestima gravemente un riesgo agudo ya presente; recomendar solo apoyo familiar sin evaluación clínica no dimensiona ni contiene el riesgo; iniciar manejo ambulatorio de baja frecuencia no corresponde a la urgencia que exige el cuadro descrito.",
       "interdisciplinaryNote": "Obstetricia debe mantener vigilancia del puerperio mientras se coordina la atención en salud mental."
     },
     {
@@ -714,7 +714,7 @@ window.SERUMS_DATA = {
         "Indicar que ignore las burlas y continúe asistiendo normalmente al colegio."
       ],
       "correct": 1,
-      "feedback": "Ante acoso escolar con síntomas depresivos se debe evaluar el impacto emocional, coordinar con la escuela y acompañar psicológicamente; ignorar las burlas, cambiar de colegio sin evaluación u ocultarlo a la familia no son adecuados."
+      "feedback": "Es correcta porque tristeza persistente y rechazo escolar asociados a acoso reiterado requieren evaluar el impacto emocional, coordinar con la institución educativa las medidas de protección correspondientes y brindar acompañamiento psicológico al escolar. Sugerir que oculte lo sucedido a sus padres aísla al menor de una fuente de apoyo esencial; recomendar cambio de colegio sin evaluación previa es una medida desproporcionada sin sustento diagnóstico; indicar que ignore las burlas desestima el impacto psicológico ya evidenciado en el escolar."
     },
     {
       "id": 32,
@@ -760,7 +760,7 @@ window.SERUMS_DATA = {
         "Indicar tratamiento sedante, sin evaluación previa."
       ],
       "correct": 2,
-      "feedback": "El deterioro cognitivo progresivo requiere evaluación estructurada, descarte de causas reversibles y valoración interdisciplinaria; asumir que es normal por la edad, sedar sin evaluar o iniciar fármacos específicos sin descartar causas reversibles no son adecuados.",
+      "feedback": "Es correcta porque una pérdida progresiva de memoria en meses, sin alteración aguda de conciencia, exige un cuadro cognitivo evaluado de forma estructurada, descartando causas reversibles (metabólicas, farmacológicas, entre otras) antes de asumir un diagnóstico definitivo, y coordinar valoración interdisciplinaria. Asumir que es normal por la edad sin evaluar más descarta prematuramente causas tratables; iniciar manejo farmacológico específico para demencia sin haber descartado causas reversibles expone a tratamiento no sustentado en el diagnóstico correcto; indicar tratamiento sedante sin evaluación agrava el riesgo de mayor deterioro cognitivo.",
       "interdisciplinaryNote": "Medicina debe descartar causas metabólicas, farmacológicas o vasculares antes de asumir un cuadro demencial primario."
     },
     {
@@ -807,7 +807,7 @@ window.SERUMS_DATA = {
         "Evaluar el riesgo de cada persona por separado antes de decidir el abordaje y posible derivación."
       ],
       "correct": 3,
-      "feedback": "Ante violencia cruzada en pareja se debe evaluar el riesgo de cada persona por separado antes de definir el abordaje; atenderlos juntos desde el inicio, dejarlos resolverlo solos o derivar a terapia de pareja sin evaluación individual no son adecuados."
+      "feedback": "Es correcta porque en violencia cruzada de pareja corresponde evaluar el riesgo de cada persona por separado antes de decidir el abordaje, dado que la dinámica de agresión mutua puede ocultar asimetrías de poder o riesgo que solo se identifican en una evaluación individual confidencial. Indicar que resuelvan el conflicto por su cuenta desatiende un patrón de violencia ya identificado; atenderlos juntos desde la primera sesión sin evaluar riesgo individual puede inhibir la revelación de información relevante por parte de la persona más vulnerable; derivar directamente a terapia de pareja sin evaluación previa omite un paso de seguridad necesario en casos con violencia activa."
     },
     {
       "id": 36,
@@ -1619,7 +1619,7 @@ window.SERUMS_DATA = {
         "Tasa de incidencia, porque mide casos nuevos en un periodo definido."
       ],
       "correct": 3,
-      "feedback": "La incidencia mide la aparición de casos nuevos en un periodo y población en riesgo definidos; la prevalencia incluye casos antiguos y nuevos, la letalidad mide gravedad, y la razón compara grupos, no mide aparición de casos nuevos."
+      "feedback": "Es correcta porque la tasa de incidencia mide específicamente la aparición de casos nuevos (8) en una población en riesgo definida (400 personas sin el trastorno al inicio) durante un periodo determinado (un mes), que es exactamente lo que describen los datos del enunciado. La letalidad mide la proporción de muertes entre los casos, no la aparición de nuevos casos; la prevalencia incluiría tanto casos antiguos como nuevos, sin restringirse a los que aparecieron en el periodo; la razón compara dos cantidades independientes entre sí, no mide la ocurrencia de un evento en una población en riesgo."
     },
     {
       "id": 71,
@@ -1665,7 +1665,7 @@ window.SERUMS_DATA = {
         "El riesgo relativo de 3 indica que el 30% de los expuestos presentará el desenlace."
       ],
       "correct": 2,
-      "feedback": "Un RR de 3 indica tres veces más probabilidad en el grupo expuesto respecto al no expuesto; no equivale a un porcentaje directo, no implica causalidad absoluta ni que todos los expuestos desarrollen el desenlace."
+      "feedback": "Es correcta porque un riesgo relativo de 3 significa que la probabilidad de desarrollar el desenlace en el grupo expuesto es tres veces la del grupo no expuesto, una medida de asociación relativa entre grupos, no un porcentaje absoluto ni una garantía de causalidad para cada individuo. Interpretar que el 3% o el 30% de los expuestos desarrollará depresión confunde el riesgo relativo con un riesgo absoluto, que es una medida distinta; afirmar que la violencia familiar causa depresión en todos los casos expuestos excede lo que un riesgo relativo puede establecer, ya que no implica una relación causal determinista ni universal."
     },
     {
       "id": 73,
@@ -1734,7 +1734,7 @@ window.SERUMS_DATA = {
         "Que exista una fuerte creencia popular sobre la relación entre ambas variables."
       ],
       "correct": 0,
-      "feedback": "La temporalidad (que la exposición preceda al efecto) es uno de los criterios centrales de Bradford Hill para sustentar causalidad; medir el mismo día, solo el tamaño muestral o la creencia popular no sustentan una relación causal."
+      "feedback": "Es correcta porque la temporalidad, es decir, que la exposición preceda a la aparición del efecto, es uno de los criterios centrales de Bradford Hill para sustentar una relación causal más allá de la simple asociación estadística. Que ambas variables se midan exactamente el mismo día impediría establecer cuál precede a cuál, debilitando el análisis de causalidad; que el estudio tenga una muestra grande sin importar el diseño no compensa problemas metodológicos que afectan la validez causal; que exista una fuerte creencia popular sobre la relación no constituye evidencia científica de causalidad."
     },
     {
       "id": 76,
@@ -1757,7 +1757,7 @@ window.SERUMS_DATA = {
         "Un estudio descriptivo transversal."
       ],
       "correct": 3,
-      "feedback": "Cuando el objetivo es describir la frecuencia de un fenómeno en un momento dado, sin manipular variables, el diseño descriptivo transversal es el más adecuado; el experimental, el ensayo aleatorizado o la cohorte prospectiva no corresponden a este objetivo."
+      "feedback": "Es correcta porque cuando el objetivo es describir la proporción de un fenómeno en un momento determinado, sin manipular variables ni hacer seguimiento en el tiempo, el diseño descriptivo transversal es el que corresponde a ese objetivo específico. Un ensayo clínico aleatorizado o un estudio experimental con grupo control implican manipular una intervención, lo cual no es el propósito aquí; un estudio de cohorte prospectivo de cinco años serviría para evaluar la aparición de un desenlace en el tiempo, no para describir una prevalencia puntual."
     },
     {
       "id": 77,
@@ -1780,7 +1780,7 @@ window.SERUMS_DATA = {
         "Obtener el asentimiento del adolescente y el consentimiento informado de su tutor legal."
       ],
       "correct": 3,
-      "feedback": "En investigación con menores se requiere el consentimiento informado del tutor legal y el asentimiento del propio menor; omitir informar, pedir solo autorización institucional o prescindir del asentimiento del menor no son adecuados."
+      "feedback": "Es correcta porque en investigación con menores de edad se requiere tanto el consentimiento informado del tutor legal (quien autoriza legalmente la participación) como el asentimiento del propio adolescente (quien expresa su acuerdo según su capacidad de comprensión), siendo ambos documentos complementarios y no sustituibles entre sí. Solicitar solo la autorización de la dirección del colegio no reemplaza el consentimiento de los tutores legales de cada participante; aplicar los instrumentos sin informar a los adolescentes vulnera el principio ético de transparencia en investigación; obtener solo el consentimiento del tutor sin el asentimiento del menor desconoce el derecho del propio adolescente a decidir sobre su participación."
     },
     {
       "id": 78,
@@ -1826,7 +1826,7 @@ window.SERUMS_DATA = {
         "Reducir el tiempo total de la investigación."
       ],
       "correct": 1,
-      "feedback": "La triangulación de métodos fortalece la validez al contrastar hallazgos desde distintos enfoques; no reduce necesariamente el tiempo, no exime del comité de ética ni simplifica por sí sola el análisis estadístico."
+      "feedback": "Es correcta porque la triangulación metodológica combina las fortalezas de datos cuantitativos y cualitativos para contrastar los hallazgos desde distintos enfoques, lo que fortalece la validez de las conclusiones sobre un fenómeno complejo como la adherencia terapéutica. Evitar la necesidad de un comité de ética no es un propósito ni un efecto de la triangulación, ya que todo estudio con participantes humanos requiere esa aprobación independientemente del diseño; simplificar el análisis estadístico o reducir el tiempo total de investigación tampoco son los objetivos que persigue combinar ambos métodos, que de hecho suele implicar mayor complejidad analítica."
     },
     {
       "id": 80,
@@ -1849,7 +1849,7 @@ window.SERUMS_DATA = {
         "Mencionar el financiamiento solo si un revisor lo solicita expresamente."
       ],
       "correct": 1,
-      "feedback": "La transparencia exige declarar toda fuente de financiamiento y conflicto de interés al publicar; omitirla, publicar solo lo favorable o mencionarla solo si un revisor la pide no son adecuados."
+      "feedback": "Es correcta porque la transparencia científica exige declarar explícitamente toda fuente de financiamiento y cualquier posible conflicto de interés al publicar, permitiendo que los lectores evalúen la información con ese contexto presente. Omitir la fuente de financiamiento para evitar cuestionamientos oculta información relevante para la interpretación de los resultados; publicar solo los resultados favorables a la institución financiadora constituye un sesgo de publicación selectiva; mencionar el financiamiento solo si un revisor lo solicita expresamente invierte la responsabilidad, que es proactiva y no reactiva."
     },
     {
       "id": 81,
@@ -1872,7 +1872,7 @@ window.SERUMS_DATA = {
         "Un resumen narrativo sin apartados diferenciados."
       ],
       "correct": 2,
-      "feedback": "La estructura IMRD (introducción, metodología, resultados y discusión) facilita la comprensión y réplica de un estudio; omitir el método, no diferenciar apartados o prescindir de resultados separados no cumplen ese objetivo."
+      "feedback": "Es correcta porque la estructura de introducción, metodología, resultados y discusión (IMRD) es el formato estándar que facilita tanto la comprensión del estudio como su réplica por otros investigadores, al separar claramente qué se hizo, cómo se hizo y qué se encontró. Presentar solo resultados y conclusiones sin detallar el método impide que otros puedan replicar el estudio; presentar solo metodología y discusión sin una sección de resultados separada dificulta distinguir los hallazgos objetivos de su interpretación; un resumen narrativo sin apartados diferenciados no permite ubicar rápidamente cada componente del estudio."
     },
     {
       "id": 82,
@@ -1895,7 +1895,7 @@ window.SERUMS_DATA = {
         "El Plan Estratégico Institucional define el rumbo a largo plazo, y el Plan Operativo Institucional lo traduce en acciones concretas de corto plazo."
       ],
       "correct": 3,
-      "feedback": "El PEI establece la estrategia de largo plazo y el POI la traduce en acciones de corto plazo; considerarlos intercambiables, invertir su orden o darles la misma periodicidad no son correctos."
+      "feedback": "Es correcta porque el Plan Estratégico Institucional define el rumbo y los objetivos de largo plazo de la organización, mientras que el Plan Operativo Institucional traduce ese rumbo en actividades concretas de corto plazo, siendo instrumentos de gestión complementarios pero con horizontes temporales distintos. Que el plan operativo se defina antes que el estratégico invierte la lógica de planificación, que parte de lo general hacia lo específico; considerar ambos documentos intercambiables desconoce que cumplen funciones y niveles de planificación distintos; asignarles periodicidades opuestas a las reales (estratégico mensual, operativo quinquenal) contradice la definición misma de cada instrumento."
     },
     {
       "id": 83,
@@ -1918,7 +1918,7 @@ window.SERUMS_DATA = {
         "Una encuesta de satisfacción sin análisis adicional."
       ],
       "correct": 2,
-      "feedback": "El análisis FODA permite diagnosticar la situación interna y externa para orientar la estrategia; un informe financiero exclusivo, una encuesta aislada o un organigrama no cumplen esa función diagnóstica integral."
+      "feedback": "Es correcta porque el análisis FODA permite diagnosticar de forma integral tanto los factores internos (fortalezas y debilidades) como los externos (oportunidades y amenazas) que influyen en el desempeño del servicio, siendo la herramienta diseñada específicamente para ese propósito diagnóstico previo a la planificación estratégica. Un organigrama institucional actualizado solo describe la estructura de cargos, sin analizar factores de desempeño; un informe financiero exclusivo aporta solo una dimensión económica, dejando fuera otros factores relevantes; una encuesta de satisfacción sin análisis adicional recoge percepciones puntuales, pero no constituye por sí sola un diagnóstico estratégico integral."
     },
     {
       "id": 84,
@@ -1964,7 +1964,7 @@ window.SERUMS_DATA = {
         "Eliminar por completo la atención presencial."
       ],
       "correct": 0,
-      "feedback": "La telesalud requiere garantizar protección de datos y consentimiento informado; exigir dispositivos de última generación, eliminar la atención presencial o exigir solo buena conexión sin más requisitos no son las condiciones indispensables."
+      "feedback": "Es correcta porque implementar telesalud implica el manejo de información sensible a distancia, por lo que la protección de datos personales y el consentimiento informado del paciente son condiciones éticas y normativas indispensables antes de iniciar el servicio, independientemente de la infraestructura tecnológica disponible. Exigir solo conexión a internet de alta velocidad sin más requisitos ignora las condiciones éticas y de seguridad de la información que la telesalud exige; exigir que todos los pacientes cuenten con un dispositivo de última generación no es una condición indispensable, ya que existen alternativas tecnológicas más básicas; eliminar por completo la atención presencial no corresponde al enfoque complementario con el que se implementa la telesalud."
     },
     {
       "id": 86,
@@ -1987,7 +1987,7 @@ window.SERUMS_DATA = {
         "Evaluar el cumplimiento de estándares y detectar áreas de mejora en la atención."
       ],
       "correct": 3,
-      "feedback": "La auditoría de calidad busca evaluar el cumplimiento de estándares y detectar mejoras, no sancionar automáticamente ni reducir la atención; tampoco reemplaza la supervisión clínica habitual."
+      "feedback": "Es correcta porque una auditoría de calidad tiene como finalidad evaluar el cumplimiento de estándares clínicos y administrativos y detectar áreas de mejora en la atención, siendo un mecanismo de gestión orientado a la mejora continua, no a la sanción ni al reemplazo de otros mecanismos de supervisión. Reemplazar la supervisión clínica habitual por la auditoría periódica confunde dos mecanismos con funciones distintas y complementarias; reducir el número de pacientes atendidos no es un objetivo ni un efecto esperado de la auditoría; sancionar de forma automática al personal involucrado contradice el enfoque de mejora continua que caracteriza a este tipo de evaluación."
     },
     {
       "id": 87,
@@ -2010,7 +2010,7 @@ window.SERUMS_DATA = {
         "Reducir las evaluaciones de desempeño para evitar conflictos."
       ],
       "correct": 1,
-      "feedback": "La gestión de RRHH debe abordar de forma integral selección, capacitación y desarrollo profesional; contratar sin evaluar causas, reducir evaluaciones o aumentar la carga sin evaluar la causa no resuelven la rotación de forma sostenible."
+      "feedback": "Es correcta porque la alta rotación y el bajo desempeño requieren una respuesta integral de gestión de recursos humanos que fortalezca la selección, la capacitación continua y el desarrollo profesional del personal, abordando las causas estructurales del problema en vez de solo sus síntomas. Contratar personal nuevo sin evaluar las causas de la rotación no resuelve el problema de fondo y probablemente lo repita; aumentar la carga laboral del personal restante sin evaluar la causa puede agravar la rotación al incrementar el desgaste; reducir las evaluaciones de desempeño para evitar conflictos elimina una herramienta necesaria para identificar y abordar el bajo desempeño de forma constructiva."
     },
     {
       "id": 88,
@@ -2543,7 +2543,7 @@ window.SERUMS_DATA = {
         "Brindar consejería pre-test que aborde dudas, expectativas y el manejo confidencial del resultado."
       ],
       "correct": 3,
-      "feedback": "La consejería pre-test debe abordar dudas, expectativas emocionales y confidencialidad antes de la prueba; realizarla sin conversar, posponerla indefinidamente por la ansiedad o exigir autorización de terceros no son adecuados."
+      "feedback": "Es correcta porque la consejería pre-test de VIH debe abordar dudas, expectativas emocionales y el manejo confidencial del resultado antes de la toma de la prueba, siendo un componente esencial del proceso que precisamente ayuda a manejar la ansiedad descrita, no un paso que deba omitirse por ella. Solicitar autorización de un familiar antes de realizar la prueba vulnera la autonomía y confidencialidad del usuario adulto; posponer la prueba hasta que deje de sentir ansiedad puede prolongar indefinidamente el acceso al diagnóstico; realizarla de inmediato sin conversar previamente omite un paso que reduce precisamente la ansiedad ya identificada."
     },
     {
       "id": 111,
@@ -2612,7 +2612,7 @@ window.SERUMS_DATA = {
         "Confrontar directamente al paciente para que acepte el diagnóstico de inmediato."
       ],
       "correct": 0,
-      "feedback": "El acompañamiento debe respetar el ritmo de afrontamiento, explorando temores y facilitando gradualmente la comunicación familiar; confrontar, evitar el tema por completo o informar solo a la familia sin incluir al paciente no son adecuados."
+      "feedback": "Es correcta porque la negación inicial ante un diagnóstico de cáncer es una fase esperable del proceso de afrontamiento, por lo que corresponde respetar el ritmo del paciente, explorar sus temores específicos y facilitar gradualmente la comunicación con la familia, sin forzar ni excluir a nadie del proceso. Evitar el tema por completo hasta que el paciente lo mencione espontáneamente deja sin acompañamiento activo un proceso que puede beneficiarse de una intervención gradual; informar directamente a la familia sin involucrar al paciente vulnera su autonomía sobre su propia información de salud; confrontarlo para que acepte el diagnóstico de inmediato no respeta el proceso psicológico de afrontamiento que requiere tiempo."
     },
     {
       "id": 114,
@@ -2796,7 +2796,7 @@ window.SERUMS_DATA = {
         "Continuar la consulta en español, asumiendo que el usuario comprende lo esencial."
       ],
       "correct": 2,
-      "feedback": "Ante barrera idiomática significativa se debe gestionar apoyo de intérprete o facilitador cultural; continuar asumiendo comprensión, derivar sin atender o delegar la traducción a un familiar no garantizan una comunicación efectiva y confidencial."
+      "feedback": "Es correcta porque una barrera idiomática significativa en consulta psicológica debe resolverse gestionando apoyo de un intérprete o facilitador cultural, de forma que la comunicación sea efectiva y se preserve la confidencialidad del contenido tratado, algo que un familiar no puede garantizar de la misma manera. Continuar la consulta en español asumiendo que el usuario comprende lo esencial arriesga malinterpretar información clínica relevante; derivar sin brindar ninguna atención desatiende la necesidad presente; solicitar que un familiar traduzca todo el contenido de la consulta compromete la confidencialidad y puede inhibir la revelación de información sensible."
     },
     {
       "id": 122,
@@ -2865,7 +2865,7 @@ window.SERUMS_DATA = {
         "Minimizar sus dudas indicando que es muy joven para preocuparse por el tema."
       ],
       "correct": 0,
-      "feedback": "La consejería en salud sexual a adolescentes debe ser confidencial, sin juicio y adaptada a su edad; minimizar sus dudas, exigir un adulto presente o derivar sin orientación inicial no son adecuados."
+      "feedback": "Es correcta porque la consejería en salud sexual a un adolescente debe ser confidencial, sin juicio y con información clara adaptada a su edad, respetando su autonomía progresiva y su derecho a recibir orientación en el momento de la consulta. Exigir la presencia de un adulto responsable antes de responder cualquier duda condiciona indebidamente una orientación que puede y debe brindarse de forma confidencial; derivar de inmediato sin ninguna orientación inicial retrasa una atención que corresponde al primer contacto; minimizar sus dudas indicando que es muy joven desestima una preocupación de salud real y puede inhibir futuras consultas."
     },
     {
       "id": 125,
@@ -2888,7 +2888,7 @@ window.SERUMS_DATA = {
         "Medir la ansiedad solo después del taller, sin línea base previa."
       ],
       "correct": 1,
-      "feedback": "Un grupo control permite comparar resultados y atribuir con mayor confianza el cambio al taller; aplicarlo sin comparación, medir solo después sin línea base o incluir solo voluntarios sin grupo control debilitan esa conclusión."
+      "feedback": "Es correcta porque incluir un grupo control que no recibe el taller permite comparar los resultados y atribuir con mayor confianza cualquier cambio observado a la intervención misma, en vez de a otros factores externos que podrían explicar la mejoría igualmente. Aplicar el taller solo a quienes voluntariamente decidan participar, sin grupo control, introduce un sesgo de autoselección que dificulta la comparación; aplicarlo a todo el personal sin ningún grupo de comparación no permite distinguir el efecto del taller de otros cambios simultáneos; medir la ansiedad solo después del taller, sin línea base previa, impide cuantificar el cambio real producido."
     },
     {
       "id": 126,
@@ -2934,7 +2934,7 @@ window.SERUMS_DATA = {
         "Que el instrumento sea de aplicación exclusivamente autoadministrada."
       ],
       "correct": 0,
-      "feedback": "Un instrumento adecuado debe ser válido (medir lo que pretende medir) y confiable (resultados consistentes); que sea corto, que se haya usado en otro país o que sea autoadministrado no garantizan por sí solos su idoneidad."
+      "feedback": "Es correcta porque un instrumento psicométrico adecuado debe ser válido (medir efectivamente lo que pretende medir) y confiable (producir resultados consistentes en aplicaciones repetidas), siendo estas dos propiedades las que sustentan técnicamente su uso en un estudio. Que el instrumento sea corto, sin importar sus propiedades psicométricas, no garantiza que mida correctamente el constructo de interés; que haya sido usado alguna vez en otro país sin más verificación no asegura su validez en el contexto actual; que sea de aplicación exclusivamente autoadministrada es una característica operativa, no una garantía de sus propiedades psicométricas."
     },
     {
       "id": 128,
@@ -2957,7 +2957,7 @@ window.SERUMS_DATA = {
         "Solicitar la opinión de un solo experto sobre el instrumento, sin aplicarlo a nadie."
       ],
       "correct": 1,
-      "feedback": "La prueba piloto permite identificar y corregir problemas del instrumento antes de la aplicación masiva; aplicar directamente a toda la muestra, omitir toda prueba previa o pedir solo la opinión de un experto sin aplicarlo no cumplen esa función."
+      "feedback": "Es correcta porque una prueba piloto en un grupo reducido permite identificar y corregir problemas del instrumento (ambigüedades, tiempos de aplicación, comprensión de los ítems) antes de invertir recursos en una aplicación masiva que podría arrastrar esos mismos errores. Aplicar directamente la encuesta a toda la muestra planificada expone al estudio completo a fallas del instrumento no detectadas previamente; omitir cualquier prueba previa para ahorrar tiempo puede generar un costo mayor si se detectan errores después de la aplicación masiva; solicitar solo la opinión de un experto sin aplicarlo a nadie no reemplaza la evidencia empírica que aporta una prueba piloto real."
     },
     {
       "id": 129,
@@ -2980,7 +2980,7 @@ window.SERUMS_DATA = {
         "Que el estudio está mal diseñado y debe descartarse por completo."
       ],
       "correct": 2,
-      "feedback": "Cuando una diferencia no es estadísticamente significativa, la interpretación adecuada es que probablemente se deba al azar; descartar el estudio por completo, afirmar que la diferencia es real o solo aumentar la muestra para forzar significancia no son adecuados."
+      "feedback": "Es correcta porque cuando una diferencia observada no resulta estadísticamente significativa, la interpretación adecuada es que probablemente se deba al azar y no hay evidencia suficiente para afirmar un efecto real, sin que esto invalide automáticamente todo el diseño del estudio. Aumentar la muestra hasta obtener significancia estadística de forma post hoc distorsiona la lógica del análisis, ya que la decisión de tamaño muestral debe ser previa; afirmar que la diferencia es real aunque el análisis diga lo contrario contradice directamente el resultado estadístico obtenido; descartar el estudio por completo por un resultado no significativo ignora que un resultado nulo también aporta información válida."
     },
     {
       "id": 130,
@@ -3003,7 +3003,7 @@ window.SERUMS_DATA = {
         "Resumir cada entrevista en una sola palabra clave, sin mayor análisis."
       ],
       "correct": 1,
-      "feedback": "El análisis cualitativo requiere codificar y categorizar la información para identificar patrones; convertir todo en números, elegir solo entrevistas que confirmen la hipótesis o resumir en una palabra clave no son adecuados."
+      "feedback": "Es correcta porque el análisis cualitativo de entrevistas a profundidad requiere codificar y categorizar los relatos para identificar patrones y temas comunes entre los participantes, siendo este el proceso metodológico estándar para dar sentido a datos narrativos complejos. Elegir solo las entrevistas que confirmen la hipótesis inicial introduce un sesgo de confirmación que invalida el análisis; convertir cada respuesta en un número sin considerar su contenido desnaturaliza el propósito mismo de un estudio cualitativo; resumir cada entrevista en una sola palabra clave pierde la riqueza y matices que este tipo de análisis busca precisamente capturar."
     },
     {
       "id": 131,
@@ -3026,7 +3026,7 @@ window.SERUMS_DATA = {
         "Un cronograma de actividades, para organizar los tiempos del estudio."
       ],
       "correct": 2,
-      "feedback": "La matriz de consistencia organiza y verifica la coherencia entre objetivos, preguntas, variables y métodos; el consentimiento informado, el informe final o el cronograma cumplen funciones distintas dentro del proyecto."
+      "feedback": "Es correcta porque la matriz de consistencia es la herramienta metodológica que organiza y verifica la coherencia entre los objetivos, las preguntas de investigación, las variables y los métodos del estudio, asegurando que todos estos elementos estén alineados antes de iniciar la recolección de datos. Un consentimiento informado cumple la función distinta de proteger éticamente a los participantes, no de organizar el diseño metodológico; un informe final se elabora para publicar los resultados una vez concluido el estudio; un cronograma de actividades organiza los tiempos del proyecto, pero no verifica la coherencia interna del diseño metodológico."
     },
     {
       "id": 132,
@@ -3072,7 +3072,7 @@ window.SERUMS_DATA = {
         "Iniciar la recolección de datos de inmediato, dado que su intención es de mejora del servicio."
       ],
       "correct": 2,
-      "feedback": "Todo estudio con participantes humanos requiere aprobación de un comité de ética en investigación; iniciar de inmediato, pedir solo autorización verbal del jefe o informar sin documentar no son adecuados, incluso con fines de mejora del servicio."
+      "feedback": "Es correcta porque todo estudio con participantes humanos, incluso con fines de mejora del servicio, requiere la aprobación de un comité de ética en investigación que evalúe los riesgos y las protecciones necesarias para los participantes antes de iniciar la recolección de datos. Solicitar solo la autorización verbal del jefe del establecimiento no sustituye la evaluación ética independiente que exige un comité especializado; informar verbalmente a los pacientes sin documentar su autorización no deja constancia verificable del proceso de consentimiento; iniciar la recolección de datos de inmediato, asumiendo que la intención de mejora exime de este requisito, desconoce que la protección ética aplica independientemente del propósito declarado del estudio."
     },
     {
       "id": 134,
@@ -3095,7 +3095,7 @@ window.SERUMS_DATA = {
         "Seleccionar únicamente a conocidos del investigador para facilitar el acceso."
       ],
       "correct": 2,
-      "feedback": "El muestreo probabilístico permite que los resultados sean representativos y generalizables; seleccionar conocidos, incluir solo a quienes acuden espontáneamente o usar cuotas por disponibilidad no permiten esa generalización."
+      "feedback": "Es correcta porque un muestreo probabilístico da a cada persona de la población una probabilidad conocida de ser seleccionada, siendo la única forma de garantizar que los resultados obtenidos en la muestra puedan generalizarse con validez estadística a toda la población del distrito. Un muestreo por cuotas basado en disponibilidad, incluir solo a quienes acudan espontáneamente al establecimiento, o seleccionar únicamente a conocidos del investigador introducen distintos sesgos de selección que impiden esa generalización, por más que puedan ser más simples o rápidos de ejecutar."
     },
     {
       "id": 135,
@@ -3118,7 +3118,7 @@ window.SERUMS_DATA = {
         "Mantener absoluta confidencialidad, sin excepción alguna."
       ],
       "correct": 2,
-      "feedback": "Ante riesgo real e inminente para terceros se debe romper la confidencialidad de forma proporcional y alertar; mantenerla absoluta, confrontar y terminar la atención o solo registrar sin alertar a nadie no protegen a la persona en riesgo."
+      "feedback": "Es correcta porque cuando un paciente revela un plan concreto de daño hacia una persona específica, el deber de proteger a terceros (deber de advertencia) justifica romper la confidencialidad de forma proporcional, alertando a quien está en riesgo y a las autoridades pertinentes, sin que esto constituya una violación ética sino una excepción reconocida a la regla general. Confrontar al paciente y terminar la atención de inmediato abandona el manejo clínico del riesgo sin activar ninguna protección para el tercero; registrar el plan sin alertar a nadie fuera del establecimiento deja a la persona en riesgo sin protección efectiva; mantener absoluta confidencialidad sin excepción alguna ignora que este es precisamente uno de los límites éticamente reconocidos a la confidencialidad."
     },
     {
       "id": 136,
@@ -3164,7 +3164,7 @@ window.SERUMS_DATA = {
         "Escuchar la queja, documentar el hecho y activar los mecanismos internos para abordar la discriminación."
       ],
       "correct": 3,
-      "feedback": "Ante un reporte de discriminación se debe escuchar, documentar y activar mecanismos institucionales; minimizarlo, remitir al usuario a otro lugar o solo pedir disculpas verbales no abordan el hecho de forma institucional."
+      "feedback": "Es correcta porque ante un reporte de discriminación por orientación sexual corresponde escuchar la queja, documentar el hecho formalmente y activar los mecanismos institucionales establecidos para abordarla, dado que se trata de una vulneración de derechos que requiere una respuesta institucional, no solo interpersonal. Solicitar disculpas verbales del trabajador involucrado sin ningún otro procedimiento adicional no constituye una respuesta institucional formal ante la vulneración reportada; indicar al usuario que acuda a otro establecimiento si no está conforme traslada la responsabilidad de resolver la discriminación a la persona afectada; minimizar la situación como un malentendido, sin mayor acción, desestima un hecho que amerita investigación y seguimiento formal."
     },
     {
       "id": 138,
@@ -3210,7 +3210,7 @@ window.SERUMS_DATA = {
         "Informar únicamente a la familia y evitar cualquier conversación con el paciente."
       ],
       "correct": 1,
-      "feedback": "Cuando el paciente conserva capacidad de decisión se debe respetar su derecho a la información; ocultarla, informar solo a la familia o condicionar la información a la autorización familiar no respetan la autonomía del paciente."
+      "feedback": "Es correcta porque un adulto mayor que conserva su capacidad de decisión tiene derecho a recibir información sobre su propia salud, correspondiendo explorar los motivos de la familia mientras se respeta ese derecho, en vez de sustituir su autonomía por una decisión familiar paternalista. Aceptar la solicitud de la familia y ocultar la información al paciente vulnera directamente su derecho a la información sobre su propia condición; informar al paciente solo si la familia lo autoriza expresamente invierte indebidamente a quién corresponde esa decisión; informar únicamente a la familia y evitar cualquier conversación con el paciente lo excluye por completo de decisiones que le conciernen directamente."
     },
     {
       "id": 140,
@@ -3279,7 +3279,7 @@ window.SERUMS_DATA = {
         "Explorar con el usuario su comodidad con ese intérprete específico y resguardar la confidencialidad de lo tratado en consulta."
       ],
       "correct": 3,
-      "feedback": "Cuando el intérprete tiene relación personal previa se debe explorar la comodidad del usuario y resguardar la confidencialidad; ignorar la relación, suspender la atención o excluir al intérprete sin apoyo no son adecuados."
+      "feedback": "Es correcta porque cuando el intérprete tiene una relación personal previa con el usuario, como ser su vecino, corresponde explorar directamente con él su comodidad respecto a esa persona específica y resguardar la confidencialidad de lo tratado en consulta, sin asumir automáticamente que la relación no afecta la atención. Solicitar que el intérprete espere fuera del consultorio y continuar sin apoyo de comunicación deja al usuario sordo sin el canal de comunicación que necesita; ignorar la relación entre ambos asume sin verificar que no genera incomodidad ni riesgo para la confidencialidad; suspender la atención por no contar con un intérprete profesional certificado desatiende una necesidad de atención que puede resolverse explorando la situación con el propio usuario."
     },
     {
       "id": 143,
@@ -3417,7 +3417,7 @@ window.SERUMS_DATA = {
         "Imponer el uso del sistema sin explicar sus beneficios ni brindar capacitación."
       ],
       "correct": 2,
-      "feedback": "La gestión del cambio requiere explicar beneficios, capacitar y acompañar la adaptación; imponer sin explicar, abandonar ante resistencia o capacitar solo a quienes ya dominan lo digital no son adecuados."
+      "feedback": "Es correcta porque la gestión efectiva de un cambio tecnológico requiere explicar los beneficios del nuevo sistema, capacitar al equipo en su uso y acompañar el proceso de adaptación, siendo estas las estrategias con mayor evidencia para reducir la resistencia natural que genera cualquier cambio organizacional. Abandonar la implementación ante la primera señal de resistencia impide obtener los beneficios que motivaron el cambio; delegar la capacitación únicamente a quienes ya dominan herramientas digitales deja sin apoyo a quienes más lo necesitan; imponer el uso del sistema sin explicar sus beneficios ni capacitar profundiza la resistencia en vez de gestionarla."
     },
     {
       "id": 149,
@@ -3486,7 +3486,7 @@ window.SERUMS_DATA = {
         "El apoyo familiar podría actuar como variable de confusión no controlada, afectando la interpretación de la asociación encontrada."
       ],
       "correct": 3,
-      "feedback": "Una variable de confusión no controlada, como el apoyo familiar, puede explicar parcial o totalmente una asociación observada; el tamaño de muestra grande, ignorar otras variables o el diseño transversal en sí no son el problema principal aquí."
+      "feedback": "Es correcta porque el apoyo familiar, al no haber sido considerado ni controlado en el análisis, podría actuar como una variable de confusión que explica parcial o totalmente la asociación observada entre uso de redes sociales y síntomas depresivos, comprometiendo la interpretación causal del hallazgo. Afirmar que el diseño transversal impide calcular cualquier tipo de asociación estadística es incorrecto, ya que sí permite calcular asociaciones, aunque con limitaciones para establecer causalidad; decir que el estudio no necesita considerar ninguna otra variable ignora precisamente el riesgo de confusión identificado; atribuir el problema al tamaño de muestra, sin relación con el diseño, no aborda la limitación metodológica realmente relevante en este caso."
     },
     {
       "id": 152,
@@ -3509,7 +3509,7 @@ window.SERUMS_DATA = {
         "Un enfoque cualitativo, mediante entrevistas a profundidad que permitan explorar significados y experiencias."
       ],
       "correct": 3,
-      "feedback": "Cuando el objetivo es comprender en profundidad significados y experiencias subjetivas, el enfoque cualitativo mediante entrevistas es el más adecuado; el cuantitativo, el ensayo aleatorizado o una cohorte de seguimiento no cumplen ese propósito."
+      "feedback": "Es correcta porque cuando el objetivo es comprender en profundidad significados y experiencias subjetivas, como vivir un proceso de duelo, el enfoque cualitativo mediante entrevistas a profundidad es el que permite explorar esa dimensión de forma adecuada, a diferencia de enfoques orientados a medir y cuantificar. Un ensayo clínico aleatorizado con grupo control o un enfoque cuantitativo con cuestionario estandarizado buscan medir variables de forma numérica, no explorar significados subjetivos en profundidad; un estudio de cohorte que siga a los familiares durante varios años tampoco corresponde al objetivo de comprensión profunda de un proceso vivido, sino al seguimiento de un desenlace en el tiempo."
     },
     {
       "id": 153,
@@ -3555,7 +3555,7 @@ window.SERUMS_DATA = {
         "Esperar a que el estudio se replique en otros países antes de comunicar cualquier hallazgo."
       ],
       "correct": 1,
-      "feedback": "La difusión responsable de hallazgos preliminares debe incluir las limitaciones del estudio; presentarlo como definitivo, omitir el tamaño de muestra o esperar réplicas internacionales antes de comunicar nada no son adecuados."
+      "feedback": "Es correcta porque la difusión responsable de hallazgos preliminares con una muestra pequeña debe comunicarse junto con las limitaciones del estudio, evitando conclusiones definitivas y generalizables que la evidencia disponible aún no respalda. Presentar el hallazgo como una conclusión definitiva y generalizable a toda la población sobrestima la solidez de un resultado preliminar; omitir el tamaño de muestra y las limitaciones para simplificar el mensaje induce a una interpretación errónea de la fuerza real del hallazgo; esperar a que el estudio se replique en otros países antes de comunicar cualquier hallazgo es una postura excesivamente restrictiva que impide compartir información preliminar de forma responsable y con las salvedades adecuadas."
     },
     {
       "id": 155,
@@ -3601,7 +3601,7 @@ window.SERUMS_DATA = {
         "Implementar campañas regulares de tamizaje de estrés laboral y desgaste profesional, y ajustar factores organizacionales de riesgo."
       ],
       "correct": 3,
-      "feedback": "La normativa de salud ocupacional recomienda tamizaje regular de riesgos psicosociales y ajustar factores organizacionales; considerarlo individual, ignorarlo o rotar personal sin intervenir en la organización no son adecuados."
+      "feedback": "Es correcta porque la sobrecarga laboral sostenida sin tamizaje periódico exige implementar campañas regulares de tamizaje de estrés laboral y desgaste profesional, junto con el ajuste de los factores organizacionales que lo generan, dado que el desgaste profesional tiene un componente organizacional identificable y modificable. Ignorar el riesgo psicosocial porque no está relacionado con la seguridad física del personal desconoce que la normativa de salud ocupacional también protege la salud mental de los trabajadores; considerar el desgaste como un problema individual, sin relación con la organización del trabajo, desestima el factor causal organizacional identificado; rotar al personal afectado sin intervenir en la organización actual traslada el problema en vez de resolverlo."
     },
     {
       "id": 157,
@@ -4638,7 +4638,7 @@ window.SERUMS_DATA = {
         "Indicar que es normal y que se le pasará solo con el tiempo."
       ],
       "correct": 2,
-      "feedback": "La crisis vital de la jubilación requiere explorar el significado de la pérdida del rol laboral y acompañar nuevos proyectos vitales; minimizarla, buscar empleo de inmediato o llenar el tiempo sin explorar el significado no son adecuados."
+      "feedback": "Es correcta porque la jubilación puede constituir una crisis vital asociada a la pérdida del rol laboral, por lo que corresponde explorar el significado personal de esa pérdida y acompañar la construcción de nuevos proyectos vitales que den sentido a esta nueva etapa. Recomendar que busque empleo de inmediato para resolver el malestar no aborda el significado emocional de la pérdida, solo su síntoma superficial; sugerir que se mantenga completamente ocupado para no pensar en la pérdida evita el procesamiento necesario de esa transición vital; indicar que es normal y que se le pasará solo con el tiempo minimiza un proceso que se beneficia de acompañamiento activo."
     },
     {
       "id": 202,
@@ -4661,7 +4661,7 @@ window.SERUMS_DATA = {
         "Sugerir que ella modifique su comportamiento para evitar los celos de su pareja."
       ],
       "correct": 0,
-      "feedback": "Las conductas de control y celotipia intensa deben evaluarse como posible indicador temprano de violencia; normalizarlas, responsabilizar a la víctima o pedirle que genere más confianza no son adecuados."
+      "feedback": "Es correcta porque revisar constantemente el teléfono, controlar las salidas y mostrar celos intensos ante cualquier interacción social son conductas de control que deben evaluarse como posible indicador temprano de un patrón de violencia, y no normalizarse como celos propios de cualquier relación de pareja. Indicar que son celos normales propios de una relación de pareja minimiza un patrón de control que requiere evaluación de riesgo; recomendar que hable con su pareja para que confíe más en ella traslada la solución a la propia usuaria en vez de evaluar el riesgo del patrón descrito; sugerir que ella modifique su comportamiento para evitar los celos de su pareja responsabiliza indebidamente a la víctima de una conducta de control ajena."
     },
     {
       "id": 203,
@@ -5607,7 +5607,7 @@ window.SERUMS_DATA = {
         "Considerar el puntaje como definitivo y descartar cualquier otra evaluación posterior."
       ],
       "correct": 2,
-      "feedback": "Un puntaje de riesgo alto en el M-CHAT-R, junto con signos clínicos compatibles, debe interpretarse como riesgo elevado de trastorno del espectro autista y derivarse oportunamente para evaluación diagnóstica especializada, dado que el tamizaje no reemplaza el diagnóstico."
+      "feedback": "Es correcta porque un puntaje de riesgo alto en el M-CHAT-R junto con signos clínicos compatibles (alteraciones del lenguaje, hipersensibilidad sensorial, dificultades sociales, aleteo de manos) debe interpretarse como riesgo elevado de trastorno del espectro autista, correspondiendo derivar oportunamente para una evaluación diagnóstica especializada, dado que el tamizaje identifica riesgo pero no reemplaza el diagnóstico definitivo. Esperar hasta los 4 años para repetir el tamizaje retrasa una intervención temprana cuya eficacia depende de la precocidad; atribuir los signos únicamente a un retraso transitorio del lenguaje ignora el conjunto de señales presentes en múltiples áreas del desarrollo; considerar el puntaje como definitivo y descartar cualquier evaluación posterior desconoce que un tamizaje alterado siempre requiere confirmación diagnóstica."
     },
     {
       "id": 244,
@@ -5676,7 +5676,7 @@ window.SERUMS_DATA = {
         "Una carta de investigación, emitida por la institución educativa."
       ],
       "correct": 1,
-      "feedback": "En investigación con menores de edad, el padre o tutor legal firma el consentimiento informado, mientras que el asentimiento informado lo brinda el propio menor según su capacidad de comprensión; ambos documentos son necesarios y no intercambiables."
+      "feedback": "Es correcta porque en investigación con menores de edad, el consentimiento informado debe ser otorgado por el padre o tutor legal del menor, quien autoriza legalmente su participación, siendo este el documento formal exigido adicional al asentimiento que brinda el propio menor según su capacidad de comprensión. Un compromiso paterno sin validez para fines de investigación no cumple el requisito formal exigido; un asentimiento informado firmado por los propios padres confunde este concepto, que corresponde específicamente al menor y no a su tutor legal; una carta de investigación emitida por la institución educativa no reemplaza el consentimiento informado que debe otorgar específicamente el padre o tutor legal de cada menor participante."
     },
     {
       "id": 247,
@@ -6275,6 +6275,351 @@ window.SERUMS_DATA = {
       ],
       "correct": 1,
       "feedback": "Es correcta porque el proceso DISCAP exige una evaluación funcional que sustente la certificación de discapacidad, articulada con la derivación a servicios de rehabilitación según la necesidad identificada, favoreciendo un enfoque de inclusión. Certificar sin evaluación previa carece de sustento técnico; derivar sin certificar retrasa un trámite que puede resolverse en el nivel actual; negar el certificado por falta de especialista desconoce que el proceso puede gestionarse dentro de la red de referencia."
+    },
+    {
+      "id": 273,
+      "career": "Transversal",
+      "block": "Gestión",
+      "title": "Distinción entre modalidades de telesalud",
+      "level": "I-2",
+      "specialty": "Gestión / Telesalud",
+      "tags": [
+        "telesalud",
+        "teleconsulta",
+        "teleorientación"
+      ],
+      "statement": "Un profesional de salud brinda consejería y asesoría a una persona usuaria mediante TIC, con fines de promoción, prevención, recuperación o rehabilitación, sin que medie una consulta clínica formal.",
+      "question": "¿A qué modalidad de telesalud corresponde esta actividad?",
+      "options": [
+        "Teleconsulta, al ser una atención clínica formal a distancia.",
+        "Teleorientación, al tratarse de consejería y asesoría sin consulta clínica formal.",
+        "Telemonitoreo, al hacer seguimiento continuo de un parámetro de salud.",
+        "Teleinterconsulta, al ser una consulta entre dos profesionales de salud."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque la teleorientación se define específicamente como consejería y asesoría a distancia sin que constituya una consulta clínica formal, a diferencia de la teleconsulta (que sí es una atención clínica), el telemonitoreo (seguimiento continuo de parámetros) y la teleinterconsulta (comunicación entre dos profesionales de salud, no con el usuario)."
+    },
+    {
+      "id": 274,
+      "career": "Transversal",
+      "block": "Gestión",
+      "title": "Condición de contrarreferencia tras resolución parcial",
+      "level": "I-2",
+      "specialty": "Gestión / Referencia y contrarreferencia",
+      "tags": [
+        "contrarreferencia",
+        "referencia",
+        "continuidad de atención"
+      ],
+      "statement": "Un paciente fue referido a un establecimiento de mayor complejidad por una probable gastritis. Su problema de salud se resolvió de manera parcial, por lo que continúa su tratamiento en el establecimiento de origen.",
+      "question": "¿En qué condición fue contrarreferido este paciente?",
+      "options": [
+        "Curado, porque el caso ya fue resuelto en el nivel de mayor complejidad.",
+        "Deserción, porque el paciente abandonó el seguimiento en el nivel superior.",
+        "Mejorado, porque el problema se resolvió parcialmente y continúa el tratamiento en el establecimiento de origen.",
+        "Retiro voluntario, porque el paciente decidió no continuar la atención por su cuenta."
+      ],
+      "correct": 2,
+      "feedback": "Es correcta porque la condición 'mejorado' en la contrarreferencia corresponde a una resolución parcial del problema, que requiere continuidad del tratamiento en el establecimiento de origen. 'Curado' implicaría resolución total; 'deserción' y 'retiro voluntario' corresponden a un abandono del proceso por parte del paciente, no a la evolución clínica descrita."
+    },
+    {
+      "id": 275,
+      "career": "Transversal",
+      "block": "Salud pública",
+      "title": "Función esencial de salud pública: financiamiento",
+      "level": "I-2",
+      "specialty": "Salud Pública / FESP",
+      "tags": [
+        "funciones esenciales de salud pública",
+        "financiamiento",
+        "aseguramiento"
+      ],
+      "statement": "El Seguro Integral de Salud garantiza un porcentaje mínimo de su presupuesto para la compra de insumos, productos farmacéuticos y sanitarios esenciales para sus asegurados a nivel nacional.",
+      "question": "¿A qué Función Esencial de Salud Pública (FESP) renovada corresponde esta acción?",
+      "options": [
+        "Financiamiento de la salud eficiente y equitativo, al garantizar presupuesto específico para insumos esenciales.",
+        "Acceso equitativo a servicios de salud integrales y de calidad, al referirse a la llegada de los servicios a la población.",
+        "Desarrollo de recursos humanos para la salud, al enfocarse en la capacitación del personal.",
+        "Evaluación del desempeño del sistema de salud, al medir resultados de intervenciones ya ejecutadas."
+      ],
+      "correct": 0,
+      "feedback": "Es correcta porque garantizar un presupuesto mínimo destinado a la compra de insumos y productos esenciales corresponde específicamente a la función de financiamiento eficiente y equitativo de la salud, distinta del acceso a servicios (que se refiere a la llegada de la oferta a la población), el desarrollo de RRHH (capacitación) o la evaluación (medición de resultados ya ejecutados)."
+    },
+    {
+      "id": 276,
+      "career": "Transversal",
+      "block": "Salud pública",
+      "title": "Niveles de prevención según objetivo",
+      "level": "I-2",
+      "specialty": "Salud Pública / Historia natural de la enfermedad",
+      "tags": [
+        "niveles de prevención",
+        "historia natural de la enfermedad"
+      ],
+      "statement": "Un establecimiento de salud implementa acciones orientadas a disminuir el avance y las complicaciones de una enfermedad ya establecida, reduciendo las secuelas y la discapacidad asociadas.",
+      "question": "¿A qué nivel de prevención corresponde esta acción?",
+      "options": [
+        "Primaria, porque busca evitar la aparición de la enfermedad.",
+        "Secundaria, porque busca la detección temprana en fase asintomática.",
+        "Terciaria, porque busca reducir secuelas y discapacidad de una enfermedad ya establecida.",
+        "Cuaternaria, porque busca evitar el sobretratamiento de la enfermedad."
+      ],
+      "correct": 2,
+      "feedback": "Es correcta porque la prevención terciaria actúa sobre una enfermedad ya establecida, buscando reducir sus secuelas y la discapacidad asociada mediante rehabilitación. La primaria actúa antes de que aparezca la enfermedad; la secundaria detecta casos en fase subclínica o asintomática; la cuaternaria previene el exceso de intervención médica, no las secuelas de una enfermedad ya presente."
+    },
+    {
+      "id": 277,
+      "career": "Transversal",
+      "block": "Salud pública",
+      "title": "Tipos de vigilancia epidemiológica",
+      "level": "I-2",
+      "specialty": "Salud Pública / Vigilancia epidemiológica",
+      "tags": [
+        "vigilancia epidemiológica",
+        "vigilancia activa",
+        "vigilancia pasiva"
+      ],
+      "statement": "Un establecimiento de salud realiza búsqueda intencionada y sistemática de casos de dislipidemia y obesidad infantil revisando las historias clínicas y archivos estadísticos ya existentes, sin esperar que los casos se presenten espontáneamente a consulta.",
+      "question": "¿A qué tipo de vigilancia epidemiológica corresponde esta actividad?",
+      "options": [
+        "Pasiva, porque depende de que el caso se presente espontáneamente al establecimiento.",
+        "Centinela, porque se basa en establecimientos seleccionados como fuente de información.",
+        "Activa, porque implica una búsqueda intencionada y sistemática de casos en fuentes ya existentes.",
+        "Focalizada, porque se limita a un grupo poblacional específico previamente definido."
+      ],
+      "correct": 2,
+      "feedback": "Es correcta porque la vigilancia activa se caracteriza precisamente por la búsqueda intencionada y sistemática de casos, revisando fuentes de información ya existentes en vez de esperar que el caso llegue espontáneamente (que es lo propio de la vigilancia pasiva). La vigilancia centinela se basa en establecimientos seleccionados como puntos de reporte, y la focalizada se limita a un grupo específico, aspectos no descritos en el enunciado."
+    },
+    {
+      "id": 278,
+      "career": "Transversal",
+      "block": "Salud pública",
+      "title": "Número reproductivo básico en un brote",
+      "level": "I-3",
+      "specialty": "Salud Pública / Epidemiología",
+      "tags": [
+        "Ro",
+        "número reproductivo básico",
+        "brote"
+      ],
+      "statement": "En una comunidad se reporta un caso de fiebre amarilla con fiebre, sangrado y shock; en los días siguientes aparecen muchos más casos similares en la misma zona.",
+      "question": "Considerando que el Ro es el número promedio de casos nuevos que genera un caso dado durante su periodo infeccioso, ¿qué valor de Ro se espera en este escenario de brote activo?",
+      "options": [
+        "Ro = 0, porque no hay transmisión de persona a persona en la fiebre amarilla.",
+        "Ro < 1, porque cada caso genera en promedio menos de un caso nuevo.",
+        "Ro > 1, porque cada caso genera en promedio más de un caso nuevo, sosteniendo el brote.",
+        "Ro > 0.5, porque ese valor ya sería suficiente para frenar la transmisión."
+      ],
+      "correct": 2,
+      "feedback": "Es correcta porque un brote activo con aparición creciente de nuevos casos implica que, en promedio, cada caso genera más de un caso nuevo (Ro > 1), lo que sostiene y amplifica la transmisión en la comunidad. Un Ro = 0 o Ro < 1 implicaría que la transmisión se extingue por sí sola, lo que contradice el escenario descrito; Ro > 0.5 no es el umbral que determina sostenibilidad de la transmisión, ya que el punto de corte relevante es Ro = 1."
+    },
+    {
+      "id": 279,
+      "career": "Transversal",
+      "block": "Salud pública",
+      "title": "Distinción entre brote, endemia, epidemia y pandemia",
+      "level": "I-2",
+      "specialty": "Salud Pública / Vigilancia epidemiológica",
+      "tags": [
+        "brote",
+        "endemia",
+        "epidemia",
+        "pandemia"
+      ],
+      "statement": "En una comunidad se reportan dos o más casos de una misma enfermedad, relacionados entre sí en tiempo y lugar, cuando normalmente no se esperaría ver casos relacionados de esa manera.",
+      "question": "¿Cómo se clasifica este evento según criterio epidemiológico?",
+      "options": [
+        "Endemia, porque la enfermedad está presente de forma habitual en la zona.",
+        "Brote, porque son casos relacionados entre sí en tiempo y lugar, por encima de lo esperado.",
+        "Epidemia, porque ya afecta a toda una región geográfica extensa.",
+        "Pandemia, porque se espera que se disperse a varios países o continentes."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque un brote se define como la aparición de dos o más casos relacionados entre sí en tiempo y lugar, por encima de lo esperado para esa zona, sin necesidad de una extensión geográfica amplia. La endemia implica presencia habitual y esperada de la enfermedad (no un exceso); la epidemia implica una extensión mayor y sostenida en una región; la pandemia implica diseminación a varios países o continentes, escalas que exceden lo descrito en el enunciado."
+    },
+    {
+      "id": 280,
+      "career": "Transversal",
+      "block": "Gestión",
+      "title": "Principios del código de ética de la función pública",
+      "level": "I-2",
+      "specialty": "Gestión / Ética pública",
+      "tags": [
+        "ética pública",
+        "código de ética",
+        "función pública"
+      ],
+      "statement": "El código de ética de la función pública establece un conjunto de principios que todo servidor público debe cumplir en su desempeño laboral, entre ellos: respeto, probidad, eficiencia, idoneidad, veracidad, lealtad y obediencia, y justicia y equidad.",
+      "question": "¿Cuál es el octavo principio que completa este listado según el código de ética de la función pública?",
+      "options": [
+        "Lealtad al Estado de derecho.",
+        "Puntualidad en el cumplimiento de horarios.",
+        "Compromiso institucional permanente.",
+        "Progreso continuo en la carrera pública."
+      ],
+      "correct": 0,
+      "feedback": "Es correcta porque el código de ética de la función pública establece ocho principios: respeto, probidad, eficiencia, idoneidad, veracidad, lealtad y obediencia, justicia y equidad, y lealtad al Estado de derecho, siendo este último el que completa el listado. Puntualidad, compromiso institucional y progreso en la carrera no forman parte de este listado normativo específico de ocho principios."
+    },
+    {
+      "id": 281,
+      "career": "Transversal",
+      "block": "Gestión",
+      "title": "Manual de Organización y Funciones (MOF)",
+      "level": "I-2",
+      "specialty": "Gestión / Documentos normativos",
+      "tags": [
+        "MOF",
+        "documentos de gestión",
+        "organización"
+      ],
+      "statement": "Un establecimiento de salud cuenta con un documento normativo que describe las funciones específicas de cada cargo o puesto de trabajo, desarrolladas a partir de la estructura orgánica y las funciones generales establecidas en el reglamento de organización y funciones de la institución.",
+      "question": "¿A qué documento de gestión corresponde esta descripción?",
+      "options": [
+        "Plan Operativo Institucional, al programar actividades y metas del año fiscal.",
+        "Manual de Organización y Funciones (MOF), al describir funciones específicas por cargo.",
+        "Reglamento de Organización y Funciones (ROF), al definir la estructura orgánica general.",
+        "Plan Estratégico Institucional, al definir el rumbo de largo plazo de la institución."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque el MOF es el documento que describe funciones específicas a nivel de cargo o puesto de trabajo, derivadas de la estructura orgánica y las funciones generales del ROF. El Plan Operativo programa actividades y metas del año fiscal, no funciones por cargo; el ROF define la estructura orgánica general, no las funciones específicas de cada puesto; el Plan Estratégico Institucional define el rumbo de largo plazo, no las funciones operativas de cada cargo."
+    },
+    {
+      "id": 282,
+      "career": "Transversal",
+      "block": "Gestión",
+      "title": "Indicador de gestión para medir producción de consulta externa",
+      "level": "I-2",
+      "specialty": "Gestión / Indicadores de gestión",
+      "tags": [
+        "indicadores de gestión",
+        "productividad",
+        "consulta externa"
+      ],
+      "statement": "El responsable de la Red Integrada de Salud desea conocer la cantidad de atenciones realizadas por un médico serumista en consulta externa durante un periodo determinado.",
+      "question": "¿Qué indicador de gestión debe utilizar para este propósito?",
+      "options": [
+        "Concentración, que mide el promedio de atenciones por persona atendida.",
+        "Rendimiento, que mide el número de atenciones por unidad de tiempo disponible.",
+        "Productividad, que mide la cantidad de atenciones realizadas por el profesional en el periodo.",
+        "Permanencia, que mide el tiempo que un paciente continúa en un programa de salud."
+      ],
+      "correct": 2,
+      "feedback": "Es correcta porque el indicador de productividad mide específicamente la cantidad de atenciones realizadas por un profesional en un periodo determinado, que es lo que se busca conocer en el enunciado. La concentración mide el promedio de atenciones por persona (no por profesional); el rendimiento relaciona atenciones con el tiempo disponible de manera distinta; la permanencia mide continuidad de un paciente en un programa, no la producción del profesional."
+    },
+    {
+      "id": 283,
+      "career": "Transversal",
+      "block": "Gestión",
+      "title": "Actores prioritarios en el análisis de la sala situacional de salud",
+      "level": "I-2",
+      "specialty": "Gestión / Análisis situacional",
+      "tags": [
+        "sala situacional",
+        "análisis situacional",
+        "toma de decisiones"
+      ],
+      "statement": "La sala situacional de salud ofrece evidencia sobre la eficacia de las intervenciones en salud y sobre la capacidad de respuesta del sistema frente a las necesidades de la población de un establecimiento.",
+      "question": "¿Quiénes deben conocer y analizar esta herramienta con mayor prioridad?",
+      "options": [
+        "Promotores de salud y el responsable de promoción de la salud, por su cercanía con la comunidad.",
+        "El responsable de epidemiología y el jefe del establecimiento, por su rol en la toma de decisiones estratégicas.",
+        "Coordinadores de red y el responsable de epidemiología, limitando el análisis al nivel de red.",
+        "Todo el personal de salud sin distinción de rol, incluidas autoridades locales externas al establecimiento."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque el responsable de epidemiología y el jefe del establecimiento son quienes concentran la responsabilidad de tomar decisiones estratégicas basadas en la sala situacional, siendo los actores prioritarios para su análisis. Limitarlo solo a promotores de salud, o solo a coordinadores de red, deja fuera actores clave en la toma de decisiones del propio establecimiento; extenderlo a todo el personal y autoridades externas sin distinción diluye la prioridad que exige esta herramienta de gestión."
+    },
+    {
+      "id": 284,
+      "career": "Transversal",
+      "block": "Salud pública",
+      "title": "Clasificación de residuos sólidos por color de bolsa",
+      "level": "I-2",
+      "specialty": "Salud Pública / Gestión de residuos",
+      "tags": [
+        "residuos sólidos",
+        "bioseguridad",
+        "manejo de residuos"
+      ],
+      "statement": "Un establecimiento de salud debe segregar sus residuos sólidos usando bolsas de colores diferenciados según el tipo de residuo generado: biocontaminados, comunes y químicos.",
+      "question": "¿Qué combinación de colores corresponde a residuos biocontaminados, químicos y comunes, respectivamente?",
+      "options": [
+        "Rojo, amarillo y negro, respectivamente.",
+        "Negro, amarillo y rojo, respectivamente.",
+        "Amarillo, rojo y negro, respectivamente.",
+        "Rojo, negro y amarillo, respectivamente."
+      ],
+      "correct": 0,
+      "feedback": "Es correcta porque la normativa de manejo de residuos sólidos hospitalarios establece bolsa roja para residuos biocontaminados, amarilla para residuos químicos/especiales y negra para residuos comunes, en ese orden específico. Cualquier otra combinación invierte los colores asignados a cada categoría, lo que puede generar un manejo inadecuado del riesgo biológico o químico asociado a cada tipo de residuo."
+    },
+    {
+      "id": 285,
+      "career": "Transversal",
+      "block": "Salud pública",
+      "title": "Determinantes sociales estructurales e intermedios",
+      "level": "I-2",
+      "specialty": "Salud Pública / Determinantes sociales",
+      "tags": [
+        "determinantes sociales",
+        "determinantes estructurales",
+        "determinantes intermedios"
+      ],
+      "statement": "El modelo de cuidado integral de salud por curso de vida se enfoca en los determinantes sociales de la salud, que se clasifican en dos grandes grupos según su nivel de acción sobre la salud de la población.",
+      "question": "¿Cuáles son estos dos grupos de determinantes sociales?",
+      "options": [
+        "Determinantes ambientales y determinantes sectoriales.",
+        "Determinantes estructurales y determinantes intermedios.",
+        "Determinantes epidemiológicos y determinantes etiológicos.",
+        "Determinantes complejos y determinantes interculturales."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque el marco de determinantes sociales de la salud distingue entre determinantes estructurales (posición socioeconómica, educación, ocupación) y determinantes intermedios (condiciones materiales, factores conductuales y biológicos, sistema de salud), siendo esta la clasificación central del modelo. Ambiental/sectorial, epidemiológico/etiológico y complejo/intercultural no corresponden a la clasificación oficial de dos grupos que usa este marco conceptual."
+    },
+    {
+      "id": 286,
+      "career": "Transversal",
+      "block": "Salud pública",
+      "title": "Definición de farmacovigilancia",
+      "level": "I-2",
+      "specialty": "Salud Pública / Farmacovigilancia",
+      "tags": [
+        "farmacovigilancia",
+        "reacciones adversas",
+        "medicamentos"
+      ],
+      "statement": "Un profesional de salud administra un medicamento a un paciente, quien minutos después presenta mareos, náuseas y un rash cutáneo en la zona de aplicación. El profesional debe consignar el evento en la historia clínica y reportarlo en el formato correspondiente.",
+      "question": "¿A qué actividad del sistema de salud corresponde este reporte, y cuál es su finalidad principal?",
+      "options": [
+        "Salud pública, con la finalidad de evaluar la cobertura de vacunación en la población.",
+        "Farmacovigilancia, con la finalidad de evaluar la seguridad del medicamento y alertar oportunamente sobre reacciones adversas.",
+        "Epidemiología, con la finalidad de investigar un posible brote asociado al medicamento.",
+        "Auditoría clínica, con la finalidad de sancionar al personal involucrado en el evento."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque la farmacovigilancia es la actividad específica encargada de evaluar la seguridad de los medicamentos y disponer un sistema de alerta rápida ante reacciones adversas, que es exactamente lo que exige el escenario descrito. No corresponde a una evaluación de cobertura vacunal (salud pública general), a una investigación de brote (epidemiología) ni a un proceso sancionador (auditoría), que persiguen objetivos distintos al de vigilar la seguridad farmacológica."
+    },
+    {
+      "id": 287,
+      "career": "Transversal",
+      "block": "Gestión",
+      "title": "Petitorio nacional de medicamentos esenciales",
+      "level": "I-2",
+      "specialty": "Gestión / Medicamentos esenciales",
+      "tags": [
+        "petitorio nacional",
+        "medicamentos esenciales",
+        "gestión farmacéutica"
+      ],
+      "statement": "Dentro del sistema de salud existe un listado de medicamentos y productos biológicos que cubren la mayor parte de la morbilidad del país, seleccionados tras una evaluación técnica especializada y multidisciplinaria que confirma que son seguros, eficaces y costo-efectivos.",
+      "question": "¿Cómo se denomina a este grupo de medicamentos que debe estar disponible en todo momento?",
+      "options": [
+        "Medicamentos genéricos, por no tener marca comercial registrada.",
+        "Medicamentos básicos, por cubrir solo necesidades de primer nivel.",
+        "Medicamentos esenciales, por cubrir la mayor parte de la morbilidad de forma costo-efectiva.",
+        "Medicamentos comunes, por ser los de uso más frecuente en cualquier nivel."
+      ],
+      "correct": 2,
+      "feedback": "Es correcta porque los medicamentos esenciales se definen precisamente por cubrir la mayor parte de la morbilidad nacional, tras una evaluación técnica que confirma su seguridad, eficacia y costo-efectividad, debiendo estar disponibles en todo momento. Ser genérico es una característica de fabricación (no de esta clasificación); 'básicos' y 'comunes' no son las categorías normativas que usa el petitorio nacional para esta definición específica."
     }
   ],
   "norms": [
