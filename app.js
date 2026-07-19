@@ -21,6 +21,20 @@ let priorityReviewMode = false; // true cuando se navega desde "Repasar ahora"
 const OFFICIAL_BLOCKS = ["Salud pública", "Cuidado integral", "Ética e interculturalidad", "Investigación", "Gestión"];
 const SIMULACRO_TARGET = 100;
 const SIMULACRO_SECONDS_PER_Q = 60; // ritmo de referencia ~1 min/pregunta
+
+// Distribución aproximada por bloque, calculada a partir de la lectura de 4 exámenes reales
+// SERUMS Psicología (2025-I tipo A/B, 2025-I agosto, 2026-I — 400 preguntas en total).
+// Es una aproximación manual (no un conteo automatizado exacto) y debe tratarse como
+// una calibración inicial: se ajustará según se sumen exámenes reales de más profesiones.
+// Si una carrera no tiene pesos propios calculados aún, se usa este mismo perfil por defecto.
+const REAL_EXAM_BLOCK_WEIGHTS = {
+  "Gestión": 0.26,
+  "Salud pública": 0.26,
+  "Ética e interculturalidad": 0.16,
+  "Cuidado integral": 0.18,
+  "Investigación": 0.14
+};
+
 let simulacroQueue = [];
 let simulacroIndex = 0;
 let simulacroResults = []; // {caseId, career, block, correct}
@@ -30,6 +44,7 @@ let simulacroTimerId = null;
 let simulacroTimeLeft = 0;
 let simulacroPhase = "intro"; // intro | running | finished
 let simulacroHistory = loadProgress("simulacroHistory", []);
+let simulacroCareer = localStorage.getItem("simulacroCareer") || ""; // "" = todas las carreras (modo mixto)
 
 function shuffle(arr) {
   const a = [...arr];
@@ -51,28 +66,63 @@ function shuffleCaseOptions(original) {
   return { ...original, options: shuffledOrder.map(i => original.options[i]), correct: newCorrect };
 }
 
-// Muestreo estratificado: reparte cupos entre los 5 bloques oficiales,
-// respetando el máximo disponible en cada uno (sin repetir preguntas),
-// y redistribuye el remanente entre los bloques con más casos disponibles.
-function buildSimulacroQueue() {
-  const pools = {};
-  OFFICIAL_BLOCKS.forEach(b => { pools[b] = shuffle(data.cases.filter(c => c.block === b)); });
-  // Casos que no caen en un bloque oficial (p. ej. "Psicología" como bloque propio)
-  // se integran también como pool adicional para completar cupos si hace falta.
-  const extraPool = shuffle(data.cases.filter(c => !OFFICIAL_BLOCKS.includes(c.block)));
+// Casos ya usados en los últimos 2 intentos de simulacro (para no repetirlos de inmediato
+// en el siguiente intento, salvo que no haya suficientes casos alternativos disponibles).
+function recentlyUsedCaseIds() {
+  const recent = simulacroHistory.slice(-2);
+  const ids = new Set();
+  recent.forEach(r => (r.caseIds || []).forEach(id => ids.add(id)));
+  return ids;
+}
 
-  const totalAvailable = data.cases.length;
+// Dentro de un pool ya filtrado, separa primero los casos NO usados recientemente
+// (para priorizarlos) y deja los usados recientemente al final como relleno.
+function orderPoolAvoidingRepeats(pool, usedIds) {
+  const fresh = shuffle(pool.filter(c => !usedIds.has(c.id)));
+  const repeated = shuffle(pool.filter(c => usedIds.has(c.id)));
+  return fresh.concat(repeated);
+}
+
+// Muestreo estratificado: reparte cupos entre los 5 bloques oficiales según la
+// distribución real observada en exámenes SERUMS (REAL_EXAM_BLOCK_WEIGHTS), respetando
+// el máximo disponible en cada bloque, evitando repetir preguntas de los últimos intentos
+// cuando hay alternativas suficientes, y filtrando por carrera los bloques clínicos
+// (Cuidado integral y el bloque propio de cada profesión, p. ej. "Psicología") para que
+// el simulacro de una carrera no mezcle casos clínicos de otra, igual que el examen real.
+function buildSimulacroQueue(career) {
+  const usedIds = recentlyUsedCaseIds();
+  const isClinicalBlock = b => b === "Cuidado integral" || !OFFICIAL_BLOCKS.includes(b);
+  const matchesCareer = c => !career || c.career === career || c.career === "Transversal";
+
+  const pools = {};
+  OFFICIAL_BLOCKS.forEach(b => {
+    let cases = data.cases.filter(c => c.block === b);
+    if (isClinicalBlock(b)) cases = cases.filter(matchesCareer);
+    pools[b] = orderPoolAvoidingRepeats(cases, usedIds);
+  });
+  // Casos que no caen en un bloque oficial (p. ej. "Psicología" como bloque propio):
+  // solo se ofrecen como relleno si corresponden a la carrera elegida (o no se eligió ninguna).
+  const extraPool = orderPoolAvoidingRepeats(
+    data.cases.filter(c => !OFFICIAL_BLOCKS.includes(c.block) && matchesCareer(c)),
+    usedIds
+  );
+
+  const totalAvailable = OFFICIAL_BLOCKS.reduce((sum, b) => sum + pools[b].length, 0) + extraPool.length;
   const target = Math.min(SIMULACRO_TARGET, totalAvailable);
-  const baseQuota = Math.floor(target / OFFICIAL_BLOCKS.length);
-  // Tope de sobrecupo por bloque (evita que un bloque con muchos casos domine el simulacro)
-  const capPerBlock = Math.ceil(baseQuota * 1.5);
+
+  // Cupo base por bloque según el peso real observado (en vez de un reparto uniforme)
+  const weights = REAL_EXAM_BLOCK_WEIGHTS;
+  const baseQuotas = {};
+  OFFICIAL_BLOCKS.forEach(b => { baseQuotas[b] = Math.round(target * (weights[b] || (1 / OFFICIAL_BLOCKS.length))); });
+  const capPerBlock = {};
+  OFFICIAL_BLOCKS.forEach(b => { capPerBlock[b] = Math.ceil(baseQuotas[b] * 1.5); });
 
   let queue = [];
   let remainder = target;
   const taken = {};
 
   OFFICIAL_BLOCKS.forEach(b => {
-    const take = Math.min(baseQuota, pools[b].length);
+    const take = Math.min(baseQuotas[b], pools[b].length);
     queue = queue.concat(pools[b].slice(0, take));
     taken[b] = take;
     remainder -= take;
@@ -85,7 +135,7 @@ function buildSimulacroQueue() {
     progress = false;
     for (const b of blocksCycle) {
       if (remainder <= 0) break;
-      if (taken[b] < Math.min(capPerBlock, pools[b].length)) {
+      if (taken[b] < Math.min(capPerBlock[b], pools[b].length)) {
         queue.push(pools[b][taken[b]]);
         taken[b] += 1;
         remainder -= 1;
@@ -199,6 +249,9 @@ function renderDashboard() {
       <button id="review-btn" class="action-btn">Repasar ahora →</button>
       <span style="margin-left:10px;color:#5B6E6A;font-size:13px">Prioriza casos nunca intentados y con error, empezando por los más antiguos.</span>
     </section>
+    <section style="margin-bottom:16px">
+      <button id="exam-registry-btn" class="toggle">📚 Base de Datos SERUMS — exámenes reales analizados</button>
+    </section>
     <section class="two-col">
       <div class="panel">
         <h3 class="section-title">Progreso por carrera</h3>
@@ -232,6 +285,7 @@ function renderDashboard() {
     </section>
   `;
   document.getElementById("review-btn").addEventListener("click", goToReview);
+  document.getElementById("exam-registry-btn").addEventListener("click", () => renderView("examRegistry"));
 }
 
 function renderCases() {
@@ -543,14 +597,23 @@ function renderSimulacroIntro() {
   const totalAvailable = data.cases.length;
   const target = Math.min(SIMULACRO_TARGET, totalAvailable);
   const lastAttempts = simulacroHistory.slice(-5).reverse();
+  const careers = [...new Set(data.cases.map(c => c.career || c.specialty))].filter(c => c !== "Transversal").sort();
 
   root.innerHTML = `
     <section class="two-col">
       <div class="panel">
         <h3 class="section-title">Cómo funciona</h3>
+        <label style="display:block;margin-bottom:10px;color:#5B6E6A;font-size:13px">
+          Carrera del simulacro
+          <select id="simulacro-career-select" class="search" style="margin-top:4px">
+            <option value="">Todas las carreras (modo mixto)</option>
+            ${careers.map(c => `<option value="${c}" ${simulacroCareer === c ? "selected" : ""}>${c}</option>`).join("")}
+          </select>
+        </label>
         <ul style="margin:0;padding-left:18px;color:#5B6E6A;line-height:1.7">
-          <li>${target} preguntas seleccionadas al azar, repartidas entre los 5 bloques oficiales SERUMS (Salud Pública, Cuidado Integral, Ética e Interculturalidad, Investigación, Gestión).</li>
-          <li>Cada intento genera una selección y un orden distintos — no se repite igual entre dispositivos ni entre intentos.</li>
+          <li>${target} preguntas seleccionadas al azar, repartidas entre los 5 bloques oficiales SERUMS según la proporción real observada en exámenes anteriores (mayor peso en Gestión y Salud Pública).</li>
+          <li>Si eliges una carrera, los casos clínicos propios de otras profesiones no aparecen — igual que el examen real, que es específico por profesión.</li>
+          <li>Se evitan repetir las preguntas de tus últimos 2 intentos, siempre que haya suficientes casos alternativos disponibles.</li>
           <li>Cronómetro total de ${Math.round(target * SIMULACRO_SECONDS_PER_Q / 60)} minutos (ritmo de referencia de 1 min/pregunta).</li>
           <li>Una sola oportunidad de respuesta por pregunta, sin reintentos — igual que el examen real.</li>
           <li>Sin penalización por error: cada acierto suma un punto.</li>
@@ -563,7 +626,7 @@ function renderSimulacroIntro() {
           <div class="progress-list">
             ${lastAttempts.map(a => `
               <div>
-                <div class="progress-head"><span>${new Date(a.date).toLocaleDateString("es-PE")}</span><span>${a.correctCount}/${a.total} · ${a.pct}%</span></div>
+                <div class="progress-head"><span>${new Date(a.date).toLocaleDateString("es-PE")}${a.career ? " · " + a.career : ""}</span><span>${a.correctCount}/${a.total} · ${a.pct}%</span></div>
                 <div class="bar"><span style="width:${a.pct}%"></span></div>
               </div>
             `).join("")}
@@ -573,11 +636,15 @@ function renderSimulacroIntro() {
     </section>
   `;
 
+  document.getElementById("simulacro-career-select").addEventListener("change", e => {
+    simulacroCareer = e.target.value;
+    localStorage.setItem("simulacroCareer", simulacroCareer);
+  });
   document.getElementById("start-simulacro-btn").addEventListener("click", startSimulacro);
 }
 
 function startSimulacro() {
-  simulacroQueue = buildSimulacroQueue();
+  simulacroQueue = buildSimulacroQueue(simulacroCareer);
   simulacroIndex = 0;
   simulacroResults = [];
   simulacroSelected = null;
@@ -722,7 +789,9 @@ function finishSimulacro() {
     total,
     correctCount,
     pct,
-    byBlock
+    byBlock,
+    career: simulacroCareer || null,
+    caseIds: simulacroResults.map(r => r.caseId)
   };
   simulacroHistory.push(record);
   saveProgress("simulacroHistory", simulacroHistory);
@@ -962,6 +1031,63 @@ function renderResources() {
   });
 }
 
+// Base de Datos SERUMS: catálogo de exámenes reales del MINSA ya analizados,
+// con los casos originales generados a partir de cada uno y el perfil de pesos
+// por bloque usado en el Simulacro. No reproduce las preguntas reales (derechos
+// de autor); es un registro de trazabilidad para saber qué ya se procesó y
+// poder sumar nuevas carreras/exámenes sin perder este trabajo.
+function renderExamRegistry() {
+  pageTitle.textContent = "Base de Datos SERUMS";
+  pageSubtitle.textContent = "Exámenes reales del MINSA ya analizados, y los casos originales generados a partir de ellos.";
+
+  const registry = data.realExamRegistry || [];
+  const byCareer = {};
+  registry.forEach(r => {
+    byCareer[r.career] = byCareer[r.career] || [];
+    byCareer[r.career].push(r);
+  });
+
+  const weights = data.examBlockWeights || {};
+
+  root.innerHTML = `
+    <button id="back-to-dashboard-btn" class="toggle" style="margin-bottom:12px">← Volver al tablero</button>
+    <section class="two-col">
+      <div class="panel">
+        <h3 class="section-title">Exámenes reales analizados por carrera</h3>
+        ${Object.keys(byCareer).length ? Object.entries(byCareer).map(([career, exams]) => `
+          <div style="margin-bottom:18px">
+            <h4 style="margin:0 0 8px 0">${career} <span style="color:#5B6E6A;font-weight:normal">(${exams.length} examen${exams.length !== 1 ? "es" : ""}, ${exams.reduce((s, e) => s + e.questionCount, 0)} preguntas revisadas)</span></h4>
+            <div class="progress-list">
+              ${exams.map(e => `
+                <div class="card" style="margin-bottom:8px">
+                  <strong>${e.examLabel}</strong>
+                  <p style="margin:4px 0;color:#5B6E6A;font-size:13px">Fecha del examen: ${e.date} · Archivo fuente: ${e.sourceFile}</p>
+                  <p style="margin:4px 0;color:#5B6E6A;font-size:13px">Analizado el ${e.analyzedDate} · ${e.gapsGeneratedIds.length} casos originales del banco derivados de este análisis</p>
+                </div>
+              `).join("")}
+            </div>
+          </div>
+        `).join("") : `<p style="color:#5B6E6A">Aún no se ha analizado ningún examen real.</p>`}
+      </div>
+      <div class="panel">
+        <h3 class="section-title">Perfil de pesos usado en el Simulacro</h3>
+        <p style="color:#5B6E6A;font-size:13px;margin-bottom:12px">Calculado a partir de la lectura manual de los exámenes reales registrados (aproximación, no conteo automatizado). Se usa para que el Simulacro reparta las preguntas según la proporción real observada, en vez de un reparto uniforme entre bloques.</p>
+        <div class="progress-list">
+          ${Object.entries(weights).map(([block, w]) => `
+            <div>
+              <div class="progress-head"><span>${block}</span><span>${Math.round(w * 100)}%</span></div>
+              <div class="bar"><span style="width:${Math.round(w * 100)}%"></span></div>
+            </div>
+          `).join("")}
+        </div>
+        <p style="margin-top:16px;color:#5B6E6A;font-size:13px">Por derechos de autor, este registro no guarda las preguntas literales de los exámenes reales — solo su metadata y los casos <strong>originales</strong> redactados a partir del análisis de sus temas y nivel de dificultad.</p>
+      </div>
+    </section>
+  `;
+
+  document.getElementById("back-to-dashboard-btn").addEventListener("click", () => renderView("dashboard"));
+}
+
 function bindToggles() {
   root.querySelectorAll(".toggle").forEach(btn => {
     btn.addEventListener("click", () => {
@@ -985,6 +1111,7 @@ function renderView(view) {
   if (view === "norms") renderNorms();
   if (view === "decrees") renderDecrees();
   if (view === "resources") renderResources();
+  if (view === "examRegistry") renderExamRegistry();
   setActive(view);
   updateBadges();
 }
