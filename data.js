@@ -6620,6 +6620,375 @@ window.SERUMS_DATA = {
       ],
       "correct": 2,
       "feedback": "Es correcta porque los medicamentos esenciales se definen precisamente por cubrir la mayor parte de la morbilidad nacional, tras una evaluación técnica que confirma su seguridad, eficacia y costo-efectividad, debiendo estar disponibles en todo momento. Ser genérico es una característica de fabricación (no de esta clasificación); 'básicos' y 'comunes' no son las categorías normativas que usa el petitorio nacional para esta definición específica."
+    },
+    {
+      "id": 288,
+      "career": "Medicina",
+      "block": "Cuidado integral",
+      "title": "Esquema de tratamiento para sífilis latente tardía",
+      "level": "I-3",
+      "specialty": "Medicina / Infectología",
+      "tags": [
+        "sífilis",
+        "tratamiento",
+        "esquema farmacológico"
+      ],
+      "statement": "Mujer de 60 años, asintomática, con RPR positivo a 8 diluciones. Su única pareja sexual es su esposo, sin antecedente de tratamiento previo ni de diagnóstico reciente.",
+      "question": "¿Cuál es el esquema de tratamiento que corresponde a este caso?",
+      "options": [
+        "Doxiciclina 100 mg vía oral cada 12 horas por 2 semanas.",
+        "Penicilina benzatínica 2 400 000 UI, una ampolla intramuscular semanal por 3 semanas.",
+        "Penicilina benzatínica 2 400 000 UI, una ampolla intramuscular en dosis única.",
+        "Bencilpenicilina sódica 1 000 000 UI, 4 ampollas endovenosas cada 4 horas por 2 semanas."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque una sífilis sin datos de infección reciente ni síntomas activos se clasifica como latente de duración desconocida o tardía, cuyo esquema es penicilina benzatínica 2 400 000 UI intramuscular semanal por 3 semanas. La dosis única corresponde a sífilis primaria o secundaria, no a este escenario; la doxiciclina oral es una alternativa solo ante alergia documentada a penicilina, no la primera línea; el esquema endovenoso con bencilpenicilina sódica corresponde a neurosífilis, no sustentada en este caso."
+    },
+    {
+      "id": 289,
+      "career": "Medicina",
+      "block": "Cuidado integral",
+      "title": "Primera línea farmacológica en hipertensión esencial",
+      "level": "I-2",
+      "specialty": "Medicina / Cardiovascular",
+      "tags": [
+        "hipertensión arterial",
+        "tratamiento farmacológico",
+        "primera línea"
+      ],
+      "statement": "Adulto de 45 años, sin comorbilidades, es diagnosticado con hipertensión arterial esencial tras confirmar cifras elevadas en tomas repetidas.",
+      "question": "¿Qué grupo farmacológico corresponde prescribir como primera elección?",
+      "options": [
+        "Betabloqueadores, por su efecto directo sobre la frecuencia cardiaca.",
+        "Diuréticos de asa, por su rapidez de acción en la reducción de la presión arterial.",
+        "Diuréticos tiazídicos, como primera línea recomendada en hipertensión esencial sin comorbilidades.",
+        "Inhibidores de aldosterona, por actuar sobre un mecanismo hormonal específico."
+      ],
+      "correct": 2,
+      "feedback": "Es correcta porque en hipertensión esencial sin otras comorbilidades los diuréticos tiazídicos son el grupo recomendado como primera línea, junto con IECA/ARA-II o calcioantagonistas según el caso. Los betabloqueadores ya no se recomiendan como primera línea salvo indicación específica (ej. cardiopatía isquémica); los diuréticos de asa se reservan para insuficiencia cardiaca o renal, no para el manejo inicial no complicado; los inhibidores de aldosterona son fármacos de tercera línea o para hipertensión resistente."
+    },
+    {
+      "id": 290,
+      "career": "Medicina",
+      "block": "Salud pública",
+      "title": "Profilaxis post-exposición ocupacional a VIH",
+      "level": "I-3",
+      "specialty": "Medicina / Bioseguridad",
+      "tags": [
+        "profilaxis post-exposición",
+        "VIH",
+        "accidente punzocortante"
+      ],
+      "statement": "Personal de salud sufre un pinchazo con aguja usada en un paciente cuyo estado serológico para VIH es desconocido.",
+      "question": "¿Qué conducta corresponde de inmediato?",
+      "options": [
+        "Evaluar solo la severidad del accidente antes de decidir cualquier medida adicional.",
+        "Lavar la herida con agua y jabón, e iniciar profilaxis antirretroviral lo antes posible según protocolo.",
+        "Solicitar serologías basales y esperar el resultado antes de decidir sobre la profilaxis.",
+        "Iniciar antirretrovirales recién a las 72 horas post-exposición, como plazo estándar de inicio."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque la eficacia de la profilaxis post-exposición depende de iniciarla lo antes posible (idealmente dentro de las primeras horas), por lo que corresponde lavar la herida de inmediato e iniciar antirretrovirales sin esperar resultados serológicos, dado que el estado del paciente fuente es desconocido. Solo evaluar la severidad sin actuar retrasa una intervención tiempo-dependiente; esperar el resultado de serologías pierde la ventana de eficacia; considerar las 72 horas como el momento recomendado para iniciar (en vez de como plazo límite) invierte la urgencia real del protocolo, que exige iniciar cuanto antes."
+    },
+    {
+      "id": 291,
+      "career": "Medicina",
+      "block": "Cuidado integral",
+      "title": "Dosis de hierro y ácido fólico en anemia gestacional",
+      "level": "I-2",
+      "specialty": "Medicina / Salud materna",
+      "tags": [
+        "anemia gestacional",
+        "hierro elemental",
+        "ácido fólico"
+      ],
+      "statement": "Gestante de 28 semanas es diagnosticada con anemia ferropénica confirmada por hemoglobina y perfil de hierro.",
+      "question": "¿Cuál es la dosis oral diaria de hierro elemental y ácido fólico recomendada para su tratamiento según la normativa vigente?",
+      "options": [
+        "60 mg de hierro elemental y 400 ug de ácido fólico.",
+        "120 mg de hierro elemental y 800 ug de ácido fólico.",
+        "80 mg de hierro elemental y 600 ug de ácido fólico.",
+        "200 mg de hierro elemental y 1000 ug de ácido fólico."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque el esquema de tratamiento (no de prevención) para anemia ferropénica confirmada en gestante corresponde a 120 mg de hierro elemental y 800 ug de ácido fólico diarios, dosis mayor a la usada solo como suplementación preventiva. Las dosis de 60 mg/400 ug corresponden al esquema preventivo, insuficiente para tratamiento de una anemia ya confirmada; 80 mg/600 ug y 200 mg/1000 ug no corresponden a los esquemas normados para este escenario específico."
+    },
+    {
+      "id": 292,
+      "career": "Medicina",
+      "block": "Salud pública",
+      "title": "Oportunidad de vacunación BCG y HvB en parto domiciliario",
+      "level": "I-2",
+      "specialty": "Medicina / Inmunizaciones",
+      "tags": [
+        "BCG",
+        "hepatitis B",
+        "recién nacido",
+        "oportunidad de vacunación"
+      ],
+      "statement": "Neonato de 8 horas de vida, producto de parto domiciliario en zona rural, sin complicaciones evidentes, es traído al establecimiento de salud más cercano.",
+      "question": "¿Cuál es el tiempo ideal para que reciba las vacunas BCG y contra hepatitis B (HvB)?",
+      "options": [
+        "Dentro de las primeras 24 horas de vida.",
+        "Hasta la primera semana de vida, sin urgencia adicional.",
+        "Hasta el primer mes de vida, si el niño se mantiene asintomático.",
+        "Hasta el año de vida, junto con el resto del esquema regular."
+      ],
+      "correct": 0,
+      "feedback": "Es correcta porque la vacunación con BCG y HvB debe aplicarse idealmente dentro de las primeras 24 horas de vida, ventana que reduce el riesgo de formas graves de tuberculosis y de transmisión perinatal de hepatitis B. Esperar hasta la semana, el mes o el año retrasa una protección que es más eficaz cuanto más temprana, especialmente relevante en un parto domiciliario sin control previo del estado materno."
+    },
+    {
+      "id": 293,
+      "career": "Medicina",
+      "block": "Cuidado integral",
+      "title": "Clasificación de dengue probable por grupos de riesgo",
+      "level": "I-2",
+      "specialty": "Medicina / Enfermedades metaxénicas",
+      "tags": [
+        "dengue",
+        "clasificación por grupos",
+        "manejo clínico"
+      ],
+      "statement": "Varón de 38 años acude con fiebre, cefalea, mialgias y dolor retro-ocular de 2 días de evolución, sin signos de alarma ni condiciones o comorbilidades que constituyan factores de riesgo.",
+      "question": "¿A qué grupo de manejo corresponde clasificar este caso de dengue probable?",
+      "options": [
+        "Grupo A: manejo ambulatorio, sin signos de alarma ni condición coexistente de riesgo.",
+        "Grupo B1: manejo con observación, por presentar alguna condición coexistente de riesgo.",
+        "Grupo B2: hospitalización, por presentar algún signo de alarma.",
+        "Grupo C: manejo en unidad de cuidados intensivos, por dengue grave."
+      ],
+      "correct": 0,
+      "feedback": "Es correcta porque, al no presentar signos de alarma ni condiciones coexistentes que constituyan factor de riesgo, el caso corresponde al grupo A, que se maneja de forma ambulatoria con hidratación y control. El grupo B1 aplica a quienes tienen una condición de riesgo asociada aunque estén clínicamente estables; el B2 requiere al menos un signo de alarma presente; el grupo C corresponde a dengue grave con compromiso de órgano, shock o sangrado severo, ninguno presente en este caso."
+    },
+    {
+      "id": 294,
+      "career": "Medicina",
+      "block": "Cuidado integral",
+      "title": "Clasificación de anemia ajustada por altitud",
+      "level": "I-2",
+      "specialty": "Medicina / Hematología",
+      "tags": [
+        "anemia",
+        "altitud",
+        "corrección de hemoglobina"
+      ],
+      "statement": "Mujer no gestante de 30 años, residente en un establecimiento de salud ubicado a 3200 msnm, presenta hemoglobina de 11.9 g/dL medida por hemoglobinómetro.",
+      "question": "¿Cuál es la clasificación correcta considerando el ajuste por altitud?",
+      "options": [
+        "Anemia severa, por lo que corresponde referir para manejo en el siguiente nivel.",
+        "Anemia leve, por lo que corresponde solicitar ferritina en el establecimiento más cercano con esa capacidad.",
+        "Anemia moderada, por lo que corresponde iniciar tratamiento farmacológico de inmediato.",
+        "Ausencia de anemia, ya que el valor está dentro de rango normal sin ajuste por altitud."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque, al ajustar la hemoglobina por la altitud de residencia (3200 msnm), el valor de 11.9 g/dL corresponde a una anemia de grado leve, lo que amerita un estudio complementario (ferritina) antes de decidir un tratamiento específico, en vez de iniciar manejo farmacológico sin mayor caracterización. Clasificarla como severa o moderada sobrestima la gravedad real tras el ajuste; considerar que no hay anemia ignora que, incluso ajustado, el valor está por debajo del punto de corte para esta población."
+    },
+    {
+      "id": 295,
+      "career": "Medicina",
+      "block": "Cuidado integral",
+      "title": "Manejo de preeclampsia con criterios de severidad",
+      "level": "I-3",
+      "specialty": "Medicina / Salud materna",
+      "tags": [
+        "preeclampsia",
+        "sulfato de magnesio",
+        "manejo obstétrico"
+      ],
+      "statement": "Gestante de 36 años con antecedente de hipertensión arterial acude con cefalea intensa y visión borrosa. Examen: PA 170/110 mmHg, edema en miembros inferiores sin fóvea. Laboratorio: creatinina 1.2 mg/dL, plaquetas 150 000/mm3.",
+      "question": "¿Cuál es la conducta terapéutica inicial que corresponde?",
+      "options": [
+        "Transfusión de plaquetas, dado el valor limítrofe del recuento plaquetario.",
+        "Sulfato de magnesio intravenoso, para prevención de convulsiones dado el cuadro de preeclampsia con criterios de severidad.",
+        "Nifedipino por vía oral como única medida, sin manejo adicional.",
+        "Finalizar el embarazo de inmediato, sin estabilización previa del cuadro."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque la cefalea intensa y la visión borrosa con presión arterial en rango severo constituyen preeclampsia con criterios de severidad, cuyo manejo inicial prioritario es el sulfato de magnesio intravenoso para prevenir la progresión a eclampsia, junto con el control tensional. La transfusión de plaquetas no está indicada con un recuento de 150 000/mm3, que no constituye trombocitopenia significativa; el nifedipino oral como única medida no aborda la prevención de convulsiones que exige el cuadro; finalizar el embarazo sin estabilizar antes con sulfato de magnesio expone a mayor riesgo de convulsión durante el manejo."
+    },
+    {
+      "id": 296,
+      "career": "Medicina",
+      "block": "Salud pública",
+      "title": "Terapia preventiva de tuberculosis según indicación",
+      "level": "I-2",
+      "specialty": "Medicina / Tuberculosis",
+      "tags": [
+        "terapia preventiva",
+        "tuberculosis",
+        "VIH"
+      ],
+      "statement": "Paciente de 30 años con diagnóstico reciente de infección por VIH, sin síntomas respiratorios, con baciloscopía y radiografía de tórax normales, aún no cuenta con resultado de la prueba de tuberculina (PPD).",
+      "question": "¿Corresponde iniciar terapia preventiva para tuberculosis en este paciente?",
+      "options": [
+        "No, porque debe esperarse el resultado de la prueba de tuberculina antes de decidir.",
+        "Sí, porque las personas con diagnóstico de infección por VIH tienen indicación de terapia preventiva independientemente del resultado del PPD.",
+        "No, porque la terapia preventiva solo aplica a contactos de un caso índice de tuberculosis pulmonar.",
+        "Sí, pero solo si se confirma antes infección tuberculosa latente mediante IGRA."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque las personas con diagnóstico de infección por VIH tienen indicación de terapia preventiva para tuberculosis independientemente del resultado del PPD o IGRA, una vez descartada enfermedad tuberculosa activa (lo cual ya se cumple con baciloscopía y radiografía normales). Esperar el PPD retrasa una indicación que no depende de ese resultado en este grupo; limitar la terapia preventiva solo a contactos de caso índice deja fuera a un grupo con indicación propia (personas con VIH); exigir confirmación de infección latente por IGRA antes de iniciar no corresponde al criterio aplicado específicamente a personas con VIH."
+    },
+    {
+      "id": 297,
+      "career": "Medicina",
+      "block": "Cuidado integral",
+      "title": "Meta de control metabólico en diabetes mellitus tipo 2",
+      "level": "I-2",
+      "specialty": "Medicina / Enfermedades no transmisibles",
+      "tags": [
+        "diabetes mellitus",
+        "hemoglobina glicosilada",
+        "meta de control"
+      ],
+      "statement": "Mujer de 55 años con diagnóstico de diabetes mellitus tipo 2 de 10 años de evolución, en tratamiento con metformina, con estilos de vida saludables y seguimiento periódico regular.",
+      "question": "¿Cuál de las siguientes se considera la meta principal en el manejo integral de esta paciente?",
+      "options": [
+        "Glicemia en ayunas entre 80 y 126 mg/dL.",
+        "Hemoglobina glicosilada menor a 7%.",
+        "Perímetro de cintura menor a 94 cm.",
+        "Glicemia postprandial de 2 horas menor a 140 mg/dL."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque la hemoglobina glicosilada menor a 7% es la meta principal de control metabólico a mediano plazo en el manejo integral de la diabetes mellitus tipo 2 en la mayoría de adultos, al reflejar el control glicémico de los últimos tres meses. La glicemia en ayunas y la postprandial son parámetros puntuales complementarios, no la meta principal de seguimiento; el perímetro de cintura menor a 94 cm es un valor de referencia para varones (no para esta paciente mujer, cuyo punto de corte es distinto) y evalúa riesgo cardiovascular, no control metabólico directo."
+    },
+    {
+      "id": 298,
+      "career": "Medicina",
+      "block": "Salud pública",
+      "title": "Tamizaje de cáncer colorrectal en paciente con antecedente familiar",
+      "level": "I-2",
+      "specialty": "Medicina / Prevención del cáncer",
+      "tags": [
+        "cáncer colorrectal",
+        "tamizaje",
+        "antecedente familiar"
+      ],
+      "statement": "Adulto de 40 años completamente asintomático, con antecedente de cáncer colorrectal en su padre, acude a una campaña de prevención del cáncer.",
+      "question": "¿Cuál es la recomendación de tamizaje más adecuada para este caso?",
+      "options": [
+        "Colonoscopía a partir de los 60 años, igual que en la población general.",
+        "Prueba de sangre oculta en heces cada 5 años, sin otra evaluación adicional.",
+        "Observación clínica periódica para decidir más adelante si amerita colonoscopía.",
+        "Colonoscopía en el presente, por el antecedente familiar de primer grado que adelanta el inicio del tamizaje."
+      ],
+      "correct": 3,
+      "feedback": "Es correcta porque un antecedente familiar de primer grado con cáncer colorrectal adelanta el inicio del tamizaje respecto a la población general, correspondiendo colonoscopía en el momento actual y no esperar a la edad estándar. Postergar el tamizaje a los 60 años, o limitarse a sangre oculta en heces, no considera el riesgo aumentado que aporta el antecedente familiar; la observación clínica sin definir una conducta activa retrasa una decisión que ya está indicada dado ese antecedente."
+    },
+    {
+      "id": 299,
+      "career": "Medicina",
+      "block": "Cuidado integral",
+      "title": "Valoración clínica del adulto mayor según motivo de consulta",
+      "level": "I-3",
+      "specialty": "Medicina / Geriatría",
+      "tags": [
+        "VACAM",
+        "adulto mayor",
+        "valoración clínica"
+      ],
+      "statement": "Adulto mayor de 75 años acude a consulta externa por primera vez, acompañado de su hija, refiriendo que desea iniciar sus chequeos de salud propios de su edad, sin otro motivo de consulta específico.",
+      "question": "¿Qué tipo de valoración clínica del adulto mayor corresponde aplicar?",
+      "options": [
+        "Valoración corta, limitada a los aspectos más urgentes.",
+        "Valoración breve, orientada solo al motivo puntual de la consulta.",
+        "Valoración completa, dado que es su primera atención integral sin otro motivo que la oriente.",
+        "No aplicar ninguna valoración estructurada, dado que no refiere síntomas."
+      ],
+      "correct": 2,
+      "feedback": "Es correcta porque, al tratarse de una primera atención sin un motivo clínico puntual que oriente hacia una valoración más focalizada, corresponde una valoración clínica completa del adulto mayor que evalúe de forma integral las áreas funcional, mental y biológica. La valoración corta o breve se reservan para reevaluaciones de seguimiento o motivos de consulta específicos ya conocidos; omitir toda valoración estructurada desaprovecha la oportunidad de una primera evaluación integral en un adulto mayor sin controles previos."
+    },
+    {
+      "id": 300,
+      "career": "Medicina",
+      "block": "Gestión",
+      "title": "Diferencia entre sospecha de reacción adversa y ESAVI",
+      "level": "I-2",
+      "specialty": "Medicina / Farmacovigilancia",
+      "tags": [
+        "ESAVI",
+        "reacción adversa",
+        "farmacovigilancia"
+      ],
+      "statement": "Tras administrar un medicamento a un paciente, este reporta náuseas. Aunque no se ha confirmado aún la relación causal entre el síntoma y el medicamento, el evento debe consignarse en la historia clínica y reportarse.",
+      "question": "¿Cómo se denomina este reporte, dado que solo existe sospecha y no confirmación de causalidad?",
+      "options": [
+        "Evento centinela, por tratarse de un evento que amerita investigación institucional inmediata.",
+        "ESAVI, al corresponder específicamente a un evento posterior a la vacunación.",
+        "Sospecha de reacción adversa, que se reporta ante la sola posibilidad de asociación con el medicamento, sin requerir confirmación causal previa.",
+        "Reacción bien caracterizada, por tratarse de un efecto ya descrito previamente para ese medicamento."
+      ],
+      "correct": 2,
+      "feedback": "Es correcta porque el sistema de farmacovigilancia exige reportar toda sospecha de reacción adversa ante la sola posibilidad de asociación con el medicamento administrado, sin necesidad de confirmar previamente la relación causal, precisamente para no perder señales de seguridad tempranas. ESAVI es el término específico para eventos posteriores a la vacunación, no a cualquier medicamento; un evento centinela implica un daño grave que amerita investigación institucional inmediata, categoría distinta a una simple sospecha de reacción adversa; calificarlo como reacción ya caracterizada presupone una relación causal ya establecida, que es justamente lo que aún no se ha confirmado."
+    },
+    {
+      "id": 301,
+      "career": "Medicina",
+      "block": "Cuidado integral",
+      "title": "Indicación de radiografía en sospecha de neumotórax",
+      "level": "I-2",
+      "specialty": "Medicina / Imagenología",
+      "tags": [
+        "neumotórax",
+        "radiografía",
+        "atrapamiento aéreo"
+      ],
+      "statement": "Paciente con sospecha clínica de neumotórax y atrapamiento aéreo requiere confirmación radiográfica para un diagnóstico adecuado.",
+      "question": "¿En qué fase respiratoria debe tomarse la radiografía de tórax para un diagnóstico adecuado?",
+      "options": [
+        "En decúbito supino, independientemente de la fase respiratoria.",
+        "En inspiración máxima, como en la radiografía de tórax estándar.",
+        "En espiración, ya que resalta mejor el aire atrapado y la línea pleural visceral.",
+        "En decúbito prono, para mejor visualización del mediastino."
+      ],
+      "correct": 2,
+      "feedback": "Es correcta porque la radiografía en espiración aumenta el contraste entre el aire pleural y el parénquima pulmonar, haciendo más visible la línea pleural visceral y el aire atrapado, lo que mejora la sensibilidad diagnóstica frente a un neumotórax sutil. La posición decúbito supino o prono no sustituye la proyección de pie estándar ni resuelve la necesidad de la fase espiratoria; la inspiración máxima es la técnica habitual para otras indicaciones, pero no maximiza la visibilidad de un neumotórax pequeño como sí lo hace la espiración."
+    },
+    {
+      "id": 302,
+      "career": "Medicina",
+      "block": "Cuidado integral",
+      "title": "Clasificación de riesgo cardiovascular en consulta de control",
+      "level": "I-2",
+      "specialty": "Medicina / Cardiovascular",
+      "tags": [
+        "riesgo cardiovascular",
+        "hipertensión",
+        "obesidad"
+      ],
+      "statement": "Agricultor de 62 años acude a su control anual. Examen: PA 142/90 mmHg, FC 80 X', FR 20 X', IMC 31 kg/m2, sin evidencia de daño a órgano blanco.",
+      "question": "¿Qué nivel de riesgo cardiovascular corresponde a este paciente?",
+      "options": [
+        "Bajo a moderado, por la combinación de cifras tensionales límite y obesidad sin daño de órgano blanco evidente.",
+        "Alto, equivalente al de un paciente con daño de órgano blanco ya confirmado.",
+        "Moderado a alto, asumiendo que la obesidad por sí sola ya define ese nivel superior.",
+        "Bajo, al no presentar aún daño de órgano blanco documentado."
+      ],
+      "correct": 0,
+      "feedback": "Es correcta porque la combinación de hipertensión en rango límite (grado 1) con obesidad (IMC 31), sin evidencia de daño de órgano blanco, ubica al paciente en un riesgo cardiovascular bajo a moderado según la estratificación habitual, que integra cifras tensionales, factores de riesgo adicionales y daño de órgano ya presente. Clasificarlo como alto equipara indebidamente este caso a uno con daño de órgano confirmado; considerar que la obesidad por sí sola ya define moderado a alto ignora que la estratificación integra varios factores, no uno aislado; clasificarlo solo como bajo subestima el peso combinado de la hipertensión y la obesidad ya presentes."
+    },
+    {
+      "id": 303,
+      "career": "Medicina",
+      "block": "Salud pública",
+      "title": "Notificación de fiebre amarilla selvática",
+      "level": "I-2",
+      "specialty": "Medicina / Vigilancia epidemiológica",
+      "tags": [
+        "fiebre amarilla",
+        "notificación",
+        "enfermedad metaxénica"
+      ],
+      "statement": "En un puesto de salud de la región central se detecta un caso de fiebre amarilla selvática.",
+      "question": "¿Con qué periodicidad corresponde notificar este caso?",
+      "options": [
+        "Semanal, junto con el resto de casos acumulados de la semana epidemiológica.",
+        "De manera inmediata, dada la letalidad y el potencial epidémico de la enfermedad.",
+        "Quincenal, según el cronograma regular de notificación de enfermedades metaxénicas.",
+        "Mensual, como parte del consolidado rutinario de vigilancia."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque la fiebre amarilla selvática, por su alta letalidad y su potencial de generar un brote urbano si se introduce el vector adecuado, exige notificación inmediata ante la sola sospecha, sin esperar consolidados semanales, quincenales o mensuales que retrasarían una respuesta que debe ser oportuna dada la gravedad del evento."
     }
   ],
   "norms": [
