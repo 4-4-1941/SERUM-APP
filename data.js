@@ -7395,5 +7395,162 @@ window.SERUMS_DATA = {
         }
       ]
     }
-  ]
+  ],
+  "realExamRegistry": [
+    {
+      "career": "Psicología",
+      "examLabel": "SERUMS 2025-I (Tipo A)",
+      "date": "2025-04-06",
+      "questionCount": 100,
+      "sourceFile": "2025psicologia-tipo-a.pdf",
+      "analyzedDate": "2026-07-18",
+      "gapsGeneratedIds": [
+        253,
+        256,
+        262,
+        268,
+        270
+      ]
+    },
+    {
+      "career": "Psicología",
+      "examLabel": "SERUMS 2025-I (Tipo B)",
+      "date": "2025-04-06",
+      "questionCount": 100,
+      "sourceFile": "2025psicologia-tipo-b.pdf",
+      "analyzedDate": "2026-07-18",
+      "gapsGeneratedIds": [
+        253,
+        256,
+        262,
+        268,
+        270
+      ]
+    },
+    {
+      "career": "Psicología",
+      "examLabel": "SERUMS 2025-I (agosto)",
+      "date": "2025-08-24",
+      "questionCount": 100,
+      "sourceFile": "serumpsicologia2025.pdf",
+      "analyzedDate": "2026-07-18",
+      "gapsGeneratedIds": [
+        253,
+        256,
+        262,
+        268,
+        270
+      ]
+    },
+    {
+      "career": "Psicología",
+      "examLabel": "SERUMS 2026-I",
+      "date": "2026-04-19",
+      "questionCount": 100,
+      "sourceFile": "2026-1psicologia.pdf",
+      "analyzedDate": "2026-07-18",
+      "gapsGeneratedIds": [
+        273,
+        274,
+        275,
+        276,
+        277,
+        278,
+        279,
+        280,
+        281,
+        282,
+        283,
+        284,
+        285,
+        286,
+        287
+      ]
+    },
+    {
+      "career": "Medicina",
+      "examLabel": "SERUMS 2025-I (agosto)",
+      "date": "2025-08-24",
+      "questionCount": 100,
+      "sourceFile": "serummedicina2025.pdf",
+      "analyzedDate": "2026-07-19",
+      "gapsGeneratedIds": [
+        288,
+        289,
+        290,
+        291,
+        292,
+        293,
+        294,
+        295,
+        296,
+        297,
+        298,
+        299,
+        300,
+        301,
+        302,
+        303
+      ]
+    },
+    {
+      "career": "Medicina",
+      "examLabel": "SERUMS 2026-I",
+      "date": "2026-04-19",
+      "questionCount": 100,
+      "sourceFile": "2026-1medicina.pdf",
+      "analyzedDate": "2026-07-19",
+      "gapsGeneratedIds": [
+        288,
+        289,
+        290,
+        291,
+        292,
+        293,
+        294,
+        295,
+        296,
+        297,
+        298,
+        299,
+        300,
+        301,
+        302,
+        303
+      ]
+    },
+    {
+      "career": "Medicina",
+      "examLabel": "SERUMS 2025-II",
+      "date": "2025-04-06",
+      "questionCount": 100,
+      "sourceFile": "2025medicina-tipo-b.pdf",
+      "analyzedDate": "2026-07-19",
+      "gapsGeneratedIds": [
+        288,
+        289,
+        290,
+        291,
+        292,
+        293,
+        294,
+        295,
+        296,
+        297,
+        298,
+        299,
+        300,
+        301,
+        302,
+        303
+      ]
+    }
+  ],
+  "examBlockWeights": {
+    "Gestión": 0.26,
+    "Salud pública": 0.26,
+    "Ética e interculturalidad": 0.16,
+    "Cuidado integral": 0.18,
+    "Investigación": 0.14
+  }
 };
