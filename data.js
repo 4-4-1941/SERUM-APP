@@ -7596,6 +7596,902 @@ window.SERUMS_DATA = {
       ],
       "correct": 0,
       "feedback": "Correcta porque la teleorientación brinda información y consejería sin constituir un acto médico diagnóstico definitivo, a diferencia de la teleconsulta; no implica prescripción obligatoria ni reemplaza la atención presencial en emergencias."
+    },
+    {
+      "id": 330,
+      "career": "Tecnología Médica - Laboratorio Clínico",
+      "block": "Cuidado integral",
+      "title": "Hemólisis en muestra de sangre",
+      "level": "I-2",
+      "specialty": "Laboratorio Clínico",
+      "tags": [
+        "fase preanalítica",
+        "hemólisis",
+        "control de calidad"
+      ],
+      "statement": "Al centrifugar una muestra de sangre venosa, el tecnólogo observa que el suero presenta coloración rosada-rojiza.",
+      "question": "¿Qué fase del proceso analítico se ve comprometida y qué conducta corresponde?",
+      "options": [
+        "Fase postanalítica; informar el resultado con nota aclaratoria",
+        "Fase preanalítica; rechazar la muestra y solicitar nueva toma",
+        "Fase analítica; recalibrar el equipo antes de continuar",
+        "Ninguna fase se afecta; el resultado es válido"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque la hemólisis es un error de fase preanalítica (toma o manejo inadecuado de la muestra) que altera múltiples analitos; el procedimiento correcto es rechazar la muestra y solicitar una nueva extracción."
+    },
+    {
+      "id": 331,
+      "career": "Tecnología Médica - Laboratorio Clínico",
+      "block": "Salud pública",
+      "title": "Manejo de residuos biocontaminados",
+      "level": "I-2",
+      "specialty": "Laboratorio Clínico",
+      "tags": [
+        "bioseguridad",
+        "residuos sólidos hospitalarios",
+        "clase A"
+      ],
+      "statement": "En el laboratorio se generan tubos de muestra usados, guantes descartables y torundas con sangre.",
+      "question": "¿Cómo deben clasificarse y disponerse estos residuos según la normativa de gestión de residuos sólidos hospitalarios?",
+      "options": [
+        "Residuo común, bolsa negra",
+        "Residuo biocontaminado clase A, bolsa roja con símbolo de bioseguridad",
+        "Residuo especial, contenedor rígido amarillo",
+        "Residuo reciclable, bolsa verde"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque el material con fluidos biológicos corresponde a residuo biocontaminado clase A, que se dispone en bolsa roja rotulada con el símbolo de riesgo biológico, diferenciándolo del residuo común y del especial (químico/farmacéutico)."
+    },
+    {
+      "id": 332,
+      "career": "Tecnología Médica - Laboratorio Clínico",
+      "block": "Gestión",
+      "title": "Cadena de custodia de muestras",
+      "level": "I-2",
+      "specialty": "Laboratorio Clínico",
+      "tags": [
+        "control de calidad interno",
+        "cadena de custodia",
+        "trazabilidad"
+      ],
+      "statement": "Un establecimiento de primer nivel deriva muestras a un laboratorio de referencia para procesamiento especializado.",
+      "question": "¿Qué elemento es indispensable para garantizar la trazabilidad de la muestra durante su transporte?",
+      "options": [
+        "El color del tubo únicamente",
+        "La cadena de custodia documentada (identificación, tiempos, responsables y condiciones de transporte)",
+        "El nombre del médico tratante en el tubo",
+        "La firma del paciente en el tubo"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque la cadena de custodia documentada asegura la trazabilidad e integridad de la muestra desde la toma hasta el resultado, requisito de control de calidad interno en la referencia entre establecimientos."
+    },
+    {
+      "id": 333,
+      "career": "Tecnología Médica - Terapia Física",
+      "block": "Cuidado integral",
+      "title": "Lumbalgia mecánica aguda",
+      "level": "I-2",
+      "specialty": "Terapia Física",
+      "tags": [
+        "lumbalgia",
+        "fisioterapia",
+        "signos de alarma"
+      ],
+      "statement": "Paciente de 35 años acude por dolor lumbar de 3 días tras cargar peso, sin irradiación, sin déficit neurológico ni signos de alarma.",
+      "question": "¿Cuál es el manejo fisioterapéutico inicial más apropiado en el primer nivel de atención?",
+      "options": [
+        "Reposo absoluto en cama por 2 semanas",
+        "Educación postural, mantenerse activo y ejercicios de movilidad gradual",
+        "Derivación inmediata a resonancia magnética",
+        "Inmovilización con faja lumbar permanente"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque en lumbalgia mecánica sin signos de alarma la evidencia recomienda mantener actividad, educación postural y ejercicio gradual; el reposo prolongado y la inmovilización permanente retrasan la recuperación."
+    },
+    {
+      "id": 334,
+      "career": "Tecnología Médica - Terapia Física",
+      "block": "Cuidado integral",
+      "title": "Rehabilitación post-ACV",
+      "level": "I-2",
+      "specialty": "Terapia Física",
+      "tags": [
+        "ACV",
+        "escala de Barthel",
+        "rehabilitación"
+      ],
+      "statement": "Paciente con hemiparesia derecha tras un ACV isquémico hace 3 semanas inicia terapia física ambulatoria.",
+      "question": "¿Qué instrumento es el más adecuado para evaluar el nivel de independencia funcional en actividades básicas de la vida diaria?",
+      "options": [
+        "Escala de Glasgow",
+        "Índice de Barthel",
+        "Escala de Braden",
+        "Mini Mental State Examination"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque el Índice de Barthel mide el grado de independencia en actividades básicas de la vida diaria (alimentación, aseo, movilidad), a diferencia de Glasgow (nivel de conciencia), Braden (riesgo de úlceras) o el MMSE (función cognitiva)."
+    },
+    {
+      "id": 335,
+      "career": "Tecnología Médica - Terapia Física",
+      "block": "Gestión",
+      "title": "Referencia y contrarreferencia en rehabilitación",
+      "level": "I-2",
+      "specialty": "Terapia Física",
+      "tags": [
+        "referencia",
+        "contrarreferencia",
+        "continuidad de cuidado"
+      ],
+      "statement": "Un paciente que recibió terapia física en un hospital de referencia regresa a su establecimiento de origen para continuar el tratamiento.",
+      "question": "¿Qué documento garantiza la continuidad adecuada del plan terapéutico entre ambos niveles de atención?",
+      "options": [
+        "La hoja de contrarreferencia con el resumen del plan y evolución",
+        "Solo el carné de citas del paciente",
+        "Una llamada telefónica informal entre terapeutas",
+        "No se requiere documento si el paciente recuerda el tratamiento"
+      ],
+      "correct": 0,
+      "feedback": "Correcta porque la hoja de contrarreferencia formaliza y documenta el resumen clínico y el plan terapéutico, asegurando la continuidad del cuidado entre niveles de atención."
+    },
+    {
+      "id": 336,
+      "career": "Tecnología Médica - Terapia del Lenguaje",
+      "block": "Cuidado integral",
+      "title": "Tamizaje del desarrollo del lenguaje",
+      "level": "I-2",
+      "specialty": "Terapia del Lenguaje",
+      "tags": [
+        "desarrollo del lenguaje",
+        "tamizaje",
+        "hitos"
+      ],
+      "statement": "En el control de crecimiento y desarrollo, una madre refiere que su hijo de 3 años aún no combina palabras en frases simples.",
+      "question": "¿Qué conducta corresponde según los hitos esperados del desarrollo del lenguaje?",
+      "options": [
+        "Es una variación normal, no requiere evaluación",
+        "Referir para evaluación especializada del lenguaje, ya que a esa edad se espera el uso de frases de 2-3 palabras",
+        "Esperar hasta los 5 años para evaluar",
+        "Indicar únicamente estimulación en casa sin derivación"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque a los 3 años se espera la combinación de palabras en frases simples; la ausencia de este hito amerita evaluación especializada oportuna, no solo observación domiciliaria."
+    },
+    {
+      "id": 337,
+      "career": "Tecnología Médica - Terapia del Lenguaje",
+      "block": "Cuidado integral",
+      "title": "Disfagia post-ACV",
+      "level": "I-2",
+      "specialty": "Terapia del Lenguaje",
+      "tags": [
+        "disfagia",
+        "signos de alarma",
+        "seguridad de la vía aérea"
+      ],
+      "statement": "Un adulto mayor con ACV reciente presenta tos durante la ingesta de líquidos y voz húmeda tras deglutir.",
+      "question": "¿Qué indica este cuadro clínico y cuál es la conducta inmediata?",
+      "options": [
+        "Signo de disfagia con riesgo de broncoaspiración; suspender vía oral y evaluar deglución especializada",
+        "Es normal en el adulto mayor, continuar alimentación habitual",
+        "Indica reflujo gastroesofágico, indicar antiácidos",
+        "Requiere solo cambio de posición al comer, sin evaluación adicional"
+      ],
+      "correct": 0,
+      "feedback": "Correcta porque la tos y voz húmeda post-deglución son signos de alarma de disfagia con riesgo de broncoaspiración, que exigen suspender la vía oral y una evaluación especializada de la deglución antes de reiniciarla."
+    },
+    {
+      "id": 338,
+      "career": "Tecnología Médica - Terapia del Lenguaje",
+      "block": "Salud pública",
+      "title": "Detección temprana en el primer nivel",
+      "level": "I-2",
+      "specialty": "Terapia del Lenguaje",
+      "tags": [
+        "detección temprana",
+        "primer nivel",
+        "trastornos de comunicación"
+      ],
+      "statement": "El establecimiento de primer nivel implementa tamizajes de lenguaje dentro del control CRED (Crecimiento y Desarrollo).",
+      "question": "¿Cuál es el principal beneficio de la detección temprana de trastornos de comunicación en este nivel de atención?",
+      "options": [
+        "Reducir costos administrativos del establecimiento",
+        "Permitir intervención oportuna que mejora el pronóstico del desarrollo del lenguaje y aprendizaje",
+        "Aumentar el número de derivaciones especializadas sin otro beneficio",
+        "Sustituir la evaluación especializada posterior"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque la detección temprana en el primer nivel permite iniciar intervención oportuna, lo cual mejora el pronóstico del desarrollo lingüístico y del aprendizaje posterior."
+    },
+    {
+      "id": 339,
+      "career": "Tecnología Médica - Optometría",
+      "block": "Cuidado integral",
+      "title": "Tamizaje visual escolar",
+      "level": "I-2",
+      "specialty": "Optometría",
+      "tags": [
+        "agudeza visual",
+        "tamizaje escolar",
+        "ambliopía"
+      ],
+      "statement": "En una campaña escolar, un niño de 7 años presenta agudeza visual de 20/40 en el ojo izquierdo y 20/20 en el derecho, sin síntomas referidos.",
+      "question": "¿Cuál es la conducta más apropiada?",
+      "options": [
+        "No requiere seguimiento por ser asintomático",
+        "Derivar a evaluación oftalmológica para descartar ambliopía",
+        "Indicar solo lentes correctivos sin derivación",
+        "Repetir el tamizaje en un año sin derivar"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque la diferencia de agudeza visual entre ambos ojos en edad escolar es un signo de alarma para ambliopía, que debe derivarse oportunamente ya que su tratamiento es más efectivo cuanto antes se detecta."
+    },
+    {
+      "id": 340,
+      "career": "Tecnología Médica - Optometría",
+      "block": "Cuidado integral",
+      "title": "Signos de alarma para glaucoma",
+      "level": "I-2",
+      "specialty": "Optometría",
+      "tags": [
+        "glaucoma",
+        "presión intraocular",
+        "derivación oftalmológica"
+      ],
+      "statement": "Un paciente de 55 años acude por control de rutina y refiere pérdida progresiva de la visión periférica, sin dolor.",
+      "question": "¿Qué hallazgo debe hacer sospechar glaucoma y motivar derivación urgente?",
+      "options": [
+        "Pérdida de visión periférica progresiva asociada a posible aumento de la presión intraocular",
+        "Visión borrosa transitoria tras leer largo tiempo",
+        "Sequedad ocular leve",
+        "Enrojecimiento ocular por alergia estacional"
+      ],
+      "correct": 0,
+      "feedback": "Correcta porque la pérdida progresiva e indolora del campo visual periférico es característica del glaucoma crónico, que requiere derivación oftalmológica para confirmar presión intraocular elevada y daño del nervio óptico."
+    },
+    {
+      "id": 341,
+      "career": "Tecnología Médica - Optometría",
+      "block": "Salud pública",
+      "title": "Programa de salud ocular en el primer nivel",
+      "level": "I-2",
+      "specialty": "Optometría",
+      "tags": [
+        "salud ocular",
+        "primer nivel",
+        "prevención"
+      ],
+      "statement": "El establecimiento de salud implementa un programa de tamizaje visual dirigido a adultos mayores de 40 años.",
+      "question": "¿Cuál es el objetivo principal de este tipo de programas preventivos en salud ocular?",
+      "options": [
+        "Vender lentes correctivos a la población",
+        "Detectar oportunamente patologías prevalentes (catarata, glaucoma, retinopatía) para reducir la ceguera evitable",
+        "Sustituir la atención oftalmológica especializada",
+        "Cumplir metas administrativas sin impacto clínico"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque los programas de tamizaje visual buscan la detección oportuna de patologías oculares prevalentes para reducir la ceguera evitable, articulándose con—y no sustituyendo—la atención especializada."
+    },
+    {
+      "id": 342,
+      "career": "Tecnología Médica - Radiología",
+      "block": "Cuidado integral",
+      "title": "Principio ALARA en protección radiológica",
+      "level": "I-2",
+      "specialty": "Radiología",
+      "tags": [
+        "protección radiológica",
+        "ALARA",
+        "bioseguridad"
+      ],
+      "statement": "Durante la toma de una radiografía de tórax a una paciente en edad fértil, el tecnólogo debe aplicar medidas de protección radiológica.",
+      "question": "¿Qué principio guía la reducción de la dosis de radiación al mínimo necesario sin comprometer la calidad diagnóstica?",
+      "options": [
+        "Principio ALARA (As Low As Reasonably Achievable)",
+        "Principio de precaución absoluta, evitando el estudio",
+        "Principio de máxima dosis diagnóstica",
+        "Principio de doble exposición para confirmar hallazgos"
+      ],
+      "correct": 0,
+      "feedback": "Correcta porque el principio ALARA establece mantener la dosis de radiación tan baja como sea razonablemente posible, sin sacrificar la calidad diagnóstica necesaria del estudio."
+    },
+    {
+      "id": 343,
+      "career": "Tecnología Médica - Radiología",
+      "block": "Gestión",
+      "title": "Criterios de derivación para estudio de imagen",
+      "level": "I-2",
+      "specialty": "Radiología",
+      "tags": [
+        "criterios de derivación",
+        "gestión",
+        "primer nivel"
+      ],
+      "statement": "En un establecimiento I-3 se evalúa si un paciente con dolor abdominal atípico requiere derivación para tomografía.",
+      "question": "¿Qué criterio debe primar para justificar la derivación a un estudio de imagen de mayor complejidad?",
+      "options": [
+        "La preferencia del paciente por un estudio más moderno",
+        "La pertinencia clínica según hallazgos y disponibilidad tecnológica del nivel de atención",
+        "La disponibilidad de tiempo del tecnólogo",
+        "El costo más bajo del estudio, independiente de la indicación clínica"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque la derivación a estudios de mayor complejidad debe basarse en la pertinencia clínica de los hallazgos y en la capacidad resolutiva del nivel de atención, no en preferencias o criterios ajenos a la indicación médica."
+    },
+    {
+      "id": 344,
+      "career": "Tecnología Médica - Radiología",
+      "block": "Cuidado integral",
+      "title": "Preparación para estudio contrastado",
+      "level": "I-2",
+      "specialty": "Radiología",
+      "tags": [
+        "medio de contraste",
+        "preparación del paciente",
+        "seguridad"
+      ],
+      "statement": "Un paciente será sometido a una tomografía abdominal con medio de contraste yodado endovenoso.",
+      "question": "¿Qué debe verificarse prioritariamente antes de administrar el contraste?",
+      "options": [
+        "Antecedente de alergia al yodo y función renal del paciente",
+        "Únicamente el ayuno de 2 horas",
+        "El color de piel del paciente",
+        "La talla del paciente exclusivamente"
+      ],
+      "correct": 0,
+      "feedback": "Correcta porque antes de administrar contraste yodado debe descartarse alergia previa e insuficiencia renal, dado el riesgo de reacción anafiláctica y nefropatía inducida por contraste."
+    },
+    {
+      "id": 345,
+      "career": "Tecnología Médica - Terapia Ocupacional",
+      "block": "Cuidado integral",
+      "title": "Actividades de la vida diaria en el adulto mayor",
+      "level": "I-2",
+      "specialty": "Terapia Ocupacional",
+      "tags": [
+        "AVD",
+        "independencia funcional",
+        "adulto mayor"
+      ],
+      "statement": "Un adulto mayor con artrosis de manos refiere dificultad progresiva para vestirse y cocinar de forma independiente.",
+      "question": "¿Cuál es el enfoque principal de la intervención de terapia ocupacional en este caso?",
+      "options": [
+        "Entrenar estrategias compensatorias y adaptar el entorno para mantener la mayor independencia posible en las AVD",
+        "Indicar reposo absoluto de las manos",
+        "Derivar directamente a cuidados paliativos",
+        "Recomendar que un familiar realice todas las actividades por el paciente"
+      ],
+      "correct": 0,
+      "feedback": "Correcta porque la terapia ocupacional busca preservar la autonomía funcional mediante estrategias compensatorias y adaptaciones del entorno, evitando tanto la inmovilización innecesaria como la dependencia total de terceros."
+    },
+    {
+      "id": 346,
+      "career": "Tecnología Médica - Terapia Ocupacional",
+      "block": "Cuidado integral",
+      "title": "Terapia ocupacional en salud mental comunitaria",
+      "level": "I-2",
+      "specialty": "Terapia Ocupacional",
+      "tags": [
+        "salud mental comunitaria",
+        "rehabilitación psicosocial"
+      ],
+      "statement": "Un paciente con esquizofrenia estabilizada participa en un programa de rehabilitación psicosocial en el centro de salud mental comunitario.",
+      "question": "¿Cuál es el aporte específico de la terapia ocupacional en este equipo interdisciplinario?",
+      "options": [
+        "Prescribir el tratamiento farmacológico",
+        "Facilitar la reinserción mediante actividades significativas que fortalezcan habilidades funcionales y sociales",
+        "Realizar el diagnóstico psiquiátrico",
+        "Sustituir el rol del trabajador social"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque el terapeuta ocupacional interviene facilitando la reinserción social y funcional a través de actividades significativas, complementando —sin sustituir— el rol médico o de trabajo social."
+    },
+    {
+      "id": 347,
+      "career": "Tecnología Médica - Terapia Ocupacional",
+      "block": "Gestión",
+      "title": "Plan de intervención interdisciplinario",
+      "level": "I-2",
+      "specialty": "Terapia Ocupacional",
+      "tags": [
+        "trabajo interdisciplinario",
+        "plan de intervención",
+        "gestión"
+      ],
+      "statement": "En un establecimiento de rehabilitación, el terapeuta ocupacional participa en la elaboración del plan de atención de un paciente con discapacidad múltiple.",
+      "question": "¿Qué característica debe tener este plan para ser efectivo?",
+      "options": [
+        "Ser elaborado de forma aislada por cada profesional sin coordinación",
+        "Ser integrado y consensuado con el equipo interdisciplinario, con metas comunes centradas en el paciente",
+        "Priorizar únicamente los objetivos administrativos del establecimiento",
+        "Basarse solo en la opinión del familiar responsable"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque un plan de intervención efectivo debe ser interdisciplinario, consensuado y centrado en metas comunes orientadas al paciente, evitando la fragmentación de la atención."
+    },
+    {
+      "id": 348,
+      "career": "Ingeniería Sanitaria",
+      "block": "Salud pública",
+      "title": "Cloración del agua para consumo humano",
+      "level": "I-2",
+      "specialty": "Ingeniería Sanitaria",
+      "tags": [
+        "cloro residual",
+        "calidad del agua",
+        "vigilancia sanitaria"
+      ],
+      "statement": "En una localidad rural se realiza el monitoreo de cloro residual libre en el agua distribuida por la red pública.",
+      "question": "¿Cuál es el rango de cloro residual libre considerado adecuado para garantizar la desinfección sin riesgo para el consumo humano?",
+      "options": [
+        "0.0 mg/L",
+        "0.5 a 1.0 mg/L",
+        "5.0 a 10.0 mg/L",
+        "No se requiere monitoreo si la fuente es subterránea"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque el rango de 0.5 a 1.0 mg/L de cloro residual libre garantiza la desinfección efectiva del agua sin representar riesgo para la salud, mientras que niveles insuficientes o excesivos comprometen la calidad o la seguridad del consumo."
+    },
+    {
+      "id": 349,
+      "career": "Ingeniería Sanitaria",
+      "block": "Gestión",
+      "title": "Gestión de residuos sólidos hospitalarios",
+      "level": "I-2",
+      "specialty": "Ingeniería Sanitaria",
+      "tags": [
+        "residuos sólidos",
+        "gestión hospitalaria",
+        "clasificación"
+      ],
+      "statement": "Un establecimiento de salud requiere organizar la segregación de sus residuos sólidos según su naturaleza.",
+      "question": "¿Cuál es el criterio correcto de clasificación de residuos sólidos hospitalarios?",
+      "options": [
+        "Solo se clasifican en orgánicos e inorgánicos",
+        "Se clasifican en biocontaminados, especiales y comunes, cada uno con su propio circuito de manejo",
+        "Todo residuo se trata como peligroso independientemente de su origen",
+        "La clasificación depende únicamente del volumen generado"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque la normativa de gestión de residuos sólidos hospitalarios establece tres categorías (biocontaminados, especiales y comunes), cada una con un circuito de manejo, almacenamiento y disposición diferenciado."
+    },
+    {
+      "id": 350,
+      "career": "Ingeniería Sanitaria",
+      "block": "Salud pública",
+      "title": "Vigilancia de calidad de agua en zona rural",
+      "level": "I-2",
+      "specialty": "Ingeniería Sanitaria",
+      "tags": [
+        "vigilancia sanitaria",
+        "agua segura",
+        "zona rural"
+      ],
+      "statement": "En una comunidad rural sin sistema de red pública, la población consume agua de pozo sin tratamiento previo.",
+      "question": "¿Cuál es la intervención prioritaria del ingeniero sanitario en este contexto?",
+      "options": [
+        "Recomendar el consumo directo sin intervención",
+        "Evaluar la calidad del agua y promover métodos de desinfección domiciliaria (cloración, hervido) mientras se gestiona infraestructura",
+        "Prohibir el consumo de agua sin ofrecer alternativa",
+        "Derivar el problema exclusivamente al gobierno central sin intervención local"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque, ante la ausencia de red tratada, la intervención prioritaria es evaluar la calidad del agua y promover medidas de desinfección domiciliaria como medida inmediata, mientras se gestiona una solución de infraestructura a mediano plazo."
+    },
+    {
+      "id": 351,
+      "career": "Biología",
+      "block": "Investigación",
+      "title": "Identificación de agente causal",
+      "level": "I-2",
+      "specialty": "Biología",
+      "tags": [
+        "diagnóstico microbiológico",
+        "identificación",
+        "investigación"
+      ],
+      "statement": "En un brote de diarrea aguda en una comunidad, se envían muestras al laboratorio para determinar el agente etiológico.",
+      "question": "¿Cuál es el primer paso metodológico para la identificación confiable del agente causal?",
+      "options": [
+        "Aplicar tratamiento empírico sin identificar el agente",
+        "Realizar cultivo y pruebas bioquímicas/moleculares a partir de una muestra correctamente recolectada",
+        "Basarse únicamente en la sintomatología reportada",
+        "Descartar la investigación si los síntomas ya cedieron"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque la identificación confiable del agente causal requiere una muestra adecuadamente recolectada y su procesamiento mediante cultivo y pruebas bioquímicas o moleculares, no basta la sola sintomatología clínica."
+    },
+    {
+      "id": 352,
+      "career": "Biología",
+      "block": "Salud pública",
+      "title": "Vigilancia entomológica de vectores",
+      "level": "I-2",
+      "specialty": "Biología",
+      "tags": [
+        "Aedes aegypti",
+        "vigilancia entomológica",
+        "dengue"
+      ],
+      "statement": "En una zona con transmisión activa de dengue, el biólogo realiza vigilancia entomológica para estimar el índice aédico.",
+      "question": "¿Qué representa el índice aédico y por qué es relevante en salud pública?",
+      "options": [
+        "El número de casos confirmados de dengue en la semana",
+        "La proporción de viviendas con presencia de criaderos del vector, usada para estimar riesgo de transmisión",
+        "La cantidad de fumigaciones realizadas",
+        "El número de defunciones asociadas al dengue"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque el índice aédico mide la proporción de viviendas infestadas con criaderos del vector, permitiendo estimar el riesgo de transmisión y orientar las medidas de control vectorial."
+    },
+    {
+      "id": 353,
+      "career": "Biología",
+      "block": "Investigación",
+      "title": "Bioseguridad en manejo de muestras biológicas",
+      "level": "I-2",
+      "specialty": "Biología",
+      "tags": [
+        "bioseguridad",
+        "niveles de bioseguridad",
+        "manejo de muestras"
+      ],
+      "statement": "Un biólogo procesa muestras potencialmente infecciosas en el laboratorio de un establecimiento de salud.",
+      "question": "¿Qué medida de bioseguridad es indispensable para minimizar el riesgo de exposición ocupacional?",
+      "options": [
+        "Trabajar sin equipo de protección si la muestra parece de bajo riesgo",
+        "Uso de equipo de protección personal y cabina de bioseguridad según el nivel de riesgo del agente",
+        "Procesar todas las muestras en un mismo espacio sin distinción de riesgo",
+        "Delegar el manejo de muestras a personal no capacitado para ahorrar tiempo"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque el manejo seguro de muestras biológicas exige equipo de protección personal y, según el nivel de riesgo del agente, cabina de bioseguridad adecuada, minimizando la exposición ocupacional."
+    },
+    {
+      "id": 354,
+      "career": "Medicina Veterinaria",
+      "block": "Salud pública",
+      "title": "Protocolo ante mordedura canina",
+      "level": "I-2",
+      "specialty": "Medicina Veterinaria",
+      "tags": [
+        "rabia",
+        "zoonosis",
+        "mordedura"
+      ],
+      "statement": "Un paciente acude tras ser mordido por un perro callejero de estado de vacunación desconocido.",
+      "question": "¿Cuál es la conducta correcta desde el enfoque de salud pública veterinaria?",
+      "options": [
+        "No requiere seguimiento si la herida es superficial",
+        "Notificar el caso, iniciar profilaxis antirrábica según protocolo y realizar seguimiento del animal agresor si es posible",
+        "Sacrificar al animal de inmediato sin observación",
+        "Indicar solo antibiótico tópico sin notificación"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque ante una mordedura de perro con estado vacunal desconocido corresponde notificar el caso, iniciar profilaxis antirrábica según el protocolo vigente y, de ser posible, realizar seguimiento u observación del animal agresor durante 10 días."
+    },
+    {
+      "id": 355,
+      "career": "Medicina Veterinaria",
+      "block": "Salud pública",
+      "title": "Control de brucelosis en zona rural",
+      "level": "I-2",
+      "specialty": "Medicina Veterinaria",
+      "tags": [
+        "brucelosis",
+        "zoonosis",
+        "control epidemiológico"
+      ],
+      "statement": "En una zona ganadera se detectan casos humanos de brucelosis asociados al consumo de productos lácteos no pasteurizados.",
+      "question": "¿Cuál es la medida de control más efectiva a nivel poblacional?",
+      "options": [
+        "Tratar solo a los casos humanos confirmados",
+        "Promover la pasteurización de lácteos y coordinar el diagnóstico/control del ganado infectado con el sector agropecuario",
+        "Prohibir el consumo de todo producto animal de forma permanente",
+        "Esperar a que los casos disminuyan espontáneamente"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque el control efectivo de la brucelosis requiere un abordaje intersectorial: promover la pasteurización de lácteos y coordinar con el sector agropecuario el diagnóstico y control del ganado infectado, enfoque característico de 'Una Salud' (One Health)."
+    },
+    {
+      "id": 356,
+      "career": "Medicina Veterinaria",
+      "block": "Gestión",
+      "title": "Vigilancia epidemiológica bajo enfoque One Health",
+      "level": "I-2",
+      "specialty": "Medicina Veterinaria",
+      "tags": [
+        "One Health",
+        "vigilancia epidemiológica",
+        "articulación intersectorial"
+      ],
+      "statement": "Se reporta un incremento inusual de mortalidad en aves de corral en una zona con actividad avícola, sin casos humanos aún confirmados.",
+      "question": "¿Qué acción refleja mejor el enfoque 'Una Salud' (One Health) en este escenario?",
+      "options": [
+        "Manejar el evento exclusivamente como un problema agropecuario, sin informar al sector salud",
+        "Articular la notificación y respuesta entre los sectores salud, agricultura y ambiente de forma coordinada",
+        "Esperar la confirmación de casos humanos antes de iniciar cualquier acción",
+        "Delegar toda la respuesta al criador de aves sin intervención institucional"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque el enfoque One Health integra la respuesta coordinada entre los sectores salud, agricultura y ambiente ante eventos zoonóticos potenciales, sin esperar a que se confirmen casos humanos para actuar."
+    },
+    {
+      "id": 357,
+      "career": "Farmacia y Bioquímica",
+      "block": "Cuidado integral",
+      "title": "Uso racional de antibióticos",
+      "level": "I-2",
+      "specialty": "Farmacia y Bioquímica",
+      "tags": [
+        "uso racional de medicamentos",
+        "resistencia antimicrobiana",
+        "dispensación"
+      ],
+      "statement": "Un paciente solicita en la farmacia un antibiótico de amplio espectro sin receta médica, refiriendo síntomas de resfrío común.",
+      "question": "¿Cuál es la conducta correcta del profesional de farmacia según el enfoque de uso racional de medicamentos?",
+      "options": [
+        "Dispensar el antibiótico solicitado sin más indagación",
+        "No dispensar el antibiótico sin prescripción y orientar al paciente sobre el manejo sintomático y la consulta médica si persisten los síntomas",
+        "Recomendar un antibiótico distinto de mayor espectro",
+        "Indicar que se automedique con la dosis que recuerde de tratamientos previos"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque el uso racional de medicamentos exige no dispensar antibióticos sin prescripción médica, orientando al paciente hacia manejo sintomático y evaluación médica, dado que el resfrío común es de etiología viral y el uso indebido de antibióticos favorece la resistencia antimicrobiana."
+    },
+    {
+      "id": 358,
+      "career": "Farmacia y Bioquímica",
+      "block": "Gestión",
+      "title": "Petitorio Nacional Único de Medicamentos Esenciales",
+      "level": "I-2",
+      "specialty": "Farmacia y Bioquímica",
+      "tags": [
+        "PNUME",
+        "gestión de medicamentos",
+        "abastecimiento"
+      ],
+      "statement": "Un establecimiento de primer nivel elabora su cuadro básico de medicamentos para el siguiente periodo.",
+      "question": "¿Qué documento normativo debe orientar la selección de medicamentos esenciales en este proceso?",
+      "options": [
+        "El criterio exclusivo del proveedor farmacéutico",
+        "El Petitorio Nacional Único de Medicamentos Esenciales (PNUME)",
+        "El listado de medicamentos más vendidos comercialmente",
+        "Las recomendaciones informales del personal de farmacia"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque el PNUME es el documento normativo oficial que orienta la selección de medicamentos esenciales según criterios de eficacia, seguridad y costo-efectividad para los establecimientos de salud."
+    },
+    {
+      "id": 359,
+      "career": "Farmacia y Bioquímica",
+      "block": "Cuidado integral",
+      "title": "Notificación de reacción adversa a medicamento",
+      "level": "I-2",
+      "specialty": "Farmacia y Bioquímica",
+      "tags": [
+        "farmacovigilancia",
+        "reacción adversa",
+        "notificación"
+      ],
+      "statement": "Un paciente presenta una erupción cutánea generalizada tras iniciar un nuevo antihipertensivo prescrito hace 5 días.",
+      "question": "¿Cuál es la acción correspondiente desde el sistema de farmacovigilancia?",
+      "options": [
+        "No es necesario reportar si el paciente mejora espontáneamente",
+        "Notificar la sospecha de reacción adversa al sistema de farmacovigilancia, independientemente de la evolución posterior",
+        "Reportar solo si la reacción es mortal",
+        "Indicar al paciente que suspenda el reporte para no generar alarma"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque toda sospecha de reacción adversa a medicamentos debe notificarse al sistema de farmacovigilancia independientemente de su gravedad o evolución, ya que esta información es clave para la seguridad farmacológica poblacional."
+    },
+    {
+      "id": 360,
+      "career": "Trabajo Social",
+      "block": "Ética e interculturalidad",
+      "title": "Enfoque intercultural en zona rural",
+      "level": "I-2",
+      "specialty": "Trabajo Social",
+      "tags": [
+        "interculturalidad",
+        "pertinencia cultural",
+        "atención rural"
+      ],
+      "statement": "Una gestante de una comunidad andina prefiere el parto vertical y la presencia de una partera tradicional durante la atención.",
+      "question": "¿Cuál es la conducta más adecuada del profesional de trabajo social junto al equipo de salud?",
+      "options": [
+        "Imponer el protocolo biomédico estándar desestimando la preferencia cultural",
+        "Facilitar la articulación entre la preferencia cultural de la paciente y la atención segura del parto, promoviendo el enfoque intercultural en salud",
+        "Negar la atención institucional si la paciente mantiene su preferencia",
+        "Ignorar el tema por no ser competencia del establecimiento"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque el enfoque intercultural en salud busca articular las prácticas y preferencias culturales de la paciente (parto vertical, acompañamiento de partera) con la atención segura institucional, sin imponer ni negar la atención."
+    },
+    {
+      "id": 361,
+      "career": "Trabajo Social",
+      "block": "Cuidado integral",
+      "title": "Valoración social de riesgo familiar",
+      "level": "I-2",
+      "specialty": "Trabajo Social",
+      "tags": [
+        "riesgo familiar",
+        "valoración social",
+        "vulnerabilidad"
+      ],
+      "statement": "Durante una visita domiciliaria, el trabajador social identifica signos de negligencia en el cuidado de un niño con desnutrición crónica.",
+      "question": "¿Cuál es la acción prioritaria del profesional de trabajo social ante este hallazgo?",
+      "options": [
+        "Registrar la visita sin acciones adicionales",
+        "Realizar la valoración social de riesgo, articular con el equipo de salud y activar la ruta de protección correspondiente",
+        "Retirar al niño del hogar de forma unilateral",
+        "Esperar una segunda visita antes de reportar cualquier hallazgo"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque ante signos de negligencia el trabajador social debe realizar la valoración de riesgo, coordinar con el equipo de salud y activar la ruta de protección establecida (p. ej. DEMUNA/CEM), sin actuar unilateralmente ni omitir el reporte."
+    },
+    {
+      "id": 362,
+      "career": "Trabajo Social",
+      "block": "Gestión",
+      "title": "Articulación con redes de protección social",
+      "level": "I-2",
+      "specialty": "Trabajo Social",
+      "tags": [
+        "DEMUNA",
+        "CEM",
+        "redes de protección"
+      ],
+      "statement": "Se identifica un caso de violencia familiar en una paciente atendida en el establecimiento de salud.",
+      "question": "¿Con qué instancia debe articularse prioritariamente el trabajo social para la protección de la víctima?",
+      "options": [
+        "Centro de Emergencia Mujer (CEM) u otra instancia de protección correspondiente según el caso",
+        "Solo con la familia del agresor",
+        "Ninguna, es un asunto exclusivamente clínico",
+        "Con un medio de comunicación local"
+      ],
+      "correct": 0,
+      "feedback": "Correcta porque el trabajo social debe articularse con las instancias de protección social pertinentes (CEM, DEMUNA, Fiscalía según el caso) para garantizar la protección de la víctima, más allá de la atención clínica inicial."
+    },
+    {
+      "id": 363,
+      "career": "Nutrición",
+      "block": "Cuidado integral",
+      "title": "Evaluación antropométrica infantil",
+      "level": "I-2",
+      "specialty": "Nutrición",
+      "tags": [
+        "antropometría",
+        "estado nutricional",
+        "curvas de crecimiento"
+      ],
+      "statement": "Un niño de 18 meses presenta peso para la talla por debajo de -2 desviaciones estándar según las curvas de crecimiento de la OMS.",
+      "question": "¿Qué diagnóstico nutricional corresponde a este hallazgo?",
+      "options": [
+        "Sobrepeso",
+        "Desnutrición aguda (emaciación)",
+        "Talla baja crónica exclusivamente",
+        "Estado nutricional normal"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque un peso para la talla menor a -2 DE según los patrones de crecimiento de la OMS define desnutrición aguda (emaciación), distinta de la desnutrición crónica (talla/edad) o del sobrepeso."
+    },
+    {
+      "id": 364,
+      "career": "Nutrición",
+      "block": "Salud pública",
+      "title": "Prevención de anemia infantil",
+      "level": "I-2",
+      "specialty": "Nutrición",
+      "tags": [
+        "anemia ferropénica",
+        "suplementación con hierro",
+        "primer nivel"
+      ],
+      "statement": "En el control CRED de un lactante de 6 meses se inicia esquema de prevención de anemia según la norma vigente.",
+      "question": "¿Cuál es la intervención estándar de prevención de anemia ferropénica en este grupo etario?",
+      "options": [
+        "Suplementación preventiva con hierro según esquema nacional, independientemente de que la hemoglobina sea normal",
+        "Suplementar solo si ya presenta anemia confirmada",
+        "Indicar únicamente alimentos ricos en hierro sin suplementación",
+        "Esperar hasta el año de edad para iniciar cualquier medida"
+      ],
+      "correct": 0,
+      "feedback": "Correcta porque la estrategia nacional de prevención de anemia establece la suplementación preventiva con hierro a partir de los 6 meses de forma universal, no solo ante anemia ya confirmada, dada la alta prevalencia y el impacto en el desarrollo infantil."
+    },
+    {
+      "id": 365,
+      "career": "Nutrición",
+      "block": "Cuidado integral",
+      "title": "Consejería nutricional en la gestante",
+      "level": "I-2",
+      "specialty": "Nutrición",
+      "tags": [
+        "consejería nutricional",
+        "gestación",
+        "ganancia de peso"
+      ],
+      "statement": "Una gestante con índice de masa corporal pregestacional normal acude a su primer control prenatal en el primer trimestre.",
+      "question": "¿Qué aspecto debe priorizar la consejería nutricional en esta etapa?",
+      "options": [
+        "Indicar una dieta hipocalórica estricta para evitar sobrepeso",
+        "Orientar sobre una ganancia de peso adecuada según su IMC pregestacional y una alimentación balanceada con suplementación de ácido fólico/hierro según esquema",
+        "Recomendar ayuno prolongado para reducir náuseas",
+        "No brindar consejería hasta el tercer trimestre"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque la consejería nutricional en la gestante debe orientar sobre la ganancia de peso adecuada según su IMC pregestacional, una alimentación balanceada y la suplementación correspondiente (ácido fólico, hierro), evitando restricciones inapropiadas como dietas hipocalóricas o ayuno."
+    },
+    {
+      "id": 366,
+      "career": "Odontología",
+      "block": "Cuidado integral",
+      "title": "Tratamiento restaurador atraumático (ART)",
+      "level": "I-2",
+      "specialty": "Odontología",
+      "tags": [
+        "ART",
+        "caries dental",
+        "primer nivel"
+      ],
+      "statement": "En una zona rural sin acceso a equipo odontológico convencional, se identifica una lesión de caries de profundidad moderada en un molar temporal.",
+      "question": "¿Qué técnica es la más apropiada para este contexto de recursos limitados?",
+      "options": [
+        "Extracción inmediata como única alternativa",
+        "Tratamiento Restaurador Atraumático (ART), que permite remover tejido cariado y restaurar con instrumental manual sin electricidad",
+        "Posponer el tratamiento indefinidamente hasta contar con equipo convencional",
+        "Aplicar solo flúor tópico sin remover el tejido cariado"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque el ART está diseñado para contextos de recursos limitados, permitiendo la remoción del tejido cariado y la restauración con instrumental manual, sin requerir electricidad ni equipo convencional."
+    },
+    {
+      "id": 367,
+      "career": "Odontología",
+      "block": "Salud pública",
+      "title": "Fluorización y prevención de caries escolar",
+      "level": "I-2",
+      "specialty": "Odontología",
+      "tags": [
+        "fluorización",
+        "prevención",
+        "salud bucal escolar"
+      ],
+      "statement": "Un programa de salud bucal escolar implementa aplicaciones tópicas de flúor en niños de una institución educativa.",
+      "question": "¿Cuál es el fundamento principal de esta estrategia preventiva poblacional?",
+      "options": [
+        "Reemplazar la necesidad de cepillado dental diario",
+        "Reducir la incidencia de caries dental mediante el fortalecimiento del esmalte, como medida preventiva poblacional costo-efectiva",
+        "Sustituir la atención odontológica curativa completamente",
+        "Aplicarse solo en niños que ya presentan caries"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque la aplicación tópica de flúor en el ámbito escolar es una medida preventiva poblacional costo-efectiva que fortalece el esmalte y reduce la incidencia de caries, sin reemplazar la higiene diaria ni la atención curativa cuando es necesaria."
+    },
+    {
+      "id": 368,
+      "career": "Odontología",
+      "block": "Cuidado integral",
+      "title": "Urgencia odontológica: absceso dentoalveolar",
+      "level": "I-2",
+      "specialty": "Odontología",
+      "tags": [
+        "absceso dentoalveolar",
+        "urgencia odontológica",
+        "manejo inicial"
+      ],
+      "statement": "Un paciente acude por dolor dental intenso, edema facial y fiebre, con antecedente de caries no tratada.",
+      "question": "¿Cuál es el manejo inicial correcto en el primer nivel de atención ante sospecha de absceso dentoalveolar con compromiso sistémico?",
+      "options": [
+        "Indicar solo analgésico y esperar evolución espontánea",
+        "Drenaje si es posible, iniciar antibioticoterapia y referir si hay signos de extensión o compromiso sistémico",
+        "Extracción inmediata sin evaluar el estado sistémico del paciente",
+        "Indicar enjuagues bucales exclusivamente"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque ante un absceso dentoalveolar con edema y fiebre (signos de compromiso sistémico) corresponde drenaje cuando es posible, inicio de antibioticoterapia y referencia oportuna si hay signos de extensión, evitando conductas expectantes o intervenciones sin evaluación sistémica."
     }
   ],
   "norms": [
