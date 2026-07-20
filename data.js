@@ -8492,6 +8492,581 @@ window.SERUMS_DATA = {
       ],
       "correct": 1,
       "feedback": "Correcta porque ante un absceso dentoalveolar con edema y fiebre (signos de compromiso sistémico) corresponde drenaje cuando es posible, inicio de antibioticoterapia y referencia oportuna si hay signos de extensión, evitando conductas expectantes o intervenciones sin evaluación sistémica."
+    },
+    {
+      "id": 369,
+      "career": "Tecnología Médica - Laboratorio Clínico",
+      "block": "Investigación",
+      "title": "Control de calidad interno",
+      "level": "I-2",
+      "specialty": "Laboratorio Clínico",
+      "tags": [
+        "control de calidad",
+        "curva de Levey-Jennings",
+        "confiabilidad analítica"
+      ],
+      "statement": "El laboratorio procesa diariamente un suero control junto con las muestras de pacientes y registra los valores en una gráfica de control.",
+      "question": "¿Cuál es el propósito principal de este procedimiento?",
+      "options": [
+        "Cumplir un requisito administrativo sin impacto en los resultados",
+        "Detectar variaciones o errores sistemáticos del proceso analítico antes de liberar resultados de pacientes",
+        "Reemplazar la calibración periódica del equipo",
+        "Reducir el tiempo de entrega de resultados"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque el control de calidad interno (p. ej. mediante gráficas de Levey-Jennings) permite detectar variaciones o errores sistemáticos del proceso analítico antes de emitir resultados de pacientes, garantizando su confiabilidad."
+    },
+    {
+      "id": 370,
+      "career": "Tecnología Médica - Laboratorio Clínico",
+      "block": "Cuidado integral",
+      "title": "Toma de muestra para gasometría arterial",
+      "level": "I-2",
+      "specialty": "Laboratorio Clínico",
+      "tags": [
+        "gasometría arterial",
+        "fase preanalítica",
+        "manejo de muestra"
+      ],
+      "statement": "Se obtiene una muestra de sangre arterial para gasometría en un paciente con dificultad respiratoria.",
+      "question": "¿Qué condición de manejo de la muestra es indispensable para no alterar el resultado?",
+      "options": [
+        "Dejarla a temperatura ambiente sin límite de tiempo",
+        "Evitar burbujas de aire, sellar herméticamente y procesarla en el menor tiempo posible (idealmente en hielo si hay demora)",
+        "Agitarla vigorosamente antes de procesar",
+        "Almacenarla varias horas antes del análisis sin refrigeración"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque la exposición al aire, la demora y la falta de refrigeración alteran los valores de gases en sangre; se debe evitar burbujas, sellar la jeringa y procesar rápidamente, refrigerando si el traslado se prolonga."
+    },
+    {
+      "id": 371,
+      "career": "Tecnología Médica - Laboratorio Clínico",
+      "block": "Gestión",
+      "title": "Reporte de valores críticos",
+      "level": "I-2",
+      "specialty": "Laboratorio Clínico",
+      "tags": [
+        "valores críticos",
+        "notificación",
+        "seguridad del paciente"
+      ],
+      "statement": "Un resultado de potasio sérico de 6.8 mEq/L es detectado en un paciente ambulatorio.",
+      "question": "¿Cuál es la conducta correcta del tecnólogo médico ante este hallazgo?",
+      "options": [
+        "Registrar el resultado en el sistema y esperar a que el médico lo revise en su próxima consulta programada",
+        "Notificar de inmediato al médico tratante o responsable del establecimiento, dado que es un valor crítico",
+        "Repetir la prueba al día siguiente sin notificar",
+        "Descartar el resultado por posible error sin verificarlo"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque los valores críticos, como una hiperpotasemia severa, requieren notificación inmediata al personal responsable, ya que implican riesgo vital y necesitan intervención oportuna."
+    },
+    {
+      "id": 372,
+      "career": "Tecnología Médica - Terapia Física",
+      "block": "Cuidado integral",
+      "title": "Signos de alarma en lumbalgia",
+      "level": "I-2",
+      "specialty": "Terapia Física",
+      "tags": [
+        "banderas rojas",
+        "lumbalgia",
+        "derivación"
+      ],
+      "statement": "Un paciente con dolor lumbar refiere además pérdida de control de esfínteres y debilidad progresiva en ambas piernas.",
+      "question": "¿Qué conducta corresponde ante estos hallazgos?",
+      "options": [
+        "Continuar el plan de ejercicios habitual para lumbalgia mecánica",
+        "Suspender el tratamiento fisioterapéutico habitual y derivar de urgencia por sospecha de síndrome de cauda equina",
+        "Indicar reposo en cama por una semana antes de reevaluar",
+        "Aplicar solo terapia con calor local"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque la pérdida de control de esfínteres asociada a debilidad progresiva son 'banderas rojas' que sugieren síndrome de cauda equina, una urgencia neuroquirúrgica que exige derivación inmediata, no manejo fisioterapéutico ambulatorio."
+    },
+    {
+      "id": 373,
+      "career": "Tecnología Médica - Terapia Física",
+      "block": "Cuidado integral",
+      "title": "Prevención de úlceras por presión",
+      "level": "I-2",
+      "specialty": "Terapia Física",
+      "tags": [
+        "úlceras por presión",
+        "escala de Braden",
+        "prevención"
+      ],
+      "statement": "Un paciente encamado de larga estancia presenta riesgo de desarrollar úlceras por presión.",
+      "question": "¿Qué instrumento se utiliza para estratificar este riesgo y orientar las medidas preventivas?",
+      "options": [
+        "Escala de Barthel",
+        "Escala de Braden",
+        "Escala de Glasgow",
+        "Índice de masa corporal"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque la Escala de Braden evalúa factores como percepción sensorial, humedad, actividad, movilidad, nutrición y fricción para estratificar el riesgo de úlceras por presión, a diferencia de Barthel (independencia funcional) o Glasgow (conciencia)."
+    },
+    {
+      "id": 374,
+      "career": "Tecnología Médica - Terapia Física",
+      "block": "Salud pública",
+      "title": "Rehabilitación basada en comunidad",
+      "level": "I-2",
+      "specialty": "Terapia Física",
+      "tags": [
+        "rehabilitación comunitaria",
+        "discapacidad",
+        "primer nivel"
+      ],
+      "statement": "En una zona rural sin acceso a centros de rehabilitación especializados, se plantea una estrategia para atender a personas con discapacidad física.",
+      "question": "¿Qué estrategia es más costo-efectiva y sostenible en este contexto?",
+      "options": [
+        "Trasladar a todos los pacientes a la capital regional de forma permanente",
+        "Implementar un programa de Rehabilitación Basada en la Comunidad (RBC) con participación de la familia y agentes comunitarios",
+        "No intervenir hasta que se construya un hospital especializado",
+        "Limitar la atención solo a quienes puedan pagar transporte privado"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque la Rehabilitación Basada en la Comunidad (RBC) es una estrategia costo-efectiva y sostenible que involucra a la familia y agentes comunitarios, ampliando la cobertura en zonas con acceso limitado a servicios especializados."
+    },
+    {
+      "id": 375,
+      "career": "Tecnología Médica - Terapia del Lenguaje",
+      "block": "Cuidado integral",
+      "title": "Tartamudez en la niñez",
+      "level": "I-2",
+      "specialty": "Terapia del Lenguaje",
+      "tags": [
+        "tartamudez",
+        "fluidez verbal",
+        "derivación"
+      ],
+      "statement": "Un niño de 4 años presenta repeticiones frecuentes de sílabas y bloqueos al hablar, con tensión facial visible al hacerlo.",
+      "question": "¿Cuál es la conducta más apropiada?",
+      "options": [
+        "Indicar a los padres que corrijan al niño cada vez que tartamudee",
+        "Derivar a evaluación especializada en fluidez verbal, evitando presionar o corregir abruptamente al niño",
+        "Esperar hasta la adolescencia para evaluar",
+        "Indicar que hable más lento sin evaluación adicional"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque ante signos de tartamudez con tensión física se recomienda derivación especializada oportuna, evitando estrategias que aumenten la ansiedad del niño como la corrección abrupta."
+    },
+    {
+      "id": 376,
+      "career": "Tecnología Médica - Terapia del Lenguaje",
+      "block": "Cuidado integral",
+      "title": "Evaluación de voz en docente",
+      "level": "I-2",
+      "specialty": "Terapia del Lenguaje",
+      "tags": [
+        "disfonía",
+        "higiene vocal",
+        "uso profesional de la voz"
+      ],
+      "statement": "Una docente refiere ronquera persistente de 3 semanas, asociada al uso intensivo de la voz en el aula.",
+      "question": "¿Cuál es el manejo inicial más adecuado desde terapia del lenguaje?",
+      "options": [
+        "Indicar reposo vocal absoluto de forma indefinida sin evaluación",
+        "Evaluar la función vocal, orientar en higiene vocal y técnicas de uso eficiente de la voz, derivando si no hay mejoría",
+        "Recomendar que deje de trabajar de forma permanente",
+        "No intervenir porque es un problema exclusivamente laboral"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque ante disfonía persistente corresponde evaluar la función vocal y orientar en higiene y técnica vocal, derivando a otorrinolaringología si no hay mejoría, sin recurrir a reposo vocal indefinido ni cese laboral como primera medida."
+    },
+    {
+      "id": 377,
+      "career": "Tecnología Médica - Terapia del Lenguaje",
+      "block": "Gestión",
+      "title": "Trabajo interdisciplinario en discapacidad múltiple",
+      "level": "I-2",
+      "specialty": "Terapia del Lenguaje",
+      "tags": [
+        "trabajo interdisciplinario",
+        "plan terapéutico",
+        "gestión"
+      ],
+      "statement": "Un niño con parálisis cerebral y compromiso del lenguaje recibe atención de terapia física, ocupacional y de lenguaje en el mismo establecimiento.",
+      "question": "¿Cómo debe organizarse la intervención de terapia del lenguaje en este caso?",
+      "options": [
+        "De manera aislada, sin coordinar con los otros profesionales",
+        "Articulada con el equipo interdisciplinario, dentro de un plan de intervención integral y consensuado",
+        "Solo si los padres lo solicitan explícitamente",
+        "Priorizando exclusivamente el componente motor sobre el comunicativo"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque en casos de discapacidad múltiple la intervención debe articularse dentro de un plan interdisciplinario integral, evitando la fragmentación entre las distintas áreas terapéuticas."
+    },
+    {
+      "id": 378,
+      "career": "Tecnología Médica - Optometría",
+      "block": "Cuidado integral",
+      "title": "Fatiga visual por uso de pantallas",
+      "level": "I-2",
+      "specialty": "Optometría",
+      "tags": [
+        "astenopía",
+        "fatiga visual",
+        "salud ocupacional"
+      ],
+      "statement": "Un trabajador de oficina refiere ojos secos, dolor de cabeza y visión borrosa intermitente tras jornadas prolongadas frente a la computadora.",
+      "question": "¿Cuál es la orientación inicial más apropiada?",
+      "options": [
+        "Indicar el uso continuo de pantallas sin pausas, ya que no representa riesgo",
+        "Recomendar la regla 20-20-20 (pausas visuales), ajuste de brillo/distancia de pantalla y evaluación optométrica si persisten los síntomas",
+        "Prescribir lentes de aumento sin evaluación previa",
+        "Indicar suspender el trabajo de forma indefinida"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque la fatiga visual digital (astenopía) se maneja inicialmente con medidas ergonómicas como la regla 20-20-20 y ajuste del entorno de trabajo, derivando a evaluación optométrica si los síntomas persisten."
+    },
+    {
+      "id": 379,
+      "career": "Tecnología Médica - Optometría",
+      "block": "Cuidado integral",
+      "title": "Retinopatía diabética: tamizaje",
+      "level": "I-2",
+      "specialty": "Optometría",
+      "tags": [
+        "retinopatía diabética",
+        "tamizaje",
+        "diabetes"
+      ],
+      "statement": "Un paciente con diagnóstico de diabetes mellitus tipo 2 de 5 años de evolución no ha tenido evaluación oftalmológica previa.",
+      "question": "¿Cuál es la conducta preventiva correcta en este paciente?",
+      "options": [
+        "No requiere evaluación ocular si no refiere síntomas visuales",
+        "Realizar tamizaje de fondo de ojo para detectar retinopatía diabética, dado que puede ser asintomática en etapas iniciales",
+        "Esperar a que aparezcan síntomas visuales evidentes antes de evaluar",
+        "Indicar únicamente control de glicemia sin evaluación ocular"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque la retinopatía diabética puede cursar asintomática en etapas iniciales, por lo que el tamizaje periódico de fondo de ojo está indicado en todo paciente diabético, independientemente de la presencia de síntomas visuales."
+    },
+    {
+      "id": 380,
+      "career": "Tecnología Médica - Optometría",
+      "block": "Gestión",
+      "title": "Criterios de referencia oftalmológica",
+      "level": "I-2",
+      "specialty": "Optometría",
+      "tags": [
+        "criterios de referencia",
+        "gestión",
+        "primer nivel"
+      ],
+      "statement": "En un establecimiento de primer nivel sin especialista, se evalúa a un paciente con disminución súbita e indolora de la visión en un ojo.",
+      "question": "¿Cuál es la conducta correcta desde la gestión de la atención?",
+      "options": [
+        "Indicar reposo y control en una semana sin derivar",
+        "Derivar de urgencia a oftalmología, dado que la pérdida visual súbita es un signo de alarma",
+        "Recetar lentes correctivos sin evaluación adicional",
+        "Registrar el caso y continuar con la atención programada habitual"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque la pérdida visual súbita e indolora constituye un signo de alarma (posible oclusión vascular retiniana u otra urgencia oftalmológica) que exige derivación inmediata, no manejo diferido en el primer nivel."
+    },
+    {
+      "id": 381,
+      "career": "Tecnología Médica - Radiología",
+      "block": "Cuidado integral",
+      "title": "Radiografía de tórax en paciente pediátrico",
+      "level": "I-2",
+      "specialty": "Radiología",
+      "tags": [
+        "radiología pediátrica",
+        "protección radiológica",
+        "colimación"
+      ],
+      "statement": "Se realiza una radiografía de tórax a un lactante para descartar neumonía.",
+      "question": "¿Qué medida es prioritaria para minimizar la exposición radiológica en este paciente?",
+      "options": [
+        "Usar la misma técnica y colimación que en un adulto",
+        "Ajustar la técnica radiográfica y colimar el haz al área de interés, usando protección gonadal cuando sea posible",
+        "Repetir la placa varias veces para asegurar buena calidad de imagen",
+        "Omitir la protección radiológica por ser un procedimiento rápido"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque en pacientes pediátricos, más sensibles a la radiación, se debe ajustar la técnica y colimar el haz al área de interés, aplicando protección gonadal cuando corresponda, minimizando la dosis sin comprometer la calidad diagnóstica."
+    },
+    {
+      "id": 382,
+      "career": "Tecnología Médica - Radiología",
+      "block": "Cuidado integral",
+      "title": "Reacción anafiláctica a contraste yodado",
+      "level": "I-2",
+      "specialty": "Radiología",
+      "tags": [
+        "contraste yodado",
+        "reacción adversa",
+        "urgencia"
+      ],
+      "statement": "Durante una tomografía contrastada, el paciente presenta urticaria generalizada, dificultad respiratoria e hipotensión.",
+      "question": "¿Cuál es la conducta inmediata correcta?",
+      "options": [
+        "Continuar el estudio para no perder la información diagnóstica",
+        "Suspender la administración de contraste de inmediato y activar el protocolo de manejo de reacción anafiláctica",
+        "Esperar a que los síntomas remitan espontáneamente antes de actuar",
+        "Solo registrar el evento sin intervención inmediata"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque ante signos de reacción anafiláctica (urticaria, dificultad respiratoria, hipotensión) debe suspenderse de inmediato la administración de contraste y activarse el protocolo de emergencia correspondiente, priorizando la seguridad del paciente sobre completar el estudio."
+    },
+    {
+      "id": 383,
+      "career": "Tecnología Médica - Radiología",
+      "block": "Salud pública",
+      "title": "Protección radiológica ocupacional",
+      "level": "I-2",
+      "specialty": "Radiología",
+      "tags": [
+        "dosimetría",
+        "protección ocupacional",
+        "bioseguridad"
+      ],
+      "statement": "El personal que labora en la sala de radiología debe monitorear su exposición ocupacional a la radiación de forma continua.",
+      "question": "¿Qué herramienta es indispensable para este monitoreo?",
+      "options": [
+        "El uso de un dosímetro personal registrado periódicamente",
+        "Confiar únicamente en la percepción subjetiva de exposición",
+        "Medir la radiación solo si aparecen síntomas",
+        "No es necesario monitoreo si se usa delantal plomado"
+      ],
+      "correct": 0,
+      "feedback": "Correcta porque el dosímetro personal es la herramienta estándar para monitorear de forma objetiva y periódica la exposición ocupacional a la radiación del personal de radiología, complementando —no sustituyendo— el uso de protección plomada."
+    },
+    {
+      "id": 384,
+      "career": "Tecnología Médica - Terapia Ocupacional",
+      "block": "Cuidado integral",
+      "title": "Adaptación del entorno domiciliario",
+      "level": "I-2",
+      "specialty": "Terapia Ocupacional",
+      "tags": [
+        "adaptaciones ambientales",
+        "prevención de caídas",
+        "adulto mayor"
+      ],
+      "statement": "Un adulto mayor con antecedente de caídas previas vive solo en una vivienda con escaleras y baño sin barras de apoyo.",
+      "question": "¿Cuál es la intervención de terapia ocupacional más pertinente?",
+      "options": [
+        "Recomendar que deje de movilizarse por la vivienda",
+        "Evaluar el entorno domiciliario y proponer adaptaciones (barras de apoyo, iluminación, superficies antideslizantes) para reducir el riesgo de caídas",
+        "Indicar reposo permanente en cama",
+        "Sugerir mudarse sin evaluar primero el entorno actual"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque la terapia ocupacional interviene evaluando el entorno domiciliario y proponiendo adaptaciones concretas (barras de apoyo, iluminación adecuada, superficies antideslizantes) para reducir el riesgo de caídas, preservando la autonomía del adulto mayor."
+    },
+    {
+      "id": 385,
+      "career": "Tecnología Médica - Terapia Ocupacional",
+      "block": "Gestión",
+      "title": "Elaboración de informes de evaluación funcional",
+      "level": "I-2",
+      "specialty": "Terapia Ocupacional",
+      "tags": [
+        "informe funcional",
+        "gestión clínica",
+        "documentación"
+      ],
+      "statement": "Tras evaluar a un paciente con discapacidad, el terapeuta ocupacional debe documentar los hallazgos para sustentar solicitudes de ayudas técnicas.",
+      "question": "¿Qué elemento debe contener prioritariamente este informe?",
+      "options": [
+        "Solo la opinión personal del terapeuta sin datos objetivos",
+        "La descripción objetiva del desempeño funcional del paciente en actividades específicas, con base en instrumentos estandarizados",
+        "Un resumen genérico sin relación al caso evaluado",
+        "Solo el diagnóstico médico, sin datos funcionales"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque el informe de terapia ocupacional debe sustentarse en la descripción objetiva del desempeño funcional del paciente, idealmente con instrumentos estandarizados, ya que de ello depende la pertinencia de las ayudas técnicas solicitadas."
+    },
+    {
+      "id": 386,
+      "career": "Tecnología Médica - Terapia Ocupacional",
+      "block": "Cuidado integral",
+      "title": "Terapia ocupacional en salud mental infantil",
+      "level": "I-2",
+      "specialty": "Terapia Ocupacional",
+      "tags": [
+        "integración sensorial",
+        "salud mental infantil",
+        "intervención temprana"
+      ],
+      "statement": "Un niño de 5 años con trastorno del espectro autista presenta dificultades de regulación sensorial que interfieren en su participación escolar.",
+      "question": "¿Cuál es el enfoque de intervención más pertinente de terapia ocupacional en este caso?",
+      "options": [
+        "Enfoque de integración sensorial orientado a mejorar la regulación y participación funcional del niño",
+        "Indicar que el niño no participe en actividades escolares hasta que 'madure'",
+        "Enfocarse únicamente en el diagnóstico, sin plan de intervención",
+        "Recomendar aislamiento sensorial completo"
+      ],
+      "correct": 0,
+      "feedback": "Correcta porque el enfoque de integración sensorial busca mejorar la regulación sensorial del niño para facilitar su participación funcional en el entorno escolar, en lugar de excluirlo o limitarse al diagnóstico sin intervención."
+    },
+    {
+      "id": 387,
+      "career": "Ingeniería Sanitaria",
+      "block": "Gestión",
+      "title": "Disposición de residuos especiales",
+      "level": "I-2",
+      "specialty": "Ingeniería Sanitaria",
+      "tags": [
+        "residuos especiales",
+        "gestión hospitalaria",
+        "clasificación"
+      ],
+      "statement": "Un establecimiento de salud genera residuos de medicamentos vencidos y reactivos de laboratorio caducados.",
+      "question": "¿Cómo deben gestionarse estos residuos según su clasificación?",
+      "options": [
+        "Como residuo común, junto con los desechos de cocina",
+        "Como residuo especial, con manejo y disposición diferenciada según su naturaleza química",
+        "Incinerarlos en cualquier contenedor disponible dentro del establecimiento",
+        "Verterlos directamente al sistema de alcantarillado"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque los medicamentos vencidos y reactivos caducados se clasifican como residuos especiales, que requieren manejo y disposición diferenciada según su naturaleza química, distinto del circuito de residuos comunes o biocontaminados."
+    },
+    {
+      "id": 388,
+      "career": "Ingeniería Sanitaria",
+      "block": "Salud pública",
+      "title": "Saneamiento básico y enfermedades diarreicas",
+      "level": "I-2",
+      "specialty": "Ingeniería Sanitaria",
+      "tags": [
+        "saneamiento básico",
+        "enfermedades diarreicas",
+        "agua y saneamiento"
+      ],
+      "statement": "En una comunidad con alta incidencia de enfermedades diarreicas agudas, se identifica que la disposición de excretas se realiza a cielo abierto.",
+      "question": "¿Cuál es la intervención de ingeniería sanitaria con mayor impacto en la reducción de estos casos?",
+      "options": [
+        "Distribuir suero de rehidratación oral únicamente, sin intervenir en saneamiento",
+        "Implementar sistemas adecuados de disposición de excretas (letrinas sanitarias o alcantarillado) junto con promoción de agua segura",
+        "Esperar a que la comunidad resuelva el problema por iniciativa propia",
+        "Fumigar la zona sin intervenir en el saneamiento básico"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque la disposición inadecuada de excretas es un determinante directo de enfermedades diarreicas; la intervención de mayor impacto es implementar sistemas de saneamiento adecuados junto con la promoción de agua segura, más allá del manejo clínico puntual."
+    },
+    {
+      "id": 389,
+      "career": "Ingeniería Sanitaria",
+      "block": "Investigación",
+      "title": "Indicadores de calidad del agua",
+      "level": "I-2",
+      "specialty": "Ingeniería Sanitaria",
+      "tags": [
+        "coliformes fecales",
+        "indicadores microbiológicos",
+        "vigilancia"
+      ],
+      "statement": "Se analiza una muestra de agua de una red comunitaria y se detecta presencia de coliformes fecales.",
+      "question": "¿Qué implica este hallazgo desde la vigilancia de la calidad del agua?",
+      "options": [
+        "El agua es apta para consumo si no hay quejas de la población",
+        "Indica contaminación fecal y riesgo de transmisión de enfermedades entéricas; el agua no es apta para consumo sin tratamiento",
+        "Solo se debe repetir el análisis sin tomar medidas",
+        "Es un hallazgo esperado y no requiere intervención"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque la presencia de coliformes fecales indica contaminación de origen fecal y riesgo de transmisión de enfermedades entéricas, por lo que el agua debe considerarse no apta para consumo hasta aplicar el tratamiento correctivo correspondiente."
+    },
+    {
+      "id": 390,
+      "career": "Biología",
+      "block": "Salud pública",
+      "title": "Resistencia a insecticidas en vectores",
+      "level": "I-2",
+      "specialty": "Biología",
+      "tags": [
+        "resistencia a insecticidas",
+        "control vectorial",
+        "vigilancia entomológica"
+      ],
+      "statement": "Tras varios ciclos de fumigación, se observa que la población de Aedes aegypti en una zona no disminuye como se esperaba.",
+      "question": "¿Qué fenómeno debe investigarse prioritariamente desde el enfoque entomológico?",
+      "options": [
+        "Asumir que la fumigación fue insuficiente en cantidad y repetirla sin más análisis",
+        "Evaluar la posible resistencia del vector al insecticida utilizado mediante bioensayos",
+        "Descartar el problema porque el vector no puede desarrollar resistencia",
+        "Cambiar de vector de estudio sin justificación técnica"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque ante la persistencia de la población vectorial pese a la fumigación, corresponde evaluar mediante bioensayos la posible resistencia del vector al insecticida empleado, antes de simplemente repetir la misma intervención."
+    },
+    {
+      "id": 391,
+      "career": "Biología",
+      "block": "Investigación",
+      "title": "Interpretación de una prueba serológica",
+      "level": "I-2",
+      "specialty": "Biología",
+      "tags": [
+        "serología",
+        "sensibilidad y especificidad",
+        "interpretación de resultados"
+      ],
+      "statement": "Se aplica una prueba rápida serológica con alta sensibilidad pero baja especificidad para tamizaje poblacional de una infección.",
+      "question": "¿Qué implicancia tiene esto en la interpretación de los resultados positivos?",
+      "options": [
+        "Todo resultado positivo confirma definitivamente la infección",
+        "Un resultado positivo requiere confirmación con una prueba más específica, dado el riesgo de falsos positivos",
+        "La prueba no debe usarse en tamizaje poblacional bajo ninguna circunstancia",
+        "La especificidad no influye en la interpretación del resultado"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque una prueba con baja especificidad genera más falsos positivos; por ello, todo resultado positivo en tamizaje debe confirmarse con una prueba de mayor especificidad antes de considerarse diagnóstico definitivo."
+    },
+    {
+      "id": 392,
+      "career": "Biología",
+      "block": "Salud pública",
+      "title": "Vigilancia genómica de patógenos",
+      "level": "I-2",
+      "specialty": "Biología",
+      "tags": [
+        "vigilancia genómica",
+        "variantes",
+        "salud pública"
+      ],
+      "statement": "Durante un brote respiratorio, el laboratorio de referencia realiza secuenciación genómica de muestras positivas para identificar variantes circulantes.",
+      "question": "¿Cuál es la utilidad principal de la vigilancia genómica en este contexto?",
+      "options": [
+        "Reemplazar el diagnóstico clínico habitual",
+        "Identificar variantes circulantes que orienten decisiones de salud pública (transmisibilidad, respuesta a tratamiento/vacunas)",
+        "Determinar el tratamiento individual de cada paciente sin otro criterio clínico",
+        "No tiene utilidad práctica en la respuesta a brotes"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque la vigilancia genómica permite identificar variantes circulantes y orientar decisiones de salud pública sobre transmisibilidad y respuesta a intervenciones, complementando —no reemplazando— el diagnóstico clínico individual."
+    },
+    {
+      "id": 393,
+      "career": "Medicina Veterinaria",
+      "block": "Salud pública",
+      "title": "Vigilancia de leptospirosis",
+      "level": "I-2",
+      "specialty": "Medicina Veterinaria",
+      "tags": [
+        "leptospirosis",
+        "zoonosis",
+        "vigilancia epidemiológica"
+      ],
+      "statement": "Tras inundaciones en una zona urbano-marginal, se incrementan los casos humanos con fiebre, mialgias e ictericia, en un área con presencia de roedores.",
+      "question": "¿Qué enfoque debe orientar la respuesta epidemiológica ante esta sospecha de leptospirosis?",
+      "options": [
+        "Manejar el evento exclusivamente desde el sector salud, sin intervenir sobre el vector o reservorio",
+        "Articular vigilancia y control de reservorios (roedores) con el diagnóstico y manejo clínico de los casos humanos",
+        "Esperar la confirmación de todos los casos antes de iniciar cualquier medida de control",
+        "Descartar la sospecha por no ser una enfermedad frecuente"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque el control efectivo de la leptospirosis requiere una respuesta articulada entre la vigilancia y control de reservorios (roedores) y el manejo clínico oportuno de los casos humanos, enfoque característico de las zoonosis."
     }
   ],
   "norms": [
