@@ -7173,6 +7173,77 @@ window.SERUMS_DATA = {
       ],
       "correct": 0,
       "feedback": "Es correcta porque el manejo sindrómico de ITS, previsto en la NTS 240, permite tratar según el conjunto de signos y síntomas presentes sin esperar la confirmación de laboratorio, dado que esto agiliza el tratamiento y corta la cadena de transmisión de forma oportuna. Solicitar cultivo o serología antes de tratar retrasa una intervención que el enfoque sindrómico busca precisamente agilizar; referir todo caso a especialista sin manejo inicial no aprovecha la capacidad resolutiva del primer nivel para este tipo de cuadros."
+    },
+    {
+      "id": 312,
+      "career": "Transversal",
+      "block": "Gestión",
+      "title": "Modalidad SERUMS Equivalente",
+      "level": "I-2",
+      "specialty": "Gestión / Ley N.° 23330",
+      "tags": [
+        "Ley 23330",
+        "SERUMS equivalente",
+        "ad honorem"
+      ],
+      "statement": "Un profesional de la salud no alcanza a ocupar una plaza presupuestada en el proceso de adjudicación de plazas SERUMS.",
+      "question": "Según el artículo 9 de la Ley N.° 23330, ¿qué modalidad puede realizar este profesional para cumplir con el servicio?",
+      "options": [
+        "Queda automáticamente excluido del proceso hasta el siguiente año.",
+        "SERUMS Equivalente (Ad Honorem), en una entidad pública o no pública previamente determinada, con compromiso de la entidad de proporcionar alimentación y movilidad local.",
+        "Debe esperar una nueva convocatoria de plazas presupuestadas antes de poder ejercer.",
+        "Se le asigna de oficio una plaza remunerada en la región de menor demanda."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque el artículo 9 de la Ley N.° 23330 prevé expresamente la modalidad de SERUMS Equivalente (Ad Honorem) para quienes no alcanzan una plaza presupuestada, a realizarse en una entidad pública o no pública previamente determinada por la autoridad competente, con el compromiso de esa entidad de proporcionar alimentación y movilidad local. Quedar excluido, esperar una nueva convocatoria sin alternativa, o asignar de oficio una plaza remunerada no corresponden a lo que la ley dispone para este escenario."
+    },
+    {
+      "id": 313,
+      "career": "Transversal",
+      "block": "Gestión",
+      "title": "Licencias y permisos durante el SERUMS",
+      "level": "I-2",
+      "specialty": "Gestión / Reglamento Ley N.° 23330",
+      "tags": [
+        "Ley 23330",
+        "licencias",
+        "tiempo de servicio"
+      ],
+      "statement": "Un profesional SERUMS solicita una licencia justificada durante su año de servicio.",
+      "question": "Según la modificación del Reglamento de la Ley N.° 23330 (RM N.° 047-2018/MINSA), ¿cómo se computan las licencias y permisos a los que tiene derecho el profesional SERUMS?",
+      "options": [
+        "No se computan como tiempo de servicio, por lo que el profesional debe extender su periodo de SERUMS.",
+        "Se computan como tiempo de servicio efectivo, sin afectar la duración total del SERUMS.",
+        "Solo se computan si la licencia dura menos de 24 horas.",
+        "Se descuentan del puntaje final de la evaluación de desempeño del profesional."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque la modificación al Reglamento de la Ley N.° 23330 incorporó las licencias y permisos como un derecho del profesional SERUMS, disponiendo expresamente que se computen como tiempo de servicio efectivo, sin necesidad de extender el periodo total del servicio. Considerar que no se computan, que solo aplican a licencias muy breves, o que afectan el puntaje de desempeño no corresponde a lo que estableció esta modificación reglamentaria."
+    },
+    {
+      "id": 314,
+      "career": "Transversal",
+      "block": "Gestión",
+      "title": "Diferencias operativas entre categorías de establecimientos I-1 a I-4",
+      "level": "I-2",
+      "specialty": "Gestión / Categorización de establecimientos",
+      "tags": [
+        "categorización",
+        "I-1",
+        "I-2",
+        "I-3",
+        "I-4"
+      ],
+      "statement": "Un profesional SERUMS es asignado a un establecimiento de salud y necesita entender qué nivel de complejidad y qué recursos humanos mínimos corresponden a su categoría, para dimensionar su capacidad resolutiva real.",
+      "question": "¿Cuál de las siguientes describe correctamente la diferencia operativa central entre las categorías I-1, I-2, I-3 e I-4?",
+      "options": [
+        "Todas las categorías del primer nivel cuentan obligatoriamente con médico cirujano; la diferencia está solo en el tamaño del local.",
+        "I-1 es un puesto de salud sin médico (atendido por personal técnico o profesional no médico); I-2 es un puesto de salud con médico; I-3 y I-4 son centros de salud, con I-4 incorporando camas de internamiento.",
+        "La categoría se define únicamente por la cantidad de habitantes de la jurisdicción, sin relación con los recursos humanos disponibles.",
+        "I-3 e I-4 corresponden a hospitales de mediana complejidad, equivalentes al segundo nivel de atención."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque la categorización del primer nivel de atención distingue progresivamente la capacidad resolutiva: I-1 es un puesto de salud sin médico, cubierto por personal técnico o profesional no médico; I-2 ya cuenta con médico cirujano; I-3 y I-4 son centros de salud con mayor complejidad, siendo I-4 el que incorpora camas de internamiento dentro del primer nivel. Asumir que todas las categorías tienen médico, que la categoría depende solo de la población sin considerar los recursos humanos, o equiparar I-3/I-4 con el segundo nivel hospitalario no corresponde a los criterios reales de categorización."
     }
   ],
   "norms": [
