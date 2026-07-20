@@ -9573,6 +9573,604 @@ window.SERUMS_DATA = {
       ],
       "correct": 1,
       "feedback": "Correcta porque el trabajo social debe orientar sobre las vías de acceso a la atención en salud disponibles para la población migrante, priorizando el derecho a la salud del niño por encima de su situación migratoria, sin condicionar ni derivar la atención a otras instancias."
+    },
+    {
+      "id": 416,
+      "career": "Tecnología Médica - Laboratorio Clínico",
+      "block": "Cuidado integral",
+      "title": "Monitoreo de anticoagulación con INR",
+      "level": "I-2",
+      "specialty": "Laboratorio Clínico",
+      "tags": [
+        "INR",
+        "warfarina",
+        "monitoreo terapéutico"
+      ],
+      "statement": "Un paciente en tratamiento con warfarina acude a control y su INR resulta en 5.2, por encima del rango terapéutico esperado (2-3).",
+      "question": "¿Qué implica este resultado y cuál es la conducta del tecnólogo médico?",
+      "options": [
+        "Es un valor esperado, no requiere notificación",
+        "Indica riesgo aumentado de sangrado; debe notificarse de inmediato al médico tratante por ser un valor crítico",
+        "Se debe repetir la prueba en un mes sin notificar",
+        "El resultado no tiene relevancia clínica si el paciente está asintomático"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque un INR de 5.2, muy por encima del rango terapéutico, implica riesgo aumentado de sangrado y constituye un valor crítico que debe notificarse de inmediato al médico tratante para ajustar la anticoagulación."
+    },
+    {
+      "id": 417,
+      "career": "Tecnología Médica - Laboratorio Clínico",
+      "block": "Salud pública",
+      "title": "Tamizaje de glucosa en ayunas",
+      "level": "I-2",
+      "specialty": "Laboratorio Clínico",
+      "tags": [
+        "glucosa en ayunas",
+        "tamizaje",
+        "diabetes"
+      ],
+      "statement": "En una campaña de tamizaje poblacional, un paciente asintomático de 45 años presenta glucosa en ayunas de 130 mg/dL en dos determinaciones distintas.",
+      "question": "¿Qué interpretación corresponde a este hallazgo según los criterios estándar de tamizaje?",
+      "options": [
+        "Valor normal, no requiere seguimiento",
+        "Compatible con diabetes mellitus, por lo que debe derivarse para confirmación diagnóstica y manejo médico",
+        "Indica hipoglicemia, requiere ingesta inmediata de azúcar",
+        "Es un error de laboratorio que debe descartarse sin más acción"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque una glucosa en ayunas ≥126 mg/dL en dos determinaciones es compatible con diabetes mellitus según los criterios estándar, lo que amerita derivación para confirmación diagnóstica y manejo médico oportuno."
+    },
+    {
+      "id": 418,
+      "career": "Tecnología Médica - Terapia Física",
+      "block": "Cuidado integral",
+      "title": "Rehabilitación postquirúrgica de rodilla",
+      "level": "I-2",
+      "specialty": "Terapia Física",
+      "tags": [
+        "postquirúrgico",
+        "rodilla",
+        "rango de movimiento"
+      ],
+      "statement": "Un paciente en el segundo día postoperatorio de reemplazo total de rodilla inicia su programa de terapia física.",
+      "question": "¿Cuál es el objetivo prioritario de la intervención en esta etapa temprana?",
+      "options": [
+        "Lograr la flexión completa de la rodilla en la primera sesión",
+        "Iniciar movilización temprana progresiva y control del dolor/edema para prevenir rigidez articular",
+        "Mantener la rodilla inmovilizada por dos semanas antes de iniciar terapia",
+        "Priorizar únicamente el fortalecimiento muscular intenso desde el primer día"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque en el postoperatorio temprano de reemplazo de rodilla se prioriza la movilización progresiva y el control del dolor y edema para prevenir rigidez articular, evitando tanto la inmovilización prolongada como el fortalecimiento intenso prematuro."
+    },
+    {
+      "id": 419,
+      "career": "Tecnología Médica - Terapia Física",
+      "block": "Salud pública",
+      "title": "Tamizaje de escoliosis en adolescentes",
+      "level": "I-2",
+      "specialty": "Terapia Física",
+      "tags": [
+        "escoliosis",
+        "tamizaje escolar",
+        "detección temprana"
+      ],
+      "statement": "En un programa de salud escolar se realiza el test de Adams (flexión anterior del tronco) a estudiantes de secundaria.",
+      "question": "¿Cuál es el objetivo de este tamizaje?",
+      "options": [
+        "Diagnosticar definitivamente la escoliosis sin necesidad de otros estudios",
+        "Detectar de forma temprana asimetrías sugestivas de escoliosis que ameriten evaluación especializada con radiografía",
+        "Sustituir el control de crecimiento y desarrollo habitual",
+        "Aplicarse solo si el estudiante refiere dolor de espalda"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque el test de Adams es una herramienta de tamizaje que detecta asimetrías sugestivas de escoliosis, orientando la derivación para confirmación radiológica; no constituye por sí mismo un diagnóstico definitivo."
+    },
+    {
+      "id": 420,
+      "career": "Tecnología Médica - Terapia del Lenguaje",
+      "block": "Salud pública",
+      "title": "Tamizaje auditivo neonatal",
+      "level": "I-2",
+      "specialty": "Terapia del Lenguaje",
+      "tags": [
+        "tamizaje auditivo neonatal",
+        "hipoacusia",
+        "detección temprana"
+      ],
+      "statement": "Un recién nacido no pasa el tamizaje auditivo neonatal (otoemisiones acústicas) realizado antes del alta.",
+      "question": "¿Cuál es la conducta correcta ante este resultado?",
+      "options": [
+        "Descartar hipoacusia si el niño reacciona a sonidos fuertes en casa",
+        "Referir para una segunda evaluación audiológica confirmatoria dentro de las primeras semanas de vida, dado el impacto de la detección temprana en el desarrollo del lenguaje",
+        "Esperar hasta el año de edad para reevaluar",
+        "Indicar que el resultado no tiene relevancia si el embarazo fue sin complicaciones"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque no pasar el tamizaje auditivo neonatal exige una segunda evaluación confirmatoria oportuna, ya que la detección temprana de hipoacusia es crítica para iniciar intervención antes de que se afecte el desarrollo del lenguaje."
+    },
+    {
+      "id": 421,
+      "career": "Tecnología Médica - Terapia del Lenguaje",
+      "block": "Cuidado integral",
+      "title": "Disartria en enfermedad de Parkinson",
+      "level": "I-2",
+      "specialty": "Terapia del Lenguaje",
+      "tags": [
+        "disartria",
+        "Parkinson",
+        "inteligibilidad del habla"
+      ],
+      "statement": "Un paciente con enfermedad de Parkinson en estadio moderado presenta habla monótona, de bajo volumen y disminución de la inteligibilidad.",
+      "question": "¿Cuál es el enfoque terapéutico más pertinente desde terapia del lenguaje?",
+      "options": [
+        "Indicar que no hable en público para evitar la vergüenza",
+        "Aplicar un programa de tratamiento de intensidad vocal (como el enfoque LSVT) orientado a mejorar volumen e inteligibilidad",
+        "Recomendar cirugía de cuerdas vocales como primera opción",
+        "No intervenir porque es un signo esperado e irreversible de la enfermedad"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque en la disartria hipocinética asociada a Parkinson, los programas de tratamiento de intensidad vocal (como el enfoque LSVT) han demostrado mejorar el volumen y la inteligibilidad del habla, siendo la intervención de primera línea desde terapia del lenguaje."
+    },
+    {
+      "id": 422,
+      "career": "Tecnología Médica - Optometría",
+      "block": "Cuidado integral",
+      "title": "Presbicia en el adulto",
+      "level": "I-2",
+      "specialty": "Optometría",
+      "tags": [
+        "presbicia",
+        "corrección óptica",
+        "visión cercana"
+      ],
+      "statement": "Un paciente de 46 años refiere dificultad progresiva para leer de cerca, con visión lejana conservada.",
+      "question": "¿Cuál es la explicación más probable y la conducta correcta?",
+      "options": [
+        "Es indicativo de cataratas y requiere cirugía inmediata",
+        "Es presbicia, proceso fisiológico relacionado con la edad; corresponde evaluación optométrica para prescribir corrección de cerca",
+        "Indica glaucoma y requiere derivación de urgencia",
+        "No tiene relación con la edad y debe descartarse enfermedad neurológica en primer lugar"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque la dificultad progresiva para la visión cercana a partir de los 40-45 años con visión lejana conservada es característica de la presbicia, proceso fisiológico normal que se corrige con lentes adecuados tras evaluación optométrica."
+    },
+    {
+      "id": 423,
+      "career": "Tecnología Médica - Optometría",
+      "block": "Cuidado integral",
+      "title": "Cefalea asociada a error refractivo",
+      "level": "I-2",
+      "specialty": "Optometría",
+      "tags": [
+        "cefalea",
+        "error refractivo",
+        "evaluación visual"
+      ],
+      "statement": "Un estudiante universitario refiere cefalea frontal frecuente que se intensifica tras periodos prolongados de lectura.",
+      "question": "¿Qué relación se debe descartar prioritariamente desde la evaluación optométrica?",
+      "options": [
+        "Un error refractivo no corregido (como astigmatismo o hipermetropía) que genere esfuerzo visual sostenido",
+        "Una migraña sin ninguna relación con la actividad visual",
+        "Un problema exclusivamente psicológico sin relación visual",
+        "Deshidratación como única causa posible"
+      ],
+      "correct": 0,
+      "feedback": "Correcta porque un error refractivo no corregido puede generar esfuerzo visual sostenido (astenopía) que se manifiesta como cefalea relacionada con la actividad de lectura, por lo que la evaluación optométrica debe descartarlo antes de atribuir el síntoma a otras causas."
+    },
+    {
+      "id": 424,
+      "career": "Tecnología Médica - Radiología",
+      "block": "Cuidado integral",
+      "title": "Ecografía FAST en trauma abdominal",
+      "level": "I-2",
+      "specialty": "Radiología",
+      "tags": [
+        "FAST",
+        "trauma abdominal",
+        "urgencia"
+      ],
+      "statement": "Un paciente ingresa a emergencia tras un accidente de tránsito con dolor abdominal e inestabilidad hemodinámica.",
+      "question": "¿Cuál es la utilidad del protocolo FAST (Focused Assessment with Sonography for Trauma) en este contexto?",
+      "options": [
+        "Reemplazar por completo la evaluación clínica del paciente",
+        "Detectar rápidamente líquido libre intraabdominal sugestivo de hemorragia, orientando la conducta quirúrgica urgente",
+        "Confirmar fracturas óseas asociadas al trauma",
+        "Ser el único estudio necesario antes de decisiones de manejo definitivo"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque el protocolo FAST permite detectar rápidamente líquido libre intraabdominal sugestivo de hemorragia en el paciente politraumatizado inestable, orientando de forma ágil la decisión de manejo quirúrgico urgente, sin reemplazar la evaluación clínica integral."
+    },
+    {
+      "id": 425,
+      "career": "Tecnología Médica - Radiología",
+      "block": "Salud pública",
+      "title": "Tamizaje mamográfico",
+      "level": "I-2",
+      "specialty": "Radiología",
+      "tags": [
+        "mamografía",
+        "tamizaje",
+        "cáncer de mama"
+      ],
+      "statement": "En un programa de salud pública se realiza mamografía de tamizaje a mujeres de 50 a 69 años sin síntomas.",
+      "question": "¿Cuál es el fundamento de este tamizaje poblacional?",
+      "options": [
+        "Diagnosticar cáncer de mama solo en mujeres con síntomas evidentes",
+        "Detectar lesiones mamarias en etapas tempranas y asintomáticas, mejorando el pronóstico mediante diagnóstico y tratamiento oportuno",
+        "Reemplazar el autoexamen y examen clínico mamario",
+        "Aplicarse únicamente si existe antecedente familiar de cáncer"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque el tamizaje mamográfico poblacional busca detectar lesiones en etapas tempranas y asintomáticas, mejorando el pronóstico mediante diagnóstico y tratamiento oportuno, complementando —no reemplazando— el examen clínico mamario."
+    },
+    {
+      "id": 426,
+      "career": "Tecnología Médica - Terapia Ocupacional",
+      "block": "Cuidado integral",
+      "title": "Terapia de mano tras fractura de muñeca",
+      "level": "I-2",
+      "specialty": "Terapia Ocupacional",
+      "tags": [
+        "terapia de mano",
+        "fractura de muñeca",
+        "rango de movimiento"
+      ],
+      "statement": "Un paciente con fractura de radio distal es retirado de la inmovilización tras 6 semanas y presenta rigidez y disminución de fuerza en la muñeca.",
+      "question": "¿Cuál es el enfoque inicial correcto de la terapia de mano en esta etapa?",
+      "options": [
+        "Iniciar ejercicios de fuerza máxima de inmediato",
+        "Iniciar movilización progresiva y suave para recuperar el rango de movimiento antes de avanzar a ejercicios de fortalecimiento",
+        "Recomendar reinmovilización por dos semanas adicionales",
+        "No intervenir, ya que la rigidez se resuelve espontáneamente"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque tras el retiro de la inmovilización se prioriza la recuperación progresiva del rango de movimiento mediante movilización suave, antes de avanzar hacia ejercicios de fortalecimiento, evitando tanto la reinmovilización innecesaria como el ejercicio de fuerza prematuro."
+    },
+    {
+      "id": 427,
+      "career": "Tecnología Médica - Terapia Ocupacional",
+      "block": "Cuidado integral",
+      "title": "Intervención escolar en TDAH",
+      "level": "I-2",
+      "specialty": "Terapia Ocupacional",
+      "tags": [
+        "TDAH",
+        "intervención escolar",
+        "autorregulación"
+      ],
+      "statement": "Un niño con diagnóstico de TDAH presenta dificultades para mantener la atención y organizar sus tareas escolares.",
+      "question": "¿Cuál es el aporte de la terapia ocupacional en este caso?",
+      "options": [
+        "Prescribir el tratamiento farmacológico del TDAH",
+        "Diseñar estrategias de organización, rutinas y autorregulación, adaptando el entorno escolar para favorecer su desempeño",
+        "Recomendar que el niño repita el año escolar como única solución",
+        "Excluir al niño de actividades grupales para evitar distracciones"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque la terapia ocupacional interviene diseñando estrategias de organización, rutinas y autorregulación, adaptando el entorno escolar para favorecer el desempeño del niño, sin prescribir fármacos ni recurrir a medidas de exclusión."
+    },
+    {
+      "id": 428,
+      "career": "Ingeniería Sanitaria",
+      "block": "Gestión",
+      "title": "Tratamiento de aguas residuales",
+      "level": "I-2",
+      "specialty": "Ingeniería Sanitaria",
+      "tags": [
+        "aguas residuales",
+        "tratamiento",
+        "impacto en salud"
+      ],
+      "statement": "Una localidad vierte sus aguas residuales sin tratamiento previo a un río utilizado aguas abajo para actividades domésticas.",
+      "question": "¿Cuál es la consecuencia sanitaria más relevante de esta práctica y la medida correctiva prioritaria?",
+      "options": [
+        "No representa riesgo si el río tiene suficiente caudal",
+        "Contaminación del agua con potencial transmisión de enfermedades hídricas; se requiere implementar un sistema de tratamiento de aguas residuales antes del vertimiento",
+        "Solo afecta a la fauna acuática, sin relación con la salud humana",
+        "La solución es prohibir el uso del río sin intervenir en el origen del problema"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque el vertimiento de aguas residuales sin tratamiento contamina las fuentes de agua utilizadas aguas abajo, con riesgo de enfermedades hídricas; la medida correctiva prioritaria es implementar un sistema de tratamiento adecuado antes del vertimiento."
+    },
+    {
+      "id": 429,
+      "career": "Ingeniería Sanitaria",
+      "block": "Salud pública",
+      "title": "Control de plagas urbano",
+      "level": "I-2",
+      "specialty": "Ingeniería Sanitaria",
+      "tags": [
+        "control de plagas",
+        "vectores urbanos",
+        "salud pública"
+      ],
+      "statement": "En un mercado municipal se identifica alta presencia de roedores y moscas, con quejas de la población por posibles enfermedades transmitidas.",
+      "question": "¿Cuál es el enfoque más adecuado para el control sostenible de esta situación?",
+      "options": [
+        "Aplicar fumigación intensiva única sin abordar las causas (manejo de residuos, almacenamiento de alimentos)",
+        "Implementar un manejo integrado de plagas que combine control de residuos, saneamiento del entorno y medidas químicas cuando sea necesario",
+        "Ignorar el problema si no hay casos confirmados de enfermedad aún",
+        "Trasladar el mercado sin intervenir en las condiciones sanitarias"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque el control sostenible de plagas urbanas requiere un manejo integrado que combine el saneamiento del entorno (manejo de residuos, almacenamiento adecuado de alimentos) con medidas químicas puntuales, en lugar de depender únicamente de fumigaciones aisladas."
+    },
+    {
+      "id": 430,
+      "career": "Biología",
+      "block": "Salud pública",
+      "title": "Control de calidad en toma de Papanicolaou",
+      "level": "I-2",
+      "specialty": "Biología",
+      "tags": [
+        "Papanicolaou",
+        "control de calidad",
+        "tamizaje de cáncer cervical"
+      ],
+      "statement": "Una muestra de Papanicolaou es reportada por el laboratorio como 'insatisfactoria para evaluación' por escasa celularidad.",
+      "question": "¿Cuál es la conducta correcta ante este resultado?",
+      "options": [
+        "Considerar el tamizaje como completado y no repetir la toma",
+        "Citar a la paciente para repetir la toma de muestra siguiendo la técnica adecuada, ya que una muestra insatisfactoria no permite el tamizaje",
+        "Asumir que el resultado es normal por defecto",
+        "Indicar tratamiento empírico sin repetir el examen"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque una muestra insatisfactoria no permite evaluar adecuadamente la citología cervical; corresponde citar a la paciente para repetir la toma siguiendo la técnica correcta, ya que de lo contrario el tamizaje quedaría incompleto."
+    },
+    {
+      "id": 431,
+      "career": "Biología",
+      "block": "Investigación",
+      "title": "Manejo de animales de bioterio",
+      "level": "I-2",
+      "specialty": "Biología",
+      "tags": [
+        "bioterio",
+        "bioseguridad",
+        "investigación con animales"
+      ],
+      "statement": "En un laboratorio de investigación se mantienen animales para estudios experimentales bajo condiciones controladas.",
+      "question": "¿Qué principio ético y de bioseguridad debe primar en el manejo de estos animales?",
+      "options": [
+        "Priorizar únicamente el costo de mantenimiento sobre el bienestar animal",
+        "Aplicar los principios de las 3R (Reemplazo, Reducción, Refinamiento) junto con medidas de bioseguridad para el personal y los animales",
+        "No es necesario ningún protocolo si los animales son de laboratorio",
+        "Usar la mayor cantidad de animales posible para asegurar resultados"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque el manejo ético de animales de investigación se rige por los principios de las 3R (Reemplazo, Reducción, Refinamiento), junto con medidas de bioseguridad que protegen tanto a los animales como al personal del bioterio."
+    },
+    {
+      "id": 432,
+      "career": "Medicina Veterinaria",
+      "block": "Salud pública",
+      "title": "Vigilancia de fauna silvestre y rabia",
+      "level": "I-2",
+      "specialty": "Medicina Veterinaria",
+      "tags": [
+        "rabia silvestre",
+        "fauna silvestre",
+        "vigilancia epidemiológica"
+      ],
+      "statement": "En una zona de selva se reporta la muerte de varios murciélagos y, posteriormente, un caso humano compatible con rabia sin antecedente de mordedura canina.",
+      "question": "¿Qué línea de investigación epidemiológica debe priorizarse?",
+      "options": [
+        "Descartar la rabia porque no hubo mordedura de perro",
+        "Investigar la posible transmisión por fauna silvestre (murciélagos hematófagos), dado que constituyen un reservorio relevante de rabia en zonas selváticas",
+        "Atribuir el caso a una enfermedad no relacionada sin mayor investigación",
+        "Esperar más casos antes de iniciar cualquier investigación"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque en zonas selváticas los murciélagos hematófagos son un reservorio relevante de rabia, por lo que ante un caso humano sin antecedente de mordedura canina debe investigarse la posible transmisión por fauna silvestre."
+    },
+    {
+      "id": 433,
+      "career": "Medicina Veterinaria",
+      "block": "Cuidado integral",
+      "title": "Brote de intoxicación alimentaria de origen animal",
+      "level": "I-2",
+      "specialty": "Medicina Veterinaria",
+      "tags": [
+        "inocuidad alimentaria",
+        "intoxicación alimentaria",
+        "investigación de brotes"
+      ],
+      "statement": "Varias personas presentan un cuadro de gastroenteritis aguda tras consumir productos lácteos de un mismo proveedor no formalizado.",
+      "question": "¿Cuál es el rol del médico veterinario en la investigación de este brote?",
+      "options": [
+        "No tiene participación, ya que es un tema exclusivo de salud humana",
+        "Investigar el origen animal del producto, las condiciones de producción y manipulación, en coordinación con el equipo de salud pública",
+        "Limitarse a sancionar al proveedor sin investigar la causa",
+        "Recomendar el consumo de otros productos lácteos sin investigar el brote"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque el médico veterinario aporta la investigación del origen animal del producto y las condiciones de producción/manipulación, en coordinación con el equipo de salud pública, siendo clave en la investigación de brotes alimentarios de origen animal."
+    },
+    {
+      "id": 434,
+      "career": "Farmacia y Bioquímica",
+      "block": "Cuidado integral",
+      "title": "Dispensación de anticoncepción oral de emergencia",
+      "level": "I-2",
+      "specialty": "Farmacia y Bioquímica",
+      "tags": [
+        "anticoncepción de emergencia",
+        "consejería",
+        "dispensación"
+      ],
+      "statement": "Una usuaria solicita en farmacia anticoncepción oral de emergencia tras una relación sexual sin protección ocurrida hace 24 horas.",
+      "question": "¿Cuál es la conducta correcta del profesional de farmacia?",
+      "options": [
+        "Negar la dispensación por requerir siempre receta médica",
+        "Dispensar el anticonceptivo de emergencia brindando consejería sobre su uso correcto y la importancia de un método anticonceptivo regular",
+        "Indicar que espere 72 horas antes de tomarlo para mayor efectividad",
+        "Recomendar duplicar la dosis para mayor seguridad"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque la anticoncepción oral de emergencia debe dispensarse oportunamente (siendo más efectiva cuanto antes se use) con consejería sobre su uso correcto y la importancia de adoptar un método anticonceptivo regular, sin exigir espera ni duplicar dosis."
+    },
+    {
+      "id": 435,
+      "career": "Farmacia y Bioquímica",
+      "block": "Gestión",
+      "title": "Gestión de medicamentos de control especial",
+      "level": "I-2",
+      "specialty": "Farmacia y Bioquímica",
+      "tags": [
+        "estupefacientes",
+        "control especial",
+        "gestión de medicamentos"
+      ],
+      "statement": "El establecimiento de salud debe administrar el stock de medicamentos opioides sujetos a control especial (estupefacientes).",
+      "question": "¿Qué medida de gestión es indispensable para estos medicamentos?",
+      "options": [
+        "Almacenarlos junto con el resto de medicamentos sin diferenciación",
+        "Mantener un registro de control (kárdex) específico, almacenamiento seguro bajo llave y verificación periódica de existencias",
+        "No llevar ningún registro adicional si el volumen es pequeño",
+        "Permitir su dispensación sin receta especial para agilizar la atención"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque los medicamentos de control especial requieren un registro específico (kárdex), almacenamiento seguro y verificación periódica de existencias, dado el riesgo de mal uso o desvío, además de exigir receta especial para su dispensación."
+    },
+    {
+      "id": 436,
+      "career": "Trabajo Social",
+      "block": "Ética e interculturalidad",
+      "title": "Ruta de atención en violencia de género",
+      "level": "I-2",
+      "specialty": "Trabajo Social",
+      "tags": [
+        "violencia de género",
+        "ruta de atención",
+        "protección"
+      ],
+      "statement": "Una paciente revela durante la consulta que sufre violencia física por parte de su pareja de forma reiterada.",
+      "question": "¿Cuál es la acción correspondiente del trabajo social en este caso?",
+      "options": [
+        "Aconsejar a la paciente que resuelva el problema en el ámbito privado de la pareja",
+        "Activar la ruta de atención a víctimas de violencia (Centro de Emergencia Mujer u otra instancia correspondiente), garantizando confidencialidad y acompañamiento",
+        "Notificar directamente a la pareja para que se retracte",
+        "No intervenir si la paciente no lo solicita explícitamente por escrito"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque ante la revelación de violencia de género corresponde activar la ruta de atención institucional (CEM u otra instancia pertinente), garantizando confidencialidad y acompañamiento a la víctima, sin minimizar el caso ni exigir formalidades que retrasen la protección."
+    },
+    {
+      "id": 437,
+      "career": "Trabajo Social",
+      "block": "Gestión",
+      "title": "Articulación con el Seguro Integral de Salud (SIS)",
+      "level": "I-2",
+      "specialty": "Trabajo Social",
+      "tags": [
+        "SIS",
+        "afiliación",
+        "acceso a servicios"
+      ],
+      "statement": "Un paciente de escasos recursos requiere una cirugía programada pero no cuenta con seguro de salud vigente.",
+      "question": "¿Cuál es la gestión prioritaria del trabajo social en este caso?",
+      "options": [
+        "Indicar que busque financiamiento privado sin más orientación",
+        "Evaluar su elegibilidad y facilitar el trámite de afiliación al Seguro Integral de Salud (SIS) u otra cobertura correspondiente",
+        "Negar cualquier posibilidad de atención si no tiene seguro",
+        "Aplazar la cirugía de forma indefinida sin gestionar alternativas"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque el trabajo social debe evaluar la elegibilidad del paciente y facilitar su afiliación al SIS u otra cobertura pertinente, gestión clave para garantizar el acceso oportuno a los servicios de salud que requiere."
+    },
+    {
+      "id": 438,
+      "career": "Nutrición",
+      "block": "Salud pública",
+      "title": "Promoción de la lactancia materna exclusiva",
+      "level": "I-2",
+      "specialty": "Nutrición",
+      "tags": [
+        "lactancia materna exclusiva",
+        "primeros 6 meses",
+        "promoción"
+      ],
+      "statement": "Una madre primeriza consulta si debe iniciar alimentación complementaria a su bebé de 3 meses porque 'llora mucho después de lactar'.",
+      "question": "¿Cuál es la orientación nutricional correcta según la recomendación vigente?",
+      "options": [
+        "Iniciar alimentación complementaria de inmediato para calmar el llanto",
+        "Mantener la lactancia materna exclusiva hasta los 6 meses, evaluando la técnica de lactancia y descartando otras causas del llanto antes de introducir otros alimentos",
+        "Sustituir la leche materna por fórmula desde ya",
+        "Indicar agua además de la leche materna para 'completar' la alimentación"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque la recomendación vigente es mantener la lactancia materna exclusiva hasta los 6 meses; ante el llanto post-lactancia corresponde evaluar la técnica de lactancia y otras causas, sin introducir alimentación complementaria, fórmula ni agua antes de tiempo."
+    },
+    {
+      "id": 439,
+      "career": "Nutrición",
+      "block": "Cuidado integral",
+      "title": "Manejo nutricional en obesidad infantil",
+      "level": "I-2",
+      "specialty": "Nutrición",
+      "tags": [
+        "obesidad infantil",
+        "consejería nutricional",
+        "IMC pediátrico"
+      ],
+      "statement": "Un niño de 8 años presenta un IMC para la edad por encima del percentil 95, según las curvas de crecimiento de referencia.",
+      "question": "¿Cuál es el enfoque correcto de la intervención nutricional en este caso?",
+      "options": [
+        "Indicar una dieta hipocalórica estricta similar a la de un adulto",
+        "Promover cambios graduales en la alimentación y actividad física en familia, evitando dietas restrictivas severas en esta etapa de crecimiento",
+        "No intervenir hasta la adolescencia",
+        "Recomendar ayuno intermitente para reducir peso rápidamente"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque en obesidad infantil se prioriza un enfoque gradual y familiar (alimentación saludable y actividad física), evitando dietas restrictivas severas o estrategias de adultos, que pueden comprometer el crecimiento y desarrollo del niño."
+    },
+    {
+      "id": 440,
+      "career": "Odontología",
+      "block": "Cuidado integral",
+      "title": "Maloclusión dental en niño",
+      "level": "I-2",
+      "specialty": "Odontología",
+      "tags": [
+        "maloclusión",
+        "ortodoncia",
+        "derivación"
+      ],
+      "statement": "Un niño de 8 años presenta una mordida cruzada anterior evidente durante el control odontológico de rutina.",
+      "question": "¿Cuál es la conducta correcta ante este hallazgo?",
+      "options": [
+        "Esperar a que el niño termine el recambio dentario completo sin ninguna evaluación adicional",
+        "Derivar oportunamente a evaluación ortodóntica, ya que ciertas maloclusiones se benefician de tratamiento temprano durante el crecimiento",
+        "Indicar extracción de las piezas afectadas de inmediato",
+        "No es relevante si el niño no refiere dolor"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque ciertas maloclusiones, como la mordida cruzada anterior, se benefician de una intervención ortodóntica temprana durante el periodo de crecimiento activo, por lo que la derivación oportuna es la conducta correcta."
+    },
+    {
+      "id": 441,
+      "career": "Odontología",
+      "block": "Salud pública",
+      "title": "Bioseguridad en el consultorio dental",
+      "level": "I-2",
+      "specialty": "Odontología",
+      "tags": [
+        "bioseguridad",
+        "control de infecciones",
+        "consultorio dental"
+      ],
+      "statement": "En un consultorio odontológico se atienden pacientes con procedimientos que generan aerosoles y contacto con fluidos orales.",
+      "question": "¿Qué medida de bioseguridad es indispensable para minimizar el riesgo de transmisión de infecciones?",
+      "options": [
+        "Usar el mismo instrumental en varios pacientes sin esterilización si el tiempo es limitado",
+        "Aplicar barreras de protección personal, esterilización rigurosa del instrumental y desinfección de superficies entre pacientes",
+        "Ventilar el consultorio es suficiente sin otras medidas adicionales",
+        "La bioseguridad solo aplica si el paciente refiere una infección conocida"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque la atención odontológica, al generar aerosoles y contacto con fluidos orales, requiere barreras de protección personal, esterilización rigurosa del instrumental y desinfección de superficies entre cada paciente, independientemente de si se conoce o no un antecedente infeccioso."
     }
   ],
   "norms": [
