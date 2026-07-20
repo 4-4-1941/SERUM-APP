@@ -9067,6 +9067,512 @@ window.SERUMS_DATA = {
       ],
       "correct": 1,
       "feedback": "Correcta porque el control efectivo de la leptospirosis requiere una respuesta articulada entre la vigilancia y control de reservorios (roedores) y el manejo clínico oportuno de los casos humanos, enfoque característico de las zoonosis."
+    },
+    {
+      "id": 394,
+      "career": "Tecnología Médica - Laboratorio Clínico",
+      "block": "Cuidado integral",
+      "title": "Interpretación de examen de orina",
+      "level": "I-2",
+      "specialty": "Laboratorio Clínico",
+      "tags": [
+        "uroanálisis",
+        "sedimento urinario",
+        "interpretación"
+      ],
+      "statement": "Un examen de orina muestra abundantes leucocitos, bacterias y nitritos positivos en una mujer con disuria.",
+      "question": "¿Qué proceso sugiere este patrón de hallazgos?",
+      "options": [
+        "Deshidratación simple sin infección",
+        "Infección del tracto urinario",
+        "Contaminación de la muestra sin relevancia clínica",
+        "Insuficiencia renal crónica"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque la combinación de leucocituria, bacteriuria y nitritos positivos es un patrón característico de infección del tracto urinario, coherente con el cuadro clínico de disuria."
+    },
+    {
+      "id": 395,
+      "career": "Tecnología Médica - Laboratorio Clínico",
+      "block": "Gestión",
+      "title": "Cadena de frío de reactivos",
+      "level": "I-2",
+      "specialty": "Laboratorio Clínico",
+      "tags": [
+        "cadena de frío",
+        "reactivos",
+        "conservación"
+      ],
+      "statement": "Se recibe un lote de reactivos para pruebas serológicas que debe conservarse entre 2 y 8°C.",
+      "question": "¿Qué acción es indispensable para garantizar la validez de los resultados obtenidos con estos reactivos?",
+      "options": [
+        "Almacenarlos a temperatura ambiente si el laboratorio no tiene espacio en refrigeradora",
+        "Verificar y registrar continuamente la temperatura de conservación, descartando el lote si se rompe la cadena de frío",
+        "Usarlos igual, ajustando manualmente los resultados",
+        "Congelarlos para mayor duración"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque el mantenimiento verificado y registrado de la cadena de frío es indispensable para la validez de los reactivos; su ruptura obliga a descartar el lote, ya que alterar temperaturas (ambiente o congelación) compromete su estabilidad."
+    },
+    {
+      "id": 396,
+      "career": "Tecnología Médica - Terapia Física",
+      "block": "Cuidado integral",
+      "title": "Rehabilitación pulmonar en EPOC",
+      "level": "I-2",
+      "specialty": "Terapia Física",
+      "tags": [
+        "EPOC",
+        "rehabilitación pulmonar",
+        "tolerancia al ejercicio"
+      ],
+      "statement": "Un paciente con EPOC moderada presenta disnea con esfuerzos leves y disminución de su tolerancia al ejercicio.",
+      "question": "¿Cuál es el componente central de un programa de rehabilitación pulmonar en este paciente?",
+      "options": [
+        "Reposo absoluto para evitar la disnea",
+        "Entrenamiento físico progresivo supervisado combinado con educación y técnicas de conservación de energía",
+        "Uso exclusivo de oxígeno suplementario sin ejercicio",
+        "Evitar cualquier actividad física de forma permanente"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque la rehabilitación pulmonar se basa en entrenamiento físico progresivo y supervisado, junto con educación y técnicas de conservación de energía, mejorando la tolerancia al ejercicio; el reposo absoluto empeora el desacondicionamiento."
+    },
+    {
+      "id": 397,
+      "career": "Tecnología Médica - Terapia Física",
+      "block": "Cuidado integral",
+      "title": "Manejo fisioterapéutico del paciente quemado",
+      "level": "I-2",
+      "specialty": "Terapia Física",
+      "tags": [
+        "quemaduras",
+        "contracturas",
+        "rehabilitación"
+      ],
+      "statement": "Un paciente con quemaduras en el antebrazo inicia manejo fisioterapéutico tras la fase aguda.",
+      "question": "¿Cuál es el objetivo prioritario de la intervención temprana en este caso?",
+      "options": [
+        "Inmovilizar completamente la zona hasta la cicatrización total",
+        "Prevenir contracturas y preservar el rango de movimiento articular mediante posicionamiento y movilización temprana",
+        "Iniciar ejercicios de fuerza máxima desde el primer día",
+        "Esperar el alta médica completa antes de cualquier intervención"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque en quemaduras la movilización temprana y el posicionamiento adecuado previenen contracturas y preservan el rango articular; la inmovilización prolongada favorece precisamente las secuelas que se buscan evitar."
+    },
+    {
+      "id": 398,
+      "career": "Tecnología Médica - Terapia del Lenguaje",
+      "block": "Cuidado integral",
+      "title": "Afasia post-ACV",
+      "level": "I-2",
+      "specialty": "Terapia del Lenguaje",
+      "tags": [
+        "afasia",
+        "ACV",
+        "comunicación"
+      ],
+      "statement": "Un paciente tras un ACV isquémico presenta dificultad para comprender órdenes simples y para expresar palabras, aunque conserva la movilidad orofacial.",
+      "question": "¿Qué tipo de trastorno de la comunicación sugiere este cuadro y qué implica para la intervención?",
+      "options": [
+        "Disartria; requiere ejercicios exclusivamente motores orofaciales",
+        "Afasia; requiere evaluación del lenguaje (comprensivo y expresivo) para definir un plan terapéutico específico",
+        "Disfagia; requiere manejo exclusivo de la deglución",
+        "No requiere intervención si el paciente puede mover la boca con normalidad"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque la dificultad en comprensión y expresión verbal con motricidad orofacial conservada sugiere afasia (trastorno del lenguaje) y no disartria (trastorno motor del habla), por lo que la intervención debe centrarse en la evaluación y rehabilitación del lenguaje."
+    },
+    {
+      "id": 399,
+      "career": "Tecnología Médica - Terapia del Lenguaje",
+      "block": "Cuidado integral",
+      "title": "Comunicación aumentativa y alternativa",
+      "level": "I-2",
+      "specialty": "Terapia del Lenguaje",
+      "tags": [
+        "CAA",
+        "discapacidad severa",
+        "comunicación"
+      ],
+      "statement": "Un niño con parálisis cerebral severa no desarrolla lenguaje oral funcional pese a la terapia, pero comprende el lenguaje dirigido a él.",
+      "question": "¿Qué estrategia es la más adecuada para favorecer su participación comunicativa?",
+      "options": [
+        "Suspender la intervención al no lograrse el habla oral",
+        "Implementar un sistema de Comunicación Aumentativa y Alternativa (CAA) adaptado a sus capacidades motoras y cognitivas",
+        "Insistir exclusivamente en ejercicios orales sin otras alternativas",
+        "Esperar a que el lenguaje oral aparezca espontáneamente sin intervención adicional"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque cuando el lenguaje oral funcional no es alcanzable, la Comunicación Aumentativa y Alternativa (CAA) permite al niño participar comunicativamente usando otros canales (pictogramas, dispositivos), en lugar de insistir únicamente en el habla oral."
+    },
+    {
+      "id": 400,
+      "career": "Tecnología Médica - Optometría",
+      "block": "Cuidado integral",
+      "title": "Estrabismo infantil",
+      "level": "I-2",
+      "specialty": "Optometría",
+      "tags": [
+        "estrabismo",
+        "ambliopía",
+        "derivación temprana"
+      ],
+      "statement": "Un niño de 2 años presenta desviación ocular hacia adentro que los padres notan de forma constante desde hace varios meses.",
+      "question": "¿Cuál es la conducta correcta ante este hallazgo?",
+      "options": [
+        "Esperar hasta los 6 años porque el estrabismo suele resolverse solo",
+        "Derivar oportunamente para evaluación oftalmológica, ya que el estrabismo no tratado puede generar ambliopía irreversible",
+        "Indicar parche ocular sin evaluación especializada previa",
+        "No es relevante si el niño no refiere molestias"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque el estrabismo constante en la infancia requiere derivación oportuna, dado que su persistencia sin tratamiento puede generar ambliopía irreversible; la ventana de tratamiento efectivo se reduce con la edad."
+    },
+    {
+      "id": 401,
+      "career": "Tecnología Médica - Optometría",
+      "block": "Salud pública",
+      "title": "Fatiga visual y seguridad vial",
+      "level": "I-2",
+      "specialty": "Optometría",
+      "tags": [
+        "salud ocupacional",
+        "seguridad vial",
+        "agudeza visual"
+      ],
+      "statement": "En un programa de evaluación visual para conductores profesionales, se detecta un caso con agudeza visual disminuida no corregida.",
+      "question": "¿Cuál es la relevancia de salud pública de este hallazgo?",
+      "options": [
+        "No tiene relevancia si el conductor refiere manejar bien de memoria",
+        "Una agudeza visual inadecuada en conductores incrementa el riesgo de accidentes de tránsito, por lo que amerita corrección antes de continuar la actividad",
+        "Solo debe registrarse sin ninguna restricción",
+        "Es un tema exclusivamente privado sin relación con la seguridad vial"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque la agudeza visual inadecuada en conductores profesionales constituye un riesgo directo para la seguridad vial, por lo que estos programas de tamizaje buscan la corrección oportuna antes de continuar la actividad conductiva."
+    },
+    {
+      "id": 402,
+      "career": "Tecnología Médica - Radiología",
+      "block": "Cuidado integral",
+      "title": "Ecografía obstétrica básica",
+      "level": "I-2",
+      "specialty": "Radiología",
+      "tags": [
+        "ecografía obstétrica",
+        "primer nivel",
+        "control prenatal"
+      ],
+      "statement": "En el control prenatal de un establecimiento de primer nivel se realiza una ecografía obstétrica básica a una gestante de 20 semanas.",
+      "question": "¿Cuál es el objetivo principal de esta ecografía en este nivel de atención?",
+      "options": [
+        "Determinar exclusivamente el sexo del bebé",
+        "Confirmar viabilidad, edad gestacional aproximada y descartar hallazgos que requieran derivación a mayor nivel de complejidad",
+        "Reemplazar por completo el control prenatal clínico",
+        "Diagnosticar con certeza todas las malformaciones fetales posibles"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque en el primer nivel la ecografía obstétrica básica tiene como objetivo confirmar viabilidad, estimar edad gestacional y detectar hallazgos que ameriten derivación oportuna, sin pretender un diagnóstico ecográfico especializado completo."
+    },
+    {
+      "id": 403,
+      "career": "Tecnología Médica - Radiología",
+      "block": "Gestión",
+      "title": "Contraindicaciones para resonancia magnética",
+      "level": "I-2",
+      "specialty": "Radiología",
+      "tags": [
+        "resonancia magnética",
+        "seguridad",
+        "contraindicaciones"
+      ],
+      "statement": "Un paciente programado para resonancia magnética refiere ser portador de un marcapasos cardiaco.",
+      "question": "¿Cuál es la conducta correcta antes de realizar el estudio?",
+      "options": [
+        "Proceder con el estudio sin verificar el tipo de dispositivo",
+        "Verificar la compatibilidad del dispositivo con el campo magnético (condicional/no condicional a RM) antes de decidir si el estudio puede realizarse",
+        "Retirar el marcapasos temporalmente para el estudio",
+        "Reemplazar la resonancia por una radiografía simple sin informar al médico tratante"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque no todos los marcapasos son compatibles con el campo magnético de la resonancia; debe verificarse la condición del dispositivo (RM-condicional o no) antes de decidir la realización del estudio, dado el riesgo de daño al dispositivo o al paciente."
+    },
+    {
+      "id": 404,
+      "career": "Tecnología Médica - Terapia Ocupacional",
+      "block": "Cuidado integral",
+      "title": "Síndrome del túnel carpiano ocupacional",
+      "level": "I-2",
+      "specialty": "Terapia Ocupacional",
+      "tags": [
+        "túnel carpiano",
+        "ergonomía",
+        "salud ocupacional"
+      ],
+      "statement": "Una trabajadora que realiza movimientos repetitivos de muñeca refiere hormigueo y dolor nocturno en los dedos pulgar, índice y medio.",
+      "question": "¿Cuál es la intervención de terapia ocupacional más pertinente en esta etapa?",
+      "options": [
+        "Indicar que continúe la misma actividad sin modificaciones",
+        "Evaluar y modificar factores ergonómicos del puesto de trabajo, junto con férula de reposo nocturna y educación en pausas activas",
+        "Recomendar cirugía inmediata sin manejo conservador previo",
+        "No intervenir hasta que aparezca atrofia muscular"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque en etapas iniciales del síndrome del túnel carpiano el manejo conservador —modificación ergonómica, férula de reposo nocturna y pausas activas— es la primera línea de intervención, reservando la cirugía para casos refractarios o avanzados."
+    },
+    {
+      "id": 405,
+      "career": "Tecnología Médica - Terapia Ocupacional",
+      "block": "Salud pública",
+      "title": "Prevención de trastornos musculoesqueléticos laborales",
+      "level": "I-2",
+      "specialty": "Terapia Ocupacional",
+      "tags": [
+        "ergonomía laboral",
+        "prevención",
+        "salud ocupacional"
+      ],
+      "statement": "En una empresa con alta incidencia de trastornos musculoesqueléticos, se solicita una intervención preventiva del terapeuta ocupacional.",
+      "question": "¿Cuál es el enfoque más adecuado para esta intervención poblacional?",
+      "options": [
+        "Atender solo a los trabajadores que ya presentan síntomas severos",
+        "Realizar un análisis ergonómico de los puestos de trabajo y capacitar en pausas activas y posturas adecuadas de forma preventiva",
+        "Recomendar que la empresa contrate personal nuevo en lugar de intervenir",
+        "Limitarse a repartir folletos informativos sin evaluación real de los puestos"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque la prevención de trastornos musculoesqueléticos laborales requiere un análisis ergonómico real de los puestos de trabajo junto con capacitación práctica, con un enfoque poblacional y no solo reactivo a casos ya sintomáticos."
+    },
+    {
+      "id": 406,
+      "career": "Ingeniería Sanitaria",
+      "block": "Salud pública",
+      "title": "Calidad del aire intramural",
+      "level": "I-2",
+      "specialty": "Ingeniería Sanitaria",
+      "tags": [
+        "contaminación intramural",
+        "cocinas mejoradas",
+        "salud respiratoria"
+      ],
+      "statement": "En una zona rural andina, las familias cocinan con leña en ambientes cerrados y sin chimenea, con alta incidencia de infecciones respiratorias en niños.",
+      "question": "¿Cuál es la intervención de ingeniería sanitaria más pertinente para reducir este riesgo?",
+      "options": [
+        "Prohibir el uso de leña sin ofrecer alternativa viable",
+        "Promover la instalación de cocinas mejoradas con chimenea que reduzcan la exposición al humo intramural",
+        "Indicar solo tratamiento médico de las infecciones sin intervenir en el ambiente",
+        "Esperar a que la comunidad adquiera cocinas a gas por cuenta propia"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque la promoción de cocinas mejoradas con chimenea reduce directamente la exposición al humo intramural, principal factor ambiental asociado a la alta incidencia de infecciones respiratorias en estas comunidades."
+    },
+    {
+      "id": 407,
+      "career": "Ingeniería Sanitaria",
+      "block": "Gestión",
+      "title": "Saneamiento en contexto de emergencia o desastre",
+      "level": "I-2",
+      "specialty": "Ingeniería Sanitaria",
+      "tags": [
+        "saneamiento en emergencias",
+        "gestión de desastres",
+        "agua segura"
+      ],
+      "statement": "Tras un sismo, una comunidad queda sin acceso a la red de agua potable y se organiza en albergues temporales.",
+      "question": "¿Cuál es la prioridad de ingeniería sanitaria en la respuesta inmediata?",
+      "options": [
+        "Esperar la reconstrucción completa de la red antes de intervenir",
+        "Garantizar el acceso a agua segura (mediante tratamiento temporal o distribución controlada) y disposición adecuada de excretas en los albergues",
+        "Priorizar únicamente la reconstrucción de viviendas sin atender el saneamiento",
+        "No es un tema de ingeniería sanitaria en situaciones de emergencia"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque en la fase de emergencia la prioridad de ingeniería sanitaria es garantizar agua segura y disposición adecuada de excretas en los albergues, medidas críticas para prevenir brotes de enfermedades entéricas en población desplazada."
+    },
+    {
+      "id": 408,
+      "career": "Biología",
+      "block": "Investigación",
+      "title": "Examen parasitológico de heces",
+      "level": "I-2",
+      "specialty": "Biología",
+      "tags": [
+        "parasitología",
+        "huevos y quistes",
+        "diagnóstico"
+      ],
+      "statement": "En un examen parasitológico seriado de heces se identifican huevos característicos de Ascaris lumbricoides.",
+      "question": "¿Qué implica este hallazgo para el manejo del caso?",
+      "options": [
+        "No requiere tratamiento si el paciente está asintomático",
+        "Confirma la infección y orienta el tratamiento antiparasitario específico según el agente identificado",
+        "Se debe repetir el examen indefinidamente sin dar tratamiento",
+        "Indica una infección viral, no parasitaria"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque la identificación de huevos de Ascaris lumbricoides confirma la infección parasitaria y orienta el tratamiento antiparasitario específico, independientemente de la presencia de síntomas, dado el riesgo de complicaciones y transmisión."
+    },
+    {
+      "id": 409,
+      "career": "Biología",
+      "block": "Gestión",
+      "title": "Control de calidad en banco de sangre",
+      "level": "I-2",
+      "specialty": "Biología",
+      "tags": [
+        "banco de sangre",
+        "tamizaje serológico",
+        "seguridad transfusional"
+      ],
+      "statement": "Antes de liberar una unidad de sangre para transfusión, el laboratorio realiza tamizaje serológico obligatorio.",
+      "question": "¿Cuál es el propósito principal de este tamizaje?",
+      "options": [
+        "Determinar el grupo sanguíneo únicamente",
+        "Detectar marcadores de infecciones transmisibles por transfusión (VIH, hepatitis B/C, sífilis, entre otros) antes de liberar la unidad",
+        "Verificar el volumen exacto de la unidad donada",
+        "Confirmar la identidad del donante"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque el tamizaje serológico obligatorio en banco de sangre busca detectar marcadores de infecciones transmisibles por transfusión, garantizando la seguridad transfusional antes de liberar cualquier unidad para uso clínico."
+    },
+    {
+      "id": 410,
+      "career": "Medicina Veterinaria",
+      "block": "Salud pública",
+      "title": "Tenencia responsable de mascotas",
+      "level": "I-2",
+      "specialty": "Medicina Veterinaria",
+      "tags": [
+        "tenencia responsable",
+        "zoonosis",
+        "prevención"
+      ],
+      "statement": "En una campaña de salud pública se promueve la tenencia responsable de mascotas en una comunidad urbana.",
+      "question": "¿Qué componente es esencial en este tipo de estrategias para la prevención de zoonosis?",
+      "options": [
+        "Promover únicamente la alimentación adecuada de las mascotas",
+        "Promover la vacunación antirrábica, desparasitación periódica y esterilización para el control poblacional canino/felino",
+        "Limitar la estrategia a la entrega de folletos informativos",
+        "No incluir a la comunidad en el diseño de la estrategia"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque la tenencia responsable, orientada a la prevención de zoonosis, integra la vacunación antirrábica, la desparasitación periódica y la esterilización para el control poblacional, más allá de la sola alimentación de las mascotas."
+    },
+    {
+      "id": 411,
+      "career": "Medicina Veterinaria",
+      "block": "Cuidado integral",
+      "title": "Inspección sanitaria de alimentos de origen animal",
+      "level": "I-2",
+      "specialty": "Medicina Veterinaria",
+      "tags": [
+        "inocuidad alimentaria",
+        "inspección sanitaria",
+        "salud pública veterinaria"
+      ],
+      "statement": "En un camal local, el médico veterinario realiza inspección ante-mortem y post-mortem de animales destinados al consumo humano.",
+      "question": "¿Cuál es el objetivo principal de esta inspección?",
+      "options": [
+        "Verificar el peso comercial del animal exclusivamente",
+        "Garantizar la inocuidad de la carne, detectando enfermedades o lesiones que la hagan no apta para el consumo humano",
+        "Determinar el precio de venta de la carne",
+        "Certificar el origen genético del animal"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque la inspección veterinaria ante-mortem y post-mortem tiene como objetivo garantizar la inocuidad alimentaria, detectando enfermedades o lesiones que comprometan la seguridad de la carne para consumo humano."
+    },
+    {
+      "id": 412,
+      "career": "Farmacia y Bioquímica",
+      "block": "Cuidado integral",
+      "title": "Interacción medicamentosa relevante",
+      "level": "I-2",
+      "specialty": "Farmacia y Bioquímica",
+      "tags": [
+        "interacciones medicamentosas",
+        "seguridad del paciente",
+        "dispensación"
+      ],
+      "statement": "Un paciente en tratamiento con warfarina solicita en farmacia un antiinflamatorio no esteroideo (AINE) de venta libre para dolor articular.",
+      "question": "¿Cuál es la conducta correcta del profesional de farmacia?",
+      "options": [
+        "Dispensar el AINE sin advertencia, ya que es de venta libre",
+        "Advertir sobre el riesgo de interacción (aumento del riesgo de sangrado) y orientar hacia una alternativa más segura o consulta médica previa",
+        "Indicar que duplique la dosis de warfarina para compensar",
+        "Recomendar suspender la warfarina sin indicación médica"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque los AINE pueden potenciar el efecto anticoagulante de la warfarina y aumentar el riesgo de sangrado; el profesional de farmacia debe advertir esta interacción y orientar hacia una alternativa más segura o la consulta médica previa, sin dispensarlo sin más ni modificar dosis por cuenta propia."
+    },
+    {
+      "id": 413,
+      "career": "Farmacia y Bioquímica",
+      "block": "Gestión",
+      "title": "Cadena de frío de vacunas",
+      "level": "I-2",
+      "specialty": "Farmacia y Bioquímica",
+      "tags": [
+        "cadena de frío",
+        "vacunas",
+        "conservación"
+      ],
+      "statement": "En el establecimiento de salud se recibe un lote de vacunas que debe mantenerse entre 2 y 8°C durante todo su almacenamiento y transporte.",
+      "question": "¿Qué acción es indispensable si se detecta una interrupción de la cadena de frío durante el transporte?",
+      "options": [
+        "Aplicar las vacunas igualmente si no hay otro lote disponible",
+        "Registrar el evento, evaluar según protocolo si el lote es aún utilizable y descartarlo si se compromete su eficacia o seguridad",
+        "Ignorar el registro de temperatura si el tiempo de exposición fue breve",
+        "Congelar el lote para 'reiniciar' la cadena de frío"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque ante una interrupción de la cadena de frío debe registrarse el evento y evaluarse según el protocolo correspondiente si el lote conserva su eficacia y seguridad; de no garantizarse, debe descartarse, sin aplicar vacunas de dudosa integridad ni intentar 'corregir' con congelación."
+    },
+    {
+      "id": 414,
+      "career": "Trabajo Social",
+      "block": "Cuidado integral",
+      "title": "Abandono en adulto mayor",
+      "level": "I-2",
+      "specialty": "Trabajo Social",
+      "tags": [
+        "adulto mayor",
+        "abandono",
+        "valoración social"
+      ],
+      "statement": "Un adulto mayor es hospitalizado y, al momento del alta, ningún familiar acude a recogerlo ni responde a los llamados del establecimiento.",
+      "question": "¿Cuál es la acción prioritaria del trabajo social ante esta situación?",
+      "options": [
+        "Dar de alta al paciente sin más gestión, dejando que resuelva por sí mismo",
+        "Realizar la valoración social del caso y activar la ruta de protección social correspondiente para adultos mayores en situación de abandono",
+        "Mantenerlo hospitalizado indefinidamente sin gestionar el caso",
+        "Delegar la responsabilidad exclusivamente al personal de seguridad del establecimiento"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque ante un caso de abandono de adulto mayor corresponde al trabajo social realizar la valoración social y activar la ruta de protección social pertinente (redes de apoyo, servicios sociales), sin dar de alta sin gestión ni prolongar la hospitalización sin plan de acción."
+    },
+    {
+      "id": 415,
+      "career": "Trabajo Social",
+      "block": "Ética e interculturalidad",
+      "title": "Acceso a salud de población migrante",
+      "level": "I-2",
+      "specialty": "Trabajo Social",
+      "tags": [
+        "migración",
+        "acceso a salud",
+        "enfoque de derechos"
+      ],
+      "statement": "Una familia migrante sin documentación regularizada acude a un establecimiento de salud solicitando atención para un niño enfermo.",
+      "question": "¿Cuál es la conducta correcta del trabajo social en este caso?",
+      "options": [
+        "Negar la orientación por no contar con documentación regularizada",
+        "Orientar sobre las vías de acceso a la atención de salud disponibles para población migrante, priorizando el derecho a la salud del niño",
+        "Derivar el caso a control migratorio antes de brindar cualquier orientación en salud",
+        "Condicionar la atención a la regularización previa de la documentación"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque el trabajo social debe orientar sobre las vías de acceso a la atención en salud disponibles para la población migrante, priorizando el derecho a la salud del niño por encima de su situación migratoria, sin condicionar ni derivar la atención a otras instancias."
     }
   ],
   "norms": [
