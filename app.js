@@ -243,6 +243,7 @@ function renderDashboard() {
       <div class="card"><span class="label">Puntaje</span><div class="value">${score}</div></div>
       <div class="card"><span class="label">Casos</span><div class="value">${data.cases.length}</div></div>
       <div class="card"><span class="label">Normas</span><div class="value">${data.norms.length}</div></div>
+      <div class="card"><span class="label">Normas prioritarias 2026</span><div class="value">${data.priorityNorms2026.length}</div></div>
       <div class="card"><span class="label">Decretos</span><div class="value">${data.decrees.length}</div></div>
     </section>
     <section style="margin-bottom:16px">
@@ -1001,6 +1002,43 @@ function renderDecrees() {
   bindToggles();
 }
 
+function renderPriorityNorms() {
+  pageTitle.textContent = "Normas prioritarias SERUMS 2026";
+  pageSubtitle.textContent = "NTS y RM 2026 con mayor probabilidad de evaluación, organizadas por prioridad.";
+  const order = ["muy alta", "alta", "media-alta", "media", "base obligatoria"];
+  const grouped = order
+    .map(p => ({ priority: p, items: data.priorityNorms2026.filter(n => n.priority === p) }))
+    .filter(g => g.items.length);
+  root.innerHTML = `
+    <section class="two-col">
+      <div class="panel">
+        ${grouped.map(g => `
+          <h3 class="section-title" style="margin-top:18px;text-transform:capitalize">Prioridad ${g.priority}</h3>
+          <div class="norm-list">
+            ${g.items.map((n, i) => `
+              <article class="norm-card">
+                <span>${n.code}</span>
+                <h3>${n.title}</h3>
+                <p>${n.summary}</p>
+                <button class="toggle" data-target="pnorm-${g.priority}-${i}">Ver detalle</button>
+                <div class="toggle-panel" id="pnorm-${g.priority}-${i}">
+                  <p>${n.detail}</p>
+                  <p style="margin-top:8px;color:#5B6E6A"><strong>Bloque:</strong> ${n.block} &middot; <strong>Temas evaluables:</strong> ${n.topics.join(", ")}</p>
+                </div>
+              </article>
+            `).join("")}
+          </div>
+        `).join("")}
+      </div>
+      <div class="panel">
+        <h3 class="section-title">Sobre esta sección</h3>
+        <p style="line-height:1.6;color:#5B6E6A">Normas técnicas y resoluciones ministeriales priorizadas para el proceso SERUMS 2026, verificadas en el portal MINSA y el Diario Oficial El Peruano. Las 15 preguntas derivadas de estas normas ya forman parte del banco de casos (bloques Gestión, Salud pública y Cuidado integral).</p>
+      </div>
+    </section>
+  `;
+  bindToggles();
+}
+
 function renderResources() {
   pageTitle.textContent = "Recursos";
   pageSubtitle.textContent = "Apuntes, compendios y material de apoyo.";
@@ -1109,6 +1147,7 @@ function renderView(view) {
   if (view === "simulacro") renderSimulacro();
   if (view === "glossary") renderGlossary();
   if (view === "norms") renderNorms();
+  if (view === "priorityNorms") renderPriorityNorms();
   if (view === "decrees") renderDecrees();
   if (view === "resources") renderResources();
   if (view === "examRegistry") renderExamRegistry();

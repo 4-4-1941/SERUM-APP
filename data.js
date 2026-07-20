@@ -7244,6 +7244,358 @@ window.SERUMS_DATA = {
       ],
       "correct": 1,
       "feedback": "Es correcta porque la categorización del primer nivel de atención distingue progresivamente la capacidad resolutiva: I-1 es un puesto de salud sin médico, cubierto por personal técnico o profesional no médico; I-2 ya cuenta con médico cirujano; I-3 y I-4 son centros de salud con mayor complejidad, siendo I-4 el que incorpora camas de internamiento dentro del primer nivel. Asumir que todas las categorías tienen médico, que la categoría depende solo de la población sin considerar los recursos humanos, o equiparar I-3/I-4 con el segundo nivel hospitalario no corresponde a los criterios reales de categorización."
+    },
+    {
+      "id": 315,
+      "career": "Transversal",
+      "block": "Gestión",
+      "title": "Articulación asistencial en Red Integrada de Salud (NTS 249)",
+      "level": "I-2",
+      "specialty": "Gestión",
+      "tags": [
+        "cartera de servicios",
+        "redes integradas",
+        "gestión",
+        "NTS 249"
+      ],
+      "statement": "Un establecimiento I-2 identifica un caso de mayor complejidad y lo deriva a un hospital II-1 dentro de su misma red de salud.",
+      "question": "¿Qué principio de la NTS 249-MINSA/DGAIN-2026 sustenta esta derivación?",
+      "options": [
+        "Autonomía funcional del establecimiento",
+        "Articulación asistencial dentro de la Red Integrada de Salud",
+        "Libre elección del paciente",
+        "Descentralización presupuestal"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque la NTS 249 organiza la oferta de servicios en Redes Integradas de Salud (RIS), donde la derivación entre niveles responde a la articulación asistencial planificada de la red, no a decisiones autónomas ni presupuestales del establecimiento."
+    },
+    {
+      "id": 316,
+      "career": "Transversal",
+      "block": "Gestión",
+      "title": "Función del RENACSS (NTS 249)",
+      "level": "I-2",
+      "specialty": "Gestión",
+      "tags": [
+        "RENACSS",
+        "cartera de servicios",
+        "gestión",
+        "NTS 249"
+      ],
+      "statement": "El Ministerio de Salud crea, mediante la NTS 249-MINSA/DGAIN-2026, un repositorio nacional de carteras de servicios.",
+      "question": "¿Cuál es la función principal del RENACSS?",
+      "options": [
+        "Fiscalizar el gasto en salud",
+        "Centralizar y actualizar las carteras de servicios normativas y de establecimientos",
+        "Certificar la discapacidad",
+        "Realizar vigilancia epidemiológica"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque el RENACSS (Repositorio Nacional de Carteras de Servicios de Salud) centraliza y mantiene actualizada la información de las carteras de servicios a nivel nacional, no cumple funciones de fiscalización, certificación de discapacidad ni vigilancia epidemiológica."
+    },
+    {
+      "id": 317,
+      "career": "Transversal",
+      "block": "Salud pública",
+      "title": "Enfoque integral en certificación de discapacidad (NTS 248)",
+      "level": "I-2",
+      "specialty": "Salud Pública",
+      "tags": [
+        "discapacidad",
+        "certificación",
+        "enfoque de derechos",
+        "NTS 248"
+      ],
+      "statement": "Un profesional de salud debe emitir un certificado de discapacidad siguiendo la NTS 248-MINSA/DGIESP-2026.",
+      "question": "¿Qué debe integrar principalmente la certificación de discapacidad según esta norma?",
+      "options": [
+        "Solo el diagnóstico médico",
+        "Diagnóstico clínico, funcionalidad y contexto de participación social",
+        "La antigüedad de la enfermedad",
+        "El nivel socioeconómico del paciente"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque el enfoque de atención integral exige valorar diagnóstico clínico, nivel de funcionalidad y participación social de la persona, no basta el diagnóstico aislado ni criterios ajenos a la condición de salud."
+    },
+    {
+      "id": 318,
+      "career": "Transversal",
+      "block": "Salud pública",
+      "title": "Propósito de la certificación de discapacidad (NTS 248)",
+      "level": "I-2",
+      "specialty": "Salud Pública",
+      "tags": [
+        "discapacidad",
+        "derechos",
+        "certificación",
+        "NTS 248"
+      ],
+      "statement": "La certificación de discapacidad habilita a la persona para acceder a determinados beneficios y protecciones legales.",
+      "question": "¿Cuál es el propósito central de este proceso de certificación?",
+      "options": [
+        "Habilitar el acceso a derechos y beneficios establecidos por ley",
+        "Determinar el pronóstico vital del paciente",
+        "Definir el tratamiento farmacológico a seguir",
+        "Autorizar la hospitalización"
+      ],
+      "correct": 0,
+      "feedback": "Correcta porque la certificación de discapacidad tiene como fin habilitar el ejercicio de derechos y el acceso a beneficios legales, no busca establecer pronóstico, tratamiento ni disposición de hospitalización."
+    },
+    {
+      "id": 319,
+      "career": "Transversal",
+      "block": "Salud pública",
+      "title": "Conducta inicial ante sospecha de sarampión (NTS 247)",
+      "level": "I-2",
+      "specialty": "Salud Pública",
+      "tags": [
+        "sarampión",
+        "vigilancia epidemiológica",
+        "notificación",
+        "NTS 247"
+      ],
+      "statement": "En un establecimiento de primer nivel se atiende un caso compatible con sarampión: exantema, fiebre alta y tos.",
+      "question": "¿Cuál es la conducta inmediata correcta según la NTS 247-MINSA/DGIESP-2026?",
+      "options": [
+        "Notificación obligatoria e inicio de vigilancia epidemiológica",
+        "Tratamiento sintomático y alta sin seguimiento",
+        "Solicitar serología antes de notificar",
+        "Derivar al paciente sin notificar el caso"
+      ],
+      "correct": 0,
+      "feedback": "Correcta porque todo caso sospechoso de sarampión exige notificación obligatoria inmediata que activa la vigilancia epidemiológica, sin condicionarla a la confirmación de laboratorio ni omitir el reporte antes de derivar."
+    },
+    {
+      "id": 320,
+      "career": "Transversal",
+      "block": "Salud pública",
+      "title": "Bloqueo vacunal en brote de sarampión (NTS 247)",
+      "level": "I-2",
+      "specialty": "Salud Pública",
+      "tags": [
+        "sarampión",
+        "bloqueo vacunal",
+        "control de brotes",
+        "NTS 247"
+      ],
+      "statement": "Se confirma un brote de sarampión en una localidad y se activan las medidas de control establecidas en la norma.",
+      "question": "¿A qué se refiere el 'bloqueo vacunal' en este contexto?",
+      "options": [
+        "Vacunación de contactos y población en riesgo alrededor del caso índice",
+        "Suspensión temporal de la vacunación en la zona",
+        "Aislamiento hospitalario exclusivo del caso índice",
+        "Cuarentena domiciliaria de 40 días"
+      ],
+      "correct": 0,
+      "feedback": "Correcta porque el bloqueo vacunal consiste en vacunar oportunamente a los contactos y a la población en riesgo alrededor del caso índice para cortar la cadena de transmisión, no implica suspender la vacunación ni medidas de aislamiento prolongado."
+    },
+    {
+      "id": 321,
+      "career": "Medicina",
+      "block": "Cuidado integral",
+      "title": "Manejo sindrómico de ITS (NTS 240)",
+      "level": "I-2",
+      "specialty": "Salud Sexual",
+      "tags": [
+        "ITS",
+        "manejo sindrómico",
+        "NTS 240"
+      ],
+      "statement": "Un paciente acude con secreción uretral y dolor al orinar; el establecimiento no cuenta con resultados de laboratorio inmediatos.",
+      "question": "¿Cómo se caracteriza el manejo sindrómico de las ITS según la NTS 240-MINSA/DGIESP-2026?",
+      "options": [
+        "Tratar según el síndrome clínico presente, sin esperar confirmación de laboratorio",
+        "Solicitar siempre cultivo antes de iniciar tratamiento",
+        "Referir todo caso a un especialista",
+        "Tratar solo si existe confirmación serológica"
+      ],
+      "correct": 0,
+      "feedback": "Correcta porque el manejo sindrómico permite iniciar tratamiento en base al síndrome clínico identificado, evitando el retraso terapéutico que implicaría esperar la confirmación de laboratorio."
+    },
+    {
+      "id": 322,
+      "career": "Obstetricia",
+      "block": "Cuidado integral",
+      "title": "Consejería en tamizaje de ITS (NTS 240)",
+      "level": "I-2",
+      "specialty": "Salud Sexual",
+      "tags": [
+        "ITS",
+        "consejería",
+        "tamizaje",
+        "NTS 240"
+      ],
+      "statement": "Se realiza tamizaje de VIH y sífilis a una gestante en control prenatal.",
+      "question": "¿Qué debe incluir obligatoriamente la consejería en este tamizaje según la NTS 240?",
+      "options": [
+        "Solo la entrega de resultados",
+        "Información pre y post prueba, con enfoque en reducción de riesgo",
+        "Notificación policial del resultado",
+        "Consentimiento de un familiar"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque la consejería en tamizaje de ITS debe brindarse antes y después de la prueba, con enfoque en reducción de riesgo, y no se limita a la entrega mecánica de resultados."
+    },
+    {
+      "id": 323,
+      "career": "Transversal",
+      "block": "Gestión",
+      "title": "Orden de mérito en la Evaluación SERUMS (Directiva 386)",
+      "level": "I-2",
+      "specialty": "Gestión",
+      "tags": [
+        "orden de mérito",
+        "evaluación SERUMS",
+        "Directiva 386"
+      ],
+      "statement": "Finalizada la Evaluación para el SERUMS, se procede a publicar los resultados según lo dispuesto en la Directiva Administrativa 386-MINSA/DIGEP-2026.",
+      "question": "¿Cómo se determina principalmente el orden de mérito en este proceso?",
+      "options": [
+        "Por la antigüedad de egreso del postulante",
+        "Por el puntaje obtenido según los criterios establecidos en la directiva",
+        "Mediante sorteo aleatorio",
+        "Según la región de origen del postulante"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque la Directiva 386 establece que el orden de mérito se determina por el puntaje obtenido en la evaluación conforme a sus criterios, sin recurrir a antigüedad, sorteo ni región de origen."
+    },
+    {
+      "id": 324,
+      "career": "Transversal",
+      "block": "Gestión",
+      "title": "Responsabilidad en la inscripción SERUMS (Directiva 386)",
+      "level": "I-2",
+      "specialty": "Gestión",
+      "tags": [
+        "inscripción",
+        "responsabilidad",
+        "Directiva 386"
+      ],
+      "statement": "Durante el proceso de inscripción, un postulante completa sus datos en el sistema de la Evaluación SERUMS.",
+      "question": "¿A quién corresponde verificar la exactitud de los datos consignados en la inscripción?",
+      "options": [
+        "Al propio postulante",
+        "Al establecimiento de destino",
+        "Únicamente al comité de la sede regional",
+        "A MINSA de forma exclusiva, sin intervención del postulante"
+      ],
+      "correct": 0,
+      "feedback": "Correcta porque la Directiva 386 asigna al postulante la responsabilidad de verificar la exactitud de sus datos de inscripción; las instancias regionales y MINSA administran el proceso, pero no sustituyen esa responsabilidad individual."
+    },
+    {
+      "id": 325,
+      "career": "Transversal",
+      "block": "Gestión",
+      "title": "Marco legal de la adjudicación de plaza (RM 617)",
+      "level": "I-2",
+      "specialty": "Gestión",
+      "tags": [
+        "marco legal",
+        "adjudicación",
+        "RM 617"
+      ],
+      "statement": "Un postulante consulta bajo qué norma se rige actualmente la adjudicación de plazas del proceso SERUMS.",
+      "question": "¿Qué norma modifica el Reglamento de la Ley SERUMS respecto a las condiciones de adjudicación?",
+      "options": [
+        "RM 617-2026-MINSA",
+        "NTS 249-MINSA/DGAIN-2026",
+        "Directiva Administrativa 386-MINSA/DIGEP-2026",
+        "RM 147-2026-MINSA"
+      ],
+      "correct": 0,
+      "feedback": "Correcta porque la RM 617-2026-MINSA es la norma que modifica el Reglamento de la Ley SERUMS en lo referido a las condiciones generales y reglas de adjudicación de plaza."
+    },
+    {
+      "id": 326,
+      "career": "Transversal",
+      "block": "Gestión",
+      "title": "Alcance de una modificación reglamentaria (RM 617)",
+      "level": "I-2",
+      "specialty": "Gestión",
+      "tags": [
+        "marco legal",
+        "reglamento SERUMS",
+        "RM 617"
+      ],
+      "statement": "Se publica una modificación al Reglamento de la Ley SERUMS mientras un proceso de adjudicación se encuentra en curso.",
+      "question": "¿A quiénes afecta directamente esta modificación reglamentaria?",
+      "options": [
+        "Solo a los postulantes de años anteriores",
+        "Las condiciones y reglas vigentes del proceso actual de adjudicación",
+        "Únicamente al personal de salud ya contratado",
+        "Solo a los establecimientos privados"
+      ],
+      "correct": 1,
+      "feedback": "Correcta porque una modificación al reglamento rige sobre las condiciones y reglas del proceso de adjudicación vigente al momento de su publicación, no se limita a procesos pasados ni a establecimientos privados."
+    },
+    {
+      "id": 327,
+      "career": "Transversal",
+      "block": "Gestión",
+      "title": "Formalización del inicio del SERUMS 2026-I (RM 379)",
+      "level": "I-2",
+      "specialty": "Gestión",
+      "tags": [
+        "cronograma",
+        "inicio de proceso",
+        "RM 379"
+      ],
+      "statement": "El MINSA publica una resolución que da inicio formal a las actividades del proceso SERUMS del primer periodo del año.",
+      "question": "¿Qué formaliza la RM 379-2026-MINSA?",
+      "options": [
+        "El inicio oficial de actividades del proceso SERUMS 2026-I",
+        "La certificación de discapacidad",
+        "El listado de nuevas plazas disponibles",
+        "El manejo sindrómico de ITS"
+      ],
+      "correct": 0,
+      "feedback": "Correcta porque la RM 379-2026-MINSA formaliza el inicio oficial de actividades del proceso SERUMS 2026-I, distinto de las normas de discapacidad, plazas o manejo clínico de ITS."
+    },
+    {
+      "id": 328,
+      "career": "Transversal",
+      "block": "Gestión",
+      "title": "Incorporación de nuevos establecimientos (RM 147)",
+      "level": "I-2",
+      "specialty": "Gestión",
+      "tags": [
+        "plazas",
+        "oferta territorial",
+        "RM 147"
+      ],
+      "statement": "El listado de plazas SERUMS se amplía con establecimientos de zonas de difícil acceso que antes no formaban parte de la oferta.",
+      "question": "¿A qué responde principalmente la incorporación de nuevos establecimientos al listado SERUMS?",
+      "options": [
+        "A necesidades de cobertura territorial y ampliación de oferta en redes de salud",
+        "A la solicitud directa de los postulantes",
+        "A convenios exclusivos con universidades",
+        "A la reducción de plazas en zonas urbanas"
+      ],
+      "correct": 0,
+      "feedback": "Correcta porque la RM 147-2026-MINSA incorpora establecimientos según necesidades de cobertura territorial y ampliación de la oferta de plazas en las redes de salud, priorizando zonas de mayor dificultad de acceso."
+    },
+    {
+      "id": 329,
+      "career": "Transversal",
+      "block": "Cuidado integral",
+      "title": "Teleorientación vs. teleconsulta (Compendio de Telesalud)",
+      "level": "I-2",
+      "specialty": "Telesalud",
+      "tags": [
+        "telesalud",
+        "teleorientación",
+        "teleconsulta"
+      ],
+      "statement": "Un establecimiento ofrece atención remota a la población de su jurisdicción a través de distintas modalidades de telesalud.",
+      "question": "¿En qué se diferencia la teleorientación de la teleconsulta?",
+      "options": [
+        "Es un espacio de información y consejería, sin acto médico diagnóstico definitivo",
+        "Implica siempre prescripción farmacológica",
+        "Solo puede ser realizada por especialistas",
+        "Reemplaza la atención presencial en situaciones de emergencia"
+      ],
+      "correct": 0,
+      "feedback": "Correcta porque la teleorientación brinda información y consejería sin constituir un acto médico diagnóstico definitivo, a diferencia de la teleconsulta; no implica prescripción obligatoria ni reemplaza la atención presencial en emergencias."
     }
   ],
   "norms": [
@@ -7855,5 +8207,145 @@ window.SERUMS_DATA = {
     "Ética e interculturalidad": 0.16,
     "Cuidado integral": 0.18,
     "Investigación": 0.14
-  }
+  },
+  "priorityNorms2026": [
+    {
+      "code": "NTS 249-MINSA/DGAIN-2026",
+      "title": "Cartera de Servicios de Salud y Redes Integradas de Salud",
+      "summary": "Regula la cartera de servicios de establecimientos, servicios médicos de apoyo y la articulación de redes integradas de salud (RIS). Aprobada por RM 625-2026/MINSA, crea el RENACSS.",
+      "detail": "Define niveles de atención, oferta de servicios, organización de redes y articulación asistencial desde el primer nivel. El RENACSS (Repositorio Nacional de Carteras de Servicios de Salud) centraliza y actualiza las carteras normativas y funcionales de los establecimientos.",
+      "priority": "muy alta",
+      "block": "Gestión",
+      "topics": [
+        "Niveles de atención",
+        "Oferta de servicios",
+        "Organización de redes",
+        "Articulación asistencial",
+        "RENACSS"
+      ]
+    },
+    {
+      "code": "NTS 248-MINSA/DGIESP-2026",
+      "title": "Evaluación, calificación y certificación de la discapacidad",
+      "summary": "Establece los criterios de evaluación, calificación y certificación de la discapacidad bajo enfoque de atención integral y de derechos.",
+      "detail": "La certificación integra diagnóstico clínico, funcionalidad y participación social, y habilita el acceso a derechos y beneficios de ley para la persona con discapacidad.",
+      "priority": "muy alta",
+      "block": "Salud pública",
+      "topics": [
+        "Criterios de discapacidad",
+        "Evaluación y certificación",
+        "Enfoque de derechos",
+        "Atención integral"
+      ]
+    },
+    {
+      "code": "NTS 247-MINSA/DGIESP-2026",
+      "title": "Prevención, diagnóstico y manejo del sarampión",
+      "summary": "Norma de vigilancia epidemiológica, sospecha, notificación, manejo de casos y control de brotes de sarampión.",
+      "detail": "Todo caso sospechoso exige notificación obligatoria inmediata y activación de vigilancia epidemiológica. El control de brotes incluye bloqueo vacunal de contactos y población en riesgo.",
+      "priority": "muy alta",
+      "block": "Salud pública",
+      "topics": [
+        "Caso sospechoso",
+        "Notificación obligatoria",
+        "Vigilancia epidemiológica activa",
+        "Bloqueo vacunal",
+        "Control de brotes"
+      ]
+    },
+    {
+      "code": "NTS 240-MINSA/DGIESP-2026",
+      "title": "Prevención y control de las infecciones de transmisión sexual",
+      "summary": "Actualiza la norma técnica para el manejo de ITS: manejo sindrómico, consejería, tamizaje y referencia. Aprobada por RM 035-2026/MINSA.",
+      "detail": "El manejo sindrómico permite tratar según el síndrome clínico sin esperar confirmación de laboratorio. La consejería en tamizaje debe incluir información pre y post prueba con enfoque de reducción de riesgo.",
+      "priority": "alta",
+      "block": "Cuidado integral",
+      "topics": [
+        "Manejo sindrómico",
+        "Consejería pre/post prueba",
+        "Tamizaje VIH/sífilis",
+        "Criterios de referencia"
+      ]
+    },
+    {
+      "code": "Directiva Administrativa 386-MINSA/DIGEP-2026",
+      "title": "Gestión de la Evaluación SERUMS",
+      "summary": "Regula la gestión de la Evaluación para el SERUMS. Aprobada por RM 155-2026/MINSA, deroga la Directiva 380-MINSA/DIGEP-2025.",
+      "detail": "Mejora las fases de planificación, procesamiento y publicación de resultados de la evaluación. Define el orden de mérito, responsabilidades del postulante y de las instancias regionales.",
+      "priority": "alta",
+      "block": "Gestión",
+      "topics": [
+        "Proceso de inscripción",
+        "Orden de mérito",
+        "Fases de la evaluación",
+        "Responsabilidades del postulante"
+      ]
+    },
+    {
+      "code": "RM 617-2026-MINSA",
+      "title": "Modificación del Reglamento de la Ley SERUMS",
+      "summary": "Modifica el marco legal y reglamentario del proceso SERUMS: condiciones generales y reglas de adjudicación de plaza.",
+      "detail": "Toda modificación reglamentaria afecta las condiciones y reglas vigentes del proceso de adjudicación en curso, no solo procesos futuros.",
+      "priority": "alta",
+      "block": "Gestión",
+      "topics": [
+        "Marco legal SERUMS",
+        "Condiciones de adjudicación",
+        "Reglas del proceso vigente"
+      ]
+    },
+    {
+      "code": "RM 379-2026-MINSA",
+      "title": "Inicio del proceso SERUMS 2026-I",
+      "summary": "Formaliza el cronograma y el inicio oficial de actividades del proceso SERUMS 2026-I.",
+      "detail": "Establece el contexto operativo y las fechas base sobre las que se organizan las siguientes disposiciones (incorporación de plazas, evaluación, adjudicación).",
+      "priority": "media-alta",
+      "block": "Gestión",
+      "topics": [
+        "Cronograma oficial",
+        "Inicio de actividades"
+      ]
+    },
+    {
+      "code": "RM 147-2026-MINSA",
+      "title": "Incorporación de nuevos establecimientos al listado SERUMS",
+      "summary": "Amplía el listado de plazas SERUMS incorporando nuevos establecimientos según necesidad territorial.",
+      "detail": "La incorporación responde a necesidades de cobertura territorial y ampliación de oferta dentro de las redes de salud, priorizando zonas de mayor dificultad de acceso.",
+      "priority": "media-alta",
+      "block": "Gestión",
+      "topics": [
+        "Criterios de incorporación de plazas",
+        "Dificultad de acceso",
+        "Oferta territorial"
+      ]
+    },
+    {
+      "code": "Compendio de Telesalud",
+      "title": "Bibliografía de la Dirección de Telesalud",
+      "summary": "Compendio oficial sobre modalidades de atención remota: teleorientación, teleconsulta y telemedicina.",
+      "detail": "La teleorientación es un espacio de información y consejería sin acto médico diagnóstico definitivo, distinto de la teleconsulta. Aborda continuidad de cuidado y brechas de conectividad.",
+      "priority": "media",
+      "block": "Cuidado integral",
+      "topics": [
+        "Teleorientación vs teleconsulta",
+        "Continuidad de cuidado",
+        "Brechas de conectividad"
+      ]
+    },
+    {
+      "code": "Compendio oficial SERUMS (gob.pe)",
+      "title": "Mapa de los 17 bloques bibliográficos oficiales",
+      "summary": "Base bibliográfica obligatoria del examen SERUMS, organizada en los 5 bloques temáticos evaluados.",
+      "detail": "Todas las NTS y RM de esta lista deben ubicarse dentro de los 5 bloques oficiales: salud pública, cuidado integral, ética e interculturalidad, investigación y gestión.",
+      "priority": "base obligatoria",
+      "block": "Transversal",
+      "topics": [
+        "Salud pública",
+        "Cuidado integral",
+        "Ética e interculturalidad",
+        "Investigación",
+        "Gestión"
+      ]
+    }
+  ]
 };
