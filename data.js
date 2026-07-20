@@ -6989,6 +6989,190 @@ window.SERUMS_DATA = {
       ],
       "correct": 1,
       "feedback": "Es correcta porque la fiebre amarilla selvática, por su alta letalidad y su potencial de generar un brote urbano si se introduce el vector adecuado, exige notificación inmediata ante la sola sospecha, sin esperar consolidados semanales, quincenales o mensuales que retrasarían una respuesta que debe ser oportuna dada la gravedad del evento."
+    },
+    {
+      "id": 304,
+      "career": "Transversal",
+      "block": "Gestión",
+      "title": "Repositorio Nacional de Carteras de Servicios de Salud (RENACSS)",
+      "level": "I-2",
+      "specialty": "Gestión / NTS 249-MINSA/DGAIN-2026",
+      "tags": [
+        "RENACSS",
+        "cartera de servicios",
+        "NTS 249"
+      ],
+      "statement": "Un establecimiento de salud necesita actualizar su cartera de servicios y verificar la de otros establecimientos de su red para coordinar una referencia.",
+      "question": "¿Qué herramienta, creada por la reciente NTS 249-MINSA/DGAIN-2026, centraliza y actualiza las carteras de servicios normativas y de los establecimientos a nivel nacional?",
+      "options": [
+        "El Registro Nacional de Establecimientos de Salud (RENAES).",
+        "El Repositorio Nacional de Carteras de Servicios de Salud (RENACSS).",
+        "El Sistema de Información en Salud (HIS).",
+        "El Aplicativo de Seguimiento y Evaluación (ASIS)."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque el RENACSS es el repositorio creado específicamente por la NTS 249-MINSA/DGAIN-2026 (aprobada por RM 625-2026/MINSA) para reunir y actualizar las carteras de servicios normativas y las de cada establecimiento, servicio médico de apoyo y red de salud, facilitando su planificación y evaluación. El RENAES es un registro distinto (de establecimientos, no de carteras de servicios); el HIS es el sistema de información de atenciones, no de carteras; el ASIS no es un aplicativo de carteras de servicios sino el análisis de situación de salud."
+    },
+    {
+      "id": 305,
+      "career": "Transversal",
+      "block": "Gestión",
+      "title": "Derivación dentro de una Red Integrada de Salud según NTS 249",
+      "level": "I-2",
+      "specialty": "Gestión / NTS 249-MINSA/DGAIN-2026",
+      "tags": [
+        "RIS",
+        "articulación asistencial",
+        "cartera de servicios"
+      ],
+      "statement": "Un establecimiento I-2 deriva un caso que excede su capacidad resolutiva a un hospital II-1 dentro de su misma red, según lo previsto en su cartera de servicios.",
+      "question": "¿Qué principio de la NTS 249 sustenta esta derivación?",
+      "options": [
+        "Autonomía funcional del establecimiento de origen.",
+        "Libre elección del paciente sobre el establecimiento de destino.",
+        "Articulación asistencial dentro de la Red Integrada de Salud, según la cartera de servicios de cada nivel.",
+        "Descentralización presupuestal entre establecimientos de la red."
+      ],
+      "correct": 2,
+      "feedback": "Es correcta porque la cartera de servicios de cada establecimiento, definida según su capacidad resolutiva, sustenta la articulación asistencial dentro de la Red Integrada de Salud: cuando un caso excede lo que un nivel puede resolver, la derivación al nivel correspondiente dentro de la misma red es precisamente el mecanismo que la NTS 249 busca ordenar. La autonomía funcional no es el principio que rige la derivación en red; la libre elección del paciente no sustituye la organización por capacidad resolutiva; la descentralización presupuestal es un tema distinto, de gestión financiera, no de articulación asistencial."
+    },
+    {
+      "id": 306,
+      "career": "Transversal",
+      "block": "Salud pública",
+      "title": "Notificación de caso sospechoso de sarampión",
+      "level": "I-2",
+      "specialty": "Salud Pública / NTS 247-MINSA/DGIESP-2026",
+      "tags": [
+        "sarampión",
+        "notificación",
+        "NTS 247"
+      ],
+      "statement": "En un establecimiento de primer nivel se atiende a un niño con fiebre alta y exantema, con antecedente de contacto con un caso sospechoso de sarampión en su colegio.",
+      "question": "Según la NTS 247-MINSA/DGIESP-2026, ¿cuál es la conducta inmediata correcta ante este caso sospechoso?",
+      "options": [
+        "Notificación obligatoria e inicio de vigilancia epidemiológica de inmediato.",
+        "Tratamiento sintomático y alta sin programar seguimiento.",
+        "Solicitar confirmación serológica antes de notificar el caso.",
+        "Derivar al paciente sin notificar, dejando esa acción al nivel de referencia."
+      ],
+      "correct": 0,
+      "feedback": "Es correcta porque la NTS 247 exige notificación obligatoria e inicio de vigilancia epidemiológica ante todo caso sospechoso de sarampión, sin esperar confirmación de laboratorio, dado el alto potencial de transmisión de la enfermedad y la importancia de la respuesta oportuna. Dar de alta sin seguimiento desatiende un caso con riesgo de brote; esperar la serología retrasa una notificación que debe iniciarse con la sola sospecha clínica; derivar sin notificar deja sin activar la vigilancia en el nivel donde se detectó el caso."
+    },
+    {
+      "id": 307,
+      "career": "Transversal",
+      "block": "Salud pública",
+      "title": "Bloqueo vacunal ante brote de sarampión",
+      "level": "I-2",
+      "specialty": "Salud Pública / NTS 247-MINSA/DGIESP-2026",
+      "tags": [
+        "sarampión",
+        "bloqueo vacunal",
+        "control de brote"
+      ],
+      "statement": "Ante un caso confirmado de sarampión en una comunidad, el equipo de salud activa una de las medidas de control específicas previstas en la NTS 247.",
+      "question": "¿A qué corresponde el \"bloqueo vacunal\" como medida de control de brote?",
+      "options": [
+        "Vacunación de los contactos y de la población en riesgo alrededor del caso índice.",
+        "Suspensión temporal de la vacunación en la zona afectada hasta nueva evaluación.",
+        "Aislamiento hospitalario exclusivo del caso confirmado, sin otra medida adicional.",
+        "Cuarentena domiciliaria prolongada de todos los contactos del caso índice."
+      ],
+      "correct": 0,
+      "feedback": "Es correcta porque el bloqueo vacunal consiste en vacunar de forma focalizada a los contactos y a la población en riesgo alrededor del caso índice, buscando cortar la cadena de transmisión antes de que se disemine más el brote. Suspender la vacunación es contrario al objetivo de control; el aislamiento hospitalario aislado no sustituye la protección de los contactos susceptibles; la cuarentena domiciliaria prolongada no es la medida específica que define el bloqueo vacunal, que es una intervención inmunológica dirigida, no de aislamiento."
+    },
+    {
+      "id": 308,
+      "career": "Transversal",
+      "block": "Gestión",
+      "title": "Fórmula de orden de mérito tras la modificación reglamentaria SERUMS 2026",
+      "level": "I-2",
+      "specialty": "Gestión / RM 617-2026/MINSA",
+      "tags": [
+        "orden de mérito",
+        "adjudicación de plaza",
+        "RM 617-2026"
+      ],
+      "statement": "Tras la modificación de los artículos 25 y 26 del Reglamento de la Ley N° 23330 mediante RM 617-2026/MINSA, se precisó de forma expresa la fórmula para determinar el orden de mérito en la adjudicación de plazas SERUMS.",
+      "question": "¿Cómo se compone el puntaje final de mérito según esta modificación?",
+      "options": [
+        "50% nota de la Evaluación SERUMS y 50% promedio ponderado de la carrera.",
+        "70% nota de la Evaluación SERUMS y 30% promedio ponderado de la carrera, incluido el internado cuando corresponda.",
+        "100% nota de la Evaluación SERUMS, sin considerar el promedio de la carrera.",
+        "30% nota de la Evaluación SERUMS y 70% promedio ponderado de la carrera."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque la RM 617-2026/MINSA precisó expresamente que el 70% del puntaje final corresponde a la nota de la Evaluación para el SERUMS, mientras que el 30% restante corresponde al promedio ponderado promocional de la carrera (incluyendo la nota del internado cuando aplique). Cualquier otra proporción (50/50, 100/0 o invertida 30/70) no corresponde a la fórmula fijada por esta modificación reglamentaria reciente."
+    },
+    {
+      "id": 309,
+      "career": "Transversal",
+      "block": "Gestión",
+      "title": "Bonificaciones eliminadas por la modificación reglamentaria SERUMS 2026",
+      "level": "I-2",
+      "specialty": "Gestión / RM 617-2026/MINSA",
+      "tags": [
+        "bonificaciones",
+        "adjudicación de plaza",
+        "RM 617-2026"
+      ],
+      "statement": "La RM 617-2026/MINSA modificó el Reglamento de la Ley del SERUMS con el objetivo de adecuarlo al criterio emitido por la Autoridad Nacional del Servicio Civil (SERVIR) sobre la aplicación de bonificaciones.",
+      "question": "¿Qué bonificaciones fueron eliminadas del proceso de adjudicación de plazas SERUMS con esta modificación?",
+      "options": [
+        "Las bonificaciones para postulantes de zonas rurales de origen.",
+        "Las bonificaciones para personas con discapacidad y para licenciados de las Fuerzas Armadas.",
+        "Las bonificaciones para postulantes con maestría o doctorado concluido.",
+        "Las bonificaciones para quienes postulan por segunda vez al proceso."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque la RM 617-2026/MINSA eliminó específicamente las bonificaciones para personas con discapacidad y para licenciados de las Fuerzas Armadas dentro del proceso de adjudicación de plazas SERUMS, adecuando el reglamento al criterio de SERVIR sobre este tipo de bonificaciones. Las demás opciones (origen rural, grado académico, segunda postulación) no corresponden a las bonificaciones específicamente eliminadas por esta modificación."
+    },
+    {
+      "id": 310,
+      "career": "Transversal",
+      "block": "Gestión",
+      "title": "Fecha de inicio del SERUMS 2026-I según cronograma oficial",
+      "level": "I-2",
+      "specialty": "Gestión / RM 379-2026/MINSA",
+      "tags": [
+        "cronograma SERUMS",
+        "adjudicación de plaza",
+        "RM 379-2026"
+      ],
+      "statement": "Un profesional de la salud obtiene una plaza remunerada en el proceso SERUMS 2026-I, mientras que otro profesional obtiene una plaza equivalente en el mismo proceso.",
+      "question": "Según la RM 379-2026/MINSA, ¿qué corresponde respecto a las fechas de inicio de cada modalidad?",
+      "options": [
+        "Ambas modalidades inician en la misma fecha, sin distinción entre plaza remunerada y equivalente.",
+        "La plaza remunerada inicia el 6 de mayo de 2026 y la plaza equivalente el 26 de mayo de 2026, ambas con término el 30 de abril de 2027.",
+        "La plaza equivalente inicia antes que la remunerada, por no requerir proceso de incorporación previo.",
+        "El inicio de ambas modalidades queda a discreción de cada Red Integrada de Salud."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque la RM 379-2026/MINSA estableció fechas diferenciadas: 6 de mayo de 2026 para quienes adjudican plaza remunerada, y 26 de mayo de 2026 para plaza equivalente, con término común el 30 de abril de 2027 para ambas modalidades. Asumir una fecha única, invertir el orden entre modalidades, o dejarlo a discreción regional no corresponde a lo dispuesto expresamente por esta resolución."
+    },
+    {
+      "id": 311,
+      "career": "Transversal",
+      "block": "Cuidado integral",
+      "title": "Manejo sindrómico de infecciones de transmisión sexual",
+      "level": "I-2",
+      "specialty": "Cuidado Integral / NTS 240-MINSA/DGIESP-2026",
+      "tags": [
+        "ITS",
+        "manejo sindrómico",
+        "NTS 240"
+      ],
+      "statement": "Un paciente acude con secreción uretral purulenta, sin resultado de laboratorio disponible en el momento de la consulta.",
+      "question": "Según el manejo sindrómico de ITS previsto en la NTS 240, ¿cuál es la conducta correcta?",
+      "options": [
+        "Tratar según el síndrome clínico presente, sin esperar la confirmación de laboratorio.",
+        "Solicitar siempre un cultivo antes de decidir cualquier tratamiento.",
+        "Referir todo caso a un especialista, sin manejo inicial en el primer nivel.",
+        "Tratar únicamente si se cuenta con confirmación serológica del agente causal."
+      ],
+      "correct": 0,
+      "feedback": "Es correcta porque el manejo sindrómico de ITS, previsto en la NTS 240, permite tratar según el conjunto de signos y síntomas presentes sin esperar la confirmación de laboratorio, dado que esto agiliza el tratamiento y corta la cadena de transmisión de forma oportuna. Solicitar cultivo o serología antes de tratar retrasa una intervención que el enfoque sindrómico busca precisamente agilizar; referir todo caso a especialista sin manejo inicial no aprovecha la capacidad resolutiva del primer nivel para este tipo de cuadros."
     }
   ],
   "norms": [
@@ -7065,6 +7249,36 @@ window.SERUMS_DATA = {
       "title": "Norma Técnica de Salud para la Vigilancia Epidemiológica en el Contexto de la Eliminación de la Malaria en el Perú",
       "summary": "Aprobada por R.M. N.° 273-2025/MINSA. Estandariza los procedimientos de investigación epidemiológica orientados a la eliminación de la malaria en el país.",
       "detail": "Define los escenarios de riesgo y los procedimientos de investigación epidemiológica de casos de malaria, en el marco de las Redes Integradas de Salud (RIS) y con participación de agentes comunitarios de salud."
+    },
+    {
+      "code": "R.M. N.° 625-2026/MINSA",
+      "title": "NTS N.° 249-MINSA/DGAIN-2026 — Cartera de servicios de salud y RENACSS",
+      "summary": "Establece criterios para elaborar, actualizar y gestionar las carteras de servicios de establecimientos, servicios médicos de apoyo y Redes Integradas de Salud, y crea el RENACSS.",
+      "detail": "El Repositorio Nacional de Carteras de Servicios de Salud (RENACSS) centraliza las carteras normativas y las de cada establecimiento, servicio médico de apoyo y red de salud, con herramientas para planificar, elaborar, aprobar, publicar, actualizar y evaluar dichas carteras. Publicada el 16/07/2026."
+    },
+    {
+      "code": "R.M. N.° 592-2026/MINSA",
+      "title": "NTS N.° 247-MINSA/DGIESP-2026 — Prevención, diagnóstico y manejo del sarampión",
+      "summary": "Establece protocolos actualizados de vigilancia, notificación y control de brotes de sarampión en el país.",
+      "detail": "Define la notificación obligatoria e inmediata ante todo caso sospechoso (sin esperar confirmación de laboratorio), y el 'bloqueo vacunal' como medida de control: vacunación focalizada de contactos y población en riesgo alrededor del caso índice para cortar la cadena de transmisión."
+    },
+    {
+      "code": "R.M. N.° 613-2026/MINSA",
+      "title": "NTS N.° 248-MINSA/DGIESP-2026 — Evaluación, calificación y certificación de la incapacidad laboral",
+      "summary": "Establece el procedimiento para evaluar, calificar y certificar la incapacidad laboral por enfermedades o accidentes comunes.",
+      "detail": "Importante no confundir con la certificación de discapacidad (DISCAP): esta NTS regula específicamente la incapacidad laboral temporal derivada de enfermedad o accidente común, no la discapacidad como condición permanente."
+    },
+    {
+      "code": "R.M. N.° 617-2026/MINSA",
+      "title": "Modificación de los artículos 25 y 26 del Reglamento de la Ley N.° 23330 (SERUMS)",
+      "summary": "Elimina bonificaciones por discapacidad y por licenciamiento de las Fuerzas Armadas, y precisa la fórmula de orden de mérito.",
+      "detail": "El puntaje final de mérito para la adjudicación de plazas se compone de 70% la nota de la Evaluación para el SERUMS y 30% el promedio ponderado promocional de la carrera (incluida la nota del internado cuando corresponda), calculado hasta con cuatro decimales. Publicada el 14/07/2026, adecúa el reglamento al criterio de SERVIR sobre bonificaciones."
+    },
+    {
+      "code": "R.M. N.° 379-2026/MINSA",
+      "title": "Fechas de inicio y término del SERUMS 2026-I",
+      "summary": "Fija el cronograma oficial de inicio y término del servicio según la modalidad de plaza adjudicada.",
+      "detail": "Plaza remunerada: inicio 6 de mayo de 2026. Plaza equivalente: inicio 26 de mayo de 2026. Ambas modalidades culminan el 30 de abril de 2027. Publicada el 13/04/2026."
     }
   ],
   "resources": [
@@ -7543,6 +7757,24 @@ window.SERUMS_DATA = {
         301,
         302,
         303
+      ]
+    },
+    {
+      "career": "Transversal (todas)",
+      "examLabel": "Normas MINSA 2026 (NTS 249, NTS 247, RM 617, RM 379) — verificadas vía El Peruano",
+      "date": "2026-07-19",
+      "questionCount": 0,
+      "sourceFile": "SERUMS_2026_Normas_Prioritarias.md (verificado, con 1 corrección: NTS 248 real trata incapacidad laboral, no discapacidad)",
+      "analyzedDate": "2026-07-19",
+      "gapsGeneratedIds": [
+        304,
+        305,
+        306,
+        307,
+        308,
+        309,
+        310,
+        311
       ]
     }
   ],
