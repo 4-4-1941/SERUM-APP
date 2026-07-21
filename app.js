@@ -454,15 +454,23 @@ function openCase(id) {
   renderCasePanel();
 }
 
+const MAX_ATTEMPTS_BEFORE_REVEAL = 2;
+
 function renderCasePanel() {
   const panel = document.getElementById("case-panel");
   if (!panel || !activeCase) return;
   const st = caseState[activeCase.id] || { attempts: 0, correct: false };
 
+  const correct = confirmed && selectedOption === activeCase.correct;
+  // Solo se revela la opción correcta y la explicación técnica si acertó,
+  // o si ya agotó los intentos permitidos. En un primer error, no se da pista.
+  const reveal = confirmed && (correct || st.attempts >= MAX_ATTEMPTS_BEFORE_REVEAL);
+  const attemptsLeft = Math.max(MAX_ATTEMPTS_BEFORE_REVEAL - st.attempts, 0);
+
   const optionsHtml = activeCase.options.map((o, i) => {
     let cls = "option-btn";
     if (confirmed) {
-      if (i === activeCase.correct) cls += " success";
+      if (reveal && i === activeCase.correct) cls += " success";
       else if (i === selectedOption) cls += " error";
     } else if (i === selectedOption) {
       cls += " selected";
@@ -511,21 +519,37 @@ function renderCasePanel() {
   if (!confirmed) {
     actions.innerHTML = `<button class="action-btn" id="confirm-btn" ${selectedOption === null ? "disabled" : ""}>Confirmar respuesta</button>`;
     document.getElementById("confirm-btn").addEventListener("click", confirmAnswer);
-  } else {
-    const correct = selectedOption === activeCase.correct;
+  } else if (correct) {
     feedback.innerHTML = `
-      <div class="card ${correct ? "success" : "error"}">
-        <strong>${correct ? "Correcto" : "Incorrecto"}</strong>
+      <div class="card success">
+        <strong>Correcto</strong>
         <p>${activeCase.feedback}</p>
       </div>
       ${interNote}
     `;
-    actions.innerHTML = `
-      ${!correct ? `<button class="action-btn secondary" id="retry-btn">Reintentar</button>` : ""}
-      <button class="action-btn" id="next-btn">Siguiente caso →</button>
-    `;
-    if (!correct) document.getElementById("retry-btn").addEventListener("click", retryAnswer);
+    actions.innerHTML = `<button class="action-btn" id="next-btn">Siguiente caso →</button>`;
     document.getElementById("next-btn").addEventListener("click", nextCase);
+  } else if (reveal) {
+    // Intentos agotados: recién aquí se muestra el razonamiento técnico completo.
+    feedback.innerHTML = `
+      <div class="card error">
+        <strong>Incorrecto</strong>
+        <p>${activeCase.feedback}</p>
+      </div>
+      ${interNote}
+    `;
+    actions.innerHTML = `<button class="action-btn" id="next-btn">Siguiente caso →</button>`;
+    document.getElementById("next-btn").addEventListener("click", nextCase);
+  } else {
+    // Error dentro del margen de intentos: sin pista ni explicación, solo invitación a reintentar.
+    feedback.innerHTML = `
+      <div class="card error">
+        <strong>Incorrecto</strong>
+        <p>Inténtalo de nuevo. Te queda${attemptsLeft === 1 ? "" : "n"} ${attemptsLeft} intento${attemptsLeft === 1 ? "" : "s"} antes de ver la explicación.</p>
+      </div>
+    `;
+    actions.innerHTML = `<button class="action-btn secondary" id="retry-btn">Reintentar</button>`;
+    document.getElementById("retry-btn").addEventListener("click", retryAnswer);
   }
 }
 
