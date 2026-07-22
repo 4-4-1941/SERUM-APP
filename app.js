@@ -412,12 +412,16 @@ function renderCases() {
       let statusTag = `<span class="badge">Nuevo</span>`;
       if (st && st.correct) statusTag = `<span class="badge">Resuelto</span>`;
       else if (st && st.attempts) statusTag = `<span class="badge" style="background:#FCEBEA;color:#8A2A24">Con error</span>`;
+      const unverifiedTag = c.unverified
+        ? `<span class="badge" style="background:#FFF3CD;color:#8A6D1D;margin-left:6px">⚠ Clave sin verificar</span>`
+        : "";
+      const cardStyle = c.unverified ? ' style="background:#FFFBF0;border-left:4px solid #E9B949"' : "";
       return `
-        <button class="case-card" data-id="${c.id}">
+        <button class="case-card" data-id="${c.id}"${cardStyle}>
           <span>${c.career || c.specialty} · ${c.block} · ${c.level}</span>
           <strong>${c.title}</strong>
           <small>${c.statement}</small>
-          ${statusTag}
+          ${statusTag}${unverifiedTag}
         </button>
       `;
     }).join("") || `<p style="color:#5B6E6A">No hay casos con este filtro.</p>`;
@@ -485,6 +489,7 @@ function renderCasePanel() {
   panel.innerHTML = `
     <button id="back-to-filters-btn" class="toggle" style="margin-bottom:12px;margin-top:0">← Volver a carreras / filtros</button>
     <div class="badge">${activeCase.career || activeCase.specialty} · ${activeCase.block} · ${activeCase.level}</div>
+    ${activeCase.unverified ? `<div class="card" style="background:#FFF3CD;border-left:4px solid #E9B949;margin:10px 0;padding:8px 12px"><strong style="color:#8A6D1D">⚠ Clave de respuesta sin verificar</strong><p style="margin:4px 0 0;font-size:13px;color:#5B6E6A">Este caso proviene de un examen real subido, pero la respuesta correcta es un criterio técnico propio, no una clave oficial confirmada.</p></div>` : ""}
     <h3 class="section-title">${activeCase.title}</h3>
     <p>${activeCase.statement}</p>
     <p><strong>${activeCase.question}</strong></p>

@@ -10860,6 +10860,750 @@ window.SERUMS_DATA = {
       ],
       "correct": 1,
       "feedback": "Es correcta porque el trabajo social aporta la facilitación de la organización y participación activa de agentes comunitarios de salud, fortaleciendo el vínculo entre el establecimiento y la comunidad, en lugar de un diseño impuesto sin consulta o una participación meramente pasiva."
+    },
+    {
+      "id": 472,
+      "career": "Enfermería",
+      "block": "Salud pública",
+      "title": "Nivel de prevención en enfermedad establecida",
+      "level": "I-2",
+      "specialty": "Enfermería",
+      "tags": [
+        "examen real SERUMS",
+        "niveles de prevención"
+      ],
+      "statement": "Se define un tipo de prevención cuyo objetivo es disminuir el avance y las complicaciones de una enfermedad ya establecida, mediante acciones orientadas a reducir secuelas y discapacidad.",
+      "question": "¿A qué nivel de prevención corresponde?",
+      "options": [
+        "Secundaria",
+        "Primaria",
+        "Terciaria",
+        "Cuaternaria"
+      ],
+      "correct": 2,
+      "feedback": "Es correcta porque la prevención terciaria actúa sobre la enfermedad ya establecida, buscando reducir secuelas, discapacidad y complicaciones, a diferencia de la primaria (evita la aparición) o la secundaria (detección temprana).",
+      "unverified": true
+    },
+    {
+      "id": 473,
+      "career": "Enfermería",
+      "block": "Salud pública",
+      "title": "Causalidad en tuberculosis",
+      "level": "I-2",
+      "specialty": "Enfermería",
+      "tags": [
+        "examen real SERUMS",
+        "causalidad",
+        "tuberculosis"
+      ],
+      "statement": "En la enfermedad de tuberculosis, la presencia del agente infeccioso Mycobacterium tuberculosis es indispensable para que ocurra la enfermedad, pero no todas las personas expuestas al bacilo desarrollan la enfermedad.",
+      "question": "¿Qué tipo de causa representa el Mycobacterium tuberculosis en este contexto?",
+      "options": [
+        "Necesaria pero no suficiente",
+        "Necesaria y suficiente",
+        "No necesaria pero suficiente",
+        "De tipo ambiental"
+      ],
+      "correct": 0,
+      "feedback": "Es correcta porque el bacilo es indispensable para que exista la enfermedad (causa necesaria), pero su sola presencia no basta para desarrollarla (no es suficiente), ya que intervienen otros factores del huésped y el ambiente.",
+      "unverified": true
+    },
+    {
+      "id": 474,
+      "career": "Enfermería",
+      "block": "Investigación",
+      "title": "Incidencia y prevalencia como medidas de morbilidad",
+      "level": "I-2",
+      "specialty": "Enfermería",
+      "tags": [
+        "examen real SERUMS",
+        "incidencia",
+        "prevalencia"
+      ],
+      "statement": "Para medir el riesgo de una enfermedad en la comunidad se utilizan medidas de morbilidad como la incidencia y la prevalencia.",
+      "question": "¿Qué mide cada una de estas medidas?",
+      "options": [
+        "Virulencia / frecuencia",
+        "Casos antiguos / casos nuevos",
+        "Proporción / frecuencia",
+        "Velocidad / magnitud"
+      ],
+      "correct": 3,
+      "feedback": "Es correcta porque la incidencia mide la velocidad de aparición de casos nuevos en un periodo (dinámica del riesgo), mientras que la prevalencia mide la magnitud o extensión de la enfermedad existente en un momento dado.",
+      "unverified": true
+    },
+    {
+      "id": 475,
+      "career": "Enfermería",
+      "block": "Investigación",
+      "title": "Media aritmética como medida de tendencia central",
+      "level": "I-2",
+      "specialty": "Enfermería",
+      "tags": [
+        "examen real SERUMS",
+        "estadística",
+        "medidas de tendencia central"
+      ],
+      "statement": "Se necesita calcular una medida de tendencia central que se interprete como el promedio de un conjunto de datos.",
+      "question": "¿Cuál es la medida que se construye sumando todos los datos observados y dividiendo entre el total de observaciones?",
+      "options": [
+        "Rango",
+        "Media",
+        "Mediana",
+        "Moda"
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque la media aritmética se calcula sumando todos los valores observados y dividiendo entre el número total de observaciones, a diferencia de la mediana (valor central) o la moda (valor más frecuente).",
+      "unverified": true
+    },
+    {
+      "id": 476,
+      "career": "Enfermería",
+      "block": "Investigación",
+      "title": "Interpretación de una prueba de baja sensibilidad",
+      "level": "I-2",
+      "specialty": "Enfermería",
+      "tags": [
+        "examen real SERUMS",
+        "sensibilidad",
+        "pruebas diagnósticas"
+      ],
+      "statement": "Una prueba de screening presenta muy baja sensibilidad para detectar una enfermedad en la población evaluada.",
+      "question": "¿Qué tipo de resultado tiene mayor probabilidad de producirse con esta prueba?",
+      "options": [
+        "Falso positivo",
+        "Valor predictivo positivo",
+        "Falso negativo",
+        "Sensibilidad ineficiente"
+      ],
+      "correct": 2,
+      "feedback": "Es correcta porque una baja sensibilidad implica que la prueba clasifica erróneamente como sanos a personas que sí están enfermas, generando falsos negativos con mayor frecuencia.",
+      "unverified": true
+    },
+    {
+      "id": 477,
+      "career": "Enfermería",
+      "block": "Salud pública",
+      "title": "Transición epidemiológica",
+      "level": "I-2",
+      "specialty": "Enfermería",
+      "tags": [
+        "examen real SERUMS",
+        "transición epidemiológica"
+      ],
+      "statement": "Se define como transición epidemiológica al proceso de cambio en el predominio de un tipo de enfermedades hacia otro tipo a nivel poblacional.",
+      "question": "¿Cuál es el sentido correcto de esta transición?",
+      "options": [
+        "Infecciosas hacia crónicas",
+        "Degenerativas hacia infecciosas",
+        "Infecciosas hacia prevalentes",
+        "Crónicas hacia infecciosas"
+      ],
+      "correct": 0,
+      "feedback": "Es correcta porque la transición epidemiológica describe el paso histórico del predominio de enfermedades infecciosas hacia la preponderancia de enfermedades crónicas no transmisibles, asociado a cambios demográficos y sociales.",
+      "unverified": true
+    },
+    {
+      "id": 478,
+      "career": "Enfermería",
+      "block": "Salud pública",
+      "title": "Tasa de ataque en brote institucional",
+      "level": "I-2",
+      "specialty": "Enfermería",
+      "tags": [
+        "examen real SERUMS",
+        "tasa de ataque",
+        "brote"
+      ],
+      "statement": "En una institución educativa primaria de 100 alumnos se presenta un brote de varicela con 50 casos confirmados.",
+      "question": "¿Cuál es el indicador y valor que corresponde para caracterizar este riesgo?",
+      "options": [
+        "Razón de prevalencia, 50%",
+        "Tasa de incidencia, 50%",
+        "Tasa de prevalencia, 500 x 1000 hab",
+        "Tasa de ataque, 50%"
+      ],
+      "correct": 3,
+      "feedback": "Es correcta porque la tasa de ataque se usa específicamente para brotes en poblaciones cerradas y delimitadas en el tiempo (como una institución educativa), calculándose como casos nuevos entre población expuesta: 50/100 = 50%.",
+      "unverified": true
+    },
+    {
+      "id": 479,
+      "career": "Enfermería",
+      "block": "Salud pública",
+      "title": "Historia natural de la diabetes y prevención",
+      "level": "I-2",
+      "specialty": "Enfermería",
+      "tags": [
+        "examen real SERUMS",
+        "historia natural de la enfermedad",
+        "diabetes"
+      ],
+      "statement": "Se identifica a una persona con diabetes mellitus en fase subclínica, es decir, sin síntomas evidentes pero con alteraciones fisiopatológicas ya presentes.",
+      "question": "¿A qué periodo de la historia natural corresponde y qué nivel de prevención se aplica al detectarla en esta fase?",
+      "options": [
+        "Patogénico / secundario",
+        "Patogénico / primario",
+        "Patogénico / terciario",
+        "Pre patogénico / secundario"
+      ],
+      "correct": 0,
+      "feedback": "Es correcta porque la fase subclínica ya pertenece al periodo patogénico (la enfermedad está presente aunque sin manifestarse clínicamente), y su detección en esta etapa corresponde a prevención secundaria (diagnóstico y tratamiento precoz).",
+      "unverified": true
+    },
+    {
+      "id": 480,
+      "career": "Enfermería",
+      "block": "Cuidado integral",
+      "title": "Clasificación nutricional según indicadores antropométricos",
+      "level": "I-2",
+      "specialty": "Enfermería",
+      "tags": [
+        "examen real SERUMS",
+        "desnutrición",
+        "CRED"
+      ],
+      "statement": "Niño de 1 año 6 meses, en su control de crecimiento y desarrollo presenta: indicador Peso/Edad entre -2 y +2 DS, indicador Peso/Talla por debajo de -2 DS, e indicador Talla/Edad entre -2 y +2 DS.",
+      "question": "¿Cuál es su clasificación nutricional?",
+      "options": [
+        "Desnutrición aguda",
+        "Desnutrición global",
+        "Ganancia inadecuada de peso",
+        "Desnutrición crónica"
+      ],
+      "correct": 0,
+      "feedback": "Es correcta porque un Peso/Talla bajo -2 DS con Talla/Edad normal define desnutrición aguda (déficit de peso reciente respecto a la talla actual), a diferencia de la desnutrición crónica, que se refleja en una Talla/Edad baja.",
+      "unverified": true
+    },
+    {
+      "id": 481,
+      "career": "Enfermería",
+      "block": "Cuidado integral",
+      "title": "Discordancia en tamizaje de VIH",
+      "level": "I-2",
+      "specialty": "Enfermería",
+      "tags": [
+        "examen real SERUMS",
+        "VIH",
+        "algoritmo diagnóstico"
+      ],
+      "statement": "Varón de 35 años, como parte de la atención integral, se realiza tamizaje de VIH con prueba rápida y obtiene resultado reactivo; se aplica una segunda prueba rápida distinta con resultado No reactivo.",
+      "question": "¿Cuál es el procedimiento correcto a seguir ante este resultado discordante?",
+      "options": [
+        "Hacer seguimiento y tomar prueba en 3 días",
+        "Tomar muestra de suero para prueba confirmatoria",
+        "Iniciar tratamiento con el primer resultado",
+        "Descartar el caso con el segundo resultado"
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque un resultado discordante entre dos pruebas rápidas de VIH exige tomar una muestra de suero para una prueba confirmatoria de laboratorio (como ELISA o Western Blot), sin iniciar tratamiento ni descartar el caso solo con pruebas rápidas.",
+      "unverified": true
+    },
+    {
+      "id": 482,
+      "career": "Enfermería",
+      "block": "Gestión",
+      "title": "Condiciones de almacenamiento de medicamentos",
+      "level": "I-2",
+      "specialty": "Enfermería",
+      "tags": [
+        "examen real SERUMS",
+        "almacenamiento",
+        "farmacia"
+      ],
+      "statement": "En un establecimiento de salud se revisan las condiciones de almacenamiento de medicamentos: congelación, refrigeración, temperatura ambiente o temperatura ambiente controlada.",
+      "question": "¿Según qué criterio se determinan estas condiciones y en qué documento deben estar indicadas?",
+      "options": [
+        "Director / procedimiento organizativo",
+        "Farmacéutico / procedimiento rutinario",
+        "Fabricante / procedimiento operativo",
+        "Jefe / procedimiento establecido"
+      ],
+      "correct": 2,
+      "feedback": "Es correcta porque las condiciones de almacenamiento deben ser las recomendadas por el fabricante y autorizadas en el rotulado del producto, debiendo estar indicadas en el procedimiento operativo de almacenamiento del establecimiento.",
+      "unverified": true
+    },
+    {
+      "id": 483,
+      "career": "Enfermería",
+      "block": "Salud pública",
+      "title": "Definición de promoción de la salud",
+      "level": "I-2",
+      "specialty": "Enfermería",
+      "tags": [
+        "examen real SERUMS",
+        "promoción de la salud",
+        "OMS"
+      ],
+      "statement": "La promoción de la salud busca ofrecer a los pueblos las vías y medios suficientes para abordar sus problemas de salud.",
+      "question": "¿Qué acción central persigue la promoción de la salud sobre el proceso salud-enfermedad, según su definición?",
+      "options": [
+        "Restringir o acortar",
+        "Diferir o mitigar",
+        "Atenuar o eliminar",
+        "Controlar o mantener"
+      ],
+      "correct": 3,
+      "feedback": "Es correcta porque la promoción de la salud, según la definición de la OMS, busca que las personas incrementen el control sobre su propia salud y autocontrolen el proceso salud-enfermedad, no solo mitigar o restringir sus manifestaciones.",
+      "unverified": true
+    },
+    {
+      "id": 484,
+      "career": "Enfermería",
+      "block": "Salud pública",
+      "title": "Número reproductivo básico en brote de fiebre amarilla",
+      "level": "I-2",
+      "specialty": "Enfermería",
+      "tags": [
+        "examen real SERUMS",
+        "Ro",
+        "fiebre amarilla"
+      ],
+      "statement": "En un establecimiento de salud se sospecha un brote de fiebre amarilla, con aparición de varios casos nuevos generados a partir de casos previos en un corto periodo.",
+      "question": "Considerando el Ro (número reproductivo básico) como el promedio de casos nuevos que genera un caso dado, ¿qué valor de Ro se espera en un brote activo como este?",
+      "options": [
+        "Ro > 0.5",
+        "Ro > 1",
+        "Ro < 1",
+        "Ro = 0"
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque un brote activo con transmisión sostenida implica que cada caso genera, en promedio, más de un caso nuevo (Ro > 1); si Ro fuera menor a 1, la transmisión tendería a extinguirse por sí sola.",
+      "unverified": true
+    },
+    {
+      "id": 485,
+      "career": "Enfermería",
+      "block": "Salud pública",
+      "title": "Bloqueo vacunal ante caso probable prevenible por vacuna",
+      "level": "I-2",
+      "specialty": "Enfermería",
+      "tags": [
+        "examen real SERUMS",
+        "bloqueo vacunal",
+        "inmunizaciones"
+      ],
+      "statement": "Se notifica un caso probable de una enfermedad prevenible por vacuna, y se debe ejecutar una actividad dentro de las 72 horas siguientes para completar dosis pendientes de vacunación en la zona rural (toda la comunidad) o urbana (5 manzanas a la redonda).",
+      "question": "¿A qué actividad corresponde esta intervención?",
+      "options": [
+        "Campaña de seguimiento",
+        "Semana de vacunación de las Américas",
+        "Bloqueo vacunal",
+        "Jornada de vacunación de cierre de brechas"
+      ],
+      "correct": 2,
+      "feedback": "Es correcta porque el bloqueo vacunal es la actividad que se ejecuta dentro de las 72 horas de notificado un caso probable, completando dosis pendientes en el radio de exposición definido, ya sea comunidad rural completa o manzanas a la redonda en zona urbana.",
+      "unverified": true
+    },
+    {
+      "id": 486,
+      "career": "Enfermería",
+      "block": "Salud pública",
+      "title": "Medidas ante caso probable de tos ferina",
+      "level": "I-2",
+      "specialty": "Enfermería",
+      "tags": [
+        "examen real SERUMS",
+        "tos ferina",
+        "vigilancia epidemiológica"
+      ],
+      "statement": "Se identifica un caso probable de tos ferina en la comunidad y se debe activar la respuesta epidemiológica correspondiente.",
+      "question": "¿Cuáles son las medidas a implementar?",
+      "options": [
+        "Censo de contactos, barrido vacunal, investigación del caso índice",
+        "Jornada de vacunación, quimioprofilaxis, búsqueda de contactos indirectos",
+        "Búsqueda de casos secundarios, barrido vacunal, inamovilidad del caso",
+        "Seguimiento de contactos, búsqueda activa comunitaria e institucional, bloqueo vacunal"
+      ],
+      "correct": 3,
+      "feedback": "Es correcta porque ante un caso probable de tos ferina corresponde el seguimiento de contactos, la búsqueda activa tanto comunitaria como institucional de otros casos, y el bloqueo vacunal, medidas integrales de respuesta ante enfermedades prevenibles por vacuna.",
+      "unverified": true
+    },
+    {
+      "id": 487,
+      "career": "Enfermería",
+      "block": "Salud pública",
+      "title": "Horario de picadura del vector del dengue",
+      "level": "I-2",
+      "specialty": "Enfermería",
+      "tags": [
+        "examen real SERUMS",
+        "dengue",
+        "Aedes aegypti",
+        "vigilancia entomológica"
+      ],
+      "statement": "La transmisión del dengue a un huésped susceptible se da a través de la picadura de la hembra de Aedes aegypti infectada, mosquito que transmite la enfermedad a varias personas a lo largo de su vida.",
+      "question": "¿En qué momento del día pica preferentemente este vector?",
+      "options": [
+        "Solo en época de lluvias",
+        "A medio día y sin lluvia",
+        "Al atardecer y durante la noche",
+        "Al amanecer y al atardecer"
+      ],
+      "correct": 3,
+      "feedback": "Es correcta porque el Aedes aegypti es un mosquito de hábitos diurnos, con picos de actividad de picadura al amanecer y al atardecer (patrón crepuscular), a diferencia de vectores como el Anopheles que pican principalmente durante la noche.",
+      "unverified": true
+    },
+    {
+      "id": 488,
+      "career": "Enfermería",
+      "block": "Salud pública",
+      "title": "Tamizaje de cáncer de mama",
+      "level": "I-2",
+      "specialty": "Enfermería",
+      "tags": [
+        "examen real SERUMS",
+        "cáncer de mama",
+        "tamizaje"
+      ],
+      "statement": "El tamizaje de cáncer de mama se realiza en el grupo etario de 40 a 69 años como parte de la atención preventiva integral.",
+      "question": "¿A través de qué esquema se realiza este tamizaje?",
+      "options": [
+        "Mamografía bilateral cada año y examen clínico de mamas semestral",
+        "Mamografía bilateral cada dos años y examen clínico de mamas anual",
+        "Radiografía bilateral cada año y examen clínico cada tres meses",
+        "Autoexamen de mamas cada tres meses y examen clínico cada seis meses"
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque el esquema de tamizaje establecido para el grupo de 40 a 69 años es la mamografía bilateral cada dos años, complementada con examen clínico de mamas anual, y no el autoexamen como único método de tamizaje poblacional.",
+      "unverified": true
+    },
+    {
+      "id": 489,
+      "career": "Enfermería",
+      "block": "Ética e interculturalidad",
+      "title": "Autonomía en rechazo de hemoderivados",
+      "level": "I-2",
+      "specialty": "Enfermería",
+      "tags": [
+        "examen real SERUMS",
+        "autonomía",
+        "bioética"
+      ],
+      "statement": "Paciente testigo de Jehová de 60 años con leucemia mieloide crónica descompensada, con plaquetopenia severa y hemoglobina de 5 mg/dL, se niega a recibir hemoderivados pese a la gravedad de su cuadro.",
+      "question": "¿Qué principio bioético representa de forma máxima esta decisión del paciente?",
+      "options": [
+        "No maleficencia",
+        "Autonomía",
+        "Beneficencia",
+        "Justicia"
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque el rechazo informado de un tratamiento por parte de un paciente competente, incluso ante riesgo vital, constituye la máxima expresión del principio de autonomía, que reconoce su derecho a decidir sobre su propio cuerpo y tratamiento.",
+      "unverified": true
+    },
+    {
+      "id": 490,
+      "career": "Enfermería",
+      "block": "Salud pública",
+      "title": "Leptospirosis y saneamiento básico",
+      "level": "I-2",
+      "specialty": "Enfermería",
+      "tags": [
+        "examen real SERUMS",
+        "leptospirosis",
+        "zoonosis"
+      ],
+      "statement": "Se investiga una enfermedad zoonótica relacionada al acceso a saneamiento básico, que se contagia por contacto con orina de animales infectados o agua contaminada, y se previene protegiendo fuentes de agua, con disposición adecuada de basura y excretas, control de roedores y protección personal.",
+      "question": "¿A qué enfermedad corresponde esta descripción?",
+      "options": [
+        "Leptospirosis",
+        "Carbunco",
+        "Tifus",
+        "Peste"
+      ],
+      "correct": 0,
+      "feedback": "Es correcta porque la leptospirosis se transmite por contacto con orina de animales infectados (frecuentemente roedores) o agua/suelo contaminado, y su prevención se centra en el saneamiento básico y el control de roedores, a diferencia de otras zoonosis con mecanismos de transmisión distintos.",
+      "unverified": true
+    },
+    {
+      "id": 491,
+      "career": "Enfermería",
+      "block": "Ética e interculturalidad",
+      "title": "Derecho a la educación de pueblos indígenas",
+      "level": "I-2",
+      "specialty": "Enfermería",
+      "tags": [
+        "examen real SERUMS",
+        "interculturalidad",
+        "derechos"
+      ],
+      "statement": "Los pueblos indígenas tienen derecho a establecer y controlar sus sistemas e instituciones docentes que impartan educación en sus propios idiomas, conforme a sus métodos culturales de enseñanza y aprendizaje.",
+      "question": "¿A qué tienen derecho, en consecuencia, sin ningún tipo de restricción?",
+      "options": [
+        "A todos los niveles y formas de educación del Estado sin discriminación",
+        "A recibir educación solo en instituciones privadas",
+        "A la tolerancia de otras culturas hacia la suya",
+        "A la comprensión exclusiva de su propia comunidad"
+      ],
+      "correct": 0,
+      "feedback": "Es correcta porque el derecho de los pueblos indígenas a la educación en su propio idioma y método cultural se extiende a todos los niveles y formas de educación estatal, sin discriminación alguna, conforme a los marcos internacionales de derechos de pueblos indígenas.",
+      "unverified": true
+    },
+    {
+      "id": 492,
+      "career": "Enfermería",
+      "block": "Cuidado integral",
+      "title": "Clasificación de hemoglobina en puérpera",
+      "level": "I-2",
+      "specialty": "Enfermería",
+      "tags": [
+        "examen real SERUMS",
+        "anemia",
+        "puerperio"
+      ],
+      "statement": "A una puérpera atendida en un establecimiento de salud se le realiza control de hemoglobina, obteniéndose un valor de 12.3 g/dL.",
+      "question": "¿Cuál es el diagnóstico correspondiente a este resultado?",
+      "options": [
+        "Anemia leve",
+        "Anemia severa",
+        "Anemia moderada",
+        "Sin anemia"
+      ],
+      "correct": 3,
+      "feedback": "Es correcta porque un valor de hemoglobina de 12.3 g/dL se encuentra por encima de los puntos de corte establecidos para definir anemia tanto en la gestante (11 g/dL) como en la mujer no gestante (12 g/dL), por lo que se clasifica como 'sin anemia'.",
+      "unverified": true
+    },
+    {
+      "id": 493,
+      "career": "Enfermería",
+      "block": "Cuidado integral",
+      "title": "Prueba indicada para clasificación y diagnóstico de neurosífilis",
+      "level": "I-2",
+      "specialty": "Enfermería",
+      "tags": [
+        "examen real SERUMS",
+        "sífilis",
+        "neurosífilis"
+      ],
+      "statement": "En un establecimiento de salud I-4 se atiende a un paciente con tratamiento de sífilis, y se requiere clasificar la etapa clínica y confirmar el diagnóstico de neurosífilis.",
+      "question": "¿Cuál es la prueba indicada para este fin?",
+      "options": [
+        "VDRL (Venereal Disease Research Laboratory)",
+        "FTA-Abs (Fluorescent Treponemal Antibody-Absorption)",
+        "TPPA (Treponema pallidum particle agglutination)",
+        "TPHA (Treponema pallidum Haemagglutination)"
+      ],
+      "correct": 0,
+      "feedback": "Es correcta porque el VDRL, al ser una prueba no treponémica cuyo título se correlaciona con la actividad de la enfermedad, permite tanto la clasificación de la etapa clínica (mediante seguimiento de títulos) como el diagnóstico de neurosífilis cuando se aplica en líquido cefalorraquídeo; las pruebas treponémicas (FTA-Abs, TPPA, TPHA) permanecen reactivas de por vida y no reflejan actividad.",
+      "unverified": true
+    },
+    {
+      "id": 494,
+      "career": "Enfermería",
+      "block": "Salud pública",
+      "title": "Nivel de prevención en tamizaje de infecciones de transmisión sexual",
+      "level": "I-2",
+      "specialty": "Enfermería",
+      "tags": [
+        "examen real SERUMS",
+        "ITS",
+        "niveles de prevención"
+      ],
+      "statement": "En el centro de salud del primer nivel de atención se llevan a cabo pruebas de tamizaje de infecciones de transmisión sexual en población asintomática.",
+      "question": "¿A qué nivel de prevención corresponde esta estrategia?",
+      "options": [
+        "Primaria",
+        "Cuaternaria",
+        "Terciaria",
+        "Secundaria"
+      ],
+      "correct": 3,
+      "feedback": "Es correcta porque el tamizaje en personas asintomáticas busca la detección temprana de una enfermedad ya presente pero no manifestada clínicamente, lo cual corresponde a prevención secundaria.",
+      "unverified": true
+    },
+    {
+      "id": 495,
+      "career": "Enfermería",
+      "block": "Salud pública",
+      "title": "Definición de sintomático respiratorio",
+      "level": "I-2",
+      "specialty": "Enfermería",
+      "tags": [
+        "examen real SERUMS",
+        "tuberculosis",
+        "sintomático respiratorio"
+      ],
+      "statement": "Varón de 35 años acude a evaluación médica refiriendo tos y flema desde hace 15 días, sin otro diagnóstico aún establecido.",
+      "question": "Según la Norma Técnica de Salud para la prevención y control de tuberculosis, ¿cómo se denomina a un paciente con esta sintomatología?",
+      "options": [
+        "Paciente con infección latente por tuberculosis",
+        "Sintomático respiratorio examinado",
+        "Sintomático respiratorio",
+        "Paciente con tuberculosis sensible"
+      ],
+      "correct": 2,
+      "feedback": "Es correcta porque se define como sintomático respiratorio a toda persona con tos y flema de 15 días o más de duración, categoría que motiva la búsqueda de baciloscopia, independientemente de si ya fue examinado o de si se confirma o no el diagnóstico de tuberculosis.",
+      "unverified": true
+    },
+    {
+      "id": 496,
+      "career": "Enfermería",
+      "block": "Cuidado integral",
+      "title": "Clasificación de tuberculosis multidrogorresistente",
+      "level": "I-2",
+      "specialty": "Enfermería",
+      "tags": [
+        "examen real SERUMS",
+        "tuberculosis",
+        "resistencia antimicrobiana"
+      ],
+      "statement": "Mujer de 25 años con diagnóstico de tuberculosis pulmonar es evaluada por especialista, quien detecta resistencia simultánea a Isoniacida y Rifampicina.",
+      "question": "¿Cómo se denomina a la tuberculosis con esta resistencia combinada?",
+      "options": [
+        "Extensamente resistente",
+        "Multidrogorresistente",
+        "Sensible",
+        "Pre-extensamente resistente"
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque la tuberculosis multidrogorresistente (TB-MDR) se define por la resistencia simultánea a Isoniacida y Rifampicina, los dos fármacos más importantes de primera línea; la resistencia extensa implica además resistencia a fluoroquinolonas y un inyectable de segunda línea.",
+      "unverified": true
+    },
+    {
+      "id": 497,
+      "career": "Enfermería",
+      "block": "Salud pública",
+      "title": "Refuerzo de vacunación antitetánica en el adulto",
+      "level": "I-2",
+      "specialty": "Enfermería",
+      "tags": [
+        "examen real SERUMS",
+        "vacunación",
+        "tétanos y difteria"
+      ],
+      "statement": "Un adulto recibió el esquema completo de 3 dosis de vacunación contra difteria y tétanos.",
+      "question": "¿Cada cuántos años debe reforzar su inmunidad con una dosis adicional?",
+      "options": [
+        "15 años",
+        "10 años",
+        "20 años",
+        "5 años"
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque, tras completar el esquema primario de 3 dosis, el refuerzo de la inmunidad contra difteria y tétanos en el adulto se recomienda cada 10 años.",
+      "unverified": true
+    },
+    {
+      "id": 498,
+      "career": "Enfermería",
+      "block": "Investigación",
+      "title": "Indicador epidemiológico en brote de malaria con letalidad",
+      "level": "I-2",
+      "specialty": "Enfermería",
+      "tags": [
+        "examen real SERUMS",
+        "letalidad",
+        "malaria"
+      ],
+      "statement": "En una comunidad amazónica se registra un brote de malaria por Plasmodium falciparum, con 50 casos confirmados por gota gruesa y PCR, de los cuales 2 niños fallecieron (4%).",
+      "question": "¿A qué medida epidemiológica de frecuencia corresponde este 4%?",
+      "options": [
+        "Tasa de ataque",
+        "Tasa de letalidad",
+        "Incidencia acumulada",
+        "Tasa de mortalidad general"
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque la tasa de letalidad mide la proporción de fallecidos entre el total de casos confirmados de una enfermedad específica (2/50 = 4%), a diferencia de la tasa de mortalidad general, que se calcula sobre el total de la población.",
+      "unverified": true
+    },
+    {
+      "id": 499,
+      "career": "Enfermería",
+      "block": "Gestión",
+      "title": "Definición de referencia en el sistema de salud",
+      "level": "I-2",
+      "specialty": "Enfermería",
+      "tags": [
+        "examen real SERUMS",
+        "referencia",
+        "continuidad de la atención"
+      ],
+      "statement": "Un establecimiento de salud transfiere a un paciente hacia otro de mayor capacidad resolutiva para asegurar la continuidad de la atención de sus necesidades de salud.",
+      "question": "¿Cómo se denomina este conjunto de procedimientos asistenciales?",
+      "options": [
+        "Atención primaria",
+        "Contrarreferencia",
+        "Referencia",
+        "Atención compartida"
+      ],
+      "correct": 2,
+      "feedback": "Es correcta porque la referencia es el procedimiento que asegura la continuidad de la atención transfiriendo al paciente de un establecimiento de menor a otro de mayor capacidad resolutiva; la contrarreferencia es el proceso inverso, de retorno al establecimiento de origen.",
+      "unverified": true
+    },
+    {
+      "id": 500,
+      "career": "Enfermería",
+      "block": "Salud pública",
+      "title": "Esquema de vacunación contra el VPH",
+      "level": "I-2",
+      "specialty": "Enfermería",
+      "tags": [
+        "examen real SERUMS",
+        "VPH",
+        "esquema de vacunación"
+      ],
+      "statement": "Durante una campaña de vacunación se interviene en instituciones educativas para proteger a niñas y prevenir el cáncer cervical mediante la vacuna contra el VPH.",
+      "question": "¿Desde qué edad se puede vacunar y cuántas dosis corresponden según el esquema vigente?",
+      "options": [
+        "9 años y dos dosis",
+        "13 años y dosis única",
+        "11 años y dosis única",
+        "9 años y dosis única"
+      ],
+      "correct": 3,
+      "feedback": "Es correcta porque el esquema vigente de vacunación contra el VPH inicia a los 9 años (5º grado de primaria) con un esquema de dosis única, conforme a la actualización de la recomendación de la OMS adoptada por el MINSA.",
+      "unverified": true
+    },
+    {
+      "id": 501,
+      "career": "Enfermería",
+      "block": "Cuidado integral",
+      "title": "Vacunación en recién nacido de parto domiciliario",
+      "level": "I-2",
+      "specialty": "Enfermería",
+      "tags": [
+        "examen real SERUMS",
+        "BCG",
+        "hepatitis B",
+        "recién nacido"
+      ],
+      "statement": "Un neonato de 8 horas de vida, producto de parto domiciliario en zona rural, debe recibir las vacunas BCG y contra Hepatitis B correspondientes a su edad.",
+      "question": "¿Cuál es el tiempo ideal para que reciba estas vacunas?",
+      "options": [
+        "Dentro de las 24 horas",
+        "Hasta un año",
+        "Dentro de una semana",
+        "Hasta un mes"
+      ],
+      "correct": 0,
+      "feedback": "Es correcta porque el esquema nacional de vacunación establece que BCG y la primera dosis de Hepatitis B deben aplicarse idealmente dentro de las primeras 24 horas de vida, incluso en partos domiciliarios, para máxima efectividad protectora.",
+      "unverified": true
+    },
+    {
+      "id": 502,
+      "career": "Enfermería",
+      "block": "Cuidado integral",
+      "title": "Tipo de dosis de hierro tras confirmación de anemia",
+      "level": "I-2",
+      "specialty": "Enfermería",
+      "tags": [
+        "examen real SERUMS",
+        "anemia",
+        "suplementación con hierro"
+      ],
+      "statement": "A los 6 meses de nacido se realiza el dosaje de hemoglobina como parte de la lucha contra la anemia, resultando positivo para el diagnóstico de anemia.",
+      "question": "¿Qué tipo de dosis de hierro se inicia a partir de este resultado positivo?",
+      "options": [
+        "Promocional",
+        "Recuperativo",
+        "Profiláctico",
+        "Preventivo"
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque, una vez confirmado el diagnóstico de anemia mediante el dosaje de hemoglobina, se pasa de la dosis preventiva (profiláctica) a la dosis recuperativa de hierro, con una posología distinta orientada a tratar la anemia ya instaurada.",
+      "unverified": true
     }
   ],
   "norms": [
