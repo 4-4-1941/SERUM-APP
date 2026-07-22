@@ -10171,6 +10171,304 @@ window.SERUMS_DATA = {
       ],
       "correct": 1,
       "feedback": "Correcta porque la atención odontológica, al generar aerosoles y contacto con fluidos orales, requiere barreras de protección personal, esterilización rigurosa del instrumental y desinfección de superficies entre cada paciente, independientemente de si se conoce o no un antecedente infeccioso."
+    },
+    {
+      "id": 442,
+      "career": "Tecnología Médica - Radiología",
+      "block": "Cuidado integral",
+      "title": "Preparación para ecografía abdominal",
+      "level": "I-2",
+      "specialty": "Radiología",
+      "tags": [
+        "ecografía abdominal",
+        "preparación del paciente"
+      ],
+      "statement": "Un paciente será sometido a una ecografía abdominal completa para evaluación de vía biliar.",
+      "question": "¿Qué preparación previa es indispensable para garantizar la calidad diagnóstica del estudio?",
+      "options": [
+        "Ninguna preparación es necesaria",
+        "Ayuno de al menos 6-8 horas para reducir gas intestinal y permitir adecuada visualización de la vesícula biliar",
+        "Ingesta abundante de líquidos justo antes del estudio",
+        "Aplicación de un enema inmediatamente antes"
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque el ayuno previo reduce el gas intestinal y favorece la distensión de la vesícula biliar, mejorando la calidad de la visualización ecográfica; sin esta preparación el estudio puede resultar no concluyente."
+    },
+    {
+      "id": 443,
+      "career": "Tecnología Médica - Radiología",
+      "block": "Salud pública",
+      "title": "Justificación clínica del estudio radiológico",
+      "level": "I-2",
+      "specialty": "Radiología",
+      "tags": [
+        "justificación clínica",
+        "protección radiológica",
+        "buenas prácticas"
+      ],
+      "statement": "Un paciente solicita una radiografía de columna 'por si acaso', sin indicación médica ni síntomas actuales.",
+      "question": "¿Cuál es la conducta correcta del tecnólogo médico ante esta solicitud?",
+      "options": [
+        "Realizar el estudio de todas maneras si el paciente insiste",
+        "Explicar que todo estudio radiológico requiere justificación clínica documentada, y orientar a consulta médica previa",
+        "Realizarlo sin problema porque la dosis de radiación es mínima",
+        "Derivar directamente a un especialista sin dar ninguna explicación"
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque todo estudio radiológico debe estar clínicamente justificado según el principio de justificación de la protección radiológica; sin indicación médica, corresponde orientar al paciente a una evaluación clínica previa, no realizar el estudio por solicitud propia."
+    },
+    {
+      "id": 444,
+      "career": "Tecnología Médica - Terapia Ocupacional",
+      "block": "Cuidado integral",
+      "title": "Terapia ocupacional en paciente oncológico",
+      "level": "I-2",
+      "specialty": "Terapia Ocupacional",
+      "tags": [
+        "oncología",
+        "fatiga relacionada al cáncer",
+        "calidad de vida"
+      ],
+      "statement": "Un paciente en quimioterapia refiere fatiga intensa que le impide realizar sus actividades cotidianas básicas.",
+      "question": "¿Cuál es el enfoque correcto de la terapia ocupacional en este caso?",
+      "options": [
+        "Indicar reposo absoluto hasta finalizar el tratamiento oncológico",
+        "Aplicar estrategias de conservación de energía y priorización de actividades significativas, adaptadas a su nivel de fatiga",
+        "Recomendar que retome su rutina previa sin modificaciones",
+        "No intervenir porque la fatiga es un efecto esperado del tratamiento"
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque la terapia ocupacional en fatiga oncológica se enfoca en estrategias de conservación de energía y priorización de actividades significativas según la tolerancia del paciente, evitando tanto el reposo absoluto como la sobreexigencia."
+    },
+    {
+      "id": 445,
+      "career": "Tecnología Médica - Terapia Ocupacional",
+      "block": "Ética e interculturalidad",
+      "title": "Adaptación de la intervención a creencias culturales",
+      "level": "I-2",
+      "specialty": "Terapia Ocupacional",
+      "tags": [
+        "interculturalidad",
+        "adaptaciones",
+        "respeto cultural"
+      ],
+      "statement": "Una familia de una comunidad indígena rechaza ciertas adaptaciones sugeridas para el hogar de un adulto mayor con discapacidad, por no ser acordes a sus costumbres.",
+      "question": "¿Cuál es la conducta más adecuada del terapeuta ocupacional?",
+      "options": [
+        "Imponer las adaptaciones estándar sin considerar la objeción familiar",
+        "Dialogar con la familia para encontrar alternativas que respeten sus costumbres y a la vez favorezcan la funcionalidad del paciente",
+        "Retirar la intervención por completo ante la negativa",
+        "Ignorar la objeción y realizar las adaptaciones de todas formas"
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque el enfoque intercultural exige dialogar con la familia para encontrar alternativas que respeten sus costumbres sin renunciar al objetivo funcional de la intervención, en lugar de imponer un estándar único o abandonar el caso."
+    },
+    {
+      "id": 446,
+      "career": "Medicina Veterinaria",
+      "block": "Gestión",
+      "title": "Notificación de enfermedades de declaración obligatoria",
+      "level": "I-2",
+      "specialty": "Medicina Veterinaria",
+      "tags": [
+        "vigilancia veterinaria",
+        "notificación obligatoria",
+        "gestión"
+      ],
+      "statement": "Un médico veterinario detecta en su práctica un caso compatible con una enfermedad de declaración obligatoria en animales.",
+      "question": "¿Cuál es su responsabilidad inmediata según el marco de vigilancia sanitaria?",
+      "options": [
+        "Tratar el caso sin notificar si no hay certeza diagnóstica absoluta",
+        "Notificar de inmediato a la autoridad sanitaria correspondiente, incluso ante sospecha, para activar la vigilancia epidemiológica",
+        "Esperar la confirmación de laboratorio antes de cualquier acción",
+        "Consultar solo con colegas sin notificación oficial"
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque las enfermedades de declaración obligatoria deben notificarse de inmediato ante la sospecha clínica, sin esperar confirmación de laboratorio, dado que la vigilancia epidemiológica oportuna depende de la notificación temprana."
+    },
+    {
+      "id": 447,
+      "career": "Medicina Veterinaria",
+      "block": "Cuidado integral",
+      "title": "Manejo del dolor animal",
+      "level": "I-2",
+      "specialty": "Medicina Veterinaria",
+      "tags": [
+        "bienestar animal",
+        "manejo del dolor",
+        "ética veterinaria"
+      ],
+      "statement": "Un animal es intervenido quirúrgicamente y el veterinario define el plan de manejo postoperatorio.",
+      "question": "¿Qué principio ético-clínico debe orientar este plan?",
+      "options": [
+        "El dolor animal no requiere manejo específico si el animal no vocaliza",
+        "El bienestar animal exige manejo analgésico adecuado durante el postoperatorio, reconociendo la capacidad de los animales de experimentar dolor",
+        "Solo se debe tratar el dolor si el propietario lo solicita explícitamente",
+        "El manejo del dolor es opcional y depende del costo"
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque el bienestar animal y la ética veterinaria exigen un manejo analgésico adecuado en el postoperatorio, reconociendo que los animales experimentan dolor independientemente de si lo expresan de forma evidente o de la solicitud del propietario."
+    },
+    {
+      "id": 448,
+      "career": "Farmacia y Bioquímica",
+      "block": "Salud pública",
+      "title": "Participación en campañas de vacunación",
+      "level": "I-2",
+      "specialty": "Farmacia y Bioquímica",
+      "tags": [
+        "vacunación",
+        "salud pública",
+        "rol del farmacéutico"
+      ],
+      "statement": "En una campaña de vacunación antigripal, el establecimiento cuenta con personal de farmacia para apoyar el proceso.",
+      "question": "¿Cuál es un rol apropiado del profesional de farmacia y bioquímica en este contexto?",
+      "options": [
+        "No tiene ningún rol posible en campañas de vacunación",
+        "Apoyar en la gestión de la cadena de frío, el registro y la consejería sobre la vacuna, dentro de sus competencias",
+        "Administrar el diagnóstico de posibles reacciones adversas graves sin apoyo médico",
+        "Sustituir completamente al personal de enfermería en la aplicación"
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque el profesional de farmacia puede apoyar en la gestión de la cadena de frío, el registro y la consejería sobre la vacuna dentro de sus competencias, articulado con el resto del equipo de salud, sin sustituir roles clínicos que no le corresponden."
+    },
+    {
+      "id": 449,
+      "career": "Farmacia y Bioquímica",
+      "block": "Cuidado integral",
+      "title": "Conservación de medicamentos termolábiles",
+      "level": "I-2",
+      "specialty": "Farmacia y Bioquímica",
+      "tags": [
+        "termolábiles",
+        "conservación",
+        "insulina"
+      ],
+      "statement": "Un paciente diabético consulta en farmacia cómo debe conservar su insulina en casa, ya que no siempre tiene acceso a refrigeración constante.",
+      "question": "¿Cuál es la orientación correcta?",
+      "options": [
+        "Puede mantenerse a temperatura ambiente de forma indefinida sin ningún límite",
+        "El frasco en uso puede conservarse a temperatura ambiente (no mayor a 25-30°C) por un tiempo limitado según el fabricante; el resto del stock debe refrigerarse entre 2-8°C",
+        "Debe congelarse para prolongar su vida útil",
+        "Debe exponerse directamente al sol para 'esterilizarla'"
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque el frasco de insulina en uso tolera temperatura ambiente moderada por un tiempo limitado según el fabricante, mientras que el stock no abierto debe mantenerse refrigerado entre 2-8°C; la congelación o la exposición al sol inutilizan el medicamento."
+    },
+    {
+      "id": 450,
+      "career": "Trabajo Social",
+      "block": "Investigación",
+      "title": "Diagnóstico social comunitario",
+      "level": "I-2",
+      "specialty": "Trabajo Social",
+      "tags": [
+        "diagnóstico social",
+        "investigación social",
+        "comunidad"
+      ],
+      "statement": "Antes de implementar un programa de salud comunitaria, el equipo solicita al trabajador social un diagnóstico de la situación social de la zona.",
+      "question": "¿Qué debe priorizar este diagnóstico social?",
+      "options": [
+        "Basarse únicamente en la percepción personal del trabajador social sin recolección de datos",
+        "Recoger información sistemática sobre necesidades, recursos y dinámicas sociales de la comunidad mediante técnicas de investigación social validadas",
+        "Copiar el diagnóstico de otra comunidad similar sin verificación local",
+        "Omitir la participación de la comunidad en el proceso"
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque el diagnóstico social comunitario debe basarse en la recolección sistemática de información sobre necesidades, recursos y dinámicas sociales mediante técnicas validadas, con participación de la comunidad, no en percepciones personales ni diagnósticos prestados de otro contexto."
+    },
+    {
+      "id": 451,
+      "career": "Trabajo Social",
+      "block": "Cuidado integral",
+      "title": "Acompañamiento social en enfermedad crónica",
+      "level": "I-2",
+      "specialty": "Trabajo Social",
+      "tags": [
+        "enfermedad crónica",
+        "acompañamiento social",
+        "adherencia"
+      ],
+      "statement": "Un paciente con diabetes mal controlada falta reiteradamente a sus citas de control, y el equipo de salud sospecha barreras sociales de fondo.",
+      "question": "¿Cuál es el aporte específico del trabajo social en este caso?",
+      "options": [
+        "Sancionar al paciente por su inasistencia",
+        "Explorar con el paciente las barreras sociales y económicas que dificultan su adherencia (transporte, trabajo, red de apoyo) y articular soluciones posibles",
+        "Excluirlo del programa de seguimiento por incumplimiento",
+        "Asumir que la inasistencia se debe a falta de interés del paciente sin explorar el contexto"
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque el trabajo social aporta la exploración de las barreras sociales y económicas reales que dificultan la adherencia del paciente, articulando soluciones posibles, en lugar de sancionar, excluir o asumir desinterés sin indagar el contexto."
+    },
+    {
+      "id": 452,
+      "career": "Nutrición",
+      "block": "Investigación",
+      "title": "Evaluación de la ingesta dietética",
+      "level": "I-2",
+      "specialty": "Nutrición",
+      "tags": [
+        "recordatorio de 24 horas",
+        "evaluación dietética",
+        "metodología"
+      ],
+      "statement": "El nutricionista aplica un recordatorio de 24 horas a un paciente para evaluar su ingesta habitual.",
+      "question": "¿Cuál es una limitación reconocida de este método que debe considerarse al interpretar los resultados?",
+      "options": [
+        "Es un método sin ninguna limitación metodológica",
+        "Puede no reflejar la ingesta habitual si el día evaluado no es representativo, y depende de la memoria y honestidad del paciente",
+        "Solo sirve para evaluar la ingesta de líquidos",
+        "Reemplaza por completo la necesidad de evaluación antropométrica"
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque el recordatorio de 24 horas depende de la memoria y honestidad del paciente y puede no representar su ingesta habitual si el día evaluado fue atípico, por lo que sus resultados deben interpretarse considerando esta limitación metodológica."
+    },
+    {
+      "id": 453,
+      "career": "Nutrición",
+      "block": "Salud pública",
+      "title": "Fortificación de alimentos con micronutrientes",
+      "level": "I-2",
+      "specialty": "Nutrición",
+      "tags": [
+        "fortificación",
+        "micronutrientes",
+        "salud pública"
+      ],
+      "statement": "En el país se implementa la fortificación obligatoria de la harina de trigo con ácido fólico y hierro.",
+      "question": "¿Cuál es el objetivo principal de esta estrategia de salud pública?",
+      "options": [
+        "Mejorar únicamente el sabor del producto",
+        "Prevenir deficiencias de micronutrientes a nivel poblacional, como los defectos del tubo neural y la anemia ferropénica",
+        "Sustituir la necesidad de una alimentación balanceada",
+        "Aplicarse solo a la población que ya presenta deficiencias diagnosticadas"
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque la fortificación obligatoria de alimentos de consumo masivo busca prevenir deficiencias de micronutrientes a nivel poblacional (como defectos del tubo neural por déficit de ácido fólico o anemia por déficit de hierro), sin sustituir la necesidad de una alimentación balanceada."
+    },
+    {
+      "id": 454,
+      "career": "Odontología",
+      "block": "Investigación",
+      "title": "Índice CPOD en vigilancia epidemiológica bucal",
+      "level": "I-2",
+      "specialty": "Odontología",
+      "tags": [
+        "CPOD",
+        "epidemiología bucal",
+        "indicadores"
+      ],
+      "statement": "En un estudio epidemiológico de salud bucal escolar se calcula el índice CPOD de la población evaluada.",
+      "question": "¿Qué mide este índice?",
+      "options": [
+        "Solo el número de piezas dentales presentes en boca",
+        "El promedio de dientes permanentes cariados, perdidos y obturados por persona en la población evaluada",
+        "Únicamente la presencia de placa bacteriana",
+        "El grado de maloclusión de la población"
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque el índice CPOD (Cariados, Perdidos, Obturados por persona) es un indicador epidemiológico estándar que mide el promedio de dientes permanentes afectados por caries a nivel poblacional, no la presencia de placa ni el grado de maloclusión."
     }
   ],
   "norms": [
