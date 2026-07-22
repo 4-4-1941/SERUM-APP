@@ -10469,6 +10469,397 @@ window.SERUMS_DATA = {
       ],
       "correct": 1,
       "feedback": "Es correcta porque el índice CPOD (Cariados, Perdidos, Obturados por persona) es un indicador epidemiológico estándar que mide el promedio de dientes permanentes afectados por caries a nivel poblacional, no la presencia de placa ni el grado de maloclusión."
+    },
+    {
+      "id": 455,
+      "career": "Tecnología Médica - Laboratorio Clínico",
+      "block": "Cuidado integral",
+      "title": "Tipificación de grupo sanguíneo",
+      "level": "I-2",
+      "specialty": "Laboratorio Clínico",
+      "tags": [
+        "grupo sanguíneo",
+        "ABO/Rh",
+        "seguridad transfusional"
+      ],
+      "statement": "Antes de una posible transfusión, se solicita la tipificación de grupo sanguíneo ABO y factor Rh de un paciente.",
+      "question": "¿Por qué es indispensable confirmar este resultado antes de cualquier transfusión?",
+      "options": [
+        "Es un dato meramente administrativo sin relevancia clínica",
+        "Una incompatibilidad ABO/Rh no detectada puede causar una reacción hemolítica transfusional grave, potencialmente mortal",
+        "Solo es relevante en mujeres gestantes",
+        "El resultado puede omitirse si el paciente refiere conocer su grupo sanguíneo de memoria"
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque una incompatibilidad ABO/Rh no detectada puede desencadenar una reacción hemolítica transfusional grave y potencialmente mortal, por lo que la tipificación debe confirmarse en el laboratorio y no basarse en la referencia verbal del paciente."
+    },
+    {
+      "id": 456,
+      "career": "Tecnología Médica - Laboratorio Clínico",
+      "block": "Gestión",
+      "title": "Manejo de derrame de material biológico",
+      "level": "I-2",
+      "specialty": "Laboratorio Clínico",
+      "tags": [
+        "bioseguridad",
+        "derrame biológico",
+        "protocolo de limpieza"
+      ],
+      "statement": "Durante el procesamiento de muestras, se produce un derrame accidental de sangre sobre la mesa de trabajo del laboratorio.",
+      "question": "¿Cuál es el procedimiento correcto inmediato?",
+      "options": [
+        "Limpiar con un paño común sin protocolo especial",
+        "Aplicar el protocolo de bioseguridad para derrames: uso de equipo de protección, desinfección con hipoclorito y disposición adecuada del material contaminado",
+        "Ignorar el derrame si es de poco volumen",
+        "Ventilar el ambiente como única medida"
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque todo derrame de material biológico debe manejarse con el protocolo de bioseguridad correspondiente: protección personal, desinfección con hipoclorito de sodio y disposición adecuada del material contaminado, independientemente del volumen derramado."
+    },
+    {
+      "id": 457,
+      "career": "Tecnología Médica - Terapia Física",
+      "block": "Cuidado integral",
+      "title": "Fisioterapia respiratoria en bronquiolitis",
+      "level": "I-2",
+      "specialty": "Terapia Física",
+      "tags": [
+        "bronquiolitis",
+        "fisioterapia respiratoria",
+        "pediatría"
+      ],
+      "statement": "Un lactante con bronquiolitis leve presenta abundantes secreciones que dificultan su alimentación, sin signos de dificultad respiratoria severa.",
+      "question": "¿Cuál es la conducta correcta respecto a la fisioterapia respiratoria en este caso?",
+      "options": [
+        "Aplicar de rutina todas las técnicas de fisioterapia respiratoria disponibles",
+        "Priorizar medidas como el lavado nasal y posicionamiento; el uso de técnicas de fisioterapia respiratoria convencional no está sustentado como rutina en bronquiolitis leve",
+        "No hacer ninguna intervención en absoluto",
+        "Indicar percusión torácica vigorosa varias veces al día"
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque la evidencia actual no sustenta el uso rutinario de fisioterapia respiratoria convencional (percusión, vibración) en bronquiolitis leve; se priorizan medidas como el lavado nasal y el posicionamiento adecuado para facilitar el confort y la alimentación."
+    },
+    {
+      "id": 458,
+      "career": "Tecnología Médica - Terapia Física",
+      "block": "Cuidado integral",
+      "title": "Manejo de esguince de tobillo agudo",
+      "level": "I-2",
+      "specialty": "Terapia Física",
+      "tags": [
+        "esguince de tobillo",
+        "protocolo POLICE",
+        "manejo agudo"
+      ],
+      "statement": "Un paciente sufre un esguince de tobillo grado I tras una torcedura durante actividad deportiva, sin signos de fractura.",
+      "question": "¿Cuál es el manejo fisioterapéutico inicial más adecuado en las primeras 48-72 horas?",
+      "options": [
+        "Reposo absoluto sin ningún tipo de carga por varias semanas",
+        "Protocolo de protección, carga progresiva controlada, hielo, compresión y elevación (POLICE), evitando la inmovilización prolongada",
+        "Aplicar calor local inmediatamente para 'relajar' la zona",
+        "Iniciar ejercicios de máxima intensidad de inmediato"
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque el manejo actual de esguinces agudos prioriza el protocolo POLICE (protección, carga progresiva controlada, hielo, compresión, elevación), evitando tanto la inmovilización prolongada como el calor local o el ejercicio intenso en la fase aguda."
+    },
+    {
+      "id": 459,
+      "career": "Tecnología Médica - Terapia del Lenguaje",
+      "block": "Cuidado integral",
+      "title": "Intervención temprana en labio y paladar hendido",
+      "level": "I-2",
+      "specialty": "Terapia del Lenguaje",
+      "tags": [
+        "labio y paladar hendido",
+        "intervención temprana",
+        "alimentación"
+      ],
+      "statement": "Un recién nacido con diagnóstico de paladar hendido presenta dificultad para lograr un sellado adecuado durante la succión.",
+      "question": "¿Cuál es el rol inicial de terapia del lenguaje en este caso?",
+      "options": [
+        "Esperar a la cirugía reparadora para iniciar cualquier intervención",
+        "Orientar sobre técnicas y dispositivos de alimentación adaptados para garantizar una nutrición adecuada mientras se coordina el manejo quirúrgico",
+        "Indicar que se suspenda la alimentación oral de forma permanente",
+        "No tiene ningún rol hasta que el niño empiece a hablar"
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque en recién nacidos con paladar hendido, la intervención temprana de terapia del lenguaje se centra en técnicas y dispositivos de alimentación adaptados para asegurar una nutrición adecuada, en coordinación con el equipo que definirá el manejo quirúrgico posterior."
+    },
+    {
+      "id": 460,
+      "career": "Tecnología Médica - Terapia del Lenguaje",
+      "block": "Cuidado integral",
+      "title": "Comunicación temprana en sospecha de autismo",
+      "level": "I-2",
+      "specialty": "Terapia del Lenguaje",
+      "tags": [
+        "autismo",
+        "comunicación temprana",
+        "intervención"
+      ],
+      "statement": "Un niño de 18 meses no responde a su nombre, no señala para pedir ni comparte atención con la mirada de forma consistente.",
+      "question": "¿Cuál es la conducta correcta ante estos signos de alarma?",
+      "options": [
+        "Esperar hasta los 3 años porque a esa edad recién se puede evaluar el lenguaje",
+        "Derivar para evaluación especializada del desarrollo, dado que estos son signos de alarma tempranos que ameritan intervención oportuna",
+        "Asumir que es una variante normal de la timidez infantil",
+        "Indicar solo estimulación en casa sin derivación"
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque la falta de respuesta al nombre, señalar para pedir y compartir atención conjunta a los 18 meses son signos de alarma tempranos del desarrollo que ameritan derivación oportuna, dado que la intervención temprana mejora significativamente el pronóstico."
+    },
+    {
+      "id": 461,
+      "career": "Tecnología Médica - Optometría",
+      "block": "Cuidado integral",
+      "title": "Diferenciación entre conjuntivitis y uveítis",
+      "level": "I-2",
+      "specialty": "Optometría",
+      "tags": [
+        "conjuntivitis",
+        "uveítis",
+        "signos de alarma ocular"
+      ],
+      "statement": "Un paciente presenta ojo rojo; se debe determinar si corresponde a una conjuntivitis banal o a un cuadro que amerita derivación urgente.",
+      "question": "¿Qué hallazgo es más sugestivo de un cuadro que requiere derivación oftalmológica urgente en lugar de manejo como conjuntivitis simple?",
+      "options": [
+        "Secreción mucopurulenta leve sin dolor ni afectación de la visión",
+        "Dolor ocular intenso, fotofobia marcada y disminución de la agudeza visual asociados al enrojecimiento",
+        "Picazón leve y lagrimeo sin otros síntomas",
+        "Enrojecimiento bilateral leve tras exposición al polvo"
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque el dolor ocular intenso, la fotofobia marcada y la disminución de la agudeza visual son signos de alarma que sugieren un cuadro más grave (como uveítis) y requieren derivación oftalmológica urgente, a diferencia de la conjuntivitis simple donde la visión se mantiene conservada."
+    },
+    {
+      "id": 462,
+      "career": "Tecnología Médica - Optometría",
+      "block": "Salud pública",
+      "title": "Prevención de cataratas relacionadas a la edad",
+      "level": "I-2",
+      "specialty": "Optometría",
+      "tags": [
+        "cataratas",
+        "prevención",
+        "adulto mayor"
+      ],
+      "statement": "En un programa de salud ocular para adultos mayores, se realiza tamizaje de opacidad del cristalino.",
+      "question": "¿Cuál es el objetivo de salud pública de este tamizaje?",
+      "options": [
+        "Diagnosticar cataratas solo cuando el paciente ya presenta ceguera total",
+        "Detectar oportunamente la opacidad del cristalino para derivar a manejo quirúrgico antes de que afecte significativamente la funcionalidad e independencia del paciente",
+        "Reemplazar la cirugía de cataratas por corrección con lentes",
+        "Aplicarse únicamente en pacientes con antecedente familiar de cataratas"
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque el tamizaje busca detectar oportunamente la opacidad del cristalino para derivar a manejo quirúrgico antes de que la pérdida visual comprometa significativamente la funcionalidad e independencia del adulto mayor, siendo la cirugía —no los lentes— el tratamiento definitivo."
+    },
+    {
+      "id": 463,
+      "career": "Biología",
+      "block": "Cuidado integral",
+      "title": "Baciloscopia para diagnóstico de tuberculosis",
+      "level": "I-2",
+      "specialty": "Biología",
+      "tags": [
+        "tuberculosis",
+        "baciloscopia",
+        "diagnóstico microbiológico"
+      ],
+      "statement": "Se recibe una muestra de esputo de un paciente con tos persistente de más de 2 semanas, para descarte de tuberculosis.",
+      "question": "¿Cuál es un requisito de calidad indispensable para que la baciloscopia sea confiable?",
+      "options": [
+        "Cualquier muestra de saliva es aceptable para el análisis",
+        "La muestra debe ser esputo real (no saliva), obtenido preferentemente en ayunas y con la técnica adecuada de expectoración",
+        "La muestra puede tomarse en cualquier momento sin indicaciones específicas",
+        "El resultado no depende de la calidad de la muestra"
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque la confiabilidad de la baciloscopia depende de que la muestra sea esputo real (no saliva), obtenido con una técnica adecuada de expectoración, ya que una muestra de mala calidad puede generar un falso negativo en un paciente con tuberculosis activa."
+    },
+    {
+      "id": 464,
+      "career": "Biología",
+      "block": "Salud pública",
+      "title": "Bioseguridad en el manejo de muestras respiratorias",
+      "level": "I-2",
+      "specialty": "Biología",
+      "tags": [
+        "bioseguridad",
+        "enfermedades respiratorias",
+        "manejo de muestras"
+      ],
+      "statement": "El laboratorio procesa muestras de hisopado nasofaríngeo de pacientes con sospecha de una infección respiratoria de transmisión por aerosoles.",
+      "question": "¿Qué medida de bioseguridad es prioritaria en el manejo de este tipo de muestras?",
+      "options": [
+        "Procesarlas en el mismo espacio que otras muestras sin medidas adicionales",
+        "Utilizar equipo de protección personal específico (incluyendo protección respiratoria) y procesar en un área con ventilación adecuada o cabina de bioseguridad",
+        "Solo es necesario el uso de guantes",
+        "No se requiere ninguna medida adicional si el paciente no tiene fiebre"
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque el manejo de muestras respiratorias con riesgo de transmisión por aerosoles exige equipo de protección personal específico, incluyendo protección respiratoria, y procesamiento en un área con ventilación adecuada o cabina de bioseguridad, más allá del uso de guantes."
+    },
+    {
+      "id": 465,
+      "career": "Ingeniería Sanitaria",
+      "block": "Salud pública",
+      "title": "Letrinas sanitarias en zona sin alcantarillado",
+      "level": "I-2",
+      "specialty": "Ingeniería Sanitaria",
+      "tags": [
+        "letrinas sanitarias",
+        "saneamiento básico",
+        "zona rural"
+      ],
+      "statement": "En una comunidad rural sin acceso a red de alcantarillado, se plantea la instalación de sistemas de disposición de excretas.",
+      "question": "¿Qué criterio técnico es indispensable al diseñar una letrina sanitaria en esta zona?",
+      "options": [
+        "La ubicación no tiene relevancia respecto a las fuentes de agua",
+        "Debe ubicarse a una distancia segura de las fuentes de agua (pozos, manantiales) para evitar la contaminación del agua subterránea",
+        "Debe construirse lo más cerca posible del pozo de agua para facilitar su uso",
+        "El diseño no requiere considerar el nivel freático de la zona"
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque la ubicación de una letrina sanitaria debe respetar una distancia segura respecto a las fuentes de agua para evitar la contaminación del agua subterránea, considerando también el nivel freático de la zona, criterio técnico central del saneamiento básico rural."
+    },
+    {
+      "id": 466,
+      "career": "Ingeniería Sanitaria",
+      "block": "Gestión",
+      "title": "Gestión del agua en instituciones educativas",
+      "level": "I-2",
+      "specialty": "Ingeniería Sanitaria",
+      "tags": [
+        "agua segura",
+        "instituciones educativas",
+        "gestión sanitaria"
+      ],
+      "statement": "Una institución educativa rural depende de un tanque de almacenamiento de agua sin mantenimiento periódico documentado.",
+      "question": "¿Cuál es la medida de gestión sanitaria prioritaria en este caso?",
+      "options": [
+        "No requiere intervención si no ha habido quejas de los estudiantes",
+        "Establecer un programa de limpieza y desinfección periódica del tanque, con registro documentado, y monitoreo de cloro residual",
+        "Cambiar el tanque únicamente si se rompe",
+        "Delegar la responsabilidad exclusivamente a los estudiantes"
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque la gestión sanitaria del agua en instituciones educativas requiere un programa de limpieza y desinfección periódica del tanque, con registro documentado y monitoreo de cloro residual, para prevenir riesgos de contaminación antes de que se presenten síntomas o quejas."
+    },
+    {
+      "id": 467,
+      "career": "Tecnología Médica - Radiología",
+      "block": "Cuidado integral",
+      "title": "Protección radiológica en gestante",
+      "level": "I-2",
+      "specialty": "Radiología",
+      "tags": [
+        "radiología en gestante",
+        "protección fetal",
+        "justificación"
+      ],
+      "statement": "Una paciente gestante de 20 semanas requiere una radiografía de tórax por sospecha de neumonía.",
+      "question": "¿Cuál es la conducta correcta considerando el embarazo?",
+      "options": [
+        "Negar el estudio por completo debido al embarazo, aunque exista indicación clínica clara",
+        "Realizar el estudio con protección abdominal adecuada, ya que la dosis en una radiografía de tórax bien colimada es mínima y el beneficio clínico justificado supera el riesgo",
+        "Realizar el estudio sin ninguna protección adicional por ser de bajo riesgo",
+        "Posponer indefinidamente el diagnóstico hasta después del parto"
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque, ante una indicación clínica clara, una radiografía de tórax bien colimada implica una dosis fetal mínima; debe realizarse con protección abdominal adecuada, ya que el beneficio diagnóstico justificado supera el riesgo, en lugar de negar el estudio o posponerlo indefinidamente."
+    },
+    {
+      "id": 468,
+      "career": "Tecnología Médica - Terapia Ocupacional",
+      "block": "Gestión",
+      "title": "Priorización en lista de espera de rehabilitación",
+      "level": "I-2",
+      "specialty": "Terapia Ocupacional",
+      "tags": [
+        "gestión de casos",
+        "priorización clínica",
+        "rehabilitación"
+      ],
+      "statement": "Un establecimiento con lista de espera para terapia ocupacional debe decidir el orden de atención entre varios pacientes derivados.",
+      "question": "¿Qué criterio debe primar en esta priorización?",
+      "options": [
+        "El orden estricto de llegada de la derivación, sin excepción",
+        "El impacto funcional y el riesgo de deterioro si la intervención se retrasa, priorizando los casos de mayor urgencia funcional",
+        "La cercanía del domicilio del paciente al establecimiento",
+        "El nivel socioeconómico del paciente"
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque la priorización clínica en listas de espera debe basarse en el impacto funcional y el riesgo de deterioro ante el retraso de la intervención, y no en el orden de llegada, la cercanía domiciliaria o criterios socioeconómicos ajenos a la necesidad clínica."
+    },
+    {
+      "id": 469,
+      "career": "Medicina Veterinaria",
+      "block": "Ética e interculturalidad",
+      "title": "Prácticas ganaderas tradicionales y sanidad animal",
+      "level": "I-2",
+      "specialty": "Medicina Veterinaria",
+      "tags": [
+        "interculturalidad",
+        "ganadería tradicional",
+        "sanidad animal"
+      ],
+      "statement": "En una comunidad andina, las prácticas tradicionales de manejo del ganado difieren de las recomendaciones técnicas estándar de sanidad animal.",
+      "question": "¿Cuál es el enfoque más apropiado del médico veterinario en este contexto?",
+      "options": [
+        "Imponer únicamente el protocolo técnico estándar, descalificando las prácticas tradicionales",
+        "Dialogar con la comunidad para integrar el conocimiento técnico con las prácticas tradicionales, respetando su validez cultural cuando no comprometan la sanidad animal",
+        "Ignorar las prácticas tradicionales sin ningún diálogo previo",
+        "Aplicar el protocolo técnico de forma impuesta sin explicación a la comunidad"
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque el enfoque intercultural en sanidad animal busca integrar el conocimiento técnico con las prácticas tradicionales de la comunidad mediante el diálogo, respetando su validez cultural siempre que no comprometan la salud animal o pública, en lugar de imponer un protocolo sin explicación."
+    },
+    {
+      "id": 470,
+      "career": "Farmacia y Bioquímica",
+      "block": "Ética e interculturalidad",
+      "title": "Uso de medicina tradicional junto al tratamiento farmacológico",
+      "level": "I-2",
+      "specialty": "Farmacia y Bioquímica",
+      "tags": [
+        "medicina tradicional",
+        "interculturalidad",
+        "adherencia"
+      ],
+      "statement": "Un paciente en tratamiento con antihipertensivos refiere que también toma infusiones de plantas medicinales recomendadas por su comunidad.",
+      "question": "¿Cuál es la conducta correcta del profesional de farmacia?",
+      "options": [
+        "Prohibir de forma tajante cualquier uso de medicina tradicional sin dialogar con el paciente",
+        "Indagar qué planta consume, evaluar posibles interacciones con el tratamiento farmacológico, y orientar respetando su contexto cultural",
+        "Ignorar la información porque no es relevante para el tratamiento farmacológico",
+        "Suspender el antihipertensivo para evitar cualquier posible interacción"
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque el profesional de farmacia debe indagar específicamente qué planta consume el paciente para evaluar posibles interacciones con su tratamiento, orientando desde el respeto al contexto cultural, en lugar de prohibir tajantemente o ignorar la información."
+    },
+    {
+      "id": 471,
+      "career": "Trabajo Social",
+      "block": "Salud pública",
+      "title": "Participación comunitaria en programas de salud",
+      "level": "I-2",
+      "specialty": "Trabajo Social",
+      "tags": [
+        "participación comunitaria",
+        "promoción de la salud",
+        "agentes comunitarios"
+      ],
+      "statement": "Un establecimiento de salud busca fortalecer un programa de promoción de la salud con participación activa de la comunidad.",
+      "question": "¿Cuál es el rol del trabajo social en el fortalecimiento de este tipo de programas?",
+      "options": [
+        "Diseñar el programa sin ninguna consulta a la comunidad",
+        "Facilitar la organización y participación de agentes comunitarios de salud, fortaleciendo el vínculo entre el establecimiento y la comunidad",
+        "Limitar la participación comunitaria a la asistencia pasiva a charlas informativas",
+        "Delegar todo el trabajo comunitario exclusivamente al personal médico"
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque el trabajo social aporta la facilitación de la organización y participación activa de agentes comunitarios de salud, fortaleciendo el vínculo entre el establecimiento y la comunidad, en lugar de un diseño impuesto sin consulta o una participación meramente pasiva."
     }
   ],
   "norms": [
