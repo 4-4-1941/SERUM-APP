@@ -530,11 +530,20 @@ function renderCasePanel() {
     actions.innerHTML = `<button class="action-btn" id="next-btn">Siguiente caso →</button>`;
     document.getElementById("next-btn").addEventListener("click", nextCase);
   } else if (reveal) {
-    // Intentos agotados: recién aquí se muestra el razonamiento técnico completo.
+    // Intentos agotados: recién aquí se muestra el razonamiento técnico completo,
+    // en un bloque separado del rótulo "Incorrecto" para no generar confusión.
+    const correctLetter = String.fromCharCode(65 + activeCase.correct);
+    const cleanedFeedback = activeCase.feedback
+      .replace(/^\s*Es\s+correcta\s+porque\s*/i, "")
+      .replace(/^\s*Correcta\s+porque\s*/i, "")
+      .trim();
+    const explanationText = cleanedFeedback.charAt(0).toLowerCase() + cleanedFeedback.slice(1);
     feedback.innerHTML = `
       <div class="card error">
         <strong>Incorrecto</strong>
-        <p>${activeCase.feedback}</p>
+      </div>
+      <div class="card" style="margin-top:10px;background:#F7F5F2;border-left:4px solid #0C3B34">
+        <p><strong>Es correcta la opción ${correctLetter}</strong>, porque ${explanationText}</p>
       </div>
       ${interNote}
     `;
