@@ -1,15 +1,28 @@
-Copyright © 2026 Richard Castillejo Ponce. Todos los derechos reservados.
+SIP · SERUMS Perú — Plataforma de Inteligencia de Simulacro
+Copyright © 2026. Todos los derechos reservados.
 
-Este repositorio y su contenido (código fuente, banco de casos clínicos,
-diseño, identidad visual y documentación) son propiedad intelectual de
-Richard Castillejo Ponce.
+Este software, su código fuente, su arquitectura, su banco de casos clínicos,
+sus estructuras de datos y toda la documentación asociada son propiedad
+exclusiva de su autor.
 
-No se autoriza la reproducción, distribución, modificación, publicación
-ni uso comercial de este proyecto, total o parcial, sin el permiso previo
-y por escrito del autor.
+Queda expresamente prohibido, sin autorización previa y por escrito del autor:
 
-El hecho de que este repositorio sea públicamente accesible en GitHub
-no constituye una licencia de uso, copia o redistribución de su contenido.
+  1. Copiar, reproducir o redistribuir este código, en su totalidad o en parte.
+  2. Modificar, adaptar o crear obras derivadas basadas en este software.
+  3. Usar este software, su arquitectura o su contenido con fines comerciales.
+  4. Sublicenciar, vender, alquilar o transferir cualquier derecho sobre este
+     software a terceros.
+  5. Utilizar el banco de casos clínicos, normativa integrada, o cualquier
+     otro contenido incluido en este repositorio fuera del uso personal
+     autorizado por el autor.
 
-Para solicitudes de uso, colaboración o licenciamiento, contactar
-directamente al autor.
+El hecho de que el código fuente sea visible públicamente en este
+repositorio (por requisito técnico del servicio de hosting utilizado) no
+constituye una licencia de uso, copia ni redistribución. Todos los derechos
+que no se conceden expresamente aquí quedan reservados.
+
+Cualquier uso no autorizado de este software o de su contenido podrá dar
+lugar a las acciones legales correspondientes bajo la legislación de
+derechos de autor aplicable.
+
+Para solicitar autorización de uso, contactar directamente al autor.
