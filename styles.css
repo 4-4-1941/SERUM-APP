@@ -576,3 +576,8 @@ textarea.input{
   margin:10px 0 0;
   line-height:1.4;
 }
+
+.auth-card .copyright-note{
+  color:var(--muted);
+  margin-top:18px;
+}
