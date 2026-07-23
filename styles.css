@@ -458,3 +458,113 @@ textarea.input{
   .print-table th{color:#5B6E6A;font-weight:600;text-transform:uppercase;font-size:11px;letter-spacing:.05em}
   .print-note{font-size:11px;color:#5B6E6A;line-height:1.6;margin-top:20px}
 }
+
+/* ---------- Pantalla de acceso (login) ---------- */
+.auth-screen{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(180deg,var(--primary-dark),#0A2B26 78%);
+  padding:20px;
+}
+
+.auth-card{
+  background:var(--surface);
+  border-radius:14px;
+  box-shadow:var(--shadow);
+  padding:32px 28px;
+  width:100%;
+  max-width:360px;
+  text-align:center;
+}
+
+.auth-logo{
+  width:64px;
+  height:64px;
+  border-radius:50%;
+  margin-bottom:14px;
+  box-shadow:0 0 0 2px rgba(20,92,82,.15), 0 6px 16px rgba(0,0,0,.12);
+}
+
+.auth-card h2{
+  margin:0 0 6px;
+  font-family:"Source Serif 4",Georgia,serif;
+  font-size:20px;
+  color:var(--primary-dark);
+}
+
+.auth-card p{
+  margin:0 0 20px;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.5;
+}
+
+.auth-field{text-align:left;margin-bottom:14px}
+
+.auth-field label{
+  display:block;
+  color:var(--muted);
+  font-size:11.5px;
+  text-transform:uppercase;
+  letter-spacing:.09em;
+  margin-bottom:6px;
+}
+
+.auth-field input{
+  width:100%;
+  padding:12px 14px;
+  border:1px solid var(--line);
+  border-radius:10px;
+  font:inherit;
+  font-size:14px;
+  background:#FBFDFC;
+}
+
+.auth-field input:focus{
+  outline:2px solid var(--primary);
+  outline-offset:2px;
+}
+
+.auth-error{
+  display:none;
+  background:#FCEBEA;
+  color:var(--red);
+  border-left:4px solid var(--red);
+  border-radius:8px;
+  padding:10px 12px;
+  font-size:13px;
+  margin-bottom:14px;
+  text-align:left;
+}
+
+.auth-btn{
+  width:100%;
+  padding:12px 16px;
+  border:none;
+  border-radius:10px;
+  background:var(--primary);
+  color:#fff;
+  font:inherit;
+  font-weight:600;
+  cursor:pointer;
+}
+
+.auth-btn:hover{background:var(--primary-dark)}
+.auth-btn:disabled{background:#A9B7B3;cursor:not-allowed}
+
+.logout-btn{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(234,243,240,.2);
+  color:#DCEAE6;
+  border-radius:10px;
+  padding:10px 12px;
+  font:inherit;
+  font-size:13px;
+  cursor:pointer;
+  text-align:center;
+  margin-top:4px;
+}
+
+.logout-btn:hover{background:rgba(255,255,255,.12)}
