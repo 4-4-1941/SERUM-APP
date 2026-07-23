@@ -568,3 +568,11 @@ textarea.input{
 }
 
 .logout-btn:hover{background:rgba(255,255,255,.12)}
+
+.copyright-note{
+  font-size:10.5px;
+  color:rgba(234,243,240,.45);
+  text-align:center;
+  margin:10px 0 0;
+  line-height:1.4;
+}
