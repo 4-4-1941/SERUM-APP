@@ -13158,6 +13158,78 @@ window.SERUMS_DATA = {
           ]
         }
       ]
+    },
+    {
+      "id": "ts-007",
+      "title": "Del tamizaje a la derivación: consumo de sustancias",
+      "context": "Durante una consulta general en tu establecimiento I-2, atiendes a un varón de 29 años por un motivo no relacionado. Durante la conversación notas señales de posible consumo problemático de sustancias.",
+      "skillsEvaluated": [
+        "Detección oportuna",
+        "Uso correcto de formatos oficiales",
+        "Ruta de derivación en salud mental"
+      ],
+      "startStep": "d1",
+      "steps": [
+        {
+          "id": "d1",
+          "title": "Detección durante la consulta",
+          "prompt": "El paciente menciona de forma casual que 'últimamente ha estado tomando más de lo normal para dormir'. ¿Qué haces?",
+          "options": [
+            {
+              "text": "Continúas solo con el motivo de consulta original, sin explorar más el comentario",
+              "correct": false,
+              "feedback": "El tamizaje de consumo de sustancias debe aplicarse de forma sistemática ante cualquier señal, no solo cuando el consumo es evidente; dejarlo pasar pierde la oportunidad de detección oportuna.",
+              "next": "d1"
+            },
+            {
+              "text": "Aplicas el tamizaje breve de consumo de sustancias como parte de la atención integral",
+              "correct": true,
+              "feedback": "Correcta: toda señal de consumo, por casual que parezca, amerita aplicar el tamizaje sistemático — es exactamente el tipo de detección oportuna que se busca en el primer nivel.",
+              "next": "d2",
+              "practiceDocId": "adi-001"
+            }
+          ]
+        },
+        {
+          "id": "d2",
+          "title": "Resultado del tamizaje",
+          "prompt": "Tras aplicar el tamizaje (que acabas de practicar), el paciente reporta consumo diario de alcohol con tolerancia aumentada y malestar cuando no bebe. Esto clasifica como riesgo alto con signos de dependencia. ¿Qué corresponde hacer?",
+          "options": [
+            {
+              "text": "Indicar solo consejería motivacional breve y continuar el seguimiento únicamente en tu establecimiento",
+              "correct": false,
+              "feedback": "Un riesgo alto con signos de dependencia excede el manejo de intervención breve en el primer nivel; requiere derivación a un servicio especializado.",
+              "next": "d2"
+            },
+            {
+              "text": "Derivar al paciente al Centro de Salud Mental Comunitario (CSMC) mediante la Hoja de Referencia correspondiente",
+              "correct": true,
+              "feedback": "Correcta: el riesgo alto con signos de dependencia amerita derivación formal a un servicio especializado en salud mental, documentada con el formato oficial.",
+              "next": "d3",
+              "practiceDocId": "ref-001"
+            }
+          ]
+        },
+        {
+          "id": "d3",
+          "title": "Coordinación previa",
+          "prompt": "Ya practicaste el llenado de la Hoja de Referencia. Antes de entregársela al paciente para su traslado, ¿qué haces?",
+          "options": [
+            {
+              "text": "Coordinas telefónicamente con el CSMC para confirmar que el paciente será recibido, tal como se plantea en el flujograma de atención en consumo de sustancias",
+              "correct": true,
+              "feedback": "Correcta: la coordinación previa con el establecimiento receptor es un paso explícito del flujograma de derivación en consumo de sustancias, y evita que el paciente abandone el proceso entre un establecimiento y otro.",
+              "next": "end"
+            },
+            {
+              "text": "Entregas la hoja de referencia al paciente y le indicas que vaya cuando pueda, sin coordinar previamente",
+              "correct": false,
+              "feedback": "Sin coordinación previa aumenta significativamente el riesgo de que el paciente no llegue a ser atendido o abandone el proceso de derivación.",
+              "next": "end"
+            }
+          ]
+        }
+      ]
     }
   ]
 };

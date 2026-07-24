@@ -1157,9 +1157,10 @@ function renderAssistantPractice(docId) {
   pageSubtitle.textContent = "Redacta el documento a partir del caso planteado y luego compáralo con el modelo.";
 
   const st = assistantPracticeState[docId] || { attempts: 0, draft: "", revealed: false };
+  const fromTraining = !!pendingTrainingResume;
 
   root.innerHTML = `
-    <button id="back-to-assistant-btn" class="toggle" style="margin-bottom:12px;margin-top:0">← Volver a Asistente Profesional</button>
+    <button id="back-to-assistant-btn" class="toggle" style="margin-bottom:12px;margin-top:0">${fromTraining ? "← Volver al escenario de entrenamiento" : "← Volver a Asistente Profesional"}</button>
     <section class="two-col">
       <div class="panel">
         <div class="badge">${doc.category}</div>
@@ -1172,6 +1173,7 @@ function renderAssistantPractice(docId) {
         <textarea id="practice-draft" placeholder="Redacta aquí tu documento..." style="width:100%;min-height:220px;padding:10px;border-radius:6px;border:1px solid #D8D2C4;font-family:inherit;font-size:14px">${st.draft || ""}</textarea>
         <p style="margin-top:8px;color:#5B6E6A;font-size:13px">Intentos de práctica: ${st.attempts}</p>
         <button class="action-btn" id="compare-btn" style="margin-top:8px">${st.revealed ? "Comparar de nuevo" : "Comparar con el modelo"}</button>
+        ${fromTraining && st.revealed ? `<button class="action-btn" id="resume-training-btn" style="margin-top:8px">Continuar el escenario →</button>` : ""}
       </div>
       <div class="panel" id="practice-model" style="display:${st.revealed ? "block" : "none"}">
         <h3 class="section-title">Documento modelo</h3>
@@ -1190,7 +1192,17 @@ function renderAssistantPractice(docId) {
     </section>
   `;
 
-  document.getElementById("back-to-assistant-btn").addEventListener("click", renderAssistant);
+  document.getElementById("back-to-assistant-btn").addEventListener("click", () => {
+    if (fromTraining) {
+      const resume = pendingTrainingResume;
+      pendingTrainingResume = null;
+      activeTrainingScenario = data.trainingScenarios.find(s => s.id === resume.scenarioId);
+      activeTrainingStepId = resume.nextStepId;
+      renderTrainingStep();
+    } else {
+      renderAssistant();
+    }
+  });
 
   const draft = document.getElementById("practice-draft");
   document.getElementById("compare-btn").addEventListener("click", () => {
@@ -1201,11 +1213,23 @@ function renderAssistantPractice(docId) {
     saveProgress("assistantPracticeState", assistantPracticeState);
     renderAssistantPractice(docId);
   });
+
+  const resumeBtn = document.getElementById("resume-training-btn");
+  if (resumeBtn) {
+    resumeBtn.addEventListener("click", () => {
+      const resume = pendingTrainingResume;
+      pendingTrainingResume = null;
+      activeTrainingScenario = data.trainingScenarios.find(s => s.id === resume.scenarioId);
+      activeTrainingStepId = resume.nextStepId;
+      renderTrainingStep();
+    });
+  }
 }
 
 let trainingState = loadProgress("trainingState", {});
 let activeTrainingScenario = null;
 let activeTrainingStepId = null;
+let pendingTrainingResume = null;
 
 function renderTraining() {
   pageTitle.textContent = "Entrenamiento SERUMS";
@@ -1298,11 +1322,23 @@ function renderTrainingStep() {
           <p>${opt.feedback}</p>
         </div>
       `;
-      document.getElementById("training-actions").innerHTML = `<button class="action-btn" id="next-step-btn">Continuar →</button>`;
-      document.getElementById("next-step-btn").addEventListener("click", () => {
-        activeTrainingStepId = opt.next;
-        renderTrainingStep();
-      });
+      if (opt.practiceDocId) {
+        const doc = data.assistantDocs.find(d => d.id === opt.practiceDocId);
+        document.getElementById("training-actions").innerHTML = `
+          <p style="color:#5B6E6A;margin-bottom:8px">Antes de continuar, practica el llenado real de este formato:</p>
+          <button class="action-btn" id="practice-from-training-btn">Practicar: ${doc ? doc.title : "formato"} →</button>
+        `;
+        document.getElementById("practice-from-training-btn").addEventListener("click", () => {
+          pendingTrainingResume = { scenarioId: activeTrainingScenario.id, nextStepId: opt.next };
+          renderAssistantPractice(opt.practiceDocId);
+        });
+      } else {
+        document.getElementById("training-actions").innerHTML = `<button class="action-btn" id="next-step-btn">Continuar →</button>`;
+        document.getElementById("next-step-btn").addEventListener("click", () => {
+          activeTrainingStepId = opt.next;
+          renderTrainingStep();
+        });
+      }
     });
   });
 }
