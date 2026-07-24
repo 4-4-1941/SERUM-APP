@@ -12360,52 +12360,54 @@ window.SERUMS_DATA = {
     {
       "id": "ref-001",
       "category": "Referencia y contrarreferencia",
-      "title": "Hoja de Referencia",
-      "purpose": "Documento mediante el cual un establecimiento de menor capacidad resolutiva transfiere a un paciente hacia otro de mayor capacidad, garantizando la continuidad de la atención.",
+      "title": "Hoja de Referencia Institucional (Anexo N° 02.1)",
+      "purpose": "Formato oficial del MINSA (Norma Técnica del Sistema de Referencia y Contrarreferencia de los Establecimientos del Ministerio de Salud) para transferir a un paciente hacia un establecimiento de mayor capacidad resolutiva.",
       "requiredFields": [
-        "Datos de filiación del paciente (nombre, DNI, edad, procedencia)",
-        "Establecimiento de origen y de destino",
-        "Motivo de la referencia (diagnóstico presuntivo o definitivo)",
-        "Resumen clínico: antecedentes, hallazgos al examen, funciones vitales",
-        "Tratamiento y medidas ya administradas antes de la referencia",
-        "Nombre, firma y sello del profesional que refiere",
-        "Fecha y hora exacta de emisión"
+        "1. Datos generales: fecha, hora, asegurado (SI/NO), tipo, plan de atención SIS (A-E), establecimiento de origen y de destino",
+        "2. Identificación del usuario: código de afiliación SIS, N° historia clínica, apellidos y nombres, sexo, edad (años/meses/días), dirección, distrito, departamento",
+        "3. Resumen de historia clínica: anamnesis, examen físico (T°, P.A., F.R., F.C.), exámenes auxiliares, diagnóstico(s) con código CIE-10 y columnas D/P/R, tratamiento",
+        "4. Datos de la referencia: coordinación (fecha/hora en que será atendido, nombre de quien atenderá y con quién se coordinó), UPS destino (emergencia/consulta externa/apoyo al diagnóstico), especialidad de destino, condición del paciente al inicio del traslado",
+        "Responsables: nombre, colegiatura y profesión de quien refiere, del establecimiento, del personal que acompaña y de quien recibe, cada uno con firma y sello",
+        "Condición del paciente a la llegada al establecimiento destino (estable / mal estado / fallecida)"
       ],
-      "templateText": "HOJA DE REFERENCIA\nEstablecimiento de origen: ___________\nEstablecimiento de destino: ___________\nPaciente: ___________ DNI: ___________ Edad: ___________\nProcedencia: ___________\nMotivo de referencia: ___________\nResumen clínico:\n- Antecedentes: ___________\n- Hallazgos al examen: ___________\n- Funciones vitales: PA ___ FC ___ FR ___ T° ___ SatO2 ___\nMedidas administradas antes de la referencia: ___________\nDiagnóstico presuntivo: ___________\nProfesional responsable: ___________ (Firma y sello)\nFecha y hora: ___________",
-      "exampleFilled": "Motivo de referencia: Gestante de 32 semanas con signos compatibles con preeclampsia severa (PA 160/110, cefalea, epigastralgia). Se administró sulfato de magnesio según protocolo antes de la referencia. Se refiere a hospital de mayor complejidad para manejo especializado y posible resolución del embarazo.",
+      "templateText": "HOJA DE REFERENCIA — ANEXO N° 02.1\nN°: ______\n\n1. DATOS GENERALES\nFecha: __/__/__ Hora: ____ Asegurado: SI( ) NO( ) Tipo: ______\nPlan de atención SIS: A( ) B( ) C( ) D( ) E( )\nEstablecimiento de origen de la referencia: ______________\nEstablecimiento destino de la referencia: ______________\n\n2. IDENTIFICACIÓN DEL USUARIO\nCódigo de afiliación SIS: ______  N° Historia Clínica: ______\nApellido paterno: ______ Apellido materno: ______ Nombres: ______\nSexo: F( ) M( )  Edad: ___años ___meses ___días\nDirección: ______ Distrito: ______ Departamento: ______\n\n3. RESUMEN DE HISTORIA CLÍNICA\nAnamnesis: ______________\nExamen físico: T° ___ P.A. ___ F.R. ___ F.C. ___\nExámenes auxiliares: ______________\nDiagnóstico: 1) ______ (CIE-10: ___) D( ) P( ) R( )\n             2) ______ (CIE-10: ___) D( ) P( ) R( )\nTratamiento: ______________\n\n4. DATOS DE LA REFERENCIA\nCoordinación de la referencia:\n  Fecha en que será atendido: ___ Hora: ___\n  Nombre de quien lo atenderá: ______\n  Nombre con quien se coordinó la atención: ______\nUPS destino: Emergencia( ) Consulta Ext.( ) Apoyo al Dx.( )\nEspecialidad de destino: Pediatría( ) Medicina( ) Cirugía( ) Gineco-Obst.( ) Lab.( ) Dx.Imag.( ) Otro( )\nCondición del paciente al inicio del traslado: Estable( ) Mal estado( )\n\nResponsable de la RF: Nombre ___ Colegiatura ___ Profesión ___ (Firma y sello)\nResponsable del establecimiento: Nombre ___ Colegiatura ___ (Firma y sello)\nPersonal que acompaña: Nombre ___ Profesión ___ (Firma y sello)\nPersonal que recibe: Nombre ___ Profesión ___ Fecha ___ Hora ___ (Firma y sello)\n\nCondición del paciente a la llegada al establecimiento destino: Estable( ) Mal estado( ) Fallecida( )",
+      "exampleFilled": "Diagnóstico: 1) Preeclampsia severa (CIE-10: O14.1) D. UPS destino: Emergencia. Especialidad de destino: Gineco-Obstetricia. Condición al inicio del traslado: Mal estado. Coordinación previa: se coordinó con el Dr. ___ del hospital de referencia, quien confirmó disponibilidad de cama en emergencia para las 14:30 horas.",
       "commonErrors": [
-        "No consignar la hora exacta de emisión (crítico en casos de emergencia)",
-        "Omitir las medidas ya administradas antes de referir, lo que duplica o retrasa la atención en destino",
-        "Referir sin coordinación previa con el establecimiento receptor",
-        "Letra ilegible o abreviaturas no estandarizadas que dificultan la lectura del equipo receptor"
+        "Dejar en blanco la 'Coordinación de la referencia' (fecha/hora en que será atendido y con quién se coordinó), que es justamente lo que garantiza que el paciente sea recibido y no quede esperando sin ser esperado",
+        "No consignar el código CIE-10 del diagnóstico ni marcar las columnas D/P/R (Definitivo/Presuntivo/Repetido)",
+        "Omitir la condición del paciente al inicio del traslado, dato clave para contrastar con su condición a la llegada",
+        "No completar los datos del 'personal que acompaña' y 'personal que recibe', que documentan la cadena de responsabilidad durante el traslado"
       ],
       "relatedNormCodes": [
-        "NTS 249-MINSA/DGAIN-2026"
+        "Norma Técnica del Sistema de Referencia y Contrarreferencia de los Establecimientos del MINSA — Anexo N° 02.1"
       ],
       "practiceScenario": "Atiendes en tu establecimiento I-2 a un varón de 45 años con dolor torácico opresivo de 30 minutos, sudoración profusa y antecedente de hipertensión no controlada. Tu establecimiento no cuenta con capacidad resolutiva para manejo de un posible síndrome coronario agudo. Redacta la Hoja de Referencia para trasladarlo al hospital de tu red."
     },
     {
       "id": "ref-002",
       "category": "Referencia y contrarreferencia",
-      "title": "Hoja de Contrarreferencia",
-      "purpose": "Documento de retorno del establecimiento de mayor capacidad hacia el de origen, informando el resultado de la atención y las indicaciones para continuar el seguimiento.",
+      "title": "Hoja de Contrarreferencia Institucional (Anexo N° 02.2)",
+      "purpose": "Formato oficial del MINSA para el retorno de información desde el establecimiento de mayor capacidad resolutiva hacia el establecimiento de origen, informando el resultado de la atención y las indicaciones de seguimiento.",
       "requiredFields": [
-        "Datos de filiación del paciente",
-        "Establecimiento que contrarrefiere y establecimiento de origen",
-        "Diagnóstico final o condición de egreso",
-        "Resumen de la atención recibida (procedimientos, tratamiento)",
-        "Condición de contrarreferencia (curado, mejorado, en tratamiento)",
-        "Indicaciones para el seguimiento en el establecimiento de origen",
-        "Firma y sello del profesional responsable"
+        "1. Datos generales: fecha, hora, asegurado (SI/NO), tipo, plan de atención SIS, establecimiento que contrarrefiere y establecimiento destino",
+        "2. Identificación del usuario: código de afiliación SIS, N° historia clínica, apellidos y nombres, sexo, edad, dirección, distrito, departamento",
+        "3. Resumen de la historia clínica: fecha de ingreso y egreso, diagnóstico de ingreso, diagnóstico de egreso (con CIE-10 y columnas D/P/R), tratamiento y/o procedimientos realizados",
+        "4. Datos de la contrarreferencia: origen de la referencia (comunidad / establecimiento de salud / autorreferencia), calificación preliminar (justificada / no justificada), UPS que ordenó la contrarreferencia, especialidad que la ordena",
+        "Recomendaciones e indicaciones para el seguimiento",
+        "Condición del usuario para la contrarreferencia (curado, mejorado, atendido por apoyo al diagnóstico, deserción, retiro voluntario, fallecido)",
+        "Nombre, N° de colegiatura, firma y sello del responsable de la contrarreferencia"
       ],
-      "templateText": "HOJA DE CONTRARREFERENCIA\nEstablecimiento que contrarrefiere: ___________\nEstablecimiento de origen: ___________\nPaciente: ___________ DNI: ___________\nDiagnóstico final: ___________\nResumen de la atención: ___________\nCondición de contrarreferencia: ( ) Curado ( ) Mejorado ( ) En tratamiento\nIndicaciones para seguimiento: ___________\nPróxima cita sugerida: ___________\nProfesional responsable: ___________ (Firma y sello)\nFecha: ___________",
-      "exampleFilled": "Diagnóstico final: Neumonía adquirida en la comunidad, resuelta tras 7 días de tratamiento antibiótico endovenoso. Condición de contrarreferencia: Mejorado. Indicaciones: continuar amoxicilina vía oral por 3 días adicionales, control clínico en 1 semana en el establecimiento de origen.",
+      "templateText": "HOJA DE CONTRARREFERENCIA — ANEXO N° 02.2\nN°: ______\n\n1. DATOS GENERALES\nFecha: __/__/__ Hora: ____ Asegurado: SI( ) NO( ) Tipo: ______\nPlan de atención SIS: A( ) B( ) C( ) D( ) E( )\nEstablecimiento que contrarrefiere: ______________\nEstablecimiento destino de la contrarreferencia: ______________\n\n2. IDENTIFICACIÓN DEL USUARIO\nCódigo de afiliación SIS: ______  N° Historia Clínica: ______\nApellido paterno: ______ Apellido materno: ______ Nombres: ______\nSexo: F( ) M( )  Edad: ___años ___meses ___días\nDirección: ______ Distrito: ______ Departamento: ______\n\n3. RESUMEN DE LA HISTORIA CLÍNICA\nFecha de ingreso: ___ Fecha de egreso: ___\nDiagnóstico de ingreso: ______________\nDiagnóstico de egreso: ______ (CIE-10: ___) D( ) P( ) R( )\nTratamiento y/o procedimientos realizados: ______________\nAdjuntar informes y reportes de procedimientos: ______________\n\n4. DATOS DE LA CONTRARREFERENCIA\nOrigen de la referencia: De la comunidad( ) De un establecimiento de salud( ) Autorreferencia( )\nCalificación preliminar de la referencia: Justificada( ) No justificada( )\nUPS que ordenó la contrarreferencia: Consulta Ext.( ) Emergencia( ) Apoyo al Dx.( ) Hospitalización( )\nEspecialidad que ordena la contrarreferencia: Pediatría( ) Medicina( ) Cirugía( ) Gineco-Obst.( ) Lab.( ) Dx.Imag.( ) Otros( )\n\nRecomendaciones e indicaciones para el seguimiento: ______________\n\nCondición del usuario para la contrarreferencia:\nCurado( ) Mejorado( ) Atendido x Apoyo al Dx.( ) Deserción( ) Retiro voluntario( ) Fallecido( )\n\nResponsable de la contrarreferencia: Nombre ___ N° de colegiatura ___ (Firma y sello)",
+      "exampleFilled": "Diagnóstico de ingreso: Neumonía adquirida en la comunidad. Diagnóstico de egreso: Neumonía resuelta (CIE-10: J18.9) D. Condición del usuario para la contrarreferencia: Mejorado. Recomendaciones: continuar amoxicilina vía oral por 3 días adicionales, control clínico en 1 semana en el establecimiento de origen.",
       "commonErrors": [
-        "No especificar la condición de egreso (curado/mejorado/en tratamiento), dejando ambigüedad sobre qué sigue",
-        "Omitir la fecha de próxima cita, perdiendo el seguimiento del caso",
-        "No indicar tratamiento pendiente que el establecimiento de origen debe continuar"
+        "No marcar la 'Calificación preliminar de la referencia' (justificada/no justificada), dato que retroalimenta la pertinencia de las referencias del establecimiento de origen",
+        "Dejar en blanco la 'Condición del usuario para la contrarreferencia', dejando ambigüedad sobre si el caso fue resuelto, continúa en tratamiento o hubo deserción",
+        "No adjuntar los informes y reportes de procedimientos realizados durante la atención",
+        "Omitir las recomendaciones de seguimiento, perdiendo la continuidad del cuidado en el establecimiento de origen"
       ],
-      "relatedNormCodes": [],
+      "relatedNormCodes": [
+        "Norma Técnica del Sistema de Referencia y Contrarreferencia de los Establecimientos del MINSA — Anexo N° 02.2"
+      ],
       "practiceScenario": "Un paciente que referiste por neumonía grave completó su tratamiento hospitalario y debe continuar el manejo en tu establecimiento de origen. Redacta la Hoja de Contrarreferencia que el hospital debería enviarte, a modo de práctica de lectura e interpretación del documento."
     },
     {
