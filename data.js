@@ -12553,6 +12553,80 @@ window.SERUMS_DATA = {
       ],
       "relatedNormCodes": [],
       "practiceScenario": "Necesitas ausentarte 3 días de tu plaza SERUMS para asistir a una capacitación de la DIRESA sobre manejo de emergencias obstétricas. Redacta la solicitud de permiso correspondiente."
+    },
+    {
+      "id": "adi-001",
+      "category": "Salud mental y adicciones",
+      "title": "Ficha de Tamizaje Breve de Consumo de Sustancias",
+      "purpose": "Instrumento de tamizaje aplicado en el primer nivel de atención para identificar el nivel de riesgo asociado al consumo de alcohol, tabaco y otras sustancias, orientando la conducta a seguir (intervención breve o derivación).",
+      "requiredFields": [
+        "Datos de filiación del usuario",
+        "Sustancias consultadas (alcohol, tabaco, cannabis, cocaína/PBC, otras)",
+        "Frecuencia de consumo en los últimos 3 meses por sustancia",
+        "Puntaje de riesgo obtenido por sustancia (bajo, moderado, alto)",
+        "Signos de dependencia o consumo problemático asociado",
+        "Conducta indicada según nivel de riesgo",
+        "Firma del profesional que aplica el tamizaje"
+      ],
+      "templateText": "FICHA DE TAMIZAJE BREVE DE CONSUMO DE SUSTANCIAS\nUsuario: ___________ Edad: ___________\nEstablecimiento: ___________\n\nSustancia | Frecuencia últimos 3 meses | Nivel de riesgo\nAlcohol: ___________ | ___________\nTabaco: ___________ | ___________\nCannabis: ___________ | ___________\nCocaína/PBC: ___________ | ___________\nOtras: ___________ | ___________\n\nSignos de consumo problemático/dependencia: ___________\nConducta indicada: ( ) Sin intervención  ( ) Intervención breve  ( ) Derivación a CSMC\nProfesional responsable: ___________ (Firma)\nFecha: ___________",
+      "exampleFilled": "Alcohol: consumo de riesgo moderado (varias veces por semana, sin signos de dependencia) → se indica intervención breve en el establecimiento. Cocaína/PBC: consumo diario con signos de dependencia (tolerancia, síndrome de abstinencia referido) → riesgo alto, se indica derivación a Centro de Salud Mental Comunitario (CSMC).",
+      "commonErrors": [
+        "Aplicar el tamizaje solo cuando el usuario 'se ve' consumidor, en lugar de integrarlo como práctica sistemática en la consulta",
+        "No diferenciar consumo de riesgo (manejable en el primer nivel) de consumo con signos de dependencia (que amerita derivación)",
+        "Omitir el registro de la conducta indicada, dejando el caso sin ruta clara de seguimiento"
+      ],
+      "relatedNormCodes": [],
+      "practiceScenario": "Un varón de 29 años acude por otro motivo de consulta. Durante el tamizaje refiere consumo diario de pasta básica de cocaína desde hace 8 meses, con necesidad de aumentar la cantidad para sentir el mismo efecto (tolerancia) y malestar intenso cuando no consume (síndrome de abstinencia). Redacta la ficha de tamizaje y define la conducta a seguir."
+    },
+    {
+      "id": "adi-002",
+      "category": "Salud mental y adicciones",
+      "title": "Flujograma de Atención y Derivación en Consumo de Sustancias",
+      "purpose": "Ruta de decisión clínica desde la detección de un caso de consumo de sustancias en el establecimiento de primer nivel, hasta su atención, intervención breve o derivación al Centro de Salud Mental Comunitario (CSMC), asegurando la continuidad del cuidado.",
+      "isFlow": true,
+      "flowSteps": [
+        {
+          "title": "1. Detección",
+          "detail": "El caso llega por cualquier motivo de consulta (control, morbilidad, visita domiciliaria). Se aplica tamizaje breve de consumo de sustancias como práctica sistemática, no solo ante sospecha evidente."
+        },
+        {
+          "title": "2. Clasificación de riesgo",
+          "detail": "Según el resultado del tamizaje, se clasifica el consumo como: sin riesgo, riesgo bajo-moderado, o riesgo alto/signos de dependencia."
+        },
+        {
+          "title": "3. Intervención breve (riesgo bajo-moderado)",
+          "detail": "El propio establecimiento de primer nivel brinda consejería motivacional breve, retroalimentación personalizada y seguimiento programado, sin necesidad de derivar."
+        },
+        {
+          "title": "4. Derivación a CSMC (riesgo alto o dependencia)",
+          "detail": "Se elabora la Hoja de Referencia especificando el motivo, los hallazgos del tamizaje y la sospecha de dependencia, derivando al Centro de Salud Mental Comunitario más cercano."
+        },
+        {
+          "title": "5. Coordinación previa",
+          "detail": "Siempre que sea posible, se coordina telefónicamente con el CSMC antes de la derivación, para asegurar la continuidad y evitar que el usuario abandone el proceso entre un establecimiento y otro."
+        },
+        {
+          "title": "6. Contrarreferencia y seguimiento",
+          "detail": "El CSMC retorna información sobre el plan de tratamiento al establecimiento de origen, quien mantiene el acompañamiento del caso en su comunidad (visitas domiciliarias, apoyo familiar)."
+        }
+      ],
+      "requiredFields": [
+        "Motivo de consulta inicial que dio pie a la detección",
+        "Resultado de la clasificación de riesgo",
+        "Intervención breve aplicada (si corresponde) o motivo de derivación",
+        "Establecimiento y CSMC de destino",
+        "Constancia de coordinación previa a la derivación",
+        "Plan de seguimiento en el establecimiento de origen"
+      ],
+      "templateText": "Ver flujograma de pasos. Para la derivación formal, utiliza la Hoja de Referencia (documento 'ref-001') especificando: hallazgos del tamizaje, nivel de riesgo, signos de dependencia identificados y coordinación previa realizada con el CSMC.",
+      "exampleFilled": "Caso detectado en control CRED de un familiar (madre). Tamizaje aplicado a la madre por antecedente referido de consumo: riesgo alto de alcohol con signos de dependencia. Se coordina telefónicamente con el CSMC de la red y se deriva con Hoja de Referencia. El establecimiento de origen mantiene seguimiento familiar mediante visita domiciliaria mensual.",
+      "commonErrors": [
+        "Derivar sin coordinación previa, lo que incrementa el riesgo de abandono del caso entre establecimientos",
+        "Aplicar la derivación como única respuesta, incluso en casos de riesgo bajo-moderado que sí pueden manejarse con intervención breve en el primer nivel",
+        "No mantener seguimiento desde el establecimiento de origen tras la derivación, perdiendo la continuidad del cuidado"
+      ],
+      "relatedNormCodes": [],
+      "practiceScenario": "Durante una visita domiciliaria por otro motivo, identificas a un adolescente de 16 años con consumo frecuente de marihuana y alcohol los fines de semana, sin signos claros de dependencia aún. Describe qué pasos del flujograma aplicarías y por qué, antes de decidir si corresponde derivación inmediata."
     }
   ]
 };
