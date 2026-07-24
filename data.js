@@ -13230,6 +13230,255 @@ window.SERUMS_DATA = {
           ]
         }
       ]
+    },
+    {
+      "id": "ts-008",
+      "title": "Riesgo suicida en un adolescente durante la consulta",
+      "context": "Atiendes a una adolescente de 15 años que acude acompañada por su madre y su profesor, tras presentar cortes profundos en la muñeca con sangrado considerable.",
+      "skillsEvaluated": [
+        "Evaluación de riesgo suicida",
+        "Manejo de crisis",
+        "Consentimiento y confidencialidad en menores"
+      ],
+      "startStep": "rs1",
+      "steps": [
+        {
+          "id": "rs1",
+          "title": "Primer contacto",
+          "prompt": "Tras estabilizar la herida en tópico, le preguntas cómo se hizo las lesiones. Ella responde: 'quiero morirme, mi vida no me interesa'. ¿Cuál es tu prioridad inmediata?",
+          "options": [
+            {
+              "text": "Continuar solo con la curación de la herida y programar una cita de seguimiento en psicología para otro día",
+              "correct": false,
+              "feedback": "Una expresión directa de ideación suicida activa exige evaluación de riesgo inmediata, no diferir la atención de salud mental a otro día.",
+              "next": "rs1b"
+            },
+            {
+              "text": "Realizar una evaluación breve del riesgo suicida en ese momento (ideación, plan, intento previo, factores protectores) y determinar si requiere referencia urgente",
+              "correct": true,
+              "feedback": "Correcta: ante una expresión directa de ideación suicida con autolesión reciente, la evaluación de riesgo inmediata es prioritaria, ya que determina el nivel de urgencia de la respuesta.",
+              "next": "rs2"
+            }
+          ]
+        },
+        {
+          "id": "rs1b",
+          "title": "Reconsiderando la urgencia",
+          "prompt": "Te das cuenta de que diferir la atención de salud mental no es adecuado ante una expresión directa de ideación suicida con autolesión reciente. ¿Qué haces ahora?",
+          "options": [
+            {
+              "text": "Realizar de inmediato una evaluación breve del riesgo suicida (ideación, plan, intento previo, factores protectores)",
+              "correct": true,
+              "feedback": "Correcta: aún es momento de corregir el rumbo y realizar la evaluación de riesgo que la situación exige de forma inmediata.",
+              "next": "rs2"
+            }
+          ]
+        },
+        {
+          "id": "rs2",
+          "title": "Determinando la referencia",
+          "prompt": "La evaluación identifica ideación suicida activa con un intento reciente (los cortes) y escaso soporte familiar percibido por la adolescente. Determinas que el caso requiere referencia urgente. ¿Quién debe firmar el consentimiento informado para esta referencia?",
+          "options": [
+            {
+              "text": "La madre, como representante legal de la menor de edad",
+              "correct": true,
+              "feedback": "Correcta: al ser menor de edad, corresponde a su madre (representante legal presente) firmar el consentimiento informado para la referencia, no la propia adolescente ni el profesor.",
+              "next": "rs3"
+            },
+            {
+              "text": "La propia adolescente, ya que es su cuerpo y su decisión",
+              "correct": false,
+              "feedback": "Al tratarse de una menor de edad, el consentimiento informado para procedimientos y referencias formales debe ser firmado por su representante legal (madre, padre o tutor), sin perjuicio de explicarle también a ella lo que ocurrirá.",
+              "next": "end"
+            }
+          ]
+        },
+        {
+          "id": "rs3",
+          "title": "Comunicación con la familia",
+          "prompt": "Debes informar a la madre sobre la gravedad de la situación y la necesidad de referencia urgente. ¿Cómo abordas esta conversación?",
+          "options": [
+            {
+              "text": "Le informas de forma clara y directa sobre el riesgo identificado, sin minimizarlo ni alarmarla desproporcionadamente, y le explicas los siguientes pasos concretos",
+              "correct": true,
+              "feedback": "Correcta: la comunicación con la familia en una crisis de riesgo suicida debe ser clara y honesta sobre la gravedad real, evitando tanto minimizar el riesgo como generar pánico innecesario, priorizando la acción concreta.",
+              "next": "end"
+            },
+            {
+              "text": "Minimizas la situación frente a la madre para no alarmarla, diciendo que 'son cosas de la edad'",
+              "correct": false,
+              "feedback": "Minimizar un riesgo suicida real ante la familia es peligroso: impide que comprendan la urgencia y puede retrasar la búsqueda de ayuda especializada oportuna.",
+              "next": "end"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ts-009",
+      "title": "Queja formal de un usuario por maltrato",
+      "context": "Un usuario se acerca a tu establecimiento para presentar un reclamo: refiere que un trabajador no respetó el orden de llegada y lo trató de forma descortés durante su atención.",
+      "skillsEvaluated": [
+        "Manejo de quejas y reclamos",
+        "Comunicación institucional",
+        "Mejora continua de la calidad"
+      ],
+      "startStep": "q1",
+      "steps": [
+        {
+          "id": "q1",
+          "title": "Recepción del reclamo",
+          "prompt": "El usuario está visiblemente molesto y exige hablar con 'el responsable'. ¿Cuál es tu primera acción como encargado de turno?",
+          "options": [
+            {
+              "text": "Le dices que ese no es tu problema y que hable directamente con la persona que lo atendió",
+              "correct": false,
+              "feedback": "Derivar la responsabilidad sin escuchar el reclamo desconoce el procedimiento institucional de quejas y probablemente escale el malestar del usuario.",
+              "next": "q1b"
+            },
+            {
+              "text": "Lo escuchas con atención, sin interrumpir, y le explicas el procedimiento formal para registrar su queja",
+              "correct": true,
+              "feedback": "Correcta: escuchar activamente y encauzar el reclamo por el procedimiento formal (queja) valida la experiencia del usuario y asegura que quede documentado para su seguimiento.",
+              "next": "q2"
+            }
+          ]
+        },
+        {
+          "id": "q1b",
+          "title": "Reencauzando la atención",
+          "prompt": "Notas que tu primera respuesta aumentó el malestar del usuario. ¿Qué haces ahora?",
+          "options": [
+            {
+              "text": "Te disculpas por la demora en atenderlo, lo escuchas con atención y le explicas el procedimiento formal de queja",
+              "correct": true,
+              "feedback": "Correcta: aún se puede reencauzar la situación con una escucha activa y encauzando el reclamo por el procedimiento institucional correspondiente.",
+              "next": "q2"
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "title": "Registro del procedimiento",
+          "prompt": "¿Qué diferencia debes explicarle al usuario entre una 'queja' y otros procedimientos como la 'sugerencia' o la 'consulta'?",
+          "options": [
+            {
+              "text": "Que la queja es específicamente el procedimiento para reclamar por un maltrato o mala atención recibida, distinto de una sugerencia de mejora o una simple consulta de información",
+              "correct": true,
+              "feedback": "Correcta: diferenciar claramente el tipo de procedimiento (queja por maltrato, no sugerencia ni consulta) asegura que el reclamo se canalice y trate con la seriedad correspondiente.",
+              "next": "q3"
+            },
+            {
+              "text": "Que da igual el nombre, todos los procedimientos se manejan de la misma forma",
+              "correct": false,
+              "feedback": "Cada procedimiento (queja, sugerencia, consulta) tiene un manejo y seguimiento institucional distinto; tratarlos como equivalentes puede diluir la seriedad de un reclamo por maltrato.",
+              "next": "end"
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "title": "Cierre y seguimiento",
+          "prompt": "El usuario registra su queja formalmente. ¿Qué haces con el trabajador involucrado y con el proceso interno?",
+          "options": [
+            {
+              "text": "Conversas con el trabajador para conocer su versión, documentas el hecho y programas una retroalimentación orientada a la mejora del trato al usuario, sin exponerlo públicamente",
+              "correct": true,
+              "feedback": "Correcta: el manejo interno de una queja debe incluir escuchar ambas versiones y una retroalimentación constructiva orientada a la mejora, preservando la dignidad del trabajador mientras se atiende el problema real.",
+              "next": "end"
+            },
+            {
+              "text": "Ignoras el tema con el trabajador para evitar conflictos internos",
+              "correct": false,
+              "feedback": "No abordar la queja con el trabajador involucrado deja sin resolver la causa del problema y puede repetirse con otros usuarios, además de incumplir el procedimiento de gestión de la calidad.",
+              "next": "end"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ts-010",
+      "title": "Escuela saludable: coordinación con el sector educación",
+      "context": "Identificas un alto índice de malnutrición y anemia en los niños de la institución educativa cercana a tu establecimiento. Debes coordinar una intervención con el director y los docentes del colegio.",
+      "skillsEvaluated": [
+        "Coordinación intersectorial",
+        "Promoción de la salud",
+        "Trabajo con determinantes sociales"
+      ],
+      "startStep": "es1",
+      "steps": [
+        {
+          "id": "es1",
+          "title": "Primer acercamiento",
+          "prompt": "Antes de proponer cualquier intervención, ¿qué haces primero al advertir esta situación al director del colegio?",
+          "options": [
+            {
+              "text": "Le exiges que implemente cambios inmediatos en el kiosco escolar bajo amenaza de reportarlo a la UGEL",
+              "correct": false,
+              "feedback": "Un enfoque impositivo desde el primer contacto deteriora la relación intersectorial necesaria para sostener cualquier intervención de salud escolar en el tiempo.",
+              "next": "es1b"
+            },
+            {
+              "text": "Presentas los hallazgos (índice de malnutrición y anemia) de forma objetiva, y propones trabajar juntos una estrategia conjunta, no impuesta unilateralmente",
+              "correct": true,
+              "feedback": "Correcta: presentar evidencia objetiva y proponer una construcción conjunta con el sector educación es la base de una coordinación intersectorial sostenible.",
+              "next": "es2"
+            }
+          ]
+        },
+        {
+          "id": "es1b",
+          "title": "Reconstruyendo la relación",
+          "prompt": "El director se muestra a la defensiva tras tu primer acercamiento. ¿Qué haces para reencauzar la coordinación?",
+          "options": [
+            {
+              "text": "Presentas los hallazgos de forma objetiva y propones construir juntos una estrategia, reconociendo que la solución requiere del compromiso de ambos sectores",
+              "correct": true,
+              "feedback": "Correcta: aún es posible reconstruir la relación de coordinación mostrando los datos objetivos y una disposición genuina a trabajar en conjunto, en lugar de imponer.",
+              "next": "es2"
+            }
+          ]
+        },
+        {
+          "id": "es2",
+          "title": "Definiendo la estrategia",
+          "prompt": "El director está dispuesto a colaborar. ¿Qué acción es la más pertinente para el nivel local de esta intervención?",
+          "options": [
+            {
+              "text": "Promover kioscos y comedores escolares saludables, junto con tamizaje de anemia y consejería nutricional coordinada con los docentes",
+              "correct": true,
+              "feedback": "Correcta: promover kioscos/comedores saludables junto con tamizaje y consejería es la acción de nivel local que aborda directamente los determinantes identificados, en articulación con el sector educación.",
+              "next": "es3"
+            },
+            {
+              "text": "Solicitar directamente al Ministerio de Educación un cambio de currículo escolar nacional",
+              "correct": false,
+              "feedback": "Un cambio curricular nacional excede completamente el nivel de gestión local del serumista; la acción debe ser proporcional y viable en el ámbito de tu jurisdicción.",
+              "next": "end"
+            }
+          ]
+        },
+        {
+          "id": "es3",
+          "title": "Sostenibilidad de la intervención",
+          "prompt": "La intervención inicia con buena acogida. ¿Qué haces para que no se diluya con el tiempo?",
+          "options": [
+            {
+              "text": "Estableces un cronograma conjunto con fechas de seguimiento y designas puntos focales tanto en el colegio como en el establecimiento de salud",
+              "correct": true,
+              "feedback": "Correcta: un cronograma conjunto con responsables definidos en ambos sectores es lo que sostiene una intervención intersectorial en el tiempo, más allá del entusiasmo inicial.",
+              "next": "end"
+            },
+            {
+              "text": "Confías en que el compromiso verbal inicial será suficiente para que la intervención continúe por sí sola",
+              "correct": false,
+              "feedback": "Sin un cronograma y responsables definidos, las intervenciones intersectoriales tienden a diluirse una vez pasa el entusiasmo inicial de la primera reunión.",
+              "next": "end"
+            }
+          ]
+        }
+      ]
     }
   ]
 };
