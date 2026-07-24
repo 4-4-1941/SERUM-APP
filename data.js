@@ -12630,5 +12630,273 @@ window.SERUMS_DATA = {
       "relatedNormCodes": [],
       "practiceScenario": "Durante una visita domiciliaria por otro motivo, identificas a un adolescente de 16 años con consumo frecuente de marihuana y alcohol los fines de semana, sin signos claros de dependencia aún. Describe qué pasos del flujograma aplicarías y por qué, antes de decidir si corresponde derivación inmediata."
     }
+  ],
+  "trainingScenarios": [
+    {
+      "id": "ts-001",
+      "title": "Visita domiciliaria: paciente con TB en abandono de tratamiento",
+      "context": "Eres el serumista responsable del programa de TB en tu establecimiento. El sistema SIGTB señala que un paciente con diagnóstico de TB pulmonar sensible lleva 12 días sin recoger su tratamiento. Debes realizar una visita domiciliaria de recuperación de caso.",
+      "skillsEvaluated": [
+        "Comunicación y abordaje comunitario",
+        "Adherencia al tratamiento",
+        "Toma de decisiones bajo información incompleta"
+      ],
+      "startStep": "s1",
+      "steps": [
+        {
+          "id": "s1",
+          "title": "Llegada al domicilio",
+          "prompt": "Llegas a la vivienda del paciente. Una vecina te dice que él está adentro pero 'no quiere ver a nadie del centro de salud'. ¿Qué haces primero?",
+          "options": [
+            {
+              "text": "Ingresas directamente porque es una visita de recuperación de caso prioritaria",
+              "correct": false,
+              "feedback": "Ingresar sin invitación vulnera la autonomía del paciente y puede generar rechazo total al programa. La recuperación de caso no es una intervención forzada.",
+              "next": "s1b"
+            },
+            {
+              "text": "Te acercas, te identificas, explicas el motivo de la visita sin exponer su diagnóstico frente a la vecina, y solicitas hablar con él en privado",
+              "correct": true,
+              "feedback": "Correcta: proteges la confidencialidad del diagnóstico frente a terceros y generas una aproximación respetuosa que facilita la apertura del paciente.",
+              "next": "s2"
+            },
+            {
+              "text": "Le pides a la vecina que le avise que venga al establecimiento cuando pueda",
+              "correct": false,
+              "feedback": "Delegar el contacto pierde la oportunidad de la visita y no aborda la razón real del abandono. El objetivo de la visita domiciliaria es precisamente el contacto directo.",
+              "next": "s1b"
+            },
+            {
+              "text": "Te retiras y reportas el caso como 'no ubicable'",
+              "correct": false,
+              "feedback": "El paciente sí fue ubicado (está en el domicilio); reportarlo como no ubicable es un registro incorrecto que además cierra la posibilidad de recuperación del caso.",
+              "next": "s1b"
+            }
+          ]
+        },
+        {
+          "id": "s1b",
+          "title": "Segunda oportunidad",
+          "prompt": "Tu primer acercamiento no fue el más adecuado y notas que el paciente se muestra evasivo. Aún estás en la puerta de la vivienda. ¿Qué haces ahora?",
+          "options": [
+            {
+              "text": "Te identificas con calma, explicas el motivo de la visita en privado y solicitas unos minutos de su tiempo, sin presionar",
+              "correct": true,
+              "feedback": "Correcta: reencauzar con un abordaje respetuoso, en privado y sin presión, es clave para recuperar la confianza incluso después de un primer acercamiento poco favorable.",
+              "next": "s2"
+            },
+            {
+              "text": "Insistes en que es obligatorio continuar el tratamiento y que debe salir a hablar contigo",
+              "correct": false,
+              "feedback": "La presión y el tono impositivo suelen aumentar el rechazo y el estigma asociado a la enfermedad, en lugar de facilitar la adherencia.",
+              "next": "s2"
+            }
+          ]
+        },
+        {
+          "id": "s2",
+          "title": "Motivo del abandono",
+          "prompt": "El paciente acepta conversar. Refiere que dejó el tratamiento porque los efectos secundarios (náuseas, malestar) le impiden trabajar, y su familia depende de su jornal diario. ¿Cuál es tu siguiente paso?",
+          "options": [
+            {
+              "text": "Indicarle que debe priorizar su salud sobre el trabajo y retomar el tratamiento de inmediato",
+              "correct": false,
+              "feedback": "Aunque la salud es prioritaria, ignorar la barrera económica real del paciente no resuelve el problema de fondo y probablemente perpetúe el abandono.",
+              "next": "s3"
+            },
+            {
+              "text": "Explorar con él estrategias para manejar los efectos secundarios, coordinar con el médico tratante posibles ajustes, y evaluar apoyo social disponible (redes de soporte, programas sociales)",
+              "correct": true,
+              "feedback": "Correcta: abordar tanto la barrera clínica (efectos adversos manejables) como la social (impacto económico) es el enfoque integral que sostiene la adherencia real, no solo la indicación verbal.",
+              "next": "s3"
+            },
+            {
+              "text": "Registrar el abandono como 'decisión del paciente' y cerrar el caso",
+              "correct": false,
+              "feedback": "Cerrar el caso sin intervención es abandonar la responsabilidad del establecimiento en la recuperación de casos de TB, con riesgo de resistencia y transmisión comunitaria.",
+              "next": "s3"
+            }
+          ]
+        },
+        {
+          "id": "s3",
+          "title": "Cierre de la visita",
+          "prompt": "El paciente acepta retomar el tratamiento. ¿Qué haces antes de retirarte?",
+          "options": [
+            {
+              "text": "Coordinas una cita de reevaluación médica cercana, dejas indicaciones claras y registras la visita con el plan acordado",
+              "correct": true,
+              "feedback": "Correcta: formalizar el compromiso con una cita concreta y un registro claro asegura el seguimiento y evita que la visita quede solo en una conversación sin continuidad.",
+              "next": "end"
+            },
+            {
+              "text": "Le dices que vuelva cuando pueda, sin fecha específica",
+              "correct": false,
+              "feedback": "Sin una fecha concreta, el riesgo de un nuevo abandono es alto; la falta de estructura debilita el compromiso logrado en la visita.",
+              "next": "end"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ts-002",
+      "title": "Campaña de vacunación: coordinación e imprevisto comunitario",
+      "context": "Organizas una campaña de vacunación casa por casa en tu jurisdicción, coordinada con el agente comunitario de salud. A media jornada surge un evento inesperado que debes resolver sin detener la campaña.",
+      "skillsEvaluated": [
+        "Coordinación intersectorial",
+        "Gestión del tiempo",
+        "Priorización ante imprevistos"
+      ],
+      "startStep": "c1",
+      "steps": [
+        {
+          "id": "c1",
+          "title": "Antes de iniciar",
+          "prompt": "Antes de salir a campo, ¿qué es lo primero que debes verificar con el agente comunitario?",
+          "options": [
+            {
+              "text": "El listado de viviendas con niños pendientes de vacunar y la ruta más eficiente según el conocimiento local del agente",
+              "correct": true,
+              "feedback": "Correcta: el agente comunitario conoce el territorio y a las familias; usar ese conocimiento optimiza tiempo y cobertura real, no solo teórica.",
+              "next": "c2"
+            },
+            {
+              "text": "Solo la cantidad de dosis disponibles en el termo",
+              "correct": false,
+              "feedback": "Es necesario, pero no suficiente: sin la ruta y el listado de pendientes, la campaña pierde eficiencia y puede dejar viviendas sin visitar.",
+              "next": "c2"
+            }
+          ]
+        },
+        {
+          "id": "c2",
+          "title": "Imprevisto en campo",
+          "prompt": "A media jornada, una madre te dice que su hijo de 2 meses tiene fiebre de 38.5°C. Estaba programado para recibir su vacuna pentavalente hoy. ¿Qué decides?",
+          "options": [
+            {
+              "text": "Aplicar la vacuna de todas formas para no atrasar la meta de cobertura del día",
+              "correct": false,
+              "feedback": "La fiebre activa es una contraindicación temporal para la vacunación; priorizar la meta numérica sobre la seguridad del niño es un error de criterio clínico.",
+              "next": "c3"
+            },
+            {
+              "text": "Diferir la vacunación, orientar a la madre sobre manejo de la fiebre y signos de alarma, y reprogramar la cita en cuanto el niño esté afebril",
+              "correct": true,
+              "feedback": "Correcta: la fiebre es contraindicación temporal; se diferiere la dosis sin perder el caso, reprogramando oportunamente y brindando orientación inmediata a la madre.",
+              "next": "c3"
+            },
+            {
+              "text": "Derivar de inmediato al niño al hospital sin evaluarlo tú mismo primero",
+              "correct": false,
+              "feedback": "Antes de derivar corresponde una evaluación básica en el momento (funciones vitales, estado general) para determinar si realmente requiere derivación urgente o solo diferir la vacuna con seguimiento.",
+              "next": "c3"
+            }
+          ]
+        },
+        {
+          "id": "c3",
+          "title": "Gestión del tiempo restante",
+          "prompt": "El imprevisto te tomó 20 minutos. Aún quedan 8 viviendas por visitar y se acerca la hora programada de cierre. ¿Qué haces?",
+          "options": [
+            {
+              "text": "Aceleras la atención sin verificar carnés de vacunación para ganar tiempo",
+              "correct": false,
+              "feedback": "Omitir la verificación del carné puede generar dosis duplicadas o esquemas incompletos no detectados, un riesgo mayor que el ahorro de unos minutos.",
+              "next": "end"
+            },
+            {
+              "text": "Coordinas con el agente comunitario cuáles viviendas priorizar según el riesgo (niños con esquema más incompleto) y programas una visita de cierre breve al día siguiente para el resto",
+              "correct": true,
+              "feedback": "Correcta: priorizar por riesgo real y reprogramar de forma planificada el resto, en lugar de sacrificar calidad por velocidad, es la gestión de tiempo adecuada en campo.",
+              "next": "end"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ts-003",
+      "title": "Emergencia obstétrica en el establecimiento",
+      "context": "Te encuentras solo en el turno de un establecimiento I-3 cuando ingresa una gestante de 32 semanas con sangrado vaginal abundante y signos de inestabilidad.",
+      "skillsEvaluated": [
+        "Priorización clínica",
+        "Trabajo bajo presión",
+        "Uso de protocolo de referencia"
+      ],
+      "startStep": "e1",
+      "steps": [
+        {
+          "id": "e1",
+          "title": "Primer contacto",
+          "prompt": "La gestante llega pálida, taquicárdica, con sangrado activo. ¿Cuál es tu primera acción?",
+          "options": [
+            {
+              "text": "Realizar tacto vaginal de inmediato para determinar el origen del sangrado",
+              "correct": false,
+              "feedback": "Ante sospecha de placenta previa (sangrado indoloro en el tercer trimestre), el tacto vaginal está contraindicado hasta descartarla, ya que puede desencadenar hemorragia masiva.",
+              "next": "e1b"
+            },
+            {
+              "text": "Evaluar funciones vitales, canalizar una vía endovenosa segura y posicionar a la paciente en decúbito lateral izquierdo mientras coordinas la referencia",
+              "correct": true,
+              "feedback": "Correcta: estabilizar primero (funciones vitales, vía segura, posición) y en paralelo activar la coordinación de referencia es el manejo prioritario ante una emergencia obstétrica con signos de inestabilidad.",
+              "next": "e2"
+            }
+          ]
+        },
+        {
+          "id": "e1b",
+          "title": "Corrigiendo el manejo",
+          "prompt": "Te detienes antes de realizar el tacto vaginal al recordar el riesgo de placenta previa. ¿Qué haces en su lugar?",
+          "options": [
+            {
+              "text": "Evaluar funciones vitales, canalizar vía endovenosa segura y posicionar en decúbito lateral izquierdo mientras coordinas la referencia",
+              "correct": true,
+              "feedback": "Correcta: es el manejo adecuado — estabilización inicial sin maniobras que puedan agravar un posible sangrado por placenta previa.",
+              "next": "e2"
+            }
+          ]
+        },
+        {
+          "id": "e2",
+          "title": "Coordinación de la referencia",
+          "prompt": "Mientras estabilizas a la paciente, ¿qué haces respecto a la referencia?",
+          "options": [
+            {
+              "text": "Envías a la paciente de inmediato en el vehículo disponible, sin llamar antes al hospital de destino",
+              "correct": false,
+              "feedback": "Referir sin coordinación previa aumenta el riesgo de que la paciente llegue sin que el establecimiento receptor esté preparado para recibirla en emergencia.",
+              "next": "e3"
+            },
+            {
+              "text": "Solicitas a otro miembro del equipo (o llamas tú mismo en un momento breve) coordinar telefónicamente con el hospital de referencia mientras continúas la estabilización",
+              "correct": true,
+              "feedback": "Correcta: la coordinación previa con el establecimiento de destino, en paralelo a la estabilización, asegura que la paciente sea recibida oportunamente en emergencia.",
+              "next": "e3"
+            }
+          ]
+        },
+        {
+          "id": "e3",
+          "title": "Documentación del traslado",
+          "prompt": "La paciente está estabilizada y coordinada la referencia. ¿Qué documento es indispensable completar antes del traslado?",
+          "options": [
+            {
+              "text": "La Hoja de Referencia Institucional, con el resumen clínico, funciones vitales, diagnóstico presuntivo y condición del paciente al inicio del traslado",
+              "correct": true,
+              "feedback": "Correcta: la Hoja de Referencia documenta formalmente el caso y su condición previa al traslado, información indispensable para el equipo receptor.",
+              "next": "end"
+            },
+            {
+              "text": "Ningún documento, dado que se trata de una emergencia y el tiempo apremia",
+              "correct": false,
+              "feedback": "Incluso en emergencias, la Hoja de Referencia debe completarse (al menos en lo esencial) antes o durante el traslado; omitirla compromete la continuidad de la atención en el establecimiento receptor.",
+              "next": "end"
+            }
+          ]
+        }
+      ]
+    }
   ]
 };
