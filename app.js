@@ -1077,6 +1077,73 @@ function renderPriorityNorms() {
   bindToggles();
 }
 
+function renderAssistant() {
+  pageTitle.textContent = "Asistente Profesional";
+  pageSubtitle.textContent = "Formatos, oficios e informes frecuentes en el ejercicio SERUMS: procedimiento, campos obligatorios, ejemplo y errores comunes.";
+  const categories = [...new Set(data.assistantDocs.map(d => d.category))];
+  root.innerHTML = `
+    <section class="two-col">
+      <div class="panel">
+        <input id="assistant-search" class="search" placeholder="Buscar formato, oficio, informe..." />
+        <div id="assistant-list"></div>
+      </div>
+      <div class="panel">
+        <h3 class="section-title">Sobre esta sección</h3>
+        <p style="line-height:1.6;color:#5B6E6A">Documentos de uso frecuente cuando ya estás trabajando en un establecimiento de salud. No es material de examen — es soporte profesional para tu día a día en la plaza SERUMS.</p>
+      </div>
+    </section>
+  `;
+
+  const list = document.getElementById("assistant-list");
+  const search = document.getElementById("assistant-search");
+
+  function draw(filter = "") {
+    const q = filter.toLowerCase();
+    const filtered = data.assistantDocs.filter(d => {
+      const text = [d.title, d.category, d.purpose].join(" ").toLowerCase();
+      return text.includes(q);
+    });
+
+    const grouped = categories
+      .map(cat => ({ category: cat, items: filtered.filter(d => d.category === cat) }))
+      .filter(g => g.items.length);
+
+    list.innerHTML = grouped.map(g => `
+      <h3 class="section-title" style="margin-top:18px">${g.category}</h3>
+      <div class="norm-list">
+        ${g.items.map((d, i) => `
+          <article class="norm-card">
+            <span>${d.category}</span>
+            <h3>${d.title}</h3>
+            <p>${d.purpose}</p>
+            <button class="toggle" data-target="doc-${d.id}">Ver formato completo</button>
+            <div class="toggle-panel" id="doc-${d.id}">
+              <p><strong>Campos obligatorios:</strong></p>
+              <ul style="margin:6px 0 12px 18px;color:#5B6E6A">
+                ${d.requiredFields.map(f => `<li>${f}</li>`).join("")}
+              </ul>
+              <p><strong>Formato base:</strong></p>
+              <pre style="white-space:pre-wrap;background:#F7F5F2;padding:10px;border-radius:6px;font-size:13px;margin:6px 0 12px">${d.templateText}</pre>
+              <p><strong>Ejemplo de llenado:</strong></p>
+              <p style="margin:6px 0 12px;color:#5B6E6A">${d.exampleFilled}</p>
+              <p><strong>Errores frecuentes:</strong></p>
+              <ul style="margin:6px 0 12px 18px;color:#8A2A24">
+                ${d.commonErrors.map(e => `<li>${e}</li>`).join("")}
+              </ul>
+              ${d.relatedNormCodes.length ? `<p style="color:#5B6E6A"><strong>Normativa relacionada:</strong> ${d.relatedNormCodes.join(", ")}</p>` : ""}
+            </div>
+          </article>
+        `).join("")}
+      </div>
+    `).join("") || `<p style="color:#5B6E6A">No hay documentos con ese filtro.</p>`;
+
+    bindToggles();
+  }
+
+  draw();
+  search.addEventListener("input", () => draw(search.value));
+}
+
 function renderResources() {
   pageTitle.textContent = "Recursos";
   pageSubtitle.textContent = "Apuntes, compendios y material de apoyo.";
@@ -1186,6 +1253,7 @@ function renderView(view) {
   if (view === "glossary") renderGlossary();
   if (view === "norms") renderNorms();
   if (view === "priorityNorms") renderPriorityNorms();
+  if (view === "assistant") renderAssistant();
   if (view === "decrees") renderDecrees();
   if (view === "resources") renderResources();
   if (view === "examRegistry") renderExamRegistry();
