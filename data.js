@@ -12897,6 +12897,267 @@ window.SERUMS_DATA = {
           ]
         }
       ]
+    },
+    {
+      "id": "ts-004",
+      "title": "Supervisión de la Red de Salud",
+      "context": "Un supervisor de la Red de Salud llega sin previo aviso a tu establecimiento I-2 para una supervisión integral. Es tu segundo mes en la plaza y algunos registros de CRED están atrasados por sobrecarga de campañas recientes.",
+      "skillsEvaluated": [
+        "Gestión y transparencia",
+        "Comunicación con autoridades",
+        "Resolución de problemas bajo evaluación"
+      ],
+      "startStep": "sup1",
+      "steps": [
+        {
+          "id": "sup1",
+          "title": "Llegada del supervisor",
+          "prompt": "El supervisor solicita revisar los registros de CRED del último trimestre. Sabes que hay un atraso de aproximadamente 15 fichas por sobrecarga de campañas. ¿Qué haces?",
+          "options": [
+            {
+              "text": "Le informas con transparencia sobre el atraso, explicas la causa (sobrecarga de campañas) y muestras el plan que ya tienes para ponerte al día",
+              "correct": true,
+              "feedback": "Correcta: la transparencia con una explicación objetiva y un plan concreto genera confianza profesional, muy distinto a ocultar o minimizar un hallazgo real.",
+              "next": "sup2"
+            },
+            {
+              "text": "Intentas completar las fichas atrasadas apresuradamente frente al supervisor antes de que las revise",
+              "correct": false,
+              "feedback": "Completar registros de forma apresurada frente a una supervisión compromete la calidad y veracidad del registro, y de notarse, afecta gravemente tu credibilidad profesional.",
+              "next": "sup1b"
+            },
+            {
+              "text": "Le dices que todos los registros están al día, sin mencionar el atraso",
+              "correct": false,
+              "feedback": "Faltar a la verdad ante una autoridad de supervisión es una falta ética grave, y el atraso probablemente será detectado de todas formas al revisar el sistema.",
+              "next": "sup1b"
+            }
+          ]
+        },
+        {
+          "id": "sup1b",
+          "title": "Corrigiendo el rumbo",
+          "prompt": "Te das cuenta de que ocultar o apresurar el registro no es el camino correcto. El supervisor sigue esperando tu respuesta. ¿Qué haces ahora?",
+          "options": [
+            {
+              "text": "Le informas con transparencia sobre el atraso real, explicas la causa y presentas un plan concreto para ponerte al día",
+              "correct": true,
+              "feedback": "Correcta: aún es momento de reencauzar con honestidad; una supervisión bien manejada valora más la transparencia y la capacidad de gestión que la ausencia total de problemas.",
+              "next": "sup2"
+            }
+          ]
+        },
+        {
+          "id": "sup2",
+          "title": "Retroalimentación del supervisor",
+          "prompt": "El supervisor valora tu transparencia, pero te pregunta qué medida vas a implementar para que esto no se repita. ¿Qué respondes?",
+          "options": [
+            {
+              "text": "Propones reorganizar tu horario semanal, priorizando un bloque fijo para registros administrativos incluso en semanas de campaña",
+              "correct": true,
+              "feedback": "Correcta: una medida concreta de gestión del tiempo demuestra capacidad de mejora continua, más allá de una disculpa genérica.",
+              "next": "sup3"
+            },
+            {
+              "text": "Le dices que fue un caso aislado y que no volverá a pasar, sin proponer ninguna medida concreta",
+              "correct": false,
+              "feedback": "Una promesa sin un plan de acción concreto no resuelve la causa estructural (sobrecarga de campañas) y es poco convincente ante un supervisor experimentado.",
+              "next": "sup3"
+            }
+          ]
+        },
+        {
+          "id": "sup3",
+          "title": "Cierre de la supervisión",
+          "prompt": "El supervisor concluye la visita. ¿Qué haces después de que se retira?",
+          "options": [
+            {
+              "text": "Documentas los acuerdos y el plan de mejora en tu bitácora, y lo comentas con el resto del equipo del establecimiento para que todos estén alineados",
+              "correct": true,
+              "feedback": "Correcta: documentar y socializar el resultado de la supervisión con el equipo asegura que el compromiso no dependa solo de tu memoria individual y fortalece el trabajo conjunto.",
+              "next": "end"
+            },
+            {
+              "text": "No haces nada adicional, das el tema por cerrado",
+              "correct": false,
+              "feedback": "Sin documentar ni socializar los acuerdos, es probable que el plan de mejora se diluya y el problema reaparezca en la siguiente supervisión.",
+              "next": "end"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ts-005",
+      "title": "Atención con enfoque intercultural en el parto",
+      "context": "Trabajas en un establecimiento I-3 de una zona alto-andina. Ingresa una gestante quechua-hablante en trabajo de parto, acompañada de su esposo. Ella solicita parto vertical y la presencia de su partera tradicional durante la atención.",
+      "skillsEvaluated": [
+        "Enfoque intercultural",
+        "Comunicación efectiva",
+        "Toma de decisiones con seguridad clínica"
+      ],
+      "startStep": "ic1",
+      "steps": [
+        {
+          "id": "ic1",
+          "title": "La solicitud de la paciente",
+          "prompt": "La gestante, con apoyo de su esposo, solicita parto vertical y que su partera tradicional esté presente en la atención. ¿Cuál es tu primera respuesta?",
+          "options": [
+            {
+              "text": "Le explicas que en el establecimiento solo se atienden partos en posición convencional y que la partera no puede ingresar",
+              "correct": false,
+              "feedback": "Negar de entrada ambas solicitudes, sin evaluar viabilidad clínica, contradice el enfoque intercultural en salud materna que el propio MINSA promueve, y puede generar rechazo a la atención institucional.",
+              "next": "ic1b"
+            },
+            {
+              "text": "Evalúas que no hay contraindicación obstétrica para el parto vertical, aceptas la solicitud y coordinas con el equipo cómo integrar de forma segura la presencia de la partera durante la atención",
+              "correct": true,
+              "feedback": "Correcta: el enfoque intercultural en salud materna busca precisamente articular las prácticas culturales de la paciente con una atención institucional segura, no imponer un protocolo único ni negar la atención.",
+              "next": "ic2"
+            }
+          ]
+        },
+        {
+          "id": "ic1b",
+          "title": "Reconsiderando el enfoque",
+          "prompt": "Notas que tu primera respuesta generó desconfianza en la pareja. ¿Qué haces para reencauzar la situación?",
+          "options": [
+            {
+              "text": "Evalúas si hay contraindicación clínica real para el parto vertical, y de no haberla, aceptas la solicitud coordinando con el equipo la presencia segura de la partera",
+              "correct": true,
+              "feedback": "Correcta: aún es posible corregir el rumbo evaluando objetivamente la viabilidad clínica y articulando la práctica cultural solicitada con la seguridad de la atención.",
+              "next": "ic2"
+            }
+          ]
+        },
+        {
+          "id": "ic2",
+          "title": "Durante el trabajo de parto",
+          "prompt": "Durante el trabajo de parto, la partera sugiere aplicar una infusión de hierbas a la gestante para 'acelerar' el parto. ¿Qué haces?",
+          "options": [
+            {
+              "text": "Permites cualquier práctica que la partera proponga sin evaluarla, para no generar conflicto cultural",
+              "correct": false,
+              "feedback": "El respeto al enfoque intercultural no significa ceder toda decisión clínica; algunas sustancias pueden interactuar con el manejo obstétrico o representar riesgo, y deben evaluarse antes de permitirse.",
+              "next": "ic3"
+            },
+            {
+              "text": "Dialogas con respeto explicando qué prácticas son seguras de integrar y cuáles podrían representar un riesgo para la madre o el bebé en ese momento específico, buscando un acuerdo",
+              "correct": true,
+              "feedback": "Correcta: el diálogo intercultural implica explicar con respeto los límites de seguridad clínica sin descalificar la práctica tradicional de plano, buscando puntos de acuerdo posibles.",
+              "next": "ic3"
+            }
+          ]
+        },
+        {
+          "id": "ic3",
+          "title": "Nacimiento y cierre",
+          "prompt": "El parto vertical se completa sin complicaciones, con la partera presente de forma coordinada. ¿Qué haces al finalizar?",
+          "options": [
+            {
+              "text": "Registras la atención incluyendo el enfoque intercultural aplicado, sin mencionar detalles que puedan generar prejuicio en el registro clínico",
+              "correct": true,
+              "feedback": "Correcta: documentar la atención con enfoque intercultural de forma profesional y respetuosa deja constancia de una buena práctica, útil para la continuidad del cuidado y como precedente institucional.",
+              "next": "end"
+            },
+            {
+              "text": "No registras las particularidades interculturales de la atención por considerarlas irrelevantes para la historia clínica",
+              "correct": false,
+              "feedback": "Omitir el enfoque intercultural aplicado pierde información valiosa para la continuidad del cuidado y para sistematizar buenas prácticas institucionales replicables.",
+              "next": "end"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ts-006",
+      "title": "Gestión local ante un brote de EDA",
+      "context": "En tu jurisdicción rural, en 3 días se han presentado 12 casos de enfermedad diarreica aguda (EDA) en niños menores de 5 años, varios de la misma zona. Cuentas con recursos limitados y debes coordinar la respuesta local.",
+      "skillsEvaluated": [
+        "Vigilancia epidemiológica",
+        "Coordinación intersectorial",
+        "Gestión de recursos limitados"
+      ],
+      "startStep": "b1",
+      "steps": [
+        {
+          "id": "b1",
+          "title": "Primera acción",
+          "prompt": "Al identificar el patrón de casos, ¿cuál es tu primera acción como responsable del establecimiento?",
+          "options": [
+            {
+              "text": "Notificar de inmediato el evento a la red de salud como posible brote, iniciando la investigación epidemiológica",
+              "correct": true,
+              "feedback": "Correcta: ante un incremento inusual de casos relacionados en tiempo y espacio, la notificación inmediata activa los recursos de apoyo de la red y formaliza la respuesta como brote.",
+              "next": "b2"
+            },
+            {
+              "text": "Esperar una semana más para confirmar que realmente es un brote antes de notificar",
+              "correct": false,
+              "feedback": "Esperar retrasa la respuesta y el apoyo de la red; la notificación debe ser oportuna ante la sola sospecha de un evento inusual, no tras la confirmación tardía.",
+              "next": "b1"
+            }
+          ]
+        },
+        {
+          "id": "b2",
+          "title": "Investigación de la fuente",
+          "prompt": "Notificas el evento. Mientras llega apoyo de la red, ¿qué investigas de forma prioritaria en el terreno?",
+          "options": [
+            {
+              "text": "La posible fuente común: agua de consumo, alimentos compartidos en algún evento reciente, o contacto entre los casos",
+              "correct": true,
+              "feedback": "Correcta: identificar la fuente común orienta la medida de control más efectiva (ej. tratamiento de agua, retiro de un alimento contaminado) en lugar de solo tratar casos aislados.",
+              "next": "b3"
+            },
+            {
+              "text": "Solo tratar a cada niño que llega, sin investigar el origen común del brote",
+              "correct": false,
+              "feedback": "Tratar únicamente los casos sin investigar la fuente permite que el brote continúe expandiéndose, ya que no se interviene sobre la causa.",
+              "next": "b3"
+            }
+          ]
+        },
+        {
+          "id": "b3",
+          "title": "Recursos limitados",
+          "prompt": "Confirmas que el agua de un reservorio comunitario está contaminada. Tu establecimiento tiene recursos limitados de personal y suministros. ¿Qué haces?",
+          "options": [
+            {
+              "text": "Coordinas con la municipalidad y otros sectores (educación, agua y saneamiento) para intervenir la fuente de agua, mientras priorizas la atención de los casos más graves con el personal disponible",
+              "correct": true,
+              "feedback": "Correcta: la respuesta a un brote con recursos limitados requiere coordinación intersectorial real (municipio, saneamiento) además de la priorización clínica, no puede resolverse solo desde el establecimiento de salud.",
+              "next": "b4"
+            },
+            {
+              "text": "Intentas resolver todo (tratamiento de agua y atención clínica) únicamente con el personal de tu establecimiento",
+              "correct": false,
+              "feedback": "Asumir toda la respuesta sin articular con otros sectores sobrecarga innecesariamente al establecimiento y retrasa la solución de la causa raíz (la fuente de agua), que excede tu competencia exclusiva.",
+              "next": "b4"
+            }
+          ]
+        },
+        {
+          "id": "b4",
+          "title": "Cierre del brote",
+          "prompt": "Tras una semana de intervención coordinada, los casos nuevos disminuyen significativamente. ¿Qué haces para el cierre del evento?",
+          "options": [
+            {
+              "text": "Elaboras un informe final de la investigación epidemiológica con las medidas adoptadas y lecciones aprendidas, y lo socializas con la red y la comunidad",
+              "correct": true,
+              "feedback": "Correcta: documentar y socializar el cierre del brote, con lecciones aprendidas, fortalece la respuesta institucional ante futuros eventos similares y mantiene informada a la comunidad.",
+              "next": "end"
+            },
+            {
+              "text": "Das por cerrado el caso sin documentación formal, ya que los casos nuevos disminuyeron",
+              "correct": false,
+              "feedback": "Sin un informe formal, se pierde la trazabilidad del evento y la oportunidad de sistematizar lecciones aprendidas para la vigilancia futura de la zona.",
+              "next": "end"
+            }
+          ]
+        }
+      ]
     }
   ]
 };
