@@ -1,74 +1,69 @@
-// ---------- SIP · Control de acceso (Supabase Auth) ----------
-// Este archivo se carga ANTES que app.js y decide si app.js llega a ejecutarse.
-// Nadie ve el contenido de la app (casos, normas, etc.) sin haber iniciado sesión.
+// auth.js — Puerta de acceso con Supabase Authentication
+// La app (data.js / app.js) solo se ejecuta después de un login exitoso.
 
 const SUPABASE_URL = "https://xcfdhwqjudzngvlssyeg.supabase.co";
-const SUPABASE_KEY = "sb_publishable_SMfnQmaqkzsFXn23qDriEQ_tG-Xb_Jd"; // clave pública, segura de exponer en el navegador
+const SUPABASE_ANON_KEY = "sb_publishable_SMfnQmaqkzsFXn23qDriEQ_tG-Xb_Jd";
 
-const sb = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-const authScreen = document.getElementById("auth-screen");
-const appRoot = document.getElementById("app-root");
-const loginForm = document.getElementById("login-form");
-const loginError = document.getElementById("auth-error");
-const loginBtn = document.getElementById("login-btn");
-const logoutBtn = document.getElementById("logout-btn");
+const loginScreen = document.getElementById("login-screen");
+const appRoot = document.querySelector(".app");
+const emailInput = document.getElementById("login-email");
+const passwordInput = document.getElementById("login-password");
+const submitBtn = document.getElementById("login-submit");
+const errorMsg = document.getElementById("login-error");
 
 function showApp() {
-  authScreen.style.display = "none";
-  appRoot.style.display = "grid";
-  // app.js solo se inyecta una vez, y solo después de confirmar sesión activa
-  if (!window.__sipAppLoaded) {
-    window.__sipAppLoaded = true;
-    const script = document.createElement("script");
-    script.src = "app.js";
-    document.body.appendChild(script);
-  }
+  loginScreen.style.display = "none";
+  appRoot.style.display = "flex";
+  // Notifica a app.js (si ya cargó) que puede iniciar el render.
+  window.dispatchEvent(new Event("sip-authenticated"));
 }
 
 function showLogin() {
   appRoot.style.display = "none";
-  authScreen.style.display = "flex";
-}
-
-function setError(message) {
-  loginError.textContent = message;
-  loginError.style.display = message ? "block" : "none";
+  loginScreen.style.display = "flex";
 }
 
 async function checkSession() {
-  const { data } = await sb.auth.getSession();
-  if (data && data.session) {
+  const { data: { session } } = await supabaseClient.auth.getSession();
+  if (session) {
     showApp();
   } else {
     showLogin();
   }
 }
 
-loginForm.addEventListener("submit", async (e) => {
-  e.preventDefault();
-  setError("");
-  loginBtn.disabled = true;
-  loginBtn.textContent = "Ingresando...";
-
-  const email = document.getElementById("login-email").value.trim();
-  const password = document.getElementById("login-password").value;
-
-  const { error } = await sb.auth.signInWithPassword({ email, password });
-
-  loginBtn.disabled = false;
-  loginBtn.textContent = "Ingresar";
-
+submitBtn.addEventListener("click", async () => {
+  errorMsg.style.display = "none";
+  submitBtn.disabled = true;
+  submitBtn.textContent = "Ingresando...";
+  const { error } = await supabaseClient.auth.signInWithPassword({
+    email: emailInput.value.trim(),
+    password: passwordInput.value
+  });
+  submitBtn.disabled = false;
+  submitBtn.textContent = "Ingresar";
   if (error) {
-    setError("Correo o contraseña incorrectos.");
-  } else {
-    showApp();
+    errorMsg.style.display = "block";
+    return;
   }
+  showApp();
 });
 
-logoutBtn.addEventListener("click", async () => {
-  await sb.auth.signOut();
-  window.location.reload();
+// Permite iniciar sesión presionando Enter en el campo de contraseña.
+passwordInput.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") submitBtn.click();
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const logoutBtn = document.getElementById("logout-btn");
+  if (logoutBtn) {
+    logoutBtn.addEventListener("click", async () => {
+      await supabaseClient.auth.signOut();
+      showLogin();
+    });
+  }
 });
 
 checkSession();
