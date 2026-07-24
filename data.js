@@ -12381,7 +12381,8 @@ window.SERUMS_DATA = {
       ],
       "relatedNormCodes": [
         "NTS 249-MINSA/DGAIN-2026"
-      ]
+      ],
+      "practiceScenario": "Atiendes en tu establecimiento I-2 a un varón de 45 años con dolor torácico opresivo de 30 minutos, sudoración profusa y antecedente de hipertensión no controlada. Tu establecimiento no cuenta con capacidad resolutiva para manejo de un posible síndrome coronario agudo. Redacta la Hoja de Referencia para trasladarlo al hospital de tu red."
     },
     {
       "id": "ref-002",
@@ -12404,7 +12405,8 @@ window.SERUMS_DATA = {
         "Omitir la fecha de próxima cita, perdiendo el seguimiento del caso",
         "No indicar tratamiento pendiente que el establecimiento de origen debe continuar"
       ],
-      "relatedNormCodes": []
+      "relatedNormCodes": [],
+      "practiceScenario": "Un paciente que referiste por neumonía grave completó su tratamiento hospitalario y debe continuar el manejo en tu establecimiento de origen. Redacta la Hoja de Contrarreferencia que el hospital debería enviarte, a modo de práctica de lectura e interpretación del documento."
     },
     {
       "id": "inf-001",
@@ -12427,7 +12429,8 @@ window.SERUMS_DATA = {
         "Faltar a la exactitud de los hechos, lo cual compromete la ética profesional y puede tener consecuencias legales",
         "No resguardar la confidencialidad de datos sensibles del caso"
       ],
-      "relatedNormCodes": []
+      "relatedNormCodes": [],
+      "practiceScenario": "El Poder Judicial solicita un informe social sobre un adulto mayor que vive solo, con signos de descuido y posible negligencia familiar, identificado durante una visita domiciliaria. Redacta el informe social correspondiente."
     },
     {
       "id": "inf-002",
@@ -12450,7 +12453,8 @@ window.SERUMS_DATA = {
         "Omitir la verificación del esquema de vacunación en cada control",
         "No programar la próxima cita según la edad y el esquema correspondiente"
       ],
-      "relatedNormCodes": []
+      "relatedNormCodes": [],
+      "practiceScenario": "Realizas el control CRED de una niña de 8 meses. Antropometría: P/E normal, P/T normal, T/E normal. Hemoglobina: 9.8 g/dL (anemia leve). Esquema de vacunación al día. Redacta el informe de atención CRED."
     },
     {
       "id": "ofi-001",
@@ -12473,7 +12477,8 @@ window.SERUMS_DATA = {
         "Omitir la numeración correlativa, dificultando el archivo y seguimiento documentario",
         "Extenderse en el cuerpo del oficio en lugar de ser conciso y directo"
       ],
-      "relatedNormCodes": []
+      "relatedNormCodes": [],
+      "practiceScenario": "Necesitas solicitar al municipio distrital el apoyo con movilidad y megafonía para una campaña de vacunación programada la próxima semana en tu jurisdicción. Redacta el oficio correspondiente."
     },
     {
       "id": "epi-001",
@@ -12498,7 +12503,8 @@ window.SERUMS_DATA = {
       ],
       "relatedNormCodes": [
         "NTS 247-MINSA/DGIESP-2026"
-      ]
+      ],
+      "practiceScenario": "Un niño de 6 años acude con fiebre alta y erupción cutánea máculo-papular en cara y tronco, cuadro compatible con sarampión. Redacta la ficha de notificación epidemiológica."
     },
     {
       "id": "eti-001",
@@ -12521,7 +12527,8 @@ window.SERUMS_DATA = {
         "No diferenciar el asentimiento informado (para menores de edad) del consentimiento informado (para adultos o su representante legal)",
         "Omitir alternativas al procedimiento propuesto, limitando la autonomía real del paciente"
       ],
-      "relatedNormCodes": []
+      "relatedNormCodes": [],
+      "practiceScenario": "Una usuaria de 24 años solicita la colocación de un dispositivo intrauterino (DIU) como método anticonceptivo. Redacta el consentimiento informado que le harías firmar tras la consejería."
     },
     {
       "id": "ofi-002",
@@ -12544,7 +12551,8 @@ window.SERUMS_DATA = {
         "No adjuntar el documento sustentatorio cuando el motivo lo requiere",
         "No coordinar previamente la cobertura del establecimiento durante la ausencia"
       ],
-      "relatedNormCodes": []
+      "relatedNormCodes": [],
+      "practiceScenario": "Necesitas ausentarte 3 días de tu plaza SERUMS para asistir a una capacitación de la DIRESA sobre manejo de emergencias obstétricas. Redacta la solicitud de permiso correspondiente."
     }
   ]
 };

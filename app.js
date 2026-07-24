@@ -1131,6 +1131,7 @@ function renderAssistant() {
                 ${d.commonErrors.map(e => `<li>${e}</li>`).join("")}
               </ul>
               ${d.relatedNormCodes.length ? `<p style="color:#5B6E6A"><strong>Normativa relacionada:</strong> ${d.relatedNormCodes.join(", ")}</p>` : ""}
+              <button class="action-btn" data-practice="${d.id}" style="margin-top:12px">Practicar llenado →</button>
             </div>
           </article>
         `).join("")}
@@ -1138,10 +1139,68 @@ function renderAssistant() {
     `).join("") || `<p style="color:#5B6E6A">No hay documentos con ese filtro.</p>`;
 
     bindToggles();
+    list.querySelectorAll("[data-practice]").forEach(btn => {
+      btn.addEventListener("click", () => renderAssistantPractice(btn.dataset.practice));
+    });
   }
 
   draw();
   search.addEventListener("input", () => draw(search.value));
+}
+
+let assistantPracticeState = loadProgress("assistantPracticeState", {});
+
+function renderAssistantPractice(docId) {
+  const doc = data.assistantDocs.find(d => d.id === docId);
+  if (!doc) return;
+  pageTitle.textContent = `Práctica: ${doc.title}`;
+  pageSubtitle.textContent = "Redacta el documento a partir del caso planteado y luego compáralo con el modelo.";
+
+  const st = assistantPracticeState[docId] || { attempts: 0, draft: "", revealed: false };
+
+  root.innerHTML = `
+    <button id="back-to-assistant-btn" class="toggle" style="margin-bottom:12px;margin-top:0">← Volver a Asistente Profesional</button>
+    <section class="two-col">
+      <div class="panel">
+        <div class="badge">${doc.category}</div>
+        <h3 class="section-title">${doc.title}</h3>
+        <p><strong>Caso:</strong> ${doc.practiceScenario}</p>
+        <p style="margin-top:10px;color:#5B6E6A"><strong>Recuerda incluir:</strong></p>
+        <ul style="margin:6px 0 12px 18px;color:#5B6E6A">
+          ${doc.requiredFields.map(f => `<li>${f}</li>`).join("")}
+        </ul>
+        <textarea id="practice-draft" placeholder="Redacta aquí tu documento..." style="width:100%;min-height:220px;padding:10px;border-radius:6px;border:1px solid #D8D2C4;font-family:inherit;font-size:14px">${st.draft || ""}</textarea>
+        <p style="margin-top:8px;color:#5B6E6A;font-size:13px">Intentos de práctica: ${st.attempts}</p>
+        <button class="action-btn" id="compare-btn" style="margin-top:8px">${st.revealed ? "Comparar de nuevo" : "Comparar con el modelo"}</button>
+      </div>
+      <div class="panel" id="practice-model" style="display:${st.revealed ? "block" : "none"}">
+        <h3 class="section-title">Documento modelo</h3>
+        <pre style="white-space:pre-wrap;background:#F7F5F2;padding:10px;border-radius:6px;font-size:13px;margin:6px 0 12px">${doc.templateText}</pre>
+        <p><strong>Ejemplo aplicado al caso:</strong></p>
+        <p style="color:#5B6E6A">${doc.exampleFilled}</p>
+        <p style="margin-top:12px"><strong>Autoevalúa tu redacción — ¿incluiste todo esto?</strong></p>
+        <ul style="margin:6px 0 12px 18px;color:#5B6E6A">
+          ${doc.requiredFields.map(f => `<li>${f}</li>`).join("")}
+        </ul>
+        <p><strong>Errores frecuentes a evitar:</strong></p>
+        <ul style="margin:6px 0 12px 18px;color:#8A2A24">
+          ${doc.commonErrors.map(e => `<li>${e}</li>`).join("")}
+        </ul>
+      </div>
+    </section>
+  `;
+
+  document.getElementById("back-to-assistant-btn").addEventListener("click", renderAssistant);
+
+  const draft = document.getElementById("practice-draft");
+  document.getElementById("compare-btn").addEventListener("click", () => {
+    st.attempts += 1;
+    st.draft = draft.value;
+    st.revealed = true;
+    assistantPracticeState[docId] = st;
+    saveProgress("assistantPracticeState", assistantPracticeState);
+    renderAssistantPractice(docId);
+  });
 }
 
 function renderResources() {
