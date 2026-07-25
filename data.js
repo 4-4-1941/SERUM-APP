@@ -11605,6 +11605,627 @@ window.SERUMS_DATA = {
       "correct": 1,
       "feedback": "Es correcta porque, una vez confirmado el diagnóstico de anemia mediante el dosaje de hemoglobina, se pasa de la dosis preventiva (profiláctica) a la dosis recuperativa de hierro, con una posología distinta orientada a tratar la anemia ya instaurada.",
       "unverified": true
+    },
+    {
+      "id": 503,
+      "career": "Psicología",
+      "block": "Psicología",
+      "title": "Establecimiento de rapport en primera consulta",
+      "level": "I-2",
+      "specialty": "Psicología",
+      "tags": [
+        "rapport",
+        "entrevista clínica",
+        "alianza terapéutica"
+      ],
+      "statement": "Paciente adulto llega a su primera consulta psicológica visiblemente tenso, con respuestas cortas y contacto visual evitativo.",
+      "question": "¿Qué acción es prioritaria para favorecer la alianza terapéutica inicial?",
+      "options": [
+        "Iniciar de inmediato la aplicación de una prueba psicométrica estructurada.",
+        "Generar un clima de confianza mediante escucha activa, calidez y validación, antes de profundizar en el motivo de consulta.",
+        "Solicitar que firme el consentimiento informado y avanzar directamente a la anamnesis exhaustiva.",
+        "Señalar directamente su actitud evasiva para que se abra a hablar."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque el rapport se construye primero mediante escucha activa, calidez y validación, condición necesaria para que la persona se sienta segura antes de profundizar en contenidos sensibles. Aplicar pruebas o profundizar en la anamnesis sin ese vínculo previo puede aumentar la tensión; señalar la actitud evasiva de forma directa puede sentirse como un juicio y deteriorar la confianza inicial."
+    },
+    {
+      "id": 504,
+      "career": "Psicología",
+      "block": "Psicología",
+      "title": "Sospecha de TDAH en escolar",
+      "level": "I-2",
+      "specialty": "Psicología",
+      "tags": [
+        "TDAH",
+        "infancia",
+        "evaluación"
+      ],
+      "statement": "Niño de 8 años es traído por su madre debido a reportes escolares de inatención, impulsividad e hiperactividad presentes en el aula y también en casa desde hace más de 6 meses.",
+      "question": "¿Cuál es la conducta inicial más adecuada?",
+      "options": [
+        "Indicar tratamiento farmacológico estimulante de inmediato sin evaluación adicional.",
+        "Descartar el caso porque el TDAH solo se diagnostica después de los 12 años.",
+        "Realizar una evaluación integral que incluya entrevista clínica, información de al menos dos entornos (escuela y hogar) y pruebas complementarias antes de definir manejo.",
+        "Recomendar únicamente cambios en la dieta como manejo definitivo."
+      ],
+      "correct": 2,
+      "feedback": "Es correcta porque el diagnóstico de TDAH requiere confirmar que los síntomas se presenten en más de un entorno (escuela y hogar) mediante una evaluación integral con múltiples fuentes de información, antes de definir cualquier manejo. Medicar sin evaluación es prematuro y no corresponde al psicólogo; descartar el caso por edad es incorrecto, pues el TDAH se identifica en la niñez; la dieta sola no sustituye la evaluación ni el manejo basado en evidencia."
+    },
+    {
+      "id": 505,
+      "career": "Psicología",
+      "block": "Salud pública",
+      "title": "Articulación con el Centro de Salud Mental Comunitario",
+      "level": "I-3",
+      "specialty": "Psicología",
+      "tags": [
+        "salud mental comunitaria",
+        "CSMC",
+        "redes de atención"
+      ],
+      "statement": "En su establecimiento de primer nivel, usted identifica varios casos de trastornos mentales moderados que requieren seguimiento especializado y continuo, pero no cuentan con psiquiatra en la zona.",
+      "question": "¿Cuál es la estrategia más coherente con el Modelo de Salud Mental Comunitaria?",
+      "options": [
+        "Derivar todos los casos a un hospital de tercer nivel en la capital de la región, sin manejo previo en el primer nivel.",
+        "Coordinar con el Centro de Salud Mental Comunitario (CSMC) de la red para seguimiento ambulatorio, articulando el cuidado en el primer nivel y evitando la institucionalización.",
+        "Indicar reposo domiciliario prolongado hasta que exista disponibilidad de un especialista.",
+        "Suspender el seguimiento de estos casos hasta que se contrate un psiquiatra en el establecimiento."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque el Modelo de Salud Mental Comunitaria prioriza la atención de base comunitaria y ambulatoria, articulada en redes con el CSMC, evitando la institucionalización innecesaria y sosteniendo el cuidado desde el primer nivel. Derivar todo a tercer nivel satura la red y aleja al paciente de su entorno; el reposo prolongado no es una intervención basada en evidencia; suspender el seguimiento desatiende casos que ya requieren continuidad."
+    },
+    {
+      "id": 506,
+      "career": "Psicología",
+      "block": "Salud pública",
+      "title": "Apoyo psicológico tras un sismo",
+      "level": "I-3",
+      "specialty": "Psicología",
+      "tags": [
+        "emergencias y desastres",
+        "primeros auxilios psicológicos",
+        "gestión del riesgo"
+      ],
+      "statement": "Tras un sismo de magnitud considerable, su establecimiento activa el plan de contingencia y usted es asignado a la atención psicológica de los afectados en un albergue temporal.",
+      "question": "¿Cuál es el enfoque más adecuado para la intervención inicial?",
+      "options": [
+        "Aplicar psicoterapia estructurada de larga duración a todos los afectados desde el primer día.",
+        "Brindar primeros auxilios psicológicos: seguridad, contención emocional y conexión con apoyo social y recursos básicos, priorizando casos de mayor riesgo.",
+        "Esperar a que disminuya el número de personas en el albergue antes de intervenir.",
+        "Aplicar el mismo protocolo de evaluación clínica ambulatoria de consulta externa habitual, sin adaptarlo al contexto de emergencia."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque en el contexto de una emergencia lo indicado son los primeros auxilios psicológicos: garantizar seguridad, contención y conexión con redes de apoyo, priorizando a quienes muestran mayor riesgo. Un protocolo idéntico al de consulta ambulatoria no considera las particularidades de la emergencia; la psicoterapia estructurada de larga duración no es la respuesta inmediata en la fase aguda; esperar a que disminuya la afluencia retrasa una atención que debe ser oportuna."
+    },
+    {
+      "id": 507,
+      "career": "Psicología",
+      "block": "Cuidado integral",
+      "title": "Impacto emocional del diagnóstico de tuberculosis",
+      "level": "I-3",
+      "specialty": "Psicología",
+      "tags": [
+        "tuberculosis",
+        "salud mental",
+        "adherencia"
+      ],
+      "statement": "Paciente recientemente diagnosticado con tuberculosis pulmonar muestra síntomas de tristeza, aislamiento y temor al estigma social, lo que podría afectar su adherencia al tratamiento.",
+      "question": "¿Cuál es el rol del psicólogo en este caso?",
+      "options": [
+        "Evaluar el impacto emocional del diagnóstico, brindar apoyo psicológico y trabajar el estigma para favorecer la adherencia, en coordinación con el equipo de TB.",
+        "Derivar el componente emocional a otro nivel de atención, ya que no corresponde al manejo del primer nivel.",
+        "Enfocarse solo en el componente biomédico y dejar el acompañamiento emocional a la familia del paciente.",
+        "Esperar a que el paciente termine el tratamiento antibacilar para recién abordar el aspecto emocional."
+      ],
+      "correct": 0,
+      "feedback": "Es correcta porque el abordaje de tuberculosis en el primer nivel incluye la salud mental del paciente, dado que el estigma y el malestar emocional son factores de riesgo directos para el abandono del tratamiento; el psicólogo debe intervenir de forma articulada con el equipo de TB desde el diagnóstico. Posponer el abordaje emocional hasta el final del tratamiento expone a mayor riesgo de abandono; delegarlo solo a la familia desatiende una necesidad clínica; derivarlo a otro nivel sin intervenir ignora que este componente sí corresponde al primer nivel."
+    },
+    {
+      "id": 508,
+      "career": "Psicología",
+      "block": "Cuidado integral",
+      "title": "Malestar emocional en climaterio",
+      "level": "I-3",
+      "specialty": "Psicología",
+      "tags": [
+        "climaterio",
+        "menopausia",
+        "salud mental"
+      ],
+      "statement": "Mujer de 49 años consulta por irritabilidad, tristeza y cambios de ánimo que ella asocia al inicio de la menopausia, afectando su relación familiar y laboral.",
+      "question": "¿Cuál es el manejo psicológico inicial más apropiado?",
+      "options": [
+        "Indicar que los síntomas son normales y no requieren ninguna intervención psicológica.",
+        "Psicoeducar sobre los cambios propios del climaterio, evaluar el impacto funcional del malestar emocional y brindar apoyo psicológico, coordinando con el servicio médico si corresponde.",
+        "Derivar directamente a psiquiatría sin evaluación previa por tratarse de una etapa hormonal.",
+        "Recomendar que evite hablar del tema con su familia para no generar conflictos."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque el climaterio puede cursar con malestar emocional significativo que amerita psicoeducación, evaluación del impacto funcional y apoyo psicológico, articulando con el servicio médico cuando sea necesario. Descartar la necesidad de intervención ignora el impacto funcional referido; derivar sin evaluación previa salta un paso necesario del primer nivel; evitar el diálogo familiar no aborda el malestar y puede aislar aún más a la paciente."
+    },
+    {
+      "id": 509,
+      "career": "Psicología",
+      "block": "Psicología",
+      "title": "Elección de enfoque terapéutico basado en evidencia",
+      "level": "I-3",
+      "specialty": "Psicología",
+      "tags": [
+        "psicoterapia basada en evidencia",
+        "TCC",
+        "tratamiento"
+      ],
+      "statement": "Paciente con diagnóstico de trastorno de ansiedad generalizada solicita orientación sobre qué tipo de tratamiento psicológico sería más efectivo según la evidencia científica disponible.",
+      "question": "¿Cuál es la respuesta más adecuada?",
+      "options": [
+        "Cualquier enfoque terapéutico tiene la misma efectividad, por lo que la elección no es relevante.",
+        "Recomendar únicamente técnicas de relajación como tratamiento único y suficiente.",
+        "Informar que la Terapia Cognitivo-Conductual cuenta con el mayor respaldo empírico para trastornos de ansiedad, y explicar en qué consiste su aplicación.",
+        "Indicar que solo el tratamiento farmacológico tiene sustento científico para la ansiedad."
+      ],
+      "correct": 2,
+      "feedback": "Es correcta porque la Terapia Cognitivo-Conductual cuenta con el respaldo empírico más sólido para el manejo de los trastornos de ansiedad, y corresponde informar al paciente sobre ella como parte de una práctica basada en evidencia. Afirmar que todos los enfoques son igualmente efectivos ignora la evidencia disponible; limitar el tratamiento solo a relajación es insuficiente como abordaje único; y descartar el componente psicológico a favor exclusivo del farmacológico contradice la evidencia sobre tratamientos combinados o psicológicos efectivos."
+    },
+    {
+      "id": 510,
+      "career": "Psicología",
+      "block": "Ética e interculturalidad",
+      "title": "Estigma étnico-cultural en la atención",
+      "level": "I-2",
+      "specialty": "Psicología",
+      "tags": [
+        "estigma étnico-cultural",
+        "discriminación",
+        "interculturalidad"
+      ],
+      "statement": "Paciente de una comunidad indígena refiere haber recibido comentarios despectivos de otro usuario del establecimiento debido a su vestimenta tradicional y su lengua materna, lo que la hace dudar en seguir asistiendo a sus controles.",
+      "question": "¿Cuál es la actuación más adecuada del psicólogo?",
+      "options": [
+        "Sugerirle que evite usar su vestimenta tradicional para prevenir nuevos comentarios.",
+        "Indicar que se trata de un problema ajeno al establecimiento de salud y no requiere intervención.",
+        "Validar su malestar, reforzar su derecho a la atención libre de discriminación, y coordinar con el establecimiento medidas para prevenir la estigmatización étnico-cultural.",
+        "Registrar el hecho sin tomar ninguna acción adicional."
+      ],
+      "correct": 2,
+      "feedback": "Es correcta porque frente a la discriminación étnico-cultural corresponde validar el malestar de la paciente, reafirmar su derecho a una atención libre de discriminación, y promover medidas institucionales de prevención del estigma, en línea con el enfoque intercultural en salud. Sugerir que oculte su identidad cultural refuerza la discriminación en lugar de combatirla; considerarlo un problema ajeno al establecimiento desatiende la responsabilidad institucional; registrar el hecho sin actuar no protege a la paciente ni previene su repetición."
+    },
+    {
+      "id": 511,
+      "career": "Psicología",
+      "block": "Salud pública",
+      "title": "Interpretación de la transición demográfica",
+      "level": "I-2",
+      "specialty": "Psicología",
+      "tags": [
+        "demografía en salud",
+        "transición demográfica",
+        "estructura poblacional"
+      ],
+      "statement": "En el diagnóstico situacional de su jurisdicción, usted observa un progresivo aumento de la población adulta mayor y una reducción sostenida de la natalidad en los últimos años.",
+      "question": "¿Qué fenómeno describe mejor esta situación?",
+      "options": [
+        "Una transición demográfica hacia una población más envejecida, con implicancias para la planificación de servicios de salud mental para adultos mayores.",
+        "Una regresión epidemiológica sin relación con cambios poblacionales.",
+        "Un fenómeno exclusivamente urbano sin relevancia para la planificación en salud.",
+        "Una situación estadística irrelevante para la programación de servicios de salud."
+      ],
+      "correct": 0,
+      "feedback": "Es correcta porque el aumento sostenido de la población adulta mayor junto con la reducción de la natalidad describe una transición demográfica hacia el envejecimiento poblacional, lo cual debe orientar la planificación de servicios, incluidos los de salud mental para esta población. Considerarlo irrelevante para la programación ignora su valor para la planificación; catalogarlo como fenómeno exclusivamente urbano no corresponde a la definición del concepto; llamarlo regresión epidemiológica confunde el concepto con otro fenómeno distinto."
+    },
+    {
+      "id": 512,
+      "career": "Enfermería",
+      "block": "Cuidado integral",
+      "title": "Aplicación del Proceso de Atención de Enfermería",
+      "level": "I-2",
+      "specialty": "Enfermería",
+      "tags": [
+        "PAE",
+        "valoración",
+        "diagnóstico de enfermería"
+      ],
+      "statement": "Enfermero(a) recibe a un paciente adulto mayor con movilidad reducida y antecedente de caídas en el domicilio, para su primer control en el establecimiento.",
+      "question": "¿Cuál es el primer paso correcto según el Proceso de Atención de Enfermería?",
+      "options": [
+        "Formular directamente un plan de intervenciones sin haber realizado la valoración previa.",
+        "Realizar la valoración integral del paciente (recolección de datos objetivos y subjetivos) para luego formular los diagnósticos de enfermería correspondientes.",
+        "Registrar solo los signos vitales y omitir el resto de las etapas del proceso.",
+        "Ejecutar de inmediato las intervenciones estándar para adultos mayores, sin individualizar el caso."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque el Proceso de Atención de Enfermería inicia con la valoración integral (datos objetivos y subjetivos) como base para formular diagnósticos de enfermería pertinentes al caso, antes de planificar o ejecutar intervenciones. Formular un plan sin valoración previa invierte el orden metodológico del proceso; registrar solo signos vitales es una valoración incompleta; aplicar intervenciones estándar sin individualizar desconoce las particularidades del paciente, como su riesgo de caídas."
+    },
+    {
+      "id": 513,
+      "career": "Enfermería",
+      "block": "Cuidado integral",
+      "title": "Sospecha de enfermedad rara en lactante",
+      "level": "I-3",
+      "specialty": "Enfermería",
+      "tags": [
+        "enfermedades raras",
+        "tamizaje neonatal",
+        "referencia oportuna"
+      ],
+      "statement": "Lactante de 3 meses presenta retraso en hitos del desarrollo, rasgos dismórficos y antecedente de tamizaje neonatal ampliado no realizado al nacer.",
+      "question": "¿Cuál es la conducta más apropiada del personal de enfermería?",
+      "options": [
+        "Descartar cualquier alteración por tratarse de un lactante pequeño, sin registrar hallazgos.",
+        "Documentar los hallazgos, informar al equipo médico y activar la referencia oportuna para evaluación especializada de una posible enfermedad rara o huérfana.",
+        "Indicar únicamente estimulación temprana en casa, sin derivación.",
+        "Esperar hasta el próximo control de CRED para reevaluar sin adelantar ninguna acción."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque ante signos de alarma compatibles con una posible enfermedad rara o huérfana corresponde documentar los hallazgos y activar la referencia oportuna para diagnóstico especializado, dado que la detección temprana mejora el pronóstico. Esperar al siguiente control retrasa una atención que debe ser oportuna; indicar solo estimulación temprana sin derivación no atiende la posible causa de fondo; descartar la alteración sin registro alguno omite un hallazgo clínicamente relevante."
+    },
+    {
+      "id": 514,
+      "career": "Enfermería",
+      "block": "Cuidado integral",
+      "title": "Exposición ocupacional a metales pesados",
+      "level": "I-3",
+      "specialty": "Enfermería",
+      "tags": [
+        "metales pesados",
+        "exposición ocupacional",
+        "factores de riesgo"
+      ],
+      "statement": "Trabajador de una zona minera artesanal acude con cefalea persistente, irritabilidad y temblor fino en manos, con antecedente de exposición prolongada sin protección adecuada.",
+      "question": "¿Cuál es la actuación inicial más adecuada?",
+      "options": [
+        "Indicar que los síntomas corresponden únicamente a estrés laboral, sin explorar la exposición ocupacional.",
+        "Recoger la historia de exposición ocupacional, identificar los factores de riesgo asociados y derivar para evaluación y manejo de una posible intoxicación por metales pesados.",
+        "Recomendar que continúe trabajando en las mismas condiciones mientras se programan exámenes.",
+        "Indicar reposo por una semana sin ninguna evaluación adicional ni derivación."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque los síntomas descritos junto con el antecedente de exposición ocupacional prolongada obligan a documentar la historia de exposición e identificar factores de riesgo antes de derivar para la evaluación de una posible intoxicación por metales pesados. Atribuir los síntomas solo a estrés laboral omite un antecedente clínicamente relevante; el reposo sin evaluación ni derivación no atiende la causa; permitir que continúe expuesto en las mismas condiciones perpetúa el riesgo."
+    },
+    {
+      "id": 515,
+      "career": "Enfermería",
+      "block": "Cuidado integral",
+      "title": "Prevención de infecciones asociadas a la atención de salud",
+      "level": "I-3",
+      "specialty": "Enfermería",
+      "tags": [
+        "IAAS",
+        "bioseguridad",
+        "prevención de infecciones"
+      ],
+      "statement": "En la unidad de hospitalización, usted observa que el personal no realiza higiene de manos entre la atención de un paciente y otro durante los procedimientos de rutina.",
+      "question": "¿Cuál es la medida más importante para prevenir una infección asociada a la atención de salud (IAAS) en este contexto?",
+      "options": [
+        "Aumentar la dosis de antibióticos profilácticos a todos los pacientes hospitalizados.",
+        "Reforzar la higiene de manos según los momentos establecidos, como medida central y costo-efectiva de prevención de IAAS.",
+        "Aislar a todos los pacientes de la unidad sin distinción, independientemente de su condición clínica.",
+        "Delegar la prevención de infecciones exclusivamente al personal de limpieza del establecimiento."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque la higiene de manos en los momentos establecidos es la medida individual más costo-efectiva y basada en evidencia para prevenir las infecciones asociadas a la atención de salud. Aumentar antibióticos profilácticos de forma indiscriminada favorece la resistencia antimicrobiana y no es la medida indicada; aislar a todos los pacientes sin criterio clínico es desproporcionado; delegar la prevención solo al personal de limpieza ignora que es una responsabilidad de todo el equipo de salud."
+    },
+    {
+      "id": 516,
+      "career": "Enfermería",
+      "block": "Cuidado integral",
+      "title": "Educación en salud bucal durante el control CRED",
+      "level": "I-2",
+      "specialty": "Enfermería",
+      "tags": [
+        "salud bucal",
+        "cepillado",
+        "prevención"
+      ],
+      "statement": "Durante el control de crecimiento y desarrollo de un niño de 3 años, la madre refiere que el niño aún no usa cepillo dental y consume golosinas con frecuencia.",
+      "question": "¿Cuál es la intervención más adecuada del personal de enfermería?",
+      "options": [
+        "Indicar que la salud bucal no corresponde evaluarla en el control de CRED.",
+        "Educar a la madre sobre la técnica de cepillado adecuada para la edad, el uso de hilo dental cuando corresponda, y derivar para evaluación odontológica.",
+        "Recomendar eliminar por completo el consumo de azúcar sin brindar ninguna orientación sobre higiene bucal.",
+        "Esperar a que el niño cumpla 6 años para abordar el tema de salud bucal."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque la promoción de la salud bucal, incluyendo la técnica de cepillado y la derivación odontológica oportuna, forma parte de las medidas preventivas que deben reforzarse desde el control de CRED. Considerar que no corresponde evaluarla en este control omite una responsabilidad establecida; esperar hasta los 6 años retrasa una intervención preventiva que debe iniciarse tempranamente; enfocarse solo en restringir el azúcar sin educar sobre higiene bucal es una intervención incompleta."
+    },
+    {
+      "id": 517,
+      "career": "Enfermería",
+      "block": "Cuidado integral",
+      "title": "Manejo inicial de hemorragia posparto",
+      "level": "I-3",
+      "specialty": "Enfermería",
+      "tags": [
+        "emergencia obstétrica",
+        "hemorragia posparto",
+        "respuesta rápida"
+      ],
+      "statement": "Puérpera inmediata presenta sangrado vaginal abundante y signos de hipotensión a los 20 minutos del parto, en un establecimiento sin médico presente en ese momento.",
+      "question": "¿Cuál es la actuación inicial más adecuada del personal de enfermería?",
+      "options": [
+        "Esperar la llegada del médico sin iniciar ninguna medida, para no exceder su competencia.",
+        "Activar la respuesta rápida ante emergencia obstétrica: masaje uterino, canalización de vía, monitoreo de signos vitales y coordinación inmediata para referencia si corresponde.",
+        "Registrar el sangrado en la historia clínica y continuar con la atención de rutina.",
+        "Indicar reposo y control en el siguiente turno sin intervención inmediata."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque ante una hemorragia posparto con signos de inestabilidad se debe activar de inmediato la respuesta rápida: medidas iniciales como masaje uterino, canalización de vía y monitoreo, coordinando la referencia oportuna, dado que se trata de una emergencia que compromete la vida. Esperar al médico sin actuar retrasa medidas que sí están dentro de la competencia de enfermería en una emergencia; registrar sin intervenir y postergar la atención al siguiente turno exponen a la paciente a un mayor riesgo vital."
+    },
+    {
+      "id": 518,
+      "career": "Enfermería",
+      "block": "Ética e interculturalidad",
+      "title": "Solicitud de parto vertical",
+      "level": "I-2",
+      "specialty": "Enfermería",
+      "tags": [
+        "parto vertical",
+        "interculturalidad",
+        "derechos de la gestante"
+      ],
+      "statement": "Gestante de una comunidad andina solicita que su parto se atienda en posición vertical, conforme a su costumbre cultural, en un establecimiento que cuenta con la implementación necesaria.",
+      "question": "¿Cuál es la conducta correcta del personal de enfermería?",
+      "options": [
+        "Explicarle que el parto vertical no está permitido en el sistema de salud formal.",
+        "Respetar y facilitar la atención del parto en la posición solicitada, conforme al enfoque intercultural y a la normativa vigente que promueve el parto vertical.",
+        "Aceptar la solicitud solo si un familiar varón lo autoriza previamente.",
+        "Indicar que solo se atenderá en posición vertical si no hay ningún otro paciente en el servicio."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque la normativa vigente promueve el parto vertical como parte de la atención con pertinencia intercultural, por lo que corresponde respetar y facilitar la posición solicitada por la gestante cuando el establecimiento cuenta con las condiciones para ello. Señalar que no está permitido contradice la política de promoción del parto vertical; condicionarlo a la autorización de un familiar varón vulnera la autonomía de la gestante; condicionarlo a la disponibilidad del servicio sin criterio clínico no corresponde a una negativa injustificada."
+    },
+    {
+      "id": 519,
+      "career": "Enfermería",
+      "block": "Gestión",
+      "title": "Coordinación mediante Redes Integradas de Salud",
+      "level": "I-3",
+      "specialty": "Enfermería",
+      "tags": [
+        "redes integradas de salud",
+        "RIS",
+        "telesalud"
+      ],
+      "statement": "Su establecimiento de primer nivel no cuenta con especialista para el seguimiento de un paciente con una condición crónica compleja, pero pertenece a una Red Integrada de Salud (RIS) que incluye telesalud.",
+      "question": "¿Cuál es la estrategia más adecuada para garantizar la continuidad de atención?",
+      "options": [
+        "Indicar al paciente que debe trasladarse por su cuenta a la capital de la región para cada control.",
+        "Utilizar los mecanismos de la Red Integrada de Salud, incluyendo telesalud, para coordinar el seguimiento especializado sin necesidad de traslados innecesarios.",
+        "Suspender el seguimiento hasta que se contrate un especialista en el establecimiento.",
+        "Delegar el seguimiento del caso a un establecimiento de menor nivel de complejidad."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque las Redes Integradas de Salud, junto con herramientas como la telesalud, están diseñadas precisamente para garantizar la continuidad de atención especializada sin necesidad de traslados innecesarios, optimizando los recursos de la red. Indicar traslados por cuenta propia ignora el mecanismo de la RIS disponible; suspender el seguimiento desatiende la continuidad de cuidado; delegar el caso a un nivel de menor complejidad no resuelve la necesidad de manejo especializado."
+    },
+    {
+      "id": 520,
+      "career": "Medicina",
+      "block": "Cuidado integral",
+      "title": "Certificado médico legal en lesiones por violencia",
+      "level": "I-3",
+      "specialty": "Medicina",
+      "tags": [
+        "medicina legal",
+        "aspectos forenses",
+        "documentación"
+      ],
+      "statement": "Paciente acude por lesiones producidas en un episodio de violencia familiar y solicita un documento que respalde legalmente los hallazgos para su denuncia.",
+      "question": "¿Cuál es la conducta médico-legal correcta?",
+      "options": [
+        "Indicar que la elaboración de este tipo de documento no corresponde al establecimiento de salud.",
+        "Realizar el examen clínico correspondiente, elaborar el certificado médico legal describiendo objetivamente los hallazgos, y orientar sobre la ruta de denuncia.",
+        "Redactar el certificado basándose únicamente en el relato de la paciente, sin examen físico.",
+        "Diferir la elaboración del certificado hasta que la paciente presente la denuncia policial previa."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque corresponde al personal médico realizar el examen clínico y elaborar el certificado médico legal con la descripción objetiva de los hallazgos, documento que la paciente puede utilizar para su denuncia, además de orientarla sobre la ruta de atención. Condicionar el certificado a una denuncia previa invierte el orden correcto, pues el certificado suele ser el sustento de la denuncia; redactarlo sin examen físico carece de validez médico-legal; negar la elaboración del documento desatiende una responsabilidad del establecimiento de salud."
+    },
+    {
+      "id": 521,
+      "career": "Medicina",
+      "block": "Cuidado integral",
+      "title": "Signos de alarma de cáncer infantil",
+      "level": "I-3",
+      "specialty": "Medicina",
+      "tags": [
+        "cáncer infantil",
+        "detección temprana",
+        "signos de alarma"
+      ],
+      "statement": "Niño de 4 años es traído por palidez progresiva, pérdida de peso no explicada y una masa abdominal palpable de aparición reciente.",
+      "question": "¿Cuál es la conducta más adecuada?",
+      "options": [
+        "Indicar suplementación con hierro y control en un mes, sin mayor evaluación.",
+        "Reconocer estos como signos de alarma de posible cáncer infantil y derivar de forma prioritaria para evaluación especializada oportuna.",
+        "Esperar la evolución espontánea del cuadro durante tres meses antes de derivar.",
+        "Atribuir los hallazgos únicamente a un cuadro digestivo común sin explorar otras causas."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque la combinación de palidez progresiva, pérdida de peso y masa abdominal constituye signos de alarma que obligan a sospechar cáncer infantil y derivar de forma prioritaria, dado que la detección temprana mejora significativamente el pronóstico. Indicar solo hierro sin mayor evaluación minimiza signos de alarma relevantes; esperar la evolución retrasa un diagnóstico que debe ser oportuno; atribuirlo a una causa digestiva común sin explorar otras posibilidades desestima hallazgos de alarma."
+    },
+    {
+      "id": 522,
+      "career": "Medicina",
+      "block": "Cuidado integral",
+      "title": "Sospecha de enfermedad rara en paciente pediátrico",
+      "level": "I-3",
+      "specialty": "Medicina",
+      "tags": [
+        "enfermedades raras",
+        "diagnóstico diferencial",
+        "referencia oportuna"
+      ],
+      "statement": "Paciente de 5 años presenta un cuadro clínico atípico, de difícil clasificación con los diagnósticos habituales, y con antecedentes familiares de una condición similar no filiada.",
+      "question": "¿Cuál es la conducta más adecuada?",
+      "options": [
+        "Descartar cualquier posibilidad diagnóstica distinta a las enfermedades más frecuentes.",
+        "Documentar exhaustivamente el cuadro clínico, considerar la posibilidad de una enfermedad rara o huérfana dentro del diagnóstico diferencial, y derivar oportunamente para evaluación especializada.",
+        "Indicar tratamiento sintomático indefinido sin plantear un diagnóstico diferencial más amplio.",
+        "Esperar a que el paciente presente más síntomas antes de ampliar el diagnóstico diferencial."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque ante un cuadro atípico con antecedente familiar sugerente corresponde documentar el caso, considerar una enfermedad rara o huérfana dentro del diagnóstico diferencial y derivar oportunamente, ya que estas condiciones suelen requerir manejo especializado. Descartar de plano estas posibilidades limita el razonamiento diagnóstico; el tratamiento sintomático indefinido sin diagnóstico diferencial amplio no resuelve la causa; esperar más síntomas retrasa una derivación que debe ser oportuna."
+    },
+    {
+      "id": 523,
+      "career": "Medicina",
+      "block": "Cuidado integral",
+      "title": "Intoxicación aguda por metales pesados",
+      "level": "I-3",
+      "specialty": "Medicina",
+      "tags": [
+        "metales pesados",
+        "intoxicación aguda",
+        "manifestaciones clínicas"
+      ],
+      "statement": "Paciente proveniente de una zona con actividad minera informal presenta dolor abdominal cólico, vómitos y una línea gingival azulada, con antecedente de exposición reciente a plomo.",
+      "question": "¿Cuál es la conducta inicial más adecuada?",
+      "options": [
+        "Indicar manejo sintomático del dolor abdominal sin vincularlo a la exposición ocupacional referida.",
+        "Reconocer el cuadro como sugerente de intoxicación por plomo, iniciar manejo inicial y coordinar la referencia oportuna para confirmación y tratamiento especializado.",
+        "Descartar cualquier relación con la exposición minera por tratarse de síntomas digestivos inespecíficos.",
+        "Indicar que continúe en el mismo ambiente laboral mientras se programan exámenes complementarios."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque el cuadro clínico descrito, junto con el antecedente de exposición a plomo, es sugerente de intoxicación por metales pesados, lo que obliga a iniciar el manejo inicial y coordinar la referencia oportuna para confirmación diagnóstica y tratamiento especializado. Tratar solo el síntoma sin vincularlo a la exposición ignora una causa tratable; descartar la relación con la exposición minera pasa por alto un antecedente clínicamente relevante; mantenerlo en el mismo ambiente laboral perpetúa la exposición."
+    },
+    {
+      "id": 524,
+      "career": "Medicina",
+      "block": "Cuidado integral",
+      "title": "Prevención de infección de sitio quirúrgico",
+      "level": "I-3",
+      "specialty": "Medicina",
+      "tags": [
+        "IAAS",
+        "infección de sitio quirúrgico",
+        "prevención"
+      ],
+      "statement": "Paciente post-operado de una herida quirúrgica limpia presenta, al tercer día, eritema, calor local y secreción purulenta en la zona de la incisión.",
+      "question": "¿Cuál es la conducta más adecuada?",
+      "options": [
+        "Indicar que es una evolución normal del proceso de cicatrización sin necesidad de evaluación adicional.",
+        "Reconocer los signos como sugerentes de una infección de sitio quirúrgico (IAAS), iniciar evaluación y manejo correspondiente, y reforzar las medidas de prevención en el servicio.",
+        "Indicar solo curaciones diarias sin investigar la causa del cuadro.",
+        "Esperar una semana adicional para reevaluar antes de tomar alguna conducta."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque el eritema, calor local y secreción purulenta en el sitio quirúrgico son signos sugerentes de una infección asociada a la atención de salud, lo que amerita evaluación y manejo oportuno, además de reforzar las medidas de prevención en el servicio. Considerarlo una evolución normal minimiza signos de infección; las curaciones sin investigar la causa no resuelven el problema de fondo; esperar una semana adicional retrasa un manejo que debe ser oportuno."
+    },
+    {
+      "id": 525,
+      "career": "Medicina",
+      "block": "Cuidado integral",
+      "title": "Orientación en salud bucal durante consulta general",
+      "level": "I-2",
+      "specialty": "Medicina",
+      "tags": [
+        "salud bucal",
+        "prevención",
+        "técnica de cepillado"
+      ],
+      "statement": "Durante una consulta por otro motivo, usted observa en un paciente adulto placa dental abundante y antecedente de no recibir controles odontológicos en los últimos años.",
+      "question": "¿Cuál es la conducta más adecuada?",
+      "options": [
+        "Omitir el hallazgo por no ser el motivo principal de la consulta.",
+        "Brindar orientación breve sobre técnica de cepillado y uso de hilo dental, y derivar para evaluación odontológica.",
+        "Indicar que acuda a un consultorio odontológico particular, sin brindar ninguna orientación preventiva.",
+        "Registrar el hallazgo sin comunicarlo al paciente ni derivarlo."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque, independientemente del motivo principal de consulta, corresponde aprovechar el contacto para brindar orientación preventiva en salud bucal y derivar oportunamente para evaluación odontológica, como parte de la atención integral. Omitir el hallazgo o registrarlo sin comunicarlo desaprovecha una oportunidad de prevención; derivarlo sin brindar ninguna orientación preventiva es una intervención incompleta."
+    },
+    {
+      "id": 526,
+      "career": "Medicina",
+      "block": "Cuidado integral",
+      "title": "Manejo clínico en climaterio",
+      "level": "I-3",
+      "specialty": "Medicina",
+      "tags": [
+        "climaterio",
+        "menopausia",
+        "manejo clínico"
+      ],
+      "statement": "Mujer de 50 años consulta por bochornos frecuentes, sequedad vaginal y alteraciones del sueño, compatibles con climaterio, sin contraindicaciones evidentes para tratamiento hormonal.",
+      "question": "¿Cuál es la conducta inicial más adecuada?",
+      "options": [
+        "Indicar que estos síntomas no requieren ninguna evaluación ni manejo por ser propios de la edad.",
+        "Evaluar de forma integral el cuadro clínico, descartar contraindicaciones y ofrecer las opciones de manejo disponibles, incluyendo medidas no farmacológicas y, si corresponde, terapia hormonal, con seguimiento clínico.",
+        "Indicar terapia hormonal de reemplazo de forma inmediata sin evaluar antecedentes ni posibles contraindicaciones.",
+        "Derivar directamente a un nivel de mayor complejidad sin realizar ninguna evaluación previa en el primer nivel."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque el manejo del climaterio requiere una evaluación clínica integral que descarte contraindicaciones antes de ofrecer las opciones de manejo disponibles, incluyendo medidas no farmacológicas y terapia hormonal cuando corresponda, con seguimiento posterior. Indicar terapia hormonal sin evaluación previa expone a riesgos evitables; descartar la necesidad de manejo ignora el impacto funcional de los síntomas; derivar sin evaluación previa en el primer nivel omite un paso que sí corresponde a este nivel de atención."
+    },
+    {
+      "id": 527,
+      "career": "Medicina",
+      "block": "Cuidado integral",
+      "title": "Atención del puerperio inmediato normal",
+      "level": "I-2",
+      "specialty": "Medicina",
+      "tags": [
+        "puerperio normal",
+        "embarazo",
+        "parto"
+      ],
+      "statement": "Puérpera inmediata tras un parto vaginal sin complicaciones se encuentra estable, con útero contraído, sangrado dentro de límites normales y signos vitales estables.",
+      "question": "¿Cuál es la conducta más adecuada durante el puerperio inmediato normal?",
+      "options": [
+        "Aplicar de forma rutinaria medidas de manejo reservadas para complicaciones obstétricas, sin que existan signos de alarma.",
+        "Realizar el monitoreo clínico habitual del puerperio inmediato (involución uterina, sangrado, signos vitales), favorecer el contacto piel a piel y el inicio de la lactancia materna, y vigilar la aparición de signos de alarma.",
+        "Dar de alta de inmediato sin ningún periodo de observación posparto.",
+        "Indicar reposo absoluto sin favorecer el contacto piel a piel ni el inicio de la lactancia."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque el puerperio inmediato normal requiere el monitoreo clínico habitual, favoreciendo el contacto piel a piel y el inicio temprano de la lactancia materna, además de vigilar la aparición de signos de alarma que ameriten una conducta distinta. Dar de alta sin observación omite el periodo de vigilancia necesario tras el parto; aplicar medidas reservadas para complicaciones sin que existan signos de alarma sobremedicaliza un proceso normal; indicar reposo absoluto sin favorecer el contacto piel a piel y la lactancia contradice las prácticas recomendadas en el puerperio fisiológico."
+    },
+    {
+      "id": 528,
+      "career": "Medicina",
+      "block": "Ética e interculturalidad",
+      "title": "Atención con enfoque intercultural en el parto",
+      "level": "I-2",
+      "specialty": "Medicina",
+      "tags": [
+        "parto vertical",
+        "medicina tradicional",
+        "interculturalidad"
+      ],
+      "statement": "Gestante de una comunidad amazónica solicita que, además del parto vertical, se permita el acompañamiento de una partera tradicional de su comunidad durante la atención institucional.",
+      "question": "¿Cuál es la conducta más adecuada?",
+      "options": [
+        "Rechazar la participación de la partera tradicional por tratarse de un establecimiento formal de salud.",
+        "Facilitar, en la medida de lo posible, la atención con pertinencia intercultural: parto vertical y acompañamiento de la partera tradicional, articulando su participación con el equipo de salud dentro de los protocolos de seguridad.",
+        "Aceptar el acompañamiento solo si la partera tradicional asume la responsabilidad legal completa de la atención.",
+        "Indicar que debe elegir entre la atención institucional o la atención tradicional, pero no ambas."
+      ],
+      "correct": 1,
+      "feedback": "Es correcta porque la atención con enfoque intercultural busca articular las prácticas tradicionales, como el parto vertical y el acompañamiento de la partera, con la atención institucional dentro de los protocolos de seguridad, sin que sean mutuamente excluyentes. Obligar a elegir entre una u otra modalidad desconoce el enfoque intercultural; rechazar la participación de la partera tradicional deniega un derecho reconocido en la normativa; condicionar la participación a que asuma la responsabilidad legal completa no corresponde al marco de colaboración esperado."
+    },
+    {
+      "id": 529,
+      "career": "Medicina",
+      "block": "Gestión",
+      "title": "Documentos técnicos normativos de gestión institucional",
+      "level": "I-3",
+      "specialty": "Medicina",
+      "tags": [
+        "ROF",
+        "MOP",
+        "gestión institucional"
+      ],
+      "statement": "Como médico responsable de un establecimiento de primer nivel, necesita definir con claridad las funciones específicas de cada puesto del personal para evitar duplicidad de funciones y vacíos en la atención.",
+      "question": "¿Qué documento técnico normativo debe consultar y, de ser necesario, actualizar?",
+      "options": [
+        "El Manual de Organización y Funciones (MOP), que detalla las funciones específicas de cada cargo, en concordancia con el Reglamento de Organización y Funciones (ROF).",
+        "El Plan Operativo Institucional (POI), que corresponde únicamente a metas y actividades anuales.",
+        "El Análisis FODA del establecimiento, que es una herramienta de diagnóstico y no de asignación de funciones.",
+        "El Plan Estratégico Institucional (PEI), que define lineamientos de largo plazo y no funciones específicas por cargo."
+      ],
+      "correct": 0,
+      "feedback": "Es correcta porque el Manual de Organización y Funciones (MOP), en concordancia con el Reglamento de Organización y Funciones (ROF), es el documento técnico normativo que detalla las funciones específicas de cada puesto, siendo la herramienta adecuada para evitar duplicidades o vacíos de función. El POI y el PEI son instrumentos de planificación de actividades y lineamientos estratégicos, no de asignación de funciones por cargo; el FODA es una herramienta diagnóstica, no normativa de funciones."
     }
   ],
   "norms": [
@@ -12593,7 +13214,9 @@ window.SERUMS_DATA = {
         "No diferenciar consumo de riesgo (manejable en el primer nivel) de consumo con signos de dependencia (que amerita derivación)",
         "Omitir el registro de la conducta indicada, dejando el caso sin ruta clara de seguimiento"
       ],
-      "relatedNormCodes": ["R.M. N.° 247-2020-MINSA (solo sección alcohol / AUDIT-C)"],
+      "relatedNormCodes": [
+        "R.M. N.° 247-2020-MINSA (solo sección alcohol / AUDIT-C)"
+      ],
       "practiceScenario": "Un varón de 29 años acude por otro motivo de consulta. Durante el tamizaje refiere consumo diario de pasta básica de cocaína desde hace 8 meses, con necesidad de aumentar la cantidad para sentir el mismo efecto (tolerancia) y malestar intenso cuando no consume (síndrome de abstinencia). Redacta la ficha de tamizaje y define la conducta a seguir."
     },
     {
