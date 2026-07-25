@@ -1,4 +1,5 @@
 window.SERUMS_DATA = {
+  "lastUpdated": "2026-07-25",
   "cases": [
     {
       "id": 1,
@@ -12359,6 +12360,7 @@ window.SERUMS_DATA = {
   "assistantDocs": [
     {
       "id": "ref-001",
+      "sourceStatus": "oficial",
       "category": "Referencia y contrarreferencia",
       "title": "Hoja de Referencia Institucional (Anexo N° 02.1)",
       "purpose": "Formato oficial del MINSA (Norma Técnica del Sistema de Referencia y Contrarreferencia de los Establecimientos del Ministerio de Salud) para transferir a un paciente hacia un establecimiento de mayor capacidad resolutiva.",
@@ -12385,6 +12387,7 @@ window.SERUMS_DATA = {
     },
     {
       "id": "ref-002",
+      "sourceStatus": "oficial",
       "category": "Referencia y contrarreferencia",
       "title": "Hoja de Contrarreferencia Institucional (Anexo N° 02.2)",
       "purpose": "Formato oficial del MINSA para el retorno de información desde el establecimiento de mayor capacidad resolutiva hacia el establecimiento de origen, informando el resultado de la atención y las indicaciones de seguimiento.",
@@ -12412,6 +12415,7 @@ window.SERUMS_DATA = {
     },
     {
       "id": "inf-001",
+      "sourceStatus": "oficial",
       "category": "Informes",
       "title": "Informe Social",
       "purpose": "Documento elaborado para reportar la valoración social de un caso, frecuentemente requerido por autoridades judiciales, fiscalía o instancias de protección (DEMUNA, CEM).",
@@ -12436,6 +12440,7 @@ window.SERUMS_DATA = {
     },
     {
       "id": "inf-002",
+      "sourceStatus": "oficial",
       "category": "Informes",
       "title": "Informe de Atención CRED",
       "purpose": "Registro de la evaluación integral realizada en el control de Crecimiento y Desarrollo (CRED), incluyendo hallazgos antropométricos, del desarrollo y consejería brindada.",
@@ -12460,6 +12465,7 @@ window.SERUMS_DATA = {
     },
     {
       "id": "ofi-001",
+      "sourceStatus": "oficial",
       "category": "Documentos administrativos",
       "title": "Oficio Simple",
       "purpose": "Comunicación formal escrita dirigida a una autoridad, institución o dependencia, utilizada para solicitudes, coordinaciones o comunicaciones oficiales del establecimiento de salud.",
@@ -12484,6 +12490,7 @@ window.SERUMS_DATA = {
     },
     {
       "id": "epi-001",
+      "sourceStatus": "oficial",
       "category": "Vigilancia epidemiológica",
       "title": "Ficha de Notificación Epidemiológica",
       "purpose": "Documento para notificar de forma obligatoria un caso o brote sospechoso de enfermedad sujeta a vigilancia epidemiológica, activando la respuesta correspondiente.",
@@ -12510,6 +12517,7 @@ window.SERUMS_DATA = {
     },
     {
       "id": "eti-001",
+      "sourceStatus": "oficial",
       "category": "Consentimientos",
       "title": "Consentimiento Informado",
       "purpose": "Documento que registra la aceptación voluntaria e informada del paciente (o su representante legal) para un procedimiento, tratamiento o participación en un estudio, tras haber recibido información clara sobre riesgos, beneficios y alternativas.",
@@ -12534,6 +12542,7 @@ window.SERUMS_DATA = {
     },
     {
       "id": "ofi-002",
+      "sourceStatus": "oficial",
       "category": "Documentos administrativos",
       "title": "Solicitud de Permiso o Licencia",
       "purpose": "Documento mediante el cual el profesional SERUMS solicita autorización para ausentarse temporalmente de su plaza, por motivos personales, de salud o capacitación.",
@@ -12558,6 +12567,7 @@ window.SERUMS_DATA = {
     },
     {
       "id": "adi-001",
+      "sourceStatus": "criterio_tecnico",
       "category": "Salud mental y adicciones",
       "title": "Ficha de Tamizaje Breve de Consumo de Sustancias",
       "purpose": "Instrumento de tamizaje aplicado en el primer nivel de atención para identificar el nivel de riesgo asociado al consumo de alcohol, tabaco y otras sustancias, orientando la conducta a seguir (intervención breve o derivación).",
@@ -12582,6 +12592,7 @@ window.SERUMS_DATA = {
     },
     {
       "id": "adi-002",
+      "sourceStatus": "criterio_tecnico",
       "category": "Salud mental y adicciones",
       "title": "Flujograma de Atención y Derivación en Consumo de Sustancias",
       "purpose": "Ruta de decisión clínica desde la detección de un caso de consumo de sustancias en el establecimiento de primer nivel, hasta su atención, intervención breve o derivación al Centro de Salud Mental Comunitario (CSMC), asegurando la continuidad del cuidado.",
@@ -12892,588 +12903,6 @@ window.SERUMS_DATA = {
               "text": "Ningún documento, dado que se trata de una emergencia y el tiempo apremia",
               "correct": false,
               "feedback": "Incluso en emergencias, la Hoja de Referencia debe completarse (al menos en lo esencial) antes o durante el traslado; omitirla compromete la continuidad de la atención en el establecimiento receptor.",
-              "next": "end"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "ts-004",
-      "title": "Supervisión de la Red de Salud",
-      "context": "Un supervisor de la Red de Salud llega sin previo aviso a tu establecimiento I-2 para una supervisión integral. Es tu segundo mes en la plaza y algunos registros de CRED están atrasados por sobrecarga de campañas recientes.",
-      "skillsEvaluated": [
-        "Gestión y transparencia",
-        "Comunicación con autoridades",
-        "Resolución de problemas bajo evaluación"
-      ],
-      "startStep": "sup1",
-      "steps": [
-        {
-          "id": "sup1",
-          "title": "Llegada del supervisor",
-          "prompt": "El supervisor solicita revisar los registros de CRED del último trimestre. Sabes que hay un atraso de aproximadamente 15 fichas por sobrecarga de campañas. ¿Qué haces?",
-          "options": [
-            {
-              "text": "Le informas con transparencia sobre el atraso, explicas la causa (sobrecarga de campañas) y muestras el plan que ya tienes para ponerte al día",
-              "correct": true,
-              "feedback": "Correcta: la transparencia con una explicación objetiva y un plan concreto genera confianza profesional, muy distinto a ocultar o minimizar un hallazgo real.",
-              "next": "sup2"
-            },
-            {
-              "text": "Intentas completar las fichas atrasadas apresuradamente frente al supervisor antes de que las revise",
-              "correct": false,
-              "feedback": "Completar registros de forma apresurada frente a una supervisión compromete la calidad y veracidad del registro, y de notarse, afecta gravemente tu credibilidad profesional.",
-              "next": "sup1b"
-            },
-            {
-              "text": "Le dices que todos los registros están al día, sin mencionar el atraso",
-              "correct": false,
-              "feedback": "Faltar a la verdad ante una autoridad de supervisión es una falta ética grave, y el atraso probablemente será detectado de todas formas al revisar el sistema.",
-              "next": "sup1b"
-            }
-          ]
-        },
-        {
-          "id": "sup1b",
-          "title": "Corrigiendo el rumbo",
-          "prompt": "Te das cuenta de que ocultar o apresurar el registro no es el camino correcto. El supervisor sigue esperando tu respuesta. ¿Qué haces ahora?",
-          "options": [
-            {
-              "text": "Le informas con transparencia sobre el atraso real, explicas la causa y presentas un plan concreto para ponerte al día",
-              "correct": true,
-              "feedback": "Correcta: aún es momento de reencauzar con honestidad; una supervisión bien manejada valora más la transparencia y la capacidad de gestión que la ausencia total de problemas.",
-              "next": "sup2"
-            }
-          ]
-        },
-        {
-          "id": "sup2",
-          "title": "Retroalimentación del supervisor",
-          "prompt": "El supervisor valora tu transparencia, pero te pregunta qué medida vas a implementar para que esto no se repita. ¿Qué respondes?",
-          "options": [
-            {
-              "text": "Propones reorganizar tu horario semanal, priorizando un bloque fijo para registros administrativos incluso en semanas de campaña",
-              "correct": true,
-              "feedback": "Correcta: una medida concreta de gestión del tiempo demuestra capacidad de mejora continua, más allá de una disculpa genérica.",
-              "next": "sup3"
-            },
-            {
-              "text": "Le dices que fue un caso aislado y que no volverá a pasar, sin proponer ninguna medida concreta",
-              "correct": false,
-              "feedback": "Una promesa sin un plan de acción concreto no resuelve la causa estructural (sobrecarga de campañas) y es poco convincente ante un supervisor experimentado.",
-              "next": "sup3"
-            }
-          ]
-        },
-        {
-          "id": "sup3",
-          "title": "Cierre de la supervisión",
-          "prompt": "El supervisor concluye la visita. ¿Qué haces después de que se retira?",
-          "options": [
-            {
-              "text": "Documentas los acuerdos y el plan de mejora en tu bitácora, y lo comentas con el resto del equipo del establecimiento para que todos estén alineados",
-              "correct": true,
-              "feedback": "Correcta: documentar y socializar el resultado de la supervisión con el equipo asegura que el compromiso no dependa solo de tu memoria individual y fortalece el trabajo conjunto.",
-              "next": "end"
-            },
-            {
-              "text": "No haces nada adicional, das el tema por cerrado",
-              "correct": false,
-              "feedback": "Sin documentar ni socializar los acuerdos, es probable que el plan de mejora se diluya y el problema reaparezca en la siguiente supervisión.",
-              "next": "end"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "ts-005",
-      "title": "Atención con enfoque intercultural en el parto",
-      "context": "Trabajas en un establecimiento I-3 de una zona alto-andina. Ingresa una gestante quechua-hablante en trabajo de parto, acompañada de su esposo. Ella solicita parto vertical y la presencia de su partera tradicional durante la atención.",
-      "skillsEvaluated": [
-        "Enfoque intercultural",
-        "Comunicación efectiva",
-        "Toma de decisiones con seguridad clínica"
-      ],
-      "startStep": "ic1",
-      "steps": [
-        {
-          "id": "ic1",
-          "title": "La solicitud de la paciente",
-          "prompt": "La gestante, con apoyo de su esposo, solicita parto vertical y que su partera tradicional esté presente en la atención. ¿Cuál es tu primera respuesta?",
-          "options": [
-            {
-              "text": "Le explicas que en el establecimiento solo se atienden partos en posición convencional y que la partera no puede ingresar",
-              "correct": false,
-              "feedback": "Negar de entrada ambas solicitudes, sin evaluar viabilidad clínica, contradice el enfoque intercultural en salud materna que el propio MINSA promueve, y puede generar rechazo a la atención institucional.",
-              "next": "ic1b"
-            },
-            {
-              "text": "Evalúas que no hay contraindicación obstétrica para el parto vertical, aceptas la solicitud y coordinas con el equipo cómo integrar de forma segura la presencia de la partera durante la atención",
-              "correct": true,
-              "feedback": "Correcta: el enfoque intercultural en salud materna busca precisamente articular las prácticas culturales de la paciente con una atención institucional segura, no imponer un protocolo único ni negar la atención.",
-              "next": "ic2"
-            }
-          ]
-        },
-        {
-          "id": "ic1b",
-          "title": "Reconsiderando el enfoque",
-          "prompt": "Notas que tu primera respuesta generó desconfianza en la pareja. ¿Qué haces para reencauzar la situación?",
-          "options": [
-            {
-              "text": "Evalúas si hay contraindicación clínica real para el parto vertical, y de no haberla, aceptas la solicitud coordinando con el equipo la presencia segura de la partera",
-              "correct": true,
-              "feedback": "Correcta: aún es posible corregir el rumbo evaluando objetivamente la viabilidad clínica y articulando la práctica cultural solicitada con la seguridad de la atención.",
-              "next": "ic2"
-            }
-          ]
-        },
-        {
-          "id": "ic2",
-          "title": "Durante el trabajo de parto",
-          "prompt": "Durante el trabajo de parto, la partera sugiere aplicar una infusión de hierbas a la gestante para 'acelerar' el parto. ¿Qué haces?",
-          "options": [
-            {
-              "text": "Permites cualquier práctica que la partera proponga sin evaluarla, para no generar conflicto cultural",
-              "correct": false,
-              "feedback": "El respeto al enfoque intercultural no significa ceder toda decisión clínica; algunas sustancias pueden interactuar con el manejo obstétrico o representar riesgo, y deben evaluarse antes de permitirse.",
-              "next": "ic3"
-            },
-            {
-              "text": "Dialogas con respeto explicando qué prácticas son seguras de integrar y cuáles podrían representar un riesgo para la madre o el bebé en ese momento específico, buscando un acuerdo",
-              "correct": true,
-              "feedback": "Correcta: el diálogo intercultural implica explicar con respeto los límites de seguridad clínica sin descalificar la práctica tradicional de plano, buscando puntos de acuerdo posibles.",
-              "next": "ic3"
-            }
-          ]
-        },
-        {
-          "id": "ic3",
-          "title": "Nacimiento y cierre",
-          "prompt": "El parto vertical se completa sin complicaciones, con la partera presente de forma coordinada. ¿Qué haces al finalizar?",
-          "options": [
-            {
-              "text": "Registras la atención incluyendo el enfoque intercultural aplicado, sin mencionar detalles que puedan generar prejuicio en el registro clínico",
-              "correct": true,
-              "feedback": "Correcta: documentar la atención con enfoque intercultural de forma profesional y respetuosa deja constancia de una buena práctica, útil para la continuidad del cuidado y como precedente institucional.",
-              "next": "end"
-            },
-            {
-              "text": "No registras las particularidades interculturales de la atención por considerarlas irrelevantes para la historia clínica",
-              "correct": false,
-              "feedback": "Omitir el enfoque intercultural aplicado pierde información valiosa para la continuidad del cuidado y para sistematizar buenas prácticas institucionales replicables.",
-              "next": "end"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "ts-006",
-      "title": "Gestión local ante un brote de EDA",
-      "context": "En tu jurisdicción rural, en 3 días se han presentado 12 casos de enfermedad diarreica aguda (EDA) en niños menores de 5 años, varios de la misma zona. Cuentas con recursos limitados y debes coordinar la respuesta local.",
-      "skillsEvaluated": [
-        "Vigilancia epidemiológica",
-        "Coordinación intersectorial",
-        "Gestión de recursos limitados"
-      ],
-      "startStep": "b1",
-      "steps": [
-        {
-          "id": "b1",
-          "title": "Primera acción",
-          "prompt": "Al identificar el patrón de casos, ¿cuál es tu primera acción como responsable del establecimiento?",
-          "options": [
-            {
-              "text": "Notificar de inmediato el evento a la red de salud como posible brote, iniciando la investigación epidemiológica",
-              "correct": true,
-              "feedback": "Correcta: ante un incremento inusual de casos relacionados en tiempo y espacio, la notificación inmediata activa los recursos de apoyo de la red y formaliza la respuesta como brote.",
-              "next": "b2"
-            },
-            {
-              "text": "Esperar una semana más para confirmar que realmente es un brote antes de notificar",
-              "correct": false,
-              "feedback": "Esperar retrasa la respuesta y el apoyo de la red; la notificación debe ser oportuna ante la sola sospecha de un evento inusual, no tras la confirmación tardía.",
-              "next": "b1"
-            }
-          ]
-        },
-        {
-          "id": "b2",
-          "title": "Investigación de la fuente",
-          "prompt": "Notificas el evento. Mientras llega apoyo de la red, ¿qué investigas de forma prioritaria en el terreno?",
-          "options": [
-            {
-              "text": "La posible fuente común: agua de consumo, alimentos compartidos en algún evento reciente, o contacto entre los casos",
-              "correct": true,
-              "feedback": "Correcta: identificar la fuente común orienta la medida de control más efectiva (ej. tratamiento de agua, retiro de un alimento contaminado) en lugar de solo tratar casos aislados.",
-              "next": "b3"
-            },
-            {
-              "text": "Solo tratar a cada niño que llega, sin investigar el origen común del brote",
-              "correct": false,
-              "feedback": "Tratar únicamente los casos sin investigar la fuente permite que el brote continúe expandiéndose, ya que no se interviene sobre la causa.",
-              "next": "b3"
-            }
-          ]
-        },
-        {
-          "id": "b3",
-          "title": "Recursos limitados",
-          "prompt": "Confirmas que el agua de un reservorio comunitario está contaminada. Tu establecimiento tiene recursos limitados de personal y suministros. ¿Qué haces?",
-          "options": [
-            {
-              "text": "Coordinas con la municipalidad y otros sectores (educación, agua y saneamiento) para intervenir la fuente de agua, mientras priorizas la atención de los casos más graves con el personal disponible",
-              "correct": true,
-              "feedback": "Correcta: la respuesta a un brote con recursos limitados requiere coordinación intersectorial real (municipio, saneamiento) además de la priorización clínica, no puede resolverse solo desde el establecimiento de salud.",
-              "next": "b4"
-            },
-            {
-              "text": "Intentas resolver todo (tratamiento de agua y atención clínica) únicamente con el personal de tu establecimiento",
-              "correct": false,
-              "feedback": "Asumir toda la respuesta sin articular con otros sectores sobrecarga innecesariamente al establecimiento y retrasa la solución de la causa raíz (la fuente de agua), que excede tu competencia exclusiva.",
-              "next": "b4"
-            }
-          ]
-        },
-        {
-          "id": "b4",
-          "title": "Cierre del brote",
-          "prompt": "Tras una semana de intervención coordinada, los casos nuevos disminuyen significativamente. ¿Qué haces para el cierre del evento?",
-          "options": [
-            {
-              "text": "Elaboras un informe final de la investigación epidemiológica con las medidas adoptadas y lecciones aprendidas, y lo socializas con la red y la comunidad",
-              "correct": true,
-              "feedback": "Correcta: documentar y socializar el cierre del brote, con lecciones aprendidas, fortalece la respuesta institucional ante futuros eventos similares y mantiene informada a la comunidad.",
-              "next": "end"
-            },
-            {
-              "text": "Das por cerrado el caso sin documentación formal, ya que los casos nuevos disminuyeron",
-              "correct": false,
-              "feedback": "Sin un informe formal, se pierde la trazabilidad del evento y la oportunidad de sistematizar lecciones aprendidas para la vigilancia futura de la zona.",
-              "next": "end"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "ts-007",
-      "title": "Del tamizaje a la derivación: consumo de sustancias",
-      "context": "Durante una consulta general en tu establecimiento I-2, atiendes a un varón de 29 años por un motivo no relacionado. Durante la conversación notas señales de posible consumo problemático de sustancias.",
-      "skillsEvaluated": [
-        "Detección oportuna",
-        "Uso correcto de formatos oficiales",
-        "Ruta de derivación en salud mental"
-      ],
-      "startStep": "d1",
-      "steps": [
-        {
-          "id": "d1",
-          "title": "Detección durante la consulta",
-          "prompt": "El paciente menciona de forma casual que 'últimamente ha estado tomando más de lo normal para dormir'. ¿Qué haces?",
-          "options": [
-            {
-              "text": "Continúas solo con el motivo de consulta original, sin explorar más el comentario",
-              "correct": false,
-              "feedback": "El tamizaje de consumo de sustancias debe aplicarse de forma sistemática ante cualquier señal, no solo cuando el consumo es evidente; dejarlo pasar pierde la oportunidad de detección oportuna.",
-              "next": "d1"
-            },
-            {
-              "text": "Aplicas el tamizaje breve de consumo de sustancias como parte de la atención integral",
-              "correct": true,
-              "feedback": "Correcta: toda señal de consumo, por casual que parezca, amerita aplicar el tamizaje sistemático — es exactamente el tipo de detección oportuna que se busca en el primer nivel.",
-              "next": "d2",
-              "practiceDocId": "adi-001"
-            }
-          ]
-        },
-        {
-          "id": "d2",
-          "title": "Resultado del tamizaje",
-          "prompt": "Tras aplicar el tamizaje (que acabas de practicar), el paciente reporta consumo diario de alcohol con tolerancia aumentada y malestar cuando no bebe. Esto clasifica como riesgo alto con signos de dependencia. ¿Qué corresponde hacer?",
-          "options": [
-            {
-              "text": "Indicar solo consejería motivacional breve y continuar el seguimiento únicamente en tu establecimiento",
-              "correct": false,
-              "feedback": "Un riesgo alto con signos de dependencia excede el manejo de intervención breve en el primer nivel; requiere derivación a un servicio especializado.",
-              "next": "d2"
-            },
-            {
-              "text": "Derivar al paciente al Centro de Salud Mental Comunitario (CSMC) mediante la Hoja de Referencia correspondiente",
-              "correct": true,
-              "feedback": "Correcta: el riesgo alto con signos de dependencia amerita derivación formal a un servicio especializado en salud mental, documentada con el formato oficial.",
-              "next": "d3",
-              "practiceDocId": "ref-001"
-            }
-          ]
-        },
-        {
-          "id": "d3",
-          "title": "Coordinación previa",
-          "prompt": "Ya practicaste el llenado de la Hoja de Referencia. Antes de entregársela al paciente para su traslado, ¿qué haces?",
-          "options": [
-            {
-              "text": "Coordinas telefónicamente con el CSMC para confirmar que el paciente será recibido, tal como se plantea en el flujograma de atención en consumo de sustancias",
-              "correct": true,
-              "feedback": "Correcta: la coordinación previa con el establecimiento receptor es un paso explícito del flujograma de derivación en consumo de sustancias, y evita que el paciente abandone el proceso entre un establecimiento y otro.",
-              "next": "end"
-            },
-            {
-              "text": "Entregas la hoja de referencia al paciente y le indicas que vaya cuando pueda, sin coordinar previamente",
-              "correct": false,
-              "feedback": "Sin coordinación previa aumenta significativamente el riesgo de que el paciente no llegue a ser atendido o abandone el proceso de derivación.",
-              "next": "end"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "ts-008",
-      "title": "Riesgo suicida en un adolescente durante la consulta",
-      "context": "Atiendes a una adolescente de 15 años que acude acompañada por su madre y su profesor, tras presentar cortes profundos en la muñeca con sangrado considerable.",
-      "skillsEvaluated": [
-        "Evaluación de riesgo suicida",
-        "Manejo de crisis",
-        "Consentimiento y confidencialidad en menores"
-      ],
-      "startStep": "rs1",
-      "steps": [
-        {
-          "id": "rs1",
-          "title": "Primer contacto",
-          "prompt": "Tras estabilizar la herida en tópico, le preguntas cómo se hizo las lesiones. Ella responde: 'quiero morirme, mi vida no me interesa'. ¿Cuál es tu prioridad inmediata?",
-          "options": [
-            {
-              "text": "Continuar solo con la curación de la herida y programar una cita de seguimiento en psicología para otro día",
-              "correct": false,
-              "feedback": "Una expresión directa de ideación suicida activa exige evaluación de riesgo inmediata, no diferir la atención de salud mental a otro día.",
-              "next": "rs1b"
-            },
-            {
-              "text": "Realizar una evaluación breve del riesgo suicida en ese momento (ideación, plan, intento previo, factores protectores) y determinar si requiere referencia urgente",
-              "correct": true,
-              "feedback": "Correcta: ante una expresión directa de ideación suicida con autolesión reciente, la evaluación de riesgo inmediata es prioritaria, ya que determina el nivel de urgencia de la respuesta.",
-              "next": "rs2"
-            }
-          ]
-        },
-        {
-          "id": "rs1b",
-          "title": "Reconsiderando la urgencia",
-          "prompt": "Te das cuenta de que diferir la atención de salud mental no es adecuado ante una expresión directa de ideación suicida con autolesión reciente. ¿Qué haces ahora?",
-          "options": [
-            {
-              "text": "Realizar de inmediato una evaluación breve del riesgo suicida (ideación, plan, intento previo, factores protectores)",
-              "correct": true,
-              "feedback": "Correcta: aún es momento de corregir el rumbo y realizar la evaluación de riesgo que la situación exige de forma inmediata.",
-              "next": "rs2"
-            }
-          ]
-        },
-        {
-          "id": "rs2",
-          "title": "Determinando la referencia",
-          "prompt": "La evaluación identifica ideación suicida activa con un intento reciente (los cortes) y escaso soporte familiar percibido por la adolescente. Determinas que el caso requiere referencia urgente. ¿Quién debe firmar el consentimiento informado para esta referencia?",
-          "options": [
-            {
-              "text": "La madre, como representante legal de la menor de edad",
-              "correct": true,
-              "feedback": "Correcta: al ser menor de edad, corresponde a su madre (representante legal presente) firmar el consentimiento informado para la referencia, no la propia adolescente ni el profesor.",
-              "next": "rs3"
-            },
-            {
-              "text": "La propia adolescente, ya que es su cuerpo y su decisión",
-              "correct": false,
-              "feedback": "Al tratarse de una menor de edad, el consentimiento informado para procedimientos y referencias formales debe ser firmado por su representante legal (madre, padre o tutor), sin perjuicio de explicarle también a ella lo que ocurrirá.",
-              "next": "end"
-            }
-          ]
-        },
-        {
-          "id": "rs3",
-          "title": "Comunicación con la familia",
-          "prompt": "Debes informar a la madre sobre la gravedad de la situación y la necesidad de referencia urgente. ¿Cómo abordas esta conversación?",
-          "options": [
-            {
-              "text": "Le informas de forma clara y directa sobre el riesgo identificado, sin minimizarlo ni alarmarla desproporcionadamente, y le explicas los siguientes pasos concretos",
-              "correct": true,
-              "feedback": "Correcta: la comunicación con la familia en una crisis de riesgo suicida debe ser clara y honesta sobre la gravedad real, evitando tanto minimizar el riesgo como generar pánico innecesario, priorizando la acción concreta.",
-              "next": "end"
-            },
-            {
-              "text": "Minimizas la situación frente a la madre para no alarmarla, diciendo que 'son cosas de la edad'",
-              "correct": false,
-              "feedback": "Minimizar un riesgo suicida real ante la familia es peligroso: impide que comprendan la urgencia y puede retrasar la búsqueda de ayuda especializada oportuna.",
-              "next": "end"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "ts-009",
-      "title": "Queja formal de un usuario por maltrato",
-      "context": "Un usuario se acerca a tu establecimiento para presentar un reclamo: refiere que un trabajador no respetó el orden de llegada y lo trató de forma descortés durante su atención.",
-      "skillsEvaluated": [
-        "Manejo de quejas y reclamos",
-        "Comunicación institucional",
-        "Mejora continua de la calidad"
-      ],
-      "startStep": "q1",
-      "steps": [
-        {
-          "id": "q1",
-          "title": "Recepción del reclamo",
-          "prompt": "El usuario está visiblemente molesto y exige hablar con 'el responsable'. ¿Cuál es tu primera acción como encargado de turno?",
-          "options": [
-            {
-              "text": "Le dices que ese no es tu problema y que hable directamente con la persona que lo atendió",
-              "correct": false,
-              "feedback": "Derivar la responsabilidad sin escuchar el reclamo desconoce el procedimiento institucional de quejas y probablemente escale el malestar del usuario.",
-              "next": "q1b"
-            },
-            {
-              "text": "Lo escuchas con atención, sin interrumpir, y le explicas el procedimiento formal para registrar su queja",
-              "correct": true,
-              "feedback": "Correcta: escuchar activamente y encauzar el reclamo por el procedimiento formal (queja) valida la experiencia del usuario y asegura que quede documentado para su seguimiento.",
-              "next": "q2"
-            }
-          ]
-        },
-        {
-          "id": "q1b",
-          "title": "Reencauzando la atención",
-          "prompt": "Notas que tu primera respuesta aumentó el malestar del usuario. ¿Qué haces ahora?",
-          "options": [
-            {
-              "text": "Te disculpas por la demora en atenderlo, lo escuchas con atención y le explicas el procedimiento formal de queja",
-              "correct": true,
-              "feedback": "Correcta: aún se puede reencauzar la situación con una escucha activa y encauzando el reclamo por el procedimiento institucional correspondiente.",
-              "next": "q2"
-            }
-          ]
-        },
-        {
-          "id": "q2",
-          "title": "Registro del procedimiento",
-          "prompt": "¿Qué diferencia debes explicarle al usuario entre una 'queja' y otros procedimientos como la 'sugerencia' o la 'consulta'?",
-          "options": [
-            {
-              "text": "Que la queja es específicamente el procedimiento para reclamar por un maltrato o mala atención recibida, distinto de una sugerencia de mejora o una simple consulta de información",
-              "correct": true,
-              "feedback": "Correcta: diferenciar claramente el tipo de procedimiento (queja por maltrato, no sugerencia ni consulta) asegura que el reclamo se canalice y trate con la seriedad correspondiente.",
-              "next": "q3"
-            },
-            {
-              "text": "Que da igual el nombre, todos los procedimientos se manejan de la misma forma",
-              "correct": false,
-              "feedback": "Cada procedimiento (queja, sugerencia, consulta) tiene un manejo y seguimiento institucional distinto; tratarlos como equivalentes puede diluir la seriedad de un reclamo por maltrato.",
-              "next": "end"
-            }
-          ]
-        },
-        {
-          "id": "q3",
-          "title": "Cierre y seguimiento",
-          "prompt": "El usuario registra su queja formalmente. ¿Qué haces con el trabajador involucrado y con el proceso interno?",
-          "options": [
-            {
-              "text": "Conversas con el trabajador para conocer su versión, documentas el hecho y programas una retroalimentación orientada a la mejora del trato al usuario, sin exponerlo públicamente",
-              "correct": true,
-              "feedback": "Correcta: el manejo interno de una queja debe incluir escuchar ambas versiones y una retroalimentación constructiva orientada a la mejora, preservando la dignidad del trabajador mientras se atiende el problema real.",
-              "next": "end"
-            },
-            {
-              "text": "Ignoras el tema con el trabajador para evitar conflictos internos",
-              "correct": false,
-              "feedback": "No abordar la queja con el trabajador involucrado deja sin resolver la causa del problema y puede repetirse con otros usuarios, además de incumplir el procedimiento de gestión de la calidad.",
-              "next": "end"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "ts-010",
-      "title": "Escuela saludable: coordinación con el sector educación",
-      "context": "Identificas un alto índice de malnutrición y anemia en los niños de la institución educativa cercana a tu establecimiento. Debes coordinar una intervención con el director y los docentes del colegio.",
-      "skillsEvaluated": [
-        "Coordinación intersectorial",
-        "Promoción de la salud",
-        "Trabajo con determinantes sociales"
-      ],
-      "startStep": "es1",
-      "steps": [
-        {
-          "id": "es1",
-          "title": "Primer acercamiento",
-          "prompt": "Antes de proponer cualquier intervención, ¿qué haces primero al advertir esta situación al director del colegio?",
-          "options": [
-            {
-              "text": "Le exiges que implemente cambios inmediatos en el kiosco escolar bajo amenaza de reportarlo a la UGEL",
-              "correct": false,
-              "feedback": "Un enfoque impositivo desde el primer contacto deteriora la relación intersectorial necesaria para sostener cualquier intervención de salud escolar en el tiempo.",
-              "next": "es1b"
-            },
-            {
-              "text": "Presentas los hallazgos (índice de malnutrición y anemia) de forma objetiva, y propones trabajar juntos una estrategia conjunta, no impuesta unilateralmente",
-              "correct": true,
-              "feedback": "Correcta: presentar evidencia objetiva y proponer una construcción conjunta con el sector educación es la base de una coordinación intersectorial sostenible.",
-              "next": "es2"
-            }
-          ]
-        },
-        {
-          "id": "es1b",
-          "title": "Reconstruyendo la relación",
-          "prompt": "El director se muestra a la defensiva tras tu primer acercamiento. ¿Qué haces para reencauzar la coordinación?",
-          "options": [
-            {
-              "text": "Presentas los hallazgos de forma objetiva y propones construir juntos una estrategia, reconociendo que la solución requiere del compromiso de ambos sectores",
-              "correct": true,
-              "feedback": "Correcta: aún es posible reconstruir la relación de coordinación mostrando los datos objetivos y una disposición genuina a trabajar en conjunto, en lugar de imponer.",
-              "next": "es2"
-            }
-          ]
-        },
-        {
-          "id": "es2",
-          "title": "Definiendo la estrategia",
-          "prompt": "El director está dispuesto a colaborar. ¿Qué acción es la más pertinente para el nivel local de esta intervención?",
-          "options": [
-            {
-              "text": "Promover kioscos y comedores escolares saludables, junto con tamizaje de anemia y consejería nutricional coordinada con los docentes",
-              "correct": true,
-              "feedback": "Correcta: promover kioscos/comedores saludables junto con tamizaje y consejería es la acción de nivel local que aborda directamente los determinantes identificados, en articulación con el sector educación.",
-              "next": "es3"
-            },
-            {
-              "text": "Solicitar directamente al Ministerio de Educación un cambio de currículo escolar nacional",
-              "correct": false,
-              "feedback": "Un cambio curricular nacional excede completamente el nivel de gestión local del serumista; la acción debe ser proporcional y viable en el ámbito de tu jurisdicción.",
-              "next": "end"
-            }
-          ]
-        },
-        {
-          "id": "es3",
-          "title": "Sostenibilidad de la intervención",
-          "prompt": "La intervención inicia con buena acogida. ¿Qué haces para que no se diluya con el tiempo?",
-          "options": [
-            {
-              "text": "Estableces un cronograma conjunto con fechas de seguimiento y designas puntos focales tanto en el colegio como en el establecimiento de salud",
-              "correct": true,
-              "feedback": "Correcta: un cronograma conjunto con responsables definidos en ambos sectores es lo que sostiene una intervención intersectorial en el tiempo, más allá del entusiasmo inicial.",
-              "next": "end"
-            },
-            {
-              "text": "Confías en que el compromiso verbal inicial será suficiente para que la intervención continúe por sí sola",
-              "correct": false,
-              "feedback": "Sin un cronograma y responsables definidos, las intervenciones intersectoriales tienden a diluirse una vez pasa el entusiasmo inicial de la primera reunión.",
               "next": "end"
             }
           ]
