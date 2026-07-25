@@ -11635,6 +11635,12 @@ window.SERUMS_DATA = {
   ],
   "decrees": [
     {
+      "code": "R.M. N.° 247-2020-MINSA",
+      "title": "Guía Técnica para la Atención de Salud Mental de Personas con Intoxicación Alcohólica",
+      "summary": "Establece los criterios de valoración, diagnóstico y manejo de personas con intoxicación alcohólica en establecimientos de salud, incluyendo el tamizaje con AUDIT-C y la clasificación de gravedad (leve, moderada, grave).",
+      "detail": "Define procedimientos de evaluación y diagnóstico según CIE-10 (F10.0 a F10.8), manejo clínico diferenciado por gravedad de la intoxicación, uso de tiamina y haloperidol según corresponda, y la ruta de referencia/contrarreferencia hacia el Centro de Salud Mental Comunitario (CSMC). El instrumento de tamizaje oficial de esta norma es el AUDIT-C (3 ítems); no incluye AUDIT completo, ASSIST ni CRAFFT."
+    },
+    {
       "code": "D.S. N.° 007-2008-SA",
       "title": "Modificaciones al Reglamento de la Ley N.° 23330",
       "summary": "Ajusta disposiciones del reglamento original del SERUMS.",
@@ -12570,7 +12576,7 @@ window.SERUMS_DATA = {
       "sourceStatus": "criterio_tecnico",
       "category": "Salud mental y adicciones",
       "title": "Ficha de Tamizaje Breve de Consumo de Sustancias",
-      "purpose": "Instrumento de tamizaje aplicado en el primer nivel de atención para identificar el nivel de riesgo asociado al consumo de alcohol, tabaco y otras sustancias, orientando la conducta a seguir (intervención breve o derivación).",
+      "purpose": "Instrumento de tamizaje aplicado en el primer nivel de atención para identificar el nivel de riesgo asociado al consumo de alcohol, tabaco y otras sustancias, orientando la conducta a seguir (intervención breve o derivación). La sección de alcohol usa el AUDIT-C oficial (R.M. N.° 247-2020-MINSA); las demás sustancias no cuentan con instrumento validado en esta norma y se registran con criterio técnico propio.",
       "requiredFields": [
         "Datos de filiación del usuario",
         "Sustancias consultadas (alcohol, tabaco, cannabis, cocaína/PBC, otras)",
@@ -12580,14 +12586,14 @@ window.SERUMS_DATA = {
         "Conducta indicada según nivel de riesgo",
         "Firma del profesional que aplica el tamizaje"
       ],
-      "templateText": "FICHA DE TAMIZAJE BREVE DE CONSUMO DE SUSTANCIAS\nUsuario: ___________ Edad: ___________\nEstablecimiento: ___________\n\nSustancia | Frecuencia últimos 3 meses | Nivel de riesgo\nAlcohol: ___________ | ___________\nTabaco: ___________ | ___________\nCannabis: ___________ | ___________\nCocaína/PBC: ___________ | ___________\nOtras: ___________ | ___________\n\nSignos de consumo problemático/dependencia: ___________\nConducta indicada: ( ) Sin intervención  ( ) Intervención breve  ( ) Derivación a CSMC\nProfesional responsable: ___________ (Firma)\nFecha: ___________",
+      "templateText": "FICHA DE TAMIZAJE BREVE DE CONSUMO DE SUSTANCIAS\nUsuario: ___________ Edad: ___________ Sexo: ___________\nEstablecimiento: ___________\n\nSECCIÓN ALCOHOL — AUDIT-C (oficial, R.M. N.° 247-2020-MINSA)\n1) ¿Con qué frecuencia consume alguna bebida alcohólica?\n   a) Nunca  b) 1 vez o menos al mes  c) 2 a 4 veces al mes  d) 2-3 veces/semana  e) 4+ veces/semana\n2) ¿Cuántas consumiciones suele realizar en un día de consumo normal?\n   a) 1-2  b) 3-4  c) 5-6  d) 7-9  e) 10 o más\n3) ¿Con qué frecuencia toma 6 o más bebidas en una ocasión?\n   a) Nunca  b) Menos de 1 vez al mes  c) Mensualmente  d) Semanalmente  e) A diario o casi a diario\nPuntaje total (0-12): ___________\nPositivo si: Hombres >= 4 puntos | Mujeres >= 3 puntos\n\nSECCIÓN OTRAS SUSTANCIAS (criterio técnico, sin instrumento validado en esta norma)\nSustancia | Frecuencia últimos 3 meses | Nivel de riesgo\nTabaco: ___________ | ___________\nCannabis: ___________ | ___________\nCocaína/PBC: ___________ | ___________\nOtras: ___________ | ___________\n\nSignos de consumo problemático/dependencia: ___________\nConducta indicada: ( ) Sin intervención  ( ) Intervención breve  ( ) Derivación a CSMC\nProfesional responsable: ___________ (Firma)\nFecha: ___________",
       "exampleFilled": "Alcohol: consumo de riesgo moderado (varias veces por semana, sin signos de dependencia) → se indica intervención breve en el establecimiento. Cocaína/PBC: consumo diario con signos de dependencia (tolerancia, síndrome de abstinencia referido) → riesgo alto, se indica derivación a Centro de Salud Mental Comunitario (CSMC).",
       "commonErrors": [
         "Aplicar el tamizaje solo cuando el usuario 'se ve' consumidor, en lugar de integrarlo como práctica sistemática en la consulta",
         "No diferenciar consumo de riesgo (manejable en el primer nivel) de consumo con signos de dependencia (que amerita derivación)",
         "Omitir el registro de la conducta indicada, dejando el caso sin ruta clara de seguimiento"
       ],
-      "relatedNormCodes": [],
+      "relatedNormCodes": ["R.M. N.° 247-2020-MINSA (solo sección alcohol / AUDIT-C)"],
       "practiceScenario": "Un varón de 29 años acude por otro motivo de consulta. Durante el tamizaje refiere consumo diario de pasta básica de cocaína desde hace 8 meses, con necesidad de aumentar la cantidad para sentir el mismo efecto (tolerancia) y malestar intenso cuando no consume (síndrome de abstinencia). Redacta la ficha de tamizaje y define la conducta a seguir."
     },
     {
