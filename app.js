@@ -1168,10 +1168,9 @@ function renderAssistantPractice(docId) {
   pageSubtitle.textContent = "Redacta el documento a partir del caso planteado y luego compáralo con el modelo.";
 
   const st = assistantPracticeState[docId] || { attempts: 0, draft: "", revealed: false };
-  const fromTraining = !!pendingTrainingResume;
 
   root.innerHTML = `
-    <button id="back-to-assistant-btn" class="toggle" style="margin-bottom:12px;margin-top:0">${fromTraining ? "← Volver al escenario de entrenamiento" : "← Volver a Asistente Profesional"}</button>
+    <button id="back-to-assistant-btn" class="toggle" style="margin-bottom:12px;margin-top:0">← Volver a Asistente Profesional</button>
     <section class="two-col">
       <div class="panel">
         <div class="badge">${doc.category}</div>
@@ -1199,22 +1198,11 @@ function renderAssistantPractice(docId) {
         <ul style="margin:6px 0 12px 18px;color:#8A2A24">
           ${doc.commonErrors.map(e => `<li>${e}</li>`).join("")}
         </ul>
-        ${fromTraining && st.revealed ? `<button class="action-btn" id="resume-training-btn" style="margin-top:8px">Continuar el escenario →</button>` : ""}
       </div>
     </section>
   `;
 
-  document.getElementById("back-to-assistant-btn").addEventListener("click", () => {
-    if (fromTraining) {
-      const resume = pendingTrainingResume;
-      pendingTrainingResume = null;
-      activeTrainingScenario = data.trainingScenarios.find(s => s.id === resume.scenarioId);
-      activeTrainingStepId = resume.nextStepId;
-      renderTrainingStep();
-    } else {
-      renderAssistant();
-    }
-  });
+  document.getElementById("back-to-assistant-btn").addEventListener("click", renderAssistant);
 
   const draft = document.getElementById("practice-draft");
   document.getElementById("compare-btn").addEventListener("click", () => {
@@ -1225,23 +1213,11 @@ function renderAssistantPractice(docId) {
     saveProgress("assistantPracticeState", assistantPracticeState);
     renderAssistantPractice(docId);
   });
-
-  const resumeBtn = document.getElementById("resume-training-btn");
-  if (resumeBtn) {
-    resumeBtn.addEventListener("click", () => {
-      const resume = pendingTrainingResume;
-      pendingTrainingResume = null;
-      activeTrainingScenario = data.trainingScenarios.find(s => s.id === resume.scenarioId);
-      activeTrainingStepId = resume.nextStepId;
-      renderTrainingStep();
-    });
-  }
 }
 
 let trainingState = loadProgress("trainingState", {});
 let activeTrainingScenario = null;
 let activeTrainingStepId = null;
-let pendingTrainingResume = null;
 
 function renderTraining() {
   pageTitle.textContent = "Entrenamiento SERUMS";
@@ -1334,23 +1310,11 @@ function renderTrainingStep() {
           <p>${opt.feedback}</p>
         </div>
       `;
-      if (opt.practiceDocId) {
-        const doc = data.assistantDocs.find(d => d.id === opt.practiceDocId);
-        document.getElementById("training-actions").innerHTML = `
-          <p style="color:#5B6E6A;margin-bottom:8px">Antes de continuar, practica el llenado real de este formato:</p>
-          <button class="action-btn" id="practice-from-training-btn">Practicar: ${doc ? doc.title : "formato"} →</button>
-        `;
-        document.getElementById("practice-from-training-btn").addEventListener("click", () => {
-          pendingTrainingResume = { scenarioId: activeTrainingScenario.id, nextStepId: opt.next };
-          renderAssistantPractice(opt.practiceDocId);
-        });
-      } else {
-        document.getElementById("training-actions").innerHTML = `<button class="action-btn" id="next-step-btn">Continuar →</button>`;
-        document.getElementById("next-step-btn").addEventListener("click", () => {
-          activeTrainingStepId = opt.next;
-          renderTrainingStep();
-        });
-      }
+      document.getElementById("training-actions").innerHTML = `<button class="action-btn" id="next-step-btn">Continuar →</button>`;
+      document.getElementById("next-step-btn").addEventListener("click", () => {
+        activeTrainingStepId = opt.next;
+        renderTrainingStep();
+      });
     });
   });
 }
@@ -1469,8 +1433,44 @@ function renderView(view) {
   if (view === "decrees") renderDecrees();
   if (view === "resources") renderResources();
   if (view === "examRegistry") renderExamRegistry();
+  if (view === "screeningTools") renderScreeningTools();
   setActive(view);
   updateBadges();
+}
+
+function renderScreeningTools() {
+  pageTitle.textContent = "Clinical Screening Toolkit";
+  pageSubtitle.textContent = "Instrumentos de tamizaje clínico validados, con registro automático del caso para investigación epidemiológica.";
+  const tools = [
+    {
+      name: "AUDIT",
+      badge: "10 ítems · OMS 2001",
+      desc: "Identificación de Trastornos por Consumo de Alcohol. Disponible en español y quechua ayacuchano validado (Douglas Hospital Research Centre / IPAZ).",
+      url: "https://4-4-1941.github.io/AUDIT-INTEACTIVO/"
+    },
+    {
+      name: "GAD-7",
+      badge: "7 ítems · Spitzer et al., 2006",
+      desc: "Escala de Ansiedad Generalizada. Versión en castellano.",
+      url: "https://4-4-1941.github.io/AUDIT-INTEACTIVO/gad7.html"
+    }
+  ];
+  root.innerHTML = `
+    <div class="norm-list">
+      ${tools.map(t => `
+        <article class="norm-card">
+          <span>${t.badge}</span>
+          <h3>${t.name}</h3>
+          <p>${t.desc}</p>
+          <button class="action-btn" data-url="${t.url}" style="margin-top:10px">Abrir ${t.name} →</button>
+        </article>
+      `).join("")}
+    </div>
+    <p style="margin-top:16px;color:#5B6E6A;font-size:13px">Cada aplicación queda registrada con datos demográficos anonimizados (sexo, edad, estado civil, departamento) en la base de datos SERUMS.</p>
+  `;
+  root.querySelectorAll("[data-url]").forEach(btn => {
+    btn.addEventListener("click", () => window.open(btn.dataset.url, "_blank"));
+  });
 }
 
 navButtons.forEach(btn => btn.addEventListener("click", () => {
