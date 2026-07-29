@@ -1459,6 +1459,12 @@ function renderScreeningTools() {
       badge: "ASRS-v1.1 · Vanderbilt · SNAP-IV",
       desc: "Tamizaje de TDAH en adultos (ASRS-v1.1, OMS) y niños (Vanderbilt Padres o SNAP-IV 26, a elegir al ingresar).",
       url: "https://4-4-1941.github.io/AUDIT-INTEACTIVO/tdah.html"
+    },
+    {
+      name: "Nutrición",
+      badge: "Calculadora clínica",
+      desc: "IMC, peso ideal (Devine/Robinson/Miller/Hamwi) y gasto energético (Harris-Benedict/Mifflin-St Jeor). Herramienta de apoyo para el profesional.",
+      url: "https://4-4-1941.github.io/AUDIT-INTEACTIVO/nutricion.html"
     }
   ];
   root.innerHTML = `
