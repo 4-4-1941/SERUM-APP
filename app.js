@@ -1453,6 +1453,12 @@ function renderScreeningTools() {
       badge: "7 ítems · Spitzer et al., 2006",
       desc: "Escala de Ansiedad Generalizada. Versión en castellano.",
       url: "https://4-4-1941.github.io/AUDIT-INTEACTIVO/gad7.html"
+    },
+    {
+      name: "TDAH",
+      badge: "ASRS-v1.1 · Vanderbilt · SNAP-IV",
+      desc: "Tamizaje de TDAH en adultos (ASRS-v1.1, OMS) y niños (Vanderbilt Padres o SNAP-IV 26, a elegir al ingresar).",
+      url: "https://4-4-1941.github.io/AUDIT-INTEACTIVO/tdah.html"
     }
   ];
   root.innerHTML = `
