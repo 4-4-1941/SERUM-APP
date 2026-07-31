@@ -1443,9 +1443,9 @@ function renderScreeningTools() {
   pageSubtitle.textContent = "Instrumentos de tamizaje clínico validados, con registro automático del caso para investigación epidemiológica.";
   const tools = [
     {
-      name: "AUDIT",
+      name: "AUDIT / AUDIT-C",
       badge: "10 ítems · OMS 2001",
-      desc: "Identificación de Trastornos por Consumo de Alcohol. Disponible en español y quechua ayacuchano validado (Douglas Hospital Research Centre / IPAZ).",
+      desc: "Identificación de Trastornos por Consumo de Alcohol. Incluye modo de tamizaje rápido AUDIT-C (3 preguntas, con opción de continuar al AUDIT completo si sale positivo). Disponible en español y quechua ayacuchano validado (Douglas Hospital Research Centre / IPAZ).",
       url: "https://4-4-1941.github.io/AUDIT-INTEACTIVO/"
     },
     {
@@ -1453,6 +1453,18 @@ function renderScreeningTools() {
       badge: "7 ítems · Spitzer et al., 2006",
       desc: "Escala de Ansiedad Generalizada. Versión en castellano.",
       url: "https://4-4-1941.github.io/AUDIT-INTEACTIVO/gad7.html"
+    },
+    {
+      name: "PHQ-9",
+      badge: "9 ítems · Kroenke, Spitzer & Williams, 2001",
+      desc: "Cuestionario de Salud del Paciente para depresión. Corte de cribado preventivo MINSA ≥5 (además del corte internacional ≥10). Incluye alerta clínica en el ítem de ideación suicida/autolesión.",
+      url: "https://4-4-1941.github.io/AUDIT-INTEACTIVO/phq9.html"
+    },
+    {
+      name: "WAST",
+      badge: "2 ítems · Brown et al., 1996",
+      desc: "Tamizaje corto de violencia de pareja hacia la mujer (Woman Abuse Screening Tool). Versión validada en español (Plazaola-Castaño et al., 2008).",
+      url: "https://4-4-1941.github.io/AUDIT-INTEACTIVO/wast.html"
     },
     {
       name: "TDAH",
