@@ -1,5 +1,5 @@
 window.SERUMS_DATA = {
-  "lastUpdated": "2026-07-25",
+  "lastUpdated": "2026-08-01",
   "cases": [
     {
       "id": 1,
@@ -8337,7 +8337,7 @@ window.SERUMS_DATA = {
       "id": 362,
       "career": "Trabajo Social",
       "block": "Gestión",
-      "title": "Articulación con redes de protección social",
+      "title": "Articulación con CEM ante violencia familiar",
       "level": "I-2",
       "specialty": "Trabajo Social",
       "tags": [
@@ -9487,7 +9487,7 @@ window.SERUMS_DATA = {
       "id": 412,
       "career": "Farmacia y Bioquímica",
       "block": "Cuidado integral",
-      "title": "Interacción medicamentosa relevante",
+      "title": "Interacción warfarina–AINE de venta libre",
       "level": "I-2",
       "specialty": "Farmacia y Bioquímica",
       "tags": [
