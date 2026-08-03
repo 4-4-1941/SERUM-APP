@@ -236,7 +236,7 @@ window.SERUMS_DATA = {
       "career": "Medicina",
       "block": "Salud pública",
       "title": "Brote diarreico en comunidad",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Medicina / Salud Pública",
       "tags": [
         "vigilancia",
@@ -838,7 +838,7 @@ window.SERUMS_DATA = {
       "career": "Medicina",
       "block": "Cuidado integral",
       "title": "Neumonía en lactante",
-      "level": "I-2",
+      "level": "I-4",
       "specialty": "Medicina / Enfermería",
       "tags": [
         "IRA",
@@ -861,7 +861,7 @@ window.SERUMS_DATA = {
       "career": "Medicina",
       "block": "Cuidado integral",
       "title": "Diabetes descompensada",
-      "level": "I-3",
+      "level": "I-4",
       "specialty": "Medicina",
       "tags": [
         "diabetes",
@@ -907,7 +907,7 @@ window.SERUMS_DATA = {
       "career": "Medicina",
       "block": "Cuidado integral",
       "title": "Mordedura de serpiente en zona rural",
-      "level": "I-3",
+      "level": "I-4",
       "specialty": "Medicina",
       "tags": [
         "ofidismo",
@@ -930,7 +930,7 @@ window.SERUMS_DATA = {
       "career": "Medicina",
       "block": "Salud pública",
       "title": "Intoxicación alimentaria colectiva",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Medicina / Salud Pública",
       "tags": [
         "ETA",
@@ -953,7 +953,7 @@ window.SERUMS_DATA = {
       "career": "Medicina",
       "block": "Gestión",
       "title": "Herida por arma blanca en zona rural",
-      "level": "I-3",
+      "level": "I-4",
       "specialty": "Medicina / Gestión",
       "tags": [
         "trauma",
@@ -976,7 +976,7 @@ window.SERUMS_DATA = {
       "career": "Medicina",
       "block": "Cuidado integral",
       "title": "Anemia severa en gestante",
-      "level": "I-3",
+      "level": "I-4",
       "specialty": "Medicina / Obstetricia",
       "tags": [
         "anemia",
@@ -1000,7 +1000,7 @@ window.SERUMS_DATA = {
       "career": "Medicina",
       "block": "Cuidado integral",
       "title": "Crisis hipertensiva",
-      "level": "I-3",
+      "level": "I-4",
       "specialty": "Medicina",
       "tags": [
         "hipertensión",
@@ -1023,7 +1023,7 @@ window.SERUMS_DATA = {
       "career": "Medicina",
       "block": "Cuidado integral",
       "title": "Deshidratación por diarrea en niño",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Medicina / Enfermería",
       "tags": [
         "diarrea",
@@ -1627,7 +1627,7 @@ window.SERUMS_DATA = {
       "career": "Medicina",
       "block": "Salud pública",
       "title": "Sensibilidad de una prueba de tamizaje",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Medicina / Salud Pública",
       "tags": [
         "sensibilidad",
@@ -1673,7 +1673,7 @@ window.SERUMS_DATA = {
       "career": "Medicina",
       "block": "Salud pública",
       "title": "Niveles de prevención ante un brote respiratorio",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Medicina / Salud Pública",
       "tags": [
         "niveles de prevención",
@@ -2018,7 +2018,7 @@ window.SERUMS_DATA = {
       "career": "Medicina",
       "block": "Cuidado integral",
       "title": "Convulsión febril en un lactante",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Medicina",
       "tags": [
         "convulsión febril",
@@ -2041,7 +2041,7 @@ window.SERUMS_DATA = {
       "career": "Medicina",
       "block": "Cuidado integral",
       "title": "Sospecha de apendicitis aguda en zona rural",
-      "level": "I-3",
+      "level": "I-4",
       "specialty": "Medicina",
       "tags": [
         "abdomen agudo",
@@ -2505,7 +2505,7 @@ window.SERUMS_DATA = {
       "career": "Medicina",
       "block": "Cuidado integral",
       "title": "Reacción adversa a tratamiento antituberculoso",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Medicina",
       "tags": [
         "tuberculosis",
@@ -2574,7 +2574,7 @@ window.SERUMS_DATA = {
       "career": "Medicina",
       "block": "Cuidado integral",
       "title": "Signo de alarma en tamizaje de cáncer de mama",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Medicina",
       "tags": [
         "cáncer de mama",
@@ -4669,7 +4669,7 @@ window.SERUMS_DATA = {
       "career": "Medicina",
       "block": "Cuidado integral",
       "title": "Signos de alarma en dengue",
-      "level": "I-2",
+      "level": "I-4",
       "specialty": "Medicina",
       "tags": [
         "dengue",
@@ -4692,7 +4692,7 @@ window.SERUMS_DATA = {
       "career": "Medicina",
       "block": "Cuidado integral",
       "title": "Exacerbación de EPOC",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Medicina",
       "tags": [
         "EPOC",
@@ -4715,7 +4715,7 @@ window.SERUMS_DATA = {
       "career": "Medicina",
       "block": "Cuidado integral",
       "title": "Hipoglucemia severa en paciente diabético",
-      "level": "I-2",
+      "level": "I-4",
       "specialty": "Medicina",
       "tags": [
         "hipoglucemia",
@@ -4738,7 +4738,7 @@ window.SERUMS_DATA = {
       "career": "Medicina",
       "block": "Cuidado integral",
       "title": "Cefalea con signos de alarma",
-      "level": "I-3",
+      "level": "I-4",
       "specialty": "Medicina",
       "tags": [
         "cefalea",
@@ -6006,7 +6006,7 @@ window.SERUMS_DATA = {
       "career": "Medicina",
       "block": "Salud pública",
       "title": "Dengue con signos de alarma",
-      "level": "I-3",
+      "level": "I-4",
       "specialty": "Salud Pública / DPCEM",
       "tags": [
         "dengue",
@@ -6627,7 +6627,7 @@ window.SERUMS_DATA = {
       "career": "Medicina",
       "block": "Cuidado integral",
       "title": "Esquema de tratamiento para sífilis latente tardía",
-      "level": "I-3",
+      "level": "I-2",
       "specialty": "Medicina / Infectología",
       "tags": [
         "sífilis",
@@ -6789,7 +6789,7 @@ window.SERUMS_DATA = {
       "career": "Medicina",
       "block": "Cuidado integral",
       "title": "Manejo de preeclampsia con criterios de severidad",
-      "level": "I-3",
+      "level": "I-4",
       "specialty": "Medicina / Salud materna",
       "tags": [
         "preeclampsia",
@@ -6973,7 +6973,7 @@ window.SERUMS_DATA = {
       "career": "Medicina",
       "block": "Salud pública",
       "title": "Notificación de fiebre amarilla selvática",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Medicina / Vigilancia epidemiológica",
       "tags": [
         "fiebre amarilla",
@@ -12025,7 +12025,7 @@ window.SERUMS_DATA = {
       "career": "Medicina",
       "block": "Cuidado integral",
       "title": "Signos de alarma de cáncer infantil",
-      "level": "I-3",
+      "level": "I-4",
       "specialty": "Medicina",
       "tags": [
         "cáncer infantil",
@@ -12140,7 +12140,7 @@ window.SERUMS_DATA = {
       "career": "Medicina",
       "block": "Cuidado integral",
       "title": "Manejo clínico en climaterio",
-      "level": "I-3",
+      "level": "I-2",
       "specialty": "Medicina",
       "tags": [
         "climaterio",
