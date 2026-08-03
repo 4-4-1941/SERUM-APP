@@ -6,7 +6,7 @@ window.SERUMS_DATA = {
       "career": "Psicología",
       "block": "Psicología",
       "title": "Riesgo suicida en adolescente",
-      "level": "I-2",
+      "level": "I-4",
       "specialty": "Psicología",
       "tags": [
         "salud mental",
@@ -29,7 +29,7 @@ window.SERUMS_DATA = {
       "career": "Psicología",
       "block": "Psicología",
       "title": "Violencia familiar con ansiedad",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Psicología",
       "tags": [
         "violencia familiar",
@@ -75,7 +75,7 @@ window.SERUMS_DATA = {
       "career": "Psicología",
       "block": "Psicología",
       "title": "Depresión y baja adherencia",
-      "level": "I-3",
+      "level": "I-2",
       "specialty": "Psicología",
       "tags": [
         "depresión",
@@ -121,7 +121,7 @@ window.SERUMS_DATA = {
       "career": "Psicología",
       "block": "Psicología",
       "title": "Violencia sexual y contención",
-      "level": "I-2",
+      "level": "I-4",
       "specialty": "Psicología",
       "tags": [
         "violencia sexual",
@@ -190,7 +190,7 @@ window.SERUMS_DATA = {
       "career": "Psicología",
       "block": "Psicología",
       "title": "Riesgo de violencia en pareja",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Psicología",
       "tags": [
         "violencia de pareja",
@@ -351,7 +351,7 @@ window.SERUMS_DATA = {
       "career": "Psicología",
       "block": "Psicología",
       "title": "Intervención breve por crisis",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Psicología",
       "tags": [
         "crisis",
@@ -466,7 +466,7 @@ window.SERUMS_DATA = {
       "career": "Psicología",
       "block": "Psicología",
       "title": "Estrés postraumático tras accidente",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Psicología",
       "tags": [
         "trauma",
@@ -489,7 +489,7 @@ window.SERUMS_DATA = {
       "career": "Psicología",
       "block": "Psicología",
       "title": "Primer episodio psicótico",
-      "level": "I-3",
+      "level": "I-4",
       "specialty": "Psicología / Medicina",
       "tags": [
         "psicosis",
@@ -513,7 +513,7 @@ window.SERUMS_DATA = {
       "career": "Psicología",
       "block": "Psicología",
       "title": "Restricción alimentaria en adolescente",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Psicología / Nutrición",
       "tags": [
         "conducta alimentaria",
@@ -537,7 +537,7 @@ window.SERUMS_DATA = {
       "career": "Psicología",
       "block": "Ética e interculturalidad",
       "title": "Sospecha de maltrato infantil",
-      "level": "I-2",
+      "level": "I-4",
       "specialty": "Psicología",
       "tags": [
         "maltrato infantil",
@@ -560,7 +560,7 @@ window.SERUMS_DATA = {
       "career": "Psicología",
       "block": "Psicología",
       "title": "Ideación homicida con plan",
-      "level": "I-3",
+      "level": "I-4",
       "specialty": "Psicología",
       "tags": [
         "riesgo heteroagresivo",
@@ -583,7 +583,7 @@ window.SERUMS_DATA = {
       "career": "Psicología",
       "block": "Psicología",
       "title": "Episodio maníaco",
-      "level": "I-3",
+      "level": "I-4",
       "specialty": "Psicología / Medicina",
       "tags": [
         "trastorno bipolar",
@@ -699,7 +699,7 @@ window.SERUMS_DATA = {
       "career": "Psicología",
       "block": "Ética e interculturalidad",
       "title": "Acoso escolar con síntomas depresivos",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Psicología",
       "tags": [
         "bullying",
@@ -722,7 +722,7 @@ window.SERUMS_DATA = {
       "career": "Psicología",
       "block": "Psicología",
       "title": "Seguimiento tras intento de suicidio",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Psicología",
       "tags": [
         "postvención",
@@ -792,7 +792,7 @@ window.SERUMS_DATA = {
       "career": "Psicología",
       "block": "Ética e interculturalidad",
       "title": "Riesgo de violencia cruzada en pareja",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Psicología",
       "tags": [
         "violencia de pareja",
@@ -1604,7 +1604,7 @@ window.SERUMS_DATA = {
       "career": "Psicología",
       "block": "Salud pública",
       "title": "Interpretación de incidencia en un tamizaje comunitario",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Psicología / Salud Pública",
       "tags": [
         "epidemiología",
@@ -1811,7 +1811,7 @@ window.SERUMS_DATA = {
       "career": "Psicología",
       "block": "Investigación",
       "title": "Triangulación de métodos en un estudio mixto",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Psicología / Investigación",
       "tags": [
         "métodos mixtos",
@@ -1880,7 +1880,7 @@ window.SERUMS_DATA = {
       "career": "Psicología",
       "block": "Gestión",
       "title": "Diferencia entre plan estratégico y plan operativo",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Psicología / Gestión",
       "tags": [
         "PEI",
@@ -1903,7 +1903,7 @@ window.SERUMS_DATA = {
       "career": "Psicología",
       "block": "Gestión",
       "title": "Aplicación del análisis FODA en un servicio de salud mental",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Psicología / Gestión",
       "tags": [
         "FODA",
@@ -1949,7 +1949,7 @@ window.SERUMS_DATA = {
       "career": "Psicología",
       "block": "Gestión",
       "title": "Implementación de telesalud en zona rural",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Psicología / Gestión",
       "tags": [
         "telesalud",
@@ -1972,7 +1972,7 @@ window.SERUMS_DATA = {
       "career": "Psicología",
       "block": "Gestión",
       "title": "Auditoría de calidad en un servicio de salud mental",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Psicología / Gestión",
       "tags": [
         "auditoría",
@@ -1995,7 +1995,7 @@ window.SERUMS_DATA = {
       "career": "Psicología",
       "block": "Gestión",
       "title": "Gestión de recursos humanos en un equipo de salud mental",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Psicología / Gestión",
       "tags": [
         "recursos humanos",
@@ -2597,7 +2597,7 @@ window.SERUMS_DATA = {
       "career": "Psicología",
       "block": "Cuidado integral",
       "title": "Acompañamiento psicológico en paciente oncológico",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Psicología / Medicina",
       "tags": [
         "cáncer",
@@ -2873,7 +2873,7 @@ window.SERUMS_DATA = {
       "career": "Psicología",
       "block": "Investigación",
       "title": "Necesidad de grupo control en un estudio experimental",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Psicología / Investigación",
       "tags": [
         "diseño experimental",
@@ -2942,7 +2942,7 @@ window.SERUMS_DATA = {
       "career": "Psicología",
       "block": "Investigación",
       "title": "Prueba piloto antes de un estudio a gran escala",
-      "level": "I-2",
+      "level": "I-4",
       "specialty": "Psicología / Investigación",
       "tags": [
         "prueba piloto",
@@ -3057,7 +3057,7 @@ window.SERUMS_DATA = {
       "career": "Psicología",
       "block": "Investigación",
       "title": "Aprobación de un comité de ética en investigación",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Psicología / Investigación",
       "tags": [
         "comité de ética",
@@ -3080,7 +3080,7 @@ window.SERUMS_DATA = {
       "career": "Psicología",
       "block": "Investigación",
       "title": "Elección del tipo de muestreo en un estudio comunitario",
-      "level": "I-2",
+      "level": "I-4",
       "specialty": "Psicología / Investigación",
       "tags": [
         "muestreo",
@@ -3103,7 +3103,7 @@ window.SERUMS_DATA = {
       "career": "Psicología",
       "block": "Ética e interculturalidad",
       "title": "Límite de la confidencialidad ante riesgo a terceros",
-      "level": "I-2",
+      "level": "I-4",
       "specialty": "Psicología",
       "tags": [
         "confidencialidad",
@@ -3402,7 +3402,7 @@ window.SERUMS_DATA = {
       "career": "Psicología",
       "block": "Gestión",
       "title": "Resistencia del equipo ante una nueva herramienta digital",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Psicología / Gestión",
       "tags": [
         "gestión del cambio",
@@ -3540,7 +3540,7 @@ window.SERUMS_DATA = {
       "career": "Psicología",
       "block": "Investigación",
       "title": "Difusión responsable de resultados de investigación en salud",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Psicología / Investigación",
       "tags": [
         "difusión de resultados",
@@ -3586,7 +3586,7 @@ window.SERUMS_DATA = {
       "career": "Psicología",
       "block": "Salud pública",
       "title": "Riesgo psicosocial y salud ocupacional del personal de salud",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Psicología / Salud Ocupacional",
       "tags": [
         "salud ocupacional",
@@ -4531,7 +4531,7 @@ window.SERUMS_DATA = {
       "career": "Psicología",
       "block": "Psicología",
       "title": "Trastorno de pánico con agorafobia",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Psicología",
       "tags": [
         "trastorno de pánico",
@@ -4554,7 +4554,7 @@ window.SERUMS_DATA = {
       "career": "Psicología",
       "block": "Psicología",
       "title": "Duelo prolongado tras la pérdida de un hijo",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Psicología",
       "tags": [
         "duelo complicado",
@@ -4577,7 +4577,7 @@ window.SERUMS_DATA = {
       "career": "Psicología",
       "block": "Psicología",
       "title": "Autolesión no suicida en una adolescente",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Psicología",
       "tags": [
         "autolesión no suicida",
@@ -4600,7 +4600,7 @@ window.SERUMS_DATA = {
       "career": "Psicología",
       "block": "Psicología",
       "title": "Trastorno obsesivo-compulsivo con rituales de verificación",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Psicología",
       "tags": [
         "TOC",
@@ -4646,7 +4646,7 @@ window.SERUMS_DATA = {
       "career": "Psicología",
       "block": "Ética e interculturalidad",
       "title": "Celotipia y conductas de control en la pareja",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Psicología",
       "tags": [
         "celos patológicos",
@@ -5592,7 +5592,7 @@ window.SERUMS_DATA = {
       "career": "Psicología",
       "block": "Cuidado integral",
       "title": "Interpretación de un tamizaje M-CHAT-R alterado",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Psicología",
       "tags": [
         "M-CHAT-R",
@@ -11634,7 +11634,7 @@ window.SERUMS_DATA = {
       "career": "Psicología",
       "block": "Psicología",
       "title": "Sospecha de TDAH en escolar",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Psicología",
       "tags": [
         "TDAH",
@@ -11680,7 +11680,7 @@ window.SERUMS_DATA = {
       "career": "Psicología",
       "block": "Salud pública",
       "title": "Apoyo psicológico tras un sismo",
-      "level": "I-3",
+      "level": "I-4",
       "specialty": "Psicología",
       "tags": [
         "emergencias y desastres",
@@ -11726,7 +11726,7 @@ window.SERUMS_DATA = {
       "career": "Psicología",
       "block": "Cuidado integral",
       "title": "Malestar emocional en climaterio",
-      "level": "I-3",
+      "level": "I-2",
       "specialty": "Psicología",
       "tags": [
         "climaterio",
@@ -11749,7 +11749,7 @@ window.SERUMS_DATA = {
       "career": "Psicología",
       "block": "Psicología",
       "title": "Elección de enfoque terapéutico basado en evidencia",
-      "level": "I-3",
+      "level": "I-2",
       "specialty": "Psicología",
       "tags": [
         "psicoterapia basada en evidencia",
@@ -11795,7 +11795,7 @@ window.SERUMS_DATA = {
       "career": "Psicología",
       "block": "Salud pública",
       "title": "Interpretación de la transición demográfica",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Psicología",
       "tags": [
         "demografía en salud",
