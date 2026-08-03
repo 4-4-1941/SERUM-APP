@@ -16,12 +16,12 @@ window.SERUMS_DATA = {
       "statement": "Adolescente de 16 años llega al establecimiento I-2 con ideación suicida, aislamiento y soporte familiar limitado.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Solicitar una evaluación psiquiátrica programada dentro del plazo regular del establecimiento.",
         "Intervenir en crisis, estabilizar y derivar con carácter urgente a un servicio de salud mental.",
         "Realizar contención inicial, evaluar factores de riesgo y programar cita de seguimiento en una semana.",
-        "Iniciar psicoterapia ambulatoria de base semanal sin evaluar el riesgo inmediato."
+        "Iniciar psicoterapia ambulatoria de base semanal sin evaluar el riesgo inmediato.",
+        "Solicitar una evaluación psiquiátrica programada dentro del plazo regular del establecimiento."
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Es correcta porque la ideación activa sumada a aislamiento y bajo soporte familiar configura un riesgo suicida alto que exige intervención en crisis, estabilización y derivación urgente, sin espacio para diferir la atención. La contención con seguimiento a una semana subestima la urgencia; la psicoterapia ambulatoria omite evaluar el riesgo inmediato; programarla en el flujo regular retrasa la atención."
     },
     {
@@ -40,11 +40,11 @@ window.SERUMS_DATA = {
       "question": "¿Qué acción corresponde primero?",
       "options": [
         "Iniciar tratamiento farmacológico para la ansiedad antes de explorar el contexto de violencia.",
-        "Derivar directamente a la vía legal sin realizar ninguna evaluación clínica previa.",
         "Registrar el antecedente de violencia y continuar solo con el motivo de consulta original.",
-        "Tamizar el riesgo de violencia, brindar soporte inicial y derivar según la ruta establecida."
+        "Tamizar el riesgo de violencia, brindar soporte inicial y derivar según la ruta establecida.",
+        "Derivar directamente a la vía legal sin realizar ninguna evaluación clínica previa."
       ],
-      "correct": 3,
+      "correct": 2,
       "feedback": "Es correcta porque el protocolo exige tamizar el riesgo de violencia y activar la ruta de atención antes de cualquier otra intervención, ya que los síntomas somáticos y ansiosos son secundarios al riesgo no evaluado. Derivar solo a la vía legal salta la evaluación clínica; registrar sin actuar ignora el antecedente relevante; medicar antes de explorar el contexto trata el síntoma sin abordar su causa."
     },
     {
@@ -62,12 +62,12 @@ window.SERUMS_DATA = {
       "statement": "Paciente de 24 años presenta respiración rápida, sensación de muerte inminente y temor intenso.",
       "question": "¿Qué medida inicial es la más adecuada?",
       "options": [
-        "Programar la evaluación completa para la siguiente cita, sin intervenir en el episodio agudo.",
-        "Brindar contención inmediata, evaluación breve del episodio y manejo inicial de síntomas.",
+        "Administrar un ansiolítico de inmediato sin evaluar antecedentes ni gravedad del cuadro.",
         "Indicar únicamente técnicas de respiración, sin ninguna evaluación clínica adicional.",
-        "Administrar un ansiolítico de inmediato sin evaluar antecedentes ni gravedad del cuadro."
+        "Programar la evaluación completa para la siguiente cita, sin intervenir en el episodio agudo.",
+        "Brindar contención inmediata, evaluación breve del episodio y manejo inicial de síntomas."
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Es correcta porque un episodio agudo de pánico requiere contención y evaluación breve en el momento, integrando manejo sintomático sin descuidar el diagnóstico diferencial. Aplicar solo una técnica de respiración carece de sustento evaluativo; medicar sin conocer antecedentes ni gravedad es riesgoso; posponer la evaluación deja sin atención el episodio agudo."
     },
     {
@@ -86,11 +86,11 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la mejor estrategia inicial?",
       "options": [
         "Indicar que continúe el tratamiento sin ninguna modificación al plan actual.",
-        "Psicoeducar sobre el tratamiento, explorar las barreras de adherencia y programar seguimiento cercano.",
         "Aumentar la dosis del tratamiento sin explorar previamente las razones de la baja adherencia.",
+        "Psicoeducar sobre el tratamiento, explorar las barreras de adherencia y programar seguimiento cercano.",
         "Derivar de inmediato a un nivel de mayor complejidad sin abordar antes la adherencia."
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Es correcta porque la baja adherencia debe abordarse identificando primero sus causas mediante psicoeducación y seguimiento cercano, antes de modificar el plan terapéutico. Aumentar la dosis sin diagnóstico de causa no resuelve el problema de fondo; mantener el plan sin cambios ignora la falla ya evidenciada; escalar de nivel sin agotar el manejo actual es prematuro."
     },
     {
@@ -108,12 +108,12 @@ window.SERUMS_DATA = {
       "statement": "Paciente expresa insomnio, tristeza intensa y aislamiento tres meses después de una pérdida significativa.",
       "question": "¿Qué intervención inicial corresponde?",
       "options": [
-        "Indicar que el duelo se resolverá de forma espontánea, sin ninguna intervención.",
+        "Evaluar el impacto funcional del duelo y brindar apoyo psicológico especializado.",
         "Recomendar evitar cualquier conversación sobre la pérdida para no generar malestar.",
-        "Derivar únicamente si además presenta síntomas físicos evidentes.",
-        "Evaluar el impacto funcional del duelo y brindar apoyo psicológico especializado."
+        "Indicar que el duelo se resolverá de forma espontánea, sin ninguna intervención.",
+        "Derivar únicamente si además presenta síntomas físicos evidentes."
       ],
-      "correct": 3,
+      "correct": 0,
       "feedback": "Es correcta porque a los tres meses el aislamiento y la intensidad sintomática indican impacto funcional compatible con duelo complicado, lo que exige evaluación y apoyo especializado. Confiar en resolución espontánea ignora la persistencia sintomática; evitar el tema impide el procesamiento necesario; condicionar la derivación a síntomas físicos usa un criterio irrelevante."
     },
     {
@@ -156,10 +156,10 @@ window.SERUMS_DATA = {
       "options": [
         "Indicar reposo absoluto como primera medida de manejo.",
         "Iniciar directamente un ansiolítico sin evaluación clínica previa.",
-        "Brindar psicoeducación, realizar evaluación clínica estructurada y programar seguimiento.",
-        "Minimizar los síntomas por considerarlos parte del estrés cotidiano."
+        "Minimizar los síntomas por considerarlos parte del estrés cotidiano.",
+        "Brindar psicoeducación, realizar evaluación clínica estructurada y programar seguimiento."
       ],
-      "correct": 2,
+      "correct": 3,
       "feedback": "Es correcta porque un cuadro de varios meses de evolución con síntomas físicos y cognitivos requiere evaluación clínica estructurada y psicoeducación como base del manejo. El reposo absoluto no aborda la ansiedad de fondo; medicar sin evaluación previa es inadecuado; minimizar un cuadro ya persistente desestima su relevancia funcional."
     },
     {
@@ -178,11 +178,11 @@ window.SERUMS_DATA = {
       "question": "¿Qué estrategia corresponde?",
       "options": [
         "Desestimar el caso si el paciente niega tener un problema con el consumo.",
-        "Aplicar tamizaje de consumo e intervención breve motivacional.",
         "Derivar de inmediato a un programa residencial sin evaluar antes la gravedad.",
-        "Confrontar directamente al paciente exigiendo el cese inmediato del consumo."
+        "Confrontar directamente al paciente exigiendo el cese inmediato del consumo.",
+        "Aplicar tamizaje de consumo e intervención breve motivacional."
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Es correcta porque, ante negación del paciente con evidencia funcional de consumo problemático (ausentismo), el modelo de intervención breve motivacional es la estrategia validada para trabajar la ambivalencia. Escalar a residencial sin evaluar gravedad es desproporcionado; confrontar de forma directiva contradice el enfoque motivacional; desestimar el caso pese a la evidencia familiar ignora datos objetivos."
     },
     {
@@ -201,11 +201,11 @@ window.SERUMS_DATA = {
       "question": "¿Qué acción inicial corresponde?",
       "options": [
         "Enfocar la consulta únicamente en el síntoma de insomnio que motivó la cita.",
-        "Sugerir que dialogue con su pareja para resolver el conflicto antes de intervenir.",
+        "Evaluar el riesgo de violencia, brindar contención y activar la ruta de atención.",
         "Documentar el relato sin realizar ninguna evaluación de riesgo adicional.",
-        "Evaluar el riesgo de violencia, brindar contención y activar la ruta de atención."
+        "Sugerir que dialogue con su pareja para resolver el conflicto antes de intervenir."
       ],
-      "correct": 3,
+      "correct": 1,
       "feedback": "Es correcta porque el control coercitivo y el temor a represalias son indicadores de riesgo que requieren evaluación, contención y activación de ruta de atención de forma inmediata. Enfocarse solo en el síntoma superficial deja sin abordar el riesgo real; sugerir diálogo con el agresor expone a mayor riesgo; documentar sin actuar no protege a la paciente."
     },
     {
@@ -224,11 +224,11 @@ window.SERUMS_DATA = {
       "question": "¿Qué intervención inicial es más adecuada?",
       "options": [
         "Derivar de inmediato a descanso médico prolongado sin evaluación previa.",
+        "Psicoeducar, evaluar riesgos asociados al desgaste laboral y orientar sobre medidas de afrontamiento.",
         "Indicar que aumente su carga de trabajo para distraerse del malestar.",
-        "Minimizar el cuadro por considerarlo parte habitual del entorno laboral.",
-        "Psicoeducar, evaluar riesgos asociados al desgaste laboral y orientar sobre medidas de afrontamiento."
+        "Minimizar el cuadro por considerarlo parte habitual del entorno laboral."
       ],
-      "correct": 3,
+      "correct": 1,
       "feedback": "Es correcta porque el cuadro de desgaste (irritabilidad, agotamiento, errores) requiere psicoeducación y evaluación de riesgos antes de decidir una medida más drástica como el descanso médico. Derivar a descanso médico sin evaluación previa es prematuro; minimizar el cuadro ignora el riesgo asociado a los errores frecuentes; aumentar la carga agrava el factor causal."
     },
     {
@@ -246,12 +246,12 @@ window.SERUMS_DATA = {
       "statement": "En una comunidad rural se identifican 8 personas con diarrea aguda tras una actividad comunal con agua no segura.",
       "question": "¿Cuál es la primera acción correcta?",
       "options": [
+        "Esperar confirmación de laboratorio antes de actuar.",
         "Dar tratamiento individual a cada caso y cerrar el evento sin notificación.",
         "Notificar, iniciar investigación epidemiológica y activar medidas de control del evento.",
-        "Esperar confirmación de laboratorio antes de actuar.",
         "Indicar hervir el agua a la población, sin notificar ni investigar la fuente."
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Es correcta porque un brote de diarrea aguda vinculado a una fuente de agua no segura en 8 personas cumple el criterio operativo de brote, lo que obliga a notificar e iniciar investigación epidemiológica de campo antes de contar con confirmación de laboratorio. Tratar sin notificar deja sin identificar la fuente para otros expuestos; esperar confirmación de laboratorio retrasa una respuesta que debe iniciarse con la sola sospecha clínico-epidemiológica; indicar hervir el agua sin investigar ni notificar corrige el síntoma pero no controla el evento."
     },
     {
@@ -269,12 +269,12 @@ window.SERUMS_DATA = {
       "statement": "Paciente de 58 años con hipertensión y tres controles elevados refiere olvido frecuente de medicamentos.",
       "question": "¿Qué estrategia inicial corresponde?",
       "options": [
-        "Suspender el tratamiento farmacológico y manejar solo con cambios en el estilo de vida.",
         "Reforzar la adherencia, educar sobre el tratamiento y programar un control cercano.",
+        "Indicar que continúe con el mismo esquema y el mismo intervalo de controles habitual.",
         "Cambiar de inmediato a una combinación de tres antihipertensivos sin explorar la causa del mal control.",
-        "Indicar que continúe con el mismo esquema y el mismo intervalo de controles habitual."
+        "Suspender el tratamiento farmacológico y manejar solo con cambios en el estilo de vida."
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Es correcta porque el olvido frecuente de dosis, no la ineficacia del fármaco, es la causa identificada del mal control, lo que exige reforzar adherencia y educación con seguimiento cercano antes de modificar el esquema terapéutico. Suspender el tratamiento retira una terapia efectiva sin abordar la causa real; mantener el mismo esquema sin ningún refuerzo repite la falla ya evidenciada; escalar a triple terapia sin explorar la causa expone a efectos adversos innecesarios para un problema que es de adherencia, no de dosis insuficiente."
     },
     {
@@ -293,11 +293,11 @@ window.SERUMS_DATA = {
       "question": "¿Qué debe hacerse?",
       "options": [
         "Pedir que firme el documento sin aclarar dudas, dado que acompaña a un familiar.",
+        "Brindar información comprensible en su idioma o con apoyo de intérprete, y asegurar el consentimiento informado.",
         "Proceder sin explicación para no retrasar la atención.",
-        "Posponer el procedimiento de forma indefinida hasta que aprenda español.",
-        "Brindar información comprensible en su idioma o con apoyo de intérprete, y asegurar el consentimiento informado."
+        "Posponer el procedimiento de forma indefinida hasta que aprenda español."
       ],
-      "correct": 3,
+      "correct": 1,
       "feedback": "Es correcta porque una barrera idiomática no exime del derecho al consentimiento informado, por lo que corresponde brindar información comprensible en el propio idioma o con apoyo de intérprete antes de proceder, garantizando que la decisión sea realmente informada. Pedir que firme sin aclarar dudas, solo porque acompaña a un familiar, no verifica que ella misma haya comprendido; proceder sin explicación alguna vulnera directamente su derecho a la información; posponer el procedimiento de forma indefinida hasta que aprenda español niega una solución inmediata (intérprete) que sí está disponible."
     },
     {
@@ -315,8 +315,8 @@ window.SERUMS_DATA = {
       "statement": "Paciente con signos de shock requiere traslado a mayor complejidad.",
       "question": "¿Qué paso es prioritario?",
       "options": [
-        "Trasladar solo tras confirmar disponibilidad de cama en el hospital receptor, sin iniciar estabilización.",
         "Esperar al familiar para decidir.",
+        "Trasladar solo tras confirmar disponibilidad de cama en el hospital receptor, sin iniciar estabilización.",
         "Enviar inmediatamente sin estabilizar.",
         "Estabilizar y coordinar referencia con continuidad asistencial."
       ],
@@ -338,12 +338,12 @@ window.SERUMS_DATA = {
       "statement": "Adolescente con irritabilidad, insomnio y bajo rendimiento escolar por preocupación constante.",
       "question": "¿Qué paso corresponde primero?",
       "options": [
-        "Realizar tamizaje y evaluación clínica inicial de los síntomas ansiosos.",
         "Coordinar con el colegio una sanción disciplinaria por el bajo rendimiento asociado.",
+        "Realizar tamizaje y evaluación clínica inicial de los síntomas ansiosos.",
         "Atribuir los síntomas únicamente a una etapa normal de la adolescencia, sin evaluación.",
         "Indicar únicamente técnicas de relajación, sin ninguna evaluación clínica previa."
       ],
-      "correct": 0,
+      "correct": 1,
       "feedback": "Es correcta porque el bajo rendimiento e irritabilidad sostenidos ameritan tamizaje y evaluación clínica antes de cualquier otra acción, para diferenciar un cuadro ansioso de un proceso evolutivo normal. Atribuirlo solo a la edad naturaliza síntomas sin sustento evaluativo; aplicar relajación sin diagnóstico previo es insuficiente; derivar a sanción disciplinaria traslada el problema a una vía ajena al origen clínico."
     },
     {
@@ -361,12 +361,12 @@ window.SERUMS_DATA = {
       "statement": "Paciente con crisis emocional llora, dice no poder continuar y no desea irse sola.",
       "question": "¿Cuál es la respuesta inicial adecuada?",
       "options": [
-        "Limitar la intervención a informar sobre las normas del establecimiento.",
-        "Postergar la atención para la siguiente cita programada regularmente.",
+        "Brindar acompañamiento, contención emocional y evaluación del riesgo actual.",
         "Derivar de inmediato sin realizar ninguna evaluación previa del riesgo.",
-        "Brindar acompañamiento, contención emocional y evaluación del riesgo actual."
+        "Limitar la intervención a informar sobre las normas del establecimiento.",
+        "Postergar la atención para la siguiente cita programada regularmente."
       ],
-      "correct": 3,
+      "correct": 0,
       "feedback": "Es correcta porque la negativa a irse sola y la expresión de no poder continuar son señales de riesgo actual que exigen acompañamiento, contención y evaluación inmediata. Derivar sin evaluar el riesgo omite un paso esencial; limitarse a información administrativa no atiende la crisis; postergar la atención ignora la urgencia expresada."
     },
     {
@@ -384,12 +384,12 @@ window.SERUMS_DATA = {
       "statement": "Una microred presenta coberturas bajas de vacunación infantil en dos comunidades.",
       "question": "¿Qué prioridad corresponde?",
       "options": [
-        "Suspender el reporte de coberturas por la baja asistencia registrada.",
         "Registrar el problema, priorizar la intervención y planificar seguimiento comunitario activo.",
-        "Solicitar más dosis de vacuna, sin investigar la causa de la baja cobertura.",
-        "Esperar a que la demanda de vacunación aumente por sí sola."
+        "Suspender el reporte de coberturas por la baja asistencia registrada.",
+        "Esperar a que la demanda de vacunación aumente por sí sola.",
+        "Solicitar más dosis de vacuna, sin investigar la causa de la baja cobertura."
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Es correcta porque una cobertura baja en dos comunidades requiere documentar el problema antes de decidir la intervención, y luego un seguimiento comunitario activo que sostenga la mejora en el tiempo, no una acción puntual. Suspender el reporte de coberturas elimina la evidencia necesaria para gestionar el problema; solicitar más dosis sin investigar la causa no resuelve una brecha que puede ser de acceso o de percepción comunitaria; esperar que la demanda aumente por sí sola ignora que la estrategia de vacunación es proactiva, no de demanda espontánea."
     },
     {
@@ -407,12 +407,12 @@ window.SERUMS_DATA = {
       "statement": "Gestante de 28 semanas asiste por primera vez a control prenatal.",
       "question": "¿Cuál es la acción inicial más adecuada?",
       "options": [
-        "Indicar que continúe sus controles según el cronograma estándar sin priorizar la evaluación inicial.",
-        "Registrar el ingreso tardío y postergar la evaluación de riesgo hasta el siguiente control.",
+        "Iniciar evaluación integral y clasificación de riesgo obstétrico, aunque el control sea tardío.",
         "Programar la primera ecografía como único paso antes de cualquier otra evaluación.",
-        "Iniciar evaluación integral y clasificación de riesgo obstétrico, aunque el control sea tardío."
+        "Registrar el ingreso tardío y postergar la evaluación de riesgo hasta el siguiente control.",
+        "Indicar que continúe sus controles según el cronograma estándar sin priorizar la evaluación inicial."
       ],
-      "correct": 3,
+      "correct": 0,
       "feedback": "Es correcta porque un ingreso tardío al control prenatal no exime de una clasificación de riesgo obstétrico completa e inmediata, dado que las semanas ya transcurridas sin evaluación pueden ocultar complicaciones ya presentes que deben identificarse cuanto antes. Programar solo la primera ecografía deja sin evaluar otros componentes del riesgo obstétrico; mantener el cronograma estándar ignora que ya se perdió tiempo de seguimiento; postergar la evaluación de riesgo hasta el siguiente control prolonga innecesariamente una brecha de vigilancia ya existente."
     },
     {
@@ -430,12 +430,12 @@ window.SERUMS_DATA = {
       "statement": "Paciente con pérdida reciente presenta llanto persistente, alteración del sueño y dificultad para trabajar.",
       "question": "¿Qué se debe hacer primero?",
       "options": [
-        "Evaluar el impacto funcional del duelo y ofrecer acompañamiento psicológico.",
         "Recomendar evitar el tema para no generar mayor malestar emocional.",
         "Derivar únicamente si se identifican síntomas físicos asociados.",
+        "Evaluar el impacto funcional del duelo y ofrecer acompañamiento psicológico.",
         "Indicar que es una reacción esperada y dar de alta sin ningún seguimiento."
       ],
-      "correct": 0,
+      "correct": 2,
       "feedback": "Es correcta porque la persistencia de llanto, alteración del sueño y dificultad funcional para trabajar indica que el duelo reciente puede requerir evaluación de impacto funcional y acompañamiento psicológico activo, no solo observación pasiva. Dar de alta sin seguimiento normaliza el cuadro sin verificar impacto; evitar el tema impide el procesamiento necesario; condicionar la derivación a síntomas físicos añade un criterio irrelevante."
     },
     {
@@ -453,12 +453,12 @@ window.SERUMS_DATA = {
       "statement": "Familia consulta por cambios de conducta en un adolescente y pide orientación para acompañarlo.",
       "question": "¿Qué acción es más adecuada?",
       "options": [
+        "Brindar psicoeducación a la familia, orientar sobre señales de alarma y programar seguimiento.",
         "Indicar a la familia que no se involucre para evitar sobreproteger al adolescente.",
-        "Enfocar la orientación únicamente en normas de disciplina en el hogar.",
         "Derivar sin explicar el motivo ni brindar ninguna orientación a la familia.",
-        "Brindar psicoeducación a la familia, orientar sobre señales de alarma y programar seguimiento."
+        "Enfocar la orientación únicamente en normas de disciplina en el hogar."
       ],
-      "correct": 3,
+      "correct": 0,
       "feedback": "Es correcta porque ante cambios conductuales en un adolescente la familia necesita psicoeducación, señales de alarma claras y seguimiento programado para intervenir oportunamente. Desentenderse expone al adolescente sin supervisión; derivar sin explicación deja a la familia sin herramientas; centrarse solo en disciplina ignora el componente emocional de fondo."
     },
     {
@@ -476,9 +476,9 @@ window.SERUMS_DATA = {
       "statement": "Paciente de 29 años, tres semanas después de un accidente de tránsito, presenta pesadillas recurrentes, evitación de vehículos y sobresalto exagerado.",
       "question": "¿Cuál es la conducta más adecuada en este nivel de atención?",
       "options": [
+        "Prescribir reposo absoluto prolongado como única medida de manejo.",
         "Indicar que los síntomas son transitorios y no requieren ninguna evaluación.",
         "Recomendar evitar por completo cualquier actividad relacionada con vehículos, de forma indefinida.",
-        "Prescribir reposo absoluto prolongado como única medida de manejo.",
         "Evaluar los síntomas de estrés postraumático y ofrecer intervención o derivación oportuna."
       ],
       "correct": 3,
@@ -499,12 +499,12 @@ window.SERUMS_DATA = {
       "statement": "Varón de 19 años presenta ideas delirantes de persecución, desorganización del lenguaje y aislamiento progresivo de dos semanas de evolución.",
       "question": "¿Cuál es la conducta prioritaria?",
       "options": [
-        "Iniciar manejo ambulatorio de baja frecuencia sin priorizar la derivación.",
         "Evaluar el riesgo, estabilizar al paciente y derivar con carácter urgente a salud mental especializada.",
+        "Iniciar manejo ambulatorio de baja frecuencia sin priorizar la derivación.",
         "Indicar que socialice más con amigos como manejo inicial del cuadro.",
         "Citar en un mes para observar la evolución de los síntomas."
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Es correcta porque ideas delirantes de persecución, desorganización del lenguaje y aislamiento de dos semanas configuran un primer episodio psicótico, cuadro que exige evaluación de riesgo, estabilización y derivación urgente a salud mental especializada. Manejar ambulatoriamente sin priorizar la derivación retrasa el tratamiento; indicar solo socialización ignora la naturaleza clínica del cuadro; citar en un mes deja sin manejo un episodio agudo de alto riesgo.",
       "interdisciplinaryNote": "Medicina debe descartar causas orgánicas (tóxicas, metabólicas) antes de confirmar origen psiquiátrico primario."
     },
@@ -523,12 +523,12 @@ window.SERUMS_DATA = {
       "statement": "Adolescente de 15 años ha perdido peso de forma marcada, restringe comidas y evita ser vista comiendo por su familia.",
       "question": "¿Qué acción corresponde primero?",
       "options": [
-        "Abordar únicamente el aspecto nutricional, sin coordinar con salud mental.",
         "Indicar un plan de alimentación forzado para lograr un aumento rápido de peso.",
-        "Esperar a que la adolescente mencione espontáneamente el problema antes de intervenir.",
-        "Evaluar el riesgo médico y psicológico de forma conjunta y coordinar derivación especializada."
+        "Evaluar el riesgo médico y psicológico de forma conjunta y coordinar derivación especializada.",
+        "Abordar únicamente el aspecto nutricional, sin coordinar con salud mental.",
+        "Esperar a que la adolescente mencione espontáneamente el problema antes de intervenir."
       ],
-      "correct": 3,
+      "correct": 1,
       "feedback": "Es correcta porque la pérdida marcada de peso, restricción alimentaria y ocultamiento al comer son signos de alarma de un posible trastorno de conducta alimentaria, que requiere evaluación conjunta médica y psicológica más coordinación especializada. Abordar solo lo nutricional fragmenta el manejo; forzar la alimentación puede agravar el cuadro; esperar que lo mencione espontáneamente retrasa una intervención ya necesaria.",
       "interdisciplinaryNote": "Nutrición aporta la valoración antropométrica y de riesgo médico que debe acompañar el manejo psicológico."
     },
@@ -547,8 +547,8 @@ window.SERUMS_DATA = {
       "statement": "Niño de 8 años presenta lesiones en distintas fases de curación y evita hablar sobre el origen de las mismas.",
       "question": "¿Cuál es la conducta correcta?",
       "options": [
-        "Solicitar una evaluación en un mes para observar si las lesiones se repiten.",
         "Confrontar directamente al acompañante frente al niño para obtener una confesión.",
+        "Solicitar una evaluación en un mes para observar si las lesiones se repiten.",
         "Ignorar el hallazgo si el acompañante lo justifica con una explicación verosímil.",
         "Documentar los hallazgos, activar el protocolo de protección y notificar según norma."
       ],
@@ -571,11 +571,11 @@ window.SERUMS_DATA = {
       "question": "¿Qué debe hacerse de inmediato?",
       "options": [
         "Citar para la siguiente semana sin adoptar ninguna medida de seguridad inmediata.",
+        "Documentar el relato y continuar la consulta según el motivo original, sin evaluación adicional.",
         "Evaluar el riesgo heteroagresivo, garantizar la seguridad de las personas involucradas y derivar con carácter urgente.",
-        "Solicitar que el paciente prometa no llevar a cabo el plan y darlo de alta.",
-        "Documentar el relato y continuar la consulta según el motivo original, sin evaluación adicional."
+        "Solicitar que el paciente prometa no llevar a cabo el plan y darlo de alta."
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Es correcta porque un plan concreto y medios disponibles para dañar a un tercero constituyen riesgo heteroagresivo inminente, que exige evaluación inmediata, medidas de seguridad para los involucrados y derivación urgente. Citar para la siguiente semana no contiene el riesgo actual; confiar en una promesa verbal no es una medida de seguridad válida; documentar sin profundizar deja sin protección a la posible víctima."
     },
     {
@@ -593,10 +593,10 @@ window.SERUMS_DATA = {
       "statement": "Paciente presenta euforia marcada, disminución de la necesidad de sueño, gasto excesivo de dinero y habla acelerada desde hace cinco días.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Recomendar únicamente técnicas de relajación como manejo del episodio.",
-        "Evaluar el riesgo, estabilizar al paciente y derivar para manejo especializado del episodio.",
         "Indicar reposo domiciliario sin ninguna evaluación adicional del cuadro.",
-        "Esperar a que el episodio remita espontáneamente antes de intervenir."
+        "Evaluar el riesgo, estabilizar al paciente y derivar para manejo especializado del episodio.",
+        "Esperar a que el episodio remita espontáneamente antes de intervenir.",
+        "Recomendar únicamente técnicas de relajación como manejo del episodio."
       ],
       "correct": 1,
       "feedback": "Es correcta porque euforia marcada, disminución de sueño, gasto excesivo y habla acelerada durante cinco días son criterios de episodio maníaco, que requiere evaluación de riesgo, estabilización y derivación especializada. La relajación no aborda la fisiopatología del episodio; el reposo sin evaluación no contiene los riesgos asociados; esperar remisión espontánea prolonga la exposición a decisiones de alto riesgo."
@@ -616,12 +616,12 @@ window.SERUMS_DATA = {
       "statement": "Paciente refiere dificultad para conciliar el sueño desde hace tres meses, asociada a preocupación excesiva por su situación laboral.",
       "question": "¿Qué abordaje inicial es el más adecuado?",
       "options": [
-        "Evaluar la ansiedad de base, orientar en higiene del sueño y considerar intervención psicológica.",
         "Prescribir un hipnótico de uso prolongado como primera línea de manejo.",
         "Indicar automedicación con cualquier sedante disponible, sin evaluar la ansiedad de base.",
+        "Evaluar la ansiedad de base, orientar en higiene del sueño y considerar intervención psicológica.",
         "Decir que el insomnio se resolverá espontáneamente, sin necesidad de intervención."
       ],
-      "correct": 0,
+      "correct": 2,
       "feedback": "Es correcta porque un insomnio de tres meses asociado a preocupación excesiva sugiere un componente ansioso de base, que debe evaluarse junto con higiene del sueño y considerar intervención psicológica antes de recurrir a manejo farmacológico prolongado. Prescribir un hipnótico de uso prolongado como primera línea no aborda la causa ansiosa de fondo y conlleva riesgo de dependencia; automedicar con cualquier sedante sin evaluación es una conducta de riesgo; asumir que se resolverá espontáneamente ignora un cuadro ya sostenido en el tiempo con impacto funcional."
     },
     {
@@ -639,12 +639,12 @@ window.SERUMS_DATA = {
       "statement": "Persona migrante de zona altoandina a la ciudad presenta tristeza persistente, aislamiento y añoranza intensa de su lugar de origen.",
       "question": "¿Cuál es la intervención más pertinente?",
       "options": [
-        "Recomendar que evite todo contacto con personas de su lugar de origen para evitar la añoranza.",
         "Indicar que debe olvidar su lugar de origen para adaptarse más rápido.",
-        "Reconocer el duelo migratorio, validar su proceso cultural y ofrecer acompañamiento psicológico.",
-        "Derivar sin brindar ninguna orientación previa sobre lo que le sucede."
+        "Derivar sin brindar ninguna orientación previa sobre lo que le sucede.",
+        "Recomendar que evite todo contacto con personas de su lugar de origen para evitar la añoranza.",
+        "Reconocer el duelo migratorio, validar su proceso cultural y ofrecer acompañamiento psicológico."
       ],
-      "correct": 2,
+      "correct": 3,
       "feedback": "Es correcta porque el duelo migratorio es un proceso psicológico reconocido ante la pérdida del entorno de origen, que debe abordarse validando su significado cultural y ofreciendo acompañamiento psicológico, sin patologizarlo ni forzar su superación. Recomendar evitar todo contacto con personas de su lugar de origen elimina una fuente de apoyo identitario relevante; indicar que debe olvidar su origen para adaptarse desconoce el valor legítimo de ese vínculo; derivar sin brindar ninguna orientación previa deja al usuario sin comprender lo que le sucede antes de ser remitido."
     },
     {
@@ -662,12 +662,12 @@ window.SERUMS_DATA = {
       "statement": "Puérpera de 10 días presenta ideas delirantes sobre daño al recién nacido, insomnio marcado y conducta desorganizada.",
       "question": "¿Cuál es la conducta prioritaria?",
       "options": [
-        "Indicar reposo domiciliario y control en un mes.",
-        "Considerar urgencia psiquiátrica, garantizar la seguridad del binomio madre-hijo y derivar de inmediato.",
         "Recomendar únicamente apoyo familiar, sin evaluación clínica.",
-        "Iniciar manejo ambulatorio de baja frecuencia, sin evaluar el riesgo para el recién nacido."
+        "Iniciar manejo ambulatorio de baja frecuencia, sin evaluar el riesgo para el recién nacido.",
+        "Indicar reposo domiciliario y control en un mes.",
+        "Considerar urgencia psiquiátrica, garantizar la seguridad del binomio madre-hijo y derivar de inmediato."
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Es correcta porque ideas delirantes de daño al recién nacido junto con insomnio marcado y desorganización conductual en el puerperio son signos de una urgencia psiquiátrica con riesgo directo para el binomio madre-hijo, que exige garantizar la seguridad de ambos y derivar de inmediato. Indicar reposo domiciliario con control en un mes subestima gravemente un riesgo agudo ya presente; recomendar solo apoyo familiar sin evaluación clínica no dimensiona ni contiene el riesgo; iniciar manejo ambulatorio de baja frecuencia no corresponde a la urgencia que exige el cuadro descrito.",
       "interdisciplinaryNote": "Obstetricia debe mantener vigilancia del puerperio mientras se coordina la atención en salud mental."
     },
@@ -686,12 +686,12 @@ window.SERUMS_DATA = {
       "statement": "Adolescente reduce horas de sueño, baja su rendimiento escolar y presenta irritabilidad marcada cuando se limita el uso de videojuegos.",
       "question": "¿Qué acción corresponde?",
       "options": [
-        "Indicar que el patrón es habitual en la adolescencia y no amerita ninguna acción.",
         "Delegar el manejo completo del caso a la familia, sin intervención profesional.",
+        "Evaluar el impacto funcional del uso, establecer límites junto a la familia y ofrecer intervención psicológica.",
         "Prohibir el acceso a cualquier dispositivo de forma abrupta, sin acompañamiento ni evaluación.",
-        "Evaluar el impacto funcional del uso, establecer límites junto a la familia y ofrecer intervención psicológica."
+        "Indicar que el patrón es habitual en la adolescencia y no amerita ninguna acción."
       ],
-      "correct": 3,
+      "correct": 1,
       "feedback": "Es correcta porque la reducción de sueño, la caída del rendimiento y la irritabilidad al limitar el uso son indicadores de impacto funcional que ameritan evaluación, límites acordados con la familia e intervención psicológica. Normalizarlo ignora el deterioro funcional ya presente; prohibir de forma abrupta sin acompañamiento puede intensificar la irritabilidad; delegar todo a la familia sin soporte profesional deja sin abordar la dimensión clínica."
     },
     {
@@ -709,12 +709,12 @@ window.SERUMS_DATA = {
       "statement": "Escolar de 12 años presenta tristeza persistente, rechazo a asistir al colegio y refiere ser víctima de burlas reiteradas por sus compañeros.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
+        "Indicar que ignore las burlas y continúe asistiendo normalmente al colegio.",
         "Sugerir que evite contar lo sucedido a sus padres para no preocuparlos.",
-        "Evaluar el impacto emocional, coordinar con la escuela y brindar acompañamiento psicológico.",
         "Recomendar cambio de colegio de inmediato, sin evaluación previa del caso.",
-        "Indicar que ignore las burlas y continúe asistiendo normalmente al colegio."
+        "Evaluar el impacto emocional, coordinar con la escuela y brindar acompañamiento psicológico."
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Es correcta porque tristeza persistente y rechazo escolar asociados a acoso reiterado requieren evaluar el impacto emocional, coordinar con la institución educativa las medidas de protección correspondientes y brindar acompañamiento psicológico al escolar. Sugerir que oculte lo sucedido a sus padres aísla al menor de una fuente de apoyo esencial; recomendar cambio de colegio sin evaluación previa es una medida desproporcionada sin sustento diagnóstico; indicar que ignore las burlas desestima el impacto psicológico ya evidenciado en el escolar."
     },
     {
@@ -733,11 +733,11 @@ window.SERUMS_DATA = {
       "question": "¿Qué debe priorizarse en esta consulta?",
       "options": [
         "Evitar preguntar directamente sobre ideación suicida para no generar malestar.",
+        "Dar de alta definitiva si el paciente se muestra tranquilo durante la consulta.",
         "Evaluar el riesgo actual, reforzar la red de apoyo y verificar la adherencia al plan de seguridad acordado.",
-        "Centrar el seguimiento únicamente en la adherencia farmacológica, sin evaluar el riesgo actual.",
-        "Dar de alta definitiva si el paciente se muestra tranquilo durante la consulta."
+        "Centrar el seguimiento únicamente en la adherencia farmacológica, sin evaluar el riesgo actual."
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Es correcta porque tras un intento de suicidio reciente el control ambulatorio debe priorizar la evaluación del riesgo actual, el refuerzo de la red de apoyo y la verificación del plan de seguridad acordado. Evitar preguntar por ideación deja sin detectar un riesgo persistente; centrarse solo en la adherencia farmacológica omite el componente de seguridad; dar de alta por apariencia tranquila ignora que la calma no descarta riesgo."
     },
     {
@@ -755,12 +755,12 @@ window.SERUMS_DATA = {
       "statement": "Adulto mayor de 78 años presenta pérdida progresiva de memoria en los últimos meses, sin alteración aguda de la conciencia.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Asumir que es normal por la edad y no evaluar más.",
-        "Iniciar manejo farmacológico específico para demencia, sin haber descartado causas reversibles.",
         "Evaluar el cuadro cognitivo, descartar causas reversibles y coordinar valoración interdisciplinaria.",
+        "Iniciar manejo farmacológico específico para demencia, sin haber descartado causas reversibles.",
+        "Asumir que es normal por la edad y no evaluar más.",
         "Indicar tratamiento sedante, sin evaluación previa."
       ],
-      "correct": 2,
+      "correct": 0,
       "feedback": "Es correcta porque una pérdida progresiva de memoria en meses, sin alteración aguda de conciencia, exige un cuadro cognitivo evaluado de forma estructurada, descartando causas reversibles (metabólicas, farmacológicas, entre otras) antes de asumir un diagnóstico definitivo, y coordinar valoración interdisciplinaria. Asumir que es normal por la edad sin evaluar más descarta prematuramente causas tratables; iniciar manejo farmacológico específico para demencia sin haber descartado causas reversibles expone a tratamiento no sustentado en el diagnóstico correcto; indicar tratamiento sedante sin evaluación agrava el riesgo de mayor deterioro cognitivo.",
       "interdisciplinaryNote": "Medicina debe descartar causas metabólicas, farmacológicas o vasculares antes de asumir un cuadro demencial primario."
     },
@@ -779,12 +779,12 @@ window.SERUMS_DATA = {
       "statement": "Joven de 20 años evita situaciones sociales por temor intenso a ser juzgado, lo que ha limitado su desempeño académico.",
       "question": "¿Qué conducta corresponde?",
       "options": [
+        "Evaluar el impacto funcional y ofrecer intervención psicológica gradual y estructurada.",
         "Minimizar el cuadro considerándolo timidez propia de la personalidad.",
         "Recomendar evitar por completo las situaciones sociales hasta que el malestar disminuya.",
-        "Evaluar el impacto funcional y ofrecer intervención psicológica gradual y estructurada.",
         "Indicar exposición inmediata a todas las situaciones temidas, sin ninguna gradualidad."
       ],
-      "correct": 2,
+      "correct": 0,
       "feedback": "Es correcta porque el temor a ser juzgado con impacto ya demostrado en el desempeño académico indica ansiedad social clínicamente significativa, que se maneja con intervención psicológica gradual y estructurada. Minimizarla como timidez retrasa el tratamiento necesario; promover evitación total refuerza el círculo fóbico; la exposición inmediata sin gradualidad puede intensificar el malestar y generar abandono."
     },
     {
@@ -803,11 +803,11 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
         "Indicar que resuelvan el conflicto por su cuenta antes de una próxima cita.",
-        "Atender a la pareja junta desde la primera sesión, sin evaluar riesgo individual.",
+        "Evaluar el riesgo de cada persona por separado antes de decidir el abordaje y posible derivación.",
         "Derivar directamente a terapia de pareja, sin evaluación individual previa.",
-        "Evaluar el riesgo de cada persona por separado antes de decidir el abordaje y posible derivación."
+        "Atender a la pareja junta desde la primera sesión, sin evaluar riesgo individual."
       ],
-      "correct": 3,
+      "correct": 1,
       "feedback": "Es correcta porque en violencia cruzada de pareja corresponde evaluar el riesgo de cada persona por separado antes de decidir el abordaje, dado que la dinámica de agresión mutua puede ocultar asimetrías de poder o riesgo que solo se identifican en una evaluación individual confidencial. Indicar que resuelvan el conflicto por su cuenta desatiende un patrón de violencia ya identificado; atenderlos juntos desde la primera sesión sin evaluar riesgo individual puede inhibir la revelación de información relevante por parte de la persona más vulnerable; derivar directamente a terapia de pareja sin evaluación previa omite un paso de seguridad necesario en casos con violencia activa."
     },
     {
@@ -825,12 +825,12 @@ window.SERUMS_DATA = {
       "statement": "Se identifican múltiples casos de fiebre alta y dolor articular en una comunidad con presencia de criaderos de zancudo Aedes aegypti.",
       "question": "¿Cuál es la primera acción correcta?",
       "options": [
-        "Notificar el evento, iniciar control vectorial y vigilancia epidemiológica activa.",
-        "Esperar confirmación serológica de todos los casos antes de actuar.",
         "Fumigar de forma aislada, sin notificar el evento a la autoridad sanitaria.",
-        "Indicar solo hidratación oral a los afectados, sin notificación del evento."
+        "Notificar el evento, iniciar control vectorial y vigilancia epidemiológica activa.",
+        "Indicar solo hidratación oral a los afectados, sin notificación del evento.",
+        "Esperar confirmación serológica de todos los casos antes de actuar."
       ],
-      "correct": 0,
+      "correct": 1,
       "feedback": "Es correcta porque la presencia de criaderos de Aedes aegypti junto a múltiples casos febriles articulares configura un evento de notificación obligatoria que exige control vectorial inmediato y vigilancia activa para identificar más casos. Esperar confirmación serológica de todos los casos retrasa un control vectorial que es tiempo-sensible; fumigar de forma aislada sin notificar desarticula la respuesta de la vigilancia epidemiológica; solo hidratar sin notificar deja sin intervenir el vector transmisor."
     },
     {
@@ -848,12 +848,12 @@ window.SERUMS_DATA = {
       "statement": "Lactante de 8 meses presenta tos, dificultad respiratoria y tiraje subcostal desde hace dos días.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Clasificar los signos de alarma, estabilizar al lactante y referir según el nivel de gravedad.",
-        "Programar una reevaluación en 48 horas sin ninguna intervención en el momento.",
         "Indicar nebulizaciones domiciliarias como única medida inicial.",
-        "Iniciar antibiótico oral ambulatorio sin clasificar previamente la gravedad del cuadro."
+        "Programar una reevaluación en 48 horas sin ninguna intervención en el momento.",
+        "Iniciar antibiótico oral ambulatorio sin clasificar previamente la gravedad del cuadro.",
+        "Clasificar los signos de alarma, estabilizar al lactante y referir según el nivel de gravedad."
       ],
-      "correct": 0,
+      "correct": 3,
       "feedback": "Es correcta porque el tiraje subcostal es un signo de dificultad respiratoria que exige clasificar la gravedad, estabilizar y referir según el nivel, antes de considerar manejo ambulatorio. Programar reevaluación en 48 horas ignora un signo de alarma ya presente; las nebulizaciones aisladas no sustituyen la clasificación de gravedad; el antibiótico oral sin clasificar previamente puede subtratar un cuadro que en realidad requiere manejo hospitalario."
     },
     {
@@ -871,12 +871,12 @@ window.SERUMS_DATA = {
       "statement": "Paciente con diabetes conocida presenta glicemia muy elevada, respiración acelerada y aliento cetónico.",
       "question": "¿Cuál es la conducta prioritaria?",
       "options": [
-        "Aumentar la dosis de metformina sin evaluar el estado de descompensación actual.",
-        "Indicar solo ajuste de dieta y control en una semana.",
         "Administrar insulina en dosis única, sin monitoreo posterior ni plan de referencia.",
-        "Estabilizar signos vitales, iniciar hidratación y coordinar referencia urgente a mayor complejidad."
+        "Estabilizar signos vitales, iniciar hidratación y coordinar referencia urgente a mayor complejidad.",
+        "Indicar solo ajuste de dieta y control en una semana.",
+        "Aumentar la dosis de metformina sin evaluar el estado de descompensación actual."
       ],
-      "correct": 3,
+      "correct": 1,
       "feedback": "Es correcta porque glicemia muy elevada con taquipnea y aliento cetónico son signos clínicos compatibles con cetoacidosis diabética, una emergencia que requiere estabilización, hidratación y referencia urgente, no manejo ambulatorio. Aumentar metformina no corrige una descompensación aguda ni actúa en el plazo necesario; el ajuste solo de dieta subestima la gravedad del cuadro; una dosis única de insulina sin monitoreo posterior expone a hipoglucemia o a manejo incompleto de la acidosis."
     },
     {
@@ -894,10 +894,10 @@ window.SERUMS_DATA = {
       "statement": "Paciente presenta tos con expectoración de más de dos semanas de evolución, pérdida de peso y sudoración nocturna.",
       "question": "¿Qué acción corresponde primero?",
       "options": [
-        "Iniciar tratamiento antituberculoso empírico, sin confirmación diagnóstica previa.",
-        "Solicitar baciloscopía o prueba diagnóstica, notificar el caso sintomático respiratorio y dar seguimiento.",
         "Esperar a que el síntoma desaparezca por sí solo antes de estudiar el caso.",
-        "Indicar antibiótico común, sin ningún estudio adicional."
+        "Solicitar baciloscopía o prueba diagnóstica, notificar el caso sintomático respiratorio y dar seguimiento.",
+        "Indicar antibiótico común, sin ningún estudio adicional.",
+        "Iniciar tratamiento antituberculoso empírico, sin confirmación diagnóstica previa."
       ],
       "correct": 1,
       "feedback": "Es correcta porque más de dos semanas de tos con pérdida de peso y sudoración nocturna cumplen la definición de sintomático respiratorio, lo que obliga a solicitar baciloscopía u otra prueba diagnóstica y notificar antes de cualquier tratamiento. El antibiótico común no cubre M. tuberculosis y retrasa el diagnóstico; iniciar tratamiento antituberculoso empírico sin confirmación expone a toxicidad innecesaria y a subregistro epidemiológico; esperar a que el síntoma desaparezca prolonga la transmisión comunitaria."
@@ -917,12 +917,12 @@ window.SERUMS_DATA = {
       "statement": "Paciente de zona rural presenta mordedura de serpiente con dolor local, edema progresivo y sangrado de encías.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Estabilizar al paciente, evitar maniobras contraindicadas y coordinar referencia urgente para suero antiofídico.",
         "Indicar observación domiciliaria con analgésico oral, dado que el edema es progresivo pero leve.",
         "Aplicar hielo local de forma prolongada como medida principal de manejo.",
+        "Estabilizar al paciente, evitar maniobras contraindicadas y coordinar referencia urgente para suero antiofídico.",
         "Realizar incisión y succión en el sitio de la mordedura antes de referir."
       ],
-      "correct": 0,
+      "correct": 2,
       "feedback": "Es correcta porque el sangrado de encías sugiere compromiso sistémico de la coagulación por el veneno, lo que exige estabilización, evitar maniobras contraindicadas y referencia urgente para suero antiofídico, único tratamiento específico disponible. La observación domiciliaria subestima un signo sistémico ya presente; el hielo prolongado agrava la necrosis local sin neutralizar el veneno; la incisión y succión son maniobras sin sustento clínico y con riesgo de infección y mayor daño tisular."
     },
     {
@@ -940,12 +940,12 @@ window.SERUMS_DATA = {
       "statement": "Varias personas que asistieron a un evento social presentan náuseas, vómitos y dolor abdominal horas después de consumir alimentos compartidos.",
       "question": "¿Cuál es la primera acción correcta?",
       "options": [
-        "Cerrar el establecimiento que organizó el evento, sin investigación previa.",
+        "Notificar el evento, investigar la fuente alimentaria y activar medidas de control.",
         "Esperar a que se presenten más casos antes de notificar el evento.",
         "Tratar solo los síntomas de cada persona, sin investigar el origen del brote.",
-        "Notificar el evento, investigar la fuente alimentaria y activar medidas de control."
+        "Cerrar el establecimiento que organizó el evento, sin investigación previa."
       ],
-      "correct": 3,
+      "correct": 0,
       "feedback": "Es correcta porque múltiples casos con síntomas digestivos tras un alimento compartido cumplen criterio de enfermedad transmitida por alimentos, lo que exige notificar e investigar la fuente para contener la exposición de otros comensales. Tratar solo los síntomas sin investigar deja expuestos a más consumidores del mismo alimento; esperar más casos retrasa la contención; cerrar el establecimiento sin investigación previa no identifica el alimento o proceso responsable."
     },
     {
@@ -963,10 +963,10 @@ window.SERUMS_DATA = {
       "statement": "Paciente ingresa con herida penetrante en abdomen tras agresión con arma blanca, con signos de inestabilidad hemodinámica.",
       "question": "¿Cuál es la conducta prioritaria?",
       "options": [
-        "Trasladar de inmediato sin aplicar ninguna medida de estabilización previa.",
+        "Suturar la herida en el establecimiento sin evaluar más.",
         "Esperar la evolución espontánea antes de decidir traslado.",
         "Estabilizar hemodinámicamente y coordinar referencia inmediata a un centro de mayor capacidad resolutiva.",
-        "Suturar la herida en el establecimiento sin evaluar más."
+        "Trasladar de inmediato sin aplicar ninguna medida de estabilización previa."
       ],
       "correct": 2,
       "feedback": "Es correcta porque la inestabilidad hemodinámica en trauma penetrante abdominal define una emergencia que excede la capacidad resolutiva del nivel, requiriendo estabilización inicial y referencia inmediata a mayor capacidad. Suturar la herida sin evaluar ignora la posible lesión intraabdominal subyacente; esperar evolución espontánea en un paciente inestable conlleva alto riesgo vital; trasladar sin ninguna estabilización previa aumenta el riesgo durante el traslado."
@@ -986,12 +986,12 @@ window.SERUMS_DATA = {
       "statement": "Gestante de 30 semanas presenta palidez marcada, fatiga intensa y hemoglobina muy por debajo del rango normal.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Iniciar solo suplementación oral de hierro y control en un mes.",
+        "Indicar transfusión sanguínea inmediata sin evaluar previamente la gravedad ni la tolerancia clínica.",
         "Esperar al parto para definir el manejo de la anemia.",
-        "Evaluar la gravedad, iniciar manejo según protocolo y coordinar referencia si corresponde.",
-        "Indicar transfusión sanguínea inmediata sin evaluar previamente la gravedad ni la tolerancia clínica."
+        "Iniciar solo suplementación oral de hierro y control en un mes.",
+        "Evaluar la gravedad, iniciar manejo según protocolo y coordinar referencia si corresponde."
       ],
-      "correct": 2,
+      "correct": 3,
       "feedback": "Es correcta porque una hemoglobina muy por debajo del rango normal en gestante de 30 semanas define anemia severa, que exige evaluar la magnitud del déficit, iniciar manejo protocolizado y referir si hay compromiso materno-fetal. La transfusión inmediata sin evaluar previamente la tolerancia clínica expone a riesgos evitables de un procedimiento invasivo; la suplementación oral sola es insuficiente para corregir una anemia ya severa en el plazo necesario; esperar al parto deja sin corrección un déficit con riesgo materno-fetal actual.",
       "interdisciplinaryNote": "Nutrición aporta el plan de suplementación y consejería alimentaria complementaria al manejo médico."
     },
@@ -1034,8 +1034,8 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
         "Indicar solo dieta blanda, sin evaluar el grado de deshidratación.",
-        "Iniciar antibiótico de forma empírica, sin clasificar previamente la deshidratación.",
         "Esperar 24 horas adicionales de evolución antes de intervenir.",
+        "Iniciar antibiótico de forma empírica, sin clasificar previamente la deshidratación.",
         "Clasificar el grado de deshidratación e iniciar la rehidratación oral o endovenosa según corresponda."
       ],
       "correct": 3,
@@ -1056,12 +1056,12 @@ window.SERUMS_DATA = {
       "statement": "Durante un control se identifica que un niño de 18 meses no ha recibido dosis correspondientes a su edad.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Verificar el carné, completar el esquema faltante según norma y registrar el seguimiento.",
         "Derivar a un establecimiento de mayor nivel para completar el esquema.",
         "Aplicar todas las vacunas pendientes en una sola visita, sin verificar el carné.",
-        "Indicar que espere hasta el siguiente control programado regularmente."
+        "Indicar que espere hasta el siguiente control programado regularmente.",
+        "Verificar el carné, completar el esquema faltante según norma y registrar el seguimiento."
       ],
-      "correct": 0,
+      "correct": 3,
       "feedback": "Es correcta porque toda dosis pendiente debe verificarse contra el carné y completarse siguiendo el esquema y los intervalos mínimos establecidos por norma, registrando el seguimiento para asegurar la continuidad. Aplicar todas las vacunas pendientes sin verificar el carné arriesga duplicar dosis o vulnerar intervalos mínimos entre biológicos; esperar el siguiente control programado prolonga innecesariamente la ventana de susceptibilidad; derivar a mayor nivel no es necesario cuando el esquema puede completarse en el propio establecimiento."
     },
     {
@@ -1079,12 +1079,12 @@ window.SERUMS_DATA = {
       "statement": "Niño de 2 años no logra hitos de lenguaje esperados para su edad durante el control de Crecimiento y Desarrollo.",
       "question": "¿Qué acción corresponde?",
       "options": [
-        "Esperar el siguiente control de CRED para reevaluar, sin ninguna acción en el momento.",
-        "Atribuir el hallazgo a que el niño es bilingüe, sin explorar otras causas.",
         "Indicar solo ejercicios de estimulación en casa, sin derivación especializada.",
-        "Documentar el hallazgo, orientar a la familia y derivar para evaluación especializada del lenguaje."
+        "Atribuir el hallazgo a que el niño es bilingüe, sin explorar otras causas.",
+        "Documentar el hallazgo, orientar a la familia y derivar para evaluación especializada del lenguaje.",
+        "Esperar el siguiente control de CRED para reevaluar, sin ninguna acción en el momento."
       ],
-      "correct": 3,
+      "correct": 2,
       "feedback": "Es correcta porque un hito de lenguaje no alcanzado en el control de CRED debe documentarse y derivarse para evaluación especializada, ya que un retraso real requiere intervención temprana para no comprometer el desarrollo posterior. Atribuirlo al bilingüismo sin explorar otras causas descarta prematuramente un signo de alarma; la estimulación aislada en casa no sustituye una evaluación especializada si el hallazgo persiste; esperar el siguiente control retrasa una intervención cuya eficacia depende de la precocidad."
     },
     {
@@ -1102,12 +1102,12 @@ window.SERUMS_DATA = {
       "statement": "Paciente postrado en cuidado domiciliario presenta una lesión en la zona sacra con signos de deterioro progresivo.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Evaluar la lesión, iniciar curación según protocolo vigente y educar en cambios posturales y cuidado de piel.",
         "Aplicar únicamente antibiótico tópico, sin educar en cambios posturales.",
-        "Cubrir la lesión con un apósito simple, sin ningún seguimiento posterior.",
-        "Indicar solo cambios de posición, sin evaluar ni curar la lesión existente."
+        "Indicar solo cambios de posición, sin evaluar ni curar la lesión existente.",
+        "Evaluar la lesión, iniciar curación según protocolo vigente y educar en cambios posturales y cuidado de piel.",
+        "Cubrir la lesión con un apósito simple, sin ningún seguimiento posterior."
       ],
-      "correct": 0,
+      "correct": 2,
       "feedback": "Es correcta porque una lesión en zona sacra con deterioro progresivo requiere evaluar su estadio, curarla según protocolo vigente y educar en cambios posturales que prevengan nuevas lesiones, abordando causa y consecuencia a la vez. El antibiótico tópico aislado no sustituye el manejo local ni educativo; cubrir con apósito simple sin seguimiento no monitorea la evolución de una lesión ya en deterioro; los cambios de posición sin curar la lesión existente dejan sin tratar el daño ya establecido."
     },
     {
@@ -1125,12 +1125,12 @@ window.SERUMS_DATA = {
       "statement": "Paciente en fase terminal presenta dolor no controlado y la familia muestra signos de agotamiento en el cuidado.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Aumentar la dosis de analgésico sin evaluar el resto del cuadro ni a la familia cuidadora.",
         "Evaluar el control del dolor, brindar soporte a la familia cuidadora y coordinar acompañamiento interdisciplinario.",
+        "Enfocarse únicamente en el soporte emocional a la familia, sin reevaluar el control del dolor.",
         "Indicar que la familia continúe el cuidado sin apoyo adicional del equipo de salud.",
-        "Enfocarse únicamente en el soporte emocional a la familia, sin reevaluar el control del dolor."
+        "Aumentar la dosis de analgésico sin evaluar el resto del cuadro ni a la familia cuidadora."
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Es correcta porque en cuidados paliativos el dolor no controlado y el agotamiento familiar son dos problemas simultáneos que requieren reevaluación del dolor junto con soporte a la familia cuidadora y coordinación interdisciplinaria, sin priorizar uno sobre otro. Aumentar solo el analgésico sin evaluar a la familia deja sin atender un riesgo de claudicación del cuidador; dejar que la familia continúe sin apoyo adicional ignora signos ya evidentes de agotamiento; enfocarse solo en lo emocional sin reevaluar el dolor deja sin resolver un síntoma con impacto directo en la calidad de vida del paciente.",
       "interdisciplinaryNote": "Psicología puede brindar soporte emocional a la familia cuidadora y acompañamiento en el proceso de duelo anticipado."
     },
@@ -1149,12 +1149,12 @@ window.SERUMS_DATA = {
       "statement": "Madre primeriza refiere dolor al amamantar y duda sobre si su producción de leche es suficiente para su recién nacido.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
+        "Evaluar la técnica de lactancia, corregir el agarre y brindar consejería de refuerzo.",
         "Decir que el dolor al amamantar es siempre normal y no amerita evaluación.",
         "Recomendar espaciar las tomas para permitir mayor producción de leche entre sesiones.",
-        "Evaluar la técnica de lactancia, corregir el agarre y brindar consejería de refuerzo.",
         "Indicar iniciar fórmula de inmediato, sin evaluar previamente la técnica utilizada."
       ],
-      "correct": 2,
+      "correct": 0,
       "feedback": "Es correcta porque el dolor al amamantar suele originarse en un agarre inadecuado, por lo que corresponde evaluar la técnica y corregirla antes de asumir otras causas o recurrir a sustitutos de la leche materna. Normalizar el dolor sin evaluación deja sin corregir una técnica que puede lesionar el pezón; espaciar las tomas reduce el estímulo de succión que regula la producción por demanda, pudiendo empeorar la percepción de baja producción; iniciar fórmula sin evaluar la técnica interrumpe la lactancia exclusiva sin haber corregido primero la causa real del problema."
     },
     {
@@ -1172,12 +1172,12 @@ window.SERUMS_DATA = {
       "statement": "Durante una visita domiciliaria se encuentra que el paciente diabético ha suspendido su tratamiento por falta de recursos.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Indicar que retome el tratamiento sin explorar la causa de la suspensión.",
         "Solicitar que la familia asuma el costo del tratamiento, sin evaluar otras alternativas de apoyo.",
-        "Registrar el hallazgo para la siguiente visita programada, sin ninguna acción inmediata.",
-        "Evaluar la causa de la suspensión del tratamiento, reforzar la educación y coordinar el apoyo social o clínico necesario."
+        "Evaluar la causa de la suspensión del tratamiento, reforzar la educación y coordinar el apoyo social o clínico necesario.",
+        "Indicar que retome el tratamiento sin explorar la causa de la suspensión.",
+        "Registrar el hallazgo para la siguiente visita programada, sin ninguna acción inmediata."
       ],
-      "correct": 3,
+      "correct": 1,
       "feedback": "Es correcta porque la suspensión del tratamiento por falta de recursos tiene una causa social identificable que debe explorarse antes de decidir cualquier intervención, coordinando el apoyo social o clínico pertinente. Indicar que retome el tratamiento sin explorar la causa no resuelve la barrera de acceso; trasladar el costo a la familia asume una capacidad de pago no verificada; registrar sin acción inmediata deja al paciente sin tratamiento durante todo el intervalo hasta la próxima visita."
     },
     {
@@ -1196,11 +1196,11 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
         "Continuar la atención habitual, sin medidas adicionales.",
-        "Suspender la atención a todos los pacientes de forma indiscriminada.",
         "Reforzar las medidas de bioseguridad, triaje y protección del personal según protocolo vigente.",
-        "Delegar el triaje exclusivamente al personal de seguridad del establecimiento."
+        "Delegar el triaje exclusivamente al personal de seguridad del establecimiento.",
+        "Suspender la atención a todos los pacientes de forma indiscriminada."
       ],
-      "correct": 2,
+      "correct": 1,
       "feedback": "Es correcta porque un brote activo con demanda creciente exige reforzar bioseguridad, triaje diferenciado y protección del personal, articulando la respuesta clínica con el control de la transmisión. Continuar la atención habitual sin medidas adicionales expone a mayor contagio dentro del establecimiento; suspender toda atención de forma indiscriminada desatiende a pacientes con necesidades no relacionadas al brote; delegar el triaje exclusivamente a personal de seguridad, sin criterio clínico, no garantiza una clasificación adecuada de la gravedad."
     },
     {
@@ -1218,10 +1218,10 @@ window.SERUMS_DATA = {
       "statement": "Paciente en tratamiento antituberculoso ha faltado a la toma supervisada en los últimos días.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Suspender el tratamiento por incumplimiento de las tomas programadas.",
+        "Esperar a que el paciente regrese por su cuenta al establecimiento.",
         "Indicar que un familiar recoja los medicamentos, sin explorar la causa de las faltas.",
         "Realizar búsqueda activa del paciente, explorar las barreras de adherencia y reforzar el tratamiento supervisado.",
-        "Esperar a que el paciente regrese por su cuenta al establecimiento."
+        "Suspender el tratamiento por incumplimiento de las tomas programadas."
       ],
       "correct": 2,
       "feedback": "Es correcta porque el tratamiento antituberculoso supervisado exige que las inasistencias activen búsqueda activa del paciente y exploración de las barreras de adherencia, para sostener la supervisión directa que es clave para evitar resistencia y abandono. Suspender el tratamiento por incumplimiento interrumpe un esquema cuya continuidad es crítica para evitar farmacorresistencia; delegar la recogida a un familiar sin explorar la causa no restablece la supervisión directa de la toma; esperar que el paciente regrese por su cuenta es pasivo frente a un riesgo de abandono que la estrategia busca prevenir activamente."
@@ -1241,12 +1241,12 @@ window.SERUMS_DATA = {
       "statement": "Gestante de 32 semanas presenta contracciones regulares y dilatación cervical incipiente en un establecimiento de baja complejidad.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Indicar reposo domiciliario estricto y control ambulatorio en una semana.",
-        "Iniciar solo tocolisis, sin coordinar ninguna referencia a mayor complejidad.",
+        "Estabilizar a la gestante, iniciar manejo según protocolo de amenaza de parto pretérmino y coordinar referencia inmediata.",
         "Atender el parto en el establecimiento actual, dado que la dilatación es aún incipiente.",
-        "Estabilizar a la gestante, iniciar manejo según protocolo de amenaza de parto pretérmino y coordinar referencia inmediata."
+        "Iniciar solo tocolisis, sin coordinar ninguna referencia a mayor complejidad.",
+        "Indicar reposo domiciliario estricto y control ambulatorio en una semana."
       ],
-      "correct": 3,
+      "correct": 0,
       "feedback": "Es correcta porque la amenaza de parto pretérmino con dilatación incipiente en un establecimiento de baja complejidad excede la capacidad resolutiva neonatal del nivel, por lo que corresponde estabilizar, iniciar el manejo protocolizado y coordinar la referencia de inmediato antes de que progrese el trabajo de parto. Atender el parto localmente expone al recién nacido pretérmino a un nivel sin capacidad de manejo neonatal adecuado; el reposo domiciliario no corresponde a un cuadro ya en curso con contracciones regulares; iniciar solo tocólisis sin coordinar referencia retrasa el traslado mientras aún es posible."
     },
     {
@@ -1265,11 +1265,11 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
         "Negar el método hasta contar con la autorización de la pareja.",
-        "Sugerir que informe a su pareja del método antes de que el profesional lo entregue.",
         "Respetar la autonomía de la usuaria, brindar consejería confidencial y ofrecer el método que decida.",
-        "Indicar que espere a que la pareja cambie de opinión antes de decidir."
+        "Indicar que espere a que la pareja cambie de opinión antes de decidir.",
+        "Sugerir que informe a su pareja del método antes de que el profesional lo entregue."
       ],
-      "correct": 2,
+      "correct": 1,
       "feedback": "Es correcta porque la decisión sobre métodos anticonceptivos es un derecho autónomo de la usuaria que no requiere autorización de la pareja, correspondiendo consejería confidencial y respeto a su decisión final. Negar el método hasta contar con autorización de la pareja vulnera ese derecho; sugerir que informe a su pareja antes de entregarlo condiciona indebidamente el acceso al método; esperar a que la pareja cambie de opinión posterga una decisión que corresponde únicamente a la usuaria.",
       "interdisciplinaryNote": "Psicología puede apoyar si se identifican señales de violencia o control en la relación de pareja."
     },
@@ -1288,12 +1288,12 @@ window.SERUMS_DATA = {
       "statement": "Gestante de 34 semanas presenta presión arterial elevada, edema marcado y cefalea intensa persistente.",
       "question": "¿Cuál es la conducta prioritaria?",
       "options": [
-        "Iniciar solo tratamiento antihipertensivo oral, sin evaluar signos de gravedad adicionales.",
         "Indicar reposo domiciliario y control ambulatorio en una semana.",
-        "Esperar la evolución espontánea del cuadro antes de decidir el traslado.",
-        "Estabilizar signos vitales, iniciar manejo según protocolo de preeclampsia y referir con carácter urgente."
+        "Estabilizar signos vitales, iniciar manejo según protocolo de preeclampsia y referir con carácter urgente.",
+        "Iniciar solo tratamiento antihipertensivo oral, sin evaluar signos de gravedad adicionales.",
+        "Esperar la evolución espontánea del cuadro antes de decidir el traslado."
       ],
-      "correct": 3,
+      "correct": 1,
       "feedback": "Es correcta porque la cefalea intensa persistente y el edema marcado junto a presión elevada son signos compatibles con preeclampsia con criterios de severidad, que exigen estabilización, manejo protocolizado y referencia urgente, dado el riesgo materno-fetal inminente. El tratamiento antihipertensivo oral aislado no aborda el riesgo de progresión a un cuadro más grave; el reposo domiciliario subestima signos de gravedad ya presentes; esperar la evolución espontánea del cuadro retrasa una intervención en una emergencia obstétrica tiempo-dependiente."
     },
     {
@@ -1311,12 +1311,12 @@ window.SERUMS_DATA = {
       "statement": "Puérpera inmediata presenta sangrado vaginal abundante y signos de inestabilidad hemodinámica tras el parto.",
       "question": "¿Cuál es la conducta prioritaria?",
       "options": [
-        "Aplicar el manejo activo según protocolo de hemorragia posparto y coordinar referencia urgente si no cede.",
-        "Trasladar de inmediato sin aplicar antes ninguna medida de manejo activo en el establecimiento.",
         "Esperar a que el sangrado disminuya de forma espontánea antes de intervenir.",
-        "Indicar solo reposo y observación, sin ninguna intervención activa inmediata."
+        "Indicar solo reposo y observación, sin ninguna intervención activa inmediata.",
+        "Trasladar de inmediato sin aplicar antes ninguna medida de manejo activo en el establecimiento.",
+        "Aplicar el manejo activo según protocolo de hemorragia posparto y coordinar referencia urgente si no cede."
       ],
-      "correct": 0,
+      "correct": 3,
       "feedback": "Es correcta porque la hemorragia posparto con inestabilidad hemodinámica exige manejo activo inmediato según protocolo en el propio establecimiento, y solo referir si el sangrado no cede pese al manejo instaurado. Trasladar sin aplicar antes ninguna medida expone a la paciente a mayor pérdida sanguínea durante el traslado; esperar que el sangrado disminuya espontáneamente ignora la inestabilidad ya presente; indicar solo reposo y observación sin intervención activa no controla una hemorragia en curso."
     },
     {
@@ -1334,12 +1334,12 @@ window.SERUMS_DATA = {
       "statement": "Adolescente de 15 años acude a su primer control prenatal acompañada de su madre, mostrándose retraída durante la consulta.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
+        "Postergar la exploración psicosocial hasta que la adolescente se muestre más cómoda por sí sola.",
         "Brindar atención obstétrica integral, explorar el contexto psicosocial y de riesgo, y coordinar apoyo interdisciplinario.",
-        "Indicar que la madre responda todas las preguntas en su lugar.",
         "Atender solo el aspecto obstétrico, sin explorar el contexto psicosocial.",
-        "Postergar la exploración psicosocial hasta que la adolescente se muestre más cómoda por sí sola."
+        "Indicar que la madre responda todas las preguntas en su lugar."
       ],
-      "correct": 0,
+      "correct": 1,
       "feedback": "Es correcta porque el embarazo adolescente requiere, además de la atención obstétrica, explorar el contexto psicosocial y coordinar apoyo interdisciplinario, dado que estos factores inciden directamente en el pronóstico materno-fetal. Atender solo el aspecto obstétrico deja sin abordar factores de riesgo psicosocial relevantes en esta población; dejar que la madre responda por ella invisibiliza la voz de la propia adolescente; postergar la exploración psicosocial hasta que se sienta más cómoda retrasa la identificación de riesgos que pueden requerir intervención temprana.",
       "interdisciplinaryNote": "Psicología debe explorar posibles señales de violencia, abuso o riesgo psicosocial asociado al embarazo adolescente."
     },
@@ -1358,8 +1358,8 @@ window.SERUMS_DATA = {
       "statement": "Gestante refiere sentirse ignorada y sin explicaciones claras durante controles previos en otro establecimiento.",
       "question": "¿Cuál es la conducta correcta en esta atención?",
       "options": [
-        "Informar solo lo esencial, dado que ya tiene experiencia previa con controles.",
         "Realizar los procedimientos sin informar previamente, para agilizar la atención.",
+        "Informar solo lo esencial, dado que ya tiene experiencia previa con controles.",
         "Explicar los procedimientos en lenguaje comprensible, respetar su autonomía y garantizar un trato digno.",
         "Repetir el mismo patrón de atención para no prolongar la consulta."
       ],
@@ -1382,8 +1382,8 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
         "Evaluar la extensión de la infección, iniciar manejo inicial y referir si existe compromiso sistémico.",
-        "Iniciar antibiótico sin ninguna evaluación del compromiso facial o sistémico.",
         "Extraer la pieza dentaria de inmediato, sin evaluar previamente signos de alarma.",
+        "Iniciar antibiótico sin ninguna evaluación del compromiso facial o sistémico.",
         "Indicar solo analgésico y esperar evolución, sin evaluación clínica adicional."
       ],
       "correct": 0,
@@ -1404,12 +1404,12 @@ window.SERUMS_DATA = {
       "statement": "Paciente adulto evita la atención odontológica desde hace años por miedo intenso, a pesar de presentar dolor dental evidente.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Realizar el procedimiento de inmediato para evitar que el paciente anticipe más el malestar.",
-        "Postergar la atención de forma indefinida hasta que el miedo desaparezca por sí solo.",
+        "Reconocer la ansiedad del paciente, aplicar técnicas de manejo conductual y coordinar apoyo psicológico si es necesario.",
         "Sedar al paciente sin abordar previamente el componente ansioso del caso.",
-        "Reconocer la ansiedad del paciente, aplicar técnicas de manejo conductual y coordinar apoyo psicológico si es necesario."
+        "Postergar la atención de forma indefinida hasta que el miedo desaparezca por sí solo.",
+        "Realizar el procedimiento de inmediato para evitar que el paciente anticipe más el malestar."
       ],
-      "correct": 3,
+      "correct": 0,
       "feedback": "Es correcta porque una fobia dental de años de evolución con dolor evidente requiere reconocer la ansiedad, aplicar manejo conductual y coordinar apoyo psicológico si el componente fóbico lo amerita. Realizar el procedimiento de inmediato sin abordar el miedo puede reforzar la fobia; postergar indefinidamente permite que el problema dental se agrave; sedar sin trabajar la ansiedad no resuelve la causa de la evitación.",
       "interdisciplinaryNote": "Psicología puede aportar técnicas de manejo de ansiedad y desensibilización para facilitar la atención odontológica."
     },
@@ -1429,9 +1429,9 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
         "Postergar cualquier tratamiento hasta el segundo trimestre, sin evaluar el estado actual.",
-        "Realizar únicamente procedimientos de urgencia, sin educación preventiva adicional.",
+        "Indicar que espere hasta después del parto para cualquier atención odontológica.",
         "Evaluar el estado bucal, brindar el tratamiento seguro para la etapa gestacional y educar en higiene oral.",
-        "Indicar que espere hasta después del parto para cualquier atención odontológica."
+        "Realizar únicamente procedimientos de urgencia, sin educación preventiva adicional."
       ],
       "correct": 2,
       "feedback": "Es correcta porque el sangrado gingival frecuente en el embarazo puede corresponder a gingivitis gestacional, cuadro que debe evaluarse y tratarse de forma segura para la etapa gestacional, junto con educación en higiene oral que sostenga la mejora. Postergar todo tratamiento hasta el segundo trimestre sin evaluar retrasa una intervención que puede iniciarse antes según el caso; limitarse a procedimientos de urgencia sin educación preventiva no aborda la causa de fondo del sangrado; indicar que espere hasta después del parto desatiende un cuadro activo con tratamiento seguro disponible durante la gestación."
@@ -1453,10 +1453,10 @@ window.SERUMS_DATA = {
       "options": [
         "Esperar que las familias soliciten atención de forma espontánea.",
         "Entregar solo folletos informativos sobre higiene oral, sin actividades preventivas adicionales.",
-        "Implementar actividades preventivas comunitarias, educación en higiene oral y consejería alimentaria.",
-        "Atender solo los casos con dolor y no intervenir en el resto de escolares."
+        "Atender solo los casos con dolor y no intervenir en el resto de escolares.",
+        "Implementar actividades preventivas comunitarias, educación en higiene oral y consejería alimentaria."
       ],
-      "correct": 2,
+      "correct": 3,
       "feedback": "Es correcta porque una alta prevalencia de caries a nivel comunitario requiere una respuesta poblacional que combine actividades preventivas, educación en higiene oral y consejería alimentaria, en vez de esperar que cada caso llegue por demanda espontánea o dolor. Esperar que las familias soliciten atención de forma espontánea desatiende el enfoque proactivo que exige un problema de salud pública; entregar solo folletos sin actividades preventivas no genera cambio de comportamiento por sí solo; atender solo los casos con dolor deja sin intervención preventiva a la mayoría de escolares afectados que aún no presentan síntomas.",
       "interdisciplinaryNote": "Nutrición complementa la prevención orientando sobre el consumo de azúcares y hábitos alimentarios comunitarios."
     },
@@ -1475,12 +1475,12 @@ window.SERUMS_DATA = {
       "statement": "Niño de 9 años sufre una caída y presenta avulsión parcial de una pieza dentaria permanente hace 30 minutos.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
+        "Indicar que espere varios días antes de recibir cualquier atención.",
         "Extraer la pieza de inmediato, sin evaluar la posibilidad de conservarla.",
         "Reimplantar la pieza sin ningún manejo previo de urgencia ni referencia posterior.",
-        "Realizar el manejo inicial de urgencia y referir oportunamente para intentar preservar la pieza dentaria.",
-        "Indicar que espere varios días antes de recibir cualquier atención."
+        "Realizar el manejo inicial de urgencia y referir oportunamente para intentar preservar la pieza dentaria."
       ],
-      "correct": 2,
+      "correct": 3,
       "feedback": "Es correcta porque una avulsión parcial reciente tiene alta probabilidad de preservación si se maneja con urgencia y se deriva oportunamente, dado que el pronóstico de la pieza depende críticamente del tiempo transcurrido y del manejo inicial adecuado. Extraer la pieza de inmediato sin evaluar la posibilidad de conservarla descarta una opción viable dado el corto tiempo transcurrido; reimplantarla sin manejo previo de urgencia ni referencia posterior omite pasos protocolares que afectan el pronóstico a largo plazo; esperar varios días desaprovecha la ventana de tiempo crítica para la viabilidad de la pieza."
     },
     {
@@ -1499,9 +1499,9 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
         "Evaluar el estado nutricional, indagar los factores asociados e iniciar un plan de recuperación nutricional con seguimiento.",
-        "Iniciar suplementación calórica intensiva, sin evaluar antes los factores asociados.",
+        "Indicar que la talla baja es solo constitucional y no requiere ningún seguimiento.",
         "Solicitar únicamente exámenes de laboratorio, sin intervención nutricional inmediata.",
-        "Indicar que la talla baja es solo constitucional y no requiere ningún seguimiento."
+        "Iniciar suplementación calórica intensiva, sin evaluar antes los factores asociados."
       ],
       "correct": 0,
       "feedback": "Es correcta porque una talla marcadamente por debajo de lo esperado sin enfermedad aguda evidente es compatible con desnutrición crónica, un déficit acumulado que requiere evaluar el estado nutricional, indagar los factores asociados e iniciar un plan de recuperación con seguimiento, dado que la corrección de la talla es un proceso lento que exige monitoreo continuo. Iniciar suplementación calórica intensiva sin evaluar antes los factores asociados no aborda la causa de fondo del déficit; solicitar solo exámenes de laboratorio sin intervención nutricional inmediata retrasa el manejo de un cuadro ya evidente clínicamente; asumir que la talla baja es solo constitucional sin seguimiento descarta prematuramente una causa nutricional corregible."
@@ -1521,9 +1521,9 @@ window.SERUMS_DATA = {
       "statement": "Niño de 18 meses presenta palidez y hemoglobina baja para su edad en un control de rutina.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
+        "Indicar solo alimentos ricos en hierro, sin suplementación farmacológica.",
         "Esperar al siguiente control de rutina, sin ninguna intervención inmediata.",
         "Iniciar suplementación con dosis altas de hierro, sin considerar el esquema normado.",
-        "Indicar solo alimentos ricos en hierro, sin suplementación farmacológica.",
         "Iniciar suplementación con hierro según norma técnica, junto con consejería alimentaria y seguimiento."
       ],
       "correct": 3,
@@ -1545,11 +1545,11 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
         "Enfocar el plan únicamente en la actividad física, sin abordar los hábitos alimentarios.",
-        "Evaluar los hábitos alimentarios y de actividad física, y trabajar un plan gradual junto con la familia.",
         "Indicar una dieta muy restrictiva, sin considerar el contexto familiar del escolar.",
+        "Evaluar los hábitos alimentarios y de actividad física, y trabajar un plan gradual junto con la familia.",
         "Esperar a que el niño crezca para que el peso se regule por sí solo."
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Es correcta porque el abordaje de la obesidad infantil debe evaluar tanto los hábitos alimentarios como los de actividad física, y trabajar un plan gradual con participación activa de la familia, dado que los hábitos del escolar dependen en gran medida del entorno familiar en el que se desenvuelve. Enfocar el plan únicamente en la actividad física sin abordar los hábitos alimentarios deja sin intervenir un componente igual de determinante; indicar una dieta muy restrictiva sin considerar el contexto familiar puede ser insostenible y contraproducente en un niño en crecimiento; esperar a que el niño crezca para que el peso se regule por sí solo desestima un cuadro que requiere intervención activa y oportuna.",
       "interdisciplinaryNote": "Psicología puede apoyar si se identifican patrones de alimentación emocional o dinámicas familiares que dificultan el cambio de hábitos."
     },
@@ -1568,12 +1568,12 @@ window.SERUMS_DATA = {
       "statement": "Paciente con diabetes recientemente diagnosticada desconoce cómo adaptar su alimentación habitual al nuevo diagnóstico.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Recomendar evitar el exceso de dulces, sin abordar el resto del patrón alimentario.",
-        "Entregar una lista genérica de alimentos prohibidos, sin más orientación individualizada.",
+        "Indicar una dieta estándar preestablecida, sin considerar los hábitos previos del paciente.",
         "Evaluar los hábitos alimentarios actuales y brindar consejería personalizada y culturalmente pertinente.",
-        "Indicar una dieta estándar preestablecida, sin considerar los hábitos previos del paciente."
+        "Recomendar evitar el exceso de dulces, sin abordar el resto del patrón alimentario.",
+        "Entregar una lista genérica de alimentos prohibidos, sin más orientación individualizada."
       ],
-      "correct": 2,
+      "correct": 1,
       "feedback": "Es correcta porque la consejería nutricional en diabetes debe partir de la evaluación de los hábitos alimentarios actuales del paciente, para brindar una orientación personalizada y culturalmente pertinente que sea sostenible en su contexto real, en vez de imponer un patrón genérico. Recomendar evitar el exceso de dulces sin abordar el resto del patrón alimentario deja sin ajustar aspectos igualmente relevantes de la dieta; entregar una lista genérica de alimentos prohibidos no considera los hábitos ni preferencias individuales del paciente; indicar una dieta estándar preestablecida sin considerar los hábitos previos reduce la probabilidad de adherencia sostenida al cambio."
     },
     {
@@ -1592,8 +1592,8 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
         "Atender los casos de forma aislada, sin evaluar el contexto comunitario.",
-        "Indicar cirugía a todos los casos identificados, sin evaluación previa.",
         "Solicitar solo exámenes hormonales individuales, sin evaluar el contexto comunitario.",
+        "Indicar cirugía a todos los casos identificados, sin evaluación previa.",
         "Evaluar el consumo de sal yodada en la comunidad y coordinar acciones de vigilancia y educación nutricional."
       ],
       "correct": 3,
@@ -1615,11 +1615,11 @@ window.SERUMS_DATA = {
       "question": "¿Qué medida epidemiológica corresponde calcular con estos datos?",
       "options": [
         "Letalidad, porque mide la gravedad del cuadro.",
-        "Razón, porque compara dos grupos independientes entre sí.",
+        "Tasa de incidencia, porque mide casos nuevos en un periodo definido.",
         "Prevalencia, porque incluye todos los casos existentes.",
-        "Tasa de incidencia, porque mide casos nuevos en un periodo definido."
+        "Razón, porque compara dos grupos independientes entre sí."
       ],
-      "correct": 3,
+      "correct": 1,
       "feedback": "Es correcta porque la tasa de incidencia mide específicamente la aparición de casos nuevos (8) en una población en riesgo definida (400 personas sin el trastorno al inicio) durante un periodo determinado (un mes), que es exactamente lo que describen los datos del enunciado. La letalidad mide la proporción de muertes entre los casos, no la aparición de nuevos casos; la prevalencia incluiría tanto casos antiguos como nuevos, sin restringirse a los que aparecieron en el periodo; la razón compara dos cantidades independientes entre sí, no mide la ocurrencia de un evento en una población en riesgo."
     },
     {
@@ -1637,12 +1637,12 @@ window.SERUMS_DATA = {
       "statement": "Se evalúa una prueba rápida para detectar anemia en niños antes de implementarla en un establecimiento con alta carga de casos.",
       "question": "¿Qué característica de la prueba es prioritaria verificar para evitar dejar casos sin detectar?",
       "options": [
-        "El costo de fabricación de la prueba.",
         "La especificidad, que refleja la capacidad de descartar correctamente a los sanos.",
-        "La sensibilidad, que refleja la capacidad de detectar correctamente a los enfermos.",
-        "El tiempo que demora en procesarse la muestra."
+        "El costo de fabricación de la prueba.",
+        "El tiempo que demora en procesarse la muestra.",
+        "La sensibilidad, que refleja la capacidad de detectar correctamente a los enfermos."
       ],
-      "correct": 2,
+      "correct": 3,
       "feedback": "Es correcta porque la sensibilidad determina la proporción de enfermos correctamente identificados por la prueba; en tamizaje poblacional con alta carga de casos, priorizarla minimiza los falsos negativos, que en ese escenario son el riesgo más costoso (casos reales sin detectar). La especificidad reduce los falsos positivos pero no evita dejar enfermos sin detectar; el costo de fabricación y el tiempo de procesamiento son relevantes operativamente, pero no determinan la capacidad diagnóstica de la prueba."
     },
     {
@@ -1660,12 +1660,12 @@ window.SERUMS_DATA = {
       "statement": "Un estudio encuentra que los adolescentes expuestos a violencia familiar tienen un riesgo relativo de 3 para desarrollar síntomas depresivos, comparado con quienes no están expuestos.",
       "question": "¿Cómo se interpreta correctamente este resultado?",
       "options": [
-        "El 3% de los adolescentes expuestos desarrollará depresión.",
-        "La violencia familiar causa depresión en todos los casos expuestos.",
         "Los adolescentes expuestos tienen tres veces más probabilidad de desarrollar síntomas depresivos que los no expuestos.",
-        "El riesgo relativo de 3 indica que el 30% de los expuestos presentará el desenlace."
+        "El riesgo relativo de 3 indica que el 30% de los expuestos presentará el desenlace.",
+        "El 3% de los adolescentes expuestos desarrollará depresión.",
+        "La violencia familiar causa depresión en todos los casos expuestos."
       ],
-      "correct": 2,
+      "correct": 0,
       "feedback": "Es correcta porque un riesgo relativo de 3 significa que la probabilidad de desarrollar el desenlace en el grupo expuesto es tres veces la del grupo no expuesto, una medida de asociación relativa entre grupos, no un porcentaje absoluto ni una garantía de causalidad para cada individuo. Interpretar que el 3% o el 30% de los expuestos desarrollará depresión confunde el riesgo relativo con un riesgo absoluto, que es una medida distinta; afirmar que la violencia familiar causa depresión en todos los casos expuestos excede lo que un riesgo relativo puede establecer, ya que no implica una relación causal determinista ni universal."
     },
     {
@@ -1683,12 +1683,12 @@ window.SERUMS_DATA = {
       "statement": "Ante el inicio de la temporada de infecciones respiratorias, el establecimiento organiza una campaña de vacunación antes de que aparezcan casos.",
       "question": "¿A qué nivel de prevención corresponde esta acción?",
       "options": [
-        "Prevención primaria, porque busca evitar la aparición de la enfermedad mediante protección específica.",
         "Prevención secundaria, porque busca la detección temprana de casos asintomáticos.",
-        "Prevención cuaternaria, porque busca evitar sobretratamiento.",
-        "Prevención terciaria, porque busca rehabilitar secuelas."
+        "Prevención primaria, porque busca evitar la aparición de la enfermedad mediante protección específica.",
+        "Prevención terciaria, porque busca rehabilitar secuelas.",
+        "Prevención cuaternaria, porque busca evitar sobretratamiento."
       ],
-      "correct": 0,
+      "correct": 1,
       "feedback": "Es correcta porque vacunar antes de la aparición de casos actúa sobre población sana para evitar la enfermedad, que es la definición central de prevención primaria. La prevención secundaria actúa sobre casos ya presentes pero asintomáticos, no antes de que existan; la terciaria rehabilita secuelas de una enfermedad ya establecida; la cuaternaria previene el sobretratamiento o la sobremedicalización, no la aparición de la enfermedad."
     },
     {
@@ -1706,12 +1706,12 @@ window.SERUMS_DATA = {
       "statement": "Un profesional identifica un caso compatible con una enfermedad de notificación obligatoria durante la atención en un establecimiento rural.",
       "question": "¿Cuál es la conducta correcta?",
       "options": [
-        "Esperar a que aparezcan más casos similares antes de notificar.",
-        "Registrar el caso solo en la historia clínica, sin notificación adicional.",
         "Notificar el caso según el sistema de vigilancia vigente, sin esperar confirmación de otros casos.",
-        "Notificar únicamente si el caso presenta signos de gravedad clínica."
+        "Notificar únicamente si el caso presenta signos de gravedad clínica.",
+        "Esperar a que aparezcan más casos similares antes de notificar.",
+        "Registrar el caso solo en la historia clínica, sin notificación adicional."
       ],
-      "correct": 2,
+      "correct": 0,
       "feedback": "Es correcta porque las enfermedades de notificación obligatoria deben reportarse ante la sola sospecha clínica compatible, sin esperar confirmación de laboratorio ni la aparición de más casos, dado que la vigilancia depende de la oportunidad del reporte. Registrar solo en la historia clínica no activa el sistema de vigilancia epidemiológica; notificar solo si hay signos de gravedad clínica deja sin reportar casos leves que igual son relevantes para la vigilancia; esperar más casos similares retrasa una respuesta que debe iniciarse con el primer caso identificado."
     },
     {
@@ -1731,8 +1731,8 @@ window.SERUMS_DATA = {
       "options": [
         "Que el desempleo preceda temporalmente a la aparición de los síntomas de ansiedad.",
         "Que ambas variables se midan exactamente el mismo día.",
-        "Que el estudio tenga una muestra grande, sin importar el diseño utilizado.",
-        "Que exista una fuerte creencia popular sobre la relación entre ambas variables."
+        "Que exista una fuerte creencia popular sobre la relación entre ambas variables.",
+        "Que el estudio tenga una muestra grande, sin importar el diseño utilizado."
       ],
       "correct": 0,
       "feedback": "Es correcta porque la temporalidad, es decir, que la exposición preceda a la aparición del efecto, es uno de los criterios centrales de Bradford Hill para sustentar una relación causal más allá de la simple asociación estadística. Que ambas variables se midan exactamente el mismo día impediría establecer cuál precede a cuál, debilitando el análisis de causalidad; que el estudio tenga una muestra grande sin importar el diseño no compensa problemas metodológicos que afectan la validez causal; que exista una fuerte creencia popular sobre la relación no constituye evidencia científica de causalidad."
@@ -1754,10 +1754,10 @@ window.SERUMS_DATA = {
       "options": [
         "Un ensayo clínico aleatorizado.",
         "Un estudio experimental con grupo control.",
-        "Un estudio de cohorte prospectivo de cinco años.",
-        "Un estudio descriptivo transversal."
+        "Un estudio descriptivo transversal.",
+        "Un estudio de cohorte prospectivo de cinco años."
       ],
-      "correct": 3,
+      "correct": 2,
       "feedback": "Es correcta porque cuando el objetivo es describir la proporción de un fenómeno en un momento determinado, sin manipular variables ni hacer seguimiento en el tiempo, el diseño descriptivo transversal es el que corresponde a ese objetivo específico. Un ensayo clínico aleatorizado o un estudio experimental con grupo control implican manipular una intervención, lo cual no es el propósito aquí; un estudio de cohorte prospectivo de cinco años serviría para evaluar la aparición de un desenlace en el tiempo, no para describir una prevalencia puntual."
     },
     {
@@ -1775,12 +1775,12 @@ window.SERUMS_DATA = {
       "statement": "Se planea un estudio sobre ansiedad escolar que incluirá a adolescentes menores de edad como participantes.",
       "question": "¿Qué debe garantizarse antes de iniciar la recolección de datos?",
       "options": [
-        "Solicitar únicamente la autorización de la dirección del colegio.",
         "Aplicar los instrumentos sin informar a los adolescentes para no sesgar los resultados.",
-        "Obtener solo el consentimiento del tutor legal, sin requerir el asentimiento del adolescente.",
-        "Obtener el asentimiento del adolescente y el consentimiento informado de su tutor legal."
+        "Solicitar únicamente la autorización de la dirección del colegio.",
+        "Obtener el asentimiento del adolescente y el consentimiento informado de su tutor legal.",
+        "Obtener solo el consentimiento del tutor legal, sin requerir el asentimiento del adolescente."
       ],
-      "correct": 3,
+      "correct": 2,
       "feedback": "Es correcta porque en investigación con menores de edad se requiere tanto el consentimiento informado del tutor legal (quien autoriza legalmente la participación) como el asentimiento del propio adolescente (quien expresa su acuerdo según su capacidad de comprensión), siendo ambos documentos complementarios y no sustituibles entre sí. Solicitar solo la autorización de la dirección del colegio no reemplaza el consentimiento de los tutores legales de cada participante; aplicar los instrumentos sin informar a los adolescentes vulnera el principio ético de transparencia en investigación; obtener solo el consentimiento del tutor sin el asentimiento del menor desconoce el derecho del propio adolescente a decidir sobre su participación."
     },
     {
@@ -1798,10 +1798,10 @@ window.SERUMS_DATA = {
       "statement": "Un equipo de investigación quiere estudiar una enfermedad poco frecuente y busca un diseño observacional eficiente en tiempo y recursos.",
       "question": "¿Qué diseño es más apropiado para este objetivo?",
       "options": [
-        "Un estudio de cohorte prospectivo de varios años.",
+        "Un ensayo clínico aleatorizado.",
         "Un estudio de casos y controles, que parte de los casos existentes y compara exposiciones previas.",
-        "Un estudio descriptivo transversal de prevalencia.",
-        "Un ensayo clínico aleatorizado."
+        "Un estudio de cohorte prospectivo de varios años.",
+        "Un estudio descriptivo transversal de prevalencia."
       ],
       "correct": 1,
       "feedback": "Es correcta porque en enfermedades poco frecuentes el estudio de casos y controles parte de los casos ya existentes en vez de esperar a que aparezcan en una cohorte, lo que lo hace más eficiente en tiempo y recursos para ese objetivo. Un estudio de cohorte prospectivo requeriría seguir a una población muy grande durante años para acumular pocos casos; un descriptivo transversal no permite establecer la secuencia temporal entre exposición y enfermedad; un ensayo clínico aleatorizado no aplica a un objetivo observacional sobre una exposición no manipulable."
@@ -1821,12 +1821,12 @@ window.SERUMS_DATA = {
       "statement": "Un investigador combina encuestas cuantitativas con entrevistas a profundidad para estudiar la adherencia terapéutica en un centro de salud mental.",
       "question": "¿Qué propósito cumple la combinación de ambos métodos?",
       "options": [
-        "Evitar la necesidad de un comité de ética.",
         "Aumentar la validez de los hallazgos al contrastar información desde distintos enfoques.",
         "Simplificar el análisis estadístico al combinar ambos tipos de datos.",
+        "Evitar la necesidad de un comité de ética.",
         "Reducir el tiempo total de la investigación."
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Es correcta porque la triangulación metodológica combina las fortalezas de datos cuantitativos y cualitativos para contrastar los hallazgos desde distintos enfoques, lo que fortalece la validez de las conclusiones sobre un fenómeno complejo como la adherencia terapéutica. Evitar la necesidad de un comité de ética no es un propósito ni un efecto de la triangulación, ya que todo estudio con participantes humanos requiere esa aprobación independientemente del diseño; simplificar el análisis estadístico o reducir el tiempo total de investigación tampoco son los objetivos que persigue combinar ambos métodos, que de hecho suele implicar mayor complejidad analítica."
     },
     {
@@ -1844,10 +1844,10 @@ window.SERUMS_DATA = {
       "statement": "Un investigador recibe financiamiento de una institución con interés directo en los resultados de su estudio sobre eficacia terapéutica.",
       "question": "¿Qué debe hacer al publicar los resultados?",
       "options": [
-        "Omitir la fuente de financiamiento para evitar cuestionamientos.",
+        "Mencionar el financiamiento solo si un revisor lo solicita expresamente.",
         "Declarar explícitamente la fuente de financiamiento y el posible conflicto de interés.",
-        "Publicar solo los resultados favorables a la institución financiadora.",
-        "Mencionar el financiamiento solo si un revisor lo solicita expresamente."
+        "Omitir la fuente de financiamiento para evitar cuestionamientos.",
+        "Publicar solo los resultados favorables a la institución financiadora."
       ],
       "correct": 1,
       "feedback": "Es correcta porque la transparencia científica exige declarar explícitamente toda fuente de financiamiento y cualquier posible conflicto de interés al publicar, permitiendo que los lectores evalúen la información con ese contexto presente. Omitir la fuente de financiamiento para evitar cuestionamientos oculta información relevante para la interpretación de los resultados; publicar solo los resultados favorables a la institución financiadora constituye un sesgo de publicación selectiva; mencionar el financiamiento solo si un revisor lo solicita expresamente invierte la responsabilidad, que es proactiva y no reactiva."
@@ -1867,12 +1867,12 @@ window.SERUMS_DATA = {
       "statement": "Un psicólogo debe redactar el informe final de una investigación aplicada realizada en su establecimiento de salud.",
       "question": "¿Qué estructura debe seguir para facilitar su comprensión y réplica?",
       "options": [
-        "Solo resultados y conclusiones, sin detallar el método.",
+        "Un resumen narrativo sin apartados diferenciados.",
         "Metodología y discusión únicamente, sin una sección de resultados separada.",
-        "Introducción, metodología, resultados y discusión.",
-        "Un resumen narrativo sin apartados diferenciados."
+        "Solo resultados y conclusiones, sin detallar el método.",
+        "Introducción, metodología, resultados y discusión."
       ],
-      "correct": 2,
+      "correct": 3,
       "feedback": "Es correcta porque la estructura de introducción, metodología, resultados y discusión (IMRD) es el formato estándar que facilita tanto la comprensión del estudio como su réplica por otros investigadores, al separar claramente qué se hizo, cómo se hizo y qué se encontró. Presentar solo resultados y conclusiones sin detallar el método impide que otros puedan replicar el estudio; presentar solo metodología y discusión sin una sección de resultados separada dificulta distinguir los hallazgos objetivos de su interpretación; un resumen narrativo sin apartados diferenciados no permite ubicar rápidamente cada componente del estudio."
     },
     {
@@ -1890,12 +1890,12 @@ window.SERUMS_DATA = {
       "statement": "El equipo de un centro de salud mental comunitario debe definir tanto su rumbo institucional a varios años como las actividades concretas del próximo trimestre.",
       "question": "¿Cómo deben organizarse correctamente estos dos niveles de planificación?",
       "options": [
-        "El plan operativo debe definirse antes que el plan estratégico.",
-        "Ambos documentos son intercambiables y cubren el mismo horizonte temporal.",
         "El plan estratégico se actualiza cada mes y el operativo cada cinco años.",
-        "El Plan Estratégico Institucional define el rumbo a largo plazo, y el Plan Operativo Institucional lo traduce en acciones concretas de corto plazo."
+        "Ambos documentos son intercambiables y cubren el mismo horizonte temporal.",
+        "El Plan Estratégico Institucional define el rumbo a largo plazo, y el Plan Operativo Institucional lo traduce en acciones concretas de corto plazo.",
+        "El plan operativo debe definirse antes que el plan estratégico."
       ],
-      "correct": 3,
+      "correct": 2,
       "feedback": "Es correcta porque el Plan Estratégico Institucional define el rumbo y los objetivos de largo plazo de la organización, mientras que el Plan Operativo Institucional traduce ese rumbo en actividades concretas de corto plazo, siendo instrumentos de gestión complementarios pero con horizontes temporales distintos. Que el plan operativo se defina antes que el estratégico invierte la lógica de planificación, que parte de lo general hacia lo específico; considerar ambos documentos intercambiables desconoce que cumplen funciones y niveles de planificación distintos; asignarles periodicidades opuestas a las reales (estratégico mensual, operativo quinquenal) contradice la definición misma de cada instrumento."
     },
     {
@@ -1913,12 +1913,12 @@ window.SERUMS_DATA = {
       "statement": "Antes de definir nuevas estrategias, el equipo de un servicio de psicología quiere identificar qué factores internos y externos influyen en su desempeño.",
       "question": "¿Qué herramienta es más adecuada para este diagnóstico?",
       "options": [
-        "Un organigrama institucional actualizado.",
         "Un informe financiero exclusivamente.",
-        "El análisis FODA, que examina fortalezas, oportunidades, debilidades y amenazas.",
-        "Una encuesta de satisfacción sin análisis adicional."
+        "Una encuesta de satisfacción sin análisis adicional.",
+        "Un organigrama institucional actualizado.",
+        "El análisis FODA, que examina fortalezas, oportunidades, debilidades y amenazas."
       ],
-      "correct": 2,
+      "correct": 3,
       "feedback": "Es correcta porque el análisis FODA permite diagnosticar de forma integral tanto los factores internos (fortalezas y debilidades) como los externos (oportunidades y amenazas) que influyen en el desempeño del servicio, siendo la herramienta diseñada específicamente para ese propósito diagnóstico previo a la planificación estratégica. Un organigrama institucional actualizado solo describe la estructura de cargos, sin analizar factores de desempeño; un informe financiero exclusivo aporta solo una dimensión económica, dejando fuera otros factores relevantes; una encuesta de satisfacción sin análisis adicional recoge percepciones puntuales, pero no constituye por sí sola un diagnóstico estratégico integral."
     },
     {
@@ -1936,12 +1936,12 @@ window.SERUMS_DATA = {
       "statement": "Un paciente atendido en un establecimiento de primer nivel requiere evaluación especializada no disponible en ese centro.",
       "question": "¿Cuál es la conducta correcta según el sistema de referencia y contrarreferencia?",
       "options": [
+        "Derivar al paciente al nivel de atención adecuado y asegurar su retorno con la información pertinente para el seguimiento.",
         "Derivar al paciente sin enviar información clínica al establecimiento receptor.",
-        "Derivar al paciente y cerrar el caso en el establecimiento de origen sin esperar su retorno.",
         "Atender el caso sin derivar, aunque no se cuente con los recursos necesarios.",
-        "Derivar al paciente al nivel de atención adecuado y asegurar su retorno con la información pertinente para el seguimiento."
+        "Derivar al paciente y cerrar el caso en el establecimiento de origen sin esperar su retorno."
       ],
-      "correct": 3,
+      "correct": 0,
       "feedback": "Es correcta porque el sistema de referencia y contrarreferencia exige derivar al nivel adecuado acompañando información clínica pertinente, y asegurar el retorno del paciente con la contrarreferencia para dar continuidad al cuidado en el establecimiento de origen. Derivar sin enviar información clínica deja al establecimiento receptor sin el contexto necesario; cerrar el caso sin esperar el retorno interrumpe la continuidad asistencial; atender sin derivar pese a no contar con los recursos necesarios expone al paciente a un manejo inadecuado."
     },
     {
@@ -1959,12 +1959,12 @@ window.SERUMS_DATA = {
       "statement": "Un servicio de psicología busca implementar atención remota para pacientes de comunidades alejadas del establecimiento.",
       "question": "¿Qué condición es indispensable garantizar antes de implementar la telesalud?",
       "options": [
+        "Eliminar por completo la atención presencial.",
         "La protección de datos personales y el consentimiento informado del paciente.",
         "Que el establecimiento cuente con conexión a internet de alta velocidad, sin más requisitos.",
-        "Que todos los pacientes cuenten con un dispositivo de última generación.",
-        "Eliminar por completo la atención presencial."
+        "Que todos los pacientes cuenten con un dispositivo de última generación."
       ],
-      "correct": 0,
+      "correct": 1,
       "feedback": "Es correcta porque implementar telesalud implica el manejo de información sensible a distancia, por lo que la protección de datos personales y el consentimiento informado del paciente son condiciones éticas y normativas indispensables antes de iniciar el servicio, independientemente de la infraestructura tecnológica disponible. Exigir solo conexión a internet de alta velocidad sin más requisitos ignora las condiciones éticas y de seguridad de la información que la telesalud exige; exigir que todos los pacientes cuenten con un dispositivo de última generación no es una condición indispensable, ya que existen alternativas tecnológicas más básicas; eliminar por completo la atención presencial no corresponde al enfoque complementario con el que se implementa la telesalud."
     },
     {
@@ -1982,12 +1982,12 @@ window.SERUMS_DATA = {
       "statement": "El equipo directivo de un centro de salud mental programa una revisión periódica del cumplimiento de protocolos clínicos y administrativos.",
       "question": "¿Cuál es la finalidad principal de esta actividad?",
       "options": [
+        "Evaluar el cumplimiento de estándares y detectar áreas de mejora en la atención.",
         "Reemplazar la supervisión clínica habitual por la auditoría periódica.",
-        "Reducir el número de pacientes atendidos.",
         "Sancionar de forma automática al personal involucrado.",
-        "Evaluar el cumplimiento de estándares y detectar áreas de mejora en la atención."
+        "Reducir el número de pacientes atendidos."
       ],
-      "correct": 3,
+      "correct": 0,
       "feedback": "Es correcta porque una auditoría de calidad tiene como finalidad evaluar el cumplimiento de estándares clínicos y administrativos y detectar áreas de mejora en la atención, siendo un mecanismo de gestión orientado a la mejora continua, no a la sanción ni al reemplazo de otros mecanismos de supervisión. Reemplazar la supervisión clínica habitual por la auditoría periódica confunde dos mecanismos con funciones distintas y complementarias; reducir el número de pacientes atendidos no es un objetivo ni un efecto esperado de la auditoría; sancionar de forma automática al personal involucrado contradice el enfoque de mejora continua que caracteriza a este tipo de evaluación."
     },
     {
@@ -2005,12 +2005,12 @@ window.SERUMS_DATA = {
       "statement": "Un centro de salud mental comunitaria identifica alta rotación de personal y bajo desempeño en algunas áreas.",
       "question": "¿Qué acción de gestión de recursos humanos aborda mejor este problema de forma sostenible?",
       "options": [
-        "Contratar personal nuevo sin evaluar las causas de la rotación.",
         "Fortalecer la selección, capacitación continua y evaluación del desarrollo profesional del personal.",
-        "Aumentar la carga laboral del personal restante sin evaluar la causa de la rotación.",
-        "Reducir las evaluaciones de desempeño para evitar conflictos."
+        "Contratar personal nuevo sin evaluar las causas de la rotación.",
+        "Reducir las evaluaciones de desempeño para evitar conflictos.",
+        "Aumentar la carga laboral del personal restante sin evaluar la causa de la rotación."
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Es correcta porque la alta rotación y el bajo desempeño requieren una respuesta integral de gestión de recursos humanos que fortalezca la selección, la capacitación continua y el desarrollo profesional del personal, abordando las causas estructurales del problema en vez de solo sus síntomas. Contratar personal nuevo sin evaluar las causas de la rotación no resuelve el problema de fondo y probablemente lo repita; aumentar la carga laboral del personal restante sin evaluar la causa puede agravar la rotación al incrementar el desgaste; reducir las evaluaciones de desempeño para evitar conflictos elimina una herramienta necesaria para identificar y abordar el bajo desempeño de forma constructiva."
     },
     {
@@ -2030,8 +2030,8 @@ window.SERUMS_DATA = {
       "options": [
         "Indicar solo antipirético oral y alta, sin ninguna evaluación adicional.",
         "Estabilizar al lactante, controlar la fiebre, evaluar signos de alarma neurológica y decidir observación o referencia.",
-        "Solicitar estudios de imagen cerebral de urgencia como primera medida, antes de estabilizar al paciente.",
-        "Administrar anticonvulsivante de mantenimiento de forma inmediata, sin evaluación previa."
+        "Administrar anticonvulsivante de mantenimiento de forma inmediata, sin evaluación previa.",
+        "Solicitar estudios de imagen cerebral de urgencia como primera medida, antes de estabilizar al paciente."
       ],
       "correct": 1,
       "feedback": "Es correcta porque tras una convulsión febril corresponde estabilizar, controlar la fiebre y descartar signos de alarma neurológica antes de decidir observación o referencia. El alta sin evaluación adicional omite el descarte de esos signos; el anticonvulsivante de mantenimiento inmediato no está indicado tras un único episodio; solicitar imagen cerebral de urgencia antes de estabilizar invierte la prioridad clínica del caso."
@@ -2051,12 +2051,12 @@ window.SERUMS_DATA = {
       "statement": "Paciente joven presenta dolor abdominal progresivo localizado en fosa iliaca derecha, con signos de irritación peritoneal, en un establecimiento sin capacidad quirúrgica.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Esperar a que el dolor ceda espontáneamente antes de decidir cualquier acción.",
-        "Indicar analgésicos y observación domiciliaria por 48 horas.",
         "Estabilizar al paciente y coordinar referencia urgente a un establecimiento con capacidad quirúrgica.",
-        "Iniciar antibiótico empírico ambulatorio como manejo definitivo del cuadro."
+        "Iniciar antibiótico empírico ambulatorio como manejo definitivo del cuadro.",
+        "Esperar a que el dolor ceda espontáneamente antes de decidir cualquier acción.",
+        "Indicar analgésicos y observación domiciliaria por 48 horas."
       ],
-      "correct": 2,
+      "correct": 0,
       "feedback": "Es correcta porque el dolor en fosa iliaca derecha con signos de irritación peritoneal define un abdomen agudo quirúrgico que, en un establecimiento sin capacidad resolutiva, exige estabilización y referencia urgente para el manejo definitivo. El antibiótico ambulatorio no resuelve la causa quirúrgica de fondo; la observación domiciliaria expone a progresión hacia complicaciones mayores; esperar a que el dolor ceda espontáneamente retrasa un diagnóstico tiempo-dependiente."
     },
     {
@@ -2074,12 +2074,12 @@ window.SERUMS_DATA = {
       "statement": "Minutos después de recibir una vacuna, un paciente presenta dificultad respiratoria, urticaria generalizada e hipotensión.",
       "question": "¿Cuál es la conducta prioritaria?",
       "options": [
+        "Observar la evolución del paciente durante unos minutos antes de intervenir.",
         "Indicar solo un antihistamínico oral y continuar la jornada de vacunación.",
         "Administrar el tratamiento de emergencia solo si aparecen signos de compromiso respiratorio más severo.",
-        "Aplicar el protocolo de manejo de anafilaxia de forma inmediata y activar la referencia de emergencia.",
-        "Observar la evolución del paciente durante unos minutos antes de intervenir."
+        "Aplicar el protocolo de manejo de anafilaxia de forma inmediata y activar la referencia de emergencia."
       ],
-      "correct": 2,
+      "correct": 3,
       "feedback": "Es correcta porque la anafilaxia es una emergencia con riesgo vital inminente que exige manejo protocolizado inmediato y activación de la referencia de emergencia, sin esperar mayor deterioro clínico. El antihistamínico oral aislado no revierte el compromiso respiratorio ni hemodinámico de la anafilaxia; observar antes de intervenir retrasa un tratamiento tiempo-dependiente; esperar mayor compromiso respiratorio para actuar aumenta el riesgo de un desenlace fatal evitable."
     },
     {
@@ -2097,9 +2097,9 @@ window.SERUMS_DATA = {
       "statement": "Mujer de 50 años consulta por bochornos frecuentes, irritabilidad y dificultad para dormir asociados al climaterio.",
       "question": "¿Cuál es la conducta más adecuada en este nivel de atención?",
       "options": [
-        "Derivar de inmediato a psiquiatría, sin evaluación previa del cuadro.",
-        "Evaluar la intensidad de los síntomas, brindar consejería y coordinar apoyo médico o psicológico según necesidad.",
         "Iniciar terapia hormonal de forma inmediata, sin evaluar antes la intensidad ni el contexto de los síntomas.",
+        "Evaluar la intensidad de los síntomas, brindar consejería y coordinar apoyo médico o psicológico según necesidad.",
+        "Derivar de inmediato a psiquiatría, sin evaluación previa del cuadro.",
         "Indicar que son molestias normales que no requieren ninguna evaluación."
       ],
       "correct": 1,
@@ -2121,12 +2121,12 @@ window.SERUMS_DATA = {
       "statement": "Se organiza una campaña de toma de presión arterial en una comunidad con baja cobertura de controles de salud.",
       "question": "¿Qué acción corresponde ante un valor elevado detectado en el tamizaje?",
       "options": [
+        "Registrar el dato sin ninguna acción adicional.",
         "Descartar el hallazgo si el usuario refiere no tener síntomas.",
-        "Confirmar con una segunda toma, orientar al usuario y programar su ingreso a control si corresponde.",
         "Indicar tratamiento farmacológico de inmediato, sin confirmación previa.",
-        "Registrar el dato sin ninguna acción adicional."
+        "Confirmar con una segunda toma, orientar al usuario y programar su ingreso a control si corresponde."
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Es correcta porque un valor elevado en tamizaje comunitario requiere confirmarse con una segunda toma antes de orientar e ingresar al paciente a control, ya que el tamizaje por sí solo no establece el diagnóstico. Descartar el hallazgo por ausencia de síntomas ignora que la hipertensión suele ser asintomática; iniciar tratamiento farmacológico sin confirmación puede sobretratar una lectura aislada; registrar sin ninguna acción adicional deja sin seguimiento un hallazgo que requiere confirmación."
     },
     {
@@ -2144,12 +2144,12 @@ window.SERUMS_DATA = {
       "statement": "Durante una visita domiciliaria se identifica una lesión ulcerada en el pie de un paciente diabético, con signos de mala perfusión.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Iniciar antibiótico oral de forma empírica, sin evaluar el compromiso vascular de la lesión.",
         "Indicar reposo absoluto, sin evaluar la lesión de forma directa.",
-        "Realizar curación local, sin dar ningún seguimiento posterior a la evolución de la lesión.",
-        "Evaluar la lesión, iniciar curación según protocolo y coordinar referencia si hay signos de compromiso vascular o infeccioso."
+        "Evaluar la lesión, iniciar curación según protocolo y coordinar referencia si hay signos de compromiso vascular o infeccioso.",
+        "Iniciar antibiótico oral de forma empírica, sin evaluar el compromiso vascular de la lesión.",
+        "Realizar curación local, sin dar ningún seguimiento posterior a la evolución de la lesión."
       ],
-      "correct": 3,
+      "correct": 1,
       "feedback": "Es correcta porque una úlcera con signos de mala perfusión en pie diabético requiere evaluar el compromiso vascular e infeccioso, curación protocolizada y referencia oportuna si esos signos están presentes, dado el riesgo de progresión a un cuadro más grave. El antibiótico oral empírico sin evaluar el compromiso vascular no aborda la causa isquémica subyacente; el reposo absoluto sin evaluar directamente la lesión no permite clasificar su gravedad; la curación local sin seguimiento posterior no monitorea la evolución de una lesión con signos ya preocupantes."
     },
     {
@@ -2167,12 +2167,12 @@ window.SERUMS_DATA = {
       "statement": "Gestante de 30 semanas refiere pérdida súbita de líquido claro por vía vaginal, sin contracciones aún.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Esperar el inicio espontáneo del trabajo de parto, sin más evaluación.",
-        "Confirmar el diagnóstico, evaluar signos de infección y coordinar referencia urgente según protocolo.",
         "Indicar reposo domiciliario y control en una semana.",
-        "Iniciar antibiótico profiláctico ambulatorio, sin confirmar antes el diagnóstico de ruptura de membranas."
+        "Esperar el inicio espontáneo del trabajo de parto, sin más evaluación.",
+        "Iniciar antibiótico profiláctico ambulatorio, sin confirmar antes el diagnóstico de ruptura de membranas.",
+        "Confirmar el diagnóstico, evaluar signos de infección y coordinar referencia urgente según protocolo."
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Es correcta porque la sospecha de ruptura prematura de membranas exige confirmar el diagnóstico y evaluar signos de infección antes de decidir el manejo, coordinando referencia urgente según protocolo dado el riesgo de infección ascendente y parto pretérmino. Esperar el inicio espontáneo del trabajo de parto sin más evaluación deja sin vigilar el riesgo infeccioso; el reposo domiciliario no corresponde a un cuadro que requiere evaluación y manejo hospitalario; iniciar antibiótico profiláctico sin confirmar el diagnóstico expone a tratamiento innecesario o a subestimar otras causas de pérdida de líquido."
     },
     {
@@ -2190,12 +2190,12 @@ window.SERUMS_DATA = {
       "statement": "Una adolescente de 16 años acude sola a solicitar información sobre métodos anticonceptivos, pidiendo que no se informe a sus padres.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Informar a los padres sin el consentimiento de la adolescente.",
-        "Negar la atención hasta que acuda con un adulto responsable.",
         "Brindar consejería confidencial y orientación adecuada a su edad, respetando su autonomía progresiva.",
-        "Brindar la orientación solicitada, pero solo si promete informar a sus padres después."
+        "Negar la atención hasta que acuda con un adulto responsable.",
+        "Brindar la orientación solicitada, pero solo si promete informar a sus padres después.",
+        "Informar a los padres sin el consentimiento de la adolescente."
       ],
-      "correct": 2,
+      "correct": 0,
       "feedback": "Es correcta porque la atención en salud sexual y reproductiva a adolescentes debe ser confidencial y respetar su autonomía progresiva, sin condicionar la orientación a la participación de terceros, en línea con el enfoque de derechos reconocido para esta población. Informar a los padres sin su consentimiento vulnera la confidencialidad a la que tiene derecho; negar la atención hasta que acuda acompañada retrasa una orientación que puede y debe brindarse en el momento; condicionar la orientación a que ella misma informe después no es una condición legítima para brindar el servicio."
     },
     {
@@ -2213,12 +2213,12 @@ window.SERUMS_DATA = {
       "statement": "En una ecografía de rutina se detecta un hallazgo compatible con una posible malformación fetal en una gestante de 22 semanas.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Repetir la ecografía varias veces antes de comunicar cualquier hallazgo a la gestante.",
         "Derivar sin brindar ninguna explicación a la gestante.",
         "No informar el hallazgo hasta confirmar con certeza absoluta.",
-        "Informar el hallazgo de forma clara, brindar contención emocional y coordinar referencia especializada oportuna."
+        "Informar el hallazgo de forma clara, brindar contención emocional y coordinar referencia especializada oportuna.",
+        "Repetir la ecografía varias veces antes de comunicar cualquier hallazgo a la gestante."
       ],
-      "correct": 3,
+      "correct": 2,
       "feedback": "Es correcta porque un hallazgo ecográfico anómalo debe comunicarse con claridad y sensibilidad en el momento oportuno, junto con contención emocional y coordinación de la referencia especializada que permita confirmar o descartar el hallazgo, sin retrasos innecesarios. Repetir la ecografía varias veces sin comunicar nada prolonga la incertidumbre de la gestante sin justificación clínica; derivar sin ninguna explicación la deja sin comprensión de su propia condición; no informar hasta tener certeza absoluta contradice el derecho a la información oportuna sobre hallazgos relevantes ya detectados.",
       "interdisciplinaryNote": "Psicología puede brindar contención emocional a la gestante y su pareja ante la incertidumbre de un diagnóstico prenatal."
     },
@@ -2237,12 +2237,12 @@ window.SERUMS_DATA = {
       "statement": "Puérpera de 5 días presenta fiebre, loquios de mal olor y dolor abdominal bajo persistente.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Evaluar signos de infección puerperal, iniciar manejo inicial y referir si el cuadro lo amerita.",
-        "Indicar reposo y control en una semana.",
         "Iniciar antibiótico oral ambulatorio, sin evaluar la gravedad del cuadro.",
+        "Indicar reposo y control en una semana.",
+        "Evaluar signos de infección puerperal, iniciar manejo inicial y referir si el cuadro lo amerita.",
         "Esperar la resolución espontánea de los síntomas."
       ],
-      "correct": 0,
+      "correct": 2,
       "feedback": "Es correcta porque la fiebre, los loquios de mal olor y el dolor abdominal bajo persistente en el puerperio son signos compatibles con infección puerperal, que exigen evaluar la gravedad del cuadro, iniciar manejo inicial y referir oportunamente si lo amerita, dado el riesgo de progresión a un cuadro séptico. El reposo sin evaluar no corrige un proceso infeccioso en curso; esperar la resolución espontánea de los síntomas retrasa un tratamiento que es tiempo-dependiente; iniciar antibiótico oral ambulatorio sin evaluar la gravedad puede ser insuficiente si el cuadro ya requiere manejo hospitalario."
     },
     {
@@ -2260,12 +2260,12 @@ window.SERUMS_DATA = {
       "statement": "Niño de 8 años presenta una alteración marcada en la posición de sus piezas dentarias que afecta su mordida.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Evaluar el caso y derivar oportunamente a especialidad de ortodoncia si corresponde.",
-        "Extraer las piezas afectadas de inmediato, sin evaluación especializada.",
         "Indicar que la maloclusión se corregirá espontáneamente con el crecimiento.",
-        "Recomendar el uso de un aparato de ortodoncia genérico, sin evaluación previa."
+        "Evaluar el caso y derivar oportunamente a especialidad de ortodoncia si corresponde.",
+        "Recomendar el uso de un aparato de ortodoncia genérico, sin evaluación previa.",
+        "Extraer las piezas afectadas de inmediato, sin evaluación especializada."
       ],
-      "correct": 0,
+      "correct": 1,
       "feedback": "Es correcta porque una maloclusión marcada que afecta la mordida debe evaluarse clínicamente y derivarse oportunamente a ortodoncia, ya que su manejo especializado requiere valoración del patrón de crecimiento y no todos los casos se resuelven espontáneamente. Extraer las piezas afectadas sin evaluación especializada es una medida desproporcionada e irreversible; asumir que la maloclusión se corregirá espontáneamente con el crecimiento ignora que muchos casos requieren intervención activa; recomendar un aparato genérico sin evaluación previa expone a un tratamiento no ajustado a la necesidad específica del caso."
     },
     {
@@ -2283,12 +2283,12 @@ window.SERUMS_DATA = {
       "statement": "Paciente diabético presenta encías inflamadas y sangrado frecuente al cepillarse, con control glicémico irregular.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Tratar la gingivitis sin considerar el control glicémico del paciente.",
-        "Indicar que la gingivitis no está relacionada con la diabetes.",
+        "Postergar el tratamiento dental hasta que el paciente logre un control glicémico óptimo.",
         "Evaluar el estado bucal, tratar la gingivitis y coordinar con el equipo médico el manejo integral de la diabetes.",
-        "Postergar el tratamiento dental hasta que el paciente logre un control glicémico óptimo."
+        "Tratar la gingivitis sin considerar el control glicémico del paciente.",
+        "Indicar que la gingivitis no está relacionada con la diabetes."
       ],
-      "correct": 2,
+      "correct": 1,
       "feedback": "Es correcta porque la relación bidireccional entre diabetes y enfermedad periodontal exige tratar la gingivitis y, en paralelo, coordinar con el equipo médico el manejo integral de la diabetes, ya que el control glicémico irregular puede tanto agravar el cuadro bucal como verse afectado por la infección periodontal no tratada. Tratar la gingivitis sin considerar el control glicémico ignora un factor que puede perpetuar la inflamación; indicar que la gingivitis no está relacionada con la diabetes desconoce esa asociación bidireccional bien establecida; postergar el tratamiento dental hasta lograr un control glicémico óptimo retrasa una intervención que, de hecho, puede contribuir a mejorar ese mismo control.",
       "interdisciplinaryNote": "Un control glicémico inadecuado puede empeorar la salud bucal, por lo que la coordinación con Medicina es clave."
     },
@@ -2307,12 +2307,12 @@ window.SERUMS_DATA = {
       "statement": "Paciente adulto presenta desgaste dental progresivo y dolor mandibular al despertar, y refiere una etapa de alta carga laboral.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Indicar que el bruxismo no requiere ninguna intervención.",
         "Recomendar el uso permanente de un protector nocturno, sin evaluar el componente de estrés.",
-        "Tratar únicamente el desgaste dental, sin explorar el origen del bruxismo.",
-        "Evaluar el desgaste dental, indicar manejo odontológico y coordinar abordaje del estrés asociado."
+        "Evaluar el desgaste dental, indicar manejo odontológico y coordinar abordaje del estrés asociado.",
+        "Indicar que el bruxismo no requiere ninguna intervención.",
+        "Tratar únicamente el desgaste dental, sin explorar el origen del bruxismo."
       ],
-      "correct": 3,
+      "correct": 1,
       "feedback": "Es correcta porque el bruxismo asociado a una etapa de estrés requiere un abordaje conjunto: manejo odontológico del desgaste dental y, en paralelo, coordinar el abordaje del componente psicoemocional que lo desencadena, sin el cual el desgaste tiende a persistir. Indicar que no requiere intervención desestima el daño dental progresivo ya presente; recomendar un protector nocturno permanente sin evaluar el estrés atiende solo la consecuencia, no la causa; tratar únicamente el desgaste dental sin explorar el origen deja sin abordar el factor que perpetúa el bruxismo.",
       "interdisciplinaryNote": "Psicología puede apoyar con técnicas de manejo del estrés cuando este mantiene el bruxismo."
     },
@@ -2333,8 +2333,8 @@ window.SERUMS_DATA = {
       "options": [
         "Enfocar el programa únicamente en el tratamiento restaurador de las piezas afectadas.",
         "Educación en higiene oral, aplicación de medidas preventivas y coordinación con la escuela y las familias.",
-        "Limitar el programa a la entrega de cepillos dentales, sin educación adicional.",
-        "Atender solo los casos con dolor agudo, sin programa preventivo adicional."
+        "Atender solo los casos con dolor agudo, sin programa preventivo adicional.",
+        "Limitar el programa a la entrega de cepillos dentales, sin educación adicional."
       ],
       "correct": 1,
       "feedback": "Es correcta porque un programa de salud bucal escolar efectivo debe integrar educación en higiene oral, aplicación de medidas preventivas y coordinación con la escuela y las familias, de forma que la prevención se sostenga más allá de una intervención puntual. Enfocar el programa únicamente en tratamiento restaurador prioriza lo curativo sobre lo preventivo; limitarlo a la entrega de cepillos sin educación no garantiza un cambio de comportamiento; atender solo los casos con dolor agudo deja sin cobertura preventiva a la mayoría de escolares con riesgo aún no sintomático."
@@ -2354,12 +2354,12 @@ window.SERUMS_DATA = {
       "statement": "Gestante de 24 semanas presenta ganancia de peso mayor a la esperada para su edad gestacional.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
+        "Indicar solo actividad física intensa, sin evaluar el patrón alimentario.",
         "No intervenir porque el aumento de peso es siempre normal en el embarazo.",
         "Evaluar el patrón alimentario, brindar consejería nutricional adecuada al embarazo y coordinar seguimiento con obstetricia.",
-        "Indicar una dieta muy restrictiva, sin considerar los riesgos de la gestación.",
-        "Indicar solo actividad física intensa, sin evaluar el patrón alimentario."
+        "Indicar una dieta muy restrictiva, sin considerar los riesgos de la gestación."
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Es correcta porque una ganancia de peso mayor a la esperada en el embarazo debe evaluarse a través del patrón alimentario de la gestante, brindando consejería nutricional apropiada a su condición gestacional y coordinando el seguimiento con obstetricia, dado el riesgo de complicaciones asociadas a una ganancia de peso excesiva. Asumir que el aumento de peso es siempre normal en el embarazo desestima un patrón que ya excede lo esperado para la edad gestacional; indicar una dieta muy restrictiva sin considerar los riesgos de la gestación puede comprometer el aporte de nutrientes necesarios para el feto; indicar solo actividad física intensa sin evaluar el patrón alimentario aborda un solo componente del manejo, dejando sin ajustar la alimentación de fondo."
     },
     {
@@ -2377,12 +2377,12 @@ window.SERUMS_DATA = {
       "statement": "En una comunidad rural se identifican varios niños con signos compatibles con deficiencia de vitamina A.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
+        "Atender los casos identificados, sin evaluar el contexto alimentario comunitario.",
         "Evaluar los patrones alimentarios locales y coordinar suplementación y educación nutricional comunitaria.",
         "Indicar suplementación, sin ninguna evaluación previa del contexto.",
-        "Atender los casos identificados, sin evaluar el contexto alimentario comunitario.",
         "Derivar todos los casos a un especialista, sin intervención comunitaria previa."
       ],
-      "correct": 0,
+      "correct": 1,
       "feedback": "Es correcta porque varios niños con signos compatibles con deficiencia de vitamina A en una comunidad sugieren un problema poblacional que debe abordarse evaluando los patrones alimentarios locales y coordinando suplementación junto con educación nutricional comunitaria, en vez de intervenir cada caso de forma aislada. Indicar suplementación sin ninguna evaluación previa del contexto no identifica la causa alimentaria de fondo del déficit; atender los casos identificados sin evaluar el contexto alimentario comunitario deja sin prevenir nuevos casos en la misma población; derivar todos los casos a un especialista sin intervención comunitaria previa desatiende un problema que puede y debe abordarse desde el primer nivel con enfoque poblacional."
     },
     {
@@ -2400,12 +2400,12 @@ window.SERUMS_DATA = {
       "statement": "Adulto mayor presenta pérdida progresiva de masa muscular y disminución de su ingesta alimentaria en los últimos meses.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Evaluar el estado nutricional, brindar consejería alimentaria adecuada y promover actividad física acorde a su condición.",
-        "Indicar que la pérdida muscular es inevitable en la vejez y no requiere intervención.",
+        "Recomendar reposo para evitar mayor pérdida de masa muscular.",
         "Aumentar drásticamente las calorías, sin evaluar la composición de la dieta.",
-        "Recomendar reposo para evitar mayor pérdida de masa muscular."
+        "Evaluar el estado nutricional, brindar consejería alimentaria adecuada y promover actividad física acorde a su condición.",
+        "Indicar que la pérdida muscular es inevitable en la vejez y no requiere intervención."
       ],
-      "correct": 0,
+      "correct": 2,
       "feedback": "Es correcta porque la sarcopenia en el adulto mayor con menor ingesta alimentaria requiere evaluar el estado nutricional, brindar consejería alimentaria adecuada y promover actividad física acorde a su condición, dado que la combinación de ambos factores es la que ha demostrado enlentecer la pérdida de masa muscular. Indicar que la pérdida muscular es inevitable en la vejez y no requiere intervención desestima una condición sobre la que sí es posible intervenir; aumentar drásticamente las calorías sin evaluar la composición de la dieta no garantiza el aporte proteico específico que la sarcopenia requiere; recomendar reposo para evitar mayor pérdida de masa muscular es contraproducente, ya que la inactividad acelera precisamente esa pérdida."
     },
     {
@@ -2423,12 +2423,12 @@ window.SERUMS_DATA = {
       "statement": "Un responsable de compras del establecimiento tiene un vínculo familiar con un proveedor que participa en un proceso de adquisición de insumos.",
       "question": "¿Cuál es la conducta correcta?",
       "options": [
-        "Continuar con el proceso sin informar el vínculo familiar.",
-        "Declarar el conflicto de interés y abstenerse de participar en la decisión.",
         "Favorecer al proveedor familiar si ofrece el mejor precio.",
-        "Informar el vínculo solo si otro postor lo denuncia."
+        "Informar el vínculo solo si otro postor lo denuncia.",
+        "Continuar con el proceso sin informar el vínculo familiar.",
+        "Declarar el conflicto de interés y abstenerse de participar en la decisión."
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Es correcta porque el conflicto de interés exige declararlo de forma proactiva ante la institución y abstenerse de participar en la decisión, sin esperar a que sea otro quien lo denuncie, protegiendo así la transparencia del proceso de adquisición. Continuar sin informar oculta un vínculo que compromete la imparcialidad del proceso; favorecer al proveedor familiar aun con mejor precio no elimina el conflicto de interés de fondo; informar solo si otro postor lo denuncia invierte la responsabilidad, que es proactiva y no reactiva."
     },
     {
@@ -2447,11 +2447,11 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta más adecuada del establecimiento?",
       "options": [
         "Ignorar la queja si no se repite con frecuencia.",
+        "Trasladar la queja directamente a instancias legales sin análisis previo.",
         "Registrar la queja, analizar sus causas y usarla como insumo para la mejora continua del servicio.",
-        "Responder solo de forma verbal sin dejar registro.",
-        "Trasladar la queja directamente a instancias legales sin análisis previo."
+        "Responder solo de forma verbal sin dejar registro."
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Es correcta porque toda queja formal debe registrarse, analizarse en sus causas de fondo y usarse como insumo del ciclo de mejora continua del servicio, en vez de tratarse como un hecho aislado. Ignorarla si no se repite desestima información valiosa incluso de un solo evento; responder solo verbalmente sin registro impide su trazabilidad y análisis posterior; trasladarla directamente a instancias legales sin análisis previo omite la oportunidad de resolverla y aprender de ella en el propio establecimiento."
     },
     {
@@ -2469,10 +2469,10 @@ window.SERUMS_DATA = {
       "statement": "El establecimiento de salud busca impulsar junto al municipio un proyecto de espacios públicos seguros y áreas verdes.",
       "question": "¿Qué elemento es clave para el éxito de esta iniciativa?",
       "options": [
-        "Que el establecimiento de salud actúe de forma aislada, sin coordinar con el municipio.",
+        "Que el municipio asuma la iniciativa sin ninguna participación del sector salud.",
         "La articulación intersectorial entre salud, municipio y comunidad para sostener la iniciativa.",
-        "Limitar la participación exclusivamente a personal médico del establecimiento.",
-        "Que el municipio asuma la iniciativa sin ninguna participación del sector salud."
+        "Que el establecimiento de salud actúe de forma aislada, sin coordinar con el municipio.",
+        "Limitar la participación exclusivamente a personal médico del establecimiento."
       ],
       "correct": 1,
       "feedback": "Es correcta porque las iniciativas de municipios saludables dependen de la articulación sostenida entre salud, gobierno local y comunidad, ya que ningún sector por sí solo cuenta con todos los recursos y competencias necesarios para sostener cambios en el entorno físico y social. Que el establecimiento actúe de forma aislada desaprovecha recursos y competencias municipales; limitar la participación a personal médico excluye actores clave de la intervención; que el municipio actúe solo sin salud deja fuera el componente sanitario que sustenta la iniciativa."
@@ -2492,12 +2492,12 @@ window.SERUMS_DATA = {
       "statement": "Un paciente será sometido a un procedimiento menor y el personal se dispone a realizarlo directamente sin mayor explicación.",
       "question": "¿Cuál es la conducta correcta?",
       "options": [
-        "Realizar el procedimiento directamente, para no demorar la atención.",
+        "Explicar el procedimiento, sus riesgos y beneficios, y obtener el consentimiento informado antes de proceder.",
         "Informar brevemente después de realizado el procedimiento, dado que es de bajo riesgo.",
         "Solicitar el consentimiento solo si el paciente pregunta al respecto.",
-        "Explicar el procedimiento, sus riesgos y beneficios, y obtener el consentimiento informado antes de proceder."
+        "Realizar el procedimiento directamente, para no demorar la atención."
       ],
-      "correct": 3,
+      "correct": 0,
       "feedback": "Es correcta porque el consentimiento informado exige explicar el procedimiento, sus riesgos y beneficios antes de realizarlo, independientemente de que se trate de un procedimiento menor, dado que todo acto médico conlleva algún grado de riesgo que el paciente tiene derecho a conocer. Realizarlo directamente para no demorar la atención antepone la eficiencia operativa al derecho del paciente a decidir; informar después del procedimiento invierte el momento en que el consentimiento pierde su función; condicionar la explicación a que el paciente pregunte traslada indebidamente la iniciativa informativa que corresponde al profesional."
     },
     {
@@ -2515,12 +2515,12 @@ window.SERUMS_DATA = {
       "statement": "Paciente en tratamiento antituberculoso presenta ictericia y malestar general a las tres semanas de iniciado el esquema.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
+        "Indicar que continúe el tratamiento sin ninguna evaluación adicional.",
         "Evaluar función hepática, suspender temporalmente si corresponde y referir según protocolo de reacciones adversas.",
-        "Cambiar de inmediato a un esquema alternativo, sin evaluar previamente la función hepática.",
         "Suspender el tratamiento de forma definitiva, sin evaluación clínica.",
-        "Indicar que continúe el tratamiento sin ninguna evaluación adicional."
+        "Cambiar de inmediato a un esquema alternativo, sin evaluar previamente la función hepática."
       ],
-      "correct": 0,
+      "correct": 1,
       "feedback": "Es correcta porque la ictericia y el malestar a las tres semanas de tratamiento antituberculoso son compatibles con hepatotoxicidad farmacológica, que exige evaluar la función hepática antes de decidir una suspensión (no necesariamente definitiva) y seguir el protocolo correspondiente. Cambiar de esquema sin evaluar la función hepática no identifica el fármaco responsable; suspender de forma definitiva sin evaluación puede ser una medida excesiva si la alteración es leve y reversible; continuar sin evaluar arriesga progresión del daño hepático."
     },
     {
@@ -2538,12 +2538,12 @@ window.SERUMS_DATA = {
       "statement": "Un usuario acude a solicitar la prueba de VIH y muestra ansiedad marcada ante la posibilidad de un resultado positivo.",
       "question": "¿Cuál es la conducta más adecuada antes de la toma de la prueba?",
       "options": [
-        "Solicitar la autorización de un familiar antes de realizar la prueba.",
         "Posponer la prueba hasta que el usuario deje de sentir ansiedad.",
-        "Realizar la prueba de inmediato, sin conversar previamente con el usuario.",
-        "Brindar consejería pre-test que aborde dudas, expectativas y el manejo confidencial del resultado."
+        "Solicitar la autorización de un familiar antes de realizar la prueba.",
+        "Brindar consejería pre-test que aborde dudas, expectativas y el manejo confidencial del resultado.",
+        "Realizar la prueba de inmediato, sin conversar previamente con el usuario."
       ],
-      "correct": 3,
+      "correct": 2,
       "feedback": "Es correcta porque la consejería pre-test de VIH debe abordar dudas, expectativas emocionales y el manejo confidencial del resultado antes de la toma de la prueba, siendo un componente esencial del proceso que precisamente ayuda a manejar la ansiedad descrita, no un paso que deba omitirse por ella. Solicitar autorización de un familiar antes de realizar la prueba vulnera la autonomía y confidencialidad del usuario adulto; posponer la prueba hasta que deje de sentir ansiedad puede prolongar indefinidamente el acceso al diagnóstico; realizarla de inmediato sin conversar previamente omite un paso que reduce precisamente la ansiedad ya identificada."
     },
     {
@@ -2561,12 +2561,12 @@ window.SERUMS_DATA = {
       "statement": "Un profesional de enfermería sufre un pinchazo accidental con una aguja usada durante la atención de un paciente.",
       "question": "¿Cuál es la conducta prioritaria inmediata?",
       "options": [
-        "Aplicar únicamente un antiséptico local, sin activar ningún protocolo adicional.",
-        "Esperar los resultados de laboratorio del paciente antes de tomar cualquier medida.",
         "Realizar el lavado de la zona expuesta y activar de inmediato el protocolo de profilaxis post-exposición.",
+        "Esperar los resultados de laboratorio del paciente antes de tomar cualquier medida.",
+        "Aplicar únicamente un antiséptico local, sin activar ningún protocolo adicional.",
         "Continuar la atención y reportar el incidente al final del turno."
       ],
-      "correct": 2,
+      "correct": 0,
       "feedback": "Es correcta porque la eficacia de la profilaxis post-exposición depende críticamente de la rapidez de inicio, por lo que corresponde lavar la zona expuesta y activar el protocolo de inmediato, sin esperar resultados de laboratorio del paciente fuente. Aplicar solo antiséptico local sin activar el protocolo deja sin abordar el riesgo de transmisión de patógenos por vía sanguínea; esperar los resultados de laboratorio retrasa una profilaxis cuya ventana de eficacia es limitada; continuar la atención y reportar al final del turno pierde tiempo valioso dentro de esa ventana."
     },
     {
@@ -2586,8 +2586,8 @@ window.SERUMS_DATA = {
       "options": [
         "Realizar examen clínico y coordinar estudio de imagen y referencia oportuna para descarte de malignidad.",
         "Indicar que espere al siguiente ciclo menstrual para reevaluar.",
-        "Solicitar solo una ecografía mamaria de control en un año.",
-        "Tranquilizar a la paciente, sin realizar ninguna evaluación adicional."
+        "Tranquilizar a la paciente, sin realizar ninguna evaluación adicional.",
+        "Solicitar solo una ecografía mamaria de control en un año."
       ],
       "correct": 0,
       "feedback": "Es correcta porque una tumoración mamaria nueva y no dolorosa en mujer de 45 años es un hallazgo que exige examen clínico, estudio de imagen y referencia oportuna para descartar malignidad, independientemente del ciclo menstrual. Esperar al siguiente ciclo retrasa la evaluación de un hallazgo cuya significancia no depende del ciclo hormonal; un control anual no corresponde al ritmo de seguimiento que amerita un hallazgo nuevo; tranquilizar sin evaluar desestima un signo de alarma real."
@@ -2607,12 +2607,12 @@ window.SERUMS_DATA = {
       "statement": "Paciente recién diagnosticado con cáncer muestra negación marcada y evita hablar sobre su condición con su familia.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Respetar su ritmo de afrontamiento, explorar sus temores y facilitar gradualmente la comunicación con la familia.",
         "Evitar el tema hasta que el paciente lo mencione espontáneamente, sin ninguna intervención.",
+        "Respetar su ritmo de afrontamiento, explorar sus temores y facilitar gradualmente la comunicación con la familia.",
         "Informar directamente a la familia, sin involucrar al paciente en la conversación.",
         "Confrontar directamente al paciente para que acepte el diagnóstico de inmediato."
       ],
-      "correct": 0,
+      "correct": 1,
       "feedback": "Es correcta porque la negación inicial ante un diagnóstico de cáncer es una fase esperable del proceso de afrontamiento, por lo que corresponde respetar el ritmo del paciente, explorar sus temores específicos y facilitar gradualmente la comunicación con la familia, sin forzar ni excluir a nadie del proceso. Evitar el tema por completo hasta que el paciente lo mencione espontáneamente deja sin acompañamiento activo un proceso que puede beneficiarse de una intervención gradual; informar directamente a la familia sin involucrar al paciente vulnera su autonomía sobre su propia información de salud; confrontarlo para que acepte el diagnóstico de inmediato no respeta el proceso psicológico de afrontamiento que requiere tiempo."
     },
     {
@@ -2630,10 +2630,10 @@ window.SERUMS_DATA = {
       "statement": "Durante un tamizaje escolar, un niño presenta dificultad marcada para identificar letras a distancia en la prueba de agudeza visual.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Repetir la prueba en un año, sin informar a la familia del resultado actual.",
+        "Indicar que el niño se siente adelante en el aula, sin más evaluación.",
         "Registrar el resultado, sin ninguna acción adicional.",
         "Informar a la familia, orientar sobre el hallazgo y derivar para evaluación oftalmológica.",
-        "Indicar que el niño se siente adelante en el aula, sin más evaluación."
+        "Repetir la prueba en un año, sin informar a la familia del resultado actual."
       ],
       "correct": 2,
       "feedback": "Es correcta porque una dificultad marcada en agudeza visual detectada en tamizaje escolar debe informarse a la familia y derivarse para evaluación oftalmológica, dado que muchos defectos refractivos no corregidos afectan el rendimiento escolar y son tratables si se detectan a tiempo. Registrar sin ninguna acción adicional deja sin corregir un défict con impacto funcional; cambiar de asiento en el aula no corrige la causa del problema visual; repetir la prueba en un año sin informar posterga innecesariamente una derivación que ya está indicada."
@@ -2653,12 +2653,12 @@ window.SERUMS_DATA = {
       "statement": "Paciente con diabetes de larga data refiere disminución progresiva de la visión en los últimos meses, sin haber tenido evaluación oftalmológica previa.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Indicar que la disminución visual es un cambio normal por la edad.",
-        "Indicar el uso de lentes correctivos, sin evaluación oftalmológica especializada.",
+        "Ajustar solo el tratamiento de la diabetes, sin evaluar la visión.",
         "Derivar para evaluación oftalmológica que incluya fondo de ojo, dado el riesgo de retinopatía diabética.",
-        "Ajustar solo el tratamiento de la diabetes, sin evaluar la visión."
+        "Indicar el uso de lentes correctivos, sin evaluación oftalmológica especializada.",
+        "Indicar que la disminución visual es un cambio normal por la edad."
       ],
-      "correct": 2,
+      "correct": 1,
       "feedback": "Es correcta porque la diabetes de larga data con cambios visuales progresivos conlleva alto riesgo de retinopatía diabética, complicación que puede cursar asintomática hasta estadios avanzados, por lo que corresponde fondo de ojo especializado independientemente del control glicémico. Atribuirlo a la edad ignora la asociación conocida entre duración de la diabetes y retinopatía; ajustar solo el tratamiento de base no detecta el daño retiniano ya instaurado; indicar lentes sin evaluación oftalmológica no descarta la causa retiniana del déficit visual."
     },
     {
@@ -2676,12 +2676,12 @@ window.SERUMS_DATA = {
       "statement": "Una familia de una comunidad rural desconoce que puede afiliarse gratuitamente al Seguro Integral de Salud y ha postergado la atención de un menor por temor a los costos.",
       "question": "¿Cuál es la conducta más adecuada del establecimiento?",
       "options": [
-        "Orientar sobre el proceso de afiliación al SIS y facilitar la atención del menor sin demora.",
+        "Atender solo en caso de emergencia y remitir el resto a un seguro privado.",
         "Indicar que regresen cuando puedan pagar la atención.",
-        "Afiliar al menor sin informar a la familia sobre el proceso realizado.",
-        "Atender solo en caso de emergencia y remitir el resto a un seguro privado."
+        "Orientar sobre el proceso de afiliación al SIS y facilitar la atención del menor sin demora.",
+        "Afiliar al menor sin informar a la familia sobre el proceso realizado."
       ],
-      "correct": 0,
+      "correct": 2,
       "feedback": "Es correcta porque el Aseguramiento Universal en Salud exige orientar activamente sobre el proceso de afiliación al SIS y facilitar la atención del menor sin condicionarla al trámite administrativo, dado que la barrera económica percibida ya generó una postergación evitable de la atención. Indicar que regresen cuando puedan pagar perpetúa la barrera que motivó la postergación inicial; atender solo en caso de emergencia y remitir el resto a un seguro privado desconoce el derecho a la cobertura pública gratuita; afiliar sin informar a la familia no resuelve el desconocimiento de fondo que originó el problema."
     },
     {
@@ -2701,8 +2701,8 @@ window.SERUMS_DATA = {
       "options": [
         "Indicar al paciente que regrese a su región de origen para continuar el tratamiento.",
         "Gestionar la transferencia de su información clínica y coordinar con el establecimiento de origen para asegurar continuidad del tratamiento.",
-        "Solicitar al paciente que él mismo consiga y traiga su historia clínica completa.",
-        "Iniciar la atención desde cero sin gestionar la información previa."
+        "Iniciar la atención desde cero sin gestionar la información previa.",
+        "Solicitar al paciente que él mismo consiga y traiga su historia clínica completa."
       ],
       "correct": 1,
       "feedback": "Es correcta porque la continuidad de atención en una Red Integrada de Salud exige que el nuevo establecimiento gestione activamente la transferencia de información clínica y coordine con el de origen, sin trasladar esa carga logística al paciente. Indicarle que regrese a su región de origen fragmenta la continuidad de un tratamiento crónico; solicitar que él mismo consiga su historia clínica traslada una responsabilidad institucional al paciente; iniciar la atención desde cero sin gestionar la información previa puede repetir estudios o desconocer decisiones terapéuticas ya tomadas."
@@ -2724,10 +2724,10 @@ window.SERUMS_DATA = {
       "options": [
         "Iniciar tratamiento antimalárico empírico, sin confirmación diagnóstica previa.",
         "Indicar solo antipirético y control ambulatorio, sin estudio adicional.",
-        "Esperar la aparición de más síntomas antes de estudiar el caso.",
-        "Solicitar gota gruesa o prueba diagnóstica para malaria e iniciar manejo según resultado y protocolo vigente."
+        "Solicitar gota gruesa o prueba diagnóstica para malaria e iniciar manejo según resultado y protocolo vigente.",
+        "Esperar la aparición de más síntomas antes de estudiar el caso."
       ],
-      "correct": 3,
+      "correct": 2,
       "feedback": "Es correcta porque la fiebre intermitente con escalofríos y sudoración profusa en zona endémica exige confirmar el diagnóstico con gota gruesa u otra prueba antes de iniciar tratamiento específico, dado que el manejo difiere según la especie de Plasmodium involucrada. El tratamiento empírico sin confirmación puede tratar la especie equivocada o enmascarar el diagnóstico; solo antipirético sin estudio deja sin tratar una infección potencialmente grave; esperar más síntomas retrasa el diagnóstico de una enfermedad que puede progresar a un cuadro complicado."
     },
     {
@@ -2745,12 +2745,12 @@ window.SERUMS_DATA = {
       "statement": "Niño es mordido por un perro callejero de estado de vacunación desconocido, con herida superficial en el antebrazo.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Lavar la herida de inmediato, evaluar el riesgo de exposición e iniciar profilaxis antirrábica según protocolo si corresponde.",
-        "Iniciar profilaxis antirrábica únicamente si la herida es de gran extensión.",
         "Esperar a que el perro muestre síntomas de rabia antes de decidir la profilaxis.",
+        "Iniciar profilaxis antirrábica únicamente si la herida es de gran extensión.",
+        "Lavar la herida de inmediato, evaluar el riesgo de exposición e iniciar profilaxis antirrábica según protocolo si corresponde.",
         "Limpiar la herida y no indicar ninguna otra medida adicional."
       ],
-      "correct": 0,
+      "correct": 2,
       "feedback": "Es correcta porque toda mordedura de animal con estado de vacunación desconocido implica riesgo de exposición rábica, independientemente de la extensión de la herida, por lo que corresponde lavado inmediato y evaluación de profilaxis según protocolo. Condicionar la profilaxis solo a heridas extensas ignora que el riesgo depende del estado del animal, no del tamaño de la herida; esperar signos de rabia en el animal es peligroso porque la enfermedad es letal una vez sintomática; limpiar sin evaluación adicional omite la valoración de riesgo que define la conducta a seguir."
     },
     {
@@ -2768,9 +2768,9 @@ window.SERUMS_DATA = {
       "statement": "Una gestante de una comunidad amazónica solicita que su parto se atienda respetando prácticas tradicionales de su cultura, como la posición vertical y la presencia de una partera comunitaria.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
+        "Negar la solicitud e imponer el protocolo estándar, sin adaptaciones.",
         "Aceptar todas las prácticas solicitadas sin evaluar su compatibilidad con la seguridad clínica.",
         "Derivar el caso a otro establecimiento, sin intentar ninguna adaptación.",
-        "Negar la solicitud e imponer el protocolo estándar, sin adaptaciones.",
         "Adaptar la atención del parto a las prácticas culturales de la gestante, siempre que no comprometan su seguridad clínica."
       ],
       "correct": 3,
@@ -2792,11 +2792,11 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
         "Derivar sin brindar ninguna atención, por la barrera idiomática.",
-        "Solicitar que un familiar traduzca el contenido completo de la consulta psicológica.",
         "Gestionar apoyo de un intérprete o facilitador cultural para garantizar una comunicación efectiva.",
+        "Solicitar que un familiar traduzca el contenido completo de la consulta psicológica.",
         "Continuar la consulta en español, asumiendo que el usuario comprende lo esencial."
       ],
-      "correct": 2,
+      "correct": 1,
       "feedback": "Es correcta porque una barrera idiomática significativa en consulta psicológica debe resolverse gestionando apoyo de un intérprete o facilitador cultural, de forma que la comunicación sea efectiva y se preserve la confidencialidad del contenido tratado, algo que un familiar no puede garantizar de la misma manera. Continuar la consulta en español asumiendo que el usuario comprende lo esencial arriesga malinterpretar información clínica relevante; derivar sin brindar ninguna atención desatiende la necesidad presente; solicitar que un familiar traduzca todo el contenido de la consulta compromete la confidencialidad y puede inhibir la revelación de información sensible."
     },
     {
@@ -2815,11 +2815,11 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta más adecuada a nivel comunitario?",
       "options": [
         "Esperar que cada familia gestione su propia prevención de forma individual.",
-        "Promover estrategias de fluorización y educación en higiene oral coordinadas con las autoridades locales.",
         "Limitar la intervención a la atención de los casos con dolor agudo.",
+        "Promover estrategias de fluorización y educación en higiene oral coordinadas con las autoridades locales.",
         "Distribuir solo pasta dental fluorada, sin ninguna estrategia comunitaria adicional."
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Es correcta porque una comunidad con alta prevalencia de caries y sin acceso a agua fluorada requiere una estrategia poblacional de fluorización coordinada con las autoridades locales, complementada con educación en higiene oral, dado que las medidas individuales no alcanzan el impacto poblacional necesario. Esperar que cada familia gestione su propia prevención de forma individual no resuelve un problema de acceso estructural a nivel comunitario; limitar la intervención a la atención de los casos con dolor agudo es reactivo y no previene nuevos casos; distribuir solo pasta dental fluorada sin ninguna estrategia comunitaria adicional tiene un alcance limitado frente a la magnitud del problema descrito."
     },
     {
@@ -2838,11 +2838,11 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
         "Indicar que regrese en una semana para evaluar la necesidad del método.",
+        "Negar el método por consideraciones personales del profesional.",
         "Brindar consejería y proporcionar el método de forma oportuna, dado que su eficacia depende de la rapidez de administración.",
-        "Solicitar autorización de la pareja antes de proporcionar el método.",
-        "Negar el método por consideraciones personales del profesional."
+        "Solicitar autorización de la pareja antes de proporcionar el método."
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Es correcta porque la eficacia de la anticoncepción oral de emergencia depende directamente de la rapidez con que se administra tras la relación sexual sin protección, por lo que corresponde brindarla de forma oportuna dentro de la consulta actual. Indicar que regrese en una semana reduce significativamente su eficacia por el tiempo transcurrido; solicitar autorización de la pareja condiciona indebidamente un derecho autónomo de la usuaria; negar el método por consideraciones personales del profesional antepone una postura individual al derecho de la usuaria a acceder a la prestación."
     },
     {
@@ -2883,12 +2883,12 @@ window.SERUMS_DATA = {
       "statement": "Un psicólogo quiere evaluar si un nuevo taller de manejo de estrés reduce los síntomas de ansiedad en el personal de salud.",
       "question": "¿Qué elemento del diseño fortalece la validez de sus conclusiones sobre la eficacia del taller?",
       "options": [
+        "Medir la ansiedad solo después del taller, sin línea base previa.",
         "Aplicar el taller solo a quienes voluntariamente decidan participar, sin grupo control.",
-        "Incluir un grupo control que no reciba el taller, para comparar los resultados.",
         "Aplicar el taller a todo el personal sin ningún grupo de comparación.",
-        "Medir la ansiedad solo después del taller, sin línea base previa."
+        "Incluir un grupo control que no reciba el taller, para comparar los resultados."
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Es correcta porque incluir un grupo control que no recibe el taller permite comparar los resultados y atribuir con mayor confianza cualquier cambio observado a la intervención misma, en vez de a otros factores externos que podrían explicar la mejoría igualmente. Aplicar el taller solo a quienes voluntariamente decidan participar, sin grupo control, introduce un sesgo de autoselección que dificulta la comparación; aplicarlo a todo el personal sin ningún grupo de comparación no permite distinguir el efecto del taller de otros cambios simultáneos; medir la ansiedad solo después del taller, sin línea base previa, impide cuantificar el cambio real producido."
     },
     {
@@ -2906,12 +2906,12 @@ window.SERUMS_DATA = {
       "statement": "Un equipo de investigación diseña un ensayo clínico para comparar dos intervenciones en un centro de salud.",
       "question": "¿Qué combinación de elementos reduce mejor el riesgo de sesgo en este diseño?",
       "options": [
-        "Asignar a los participantes según el orden de llegada al establecimiento.",
-        "Aleatorizar la asignación a los grupos y, cuando sea posible, enmascarar quién recibe cada intervención.",
+        "Permitir que cada participante elija el grupo que prefiera.",
         "Asignar a los participantes según la gravedad percibida de su cuadro clínico.",
-        "Permitir que cada participante elija el grupo que prefiera."
+        "Aleatorizar la asignación a los grupos y, cuando sea posible, enmascarar quién recibe cada intervención.",
+        "Asignar a los participantes según el orden de llegada al establecimiento."
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Es correcta porque la aleatorización distribuye equitativamente los factores de confusión conocidos y desconocidos entre grupos, y el enmascaramiento reduce el sesgo en la evaluación de resultados; combinadas son las medidas metodológicas más robustas contra el sesgo en un ensayo clínico. Asignar por orden de llegada o por elección del participante introduce sesgo de selección; asignar según gravedad percibida introduce un factor de confusión que distorsiona la comparación entre grupos."
     },
     {
@@ -2930,9 +2930,9 @@ window.SERUMS_DATA = {
       "question": "¿Qué debe verificar para asegurar que el instrumento es adecuado?",
       "options": [
         "Que el instrumento mida lo que pretende medir (validez) y ofrezca resultados consistentes (confiabilidad).",
+        "Que el instrumento sea de aplicación exclusivamente autoadministrada.",
         "Que el instrumento sea corto, sin importar sus propiedades psicométricas.",
-        "Que el instrumento haya sido usado alguna vez en otro país, sin más verificación.",
-        "Que el instrumento sea de aplicación exclusivamente autoadministrada."
+        "Que el instrumento haya sido usado alguna vez en otro país, sin más verificación."
       ],
       "correct": 0,
       "feedback": "Es correcta porque un instrumento psicométrico adecuado debe ser válido (medir efectivamente lo que pretende medir) y confiable (producir resultados consistentes en aplicaciones repetidas), siendo estas dos propiedades las que sustentan técnicamente su uso en un estudio. Que el instrumento sea corto, sin importar sus propiedades psicométricas, no garantiza que mida correctamente el constructo de interés; que haya sido usado alguna vez en otro país sin más verificación no asegura su validez en el contexto actual; que sea de aplicación exclusivamente autoadministrada es una característica operativa, no una garantía de sus propiedades psicométricas."
@@ -2953,11 +2953,11 @@ window.SERUMS_DATA = {
       "question": "¿Qué paso previo es recomendable antes de la aplicación masiva?",
       "options": [
         "Aplicar directamente la encuesta a toda la muestra planificada.",
-        "Realizar una prueba piloto en un grupo reducido para identificar y corregir problemas del instrumento.",
+        "Solicitar la opinión de un solo experto sobre el instrumento, sin aplicarlo a nadie.",
         "Omitir cualquier prueba previa para ahorrar tiempo.",
-        "Solicitar la opinión de un solo experto sobre el instrumento, sin aplicarlo a nadie."
+        "Realizar una prueba piloto en un grupo reducido para identificar y corregir problemas del instrumento."
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Es correcta porque una prueba piloto en un grupo reducido permite identificar y corregir problemas del instrumento (ambigüedades, tiempos de aplicación, comprensión de los ítems) antes de invertir recursos en una aplicación masiva que podría arrastrar esos mismos errores. Aplicar directamente la encuesta a toda la muestra planificada expone al estudio completo a fallas del instrumento no detectadas previamente; omitir cualquier prueba previa para ahorrar tiempo puede generar un costo mayor si se detectan errores después de la aplicación masiva; solicitar solo la opinión de un experto sin aplicarlo a nadie no reemplaza la evidencia empírica que aporta una prueba piloto real."
     },
     {
@@ -2975,10 +2975,10 @@ window.SERUMS_DATA = {
       "statement": "Un estudio encuentra una diferencia entre dos grupos, pero el análisis estadístico indica que no es significativa.",
       "question": "¿Cómo debe interpretarse este resultado?",
       "options": [
+        "Que el estudio está mal diseñado y debe descartarse por completo.",
         "Que se debe aumentar la muestra hasta obtener significancia estadística.",
-        "Que la diferencia es real aunque el análisis diga lo contrario.",
         "Que la diferencia observada probablemente se debe al azar y no hay evidencia suficiente de un efecto real.",
-        "Que el estudio está mal diseñado y debe descartarse por completo."
+        "Que la diferencia es real aunque el análisis diga lo contrario."
       ],
       "correct": 2,
       "feedback": "Es correcta porque cuando una diferencia observada no resulta estadísticamente significativa, la interpretación adecuada es que probablemente se deba al azar y no hay evidencia suficiente para afirmar un efecto real, sin que esto invalide automáticamente todo el diseño del estudio. Aumentar la muestra hasta obtener significancia estadística de forma post hoc distorsiona la lógica del análisis, ya que la decisión de tamaño muestral debe ser previa; afirmar que la diferencia es real aunque el análisis diga lo contrario contradice directamente el resultado estadístico obtenido; descartar el estudio por completo por un resultado no significativo ignora que un resultado nulo también aporta información válida."
@@ -2999,11 +2999,11 @@ window.SERUMS_DATA = {
       "question": "¿Qué proceso corresponde para analizar estos datos?",
       "options": [
         "Elegir solo las entrevistas que confirmen la hipótesis inicial.",
+        "Resumir cada entrevista en una sola palabra clave, sin mayor análisis.",
         "Codificar y categorizar los relatos para identificar patrones y temas comunes.",
-        "Convertir cada respuesta en un número sin considerar su contenido.",
-        "Resumir cada entrevista en una sola palabra clave, sin mayor análisis."
+        "Convertir cada respuesta en un número sin considerar su contenido."
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Es correcta porque el análisis cualitativo de entrevistas a profundidad requiere codificar y categorizar los relatos para identificar patrones y temas comunes entre los participantes, siendo este el proceso metodológico estándar para dar sentido a datos narrativos complejos. Elegir solo las entrevistas que confirmen la hipótesis inicial introduce un sesgo de confirmación que invalida el análisis; convertir cada respuesta en un número sin considerar su contenido desnaturaliza el propósito mismo de un estudio cualitativo; resumir cada entrevista en una sola palabra clave pierde la riqueza y matices que este tipo de análisis busca precisamente capturar."
     },
     {
@@ -3021,10 +3021,10 @@ window.SERUMS_DATA = {
       "statement": "Antes de iniciar la recolección de datos, un investigador organiza sus objetivos, preguntas, variables y métodos en un solo documento.",
       "question": "¿Qué herramienta está utilizando y para qué sirve?",
       "options": [
-        "Un consentimiento informado, para proteger a los participantes.",
+        "Un cronograma de actividades, para organizar los tiempos del estudio.",
         "Un informe final, para publicar los resultados.",
         "Una matriz de consistencia, para asegurar la coherencia entre objetivos, preguntas, variables y métodos del estudio.",
-        "Un cronograma de actividades, para organizar los tiempos del estudio."
+        "Un consentimiento informado, para proteger a los participantes."
       ],
       "correct": 2,
       "feedback": "Es correcta porque la matriz de consistencia es la herramienta metodológica que organiza y verifica la coherencia entre los objetivos, las preguntas de investigación, las variables y los métodos del estudio, asegurando que todos estos elementos estén alineados antes de iniciar la recolección de datos. Un consentimiento informado cumple la función distinta de proteger éticamente a los participantes, no de organizar el diseño metodológico; un informe final se elabora para publicar los resultados una vez concluido el estudio; un cronograma de actividades organiza los tiempos del proyecto, pero no verifica la coherencia interna del diseño metodológico."
@@ -3044,9 +3044,9 @@ window.SERUMS_DATA = {
       "statement": "Un equipo de investigadores envía su estudio a una revista científica para su publicación.",
       "question": "¿Qué función cumple el proceso de revisión por pares en este momento?",
       "options": [
-        "Determinar el orden de autoría del artículo científico.",
-        "Garantizar la venta del artículo a un mayor número de lectores.",
         "Reemplazar la necesidad de que los autores revisen su propio trabajo.",
+        "Garantizar la venta del artículo a un mayor número de lectores.",
+        "Determinar el orden de autoría del artículo científico.",
         "Evaluar la calidad metodológica y la validez del estudio antes de su difusión."
       ],
       "correct": 3,
@@ -3067,12 +3067,12 @@ window.SERUMS_DATA = {
       "statement": "Un psicólogo desea iniciar un estudio con pacientes de un centro de salud mental sobre su experiencia con el tratamiento recibido.",
       "question": "¿Qué paso es indispensable antes de iniciar la recolección de datos?",
       "options": [
-        "Solicitar solo la autorización verbal del jefe del establecimiento.",
-        "Informar verbalmente a los pacientes sin documentar su autorización.",
         "Obtener la aprobación de un comité de ética en investigación que evalúe los riesgos y protecciones para los participantes.",
-        "Iniciar la recolección de datos de inmediato, dado que su intención es de mejora del servicio."
+        "Solicitar solo la autorización verbal del jefe del establecimiento.",
+        "Iniciar la recolección de datos de inmediato, dado que su intención es de mejora del servicio.",
+        "Informar verbalmente a los pacientes sin documentar su autorización."
       ],
-      "correct": 2,
+      "correct": 0,
       "feedback": "Es correcta porque todo estudio con participantes humanos, incluso con fines de mejora del servicio, requiere la aprobación de un comité de ética en investigación que evalúe los riesgos y las protecciones necesarias para los participantes antes de iniciar la recolección de datos. Solicitar solo la autorización verbal del jefe del establecimiento no sustituye la evaluación ética independiente que exige un comité especializado; informar verbalmente a los pacientes sin documentar su autorización no deja constancia verificable del proceso de consentimiento; iniciar la recolección de datos de inmediato, asumiendo que la intención de mejora exime de este requisito, desconoce que la protección ética aplica independientemente del propósito declarado del estudio."
     },
     {
@@ -3091,11 +3091,11 @@ window.SERUMS_DATA = {
       "question": "¿Qué tipo de muestreo es más adecuado para este objetivo?",
       "options": [
         "Un muestreo por cuotas basado en la disponibilidad de los participantes.",
-        "Incluir solo a quienes acudan espontáneamente al establecimiento de salud.",
         "Un muestreo probabilístico, que dé a cada persona de la población una probabilidad conocida de ser seleccionada.",
-        "Seleccionar únicamente a conocidos del investigador para facilitar el acceso."
+        "Seleccionar únicamente a conocidos del investigador para facilitar el acceso.",
+        "Incluir solo a quienes acudan espontáneamente al establecimiento de salud."
       ],
-      "correct": 2,
+      "correct": 1,
       "feedback": "Es correcta porque un muestreo probabilístico da a cada persona de la población una probabilidad conocida de ser seleccionada, siendo la única forma de garantizar que los resultados obtenidos en la muestra puedan generalizarse con validez estadística a toda la población del distrito. Un muestreo por cuotas basado en disponibilidad, incluir solo a quienes acudan espontáneamente al establecimiento, o seleccionar únicamente a conocidos del investigador introducen distintos sesgos de selección que impiden esa generalización, por más que puedan ser más simples o rápidos de ejecutar."
     },
     {
@@ -3113,8 +3113,8 @@ window.SERUMS_DATA = {
       "statement": "Durante una sesión, un paciente revela un plan concreto para dañar a una persona específica de su entorno cercano.",
       "question": "¿Cuál es la conducta correcta respecto a la confidencialidad?",
       "options": [
-        "Confrontar al paciente y terminar la atención de inmediato.",
         "Registrar el plan en la historia clínica, sin alertar a nadie fuera del establecimiento.",
+        "Confrontar al paciente y terminar la atención de inmediato.",
         "Romper la confidencialidad de forma proporcional para alertar a quien está en riesgo y a las autoridades pertinentes.",
         "Mantener absoluta confidencialidad, sin excepción alguna."
       ],
@@ -3136,12 +3136,12 @@ window.SERUMS_DATA = {
       "statement": "Un profesional de salud manifiesta objeción de conciencia frente a un procedimiento solicitado por una paciente dentro del marco legal vigente.",
       "question": "¿Cuál es la conducta correcta?",
       "options": [
-        "Negarse a atender, sin ofrecer ninguna alternativa a la paciente.",
         "Respetar su objeción de conciencia y garantizar la derivación oportuna a otro profesional que sí pueda atender el caso.",
         "Realizar el procedimiento en contra de sus convicciones, para evitar la derivación.",
+        "Negarse a atender, sin ofrecer ninguna alternativa a la paciente.",
         "Postergar la atención de forma indefinida hasta resolver su objeción personal."
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Es correcta porque el marco normativo reconoce la objeción de conciencia individual, pero condiciona su ejercicio a garantizar que la paciente sea derivada oportunamente a un profesional que sí pueda atender, preservando su derecho a la prestación. Negarse sin ofrecer alternativa vulnera el derecho de la paciente a la atención; realizar el procedimiento contra sus convicciones no es lo que exige la norma, que prevé la derivación y no obligar al profesional; postergar indefinidamente la atención bajo la objeción personal excede el ejercicio legítimo del derecho."
     },
     {
@@ -3159,12 +3159,12 @@ window.SERUMS_DATA = {
       "statement": "Un usuario homosexual refiere haber recibido comentarios despectivos de otro trabajador de salud durante una atención previa en el mismo establecimiento.",
       "question": "¿Cuál es la conducta correcta del equipo de salud?",
       "options": [
-        "Solicitar disculpas verbales del trabajador involucrado, sin ningún otro procedimiento adicional.",
         "Indicar al usuario que acuda a otro establecimiento si no está conforme.",
         "Minimizar la situación indicando que fue un malentendido, sin mayor acción.",
-        "Escuchar la queja, documentar el hecho y activar los mecanismos internos para abordar la discriminación."
+        "Escuchar la queja, documentar el hecho y activar los mecanismos internos para abordar la discriminación.",
+        "Solicitar disculpas verbales del trabajador involucrado, sin ningún otro procedimiento adicional."
       ],
-      "correct": 3,
+      "correct": 2,
       "feedback": "Es correcta porque ante un reporte de discriminación por orientación sexual corresponde escuchar la queja, documentar el hecho formalmente y activar los mecanismos institucionales establecidos para abordarla, dado que se trata de una vulneración de derechos que requiere una respuesta institucional, no solo interpersonal. Solicitar disculpas verbales del trabajador involucrado sin ningún otro procedimiento adicional no constituye una respuesta institucional formal ante la vulneración reportada; indicar al usuario que acuda a otro establecimiento si no está conforme traslada la responsabilidad de resolver la discriminación a la persona afectada; minimizar la situación como un malentendido, sin mayor acción, desestima un hecho que amerita investigación y seguimiento formal."
     },
     {
@@ -3182,12 +3182,12 @@ window.SERUMS_DATA = {
       "statement": "Un paciente con discapacidad auditiva acude a control sin acompañante y el personal no cuenta con formación en lengua de señas.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Utilizar estrategias alternativas de comunicación disponibles (escritura, gestos, recursos visuales) y gestionar apoyo de interpretación si es posible.",
         "Solicitar que el paciente regrese acompañado en una próxima cita.",
+        "Utilizar estrategias alternativas de comunicación disponibles (escritura, gestos, recursos visuales) y gestionar apoyo de interpretación si es posible.",
         "Postergar la atención hasta que el paciente consiga un intérprete por su cuenta.",
         "Atender sin intentar ninguna estrategia de comunicación adicional."
       ],
-      "correct": 0,
+      "correct": 1,
       "feedback": "Es correcta porque la accesibilidad comunicativa debe garantizarse en el momento de la atención, usando los recursos alternativos disponibles y gestionando interpretación si es posible, en vez de trasladar la responsabilidad de superar la barrera al propio paciente. Postergar la atención hasta que el paciente consiga un intérprete por su cuenta traslada una responsabilidad institucional al paciente; solicitar que regrese acompañado condiciona la atención a un tercero no siempre disponible; atender sin intentar ninguna estrategia de comunicación vulnera el derecho a una atención comprensible."
     },
     {
@@ -3205,12 +3205,12 @@ window.SERUMS_DATA = {
       "statement": "La familia de un adulto mayor con capacidad de decisión conservada solicita que se le oculte información sobre su diagnóstico para 'protegerlo'.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Aceptar la solicitud de la familia y ocultar la información al paciente.",
         "Explorar los motivos de la familia y respetar el derecho del paciente a recibir información sobre su propia salud, según su capacidad de decisión.",
-        "Informar al paciente solo si la familia lo autoriza expresamente.",
-        "Informar únicamente a la familia y evitar cualquier conversación con el paciente."
+        "Informar únicamente a la familia y evitar cualquier conversación con el paciente.",
+        "Aceptar la solicitud de la familia y ocultar la información al paciente.",
+        "Informar al paciente solo si la familia lo autoriza expresamente."
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Es correcta porque un adulto mayor que conserva su capacidad de decisión tiene derecho a recibir información sobre su propia salud, correspondiendo explorar los motivos de la familia mientras se respeta ese derecho, en vez de sustituir su autonomía por una decisión familiar paternalista. Aceptar la solicitud de la familia y ocultar la información al paciente vulnera directamente su derecho a la información sobre su propia condición; informar al paciente solo si la familia lo autoriza expresamente invierte indebidamente a quién corresponde esa decisión; informar únicamente a la familia y evitar cualquier conversación con el paciente lo excluye por completo de decisiones que le conciernen directamente."
     },
     {
@@ -3251,12 +3251,12 @@ window.SERUMS_DATA = {
       "statement": "Un migrante extranjero sin documentos de identidad regularizados acude a un establecimiento de salud por un problema de salud agudo.",
       "question": "¿Cuál es la conducta correcta?",
       "options": [
+        "Brindar la atención de urgencia requerida y orientar sobre los procesos de regularización y aseguramiento disponibles.",
         "Derivar a un consulado extranjero antes de brindar cualquier atención.",
         "Atender solo si puede pagar el costo total de forma particular.",
-        "Negar la atención hasta que regularice su situación migratoria.",
-        "Brindar la atención de urgencia requerida y orientar sobre los procesos de regularización y aseguramiento disponibles."
+        "Negar la atención hasta que regularice su situación migratoria."
       ],
-      "correct": 3,
+      "correct": 0,
       "feedback": "Es correcta porque el acceso a la atención de urgencia no puede condicionarse a la situación migratoria de la persona, correspondiendo brindar la atención requerida y, en paralelo, orientar sobre los procesos de regularización y aseguramiento disponibles. Derivar a un consulado antes de atender antepone un trámite administrativo a una necesidad de salud aguda; exigir pago particular condiciona la urgencia a la capacidad económica; negar la atención hasta que regularice su situación migratoria vulnera el derecho a la atención de urgencia, que es independiente de ese estatus."
     },
     {
@@ -3274,12 +3274,12 @@ window.SERUMS_DATA = {
       "statement": "Un usuario sordo acude a consulta psicológica acompañado de un intérprete de lengua de señas peruana que además es su vecino.",
       "question": "¿Qué aspecto debe cuidarse especialmente en esta situación?",
       "options": [
-        "Solicitar que el intérprete espere fuera del consultorio y continuar sin apoyo de comunicación.",
-        "Ignorar la relación entre el usuario y el intérprete, ya que no afecta la atención.",
         "Suspender la atención por no contar con un intérprete profesional certificado.",
-        "Explorar con el usuario su comodidad con ese intérprete específico y resguardar la confidencialidad de lo tratado en consulta."
+        "Solicitar que el intérprete espere fuera del consultorio y continuar sin apoyo de comunicación.",
+        "Explorar con el usuario su comodidad con ese intérprete específico y resguardar la confidencialidad de lo tratado en consulta.",
+        "Ignorar la relación entre el usuario y el intérprete, ya que no afecta la atención."
       ],
-      "correct": 3,
+      "correct": 2,
       "feedback": "Es correcta porque cuando el intérprete tiene una relación personal previa con el usuario, como ser su vecino, corresponde explorar directamente con él su comodidad respecto a esa persona específica y resguardar la confidencialidad de lo tratado en consulta, sin asumir automáticamente que la relación no afecta la atención. Solicitar que el intérprete espere fuera del consultorio y continuar sin apoyo de comunicación deja al usuario sordo sin el canal de comunicación que necesita; ignorar la relación entre ambos asume sin verificar que no genera incomodidad ni riesgo para la confidencialidad; suspender la atención por no contar con un intérprete profesional certificado desatiende una necesidad de atención que puede resolverse explorando la situación con el propio usuario."
     },
     {
@@ -3297,12 +3297,12 @@ window.SERUMS_DATA = {
       "statement": "Un establecimiento migra sus historias clínicas a un sistema electrónico y varios trabajadores comparten una misma cuenta de acceso.",
       "question": "¿Cuál es la conducta correcta respecto a la protección de datos?",
       "options": [
-        "Mantener una cuenta compartida solo para el personal administrativo.",
+        "Permitir el acceso libre al sistema a cualquier personal del establecimiento.",
         "Continuar con cuentas compartidas porque agiliza el registro de información.",
-        "Asignar accesos individuales y trazables, protegiendo la confidencialidad de la información clínica de los pacientes.",
-        "Permitir el acceso libre al sistema a cualquier personal del establecimiento."
+        "Mantener una cuenta compartida solo para el personal administrativo.",
+        "Asignar accesos individuales y trazables, protegiendo la confidencialidad de la información clínica de los pacientes."
       ],
-      "correct": 2,
+      "correct": 3,
       "feedback": "Es correcta porque la protección de datos en salud exige accesos individuales y trazables a la historia clínica electrónica, de forma que cada acción quede identificada con la persona responsable, protegiendo la confidencialidad de la información del paciente. Mantener cuentas compartidas, sea para todo el personal o solo para el administrativo, impide identificar quién accedió o modificó cada registro; permitir el acceso libre a cualquier personal amplía innecesariamente la exposición de información sensible sin ningún control de trazabilidad."
     },
     {
@@ -3320,9 +3320,9 @@ window.SERUMS_DATA = {
       "statement": "Un establecimiento de salud recibe con frecuencia casos que exceden su capacidad resolutiva según su categoría actual.",
       "question": "¿Cuál es la conducta correcta ante esta situación recurrente?",
       "options": [
-        "Solicitar una recategorización inmediata del establecimiento sin fortalecer antes la referencia.",
-        "Atender siempre los casos complejos, aunque excedan la capacidad del establecimiento.",
         "Reducir la atención de todos los casos, incluidos los que sí corresponden al nivel.",
+        "Atender siempre los casos complejos, aunque excedan la capacidad del establecimiento.",
+        "Solicitar una recategorización inmediata del establecimiento sin fortalecer antes la referencia.",
         "Reconocer los límites de la categoría del establecimiento y fortalecer la referencia oportuna a un nivel de mayor complejidad."
       ],
       "correct": 3,
@@ -3343,12 +3343,12 @@ window.SERUMS_DATA = {
       "statement": "Un establecimiento se queda sin insumos clave para la atención de pacientes crónicos debido a fallas en la planificación de compras.",
       "question": "¿Cuál es la conducta más adecuada del equipo de gestión?",
       "options": [
+        "Suspender la atención de los pacientes afectados sin informarles el motivo.",
         "Solicitar a los pacientes que consigan los insumos por su cuenta en una farmacia externa.",
         "Reportar el desabastecimiento, gestionar una solución de emergencia y revisar el proceso de planificación logística.",
-        "Suspender la atención de los pacientes afectados sin informarles el motivo.",
         "Esperar el próximo pedido regular sin tomar ninguna acción adicional."
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Es correcta porque el desabastecimiento por falla de planificación exige tanto una solución de emergencia inmediata como una revisión del proceso logístico de fondo, para no repetir la falla en próximos ciclos de abastecimiento. Solicitar que los pacientes consigan los insumos por su cuenta traslada indebidamente una falla institucional al paciente; suspender la atención sin informar afecta la continuidad del cuidado sin buscar alternativa; esperar el próximo pedido regular sin ninguna acción no resuelve la brecha inmediata de atención."
     },
     {
@@ -3366,12 +3366,12 @@ window.SERUMS_DATA = {
       "statement": "El equipo directivo de un establecimiento desea monitorear de forma objetiva el desempeño de sus servicios de atención.",
       "question": "¿Qué herramienta es más adecuada para este propósito?",
       "options": [
-        "Confiar únicamente en la percepción subjetiva del personal sobre su propio desempeño.",
-        "Evaluar el desempeño solo cuando ocurre una queja formal.",
         "Definir indicadores de gestión medibles y darles seguimiento periódico para orientar decisiones.",
-        "Delegar la evaluación exclusivamente a un consultor externo sin indicadores definidos."
+        "Confiar únicamente en la percepción subjetiva del personal sobre su propio desempeño.",
+        "Delegar la evaluación exclusivamente a un consultor externo sin indicadores definidos.",
+        "Evaluar el desempeño solo cuando ocurre una queja formal."
       ],
-      "correct": 2,
+      "correct": 0,
       "feedback": "Es correcta porque monitorear el desempeño de forma objetiva requiere indicadores de gestión medibles con seguimiento periódico, que permitan comparar resultados en el tiempo y orientar decisiones basadas en evidencia, no solo en percepción. Confiar únicamente en la percepción subjetiva del personal carece de un referente objetivo comparable; evaluar solo cuando ocurre una queja formal deja sin monitoreo el desempeño cotidiano; delegar la evaluación a un consultor externo sin indicadores definidos no asegura continuidad ni apropiación institucional del monitoreo."
     },
     {
@@ -3389,12 +3389,12 @@ window.SERUMS_DATA = {
       "statement": "Un paciente referido a un hospital de mayor complejidad regresa a su establecimiento de origen sin ninguna información sobre la atención recibida.",
       "question": "¿Qué falla debe corregirse en la Red Integrada de Salud?",
       "options": [
-        "La falta de contrarreferencia con información clínica que permita continuar el seguimiento del paciente.",
         "Ninguna, esto es parte normal del proceso de referencia.",
-        "La falta de un vehículo de traslado exclusivo para el paciente referido.",
-        "El exceso de comunicación entre los establecimientos de la red."
+        "La falta de contrarreferencia con información clínica que permita continuar el seguimiento del paciente.",
+        "El exceso de comunicación entre los establecimientos de la red.",
+        "La falta de un vehículo de traslado exclusivo para el paciente referido."
       ],
-      "correct": 0,
+      "correct": 1,
       "feedback": "Es correcta porque una Red Integrada de Salud funcional depende de la contrarreferencia, es decir, del retorno de información clínica desde el establecimiento receptor hacia el de origen, para que este último pueda continuar el seguimiento del paciente con conocimiento de lo actuado. Considerarlo parte normal del proceso normaliza una falla real de continuidad; atribuirlo a exceso de comunicación es contrario a lo observado; atribuirlo a la falta de un vehículo exclusivo no aborda el problema real, que es de flujo de información, no de transporte."
     },
     {
@@ -3413,11 +3413,11 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta más adecuada para gestionar este cambio?",
       "options": [
         "Abandonar la implementación ante la primera señal de resistencia.",
+        "Imponer el uso del sistema sin explicar sus beneficios ni brindar capacitación.",
         "Delegar la capacitación únicamente a quienes ya dominan herramientas digitales.",
-        "Explicar los beneficios del cambio, capacitar al equipo y acompañar el proceso de adaptación.",
-        "Imponer el uso del sistema sin explicar sus beneficios ni brindar capacitación."
+        "Explicar los beneficios del cambio, capacitar al equipo y acompañar el proceso de adaptación."
       ],
-      "correct": 2,
+      "correct": 3,
       "feedback": "Es correcta porque la gestión efectiva de un cambio tecnológico requiere explicar los beneficios del nuevo sistema, capacitar al equipo en su uso y acompañar el proceso de adaptación, siendo estas las estrategias con mayor evidencia para reducir la resistencia natural que genera cualquier cambio organizacional. Abandonar la implementación ante la primera señal de resistencia impide obtener los beneficios que motivaron el cambio; delegar la capacitación únicamente a quienes ya dominan herramientas digitales deja sin apoyo a quienes más lo necesitan; imponer el uso del sistema sin explicar sus beneficios ni capacitar profundiza la resistencia en vez de gestionarla."
     },
     {
@@ -3436,11 +3436,11 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta correcta del equipo directivo?",
       "options": [
         "Delegar toda la responsabilidad de la emergencia a instituciones externas.",
-        "Elaborar el plan de contingencia, pero sin difundirlo hasta que ocurra una emergencia real.",
+        "Elaborar y difundir un plan de contingencia actualizado, con roles definidos y simulacros periódicos.",
         "Esperar a que ocurra una emergencia real para definir las acciones a seguir.",
-        "Elaborar y difundir un plan de contingencia actualizado, con roles definidos y simulacros periódicos."
+        "Elaborar el plan de contingencia, pero sin difundirlo hasta que ocurra una emergencia real."
       ],
-      "correct": 3,
+      "correct": 1,
       "feedback": "Es correcta porque la gestión del riesgo de desastres exige un plan de contingencia actualizado, difundido a todo el personal, con roles claramente definidos y validado mediante simulacros periódicos, de forma que la respuesta sea efectiva cuando ocurra realmente una emergencia. Delegar toda la responsabilidad a instituciones externas desatiende el rol que corresponde al propio establecimiento; elaborar el plan sin difundirlo lo vuelve inútil en el momento de una emergencia real, porque el personal no lo conoce; esperar a que ocurra la emergencia para definir acciones expone a una respuesta improvisada y tardía."
     },
     {
@@ -3460,8 +3460,8 @@ window.SERUMS_DATA = {
       "options": [
         "Implementar un cambio único y definitivo, sin evaluar sus resultados posteriores.",
         "Aplicar un ciclo de mejora continua: planificar, ejecutar, evaluar los resultados y ajustar según corresponda.",
-        "Esperar a que el problema se resuelva por sí solo con el tiempo.",
-        "Aplicar varios cambios simultáneos sin un orden ni evaluación posterior."
+        "Aplicar varios cambios simultáneos sin un orden ni evaluación posterior.",
+        "Esperar a que el problema se resuelva por sí solo con el tiempo."
       ],
       "correct": 1,
       "feedback": "Es correcta porque la mejora sostenible de un proceso requiere un ciclo continuo de planificar, ejecutar, evaluar los resultados y ajustar según lo observado, en vez de un cambio puntual sin seguimiento posterior. Implementar un cambio único sin evaluar sus resultados no permite verificar si efectivamente redujo las demoras; esperar que el problema se resuelva solo desatiende una causa que requiere intervención activa; aplicar varios cambios simultáneos sin orden ni evaluación impide identificar cuál de ellos generó el efecto observado."
@@ -3481,9 +3481,9 @@ window.SERUMS_DATA = {
       "statement": "Un estudio encuentra asociación entre el uso de redes sociales y síntomas depresivos en adolescentes, sin haber considerado el nivel de apoyo familiar de los participantes.",
       "question": "¿Qué problema metodológico es más relevante en este estudio?",
       "options": [
+        "El tamaño de muestra fue demasiado grande para el análisis.",
         "El diseño transversal impide calcular cualquier tipo de asociación estadística.",
         "El estudio no necesita considerar ninguna otra variable además de la principal.",
-        "El tamaño de muestra fue demasiado grande para el análisis.",
         "El apoyo familiar podría actuar como variable de confusión no controlada, afectando la interpretación de la asociación encontrada."
       ],
       "correct": 3,
@@ -3504,12 +3504,12 @@ window.SERUMS_DATA = {
       "statement": "Un investigador desea comprender en profundidad cómo viven el proceso de duelo un grupo pequeño de familiares de pacientes fallecidos en un establecimiento de salud.",
       "question": "¿Qué enfoque metodológico es más adecuado para este objetivo?",
       "options": [
-        "Un ensayo clínico aleatorizado con grupo control.",
         "Un enfoque cuantitativo con un cuestionario estandarizado y análisis estadístico.",
+        "Un enfoque cualitativo, mediante entrevistas a profundidad que permitan explorar significados y experiencias.",
         "Un estudio de cohorte que siga a los familiares durante varios años.",
-        "Un enfoque cualitativo, mediante entrevistas a profundidad que permitan explorar significados y experiencias."
+        "Un ensayo clínico aleatorizado con grupo control."
       ],
-      "correct": 3,
+      "correct": 1,
       "feedback": "Es correcta porque cuando el objetivo es comprender en profundidad significados y experiencias subjetivas, como vivir un proceso de duelo, el enfoque cualitativo mediante entrevistas a profundidad es el que permite explorar esa dimensión de forma adecuada, a diferencia de enfoques orientados a medir y cuantificar. Un ensayo clínico aleatorizado con grupo control o un enfoque cuantitativo con cuestionario estandarizado buscan medir variables de forma numérica, no explorar significados subjetivos en profundidad; un estudio de cohorte que siga a los familiares durante varios años tampoco corresponde al objetivo de comprensión profunda de un proceso vivido, sino al seguimiento de un desenlace en el tiempo."
     },
     {
@@ -3527,12 +3527,12 @@ window.SERUMS_DATA = {
       "statement": "Un investigador nota que, al excluir ciertos datos atípicos sin justificación metodológica, sus resultados se vuelven estadísticamente significativos.",
       "question": "¿Cuál es la conducta correcta?",
       "options": [
-        "Excluir los datos atípicos sin explicación para lograr un resultado significativo.",
         "Analizar los datos atípicos con criterios metodológicos explícitos y reportar el proceso de forma transparente, sea cual sea el resultado.",
-        "Reportar solo el análisis que arroja significancia estadística.",
-        "Excluir los datos atípicos únicamente si el asesor del estudio lo sugiere."
+        "Excluir los datos atípicos únicamente si el asesor del estudio lo sugiere.",
+        "Excluir los datos atípicos sin explicación para lograr un resultado significativo.",
+        "Reportar solo el análisis que arroja significancia estadística."
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Es correcta porque la integridad en el análisis estadístico exige que cualquier exclusión de datos atípicos se sustente en criterios metodológicos explícitos, definidos preferentemente antes de conocer su efecto en el resultado, y que el proceso completo se reporte de forma transparente sin importar si el resultado es o no significativo. Excluir datos sin explicación para lograr significancia constituye manipulación de resultados; reportar solo el análisis significativo es un sesgo de publicación selectiva; excluirlos únicamente porque el asesor lo sugiere, sin criterio metodológico propio, no sustenta la decisión técnicamente."
     },
     {
@@ -3550,12 +3550,12 @@ window.SERUMS_DATA = {
       "statement": "Un estudio preliminar con una muestra pequeña sugiere una posible asociación entre una intervención y una mejora en el bienestar psicológico, y el equipo desea comunicarlo a la comunidad.",
       "question": "¿Cuál es la conducta más adecuada al difundir estos resultados?",
       "options": [
-        "Presentar el hallazgo como una conclusión definitiva y generalizable a toda la población.",
         "Comunicar el hallazgo con las limitaciones del estudio, evitando conclusiones definitivas que no estén respaldadas por la evidencia disponible.",
         "Omitir el tamaño de muestra y las limitaciones para simplificar el mensaje.",
+        "Presentar el hallazgo como una conclusión definitiva y generalizable a toda la población.",
         "Esperar a que el estudio se replique en otros países antes de comunicar cualquier hallazgo."
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Es correcta porque la difusión responsable de hallazgos preliminares con una muestra pequeña debe comunicarse junto con las limitaciones del estudio, evitando conclusiones definitivas y generalizables que la evidencia disponible aún no respalda. Presentar el hallazgo como una conclusión definitiva y generalizable a toda la población sobrestima la solidez de un resultado preliminar; omitir el tamaño de muestra y las limitaciones para simplificar el mensaje induce a una interpretación errónea de la fuerza real del hallazgo; esperar a que el estudio se replique en otros países antes de comunicar cualquier hallazgo es una postura excesivamente restrictiva que impide compartir información preliminar de forma responsable y con las salvedades adecuadas."
     },
     {
@@ -3573,12 +3573,12 @@ window.SERUMS_DATA = {
       "statement": "Un establecimiento de salud no segrega adecuadamente los residuos biocontaminados de los residuos comunes, y tampoco involucra a la comunidad en la disposición final de residuos domiciliarios.",
       "question": "¿Cuál es la conducta más adecuada para mejorar esta situación?",
       "options": [
-        "Delegar toda la responsabilidad de los residuos exclusivamente al personal de limpieza, sin ninguna otra acción.",
         "Reducir la generación de residuos limitando la atención de pacientes.",
-        "Implementar la segregación adecuada de residuos según su tipo y promover la participación comunitaria en hábitos saludables de eliminación de residuos.",
-        "Incinerar todos los residuos del establecimiento sin clasificación previa."
+        "Incinerar todos los residuos del establecimiento sin clasificación previa.",
+        "Delegar toda la responsabilidad de los residuos exclusivamente al personal de limpieza, sin ninguna otra acción.",
+        "Implementar la segregación adecuada de residuos según su tipo y promover la participación comunitaria en hábitos saludables de eliminación de residuos."
       ],
-      "correct": 2,
+      "correct": 3,
       "feedback": "Es correcta porque la gestión integral de residuos requiere segregación técnica según el tipo de residuo, además de un componente educativo que involucre a la comunidad en la disposición de sus propios residuos domiciliarios. Delegar toda la responsabilidad al personal de limpieza sin más acción ignora el componente educativo comunitario necesario; incinerar todos los residuos sin clasificación previa no corresponde al manejo diferenciado exigido por norma; limitar la atención de pacientes para reducir residuos antepone una medida operativa a la calidad de la atención, sin resolver el problema de gestión de fondo."
     },
     {
@@ -3598,10 +3598,10 @@ window.SERUMS_DATA = {
       "options": [
         "Ignorar el riesgo psicosocial porque no está relacionado con la seguridad física del personal.",
         "Considerar que el desgaste profesional es un problema individual, sin relación con la organización del trabajo.",
-        "Rotar al personal afectado a otro establecimiento, sin intervenir sobre la organización del trabajo actual.",
-        "Implementar campañas regulares de tamizaje de estrés laboral y desgaste profesional, y ajustar factores organizacionales de riesgo."
+        "Implementar campañas regulares de tamizaje de estrés laboral y desgaste profesional, y ajustar factores organizacionales de riesgo.",
+        "Rotar al personal afectado a otro establecimiento, sin intervenir sobre la organización del trabajo actual."
       ],
-      "correct": 3,
+      "correct": 2,
       "feedback": "Es correcta porque la sobrecarga laboral sostenida sin tamizaje periódico exige implementar campañas regulares de tamizaje de estrés laboral y desgaste profesional, junto con el ajuste de los factores organizacionales que lo generan, dado que el desgaste profesional tiene un componente organizacional identificable y modificable. Ignorar el riesgo psicosocial porque no está relacionado con la seguridad física del personal desconoce que la normativa de salud ocupacional también protege la salud mental de los trabajadores; considerar el desgaste como un problema individual, sin relación con la organización del trabajo, desestima el factor causal organizacional identificado; rotar al personal afectado sin intervenir en la organización actual traslada el problema en vez de resolverlo."
     },
     {
@@ -3619,12 +3619,12 @@ window.SERUMS_DATA = {
       "statement": "Un establecimiento organiza su atención por edad, pero no articula las intervenciones preventivas, curativas y educativas específicas de cada etapa de vida de manera coordinada.",
       "question": "¿Qué enfoque debe fortalecerse en este establecimiento?",
       "options": [
-        "Atender únicamente la demanda espontánea de cada grupo etario, sin paquetes de atención diferenciados.",
         "Aplicar el modelo de cuidado integral por curso de vida, con paquetes de atención específicos y articulados desde el prenatal hasta la vejez.",
-        "Concentrar todos los recursos en la atención del adulto mayor, dado que es la etapa de mayor riesgo.",
-        "Priorizar exclusivamente la atención curativa por encima de la preventiva en cada etapa."
+        "Atender únicamente la demanda espontánea de cada grupo etario, sin paquetes de atención diferenciados.",
+        "Priorizar exclusivamente la atención curativa por encima de la preventiva en cada etapa.",
+        "Concentrar todos los recursos en la atención del adulto mayor, dado que es la etapa de mayor riesgo."
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Es correcta porque el modelo de cuidado integral por curso de vida exige paquetes de atención preventivos, curativos y educativos articulados y específicos para cada etapa, no solo una organización administrativa por edad. Atender únicamente la demanda espontánea deja sin cobertura las intervenciones preventivas propias de cada etapa; concentrar recursos solo en el adulto mayor descuida otras etapas igualmente prioritarias del curso de vida; priorizar solo lo curativo invierte el enfoque preventivo que caracteriza al modelo."
     },
     {
@@ -3642,12 +3642,12 @@ window.SERUMS_DATA = {
       "statement": "Un paciente presenta una receta de un medicamento de estrecho margen terapéutico, con una dosis inusualmente alta respecto a lo habitual.",
       "question": "¿Cuál es la conducta más adecuada del profesional de farmacia?",
       "options": [
-        "Verificar la prescripción con el profesional tratante antes de dispensar, dado el riesgo asociado a la dosis inusual.",
-        "Reducir la dosis por cuenta propia, sin consultar al prescriptor.",
         "Dispensar solo la mitad de la cantidad prescrita como medida de precaución, sin consultar al prescriptor.",
-        "Dispensar el medicamento tal como está prescrito, sin ninguna verificación adicional."
+        "Dispensar el medicamento tal como está prescrito, sin ninguna verificación adicional.",
+        "Reducir la dosis por cuenta propia, sin consultar al prescriptor.",
+        "Verificar la prescripción con el profesional tratante antes de dispensar, dado el riesgo asociado a la dosis inusual."
       ],
-      "correct": 0,
+      "correct": 3,
       "feedback": "Es correcta porque un medicamento de estrecho margen terapéutico con dosis inusualmente alta representa un riesgo real de toxicidad, por lo que el profesional de farmacia debe verificar la prescripción con el prescriptor antes de dispensar, ya que solo él puede confirmar si la dosis es intencional o un error de prescripción. Reducir la dosis por cuenta propia invade una decisión clínica que no corresponde al ámbito de dispensación; entregar solo la mitad sin consultar no resuelve la duda sobre la intención real de la prescripción; dispensar tal como está prescrito sin verificación expone al paciente a un riesgo de toxicidad evitable."
     },
     {
@@ -3665,12 +3665,12 @@ window.SERUMS_DATA = {
       "statement": "En una inspección del almacén de farmacia se detecta que algunos medicamentos termolábiles no están conservados dentro del rango de temperatura requerido.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Retirar los medicamentos afectados, registrar el incidente y corregir la falla en la cadena de frío antes de continuar su uso.",
+        "Retirar solo los medicamentos vencidos, manteniendo el resto pese a la falla de conservación.",
         "Continuar dispensando los medicamentos sin evaluar el impacto de la falla de conservación.",
-        "Trasladar los medicamentos a temperatura ambiente de forma permanente para evitar el problema.",
-        "Retirar solo los medicamentos vencidos, manteniendo el resto pese a la falla de conservación."
+        "Retirar los medicamentos afectados, registrar el incidente y corregir la falla en la cadena de frío antes de continuar su uso.",
+        "Trasladar los medicamentos a temperatura ambiente de forma permanente para evitar el problema."
       ],
-      "correct": 0,
+      "correct": 2,
       "feedback": "Es correcta porque una falla en la cadena de frío compromete la estabilidad y eficacia de los medicamentos termolábiles, por lo que corresponde retirarlos de circulación, registrar el incidente para trazabilidad y corregir la causa de la falla antes de reanudar su uso. Continuar dispensándolos sin evaluar el impacto expone a los pacientes a productos con potencia comprometida; trasladarlos a temperatura ambiente de forma permanente no corrige el problema, solo lo evita sin resolver la causa; retirar solo los vencidos, manteniendo el resto pese a la falla de conservación, ignora que la exposición térmica afecta también a los no vencidos."
     },
     {
@@ -3688,12 +3688,12 @@ window.SERUMS_DATA = {
       "statement": "Un usuario solicita un antibiótico sin receta médica para tratar síntomas compatibles con un cuadro viral.",
       "question": "¿Cuál es la conducta más adecuada del profesional de farmacia?",
       "options": [
-        "Indicar que tome el antibiótico solo si los síntomas empeoran en los próximos días.",
-        "Recomendar un antibiótico distinto por cuenta propia para \"asegurar\" la mejoría.",
+        "Dispensar el antibiótico solicitado, sin ninguna orientación adicional.",
         "Explicar que el cuadro descrito no amerita antibiótico, orientar sobre manejo sintomático y derivar a evaluación médica si es necesario.",
-        "Dispensar el antibiótico solicitado, sin ninguna orientación adicional."
+        "Indicar que tome el antibiótico solo si los síntomas empeoran en los próximos días.",
+        "Recomendar un antibiótico distinto por cuenta propia para \"asegurar\" la mejoría."
       ],
-      "correct": 2,
+      "correct": 1,
       "feedback": "Es correcta porque el cuadro descrito es compatible con una infección viral, para la cual los antibióticos no tienen indicación, por lo que corresponde explicar esto al usuario, orientar sobre manejo sintomático y derivar a evaluación médica si el cuadro no mejora o presenta signos de alarma, contribuyendo así al uso racional de antibióticos y a la prevención de resistencia microbiana. Indicar que lo tome solo si los síntomas empeoran normaliza un uso no indicado del antibiótico; recomendar otro antibiótico por cuenta propia sustituye indebidamente una decisión que corresponde a evaluación médica; dispensarlo sin ninguna orientación contribuye directamente al uso irracional de antimicrobianos y al riesgo de resistencia."
     },
     {
@@ -3711,12 +3711,12 @@ window.SERUMS_DATA = {
       "statement": "Un adulto mayor acude solo a repetidas consultas, con signos de descuido en su higiene y sin que ningún familiar lo acompañe o responda a los intentos de contacto.",
       "question": "¿Cuál es la conducta más adecuada del profesional de trabajo social?",
       "options": [
+        "Solicitar que el propio adulto mayor contacte a sus familiares.",
         "Derivar el caso, sin realizar ninguna evaluación previa.",
         "Realizar una evaluación social integral, indagar la red de apoyo disponible y coordinar las medidas de protección que correspondan.",
-        "Asumir que el adulto mayor prefiere estar solo y no indagar más.",
-        "Solicitar que el propio adulto mayor contacte a sus familiares."
+        "Asumir que el adulto mayor prefiere estar solo y no indagar más."
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Es correcta porque signos de descuido en la higiene junto con ausencia sostenida de contacto familiar son indicadores compatibles con abandono, que requieren una evaluación social integral para indagar la red de apoyo real disponible y coordinar las medidas de protección pertinentes, sin asumir conclusiones antes de esa evaluación. Derivar el caso sin evaluación previa deja sin caracterizar la situación real del adulto mayor; asumir que prefiere estar solo sin indagar más naturaliza un posible descuido sin sustento; solicitar que el propio adulto mayor contacte a sus familiares traslada la responsabilidad de protección a la persona potencialmente en riesgo."
     },
     {
@@ -3734,9 +3734,9 @@ window.SERUMS_DATA = {
       "statement": "Una familia en situación de pobreza extrema requiere apoyo que excede la capacidad de intervención del establecimiento de salud.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Resolver la situación económica de la familia con recursos personales del profesional.",
-        "Articular con programas sociales y redes de protección disponibles en la comunidad para complementar la atención en salud.",
         "Indicar que el establecimiento de salud no puede hacer nada más por la familia.",
+        "Articular con programas sociales y redes de protección disponibles en la comunidad para complementar la atención en salud.",
+        "Resolver la situación económica de la familia con recursos personales del profesional.",
         "Derivar el caso exclusivamente a una ONG, sin coordinación con programas estatales."
       ],
       "correct": 1,
@@ -3757,12 +3757,12 @@ window.SERUMS_DATA = {
       "statement": "Una usuaria que reportó violencia familiar no acude a su cita de seguimiento programada tras la denuncia.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
+        "Esperar a que la usuaria reprograme la cita por su cuenta.",
         "Notificar solo a la policía, sin realizar una evaluación social directa.",
-        "Realizar una visita social de seguimiento, evaluando su situación de seguridad actual y la necesidad de apoyo adicional.",
         "Cerrar el caso por inasistencia, sin ninguna acción adicional.",
-        "Esperar a que la usuaria reprograme la cita por su cuenta."
+        "Realizar una visita social de seguimiento, evaluando su situación de seguridad actual y la necesidad de apoyo adicional."
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Es correcta porque la inasistencia de una usuaria que reportó violencia familiar puede indicar un riesgo de seguridad activo, por lo que corresponde una visita social de seguimiento que evalúe directamente su situación actual y la necesidad de apoyo adicional, en vez de asumir simplemente que dejó de acudir por decisión propia. Notificar solo a la policía sin evaluación social directa no verifica la condición actual de la usuaria; cerrar el caso por inasistencia desatiende un posible riesgo activo; esperar que la usuaria reprograme por su cuenta es pasivo frente a una situación que puede implicar riesgo inminente.",
       "interdisciplinaryNote": "Psicología debe coordinar con trabajo social el seguimiento conjunto del riesgo y el acompañamiento emocional de la usuaria."
     },
@@ -3781,12 +3781,12 @@ window.SERUMS_DATA = {
       "statement": "Un laboratorio clínico no aplica controles de calidad internos de forma regular antes de procesar las muestras de los pacientes.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Continuar procesando muestras sin control de calidad para no retrasar la entrega de resultados.",
-        "Aplicar controles de calidad solo cuando un resultado parezca inusual.",
         "Implementar controles de calidad internos regulares antes de procesar muestras, para garantizar la confiabilidad de los resultados.",
-        "Delegar el control de calidad únicamente a una auditoría externa anual."
+        "Delegar el control de calidad únicamente a una auditoría externa anual.",
+        "Aplicar controles de calidad solo cuando un resultado parezca inusual.",
+        "Continuar procesando muestras sin control de calidad para no retrasar la entrega de resultados."
       ],
-      "correct": 2,
+      "correct": 0,
       "feedback": "Es correcta porque el control de calidad interno debe aplicarse de forma regular antes de procesar las muestras, dado que es la única forma de detectar desviaciones del sistema analítico antes de que afecten resultados de pacientes reales, y no solo cuando un resultado ya parece inusual. Continuar sin control para no retrasar la entrega prioriza la rapidez sobre la confiabilidad de los resultados; aplicarlo solo ante resultados inusuales deja sin detectar errores sistemáticos que no se manifiestan de forma evidente; delegarlo únicamente a una auditoría externa anual no sustituye el control diario que exige la operación del laboratorio."
     },
     {
@@ -3804,8 +3804,8 @@ window.SERUMS_DATA = {
       "statement": "Durante una jornada de alta demanda, el personal de laboratorio comienza a reutilizar material de protección personal para agilizar la toma de muestras.",
       "question": "¿Cuál es la conducta correcta?",
       "options": [
-        "Aceptar la reutilización de material de protección para no retrasar la atención.",
         "Reducir el uso de material de protección solo en procedimientos de rutina para ahorrar insumos.",
+        "Aceptar la reutilización de material de protección para no retrasar la atención.",
         "Mantener el cumplimiento estricto de los protocolos de bioseguridad, sin importar la carga de trabajo.",
         "Reutilizar el material solo con pacientes que parezcan estar sanos."
       ],
@@ -3827,12 +3827,12 @@ window.SERUMS_DATA = {
       "statement": "Una paciente que desconoce su estado de gestación es programada para un estudio radiológico de abdomen.",
       "question": "¿Cuál es la conducta más adecuada antes de realizar el estudio?",
       "options": [
-        "Preguntar sobre la posibilidad de gestación antes del estudio y evaluar alternativas o medidas de protección si corresponde.",
         "Realizar el estudio con protección abdominal estándar, sin indagar sobre la gestación.",
+        "Preguntar sobre la posibilidad de gestación antes del estudio y evaluar alternativas o medidas de protección si corresponde.",
         "Suspender todos los estudios radiológicos a cualquier mujer en edad fértil, sin excepción.",
         "Realizar el estudio de inmediato, sin preguntar sobre la posibilidad de embarazo."
       ],
-      "correct": 0,
+      "correct": 1,
       "feedback": "Es correcta porque toda mujer en edad fértil programada para un estudio radiológico debe ser consultada sobre la posibilidad de gestación antes de la exposición, dado el riesgo del feto ante la radiación ionizante, evaluando alternativas diagnósticas o medidas de protección específicas según el caso. Realizar el estudio con protección abdominal estándar sin indagar la gestación no ajusta la protección al riesgo real si la paciente está gestando; suspender todos los estudios a cualquier mujer en edad fértil sin excepción es una medida desproporcionada que niega estudios necesarios a quienes no están gestando; realizar el estudio sin preguntar expone a un riesgo evitable con una simple indagación previa."
     },
     {
@@ -3850,12 +3850,12 @@ window.SERUMS_DATA = {
       "statement": "Paciente con secuelas motoras tras un accidente cerebrovascular es dado de alta hospitalaria y llega al establecimiento de primer nivel para continuar su recuperación.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Evaluar el estado funcional y diseñar un plan de rehabilitación progresivo adaptado a sus secuelas.",
-        "Indicar reposo absoluto para evitar mayor daño.",
         "Derivar directamente a un hospital, sin iniciar ninguna intervención en el primer nivel.",
-        "Indicar que retome sus actividades previas de forma inmediata, sin evaluación funcional."
+        "Evaluar el estado funcional y diseñar un plan de rehabilitación progresivo adaptado a sus secuelas.",
+        "Indicar que retome sus actividades previas de forma inmediata, sin evaluación funcional.",
+        "Indicar reposo absoluto para evitar mayor daño."
       ],
-      "correct": 0,
+      "correct": 1,
       "feedback": "Es correcta porque tras un accidente cerebrovascular corresponde evaluar el estado funcional específico del paciente y diseñar un plan de rehabilitación progresivo adaptado a sus secuelas particulares, dado que la recuperación motora depende de una intervención activa y temprana en el primer nivel. El reposo absoluto no favorece la recuperación motora y puede favorecer complicaciones por inmovilidad; derivar directamente a un hospital sin iniciar nada en el primer nivel desaprovecha la capacidad resolutiva ya disponible; exigir que retome actividades previas de inmediato sin evaluación funcional expone al paciente a riesgos por sobreestimar su capacidad actual."
     },
     {
@@ -3873,12 +3873,12 @@ window.SERUMS_DATA = {
       "statement": "En un establecimiento se identifica alta frecuencia de caídas entre los adultos mayores que asisten a sus controles.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Implementar un programa de evaluación de riesgo de caídas y ejercicios preventivos de equilibrio y fuerza.",
         "Atender solo las lesiones derivadas de las caídas ya ocurridas.",
+        "Implementar un programa de evaluación de riesgo de caídas y ejercicios preventivos de equilibrio y fuerza.",
         "Indicar el uso de silla de ruedas de forma preventiva a todos los adultos mayores del programa.",
         "Recomendar que los adultos mayores reduzcan su actividad física por completo."
       ],
-      "correct": 0,
+      "correct": 1,
       "feedback": "Es correcta porque la prevención de caídas requiere identificar el riesgo individual de cada adulto mayor y aplicar ejercicios específicos de equilibrio y fuerza, que son las intervenciones con mayor evidencia para reducir la incidencia de caídas en esta población. Atender solo las lesiones ya ocurridas es una respuesta reactiva que no previene nuevos eventos; indicar silla de ruedas de forma preventiva a todos acelera la pérdida de capacidad funcional en quienes aún pueden desplazarse; recomendar reducir por completo la actividad física es contraproducente, ya que la inactividad aumenta el riesgo de caídas al debilitar la musculatura."
     },
     {
@@ -3896,12 +3896,12 @@ window.SERUMS_DATA = {
       "statement": "Un niño de 3 años presenta un vocabulario muy limitado para su edad y dificultad para formar frases simples, según refiere la madre en el control de rutina.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Aplicar un tamizaje del desarrollo del lenguaje y derivar a terapia del lenguaje si corresponde.",
         "Indicar que es normal y que el niño hablará cuando esté listo, sin más evaluación.",
-        "Esperar hasta que el niño ingrese al colegio para evaluar el lenguaje.",
-        "Recomendar que la familia hable menos con el niño para estimular su propio lenguaje."
+        "Aplicar un tamizaje del desarrollo del lenguaje y derivar a terapia del lenguaje si corresponde.",
+        "Recomendar que la familia hable menos con el niño para estimular su propio lenguaje.",
+        "Esperar hasta que el niño ingrese al colegio para evaluar el lenguaje."
       ],
-      "correct": 0,
+      "correct": 1,
       "feedback": "Es correcta porque un vocabulario muy limitado junto con dificultad para formar frases simples a los 3 años son signos de alarma del desarrollo del lenguaje que ameritan tamizaje formal y derivación oportuna si corresponde, dado que la intervención temprana mejora significativamente el pronóstico. Asumir que es normal y que hablará cuando esté listo, sin evaluación, descarta prematuramente un posible retraso; esperar hasta el ingreso escolar pierde años valiosos de intervención temprana; recomendar que la familia le hable menos contradice la evidencia sobre estimulación lingüística, que es protectora, no perjudicial."
     },
     {
@@ -3920,11 +3920,11 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
         "Recomendar cambiar de ocupación de forma inmediata, sin evaluación previa.",
+        "Indicar reposo absoluto de la mano afectada hasta la recuperación total.",
         "Indicar que espere la recuperación completa antes de retomar cualquier actividad.",
-        "Evaluar sus actividades cotidianas y laborales, y diseñar estrategias de adaptación funcional durante su recuperación.",
-        "Indicar reposo absoluto de la mano afectada hasta la recuperación total."
+        "Evaluar sus actividades cotidianas y laborales, y diseñar estrategias de adaptación funcional durante su recuperación."
       ],
-      "correct": 2,
+      "correct": 3,
       "feedback": "Es correcta porque la terapia ocupacional debe evaluar las actividades cotidianas y laborales concretas que la lesión limita, diseñando estrategias de adaptación funcional que permitan al trabajador mantener su desempeño durante la recuperación, en vez de suspender toda actividad. Recomendar cambiar de ocupación de inmediato sin evaluación previa es una decisión desproporcionada sin sustento en la evaluación funcional; indicar que espere la recuperación completa antes de retomar cualquier actividad prolonga innecesariamente la limitación funcional; indicar reposo absoluto de la mano hasta la recuperación total no corresponde al enfoque activo de adaptación que caracteriza a la terapia ocupacional."
     },
     {
@@ -3942,9 +3942,9 @@ window.SERUMS_DATA = {
       "statement": "Los padres de un niño de 2 años notan que uno de sus ojos se desvía con frecuencia, especialmente cuando está cansado.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Indicar que es normal en la primera infancia y que se corregirá solo con el tiempo.",
         "Esperar a que el niño sea mayor para realizar cualquier evaluación.",
         "Recomendar ejercicios oculares en casa, sin evaluación especializada previa.",
+        "Indicar que es normal en la primera infancia y que se corregirá solo con el tiempo.",
         "Evaluar la alineación ocular y derivar oportunamente, dado que el estrabismo no tratado puede afectar el desarrollo visual."
       ],
       "correct": 3,
@@ -3966,11 +3966,11 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
         "Indicar tratamiento antiparasitario a la población, sin intervenir en la crianza animal.",
-        "Atender solo los casos humanos, sin intervenir en la crianza animal.",
+        "Coordinar con salud pública el control sanitario de la crianza animal y educar a las familias en prácticas de crianza segura.",
         "Recomendar eliminar toda la crianza de animales en la comunidad de forma inmediata.",
-        "Coordinar con salud pública el control sanitario de la crianza animal y educar a las familias en prácticas de crianza segura."
+        "Atender solo los casos humanos, sin intervenir en la crianza animal."
       ],
-      "correct": 3,
+      "correct": 1,
       "feedback": "Es correcta porque el control de zoonosis como la teniasis requiere una intervención conjunta entre salud animal y salud pública, que combine el control sanitario de la crianza porcina con educación a las familias en prácticas de crianza segura, abordando tanto la fuente animal como el comportamiento humano de riesgo. Indicar tratamiento antiparasitario a la población sin intervenir en la crianza animal trata el efecto sin controlar la fuente de reinfección; atender solo los casos humanos deja sin intervenir el reservorio animal que sostiene la transmisión; recomendar eliminar toda la crianza de animales es una medida desproporcionada frente a un problema que puede controlarse con manejo sanitario adecuado."
     },
     {
@@ -3988,12 +3988,12 @@ window.SERUMS_DATA = {
       "statement": "Un criador reporta la muerte súbita de varias aves de corral en pocos días, sin causa aparente evidente.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Recomendar la venta inmediata de las aves restantes antes de que enfermen.",
         "Indicar que reemplace las aves fallecidas, sin investigar la causa.",
-        "Notificar el evento a la autoridad sanitaria correspondiente e investigar la posible causa antes de descartar riesgo zoonótico.",
-        "Esperar a que mueran más aves para confirmar si es un problema real."
+        "Esperar a que mueran más aves para confirmar si es un problema real.",
+        "Recomendar la venta inmediata de las aves restantes antes de que enfermen.",
+        "Notificar el evento a la autoridad sanitaria correspondiente e investigar la posible causa antes de descartar riesgo zoonótico."
       ],
-      "correct": 2,
+      "correct": 3,
       "feedback": "Es correcta porque la mortandad súbita de aves sin causa aparente evidente puede corresponder a un evento de origen infeccioso con potencial riesgo zoonótico, por lo que corresponde notificar a la autoridad sanitaria e investigar la causa antes de descartar ese riesgo, en vez de asumir una explicación sin sustento. Recomendar la venta inmediata de las aves restantes puede diseminar un posible agente patógeno a otras zonas; indicar que reemplace las aves sin investigar la causa deja sin identificar un riesgo que podría repetirse o extenderse; esperar a que mueran más aves para confirmar retrasa una respuesta que debe ser oportuna ante un evento ya inusual."
     },
     {
@@ -4012,11 +4012,11 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
         "Indicar a la población que hierva el agua de forma indefinida, sin investigar la fuente del problema.",
-        "Clorar la fuente de agua de inmediato, sin un análisis microbiológico previo.",
+        "Realizar el análisis microbiológico del agua y coordinar las medidas correctivas necesarias con las autoridades competentes.",
         "Tratar solo los casos clínicos, sin evaluar la fuente de agua.",
-        "Realizar el análisis microbiológico del agua y coordinar las medidas correctivas necesarias con las autoridades competentes."
+        "Clorar la fuente de agua de inmediato, sin un análisis microbiológico previo."
       ],
-      "correct": 3,
+      "correct": 1,
       "feedback": "Es correcta porque ante sospecha de contaminación de una fuente de agua asociada a casos de diarrea aguda corresponde realizar el análisis microbiológico que confirme o descarte la contaminación, y coordinar las medidas correctivas pertinentes con las autoridades competentes según el resultado obtenido. Indicar que hiervan el agua de forma indefinida sin investigar la fuente no resuelve el problema de fondo ni permite dimensionar el riesgo real; clorar la fuente de inmediato sin análisis previo puede ser una medida insuficiente o inadecuada según el tipo de contaminación; tratar solo los casos clínicos sin evaluar la fuente deja expuesta a la población a la misma fuente contaminada."
     },
     {
@@ -4034,12 +4034,12 @@ window.SERUMS_DATA = {
       "statement": "Una comunidad rural carece de sistema adecuado de disposición de excretas, lo que se asocia a un incremento de enfermedades de origen hídrico.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Evaluar la infraestructura de saneamiento existente y coordinar la implementación de soluciones técnicas adecuadas junto con educación sanitaria.",
-        "Solicitar la construcción de un sistema de alcantarillado convencional como única solución posible.",
         "Limitar la intervención a la educación sanitaria, sin evaluar la infraestructura disponible.",
-        "Esperar a que la comunidad gestione por sí misma la construcción de infraestructura."
+        "Esperar a que la comunidad gestione por sí misma la construcción de infraestructura.",
+        "Evaluar la infraestructura de saneamiento existente y coordinar la implementación de soluciones técnicas adecuadas junto con educación sanitaria.",
+        "Solicitar la construcción de un sistema de alcantarillado convencional como única solución posible."
       ],
-      "correct": 0,
+      "correct": 2,
       "feedback": "Es correcta porque el saneamiento básico deficiente requiere primero evaluar la infraestructura existente para identificar soluciones técnicas viables y adecuadas al contexto rural, complementadas con educación sanitaria que sostenga su uso correcto, en vez de imponer una solución estándar o esperar pasivamente. Solicitar un sistema de alcantarillado convencional como única solución posible ignora que existen alternativas técnicas más viables en contextos rurales dispersos; limitar la intervención a la educación sanitaria sin evaluar la infraestructura no resuelve la causa estructural del problema; esperar a que la comunidad gestione por sí misma la construcción desatiende el rol técnico que corresponde al sector."
     },
     {
@@ -4057,12 +4057,12 @@ window.SERUMS_DATA = {
       "statement": "Un paciente refiere haber presentado una reacción cutánea severa tras iniciar un nuevo medicamento dispensado en el establecimiento.",
       "question": "¿Cuál es la conducta correcta del profesional de farmacia?",
       "options": [
-        "Notificar la reacción adversa al sistema de farmacovigilancia y orientar al paciente sobre los siguientes pasos.",
-        "Recomendar que el paciente acuda a otro establecimiento para continuar el tratamiento.",
         "Indicar al paciente que suspenda el medicamento, sin informar a nadie más.",
-        "Registrar el caso solo en la historia clínica, sin ninguna otra acción."
+        "Notificar la reacción adversa al sistema de farmacovigilancia y orientar al paciente sobre los siguientes pasos.",
+        "Registrar el caso solo en la historia clínica, sin ninguna otra acción.",
+        "Recomendar que el paciente acuda a otro establecimiento para continuar el tratamiento."
       ],
-      "correct": 0,
+      "correct": 1,
       "feedback": "Es correcta porque toda sospecha de reacción adversa a medicamento debe notificarse al sistema de farmacovigilancia, que depende de estos reportes para detectar señales de seguridad, además de orientar al paciente sobre los siguientes pasos a seguir con su tratamiento. Recomendar que acuda a otro establecimiento sin notificar traslada la responsabilidad sin activar el sistema de vigilancia; indicar que suspenda el medicamento sin informar a nadie más pierde la oportunidad de registrar una señal de seguridad relevante; registrar el caso solo en la historia clínica sin notificar al sistema correspondiente no contribuye a la vigilancia poblacional de reacciones adversas."
     },
     {
@@ -4080,12 +4080,12 @@ window.SERUMS_DATA = {
       "statement": "Un adulto mayor recibe seis medicamentos distintos prescritos por diferentes profesionales, sin que exista una revisión conjunta de su tratamiento.",
       "question": "¿Cuál es la conducta más adecuada del profesional de farmacia?",
       "options": [
-        "Realizar una conciliación de medicamentos que identifique interacciones y duplicidades, coordinando con los prescriptores si es necesario.",
         "Dispensar cada medicamento por separado, sin revisar posibles interacciones.",
+        "Realizar una conciliación de medicamentos que identifique interacciones y duplicidades, coordinando con los prescriptores si es necesario.",
         "Suspender por cuenta propia los medicamentos que considere innecesarios.",
         "Indicar a la familia que reduzca el número de medicamentos, sin consultar a los prescriptores."
       ],
-      "correct": 0,
+      "correct": 1,
       "feedback": "Es correcta porque un adulto mayor polimedicado por múltiples prescriptores sin revisión conjunta tiene alto riesgo de interacciones y duplicidades terapéuticas, por lo que corresponde realizar una conciliación de medicamentos que las identifique y coordinar los ajustes necesarios con los prescriptores involucrados. Dispensar cada medicamento por separado sin revisar interacciones omite precisamente el riesgo que motiva la conciliación; suspender por cuenta propia los medicamentos que se consideren innecesarios excede el ámbito de decisión del profesional de farmacia; indicar a la familia que reduzca el número de medicamentos sin consultar a los prescriptores traslada una decisión clínica a quien no tiene competencia para tomarla."
     },
     {
@@ -4103,12 +4103,12 @@ window.SERUMS_DATA = {
       "statement": "Una gestante adolescente no acude a sus controles prenatales y su familia reporta que dejó de asistir al colegio recientemente.",
       "question": "¿Cuál es la conducta más adecuada del profesional de trabajo social?",
       "options": [
-        "Notificar únicamente a la escuela, sin evaluar la situación de salud.",
-        "Realizar una visita social para evaluar el contexto familiar y educativo, y coordinar el retorno a controles y apoyo interdisciplinario.",
         "Derivar el caso a la fiscalía, sin una evaluación social previa.",
-        "Esperar a que la adolescente acuda por su cuenta al establecimiento."
+        "Esperar a que la adolescente acuda por su cuenta al establecimiento.",
+        "Realizar una visita social para evaluar el contexto familiar y educativo, y coordinar el retorno a controles y apoyo interdisciplinario.",
+        "Notificar únicamente a la escuela, sin evaluar la situación de salud."
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Es correcta porque el abandono simultáneo de controles prenatales y de la escolaridad en una gestante adolescente sugiere un contexto de riesgo que requiere una visita social para evaluarlo directamente, coordinando tanto el retorno a controles como un apoyo interdisciplinario que aborde ambas dimensiones. Notificar únicamente a la escuela sin evaluar la situación de salud deja sin abordar el riesgo obstétrico; derivar a fiscalía sin evaluación social previa es una medida desproporcionada sin sustento diagnóstico aún; esperar a que la adolescente acuda por su cuenta es pasivo frente a un patrón de abandono ya evidenciado en dos ámbitos distintos."
     },
     {
@@ -4126,12 +4126,12 @@ window.SERUMS_DATA = {
       "statement": "Varios niños identificados con signos de desnutrición en el establecimiento no reciben seguimiento porque sus familias no acuden regularmente y el colegio no ha sido informado.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Continuar citando a las familias sin involucrar a otras instituciones.",
         "Coordinar con la institución educativa un seguimiento conjunto de los casos, articulando salud y educación.",
+        "Cerrar los casos por inasistencia reiterada de las familias.",
         "Notificar el caso a la escuela sin proponer ninguna acción conjunta de seguimiento.",
-        "Cerrar los casos por inasistencia reiterada de las familias."
+        "Continuar citando a las familias sin involucrar a otras instituciones."
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Es correcta porque cuando el seguimiento de casos de desnutrición depende de la asistencia irregular de las familias, corresponde coordinar con la institución educativa un seguimiento conjunto que articule salud y educación, aprovechando el contacto cotidiano que el colegio sí tiene con los niños. Continuar citando a las familias sin involucrar a otras instituciones repite una estrategia que ya no está funcionando; cerrar los casos por inasistencia reiterada abandona el seguimiento de niños con desnutrición ya identificada; notificar a la escuela sin proponer ninguna acción conjunta informa el problema pero no articula una solución compartida."
     },
     {
@@ -4149,12 +4149,12 @@ window.SERUMS_DATA = {
       "statement": "Un resultado de laboratorio muestra un valor de glucosa extremadamente bajo, compatible con riesgo vital inmediato para el paciente.",
       "question": "¿Cuál es la conducta correcta del profesional de laboratorio?",
       "options": [
-        "Comunicar el valor crítico de forma inmediata y directa al personal clínico responsable del paciente.",
-        "Repetir la prueba varias veces antes de informar cualquier resultado.",
         "Registrar el resultado en el sistema y esperar a que el médico lo revise en su próxima ronda.",
-        "Enviar el resultado por el sistema de mensajería habitual del establecimiento, sin contacto directo."
+        "Repetir la prueba varias veces antes de informar cualquier resultado.",
+        "Enviar el resultado por el sistema de mensajería habitual del establecimiento, sin contacto directo.",
+        "Comunicar el valor crítico de forma inmediata y directa al personal clínico responsable del paciente."
       ],
-      "correct": 0,
+      "correct": 3,
       "feedback": "Es correcta porque un valor crítico de laboratorio con riesgo vital inmediato debe comunicarse de forma inmediata y directa al personal clínico responsable, dado que el tiempo de respuesta ante ese hallazgo puede determinar el desenlace del paciente. Repetir la prueba varias veces antes de informar retrasa una intervención que no puede esperar confirmaciones adicionales; registrar el resultado y esperar a la próxima ronda médica ignora la urgencia del hallazgo; enviarlo solo por el sistema de mensajería habitual, sin contacto directo, no garantiza que sea visto con la inmediatez que la situación exige."
     },
     {
@@ -4173,11 +4173,11 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta correcta?",
       "options": [
         "Procesar la muestra y aclarar la identificación después de emitir el resultado.",
-        "Rechazar la muestra y solicitar su recolección nuevamente con el rotulado e identificación completos.",
         "Procesar la muestra y marcarla como \"pendiente de identificación\" en el sistema.",
-        "Procesar la muestra asumiendo a qué paciente corresponde según el orden de llegada."
+        "Procesar la muestra asumiendo a qué paciente corresponde según el orden de llegada.",
+        "Rechazar la muestra y solicitar su recolección nuevamente con el rotulado e identificación completos."
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Es correcta porque una muestra sin rotulado completo compromete la trazabilidad y la certeza sobre a qué paciente corresponde, por lo que debe rechazarse y solicitarse su recolección nuevamente con identificación completa, evitando así el riesgo de asociar un resultado al paciente equivocado. Procesar la muestra y aclarar la identificación después invierte el orden correcto, arriesgando emitir un resultado ya asociado a un paciente incorrecto; marcarla como pendiente de identificación sin rechazarla mantiene el riesgo de error mientras se procesa; asumir el paciente según el orden de llegada es una suposición sin sustento que puede generar un error de identificación grave."
     },
     {
@@ -4195,12 +4195,12 @@ window.SERUMS_DATA = {
       "statement": "El personal que opera el equipo de rayos X en un establecimiento no cuenta con dosímetros personales ni realiza controles periódicos de exposición.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Implementar el uso de dosímetros personales y controles periódicos de exposición según la normativa de protección radiológica.",
         "Reducir las horas de trabajo del personal, sin implementar medidas de control específicas.",
-        "Rotar al personal cada mes entre distintas áreas, sin implementar dosimetría.",
-        "Continuar la operación del equipo, sin ningún control de exposición."
+        "Implementar el uso de dosímetros personales y controles periódicos de exposición según la normativa de protección radiológica.",
+        "Continuar la operación del equipo, sin ningún control de exposición.",
+        "Rotar al personal cada mes entre distintas áreas, sin implementar dosimetría."
       ],
-      "correct": 0,
+      "correct": 1,
       "feedback": "Es correcta porque la protección radiológica ocupacional exige dosímetros personales que midan la exposición acumulada de cada trabajador y controles periódicos que permitan verificar que se mantiene dentro de los límites normativos, siendo esta la única forma objetiva de vigilar la exposición real del personal. Reducir las horas de trabajo sin implementar medidas de control específicas no mide ni controla la exposición real recibida; rotar al personal entre áreas sin dosimetría tampoco permite cuantificar la exposición de cada trabajador; continuar la operación sin ningún control de exposición deja al personal sin ninguna vigilancia de un riesgo ocupacional acumulativo."
     },
     {
@@ -4218,12 +4218,12 @@ window.SERUMS_DATA = {
       "statement": "Un paciente politraumatizado inestable requiere estudios de imagen para definir la conducta de referencia urgente.",
       "question": "¿Cuál es la conducta más adecuada del profesional de radiología?",
       "options": [
-        "Priorizar los estudios de imagen esenciales para la toma de decisiones, coordinando con el equipo tratante sin retrasar la estabilización del paciente.",
         "Realizar todos los estudios de imagen posibles antes de cualquier decisión clínica.",
-        "Priorizar el estudio más rápido disponible, sin coordinar con el equipo tratante.",
-        "Esperar a que el paciente esté completamente estable para iniciar cualquier estudio."
+        "Esperar a que el paciente esté completamente estable para iniciar cualquier estudio.",
+        "Priorizar los estudios de imagen esenciales para la toma de decisiones, coordinando con el equipo tratante sin retrasar la estabilización del paciente.",
+        "Priorizar el estudio más rápido disponible, sin coordinar con el equipo tratante."
       ],
-      "correct": 0,
+      "correct": 2,
       "feedback": "Es correcta porque en un paciente politraumatizado inestable el tiempo es un factor crítico, por lo que corresponde priorizar los estudios de imagen esenciales para la toma de decisiones, coordinando con el equipo tratante de forma que la obtención de imágenes no retrase la estabilización ni la referencia urgente. Realizar todos los estudios posibles antes de cualquier decisión clínica prolonga innecesariamente el tiempo hasta una intervención que puede ser urgente; priorizar solo por rapidez sin coordinar con el equipo tratante puede no responder a la pregunta clínica realmente relevante; esperar estabilidad completa antes de iniciar cualquier estudio puede retrasar el diagnóstico de lesiones que están causando precisamente la inestabilidad."
     },
     {
@@ -4241,12 +4241,12 @@ window.SERUMS_DATA = {
       "statement": "Un paciente que sufrió un infarto de miocardio es dado de alta y muestra temor a realizar cualquier actividad física por miedo a un nuevo evento.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Recomendar que reanude su actividad física habitual, sin ninguna supervisión ni progresión.",
-        "Indicar solo terapia psicológica para el temor, sin ningún programa de actividad física supervisada.",
         "Diseñar un programa de rehabilitación cardiaca con actividad física progresiva y supervisada, abordando también su temor.",
-        "Indicar reposo prolongado hasta que el temor desaparezca por sí solo."
+        "Indicar reposo prolongado hasta que el temor desaparezca por sí solo.",
+        "Recomendar que reanude su actividad física habitual, sin ninguna supervisión ni progresión.",
+        "Indicar solo terapia psicológica para el temor, sin ningún programa de actividad física supervisada."
       ],
-      "correct": 2,
+      "correct": 0,
       "feedback": "Es correcta porque la rehabilitación cardiaca tras un infarto requiere un programa de actividad física progresiva y supervisada que reintroduzca el esfuerzo de forma segura, abordando en paralelo el temor del paciente, que es una barrera frecuente y esperable tras un evento cardiovascular agudo. Recomendar que reanude su actividad habitual sin supervisión ni progresión expone a un esfuerzo no calibrado a su capacidad cardiovascular actual; indicar solo terapia psicológica sin programa de actividad física deja sin abordar la reincorporación funcional que el paciente necesita; indicar reposo prolongado hasta que el temor desaparezca por sí solo retrasa una recuperación cuya evidencia respalda precisamente la actividad progresiva temprana."
     },
     {
@@ -4264,12 +4264,12 @@ window.SERUMS_DATA = {
       "statement": "Un adulto mayor presenta tos frecuente durante las comidas y ha perdido peso en los últimos meses.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Evaluar la seguridad de la deglución y coordinar un plan de manejo para prevenir complicaciones como la aspiración.",
-        "Indicar que coma más lento, sin ninguna evaluación especializada.",
         "Indicar una dieta líquida exclusiva, sin evaluación previa de la deglución.",
-        "Esperar a que la pérdida de peso sea más marcada antes de evaluar."
+        "Indicar que coma más lento, sin ninguna evaluación especializada.",
+        "Esperar a que la pérdida de peso sea más marcada antes de evaluar.",
+        "Evaluar la seguridad de la deglución y coordinar un plan de manejo para prevenir complicaciones como la aspiración."
       ],
-      "correct": 0,
+      "correct": 3,
       "feedback": "Es correcta porque la tos frecuente durante las comidas junto con pérdida de peso son signos de alarma de disfagia con riesgo de aspiración, que exigen evaluar la seguridad de la deglución antes de decidir cualquier modificación de la dieta, dado el riesgo de complicaciones respiratorias graves. Indicar que coma más lento sin evaluación especializada no aborda el mecanismo de riesgo subyacente; indicar una dieta líquida exclusiva sin evaluación previa puede ser inadecuada si el riesgo está justamente en los líquidos, según el tipo de disfagia; esperar a que la pérdida de peso sea más marcada retrasa la identificación de un riesgo de aspiración ya presente."
     },
     {
@@ -4288,9 +4288,9 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
         "Brindar terapia del lenguaje específica y coordinar apoyo psicológico ante el impacto emocional y social identificado.",
-        "Indicar a la familia que corrija constantemente la forma de hablar del niño.",
         "Recomendar que el niño evite participar en actividades que impliquen hablar en público.",
-        "Abordar únicamente el componente del lenguaje, sin considerar el impacto emocional identificado."
+        "Abordar únicamente el componente del lenguaje, sin considerar el impacto emocional identificado.",
+        "Indicar a la familia que corrija constantemente la forma de hablar del niño."
       ],
       "correct": 0,
       "feedback": "Es correcta porque la tartamudez con evitación social y temor a burlas requiere terapia del lenguaje específica junto con abordaje del impacto emocional identificado, no un manejo fragmentado. Corregir constantemente el habla puede aumentar la ansiedad comunicativa; recomendar evitar hablar en público refuerza la evitación; abordar solo el lenguaje sin lo emocional deja sin resolver el impacto social.",
@@ -4311,12 +4311,12 @@ window.SERUMS_DATA = {
       "statement": "Un niño con trastorno del espectro autista presenta dificultad marcada para realizar actividades básicas de autocuidado, como vestirse y comer de forma independiente.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Indicar que estas dificultades no requieren ninguna intervención específica.",
-        "Realizar estas actividades por el niño de forma permanente para evitar su frustración.",
         "Diseñar un plan de intervención estructurado que promueva gradualmente su independencia en actividades de la vida diaria.",
-        "Exigir que el niño logre la independencia completa en un plazo breve y definido."
+        "Exigir que el niño logre la independencia completa en un plazo breve y definido.",
+        "Indicar que estas dificultades no requieren ninguna intervención específica.",
+        "Realizar estas actividades por el niño de forma permanente para evitar su frustración."
       ],
-      "correct": 2,
+      "correct": 0,
       "feedback": "Es correcta porque la independencia en actividades de autocuidado en un niño con trastorno del espectro autista se favorece mediante un plan de intervención estructurado que promueva avances graduales, respetando el ritmo de aprendizaje propio de cada niño en este tipo de trastorno. Indicar que estas dificultades no requieren intervención específica desestima un área central de trabajo en terapia ocupacional para esta población; realizar las actividades por el niño de forma permanente para evitar su frustración perpetúa la dependencia en vez de reducirla; exigir independencia completa en un plazo breve y definido no respeta el ritmo de aprendizaje individual y puede generar frustración adicional."
     },
     {
@@ -4334,9 +4334,9 @@ window.SERUMS_DATA = {
       "statement": "Un adulto mayor con movilidad reducida vive en una vivienda con obstáculos que dificultan su desplazamiento seguro y aumentan el riesgo de caídas.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Indicar que se mude a un lugar más seguro, sin evaluar su vivienda actual.",
         "Indicar el uso permanente de silla de ruedas, sin evaluar antes el entorno domiciliario.",
         "Recomendar que reduzca al mínimo su desplazamiento dentro de la vivienda.",
+        "Indicar que se mude a un lugar más seguro, sin evaluar su vivienda actual.",
         "Evaluar el entorno domiciliario y proponer adaptaciones que reduzcan el riesgo de caídas y favorezcan su independencia."
       ],
       "correct": 3,
@@ -4357,12 +4357,12 @@ window.SERUMS_DATA = {
       "statement": "Un adulto mayor con baja visión irreversible refiere dificultad creciente para realizar sus actividades cotidianas, como leer o cocinar.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Indicar que no hay nada más que hacer, dado que la baja visión es irreversible.",
-        "Evaluar ayudas ópticas y no ópticas de baja visión que faciliten sus actividades cotidianas.",
         "Indicar que otra persona realice esas actividades en su lugar de forma permanente.",
-        "Recomendar que abandone por completo las actividades que le resultan difíciles."
+        "Recomendar que abandone por completo las actividades que le resultan difíciles.",
+        "Evaluar ayudas ópticas y no ópticas de baja visión que faciliten sus actividades cotidianas.",
+        "Indicar que no hay nada más que hacer, dado que la baja visión es irreversible."
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Es correcta porque, aunque la baja visión sea irreversible, existen ayudas ópticas y no ópticas que pueden mejorar significativamente el desempeño en actividades cotidianas, por lo que corresponde evaluarlas específicamente para el caso. Indicar que no hay nada más que hacer desestima el margen de mejora funcional que sí existe pese a la irreversibilidad visual; indicar que otra persona realice esas actividades de forma permanente fomenta una dependencia evitable; recomendar que abandone las actividades difíciles reduce innecesariamente su autonomía cuando existen alternativas de apoyo disponibles."
     },
     {
@@ -4380,12 +4380,12 @@ window.SERUMS_DATA = {
       "statement": "Varios trabajadores administrativos que usan pantallas de forma prolongada reportan fatiga visual y dolor de cabeza frecuente.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Evaluar la salud visual del personal y orientar en pausas visuales, iluminación adecuada y otras medidas preventivas.",
-        "Indicar que reduzcan el uso de pantallas, sin ninguna otra recomendación.",
         "Recomendar el uso de cualquier lente, sin evaluación previa.",
-        "Indicar el uso de lentes oscuros durante toda la jornada laboral, sin evaluación visual."
+        "Indicar el uso de lentes oscuros durante toda la jornada laboral, sin evaluación visual.",
+        "Evaluar la salud visual del personal y orientar en pausas visuales, iluminación adecuada y otras medidas preventivas.",
+        "Indicar que reduzcan el uso de pantallas, sin ninguna otra recomendación."
       ],
-      "correct": 0,
+      "correct": 2,
       "feedback": "Es correcta porque la fatiga visual y el dolor de cabeza asociados al uso prolongado de pantallas requieren evaluar la salud visual de cada trabajador y orientar en medidas preventivas específicas, dado que estas medidas combinadas son las que han demostrado reducir el síndrome visual informático. Indicar solo que reduzcan el uso de pantallas sin otra recomendación no es viable en un contexto laboral que depende de ellas; recomendar cualquier lente sin evaluación previa puede no corregir la causa específica de la fatiga visual de cada trabajador; indicar lentes oscuros durante toda la jornada no aborda la causa ergonómica ni visual del problema descrito."
     },
     {
@@ -4403,12 +4403,12 @@ window.SERUMS_DATA = {
       "statement": "Tras una inundación en una zona rural, se reportan casos humanos compatibles con leptospirosis y presencia de roedores en la zona afectada.",
       "question": "¿Cuál es la conducta más adecuada del profesional veterinario?",
       "options": [
-        "Coordinar con salud pública el control de roedores y la vigilancia epidemiológica conjunta del evento.",
         "Recomendar la evacuación total de la zona afectada, sin coordinación con salud pública.",
+        "Esperar a que se confirmen más casos humanos antes de intervenir.",
         "Atender exclusivamente a los animales de la zona, sin coordinar con salud pública.",
-        "Esperar a que se confirmen más casos humanos antes de intervenir."
+        "Coordinar con salud pública el control de roedores y la vigilancia epidemiológica conjunta del evento."
       ],
-      "correct": 0,
+      "correct": 3,
       "feedback": "Es correcta porque tras una inundación con presencia de roedores y casos humanos compatibles con leptospirosis, corresponde coordinar con salud pública el control de roedores y la vigilancia epidemiológica conjunta del evento, dado que el control efectivo requiere abordar tanto el reservorio animal como los casos humanos de forma articulada. Recomendar la evacuación total sin coordinación con salud pública es una medida desproporcionada frente a un problema que puede controlarse con medidas específicas; atender exclusivamente a los animales de la zona deja sin intervenir el riesgo de transmisión a las personas; esperar a que se confirmen más casos humanos retrasa una respuesta que debe iniciarse con la sola sospecha del evento."
     },
     {
@@ -4449,12 +4449,12 @@ window.SERUMS_DATA = {
       "statement": "Se requiere establecer un sistema de monitoreo de la presencia de larvas de Aedes aegypti en una comunidad con riesgo de dengue.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
+        "Realizar el monitoreo solo después de que se reporten los primeros casos de dengue.",
         "Implementar un sistema de vigilancia entomológica periódica que permita identificar y actuar sobre los criaderos antes de un brote.",
         "Limitar la vigilancia a las viviendas que reporten síntomas compatibles con dengue.",
-        "Fumigar toda la comunidad de forma mensual, sin vigilancia entomológica previa.",
-        "Realizar el monitoreo solo después de que se reporten los primeros casos de dengue."
+        "Fumigar toda la comunidad de forma mensual, sin vigilancia entomológica previa."
       ],
-      "correct": 0,
+      "correct": 1,
       "feedback": "Es correcta porque la vigilancia entomológica periódica permite identificar criaderos de Aedes aegypti y actuar sobre ellos antes de que se acumule la densidad vectorial suficiente para sostener un brote, siendo esta la estrategia preventiva de referencia frente al monitoreo reactivo. Limitar la vigilancia a viviendas con síntomas compatibles con dengue es una estrategia reactiva que no previene la transmisión antes de que aparezcan casos; fumigar toda la comunidad de forma mensual sin vigilancia previa no identifica ni prioriza los criaderos reales, y genera un uso innecesario de insecticida; monitorear solo después de los primeros casos pierde la ventana de control preventivo que caracteriza a la vigilancia entomológica."
     },
     {
@@ -4472,12 +4472,12 @@ window.SERUMS_DATA = {
       "statement": "Un banco de sangre no realiza de forma consistente todas las pruebas de tamizaje requeridas antes de liberar las unidades para transfusión.",
       "question": "¿Cuál es la conducta correcta?",
       "options": [
-        "Garantizar que todas las pruebas de tamizaje se completen antes de liberar cualquier unidad para transfusión.",
-        "Completar las pruebas después de la transfusión si el caso es de extrema urgencia.",
+        "Realizar las pruebas solo en donantes que parezcan tener factores de riesgo.",
         "Liberar las unidades de sangre según la urgencia del pedido, sin esperar todas las pruebas.",
-        "Realizar las pruebas solo en donantes que parezcan tener factores de riesgo."
+        "Garantizar que todas las pruebas de tamizaje se completen antes de liberar cualquier unidad para transfusión.",
+        "Completar las pruebas después de la transfusión si el caso es de extrema urgencia."
       ],
-      "correct": 0,
+      "correct": 2,
       "feedback": "Es correcta porque la seguridad transfusional exige que todas las pruebas de tamizaje se completen antes de liberar cualquier unidad de sangre para transfusión, sin excepciones basadas en la urgencia del pedido, dado que transfundir sangre no tamizada expone al receptor a un riesgo de transmisión de infecciones que puede evitarse con el protocolo completo. Completar las pruebas después de la transfusión en casos de extrema urgencia invierte el orden que precisamente busca prevenir el riesgo; liberar unidades según la urgencia del pedido, sin esperar todas las pruebas, prioriza la rapidez sobre la seguridad del receptor; testear solo a donantes con factores de riesgo aparentes deja sin tamizar a donantes con infecciones asintomáticas no evidentes clínicamente."
     },
     {
@@ -4496,11 +4496,11 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
         "Delegar todo el manejo de residuos a una empresa externa, sin ninguna supervisión.",
+        "Implementar un sistema de segregación, tratamiento y disposición final adecuado para los residuos biocontaminados según la normativa vigente.",
         "Continuar con la disposición conjunta para simplificar el proceso.",
-        "Reducir la generación de residuos biocontaminados limitando los procedimientos invasivos.",
-        "Implementar un sistema de segregación, tratamiento y disposición final adecuado para los residuos biocontaminados según la normativa vigente."
+        "Reducir la generación de residuos biocontaminados limitando los procedimientos invasivos."
       ],
-      "correct": 3,
+      "correct": 1,
       "feedback": "Es correcta porque los residuos biocontaminados requieren un sistema de segregación, tratamiento y disposición final diferenciado según la normativa vigente, dado su potencial infeccioso, que los distingue de los residuos comunes y exige un manejo específico en cada etapa del proceso. Delegar todo el manejo a una empresa externa sin ninguna supervisión no exime al establecimiento de su responsabilidad sobre la segregación inicial; continuar con la disposición conjunta para simplificar el proceso mantiene el riesgo biológico sin control; reducir la generación de residuos limitando procedimientos invasivos no resuelve el manejo de los residuos biocontaminados que sí se generan de forma necesaria en la atención."
     },
     {
@@ -4518,12 +4518,12 @@ window.SERUMS_DATA = {
       "statement": "Una comunidad rural dispone de sus excretas a cielo abierto por no contar con sistema de alcantarillado, lo que incrementa el riesgo de enfermedades diarreicas.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Evaluar e implementar soluciones sanitarias adecuadas al contexto rural, como letrinas o sistemas alternativos, junto con educación sanitaria.",
         "Esperar la construcción de un sistema de alcantarillado convencional antes de intervenir.",
         "Limitar la intervención a la educación sobre higiene de manos, sin abordar la disposición de excretas.",
+        "Evaluar e implementar soluciones sanitarias adecuadas al contexto rural, como letrinas o sistemas alternativos, junto con educación sanitaria.",
         "Prohibir la defecación al aire libre sin ofrecer ninguna alternativa sanitaria a la comunidad."
       ],
-      "correct": 0,
+      "correct": 2,
       "feedback": "Es correcta porque en contextos rurales sin alcantarillado corresponde evaluar e implementar soluciones sanitarias adecuadas al contexto junto con educación sanitaria que sostenga su uso correcto, dado que ambos componentes son necesarios para reducir el riesgo de enfermedades diarreicas de forma sostenible. Esperar la construcción de un sistema de alcantarillado convencional antes de intervenir prolonga la exposición al riesgo mientras existen alternativas técnicas viables más inmediatas; limitar la intervención a la educación sobre higiene de manos sin abordar la disposición de excretas deja sin resolver la fuente principal del problema; prohibir la defecación al aire libre sin ofrecer una alternativa sanitaria concreta no resuelve la necesidad básica que motiva la práctica."
     },
     {
@@ -4541,12 +4541,12 @@ window.SERUMS_DATA = {
       "statement": "Paciente presenta episodios recurrentes de pánico y ha comenzado a evitar salir de casa por temor a que ocurran en lugares públicos.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Iniciar exposición intensiva inmediata a todas las situaciones evitadas, sin gradualidad.",
         "Minimizar el cuadro considerándolo una reacción pasajera sin mayor evaluación.",
         "Indicar evitar por completo las situaciones temidas hasta que los episodios desaparezcan.",
-        "Evaluar el cuadro, psicoeducar sobre el pánico y ofrecer intervención gradual que aborde la evitación."
+        "Evaluar el cuadro, psicoeducar sobre el pánico y ofrecer intervención gradual que aborde la evitación.",
+        "Iniciar exposición intensiva inmediata a todas las situaciones evitadas, sin gradualidad."
       ],
-      "correct": 3,
+      "correct": 2,
       "feedback": "Es correcta porque los episodios recurrentes de pánico con evitación de salir de casa configuran un cuadro de agorafobia asociada, que requiere psicoeducación e intervención gradual dirigida a la evitación. Promover la evitación total mantiene el mecanismo del trastorno; minimizarlo como pasajero retrasa el tratamiento necesario; la exposición intensiva sin gradualidad puede resultar contraproducente."
     },
     {
@@ -4564,12 +4564,12 @@ window.SERUMS_DATA = {
       "statement": "Una madre presenta añoranza intensa y dificultad marcada para retomar su vida cotidiana dos años después de la muerte de su hijo.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Evaluar signos de duelo prolongado y ofrecer un espacio terapéutico especializado en duelo complicado.",
+        "Indicar que ya debería haber superado el proceso por el tiempo transcurrido.",
         "Considerar el cuadro como duelo normal, sin evaluar signos de complicación.",
-        "Recomendar evitar mencionar al hijo fallecido para no revivir el dolor.",
-        "Indicar que ya debería haber superado el proceso por el tiempo transcurrido."
+        "Evaluar signos de duelo prolongado y ofrecer un espacio terapéutico especializado en duelo complicado.",
+        "Recomendar evitar mencionar al hijo fallecido para no revivir el dolor."
       ],
-      "correct": 0,
+      "correct": 2,
       "feedback": "Es correcta porque la interferencia marcada con la vida cotidiana dos años después de la pérdida excede el curso esperado de un duelo normal y corresponde evaluar signos de duelo complicado, ofreciendo espacio terapéutico especializado. Considerarlo duelo normal ignora la cronicidad y el deterioro funcional; evitar mencionar al hijo impide el procesamiento del duelo; indicar que 'ya debería haberlo superado' desconoce la variabilidad individual y puede generar culpa."
     },
     {
@@ -4587,12 +4587,12 @@ window.SERUMS_DATA = {
       "statement": "Una adolescente presenta cortes superficiales autoinfligidos en los brazos, que refiere usar para 'sentir alivio' ante emociones intensas, sin intención suicida expresada.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Ignorar el hallazgo dado que no existe intención suicida expresada.",
-        "Exigir que prometa no repetir la conducta y dar de alta sin seguimiento.",
+        "Derivar de inmediato a hospitalización sin evaluación previa del riesgo.",
         "Evaluar el riesgo, explorar la función emocional de la conducta e iniciar intervención en regulación emocional.",
-        "Derivar de inmediato a hospitalización sin evaluación previa del riesgo."
+        "Ignorar el hallazgo dado que no existe intención suicida expresada.",
+        "Exigir que prometa no repetir la conducta y dar de alta sin seguimiento."
       ],
-      "correct": 2,
+      "correct": 1,
       "feedback": "Es correcta porque la autolesión no suicida usada para regular emociones intensas requiere evaluación de riesgo y trabajo específico en regulación emocional, independientemente de la ausencia de intención suicida expresada. Ignorarla por no haber intención suicida subestima el riesgo asociado a la conducta; exigir una promesa no es una medida clínica válida; derivar a hospitalización sin evaluación previa es desproporcionado."
     },
     {
@@ -4610,12 +4610,12 @@ window.SERUMS_DATA = {
       "statement": "Paciente dedica varias horas al día a verificar repetidamente que las puertas y ventanas de su casa estén cerradas, afectando su desempeño laboral.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Recomendar evitar por completo salir de casa para prevenir la necesidad de verificar.",
         "Indicar que deje de realizar las verificaciones por su propia voluntad.",
         "Evaluar el cuadro obsesivo-compulsivo y su impacto funcional, ofreciendo intervención especializada.",
+        "Recomendar evitar por completo salir de casa para prevenir la necesidad de verificar.",
         "Minimizar el cuadro considerándolo un simple hábito de orden personal."
       ],
-      "correct": 2,
+      "correct": 1,
       "feedback": "Es correcta porque las verificaciones repetidas con afectación del desempeño laboral configuran un cuadro compatible con trastorno obsesivo-compulsivo, que amerita evaluación formal e intervención especializada. Evitar salir de casa evade el problema sin tratarlo; pedir fuerza de voluntad desconoce la naturaleza involuntaria del ritual; minimizarlo como hábito ignora el impacto funcional ya evidenciado."
     },
     {
@@ -4633,12 +4633,12 @@ window.SERUMS_DATA = {
       "statement": "Un adulto recientemente jubilado presenta tristeza, sensación de pérdida de propósito y aislamiento progresivo desde el cese de su actividad laboral.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Recomendar que busque empleo de inmediato para resolver el malestar.",
         "Sugerir que se mantenga completamente ocupado para no pensar en la pérdida del rol laboral.",
-        "Explorar el significado de la pérdida del rol laboral y acompañar la construcción de nuevos proyectos vitales.",
-        "Indicar que es normal y que se le pasará solo con el tiempo."
+        "Recomendar que busque empleo de inmediato para resolver el malestar.",
+        "Indicar que es normal y que se le pasará solo con el tiempo.",
+        "Explorar el significado de la pérdida del rol laboral y acompañar la construcción de nuevos proyectos vitales."
       ],
-      "correct": 2,
+      "correct": 3,
       "feedback": "Es correcta porque la jubilación puede constituir una crisis vital asociada a la pérdida del rol laboral, por lo que corresponde explorar el significado personal de esa pérdida y acompañar la construcción de nuevos proyectos vitales que den sentido a esta nueva etapa. Recomendar que busque empleo de inmediato para resolver el malestar no aborda el significado emocional de la pérdida, solo su síntoma superficial; sugerir que se mantenga completamente ocupado para no pensar en la pérdida evita el procesamiento necesario de esa transición vital; indicar que es normal y que se le pasará solo con el tiempo minimiza un proceso que se beneficia de acompañamiento activo."
     },
     {
@@ -4657,9 +4657,9 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
         "Evaluar el riesgo asociado a las conductas de control descritas, dado que pueden ser un indicador temprano de violencia.",
+        "Sugerir que ella modifique su comportamiento para evitar los celos de su pareja.",
         "Indicar que son celos normales propios de una relación de pareja.",
-        "Recomendar que hable con su pareja para que confíe más en ella.",
-        "Sugerir que ella modifique su comportamiento para evitar los celos de su pareja."
+        "Recomendar que hable con su pareja para que confíe más en ella."
       ],
       "correct": 0,
       "feedback": "Es correcta porque revisar constantemente el teléfono, controlar las salidas y mostrar celos intensos ante cualquier interacción social son conductas de control que deben evaluarse como posible indicador temprano de un patrón de violencia, y no normalizarse como celos propios de cualquier relación de pareja. Indicar que son celos normales propios de una relación de pareja minimiza un patrón de control que requiere evaluación de riesgo; recomendar que hable con su pareja para que confíe más en ella traslada la solución a la propia usuaria en vez de evaluar el riesgo del patrón descrito; sugerir que ella modifique su comportamiento para evitar los celos de su pareja responsabiliza indebidamente a la víctima de una conducta de control ajena."
@@ -4679,9 +4679,9 @@ window.SERUMS_DATA = {
       "statement": "Paciente con dengue confirmado presenta dolor abdominal intenso, vómitos persistentes y sangrado de encías al tercer día de fiebre.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Iniciar antiinflamatorios no esteroideos para el dolor abdominal, sin evaluar los signos de alarma.",
         "Indicar manejo domiciliario con hidratación oral únicamente.",
         "Esperar a que la fiebre ceda antes de tomar cualquier decisión adicional.",
+        "Iniciar antiinflamatorios no esteroideos para el dolor abdominal, sin evaluar los signos de alarma.",
         "Reconocer los signos de alarma, hospitalizar u observar estrechamente y coordinar referencia si corresponde."
       ],
       "correct": 3,
@@ -4702,12 +4702,12 @@ window.SERUMS_DATA = {
       "statement": "Paciente con diagnóstico previo de EPOC presenta aumento de la disnea, cambio en el color del esputo y mayor uso de musculatura accesoria.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Indicar que continúe su tratamiento habitual, sin ninguna reevaluación.",
-        "Iniciar antibiótico de amplio espectro de forma sistemática, sin evaluar la gravedad del cuadro.",
         "Evaluar la gravedad de la exacerbación, iniciar manejo inicial y decidir referencia según la respuesta clínica.",
-        "Aumentar el broncodilatador, sin evaluar otros signos clínicos."
+        "Aumentar el broncodilatador, sin evaluar otros signos clínicos.",
+        "Iniciar antibiótico de amplio espectro de forma sistemática, sin evaluar la gravedad del cuadro.",
+        "Indicar que continúe su tratamiento habitual, sin ninguna reevaluación."
       ],
-      "correct": 2,
+      "correct": 0,
       "feedback": "Es correcta porque el cambio en el esputo junto al aumento de disnea y el mayor uso de musculatura accesoria son criterios de exacerbación que requieren evaluar la gravedad antes de decidir el manejo inicial y la necesidad de referencia. El antibiótico sistemático sin evaluar gravedad no está indicado en toda exacerbación; aumentar solo el broncodilatador sin evaluar otros signos puede ser insuficiente si existen criterios de gravedad; continuar el tratamiento habitual sin reevaluación ignora el cambio clínico ya presente."
     },
     {
@@ -4748,12 +4748,12 @@ window.SERUMS_DATA = {
       "statement": "Paciente presenta la cefalea más intensa de su vida, de inicio súbito, asociada a vómitos y rigidez de nuca.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Indicar analgésico oral y control ambulatorio en una semana.",
-        "Esperar la evolución espontánea antes de decidir cualquier acción.",
         "Reconocer los signos de alarma, estabilizar y coordinar referencia urgente para descartar una causa grave.",
-        "Indicar reposo en ambiente oscuro como única medida, sin evaluación adicional."
+        "Indicar reposo en ambiente oscuro como única medida, sin evaluación adicional.",
+        "Indicar analgésico oral y control ambulatorio en una semana.",
+        "Esperar la evolución espontánea antes de decidir cualquier acción."
       ],
-      "correct": 2,
+      "correct": 0,
       "feedback": "Es correcta porque una cefalea de inicio súbito e intensidad máxima, con vómitos y rigidez de nuca, es compatible con una causa grave subyacente que exige estabilización y referencia urgente para estudio de imagen y descarte etiológico. El analgésico ambulatorio y el reposo en oscuridad tratan el síntoma sin descartar la causa grave; esperar la evolución espontánea retrasa un diagnóstico tiempo-dependiente en un cuadro potencialmente letal."
     },
     {
@@ -4772,8 +4772,8 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
         "Indicar que debe acostumbrarse de inmediato, sin ningún apoyo adicional.",
-        "Delegar la educación sobre el estoma únicamente a un familiar cercano.",
         "Realizar siempre la curación sin involucrar al paciente en el proceso.",
+        "Delegar la educación sobre el estoma únicamente a un familiar cercano.",
         "Brindar educación progresiva y acompañamiento emocional para favorecer la aceptación y el autocuidado del estoma."
       ],
       "correct": 3,
@@ -4818,11 +4818,11 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta correcta?",
       "options": [
         "Atender según el orden de llegada, sin evaluar la gravedad de cada caso.",
+        "Atender primero a quienes tengan seguro privado, para agilizar el flujo de pacientes.",
         "Atender primero a quienes reclaman con mayor insistencia.",
-        "Aplicar un sistema de triaje que priorice la atención según la gravedad clínica de cada paciente.",
-        "Atender primero a quienes tengan seguro privado, para agilizar el flujo de pacientes."
+        "Aplicar un sistema de triaje que priorice la atención según la gravedad clínica de cada paciente."
       ],
-      "correct": 2,
+      "correct": 3,
       "feedback": "Es correcta porque el triaje debe basarse en criterios clínicos objetivos de gravedad, garantizando que los casos más críticos sean atendidos primero independientemente del orden de llegada o de otros factores no clínicos. Atender por orden de llegada no prioriza según urgencia real; atender según la insistencia del reclamo introduce un criterio subjetivo ajeno a la gravedad; atender primero según el tipo de seguro vulnera el principio de equidad que rige la clasificación por gravedad clínica."
     },
     {
@@ -4840,12 +4840,12 @@ window.SERUMS_DATA = {
       "statement": "Tras un parto sin complicaciones, el personal se dispone a trasladar al recién nacido para procedimientos de rutina antes de cualquier contacto con la madre.",
       "question": "¿Cuál es la conducta más adecuada, siempre que no existan contraindicaciones clínicas?",
       "options": [
-        "Permitir el contacto piel a piel solo después de completar el aseo del recién nacido.",
-        "Trasladar al recién nacido a otra sala, sin informar a la madre del motivo.",
         "Realizar todos los procedimientos de rutina antes de cualquier contacto entre madre e hijo.",
-        "Favorecer el contacto piel a piel inmediato y postergar los procedimientos de rutina no urgentes."
+        "Permitir el contacto piel a piel solo después de completar el aseo del recién nacido.",
+        "Favorecer el contacto piel a piel inmediato y postergar los procedimientos de rutina no urgentes.",
+        "Trasladar al recién nacido a otra sala, sin informar a la madre del motivo."
       ],
-      "correct": 3,
+      "correct": 2,
       "feedback": "Es correcta porque, en ausencia de contraindicaciones, el contacto piel a piel inmediato favorece el apego, la termorregulación y el inicio de la lactancia, por lo que los procedimientos de rutina no urgentes deben postergarse para priorizarlo. Completar el aseo antes del contacto retrasa innecesariamente un momento con beneficios fisiológicos y afectivos comprobados; trasladar al recién nacido sin informar a la madre vulnera su derecho a la información y al vínculo inmediato; realizar todos los procedimientos de rutina antes del contacto invierte la prioridad que recomienda la evidencia sobre apego precoz."
     },
     {
@@ -4863,8 +4863,8 @@ window.SERUMS_DATA = {
       "statement": "Gestante de 26 semanas presenta un resultado alterado en la prueba de tolerancia a la glucosa realizada en su control prenatal.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Iniciar insulina de inmediato sin confirmar antes el diagnóstico con la prueba correspondiente.",
         "Indicar reposo absoluto como única medida de manejo.",
+        "Iniciar insulina de inmediato sin confirmar antes el diagnóstico con la prueba correspondiente.",
         "Confirmar el diagnóstico, brindar consejería nutricional y coordinar seguimiento especializado del embarazo.",
         "Indicar que espere al siguiente control, sin ninguna intervención adicional."
       ],
@@ -4887,12 +4887,12 @@ window.SERUMS_DATA = {
       "statement": "Una madre primeriza refiere que su bebé se suelta constantemente del pecho y llora durante la lactancia, a pesar de sentir que produce suficiente leche.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Observar la sesión de lactancia, corregir la posición y el agarre, y reforzar la consejería.",
         "Indicar iniciar fórmula de inmediato, sin evaluar la técnica utilizada.",
-        "Indicar que continúe igual porque el problema se resolverá con el tiempo.",
-        "Recomendar el uso de pezoneras de forma permanente, sin evaluar antes la técnica de lactancia."
+        "Observar la sesión de lactancia, corregir la posición y el agarre, y reforzar la consejería.",
+        "Recomendar el uso de pezoneras de forma permanente, sin evaluar antes la técnica de lactancia.",
+        "Indicar que continúe igual porque el problema se resolverá con el tiempo."
       ],
-      "correct": 0,
+      "correct": 1,
       "feedback": "Es correcta porque el rechazo del pecho pese a percibir producción suficiente suele originarse en la posición y el agarre durante la toma, por lo que corresponde observar la sesión de lactancia directamente y corregir la técnica antes de recurrir a otras medidas. Iniciar fórmula sin evaluar la técnica interrumpe innecesariamente la lactancia exclusiva; asumir que se resolverá con el tiempo sin intervención deja sin corregir una técnica que puede perpetuar la dificultad; recomendar pezoneras de forma permanente sin evaluar antes la técnica puede introducir una barrera adicional en vez de resolver la causa de fondo."
     },
     {
@@ -4911,11 +4911,11 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
         "Indicar que la pérdida ósea es inevitable y no requiere ninguna medida preventiva.",
-        "Recomendar reposo para evitar fracturas.",
         "Orientar sobre actividad física con carga, consumo adecuado de calcio y vitamina D, y evaluación según factores de riesgo individuales.",
+        "Recomendar reposo para evitar fracturas.",
         "Indicar suplementación de calcio en dosis altas, sin evaluación de factores de riesgo individuales."
       ],
-      "correct": 2,
+      "correct": 1,
       "feedback": "Es correcta porque la prevención de osteoporosis en el climaterio requiere un enfoque combinado de actividad física con carga, aporte adecuado de calcio y vitamina D, y una evaluación individualizada de factores de riesgo que determine la necesidad de medidas adicionales. Considerarla inevitable sin ninguna medida preventiva desestima intervenciones con evidencia de eficacia; recomendar reposo es contraproducente porque la inactividad acelera la pérdida de masa ósea; suplementar calcio en dosis altas sin evaluar el riesgo individual puede no ser adecuado ni suficiente sin el componente de actividad física y evaluación."
     },
     {
@@ -4933,12 +4933,12 @@ window.SERUMS_DATA = {
       "statement": "Paciente adulto presenta sangrado gingival severo, movilidad dentaria y mal aliento persistente de larga evolución.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Extraer las piezas con movilidad de inmediato, sin evaluación previa.",
         "Indicar solo mayor frecuencia de cepillado, sin evaluación adicional.",
         "Evaluar el estado periodontal, iniciar manejo inicial y derivar a periodoncia si el caso lo amerita.",
-        "Indicar el uso de enjuague antiséptico como único tratamiento, sin evaluación periodontal."
+        "Indicar el uso de enjuague antiséptico como único tratamiento, sin evaluación periodontal.",
+        "Extraer las piezas con movilidad de inmediato, sin evaluación previa."
       ],
-      "correct": 2,
+      "correct": 1,
       "feedback": "Es correcta porque el sangrado gingival severo, la movilidad dentaria y el mal aliento persistente son signos compatibles con periodontitis avanzada, que requiere evaluación del estado periodontal, manejo inicial y derivación a periodoncia si el caso lo amerita por su severidad. Extraer las piezas con movilidad de inmediato sin evaluación previa es una medida desproporcionada que puede evitarse con manejo periodontal oportuno; indicar solo mayor frecuencia de cepillado sin evaluación adicional no aborda un proceso ya establecido; usar únicamente enjuague antiséptico sin evaluación periodontal no sustituye el manejo clínico que requiere el caso."
     },
     {
@@ -4956,12 +4956,12 @@ window.SERUMS_DATA = {
       "statement": "Un niño de 5 años llora intensamente y se resiste a abrir la boca ante su primera atención odontológica.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Aplicar técnicas de manejo de conducta apropiadas para la edad, generando confianza antes de proceder.",
-        "Sujetar al niño con fuerza para completar el procedimiento de inmediato.",
         "Suspender la atención de forma indefinida, sin ningún intento adicional.",
-        "Sedar al niño de forma rutinaria para evitar el manejo conductual."
+        "Sedar al niño de forma rutinaria para evitar el manejo conductual.",
+        "Sujetar al niño con fuerza para completar el procedimiento de inmediato.",
+        "Aplicar técnicas de manejo de conducta apropiadas para la edad, generando confianza antes de proceder."
       ],
-      "correct": 0,
+      "correct": 3,
       "feedback": "Es correcta porque el manejo de conducta en odontopediatría busca generar confianza mediante técnicas apropiadas para la edad antes de proceder, ya que la cooperación del niño mejora tanto la calidad de la atención como su relación futura con la atención odontológica. Sujetar al niño con fuerza para completar el procedimiento de inmediato puede generar trauma psicológico asociado a la atención dental; suspender la atención de forma indefinida sin ningún intento adicional deja sin resolver una necesidad de salud bucal real; sedar de forma rutinaria para evitar el manejo conductual es una medida desproporcionada cuando existen técnicas conductuales de primera línea disponibles."
     },
     {
@@ -4979,12 +4979,12 @@ window.SERUMS_DATA = {
       "statement": "Paciente presenta una úlcera bucal que no cicatriza después de tres semanas, sin causa traumática identificable.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Evaluar la lesión con sospecha de malignidad y derivar oportunamente para biopsia si corresponde.",
         "Asumir que es una lesión traumática menor, sin mayor seguimiento.",
         "Indicar un corticoide tópico como único tratamiento, sin evaluación adicional de la lesión.",
-        "Indicar enjuagues antisépticos y control en un mes adicional, sin más evaluación."
+        "Indicar enjuagues antisépticos y control en un mes adicional, sin más evaluación.",
+        "Evaluar la lesión con sospecha de malignidad y derivar oportunamente para biopsia si corresponde."
       ],
-      "correct": 0,
+      "correct": 3,
       "feedback": "Es correcta porque una úlcera bucal que no cicatriza en tres semanas sin causa traumática identificable es un signo de alarma que debe evaluarse con sospecha de malignidad y derivarse oportunamente para biopsia, dado que el diagnóstico definitivo de una lesión persistente requiere estudio histopatológico. Asumir que es una lesión traumática menor sin mayor seguimiento ignora que ya se descartó una causa traumática identificable; indicar un corticoide tópico como único tratamiento sin evaluación adicional puede enmascarar la evolución de una lesión que requiere diagnóstico; indicar enjuagues antisépticos y control en un mes adicional retrasa innecesariamente la derivación de un signo de alarma ya presente por tres semanas."
     },
     {
@@ -5002,12 +5002,12 @@ window.SERUMS_DATA = {
       "statement": "Un paciente en tratamiento oncológico presenta pérdida marcada de peso y disminución del apetito asociada a los efectos del tratamiento.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Forzar una dieta hipercalórica estricta, sin considerar la tolerancia del paciente.",
         "Indicar suplementos nutricionales orales, sin una evaluación previa del estado nutricional.",
-        "Indicar que la pérdida de peso es esperada y no requiere intervención nutricional.",
-        "Evaluar el estado nutricional y diseñar un plan de soporte adaptado a la tolerancia del paciente durante el tratamiento."
+        "Forzar una dieta hipercalórica estricta, sin considerar la tolerancia del paciente.",
+        "Evaluar el estado nutricional y diseñar un plan de soporte adaptado a la tolerancia del paciente durante el tratamiento.",
+        "Indicar que la pérdida de peso es esperada y no requiere intervención nutricional."
       ],
-      "correct": 3,
+      "correct": 2,
       "feedback": "Es correcta porque el soporte nutricional en un paciente oncológico debe basarse en una evaluación previa de su estado nutricional y diseñarse de forma adaptada a su tolerancia durante el tratamiento, dado que los efectos adversos del tratamiento condicionan directamente lo que el paciente puede recibir en cada momento. Forzar una dieta hipercalórica estricta sin considerar la tolerancia del paciente puede resultar contraproducente y generar rechazo alimentario; indicar suplementos nutricionales orales sin una evaluación previa del estado nutricional no ajusta la intervención a la necesidad real del paciente; indicar que la pérdida de peso es esperada y no requiere intervención desestima un factor con impacto directo en el pronóstico y la tolerancia al tratamiento oncológico."
     },
     {
@@ -5025,10 +5025,10 @@ window.SERUMS_DATA = {
       "statement": "Una madre en periodo de lactancia exclusiva refiere haber reducido drásticamente su alimentación por temor a no poder bajar de peso.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Recomendar un ayuno intermitente prolongado durante la lactancia exclusiva.",
+        "Apoyar la restricción severa para que logre su objetivo de peso rápidamente.",
         "Brindar consejería sobre una alimentación adecuada durante la lactancia, que cubra sus requerimientos sin restricciones severas.",
         "Indicar que suspenda la lactancia si desea bajar de peso más rápido.",
-        "Apoyar la restricción severa para que logre su objetivo de peso rápidamente."
+        "Recomendar un ayuno intermitente prolongado durante la lactancia exclusiva."
       ],
       "correct": 1,
       "feedback": "Es correcta porque durante la lactancia exclusiva los requerimientos nutricionales de la madre aumentan para sostener la producción de leche, por lo que corresponde brindar consejería sobre una alimentación que cubra esos requerimientos sin recurrir a restricciones severas que puedan comprometer tanto su propia salud como la producción láctea. Recomendar un ayuno intermitente prolongado durante la lactancia exclusiva no considera el aumento de requerimientos propio de esta etapa; indicar que suspenda la lactancia para bajar de peso más rápido antepone un objetivo estético a los beneficios reconocidos de la lactancia exclusiva; apoyar la restricción severa para lograr el objetivo de peso rápidamente puede comprometer tanto la producción de leche como el estado nutricional de la madre."
@@ -5048,12 +5048,12 @@ window.SERUMS_DATA = {
       "statement": "Una paciente en tratamiento por un trastorno de conducta alimentaria requiere un plan de rehabilitación nutricional gradual y coordinado con su equipo de salud mental.",
       "question": "¿Cuál es la conducta más adecuada del profesional de nutrición?",
       "options": [
-        "Diseñar un plan de rehabilitación nutricional gradual, coordinado estrechamente con el equipo de psicología y medicina.",
         "Diseñar el plan nutricional de forma aislada, sin coordinar con el equipo de salud mental.",
         "Delegar la decisión del plan nutricional únicamente a la familia de la paciente.",
+        "Diseñar un plan de rehabilitación nutricional gradual, coordinado estrechamente con el equipo de psicología y medicina.",
         "Indicar un plan de alimentación estricto y rápido para normalizar el peso cuanto antes."
       ],
-      "correct": 0,
+      "correct": 2,
       "feedback": "Es correcta porque el manejo nutricional en un trastorno de la conducta alimentaria debe ser gradual y coordinarse estrechamente con el equipo de psicología y medicina, dado que la rehabilitación nutricional en estos casos conlleva riesgos médicos específicos que requieren manejo interdisciplinario cuidadoso. Diseñar el plan nutricional de forma aislada sin coordinar con el equipo de salud mental desconoce la complejidad psicológica que acompaña al trastorno; delegar la decisión del plan nutricional únicamente a la familia de la paciente traslada una responsabilidad clínica que corresponde al equipo tratante; indicar un plan de alimentación estricto y rápido para normalizar el peso cuanto antes ignora el riesgo médico de una realimentación acelerada y no gradual.",
       "interdisciplinaryNote": "Psicología aporta el abordaje emocional y conductual que debe acompañar la rehabilitación nutricional gradual."
     },
@@ -5073,9 +5073,9 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta correcta del profesional de farmacia?",
       "options": [
         "Identificar la interacción, informar al prescriptor y al paciente, y sugerir alternativas si es necesario.",
+        "Dispensar ambos medicamentos sin advertir la interacción.",
         "Dispensar solo uno de los medicamentos, sin informar al paciente ni al prescriptor.",
-        "Indicar al paciente que espacie la toma de ambos medicamentos por su cuenta, sin informar al prescriptor.",
-        "Dispensar ambos medicamentos sin advertir la interacción."
+        "Indicar al paciente que espacie la toma de ambos medicamentos por su cuenta, sin informar al prescriptor."
       ],
       "correct": 0,
       "feedback": "Es correcta porque una interacción medicamentosa grave conocida debe comunicarse tanto al prescriptor como al paciente, sugiriendo alternativas terapéuticas si es necesario, de forma que la decisión final sobre el ajuste del tratamiento se tome de manera informada y coordinada. Dispensar solo uno de los medicamentos sin informar a nadie decide unilateralmente algo que corresponde definir entre prescriptor y paciente; indicar que espacie la toma por su cuenta sin informar al prescriptor no garantiza que esa medida sea suficiente para evitar la interacción; dispensar ambos sin advertir la interacción expone al paciente a un riesgo conocido y evitable."
@@ -5097,10 +5097,10 @@ window.SERUMS_DATA = {
       "options": [
         "Interpretar la dosis según lo más probable y dispensar de inmediato.",
         "Dispensar la dosis mínima posible para evitar cualquier riesgo, sin confirmar con el prescriptor.",
-        "Comunicarse con el prescriptor para confirmar la dosis exacta antes de dispensar el medicamento.",
-        "Solicitar al paciente que consiga una nueva receta más legible antes de dispensar."
+        "Solicitar al paciente que consiga una nueva receta más legible antes de dispensar.",
+        "Comunicarse con el prescriptor para confirmar la dosis exacta antes de dispensar el medicamento."
       ],
-      "correct": 2,
+      "correct": 3,
       "feedback": "Es correcta porque una dosis ilegible en la receta introduce ambigüedad sobre la intención real del prescriptor, por lo que corresponde confirmar directamente con él antes de dispensar, evitando así un error de interpretación con consecuencias potencialmente graves. Interpretar la dosis según lo más probable y dispensar de inmediato asume un riesgo innecesario sobre una información que puede confirmarse; dispensar la dosis mínima posible sin confirmar no garantiza que corresponda a la indicación real del prescriptor; solicitar al paciente que consiga una nueva receta más legible traslada al paciente una gestión que puede resolverse de forma más directa y rápida contactando al prescriptor."
     },
     {
@@ -5141,12 +5141,12 @@ window.SERUMS_DATA = {
       "statement": "La familia de un paciente en fase terminal no cuenta con recursos económicos suficientes para cubrir los gastos asociados a su cuidado.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
+        "Solicitar una colecta entre el personal del establecimiento para cubrir los gastos.",
         "Evaluar la situación socioeconómica de la familia y gestionar el acceso a los programas de apoyo disponibles.",
-        "Recomendar que la familia solicite un préstamo por su cuenta.",
         "Indicar que ese tema no corresponde al ámbito de salud.",
-        "Solicitar una colecta entre el personal del establecimiento para cubrir los gastos."
+        "Recomendar que la familia solicite un préstamo por su cuenta."
       ],
-      "correct": 0,
+      "correct": 1,
       "feedback": "Es correcta porque ante la falta de recursos económicos de una familia para el cuidado de un paciente en fase terminal, corresponde evaluar la situación socioeconómica específica y gestionar el acceso a los programas de apoyo institucionales disponibles, que es la vía sostenible y formal para atender esta necesidad. Recomendar que la familia solicite un préstamo por su cuenta traslada la solución a una vía que puede generar mayor carga financiera; indicar que ese tema no corresponde al ámbito de salud desconoce el rol del trabajo social dentro del equipo de cuidados paliativos; solicitar una colecta entre el personal es una medida informal y no sostenible frente a una necesidad que requiere una respuesta institucional."
     },
     {
@@ -5164,12 +5164,12 @@ window.SERUMS_DATA = {
       "statement": "Un hemograma de rutina muestra alteraciones marcadas en el recuento y la morfología de las células blancas, compatibles con un posible proceso leucémico.",
       "question": "¿Cuál es la conducta correcta del profesional de laboratorio?",
       "options": [
-        "Registrar el resultado en el sistema, sin ninguna comunicación adicional.",
         "Comunicar el hallazgo de forma oportuna y directa al personal clínico responsable del paciente.",
-        "Repetir la prueba varias veces sin comunicar el hallazgo inicial.",
-        "Esperar el resultado de otras pruebas antes de comunicar cualquier hallazgo."
+        "Registrar el resultado en el sistema, sin ninguna comunicación adicional.",
+        "Esperar el resultado de otras pruebas antes de comunicar cualquier hallazgo.",
+        "Repetir la prueba varias veces sin comunicar el hallazgo inicial."
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Es correcta porque alteraciones marcadas en el recuento y morfología de células blancas compatibles con un posible proceso leucémico constituyen un hallazgo crítico que debe comunicarse de forma oportuna y directa al personal clínico, dado que el diagnóstico y manejo tempranos de una leucemia son determinantes para el pronóstico del paciente. Registrar el resultado sin ninguna comunicación adicional retrasa la evaluación clínica de un hallazgo con alta relevancia diagnóstica; repetir la prueba varias veces sin comunicar el hallazgo inicial prolonga innecesariamente el tiempo hasta que el clínico pueda actuar; esperar el resultado de otras pruebas antes de comunicar cualquier hallazgo retrasa una alerta que debe emitirse apenas se detecta la alteración."
     },
     {
@@ -5188,11 +5188,11 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta correcta?",
       "options": [
         "Informar el resultado como normal para no generar preocupación en la paciente.",
+        "Indicar una biopsia inmediata sin clasificar antes el hallazgo según los criterios estandarizados.",
         "Clasificar el hallazgo según los criterios estandarizados y coordinar la evaluación complementaria oportuna.",
-        "Repetir la mamografía en un año, sin ninguna evaluación adicional.",
-        "Indicar una biopsia inmediata sin clasificar antes el hallazgo según los criterios estandarizados."
+        "Repetir la mamografía en un año, sin ninguna evaluación adicional."
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Es correcta porque un hallazgo sospechoso en mamografía debe clasificarse según los criterios estandarizados para definir de forma objetiva el nivel de sospecha y la conducta específica a seguir, coordinando la evaluación complementaria oportuna según esa clasificación. Informar el resultado como normal para no generar preocupación oculta un hallazgo real con riesgo de retrasar un diagnóstico oportuno; repetir la mamografía en un año sin evaluación adicional posterga innecesariamente el estudio de un hallazgo ya identificado como sospechoso; indicar una biopsia inmediata sin clasificar antes el hallazgo salta un paso diagnóstico que orienta la conducta según el nivel real de sospecha."
     },
     {
@@ -5210,9 +5210,9 @@ window.SERUMS_DATA = {
       "statement": "Un deportista con una lesión de rodilla desea retomar su actividad deportiva lo antes posible, antes de completar el proceso de rehabilitación.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Autorizar el retorno inmediato para no afectar su participación deportiva.",
-        "Explicar los riesgos de un retorno prematuro y diseñar un plan de rehabilitación progresivo antes de autorizar la vuelta a la actividad.",
         "Autorizar el retorno solo si el deportista firma una exoneración de responsabilidad.",
+        "Explicar los riesgos de un retorno prematuro y diseñar un plan de rehabilitación progresivo antes de autorizar la vuelta a la actividad.",
+        "Autorizar el retorno inmediato para no afectar su participación deportiva.",
         "Indicar reposo absoluto indefinido, sin ningún plan de rehabilitación activo."
       ],
       "correct": 1,
@@ -5233,12 +5233,12 @@ window.SERUMS_DATA = {
       "statement": "Un paciente tras un accidente cerebrovascular presenta dificultad marcada para expresar y comprender el lenguaje, generándole frustración evidente.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Hablar por el paciente en todo momento para evitar su frustración.",
-        "Evitar comunicarse con el paciente hasta que el lenguaje se recupere espontáneamente.",
         "Indicar únicamente ejercicios escritos, sin evaluar el tipo de afasia presente.",
-        "Evaluar el tipo de afasia y diseñar un plan de rehabilitación del lenguaje, usando estrategias de comunicación de apoyo mientras tanto."
+        "Evitar comunicarse con el paciente hasta que el lenguaje se recupere espontáneamente.",
+        "Evaluar el tipo de afasia y diseñar un plan de rehabilitación del lenguaje, usando estrategias de comunicación de apoyo mientras tanto.",
+        "Hablar por el paciente en todo momento para evitar su frustración."
       ],
-      "correct": 3,
+      "correct": 2,
       "feedback": "Es correcta porque el manejo de la afasia post-ACV requiere primero evaluar el tipo específico de afasia presente, dado que existen distintos patrones con manejo diferenciado, y diseñar un plan de rehabilitación del lenguaje usando en paralelo estrategias de comunicación de apoyo que reduzcan la frustración del paciente mientras se recupera. Hablar por el paciente en todo momento para evitar su frustración limita las oportunidades de práctica comunicativa que la rehabilitación requiere; evitar comunicarse hasta una recuperación espontánea desatiende al paciente durante todo el proceso de rehabilitación activa; indicar únicamente ejercicios escritos sin evaluar el tipo de afasia puede no ajustarse al canal de comunicación realmente afectado en ese paciente."
     },
     {
@@ -5256,12 +5256,12 @@ window.SERUMS_DATA = {
       "statement": "Un paciente con depresión severa ha abandonado por completo actividades que antes disfrutaba y pasa la mayor parte del día en cama.",
       "question": "¿Cuál es la conducta más adecuada de terapia ocupacional?",
       "options": [
-        "Diseñar un plan gradual de reactivación en actividades significativas, coordinado con el tratamiento en salud mental.",
         "Esperar a que el estado de ánimo mejore de forma espontánea antes de iniciar cualquier actividad.",
+        "Limitar la intervención a actividades recreativas, sin coordinación con el tratamiento de salud mental.",
         "Exigir que retome de inmediato todas sus actividades previas, sin ninguna gradualidad.",
-        "Limitar la intervención a actividades recreativas, sin coordinación con el tratamiento de salud mental."
+        "Diseñar un plan gradual de reactivación en actividades significativas, coordinado con el tratamiento en salud mental."
       ],
-      "correct": 0,
+      "correct": 3,
       "feedback": "Es correcta porque el abandono total de actividades significativas en depresión severa se aborda en terapia ocupacional con reactivación conductual gradual, coordinada con el tratamiento en salud mental. Esperar mejoría espontánea retrasa una intervención basada en evidencia; exigir la reactivación total de golpe puede resultar abrumador; limitar la intervención a lo recreativo sin coordinación fragmenta el manejo.",
       "interdisciplinaryNote": "Psicología aporta el manejo terapéutico de fondo de la depresión que debe acompañar la reactivación conductual."
     },
@@ -5281,9 +5281,9 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
         "Indicar el uso de lentes con filtro, sin evaluación de la presión intraocular.",
-        "Indicar que no requiere evaluación porque no presenta síntomas visuales actuales.",
+        "Esperar a que presente pérdida de visión evidente para evaluar.",
         "Realizar tamizaje de glaucoma, dado el antecedente familiar y la edad, y derivar según hallazgos.",
-        "Esperar a que presente pérdida de visión evidente para evaluar."
+        "Indicar que no requiere evaluación porque no presenta síntomas visuales actuales."
       ],
       "correct": 2,
       "feedback": "Es correcta porque el glaucoma suele cursar de forma asintomática en sus etapas iniciales, por lo que ante antecedente familiar y edad mayor a 40 años corresponde realizar tamizaje de la presión intraocular y derivar según los hallazgos, sin esperar a que aparezcan síntomas visuales evidentes que suelen indicar daño ya avanzado. Indicar lentes con filtro sin evaluación de la presión intraocular no aborda el riesgo específico de glaucoma que motiva la consulta; indicar que no requiere evaluación por ausencia de síntomas actuales ignora precisamente el curso asintomático típico de la enfermedad en sus fases iniciales; esperar a que presente pérdida de visión evidente para evaluar retrasa el diagnóstico hasta un punto donde el daño del nervio óptico puede ser irreversible."
@@ -5303,12 +5303,12 @@ window.SERUMS_DATA = {
       "statement": "Trabajadores de una granja lechera manipulan animales y productos sin ningún equipo de protección personal, en una zona con casos previos de brucelosis animal.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Implementar medidas de bioseguridad y protección personal, además de vigilancia sanitaria del hato y de los trabajadores expuestos.",
-        "Indicar el uso de protección personal solo durante el ordeño, sin vigilancia sanitaria adicional.",
         "Continuar las labores, sin ninguna medida de protección adicional.",
-        "Suspender toda actividad ganadera en la zona de forma indefinida."
+        "Indicar el uso de protección personal solo durante el ordeño, sin vigilancia sanitaria adicional.",
+        "Suspender toda actividad ganadera en la zona de forma indefinida.",
+        "Implementar medidas de bioseguridad y protección personal, además de vigilancia sanitaria del hato y de los trabajadores expuestos."
       ],
-      "correct": 0,
+      "correct": 3,
       "feedback": "Es correcta porque el riesgo de brucelosis en trabajadores expuestos a animales y productos de una zona con casos previos requiere implementar medidas de bioseguridad y protección personal, junto con vigilancia sanitaria tanto del hato como de los propios trabajadores expuestos, abordando la exposición desde ambos extremos de la cadena de transmisión. Indicar protección solo durante el ordeño, sin vigilancia sanitaria adicional, ignora otras vías de exposición presentes en el manejo cotidiano del ganado; continuar las labores sin ninguna medida de protección adicional mantiene un riesgo ocupacional ya identificado; suspender toda actividad ganadera de forma indefinida es una medida desproporcionada frente a un riesgo que puede controlarse con bioseguridad adecuada."
     },
     {
@@ -5327,9 +5327,9 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
         "Notificar el evento a la autoridad sanitaria, investigar la causa y coordinar el control vectorial correspondiente.",
+        "Sacrificar a todos los caballos de la zona, sin investigación previa de la causa.",
         "Esperar a que se presenten casos humanos antes de tomar cualquier acción.",
-        "Atender solo a los animales enfermos, sin notificar el evento.",
-        "Sacrificar a todos los caballos de la zona, sin investigación previa de la causa."
+        "Atender solo a los animales enfermos, sin notificar el evento."
       ],
       "correct": 0,
       "feedback": "Es correcta porque enfermedad neurológica en caballos en zona con alta presencia de mosquitos vectores sugiere un posible evento de encefalitis equina con riesgo zoonótico, por lo que corresponde notificar a la autoridad sanitaria, investigar la causa y coordinar el control vectorial correspondiente antes de que el evento se extienda. Esperar a que se presenten casos humanos antes de actuar retrasa una respuesta que debe anticiparse al salto zoonótico; atender solo a los animales enfermos sin notificar deja sin activar la vigilancia epidemiológica necesaria; sacrificar a todos los caballos sin investigación previa de la causa es una medida desproporcionada y no sustentada en un diagnóstico confirmado."
@@ -5351,8 +5351,8 @@ window.SERUMS_DATA = {
       "options": [
         "Procesar la baciloscopía de forma prioritaria y comunicar el resultado oportunamente para iniciar manejo si corresponde.",
         "Solicitar que el paciente regrese en una semana para la toma de muestra.",
-        "Procesar la muestra solo si el paciente presenta fiebre en el momento de la consulta.",
-        "Procesar la muestra sin priorización especial, según el orden habitual de llegada."
+        "Procesar la muestra sin priorización especial, según el orden habitual de llegada.",
+        "Procesar la muestra solo si el paciente presenta fiebre en el momento de la consulta."
       ],
       "correct": 0,
       "feedback": "Es correcta porque en un sintomático respiratorio de más de dos semanas la baciloscopía debe procesarse de forma prioritaria y su resultado comunicarse oportunamente, dado que el diagnóstico temprano de tuberculosis es clave tanto para el manejo individual como para el control de la transmisión comunitaria. Solicitar que el paciente regrese en una semana para la toma de muestra retrasa innecesariamente el inicio del proceso diagnóstico; procesar la muestra solo si el paciente presenta fiebre en el momento de la consulta introduce un criterio no relacionado con la indicación real del estudio; procesarla sin priorización especial, según el orden habitual, no reconoce la urgencia diagnóstica que amerita un sintomático respiratorio."
@@ -5372,10 +5372,10 @@ window.SERUMS_DATA = {
       "statement": "Se reportan varios casos de enfermedad diarreica aguda asociados al consumo de alimentos de un mercado local.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Prohibir la venta de todos los alimentos del mercado, sin identificar la fuente específica.",
+        "Esperar a que se reporten más casos antes de investigar.",
         "Realizar análisis microbiológico de los alimentos sospechosos y coordinar las medidas correctivas con la autoridad sanitaria.",
-        "Cerrar el mercado de forma indefinida, sin ninguna investigación previa.",
-        "Esperar a que se reporten más casos antes de investigar."
+        "Prohibir la venta de todos los alimentos del mercado, sin identificar la fuente específica.",
+        "Cerrar el mercado de forma indefinida, sin ninguna investigación previa."
       ],
       "correct": 1,
       "feedback": "Es correcta porque ante varios casos de enfermedad diarreica aguda asociados al consumo de alimentos de un mercado corresponde analizar microbiológicamente los alimentos sospechosos y coordinar las medidas correctivas con la autoridad sanitaria, identificando la fuente específica antes de tomar medidas más amplias. Prohibir la venta de todos los alimentos sin identificar la fuente específica es una medida desproporcionada que afecta a comerciantes no involucrados en el problema; cerrar el mercado de forma indefinida sin investigación previa tampoco identifica ni corrige la causa real del brote; esperar a que se reporten más casos antes de investigar retrasa una respuesta que debe iniciarse con los casos ya identificados."
@@ -5395,12 +5395,12 @@ window.SERUMS_DATA = {
       "statement": "Una comunidad rural utiliza como fuente de agua un río cercano a terrenos de cultivo con uso intensivo de agroquímicos.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Indicar que la población continúe usando la fuente, sin ninguna evaluación.",
-        "Prohibir toda actividad agrícola en la zona, sin evaluación previa.",
         "Indicar a la población que consuma únicamente agua embotellada de forma permanente, sin evaluar la fuente.",
-        "Evaluar la calidad del agua, coordinar medidas de mitigación y orientar sobre fuentes alternativas mientras se resuelve el problema."
+        "Evaluar la calidad del agua, coordinar medidas de mitigación y orientar sobre fuentes alternativas mientras se resuelve el problema.",
+        "Indicar que la población continúe usando la fuente, sin ninguna evaluación.",
+        "Prohibir toda actividad agrícola en la zona, sin evaluación previa."
       ],
-      "correct": 3,
+      "correct": 1,
       "feedback": "Es correcta porque la cercanía de una fuente de agua a terrenos con uso intensivo de agroquímicos exige evaluar su calidad para confirmar o descartar contaminación, coordinar medidas de mitigación según el resultado y orientar sobre fuentes alternativas mientras se resuelve el problema de fondo, protegiendo así a la población durante el proceso. Indicar que la población continúe usando la fuente sin evaluación mantiene una exposición potencialmente riesgosa sin verificarla; prohibir toda actividad agrícola en la zona sin evaluación previa es una medida desproporcionada que no se sustenta aún en un resultado confirmado; exigir agua embotellada de forma permanente sin evaluar la fuente no resuelve el problema estructural ni es sostenible en el tiempo."
     },
     {
@@ -5418,12 +5418,12 @@ window.SERUMS_DATA = {
       "statement": "Un establecimiento de salud atiende pacientes con sospecha de tuberculosis en ambientes cerrados sin ventilación adecuada.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Evaluar y mejorar la ventilación de los ambientes de atención, como medida de control de infecciones de transmisión aérea.",
         "Indicar el uso exclusivo de mascarillas al personal, sin mejorar la ventilación del ambiente.",
         "Trasladar la atención a un ambiente aún más reducido para facilitar el control.",
-        "Continuar la atención sin evaluar las condiciones de ventilación del ambiente."
+        "Continuar la atención sin evaluar las condiciones de ventilación del ambiente.",
+        "Evaluar y mejorar la ventilación de los ambientes de atención, como medida de control de infecciones de transmisión aérea."
       ],
-      "correct": 0,
+      "correct": 3,
       "feedback": "Es correcta porque la ventilación adecuada es una medida de control ambiental clave para reducir la transmisión de infecciones por vía aérea como la tuberculosis, por lo que en ambientes que atienden pacientes con esa sospecha corresponde evaluar y mejorar la ventilación, complementando así otras medidas de bioseguridad ya existentes. Indicar el uso exclusivo de mascarillas sin mejorar la ventilación aborda solo una barrera de protección individual, dejando sin corregir el riesgo ambiental de fondo; trasladar la atención a un ambiente aún más reducido puede aumentar la concentración de partículas infecciosas en el aire; continuar la atención sin evaluar las condiciones de ventilación mantiene un riesgo de transmisión ya identificado en el establecimiento."
     },
     {
@@ -5441,12 +5441,12 @@ window.SERUMS_DATA = {
       "statement": "Un establecimiento registra su información clínica y epidemiológica de forma incompleta e inconsistente en el sistema de información en salud.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Fortalecer el registro completo y oportuno de la información en el sistema, dado su rol en la toma de decisiones y la vigilancia epidemiológica.",
+        "Delegar el registro exclusivamente al personal administrativo sin supervisión clínica.",
         "Registrar solo los casos que se consideren clínicamente relevantes, omitiendo el resto.",
-        "Continuar con el registro incompleto porque no afecta la atención directa del paciente.",
-        "Delegar el registro exclusivamente al personal administrativo sin supervisión clínica."
+        "Fortalecer el registro completo y oportuno de la información en el sistema, dado su rol en la toma de decisiones y la vigilancia epidemiológica.",
+        "Continuar con el registro incompleto porque no afecta la atención directa del paciente."
       ],
-      "correct": 0,
+      "correct": 2,
       "feedback": "Es correcta porque el registro completo y oportuno en los sistemas de información en salud sustenta tanto la toma de decisiones gerenciales como la vigilancia epidemiológica, que dependen de datos consistentes para reflejar la situación real de la población atendida. Registrar solo los casos considerados clínicamente relevantes introduce un sesgo de selección en la información disponible; continuar con el registro incompleto asumiendo que no afecta la atención directa desconoce su impacto en decisiones de gestión y vigilancia a nivel de red; delegarlo exclusivamente al personal administrativo sin supervisión clínica puede perder precisión diagnóstica en el registro."
     },
     {
@@ -5464,12 +5464,12 @@ window.SERUMS_DATA = {
       "statement": "El servicio de admisión de un establecimiento reorganiza su archivo, separando las historias clínicas de pacientes sin atenciones recientes hacia el archivo pasivo.",
       "question": "¿A partir de qué criterio de tiempo sin uso corresponde trasladar una historia clínica al archivo pasivo?",
       "options": [
-        "Más de 10 años sin ser solicitada.",
-        "Más de 15 años sin ser solicitada.",
         "Más de 1 año sin ser solicitada.",
-        "Más de 5 años sin ser solicitada."
+        "Más de 5 años sin ser solicitada.",
+        "Más de 15 años sin ser solicitada.",
+        "Más de 10 años sin ser solicitada."
       ],
-      "correct": 3,
+      "correct": 1,
       "feedback": "Es correcta porque la normativa de gestión documentaria en salud establece el traslado al archivo pasivo cuando la historia clínica no ha sido solicitada por más de cinco años, un plazo definido específicamente para equilibrar la conservación necesaria con la gestión eficiente del espacio de archivo. Los plazos de 1, 10 o 15 años no corresponden al criterio normativo establecido para esta clasificación documentaria."
     },
     {
@@ -5488,11 +5488,11 @@ window.SERUMS_DATA = {
       "question": "¿Qué tipo de auditoría de la calidad de la atención corresponde iniciar ante este evento?",
       "options": [
         "Auditoría regular, programada según el cronograma anual del establecimiento.",
-        "Auditoría de caso, orientada a un evento específico que amerita revisión inmediata.",
         "Auditoría dirimente, aplicable solo cuando existe discrepancia entre dos auditorías previas.",
-        "Auditoría externa, realizada exclusivamente por un ente ajeno al establecimiento."
+        "Auditoría externa, realizada exclusivamente por un ente ajeno al establecimiento.",
+        "Auditoría de caso, orientada a un evento específico que amerita revisión inmediata."
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Es correcta porque un evento adverso grave y puntual, como el descrito, activa una auditoría de caso, orientada específicamente a revisar ese evento particular de forma inmediata, a diferencia de otros tipos de auditoría con propósitos distintos. La auditoría regular sigue un cronograma programado que no corresponde a la urgencia de revisar un evento puntual; la auditoría externa se realiza por un ente ajeno al establecimiento y no es la primera respuesta ante un evento interno; la auditoría dirimente se aplica solo cuando existe discrepancia entre auditorías previas, situación que aún no se ha dado en este caso."
     },
     {
@@ -5512,10 +5512,10 @@ window.SERUMS_DATA = {
       "options": [
         "Sugerencia, para proponer una mejora al proceso de atención.",
         "Consejería, para recibir orientación personalizada sobre su caso.",
-        "Queja, para expresar formalmente su disconformidad con la atención recibida.",
-        "Consulta, para solicitar información sobre el procedimiento de atención."
+        "Consulta, para solicitar información sobre el procedimiento de atención.",
+        "Queja, para expresar formalmente su disconformidad con la atención recibida."
       ],
-      "correct": 2,
+      "correct": 3,
       "feedback": "Es correcta porque el reclamo por disconformidad formal con un aspecto específico de la atención recibida corresponde al mecanismo de queja, distinto de otros mecanismos de atención al usuario que cumplen funciones diferentes. La consulta se usa para solicitar información sobre un procedimiento, no para expresar disconformidad; la sugerencia propone una mejora sin implicar necesariamente una disconformidad puntual; la consejería brinda orientación personalizada sobre un caso, no canaliza un reclamo formal."
     },
     {
@@ -5533,12 +5533,12 @@ window.SERUMS_DATA = {
       "statement": "Una mujer con múltiples parejas sexuales previas y sin controles ginecológicos regulares es invitada a una campaña de despistaje de VPH mediante pruebas moleculares, sin presentar síntomas actuales.",
       "question": "¿Qué tipo de campaña corresponde a esta intervención?",
       "options": [
-        "Campaña de tratamiento, orientada a resolver un cuadro clínico ya diagnosticado.",
         "Campaña de prevención, orientada a la detección temprana en población asintomática de riesgo.",
         "Campaña de promoción, orientada a fomentar estilos de vida saludables.",
-        "Campaña de pronóstico, orientada a estimar la evolución de una enfermedad confirmada."
+        "Campaña de pronóstico, orientada a estimar la evolución de una enfermedad confirmada.",
+        "Campaña de tratamiento, orientada a resolver un cuadro clínico ya diagnosticado."
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Es correcta porque el despistaje mediante pruebas diagnósticas en población asintomática con factores de riesgo corresponde a una campaña de prevención orientada a la detección temprana, distinta de la promoción (fomento de estilos de vida), el tratamiento (manejo de un caso ya confirmado) o el pronóstico (estimación evolutiva de una enfermedad). La promoción no usa pruebas diagnósticas sino educación; el tratamiento presupone un diagnóstico ya hecho, ausente aquí; el pronóstico no aplica porque no existe aún una enfermedad confirmada."
     },
     {
@@ -5556,12 +5556,12 @@ window.SERUMS_DATA = {
       "statement": "El sector salud elabora un documento que programa las metas físicas y el costeo esperado para los próximos tres años de gestión.",
       "question": "¿Cómo se define este documento?",
       "options": [
+        "Un instrumento de articulación entre distintos niveles de gobierno.",
         "Una herramienta de rendición de cuentas posterior a la ejecución presupuestal.",
-        "Un instrumento de gestión que programa metas físicas y costeo a mediano plazo.",
         "Una herramienta de articulación exclusiva para el sector privado.",
-        "Un instrumento de articulación entre distintos niveles de gobierno."
+        "Un instrumento de gestión que programa metas físicas y costeo a mediano plazo."
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Es correcta porque el Plan Operativo Institucional Multianual es un instrumento de gestión que programa las metas físicas y el costeo esperado para un periodo de mediano plazo, orientando la planificación institucional antes de su ejecución. No es una herramienta de rendición de cuentas, que se aplica después de ejecutado el presupuesto; no es exclusiva del sector privado, ya que corresponde a la gestión pública; tampoco es en sí mismo un instrumento de articulación entre niveles de gobierno, sino de programación institucional interna."
     },
     {
@@ -5580,11 +5580,11 @@ window.SERUMS_DATA = {
       "question": "¿A qué concepto corresponde lo descrito?",
       "options": [
         "Clima organizacional, que refleja la percepción coyuntural del ambiente laboral.",
-        "Valores institucionales, entendidos únicamente como el listado formal declarado por la institución.",
         "Cultura organizacional, entendida como la forma característica y arraigada de pensar y actuar de la institución.",
-        "Principios institucionales, entendidos como normas exclusivamente legales de la entidad."
+        "Principios institucionales, entendidos como normas exclusivamente legales de la entidad.",
+        "Valores institucionales, entendidos únicamente como el listado formal declarado por la institución."
       ],
-      "correct": 2,
+      "correct": 1,
       "feedback": "Es correcta porque la cultura organizacional es la forma característica y arraigada de pensar y actuar dentro de una institución, construida a partir de principios, valores, creencias y normas compartidas a lo largo del tiempo, diferenciándose de otros conceptos institucionales relacionados. El clima organizacional refleja la percepción coyuntural y cambiante del ambiente laboral en un momento dado, no algo arraigado; los valores institucionales suelen entenderse como el listado formal declarado, mientras que la cultura es la práctica real; los principios institucionales, entendidos solo como normas legales, no capturan la dimensión de creencias y conductas compartidas."
     },
     {
@@ -5604,10 +5604,10 @@ window.SERUMS_DATA = {
       "options": [
         "Esperar hasta los 4 años para repetir el tamizaje, dado que antes no es confiable.",
         "Indicar que los signos corresponden únicamente a un retraso transitorio del lenguaje sin mayor implicancia.",
-        "Interpretar el resultado como riesgo elevado de trastorno del espectro autista y derivar oportunamente para evaluación diagnóstica especializada.",
-        "Considerar el puntaje como definitivo y descartar cualquier otra evaluación posterior."
+        "Considerar el puntaje como definitivo y descartar cualquier otra evaluación posterior.",
+        "Interpretar el resultado como riesgo elevado de trastorno del espectro autista y derivar oportunamente para evaluación diagnóstica especializada."
       ],
-      "correct": 2,
+      "correct": 3,
       "feedback": "Es correcta porque un puntaje de riesgo alto en el M-CHAT-R junto con signos clínicos compatibles (alteraciones del lenguaje, hipersensibilidad sensorial, dificultades sociales, aleteo de manos) debe interpretarse como riesgo elevado de trastorno del espectro autista, correspondiendo derivar oportunamente para una evaluación diagnóstica especializada, dado que el tamizaje identifica riesgo pero no reemplaza el diagnóstico definitivo. Esperar hasta los 4 años para repetir el tamizaje retrasa una intervención temprana cuya eficacia depende de la precocidad; atribuir los signos únicamente a un retraso transitorio del lenguaje ignora el conjunto de señales presentes en múltiples áreas del desarrollo; considerar el puntaje como definitivo y descartar cualquier evaluación posterior desconoce que un tamizaje alterado siempre requiere confirmación diagnóstica."
     },
     {
@@ -5625,12 +5625,12 @@ window.SERUMS_DATA = {
       "statement": "Un establecimiento sectoriza su jurisdicción para realizar intervenciones de promoción y prevención según el Modelo de Cuidado Integral de la Familia y Comunidad por Curso de Vida.",
       "question": "¿A qué etapa de las Funciones Esenciales de Salud Pública renovadas corresponde esta acción?",
       "options": [
-        "Evaluación, orientada a medir resultados de intervenciones ya ejecutadas.",
-        "Acceso, orientada a organizar la llegada de los servicios de salud a la población de su jurisdicción.",
         "Asignación de recursos, orientada exclusivamente a la distribución presupuestal.",
-        "Desarrollo de políticas, orientada a la formulación normativa general del sector."
+        "Desarrollo de políticas, orientada a la formulación normativa general del sector.",
+        "Acceso, orientada a organizar la llegada de los servicios de salud a la población de su jurisdicción.",
+        "Evaluación, orientada a medir resultados de intervenciones ya ejecutadas."
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Es correcta porque sectorizar la jurisdicción para organizar cómo llegan los servicios de salud a la población corresponde a la función de acceso dentro de las Funciones Esenciales de Salud Pública renovadas, al tratarse de una acción orientada a garantizar equidad en la llegada de las intervenciones. La evaluación mide resultados de intervenciones ya ejecutadas, no la organización previa del acceso; la asignación de recursos se refiere a la distribución presupuestal, no a la sectorización territorial; el desarrollo de políticas corresponde a la formulación normativa general, no a esta acción operativa específica."
     },
     {
@@ -5648,12 +5648,12 @@ window.SERUMS_DATA = {
       "statement": "Al elaborar el diagnóstico situacional de una institución educativa, se analiza cómo el nivel alcanzado por la población influye en su calidad de vida y en el desarrollo económico y social del país.",
       "question": "¿A qué determinante social de la salud corresponde este análisis?",
       "options": [
-        "Nivel intercultural, referido a la diversidad de costumbres de la población.",
         "Nivel epidemiológico, referido a la carga de enfermedad de la población.",
         "Nivel educativo, referido al grado de instrucción alcanzado por la población.",
+        "Nivel intercultural, referido a la diversidad de costumbres de la población.",
         "Nivel etiológico, referido a las causas biológicas de la enfermedad."
       ],
-      "correct": 2,
+      "correct": 1,
       "feedback": "Es correcta porque el nivel de instrucción alcanzado por la población es, en sí mismo, un determinante social de la salud reconocido por su influencia en la calidad de vida y en el desarrollo económico y social, más allá de su relación indirecta con la salud biomédica. El nivel epidemiológico se refiere a la carga de enfermedad, no al grado de instrucción; el nivel etiológico alude a causas biológicas de enfermedad, ajeno a este análisis; el nivel intercultural se refiere a la diversidad de costumbres, no al grado de instrucción alcanzado."
     },
     {
@@ -5671,12 +5671,12 @@ window.SERUMS_DATA = {
       "statement": "Un investigador solicitará la participación de escolares menores de edad en un estudio sobre obesidad infantil en su institución educativa.",
       "question": "¿Qué documento deben firmar los padres para autorizar la participación voluntaria de sus hijos, adicional al asentimiento del propio menor?",
       "options": [
-        "Un compromiso paterno, sin validez para fines de investigación.",
         "Un consentimiento informado, otorgado por el padre o tutor legal del menor.",
         "Un asentimiento informado, que en este caso deben firmar los propios padres.",
+        "Un compromiso paterno, sin validez para fines de investigación.",
         "Una carta de investigación, emitida por la institución educativa."
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Es correcta porque en investigación con menores de edad, el consentimiento informado debe ser otorgado por el padre o tutor legal del menor, quien autoriza legalmente su participación, siendo este el documento formal exigido adicional al asentimiento que brinda el propio menor según su capacidad de comprensión. Un compromiso paterno sin validez para fines de investigación no cumple el requisito formal exigido; un asentimiento informado firmado por los propios padres confunde este concepto, que corresponde específicamente al menor y no a su tutor legal; una carta de investigación emitida por la institución educativa no reemplaza el consentimiento informado que debe otorgar específicamente el padre o tutor legal de cada menor participante."
     },
     {
@@ -5694,12 +5694,12 @@ window.SERUMS_DATA = {
       "statement": "Personal de serenazgo traslada a un establecimiento de salud a un adulto mayor en situación de indigencia, sin familiares ni documentos de identidad, que presenta un problema de salud agudo.",
       "question": "¿Qué derecho del paciente se prioriza al brindarle atención inmediata en esta situación?",
       "options": [
-        "El consentimiento informado, que requiere en este caso la firma de un familiar.",
-        "El derecho a la recuperación, entendido como garantía de curación completa.",
         "El acceso a servicios de salud, que no puede condicionarse a la identificación documentaria en una situación de urgencia.",
-        "El acceso a la información, referido a la explicación detallada de procedimientos."
+        "El acceso a la información, referido a la explicación detallada de procedimientos.",
+        "El consentimiento informado, que requiere en este caso la firma de un familiar.",
+        "El derecho a la recuperación, entendido como garantía de curación completa."
       ],
-      "correct": 2,
+      "correct": 0,
       "feedback": "Es correcta porque el acceso a servicios de salud es un derecho que no puede condicionarse a contar con documentos de identidad o acompañante, particularmente ante una situación de urgencia en una persona en situación de indigencia, donde exigir esos requisitos previos retrasaría una atención necesaria. El consentimiento informado no requiere en este caso la firma de un familiar ausente, sino que se maneja según los protocolos de urgencia sin representante; no existe un derecho a la recuperación entendido como garantía de curación completa, ya que la medicina no puede garantizar resultados; el derecho a la información se refiere a la explicación de procedimientos, aspecto secundario frente al derecho de acceso que se prioriza en la urgencia inicial."
     },
     {
@@ -5740,12 +5740,12 @@ window.SERUMS_DATA = {
       "statement": "Una gestante de 26 semanas participa en sesiones de estimulación prenatal, técnicas de relajación y actividades junto a su pareja, orientadas a favorecer un ambiente uterino propicio para el desarrollo fetal.",
       "question": "¿Qué dimensiones del desarrollo del feto se busca favorecer principalmente con estas actividades, además del desarrollo psicomotor y social?",
       "options": [
-        "El desarrollo emocional, como parte de un adecuado desarrollo integral en el curso de vida.",
-        "El desarrollo intelectual, medido mediante pruebas estandarizadas postnatales.",
         "El desarrollo cognitivo exclusivamente ligado a la estimulación auditiva.",
-        "El desarrollo conductual, entendido únicamente como la adquisición de reflejos motores."
+        "El desarrollo conductual, entendido únicamente como la adquisición de reflejos motores.",
+        "El desarrollo intelectual, medido mediante pruebas estandarizadas postnatales.",
+        "El desarrollo emocional, como parte de un adecuado desarrollo integral en el curso de vida."
       ],
-      "correct": 0,
+      "correct": 3,
       "feedback": "Es correcta porque la estimulación prenatal, además de favorecer el desarrollo psicomotor y social ya reconocidos, busca promover el desarrollo emocional del feto como parte de un enfoque integral del desarrollo desde la etapa prenatal, coherente con el modelo de cuidado por curso de vida. Reducirlo al desarrollo intelectual medido con pruebas postnatales anticipa una evaluación que no corresponde a esta etapa; limitarlo a la estimulación auditiva desconoce que la intervención integra múltiples canales sensoriales y vinculares; reducirlo a la adquisición de reflejos motores ignora la dimensión emocional y vincular que se busca fortalecer con la participación de la pareja."
     },
     {
@@ -5763,12 +5763,12 @@ window.SERUMS_DATA = {
       "statement": "Un equipo de gestión en salud busca fortalecer la planeación participativa con la comunidad para mejorar la pertinencia de sus intervenciones.",
       "question": "¿Qué combinación de elementos garantiza principalmente el éxito de la participación comunitaria en la planeación en salud?",
       "options": [
-        "La participación comunitaria limitada a las escuelas saludables del distrito.",
+        "Los cambios en la realidad económico-social y las ordenanzas municipales vigentes.",
         "La actitud política y el esfuerzo exclusivo de la administración local.",
-        "El abordaje territorial, los espacios participativos y la familia como base de la intervención.",
-        "Los cambios en la realidad económico-social y las ordenanzas municipales vigentes."
+        "La participación comunitaria limitada a las escuelas saludables del distrito.",
+        "El abordaje territorial, los espacios participativos y la familia como base de la intervención."
       ],
-      "correct": 2,
+      "correct": 3,
       "feedback": "Es correcta porque la participación comunitaria efectiva en la planeación en salud se sostiene en la combinación del abordaje territorial, la generación de espacios participativos genuinos y la familia como unidad base de intervención, articulados entre sí y no como elementos aislados. Limitar la participación solo a las escuelas saludables reduce el alcance territorial necesario; depender exclusivamente de la actitud política y el esfuerzo de la administración local deja fuera el rol activo de la comunidad misma; los cambios económico-sociales y las ordenanzas municipales son factores de contexto, pero no sustituyen los ejes estratégicos que sostienen la participación comunitaria en sí."
     },
     {
@@ -5786,12 +5786,12 @@ window.SERUMS_DATA = {
       "statement": "Un establecimiento implementa el programa 'familia saludable' como estrategia central de sus intervenciones de promoción de la salud en la comunidad.",
       "question": "¿Por qué se considera a la familia la unidad de mayor eficacia para este tipo de intervención?",
       "options": [
-        "Porque permite concentrar los recursos exclusivamente en el jefe de familia.",
         "Porque la familia es la unidad de intervención de mayor eficacia para instalar hábitos y estilos de vida saludables sostenibles.",
         "Porque la familia es la unidad de riesgo prioritaria para la vigilancia de enfermedades transmisibles.",
-        "Porque la familia funciona como unidad de análisis exclusivamente epidemiológico."
+        "Porque la familia funciona como unidad de análisis exclusivamente epidemiológico.",
+        "Porque permite concentrar los recursos exclusivamente en el jefe de familia."
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Es correcta porque la familia constituye la unidad de intervención de mayor eficacia en promoción de la salud debido a que permite instalar hábitos y estilos de vida saludables de forma sostenible dentro de la dinámica cotidiana compartida por sus integrantes. Concentrar los recursos exclusivamente en el jefe de familia ignora la dinámica compartida que sostiene el cambio de hábitos; considerarla solo unidad de riesgo para vigilancia de enfermedades transmisibles reduce su rol a un enfoque exclusivamente epidemiológico; limitarla a unidad de análisis epidemiológico deja fuera su función como espacio de intervención educativa y conductual."
     },
     {
@@ -5810,11 +5810,11 @@ window.SERUMS_DATA = {
       "question": "¿Qué combinación de principios éticos debe cumplirse principalmente en este caso?",
       "options": [
         "Fraternidad, moral, deber y orden, como principios generales sin relación específica a la confidencialidad.",
-        "Respeto, probidad y eficiencia, orientados a la reserva y el manejo adecuado de la información confidencial.",
+        "Silencio absoluto y manejo unilateral de la información, sin considerar al paciente.",
         "Solidaridad, orden, deber y derecho, como marco general de la función pública.",
-        "Silencio absoluto y manejo unilateral de la información, sin considerar al paciente."
+        "Respeto, probidad y eficiencia, orientados a la reserva y el manejo adecuado de la información confidencial."
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Es correcta porque el manejo de un diagnóstico que requiere especial reserva debe regirse por los principios de respeto, probidad y eficiencia, que en conjunto orientan la confidencialidad sin comprometer la calidad de la atención. Los principios de fraternidad, moral, deber y orden son demasiado generales y no se vinculan específicamente al manejo de información confidencial; lo mismo ocurre con solidaridad, orden, deber y derecho, que constituyen un marco general de la función pública sin relación directa con la reserva de datos sensibles; el silencio absoluto y el manejo unilateral, sin considerar al paciente, contradicen el principio de respeto a su autonomía informativa."
     },
     {
@@ -5833,11 +5833,11 @@ window.SERUMS_DATA = {
       "question": "¿Cómo se clasifica este tipo de registro según la normativa vigente?",
       "options": [
         "Historia Clínica Electrónica, al tratarse de un sistema digital de registro.",
-        "Historia Clínica Informatizada, por almacenar y recuperar información sin firma digital.",
         "Historia Clínica convencional, ya que no cumple los requisitos de un sistema electrónico.",
+        "Historia Clínica Informatizada, por almacenar y recuperar información sin firma digital.",
         "HIS, al ser un sistema de información en salud de uso administrativo."
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Es correcta porque la NTS N° 139 define como Historia Clínica Informatizada al registro que almacena y recupera información en medios electrónicos sin firma digital; ese matiz normativo es lo que diferencia la categoría. Llamarla Historia Clínica Electrónica ignora que ese término exige firma digital; considerarla convencional desconoce que sí usa un soporte electrónico; confundirla con el HIS mezcla un sistema de registro clínico con un sistema de información administrativa."
     },
     {
@@ -5856,11 +5856,11 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la acción prioritaria según la vigilancia epidemiológica de muerte materna?",
       "options": [
         "Registrar el caso únicamente en el libro de partos del establecimiento.",
-        "Notificar el caso de forma obligatoria e inmediata para su investigación epidemiológica.",
+        "Derivar el caso a la instancia legal sin realizar notificación epidemiológica.",
         "Esperar el resultado de la autopsia antes de reportar el caso.",
-        "Derivar el caso a la instancia legal sin realizar notificación epidemiológica."
+        "Notificar el caso de forma obligatoria e inmediata para su investigación epidemiológica."
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Es correcta porque la NTS N° 227 establece la notificación obligatoria e inmediata de toda muerte materna para activar su investigación epidemiológica, dado que el fallecimiento ocurre dentro del periodo de vigilancia (hasta 42 días posparto) y está asociado al embarazo. Registrar solo en el libro de partos no cumple con la notificación exigida; esperar la autopsia retrasa una investigación que debe iniciarse de inmediato; derivar solo a la vía legal omite el circuito epidemiológico obligatorio."
     },
     {
@@ -5878,12 +5878,12 @@ window.SERUMS_DATA = {
       "statement": "En una zona clasificada como de baja transmisión se detecta un caso confirmado de malaria sin antecedente de viaje reciente a zona endémica.",
       "question": "¿Qué corresponde hacer según la vigilancia para la eliminación de malaria?",
       "options": [
+        "Esperar los resultados de referencia nacional antes de iniciar cualquier acción local.",
         "Tratar al paciente y cerrar el caso sin notificación, por tratarse de un solo caso.",
         "Notificar e investigar el caso para clasificarlo como autóctono o importado y activar la respuesta de eliminación.",
-        "Fumigar la vivienda de inmediato, sin esperar la confirmación diagnóstica del caso.",
-        "Esperar los resultados de referencia nacional antes de iniciar cualquier acción local."
+        "Fumigar la vivienda de inmediato, sin esperar la confirmación diagnóstica del caso."
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Es correcta porque la NTS N° 228 exige notificar e investigar todo caso en zonas de baja transmisión para clasificarlo (autóctono o importado) y activar la respuesta oportuna, dado que esa clasificación determina el riesgo de reintroducción de la transmisión local. Tratar y cerrar sin notificar deja sin vigilancia un posible foco activo; fumigar antes de confirmar el diagnóstico salta un paso necesario del protocolo; esperar la referencia nacional sin actuar localmente retrasa la respuesta que debe iniciarse de inmediato."
     },
     {
@@ -5901,12 +5901,12 @@ window.SERUMS_DATA = {
       "statement": "Un profesional de salud sufre un accidente punzocortante con una aguja usada durante su turno.",
       "question": "¿Qué corresponde hacer de inmediato según la normativa de seguridad y salud en el trabajo?",
       "options": [
-        "Notificar el incidente, activar el protocolo post-exposición e iniciar profilaxis según el riesgo evaluado.",
+        "Esperar la aparición de síntomas antes de iniciar cualquier intervención.",
         "Continuar con las labores habituales y reportar el incidente al finalizar el turno.",
         "Autoevaluarse el riesgo sin notificar el caso al servicio correspondiente.",
-        "Esperar la aparición de síntomas antes de iniciar cualquier intervención."
+        "Notificar el incidente, activar el protocolo post-exposición e iniciar profilaxis según el riesgo evaluado."
       ],
-      "correct": 0,
+      "correct": 3,
       "feedback": "Es correcta porque la NTS N° 215 establece que todo accidente punzocortante debe notificarse de inmediato para activar el protocolo post-exposición y evaluar la profilaxis pertinente dentro de la ventana de tiempo eficaz. Reportar al final del turno retrasa una intervención que es tiempo-dependiente; autoevaluarse sin notificar omite el registro y seguimiento institucional obligatorios; esperar síntomas ignora que la profilaxis post-exposición pierde eficacia con el tiempo."
     },
     {
@@ -5924,12 +5924,12 @@ window.SERUMS_DATA = {
       "statement": "Un recién nacido a término, sin signos de alarma, es dado de alta tras el parto.",
       "question": "¿Qué corresponde asegurar antes del alta según la atención integral de salud neonatal?",
       "options": [
+        "Indicar únicamente lactancia materna, sin programar controles de seguimiento.",
         "Dar el alta sin programar ningún control posterior, al no presentar signos de alarma.",
         "Programar los controles según el esquema establecido, incluyendo los tamizajes correspondientes.",
-        "Derivar a especialista de forma sistemática, sin indicación clínica específica.",
-        "Indicar únicamente lactancia materna, sin programar controles de seguimiento."
+        "Derivar a especialista de forma sistemática, sin indicación clínica específica."
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Es correcta porque la NTS N° 214 establece un esquema de controles y tamizajes obligatorios (metabólico, auditivo, entre otros) independientemente de la ausencia de signos de alarma al momento del alta. Dar de alta sin programar controles omite tamizajes con ventana de detección limitada; derivar a especialista sin indicación clínica no corresponde al flujo estándar; limitar la indicación a la lactancia deja sin programar los controles obligatorios del esquema."
     },
     {
@@ -5947,12 +5947,12 @@ window.SERUMS_DATA = {
       "statement": "Gestante acude a su primer control prenatal y no ha sido tamizada para VIH.",
       "question": "¿Qué corresponde según la estrategia de prevención de VIH en gestantes?",
       "options": [
-        "Ofrecer la prueba de tamizaje de VIH con consejería, como parte de la atención prenatal de rutina.",
-        "Postergar el tamizaje hasta el tercer trimestre, salvo que la gestante lo solicite antes.",
         "Realizar la prueba solo si la gestante refiere factores de riesgo evidentes.",
-        "Omitir el tamizaje si la gestante expresa no considerarse en riesgo."
+        "Postergar el tamizaje hasta el tercer trimestre, salvo que la gestante lo solicite antes.",
+        "Omitir el tamizaje si la gestante expresa no considerarse en riesgo.",
+        "Ofrecer la prueba de tamizaje de VIH con consejería, como parte de la atención prenatal de rutina."
       ],
-      "correct": 0,
+      "correct": 3,
       "feedback": "Es correcta porque la estrategia DPVIH incorpora el tamizaje de VIH con consejería como parte rutinaria del primer control prenatal, independientemente de factores de riesgo referidos, dado el impacto de la detección temprana en la prevención de transmisión vertical. Postergarlo al tercer trimestre retrasa una intervención con beneficio mayor cuanto más temprana; condicionarlo a factores de riesgo evidentes subestima que buena parte de los casos no los refiere; omitirlo por percepción propia de bajo riesgo no sustituye el tamizaje universal recomendado."
     },
     {
@@ -5970,12 +5970,12 @@ window.SERUMS_DATA = {
       "statement": "Un establecimiento presenta desabastecimiento recurrente de un medicamento esencial del petitorio.",
       "question": "¿Qué acción corresponde según la gestión de medicamentos e insumos?",
       "options": [
-        "Comprar el medicamento de forma directa a un proveedor externo, sin reportar el desabastecimiento.",
         "Reportar el desabastecimiento al nivel correspondiente y activar el plan de contingencia establecido.",
+        "Sustituir el medicamento por cualquier otro disponible, sin evaluar equivalencia terapéutica.",
         "Suspender la atención de los pacientes que requieren ese medicamento, sin informar el motivo.",
-        "Sustituir el medicamento por cualquier otro disponible, sin evaluar equivalencia terapéutica."
+        "Comprar el medicamento de forma directa a un proveedor externo, sin reportar el desabastecimiento."
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Es correcta porque la gestión de medicamentos exige reportar el desabastecimiento al nivel correspondiente y activar el plan de contingencia, de forma que la respuesta quede registrada y pueda replicarse la solución a nivel de red. Comprar directo sin reportar evade el circuito de gestión establecido; suspender la atención sin informar afecta la continuidad del cuidado sin buscar alternativa; sustituir sin evaluar equivalencia terapéutica puede comprometer la eficacia del tratamiento."
     },
     {
@@ -5993,12 +5993,12 @@ window.SERUMS_DATA = {
       "statement": "Un corte de energía afecta la refrigeradora de vacunas de un establecimiento durante seis horas.",
       "question": "¿Qué corresponde hacer con las vacunas expuestas?",
       "options": [
-        "Utilizar las vacunas con normalidad, sin verificar la temperatura registrada durante el corte.",
         "Verificar la temperatura registrada, evaluar la vida útil de las vacunas expuestas según protocolo y decidir su descarte si corresponde.",
-        "Descartar todas las vacunas del establecimiento sin verificar la temperatura registrada.",
-        "Esperar el próximo lote de vacunas, sin evaluar el estado de las actuales."
+        "Utilizar las vacunas con normalidad, sin verificar la temperatura registrada durante el corte.",
+        "Esperar el próximo lote de vacunas, sin evaluar el estado de las actuales.",
+        "Descartar todas las vacunas del establecimiento sin verificar la temperatura registrada."
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Es correcta porque la normativa de cadena de frío exige verificar la temperatura registrada durante el evento y evaluar la vida útil de cada biológico expuesto según su termoestabilidad, antes de decidir su uso o descarte. Usarlas sin verificar arriesga aplicar dosis con potencia comprometida; descartar todas sin verificar genera una pérdida innecesaria de biológicos aún viables; esperar el próximo lote sin evaluar las actuales deja sin resolver el estado del stock disponible."
     },
     {
@@ -6017,11 +6017,11 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es el manejo correspondiente según la vigilancia de enfermedades metaxénicas?",
       "options": [
         "Indicar manejo ambulatorio con control por consultorio externo en una semana.",
-        "Hospitalizar y monitorizar de forma estrecha los signos de alarma.",
         "Indicar únicamente antipiréticos, sin evaluación adicional del cuadro.",
+        "Hospitalizar y monitorizar de forma estrecha los signos de alarma.",
         "Derivar a mayor complejidad sin estabilización previa en el establecimiento."
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Es correcta porque el dolor abdominal intenso constituye un signo de alarma de dengue que exige hospitalización y monitoreo estrecho para detectar progresión a un cuadro grave. El manejo ambulatorio con control diferido no vigila la evolución en la ventana crítica; limitar la conducta a antipiréticos no aborda el signo de alarma ya presente; derivar sin estabilizar previamente expone al paciente durante el traslado."
     },
     {
@@ -6039,10 +6039,10 @@ window.SERUMS_DATA = {
       "statement": "Paciente afiliado al SIS requiere referencia a un establecimiento de mayor complejidad y desconoce si el procedimiento está cubierto.",
       "question": "¿Qué corresponde según la gestión del aseguramiento e intercambio prestacional?",
       "options": [
-        "Condicionar la atención al pago previo del procedimiento por parte del paciente.",
+        "Negar la atención hasta que el paciente complete el trámite administrativo por su cuenta.",
         "Verificar la cobertura del plan de beneficios y coordinar la continuidad de la atención sin interrumpirla por trámites administrativos.",
         "Derivar al paciente sin verificar previamente su cobertura.",
-        "Negar la atención hasta que el paciente complete el trámite administrativo por su cuenta."
+        "Condicionar la atención al pago previo del procedimiento por parte del paciente."
       ],
       "correct": 1,
       "feedback": "Es correcta porque la gestión del aseguramiento exige verificar la cobertura del plan de beneficios y coordinar la continuidad asistencial, correspondiendo al establecimiento gestionar el trámite sin trasladar esa carga al paciente ni interrumpir la atención. Condicionar la atención al pago contradice el principio de aseguramiento público; derivar sin verificar cobertura genera incertidumbre evitable en la red; negar la atención hasta que el paciente resuelva el trámite solo desatiende la continuidad asistencial."
@@ -6062,12 +6062,12 @@ window.SERUMS_DATA = {
       "statement": "Un establecimiento ubicado en zona con población indígena no cuenta con señalización ni protocolos adaptados a las prácticas culturales locales.",
       "question": "¿Qué corresponde según el enfoque de adecuación intercultural de los servicios?",
       "options": [
-        "Mantener el protocolo estándar del establecimiento, sin realizar ninguna adecuación.",
         "Adecuar la prestación del servicio incorporando las prácticas y necesidades culturales de la población, sin renunciar a la calidad técnica.",
+        "Mantener el protocolo estándar del establecimiento, sin realizar ninguna adecuación.",
         "Delegar la adecuación cultural únicamente al personal de origen local del establecimiento.",
         "Limitar la adecuación a la traducción de carteles, sin modificar la organización del servicio."
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Es correcta porque la adecuación intercultural implica incorporar las prácticas y necesidades culturales de la población en la organización del servicio, manteniendo el estándar técnico de la atención. Mantener el protocolo estándar ignora la pertinencia cultural exigida; delegar la adecuación solo al personal local no compromete a la institución en su conjunto; limitarla a traducir carteles reduce la adecuación intercultural a un gesto simbólico insuficiente."
     },
     {
@@ -6108,12 +6108,12 @@ window.SERUMS_DATA = {
       "statement": "Adulto mayor refiere disminución progresiva de agudeza visual en los últimos meses, sin evaluación oftalmológica previa.",
       "question": "¿Qué corresponde según el tamizaje de enfermedades oculares no transmisibles?",
       "options": [
-        "Indicar que la disminución visual es esperable por la edad y no requiere evaluación adicional.",
-        "Realizar tamizaje visual y derivar para descartar catarata, glaucoma u otra causa tratable.",
+        "Derivar únicamente si el paciente refiere dolor ocular asociado.",
         "Prescribir lentes correctivos de forma directa, sin evaluación de causas subyacentes.",
-        "Derivar únicamente si el paciente refiere dolor ocular asociado."
+        "Indicar que la disminución visual es esperable por la edad y no requiere evaluación adicional.",
+        "Realizar tamizaje visual y derivar para descartar catarata, glaucoma u otra causa tratable."
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Es correcta porque el tamizaje de enfermedades oculares no transmisibles exige evaluar y derivar ante disminución progresiva de agudeza visual, para descartar causas tratables como catarata o glaucoma antes de que generen daño irreversible. Atribuirlo solo a la edad omite causas prevenibles de ceguera; prescribir lentes sin evaluar la causa de fondo puede enmascarar una patología progresiva; condicionar la derivación a la presencia de dolor deja sin detectar cuadros que cursan sin ese síntoma."
     },
     {
@@ -6132,11 +6132,11 @@ window.SERUMS_DATA = {
       "question": "¿Qué corresponde según el enfoque de salud sexual y reproductiva del adolescente?",
       "options": [
         "Exigir la presencia de un adulto responsable como condición para cualquier atención.",
-        "Brindar consejería y acceso al método anticonceptivo, respetando la confidencialidad y autonomía progresiva del adolescente.",
         "Negar el método por tratarse de una persona menor de edad.",
+        "Brindar consejería y acceso al método anticonceptivo, respetando la confidencialidad y autonomía progresiva del adolescente.",
         "Derivar a otro establecimiento sin brindar consejería en la consulta actual."
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Es correcta porque el enfoque de salud sexual y reproductiva reconoce la autonomía progresiva del adolescente y su derecho a la confidencialidad, correspondiendo brindar consejería y acceso al método solicitado. Exigir un adulto como condición vulnera ese derecho reconocido; negar el método por la edad contradice el marco normativo vigente; derivar sin brindar consejería en la consulta actual retrasa una atención que puede resolverse en el mismo momento."
     },
     {
@@ -6156,8 +6156,8 @@ window.SERUMS_DATA = {
       "options": [
         "Indicar tratamiento antibiótico empírico, sin solicitar estudio diagnóstico previo.",
         "Identificarlo como sintomático respiratorio, solicitar baciloscopía u otra prueba diagnóstica y notificar el caso.",
-        "Esperar la evolución del cuadro durante dos semanas adicionales antes de evaluar.",
-        "Derivar a mayor complejidad sin realizar el tamizaje correspondiente en el establecimiento."
+        "Derivar a mayor complejidad sin realizar el tamizaje correspondiente en el establecimiento.",
+        "Esperar la evolución del cuadro durante dos semanas adicionales antes de evaluar."
       ],
       "correct": 1,
       "feedback": "Es correcta porque más de 15 días de tos con expectoración define a un sintomático respiratorio, lo que obliga a solicitar baciloscopía u otra prueba diagnóstica y notificar el caso según la estrategia DPCTB. El antibiótico empírico sin estudio previo retrasa el diagnóstico específico; esperar más tiempo prolonga la transmisión potencial sin diagnóstico; derivar sin tamizaje en el propio establecimiento omite un paso que corresponde al primer nivel de atención."
@@ -6178,11 +6178,11 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es el enfoque más adecuado según promoción de la salud?",
       "options": [
         "Limitar la intervención a la suplementación farmacológica individual, sin trabajo comunitario.",
-        "Desarrollar una intervención comunitaria participativa que aborde los determinantes sociales asociados, además de la suplementación.",
         "Realizar una campaña puntual de difusión, sin seguimiento posterior.",
+        "Desarrollar una intervención comunitaria participativa que aborde los determinantes sociales asociados, además de la suplementación.",
         "Derivar todos los casos a un nivel de mayor complejidad, sin intervención en el primer nivel."
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Es correcta porque la promoción de la salud exige abordar los determinantes sociales de la anemia (prácticas alimentarias, acceso a alimentos) mediante intervención comunitaria participativa, complementando la suplementación farmacológica sin depender solo de ella. Limitarse a la suplementación individual no modifica las prácticas ni el acceso de fondo; una campaña puntual sin seguimiento no genera cambio sostenido; derivar todos los casos ignora que la anemia se maneja principalmente en el primer nivel."
     },
     {
@@ -6201,11 +6201,11 @@ window.SERUMS_DATA = {
       "question": "¿Qué corresponde según la estrategia de control de cáncer?",
       "options": [
         "Repetir el tamizaje en un año, sin derivar para evaluación adicional.",
-        "Derivar de forma oportuna para confirmación diagnóstica y seguimiento especializado.",
+        "Iniciar tratamiento de forma directa, sin contar con confirmación diagnóstica.",
         "Tranquilizar a la paciente indicando que no requiere ninguna acción adicional.",
-        "Iniciar tratamiento de forma directa, sin contar con confirmación diagnóstica."
+        "Derivar de forma oportuna para confirmación diagnóstica y seguimiento especializado."
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Es correcta porque un tamizaje alterado exige derivación oportuna para confirmación diagnóstica (colposcopia, biopsia según corresponda) y seguimiento especializado, dado que el tamizaje por sí solo no confirma el diagnóstico. Repetir en un año retrasa la confirmación de un hallazgo ya alterado; tranquilizar sin acción adicional desestima un resultado que requiere seguimiento; iniciar tratamiento sin confirmación diagnóstica expone a un manejo no sustentado en el diagnóstico definitivo."
     },
     {
@@ -6223,10 +6223,10 @@ window.SERUMS_DATA = {
       "statement": "Un establecimiento I-2 sin especialista disponible atiende un caso clínico complejo que requiere opinión especializada.",
       "question": "¿Qué corresponde según la estrategia de telesalud?",
       "options": [
-        "Derivar físicamente al paciente sin evaluar primero la opción de teleconsulta.",
-        "Activar la teleconsulta con el especialista de la red de referencia correspondiente.",
         "Esperar la próxima visita periódica del especialista al establecimiento.",
-        "Manejar el caso en el nivel actual, sin ninguna interconsulta."
+        "Activar la teleconsulta con el especialista de la red de referencia correspondiente.",
+        "Manejar el caso en el nivel actual, sin ninguna interconsulta.",
+        "Derivar físicamente al paciente sin evaluar primero la opción de teleconsulta."
       ],
       "correct": 1,
       "feedback": "Es correcta porque la estrategia de telesalud está diseñada para resolver casos complejos en establecimientos sin especialista mediante teleconsulta con la red de referencia, evitando traslados innecesarios cuando la opinión especializada puede resolverse a distancia. Derivar físicamente sin evaluar la teleconsulta desaprovecha un recurso disponible; esperar la visita periódica retrasa una atención que puede resolverse antes; manejar el caso sin interconsulta expone al paciente a un manejo sin respaldo especializado."
@@ -6247,11 +6247,11 @@ window.SERUMS_DATA = {
       "question": "¿Qué corresponde según el enfoque de cuidado integral por curso de vida?",
       "options": [
         "Limitar el control a pesar y tallar, sin evaluar otros hitos del desarrollo.",
-        "Evaluar el cumplimiento integral del plan de atención según la etapa de vida correspondiente, incluyendo hitos de desarrollo.",
         "Derivar al niño sin realizar antes la evaluación correspondiente al control.",
-        "Limitar el control a la verificación del esquema de vacunación."
+        "Limitar el control a la verificación del esquema de vacunación.",
+        "Evaluar el cumplimiento integral del plan de atención según la etapa de vida correspondiente, incluyendo hitos de desarrollo."
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Es correcta porque el enfoque por curso de vida integra en el control de crecimiento y desarrollo la evaluación de todos los componentes del plan según la etapa (antropometría, hitos de desarrollo, tamizajes), no solo un componente aislado. Limitarse a pesar y tallar deja sin evaluar el desarrollo psicomotor; derivar sin evaluación previa omite un paso que corresponde al primer nivel; reducir el control solo a vacunación desatiende los demás componentes del cuidado integral."
     },
     {
@@ -6269,12 +6269,12 @@ window.SERUMS_DATA = {
       "statement": "Paciente con discapacidad física secuelar solicita su certificado de discapacidad en el establecimiento.",
       "question": "¿Qué corresponde según el proceso de certificación de discapacidad?",
       "options": [
-        "Certificar la discapacidad sin realizar una evaluación funcional previa.",
         "Realizar la evaluación y certificación de la discapacidad, articulando la derivación a servicios de rehabilitación según necesidad.",
+        "Negar el certificado por no contar con un especialista en el establecimiento.",
         "Derivar al paciente a otro nivel sin emitir la certificación correspondiente.",
-        "Negar el certificado por no contar con un especialista en el establecimiento."
+        "Certificar la discapacidad sin realizar una evaluación funcional previa."
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Es correcta porque el proceso DISCAP exige una evaluación funcional que sustente la certificación de discapacidad, articulada con la derivación a servicios de rehabilitación según la necesidad identificada, favoreciendo un enfoque de inclusión. Certificar sin evaluación previa carece de sustento técnico; derivar sin certificar retrasa un trámite que puede resolverse en el nivel actual; negar el certificado por falta de especialista desconoce que el proceso puede gestionarse dentro de la red de referencia."
     },
     {
@@ -6292,12 +6292,12 @@ window.SERUMS_DATA = {
       "statement": "Un profesional de salud brinda consejería y asesoría a una persona usuaria mediante TIC, con fines de promoción, prevención, recuperación o rehabilitación, sin que medie una consulta clínica formal.",
       "question": "¿A qué modalidad de telesalud corresponde esta actividad?",
       "options": [
-        "Teleconsulta, al ser una atención clínica formal a distancia.",
         "Teleorientación, al tratarse de consejería y asesoría sin consulta clínica formal.",
+        "Teleinterconsulta, al ser una consulta entre dos profesionales de salud.",
         "Telemonitoreo, al hacer seguimiento continuo de un parámetro de salud.",
-        "Teleinterconsulta, al ser una consulta entre dos profesionales de salud."
+        "Teleconsulta, al ser una atención clínica formal a distancia."
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Es correcta porque la teleorientación se define específicamente como consejería y asesoría a distancia sin que constituya una consulta clínica formal, a diferencia de la teleconsulta (que sí es una atención clínica), el telemonitoreo (seguimiento continuo de parámetros) y la teleinterconsulta (comunicación entre dos profesionales de salud, no con el usuario)."
     },
     {
@@ -6316,11 +6316,11 @@ window.SERUMS_DATA = {
       "question": "¿En qué condición fue contrarreferido este paciente?",
       "options": [
         "Curado, porque el caso ya fue resuelto en el nivel de mayor complejidad.",
-        "Deserción, porque el paciente abandonó el seguimiento en el nivel superior.",
         "Mejorado, porque el problema se resolvió parcialmente y continúa el tratamiento en el establecimiento de origen.",
+        "Deserción, porque el paciente abandonó el seguimiento en el nivel superior.",
         "Retiro voluntario, porque el paciente decidió no continuar la atención por su cuenta."
       ],
-      "correct": 2,
+      "correct": 1,
       "feedback": "Es correcta porque la condición 'mejorado' en la contrarreferencia corresponde a una resolución parcial del problema, que requiere continuidad del tratamiento en el establecimiento de origen. 'Curado' implicaría resolución total; 'deserción' y 'retiro voluntario' corresponden a un abandono del proceso por parte del paciente, no a la evolución clínica descrita."
     },
     {
@@ -6338,12 +6338,12 @@ window.SERUMS_DATA = {
       "statement": "El Seguro Integral de Salud garantiza un porcentaje mínimo de su presupuesto para la compra de insumos, productos farmacéuticos y sanitarios esenciales para sus asegurados a nivel nacional.",
       "question": "¿A qué Función Esencial de Salud Pública (FESP) renovada corresponde esta acción?",
       "options": [
-        "Financiamiento de la salud eficiente y equitativo, al garantizar presupuesto específico para insumos esenciales.",
         "Acceso equitativo a servicios de salud integrales y de calidad, al referirse a la llegada de los servicios a la población.",
         "Desarrollo de recursos humanos para la salud, al enfocarse en la capacitación del personal.",
+        "Financiamiento de la salud eficiente y equitativo, al garantizar presupuesto específico para insumos esenciales.",
         "Evaluación del desempeño del sistema de salud, al medir resultados de intervenciones ya ejecutadas."
       ],
-      "correct": 0,
+      "correct": 2,
       "feedback": "Es correcta porque garantizar un presupuesto mínimo destinado a la compra de insumos y productos esenciales corresponde específicamente a la función de financiamiento eficiente y equitativo de la salud, distinta del acceso a servicios (que se refiere a la llegada de la oferta a la población), el desarrollo de RRHH (capacitación) o la evaluación (medición de resultados ya ejecutados)."
     },
     {
@@ -6360,12 +6360,12 @@ window.SERUMS_DATA = {
       "statement": "Un establecimiento de salud implementa acciones orientadas a disminuir el avance y las complicaciones de una enfermedad ya establecida, reduciendo las secuelas y la discapacidad asociadas.",
       "question": "¿A qué nivel de prevención corresponde esta acción?",
       "options": [
-        "Primaria, porque busca evitar la aparición de la enfermedad.",
-        "Secundaria, porque busca la detección temprana en fase asintomática.",
         "Terciaria, porque busca reducir secuelas y discapacidad de una enfermedad ya establecida.",
-        "Cuaternaria, porque busca evitar el sobretratamiento de la enfermedad."
+        "Cuaternaria, porque busca evitar el sobretratamiento de la enfermedad.",
+        "Primaria, porque busca evitar la aparición de la enfermedad.",
+        "Secundaria, porque busca la detección temprana en fase asintomática."
       ],
-      "correct": 2,
+      "correct": 0,
       "feedback": "Es correcta porque la prevención terciaria actúa sobre una enfermedad ya establecida, buscando reducir sus secuelas y la discapacidad asociada mediante rehabilitación. La primaria actúa antes de que aparezca la enfermedad; la secundaria detecta casos en fase subclínica o asintomática; la cuaternaria previene el exceso de intervención médica, no las secuelas de una enfermedad ya presente."
     },
     {
@@ -6383,12 +6383,12 @@ window.SERUMS_DATA = {
       "statement": "Un establecimiento de salud realiza búsqueda intencionada y sistemática de casos de dislipidemia y obesidad infantil revisando las historias clínicas y archivos estadísticos ya existentes, sin esperar que los casos se presenten espontáneamente a consulta.",
       "question": "¿A qué tipo de vigilancia epidemiológica corresponde esta actividad?",
       "options": [
-        "Pasiva, porque depende de que el caso se presente espontáneamente al establecimiento.",
-        "Centinela, porque se basa en establecimientos seleccionados como fuente de información.",
+        "Focalizada, porque se limita a un grupo poblacional específico previamente definido.",
         "Activa, porque implica una búsqueda intencionada y sistemática de casos en fuentes ya existentes.",
-        "Focalizada, porque se limita a un grupo poblacional específico previamente definido."
+        "Pasiva, porque depende de que el caso se presente espontáneamente al establecimiento.",
+        "Centinela, porque se basa en establecimientos seleccionados como fuente de información."
       ],
-      "correct": 2,
+      "correct": 1,
       "feedback": "Es correcta porque la vigilancia activa se caracteriza precisamente por la búsqueda intencionada y sistemática de casos, revisando fuentes de información ya existentes en vez de esperar que el caso llegue espontáneamente (que es lo propio de la vigilancia pasiva). La vigilancia centinela se basa en establecimientos seleccionados como puntos de reporte, y la focalizada se limita a un grupo específico, aspectos no descritos en el enunciado."
     },
     {
@@ -6406,12 +6406,12 @@ window.SERUMS_DATA = {
       "statement": "En una comunidad se reporta un caso de fiebre amarilla con fiebre, sangrado y shock; en los días siguientes aparecen muchos más casos similares en la misma zona.",
       "question": "Considerando que el Ro es el número promedio de casos nuevos que genera un caso dado durante su periodo infeccioso, ¿qué valor de Ro se espera en este escenario de brote activo?",
       "options": [
-        "Ro = 0, porque no hay transmisión de persona a persona en la fiebre amarilla.",
-        "Ro < 1, porque cada caso genera en promedio menos de un caso nuevo.",
         "Ro > 1, porque cada caso genera en promedio más de un caso nuevo, sosteniendo el brote.",
-        "Ro > 0.5, porque ese valor ya sería suficiente para frenar la transmisión."
+        "Ro > 0.5, porque ese valor ya sería suficiente para frenar la transmisión.",
+        "Ro < 1, porque cada caso genera en promedio menos de un caso nuevo.",
+        "Ro = 0, porque no hay transmisión de persona a persona en la fiebre amarilla."
       ],
-      "correct": 2,
+      "correct": 0,
       "feedback": "Es correcta porque un brote activo con aparición creciente de nuevos casos implica que, en promedio, cada caso genera más de un caso nuevo (Ro > 1), lo que sostiene y amplifica la transmisión en la comunidad. Un Ro = 0 o Ro < 1 implicaría que la transmisión se extingue por sí sola, lo que contradice el escenario descrito; Ro > 0.5 no es el umbral que determina sostenibilidad de la transmisión, ya que el punto de corte relevante es Ro = 1."
     },
     {
@@ -6430,12 +6430,12 @@ window.SERUMS_DATA = {
       "statement": "En una comunidad se reportan dos o más casos de una misma enfermedad, relacionados entre sí en tiempo y lugar, cuando normalmente no se esperaría ver casos relacionados de esa manera.",
       "question": "¿Cómo se clasifica este evento según criterio epidemiológico?",
       "options": [
-        "Endemia, porque la enfermedad está presente de forma habitual en la zona.",
-        "Brote, porque son casos relacionados entre sí en tiempo y lugar, por encima de lo esperado.",
+        "Pandemia, porque se espera que se disperse a varios países o continentes.",
         "Epidemia, porque ya afecta a toda una región geográfica extensa.",
-        "Pandemia, porque se espera que se disperse a varios países o continentes."
+        "Brote, porque son casos relacionados entre sí en tiempo y lugar, por encima de lo esperado.",
+        "Endemia, porque la enfermedad está presente de forma habitual en la zona."
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Es correcta porque un brote se define como la aparición de dos o más casos relacionados entre sí en tiempo y lugar, por encima de lo esperado para esa zona, sin necesidad de una extensión geográfica amplia. La endemia implica presencia habitual y esperada de la enfermedad (no un exceso); la epidemia implica una extensión mayor y sostenida en una región; la pandemia implica diseminación a varios países o continentes, escalas que exceden lo descrito en el enunciado."
     },
     {
@@ -6454,9 +6454,9 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es el octavo principio que completa este listado según el código de ética de la función pública?",
       "options": [
         "Lealtad al Estado de derecho.",
-        "Puntualidad en el cumplimiento de horarios.",
+        "Progreso continuo en la carrera pública.",
         "Compromiso institucional permanente.",
-        "Progreso continuo en la carrera pública."
+        "Puntualidad en el cumplimiento de horarios."
       ],
       "correct": 0,
       "feedback": "Es correcta porque el código de ética de la función pública establece ocho principios: respeto, probidad, eficiencia, idoneidad, veracidad, lealtad y obediencia, justicia y equidad, y lealtad al Estado de derecho, siendo este último el que completa el listado. Puntualidad, compromiso institucional y progreso en la carrera no forman parte de este listado normativo específico de ocho principios."
@@ -6476,12 +6476,12 @@ window.SERUMS_DATA = {
       "statement": "Un establecimiento de salud cuenta con un documento normativo que describe las funciones específicas de cada cargo o puesto de trabajo, desarrolladas a partir de la estructura orgánica y las funciones generales establecidas en el reglamento de organización y funciones de la institución.",
       "question": "¿A qué documento de gestión corresponde esta descripción?",
       "options": [
-        "Plan Operativo Institucional, al programar actividades y metas del año fiscal.",
-        "Manual de Organización y Funciones (MOF), al describir funciones específicas por cargo.",
         "Reglamento de Organización y Funciones (ROF), al definir la estructura orgánica general.",
-        "Plan Estratégico Institucional, al definir el rumbo de largo plazo de la institución."
+        "Plan Estratégico Institucional, al definir el rumbo de largo plazo de la institución.",
+        "Manual de Organización y Funciones (MOF), al describir funciones específicas por cargo.",
+        "Plan Operativo Institucional, al programar actividades y metas del año fiscal."
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Es correcta porque el MOF es el documento que describe funciones específicas a nivel de cargo o puesto de trabajo, derivadas de la estructura orgánica y las funciones generales del ROF. El Plan Operativo programa actividades y metas del año fiscal, no funciones por cargo; el ROF define la estructura orgánica general, no las funciones específicas de cada puesto; el Plan Estratégico Institucional define el rumbo de largo plazo, no las funciones operativas de cada cargo."
     },
     {
@@ -6499,12 +6499,12 @@ window.SERUMS_DATA = {
       "statement": "El responsable de la Red Integrada de Salud desea conocer la cantidad de atenciones realizadas por un médico serumista en consulta externa durante un periodo determinado.",
       "question": "¿Qué indicador de gestión debe utilizar para este propósito?",
       "options": [
+        "Permanencia, que mide el tiempo que un paciente continúa en un programa de salud.",
         "Concentración, que mide el promedio de atenciones por persona atendida.",
         "Rendimiento, que mide el número de atenciones por unidad de tiempo disponible.",
-        "Productividad, que mide la cantidad de atenciones realizadas por el profesional en el periodo.",
-        "Permanencia, que mide el tiempo que un paciente continúa en un programa de salud."
+        "Productividad, que mide la cantidad de atenciones realizadas por el profesional en el periodo."
       ],
-      "correct": 2,
+      "correct": 3,
       "feedback": "Es correcta porque el indicador de productividad mide específicamente la cantidad de atenciones realizadas por un profesional en un periodo determinado, que es lo que se busca conocer en el enunciado. La concentración mide el promedio de atenciones por persona (no por profesional); el rendimiento relaciona atenciones con el tiempo disponible de manera distinta; la permanencia mide continuidad de un paciente en un programa, no la producción del profesional."
     },
     {
@@ -6522,12 +6522,12 @@ window.SERUMS_DATA = {
       "statement": "La sala situacional de salud ofrece evidencia sobre la eficacia de las intervenciones en salud y sobre la capacidad de respuesta del sistema frente a las necesidades de la población de un establecimiento.",
       "question": "¿Quiénes deben conocer y analizar esta herramienta con mayor prioridad?",
       "options": [
-        "Promotores de salud y el responsable de promoción de la salud, por su cercanía con la comunidad.",
         "El responsable de epidemiología y el jefe del establecimiento, por su rol en la toma de decisiones estratégicas.",
+        "Todo el personal de salud sin distinción de rol, incluidas autoridades locales externas al establecimiento.",
         "Coordinadores de red y el responsable de epidemiología, limitando el análisis al nivel de red.",
-        "Todo el personal de salud sin distinción de rol, incluidas autoridades locales externas al establecimiento."
+        "Promotores de salud y el responsable de promoción de la salud, por su cercanía con la comunidad."
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Es correcta porque el responsable de epidemiología y el jefe del establecimiento son quienes concentran la responsabilidad de tomar decisiones estratégicas basadas en la sala situacional, siendo los actores prioritarios para su análisis. Limitarlo solo a promotores de salud, o solo a coordinadores de red, deja fuera actores clave en la toma de decisiones del propio establecimiento; extenderlo a todo el personal y autoridades externas sin distinción diluye la prioridad que exige esta herramienta de gestión."
     },
     {
@@ -6545,12 +6545,12 @@ window.SERUMS_DATA = {
       "statement": "Un establecimiento de salud debe segregar sus residuos sólidos usando bolsas de colores diferenciados según el tipo de residuo generado: biocontaminados, comunes y químicos.",
       "question": "¿Qué combinación de colores corresponde a residuos biocontaminados, químicos y comunes, respectivamente?",
       "options": [
-        "Rojo, amarillo y negro, respectivamente.",
         "Negro, amarillo y rojo, respectivamente.",
-        "Amarillo, rojo y negro, respectivamente.",
-        "Rojo, negro y amarillo, respectivamente."
+        "Rojo, amarillo y negro, respectivamente.",
+        "Rojo, negro y amarillo, respectivamente.",
+        "Amarillo, rojo y negro, respectivamente."
       ],
-      "correct": 0,
+      "correct": 1,
       "feedback": "Es correcta porque la normativa de manejo de residuos sólidos hospitalarios establece bolsa roja para residuos biocontaminados, amarilla para residuos químicos/especiales y negra para residuos comunes, en ese orden específico. Cualquier otra combinación invierte los colores asignados a cada categoría, lo que puede generar un manejo inadecuado del riesgo biológico o químico asociado a cada tipo de residuo."
     },
     {
@@ -6569,11 +6569,11 @@ window.SERUMS_DATA = {
       "question": "¿Cuáles son estos dos grupos de determinantes sociales?",
       "options": [
         "Determinantes ambientales y determinantes sectoriales.",
-        "Determinantes estructurales y determinantes intermedios.",
         "Determinantes epidemiológicos y determinantes etiológicos.",
+        "Determinantes estructurales y determinantes intermedios.",
         "Determinantes complejos y determinantes interculturales."
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Es correcta porque el marco de determinantes sociales de la salud distingue entre determinantes estructurales (posición socioeconómica, educación, ocupación) y determinantes intermedios (condiciones materiales, factores conductuales y biológicos, sistema de salud), siendo esta la clasificación central del modelo. Ambiental/sectorial, epidemiológico/etiológico y complejo/intercultural no corresponden a la clasificación oficial de dos grupos que usa este marco conceptual."
     },
     {
@@ -6591,9 +6591,9 @@ window.SERUMS_DATA = {
       "statement": "Un profesional de salud administra un medicamento a un paciente, quien minutos después presenta mareos, náuseas y un rash cutáneo en la zona de aplicación. El profesional debe consignar el evento en la historia clínica y reportarlo en el formato correspondiente.",
       "question": "¿A qué actividad del sistema de salud corresponde este reporte, y cuál es su finalidad principal?",
       "options": [
-        "Salud pública, con la finalidad de evaluar la cobertura de vacunación en la población.",
-        "Farmacovigilancia, con la finalidad de evaluar la seguridad del medicamento y alertar oportunamente sobre reacciones adversas.",
         "Epidemiología, con la finalidad de investigar un posible brote asociado al medicamento.",
+        "Farmacovigilancia, con la finalidad de evaluar la seguridad del medicamento y alertar oportunamente sobre reacciones adversas.",
+        "Salud pública, con la finalidad de evaluar la cobertura de vacunación en la población.",
         "Auditoría clínica, con la finalidad de sancionar al personal involucrado en el evento."
       ],
       "correct": 1,
@@ -6615,11 +6615,11 @@ window.SERUMS_DATA = {
       "question": "¿Cómo se denomina a este grupo de medicamentos que debe estar disponible en todo momento?",
       "options": [
         "Medicamentos genéricos, por no tener marca comercial registrada.",
+        "Medicamentos comunes, por ser los de uso más frecuente en cualquier nivel.",
         "Medicamentos básicos, por cubrir solo necesidades de primer nivel.",
-        "Medicamentos esenciales, por cubrir la mayor parte de la morbilidad de forma costo-efectiva.",
-        "Medicamentos comunes, por ser los de uso más frecuente en cualquier nivel."
+        "Medicamentos esenciales, por cubrir la mayor parte de la morbilidad de forma costo-efectiva."
       ],
-      "correct": 2,
+      "correct": 3,
       "feedback": "Es correcta porque los medicamentos esenciales se definen precisamente por cubrir la mayor parte de la morbilidad nacional, tras una evaluación técnica que confirma su seguridad, eficacia y costo-efectividad, debiendo estar disponibles en todo momento. Ser genérico es una característica de fabricación (no de esta clasificación); 'básicos' y 'comunes' no son las categorías normativas que usa el petitorio nacional para esta definición específica."
     },
     {
@@ -6637,12 +6637,12 @@ window.SERUMS_DATA = {
       "statement": "Mujer de 60 años, asintomática, con RPR positivo a 8 diluciones. Su única pareja sexual es su esposo, sin antecedente de tratamiento previo ni de diagnóstico reciente.",
       "question": "¿Cuál es el esquema de tratamiento que corresponde a este caso?",
       "options": [
-        "Doxiciclina 100 mg vía oral cada 12 horas por 2 semanas.",
         "Penicilina benzatínica 2 400 000 UI, una ampolla intramuscular semanal por 3 semanas.",
-        "Penicilina benzatínica 2 400 000 UI, una ampolla intramuscular en dosis única.",
-        "Bencilpenicilina sódica 1 000 000 UI, 4 ampollas endovenosas cada 4 horas por 2 semanas."
+        "Doxiciclina 100 mg vía oral cada 12 horas por 2 semanas.",
+        "Bencilpenicilina sódica 1 000 000 UI, 4 ampollas endovenosas cada 4 horas por 2 semanas.",
+        "Penicilina benzatínica 2 400 000 UI, una ampolla intramuscular en dosis única."
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Es correcta porque una sífilis sin datos de infección reciente ni síntomas activos se clasifica como latente de duración desconocida o tardía, cuyo esquema es penicilina benzatínica 2 400 000 UI intramuscular semanal por 3 semanas. La dosis única corresponde a sífilis primaria o secundaria, no a este escenario; la doxiciclina oral es una alternativa solo ante alergia documentada a penicilina, no la primera línea; el esquema endovenoso con bencilpenicilina sódica corresponde a neurosífilis, no sustentada en este caso."
     },
     {
@@ -6660,8 +6660,8 @@ window.SERUMS_DATA = {
       "statement": "Adulto de 45 años, sin comorbilidades, es diagnosticado con hipertensión arterial esencial tras confirmar cifras elevadas en tomas repetidas.",
       "question": "¿Qué grupo farmacológico corresponde prescribir como primera elección?",
       "options": [
-        "Betabloqueadores, por su efecto directo sobre la frecuencia cardiaca.",
         "Diuréticos de asa, por su rapidez de acción en la reducción de la presión arterial.",
+        "Betabloqueadores, por su efecto directo sobre la frecuencia cardiaca.",
         "Diuréticos tiazídicos, como primera línea recomendada en hipertensión esencial sin comorbilidades.",
         "Inhibidores de aldosterona, por actuar sobre un mecanismo hormonal específico."
       ],
@@ -6683,12 +6683,12 @@ window.SERUMS_DATA = {
       "statement": "Personal de salud sufre un pinchazo con aguja usada en un paciente cuyo estado serológico para VIH es desconocido.",
       "question": "¿Qué conducta corresponde de inmediato?",
       "options": [
-        "Evaluar solo la severidad del accidente antes de decidir cualquier medida adicional.",
-        "Lavar la herida con agua y jabón, e iniciar profilaxis antirretroviral lo antes posible según protocolo.",
         "Solicitar serologías basales y esperar el resultado antes de decidir sobre la profilaxis.",
-        "Iniciar antirretrovirales recién a las 72 horas post-exposición, como plazo estándar de inicio."
+        "Evaluar solo la severidad del accidente antes de decidir cualquier medida adicional.",
+        "Iniciar antirretrovirales recién a las 72 horas post-exposición, como plazo estándar de inicio.",
+        "Lavar la herida con agua y jabón, e iniciar profilaxis antirretroviral lo antes posible según protocolo."
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Es correcta porque la eficacia de la profilaxis post-exposición depende de iniciarla lo antes posible (idealmente dentro de las primeras horas), por lo que corresponde lavar la herida de inmediato e iniciar antirretrovirales sin esperar resultados serológicos, dado que el estado del paciente fuente es desconocido. Solo evaluar la severidad sin actuar retrasa una intervención tiempo-dependiente; esperar el resultado de serologías pierde la ventana de eficacia; considerar las 72 horas como el momento recomendado para iniciar (en vez de como plazo límite) invierte la urgencia real del protocolo, que exige iniciar cuanto antes."
     },
     {
@@ -6706,12 +6706,12 @@ window.SERUMS_DATA = {
       "statement": "Gestante de 28 semanas es diagnosticada con anemia ferropénica confirmada por hemoglobina y perfil de hierro.",
       "question": "¿Cuál es la dosis oral diaria de hierro elemental y ácido fólico recomendada para su tratamiento según la normativa vigente?",
       "options": [
-        "60 mg de hierro elemental y 400 ug de ácido fólico.",
-        "120 mg de hierro elemental y 800 ug de ácido fólico.",
+        "200 mg de hierro elemental y 1000 ug de ácido fólico.",
         "80 mg de hierro elemental y 600 ug de ácido fólico.",
-        "200 mg de hierro elemental y 1000 ug de ácido fólico."
+        "60 mg de hierro elemental y 400 ug de ácido fólico.",
+        "120 mg de hierro elemental y 800 ug de ácido fólico."
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Es correcta porque el esquema de tratamiento (no de prevención) para anemia ferropénica confirmada en gestante corresponde a 120 mg de hierro elemental y 800 ug de ácido fólico diarios, dosis mayor a la usada solo como suplementación preventiva. Las dosis de 60 mg/400 ug corresponden al esquema preventivo, insuficiente para tratamiento de una anemia ya confirmada; 80 mg/600 ug y 200 mg/1000 ug no corresponden a los esquemas normados para este escenario específico."
     },
     {
@@ -6730,12 +6730,12 @@ window.SERUMS_DATA = {
       "statement": "Neonato de 8 horas de vida, producto de parto domiciliario en zona rural, sin complicaciones evidentes, es traído al establecimiento de salud más cercano.",
       "question": "¿Cuál es el tiempo ideal para que reciba las vacunas BCG y contra hepatitis B (HvB)?",
       "options": [
-        "Dentro de las primeras 24 horas de vida.",
-        "Hasta la primera semana de vida, sin urgencia adicional.",
         "Hasta el primer mes de vida, si el niño se mantiene asintomático.",
-        "Hasta el año de vida, junto con el resto del esquema regular."
+        "Hasta el año de vida, junto con el resto del esquema regular.",
+        "Hasta la primera semana de vida, sin urgencia adicional.",
+        "Dentro de las primeras 24 horas de vida."
       ],
-      "correct": 0,
+      "correct": 3,
       "feedback": "Es correcta porque la vacunación con BCG y HvB debe aplicarse idealmente dentro de las primeras 24 horas de vida, ventana que reduce el riesgo de formas graves de tuberculosis y de transmisión perinatal de hepatitis B. Esperar hasta la semana, el mes o el año retrasa una protección que es más eficaz cuanto más temprana, especialmente relevante en un parto domiciliario sin control previo del estado materno."
     },
     {
@@ -6753,12 +6753,12 @@ window.SERUMS_DATA = {
       "statement": "Varón de 38 años acude con fiebre, cefalea, mialgias y dolor retro-ocular de 2 días de evolución, sin signos de alarma ni condiciones o comorbilidades que constituyan factores de riesgo.",
       "question": "¿A qué grupo de manejo corresponde clasificar este caso de dengue probable?",
       "options": [
-        "Grupo A: manejo ambulatorio, sin signos de alarma ni condición coexistente de riesgo.",
+        "Grupo C: manejo en unidad de cuidados intensivos, por dengue grave.",
         "Grupo B1: manejo con observación, por presentar alguna condición coexistente de riesgo.",
-        "Grupo B2: hospitalización, por presentar algún signo de alarma.",
-        "Grupo C: manejo en unidad de cuidados intensivos, por dengue grave."
+        "Grupo A: manejo ambulatorio, sin signos de alarma ni condición coexistente de riesgo.",
+        "Grupo B2: hospitalización, por presentar algún signo de alarma."
       ],
-      "correct": 0,
+      "correct": 2,
       "feedback": "Es correcta porque, al no presentar signos de alarma ni condiciones coexistentes que constituyan factor de riesgo, el caso corresponde al grupo A, que se maneja de forma ambulatoria con hidratación y control. El grupo B1 aplica a quienes tienen una condición de riesgo asociada aunque estén clínicamente estables; el B2 requiere al menos un signo de alarma presente; el grupo C corresponde a dengue grave con compromiso de órgano, shock o sangrado severo, ninguno presente en este caso."
     },
     {
@@ -6776,12 +6776,12 @@ window.SERUMS_DATA = {
       "statement": "Mujer no gestante de 30 años, residente en un establecimiento de salud ubicado a 3200 msnm, presenta hemoglobina de 11.9 g/dL medida por hemoglobinómetro.",
       "question": "¿Cuál es la clasificación correcta considerando el ajuste por altitud?",
       "options": [
-        "Anemia severa, por lo que corresponde referir para manejo en el siguiente nivel.",
-        "Anemia leve, por lo que corresponde solicitar ferritina en el establecimiento más cercano con esa capacidad.",
         "Anemia moderada, por lo que corresponde iniciar tratamiento farmacológico de inmediato.",
-        "Ausencia de anemia, ya que el valor está dentro de rango normal sin ajuste por altitud."
+        "Anemia severa, por lo que corresponde referir para manejo en el siguiente nivel.",
+        "Ausencia de anemia, ya que el valor está dentro de rango normal sin ajuste por altitud.",
+        "Anemia leve, por lo que corresponde solicitar ferritina en el establecimiento más cercano con esa capacidad."
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Es correcta porque, al ajustar la hemoglobina por la altitud de residencia (3200 msnm), el valor de 11.9 g/dL corresponde a una anemia de grado leve, lo que amerita un estudio complementario (ferritina) antes de decidir un tratamiento específico, en vez de iniciar manejo farmacológico sin mayor caracterización. Clasificarla como severa o moderada sobrestima la gravedad real tras el ajuste; considerar que no hay anemia ignora que, incluso ajustado, el valor está por debajo del punto de corte para esta población."
     },
     {
@@ -6799,12 +6799,12 @@ window.SERUMS_DATA = {
       "statement": "Gestante de 36 años con antecedente de hipertensión arterial acude con cefalea intensa y visión borrosa. Examen: PA 170/110 mmHg, edema en miembros inferiores sin fóvea. Laboratorio: creatinina 1.2 mg/dL, plaquetas 150 000/mm3.",
       "question": "¿Cuál es la conducta terapéutica inicial que corresponde?",
       "options": [
+        "Finalizar el embarazo de inmediato, sin estabilización previa del cuadro.",
         "Transfusión de plaquetas, dado el valor limítrofe del recuento plaquetario.",
         "Sulfato de magnesio intravenoso, para prevención de convulsiones dado el cuadro de preeclampsia con criterios de severidad.",
-        "Nifedipino por vía oral como única medida, sin manejo adicional.",
-        "Finalizar el embarazo de inmediato, sin estabilización previa del cuadro."
+        "Nifedipino por vía oral como única medida, sin manejo adicional."
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Es correcta porque la cefalea intensa y la visión borrosa con presión arterial en rango severo constituyen preeclampsia con criterios de severidad, cuyo manejo inicial prioritario es el sulfato de magnesio intravenoso para prevenir la progresión a eclampsia, junto con el control tensional. La transfusión de plaquetas no está indicada con un recuento de 150 000/mm3, que no constituye trombocitopenia significativa; el nifedipino oral como única medida no aborda la prevención de convulsiones que exige el cuadro; finalizar el embarazo sin estabilizar antes con sulfato de magnesio expone a mayor riesgo de convulsión durante el manejo."
     },
     {
@@ -6822,12 +6822,12 @@ window.SERUMS_DATA = {
       "statement": "Paciente de 30 años con diagnóstico reciente de infección por VIH, sin síntomas respiratorios, con baciloscopía y radiografía de tórax normales, aún no cuenta con resultado de la prueba de tuberculina (PPD).",
       "question": "¿Corresponde iniciar terapia preventiva para tuberculosis en este paciente?",
       "options": [
-        "No, porque debe esperarse el resultado de la prueba de tuberculina antes de decidir.",
         "Sí, porque las personas con diagnóstico de infección por VIH tienen indicación de terapia preventiva independientemente del resultado del PPD.",
+        "No, porque debe esperarse el resultado de la prueba de tuberculina antes de decidir.",
         "No, porque la terapia preventiva solo aplica a contactos de un caso índice de tuberculosis pulmonar.",
         "Sí, pero solo si se confirma antes infección tuberculosa latente mediante IGRA."
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Es correcta porque las personas con diagnóstico de infección por VIH tienen indicación de terapia preventiva para tuberculosis independientemente del resultado del PPD o IGRA, una vez descartada enfermedad tuberculosa activa (lo cual ya se cumple con baciloscopía y radiografía normales). Esperar el PPD retrasa una indicación que no depende de ese resultado en este grupo; limitar la terapia preventiva solo a contactos de caso índice deja fuera a un grupo con indicación propia (personas con VIH); exigir confirmación de infección latente por IGRA antes de iniciar no corresponde al criterio aplicado específicamente a personas con VIH."
     },
     {
@@ -6845,10 +6845,10 @@ window.SERUMS_DATA = {
       "statement": "Mujer de 55 años con diagnóstico de diabetes mellitus tipo 2 de 10 años de evolución, en tratamiento con metformina, con estilos de vida saludables y seguimiento periódico regular.",
       "question": "¿Cuál de las siguientes se considera la meta principal en el manejo integral de esta paciente?",
       "options": [
-        "Glicemia en ayunas entre 80 y 126 mg/dL.",
-        "Hemoglobina glicosilada menor a 7%.",
         "Perímetro de cintura menor a 94 cm.",
-        "Glicemia postprandial de 2 horas menor a 140 mg/dL."
+        "Hemoglobina glicosilada menor a 7%.",
+        "Glicemia postprandial de 2 horas menor a 140 mg/dL.",
+        "Glicemia en ayunas entre 80 y 126 mg/dL."
       ],
       "correct": 1,
       "feedback": "Es correcta porque la hemoglobina glicosilada menor a 7% es la meta principal de control metabólico a mediano plazo en el manejo integral de la diabetes mellitus tipo 2 en la mayoría de adultos, al reflejar el control glicémico de los últimos tres meses. La glicemia en ayunas y la postprandial son parámetros puntuales complementarios, no la meta principal de seguimiento; el perímetro de cintura menor a 94 cm es un valor de referencia para varones (no para esta paciente mujer, cuyo punto de corte es distinto) y evalúa riesgo cardiovascular, no control metabólico directo."
@@ -6868,9 +6868,9 @@ window.SERUMS_DATA = {
       "statement": "Adulto de 40 años completamente asintomático, con antecedente de cáncer colorrectal en su padre, acude a una campaña de prevención del cáncer.",
       "question": "¿Cuál es la recomendación de tamizaje más adecuada para este caso?",
       "options": [
+        "Observación clínica periódica para decidir más adelante si amerita colonoscopía.",
         "Colonoscopía a partir de los 60 años, igual que en la población general.",
         "Prueba de sangre oculta en heces cada 5 años, sin otra evaluación adicional.",
-        "Observación clínica periódica para decidir más adelante si amerita colonoscopía.",
         "Colonoscopía en el presente, por el antecedente familiar de primer grado que adelanta el inicio del tamizaje."
       ],
       "correct": 3,
@@ -6891,12 +6891,12 @@ window.SERUMS_DATA = {
       "statement": "Adulto mayor de 75 años acude a consulta externa por primera vez, acompañado de su hija, refiriendo que desea iniciar sus chequeos de salud propios de su edad, sin otro motivo de consulta específico.",
       "question": "¿Qué tipo de valoración clínica del adulto mayor corresponde aplicar?",
       "options": [
-        "Valoración corta, limitada a los aspectos más urgentes.",
-        "Valoración breve, orientada solo al motivo puntual de la consulta.",
         "Valoración completa, dado que es su primera atención integral sin otro motivo que la oriente.",
-        "No aplicar ninguna valoración estructurada, dado que no refiere síntomas."
+        "Valoración corta, limitada a los aspectos más urgentes.",
+        "No aplicar ninguna valoración estructurada, dado que no refiere síntomas.",
+        "Valoración breve, orientada solo al motivo puntual de la consulta."
       ],
-      "correct": 2,
+      "correct": 0,
       "feedback": "Es correcta porque, al tratarse de una primera atención sin un motivo clínico puntual que oriente hacia una valoración más focalizada, corresponde una valoración clínica completa del adulto mayor que evalúe de forma integral las áreas funcional, mental y biológica. La valoración corta o breve se reservan para reevaluaciones de seguimiento o motivos de consulta específicos ya conocidos; omitir toda valoración estructurada desaprovecha la oportunidad de una primera evaluación integral en un adulto mayor sin controles previos."
     },
     {
@@ -6915,11 +6915,11 @@ window.SERUMS_DATA = {
       "question": "¿Cómo se denomina este reporte, dado que solo existe sospecha y no confirmación de causalidad?",
       "options": [
         "Evento centinela, por tratarse de un evento que amerita investigación institucional inmediata.",
+        "Reacción bien caracterizada, por tratarse de un efecto ya descrito previamente para ese medicamento.",
         "ESAVI, al corresponder específicamente a un evento posterior a la vacunación.",
-        "Sospecha de reacción adversa, que se reporta ante la sola posibilidad de asociación con el medicamento, sin requerir confirmación causal previa.",
-        "Reacción bien caracterizada, por tratarse de un efecto ya descrito previamente para ese medicamento."
+        "Sospecha de reacción adversa, que se reporta ante la sola posibilidad de asociación con el medicamento, sin requerir confirmación causal previa."
       ],
-      "correct": 2,
+      "correct": 3,
       "feedback": "Es correcta porque el sistema de farmacovigilancia exige reportar toda sospecha de reacción adversa ante la sola posibilidad de asociación con el medicamento administrado, sin necesidad de confirmar previamente la relación causal, precisamente para no perder señales de seguridad tempranas. ESAVI es el término específico para eventos posteriores a la vacunación, no a cualquier medicamento; un evento centinela implica un daño grave que amerita investigación institucional inmediata, categoría distinta a una simple sospecha de reacción adversa; calificarlo como reacción ya caracterizada presupone una relación causal ya establecida, que es justamente lo que aún no se ha confirmado."
     },
     {
@@ -6937,12 +6937,12 @@ window.SERUMS_DATA = {
       "statement": "Paciente con sospecha clínica de neumotórax y atrapamiento aéreo requiere confirmación radiográfica para un diagnóstico adecuado.",
       "question": "¿En qué fase respiratoria debe tomarse la radiografía de tórax para un diagnóstico adecuado?",
       "options": [
-        "En decúbito supino, independientemente de la fase respiratoria.",
-        "En inspiración máxima, como en la radiografía de tórax estándar.",
         "En espiración, ya que resalta mejor el aire atrapado y la línea pleural visceral.",
-        "En decúbito prono, para mejor visualización del mediastino."
+        "En inspiración máxima, como en la radiografía de tórax estándar.",
+        "En decúbito prono, para mejor visualización del mediastino.",
+        "En decúbito supino, independientemente de la fase respiratoria."
       ],
-      "correct": 2,
+      "correct": 0,
       "feedback": "Es correcta porque la radiografía en espiración aumenta el contraste entre el aire pleural y el parénquima pulmonar, haciendo más visible la línea pleural visceral y el aire atrapado, lo que mejora la sensibilidad diagnóstica frente a un neumotórax sutil. La posición decúbito supino o prono no sustituye la proyección de pie estándar ni resuelve la necesidad de la fase espiratoria; la inspiración máxima es la técnica habitual para otras indicaciones, pero no maximiza la visibilidad de un neumotórax pequeño como sí lo hace la espiración."
     },
     {
@@ -6960,12 +6960,12 @@ window.SERUMS_DATA = {
       "statement": "Agricultor de 62 años acude a su control anual. Examen: PA 142/90 mmHg, FC 80 X', FR 20 X', IMC 31 kg/m2, sin evidencia de daño a órgano blanco.",
       "question": "¿Qué nivel de riesgo cardiovascular corresponde a este paciente?",
       "options": [
-        "Bajo a moderado, por la combinación de cifras tensionales límite y obesidad sin daño de órgano blanco evidente.",
         "Alto, equivalente al de un paciente con daño de órgano blanco ya confirmado.",
+        "Bajo a moderado, por la combinación de cifras tensionales límite y obesidad sin daño de órgano blanco evidente.",
         "Moderado a alto, asumiendo que la obesidad por sí sola ya define ese nivel superior.",
         "Bajo, al no presentar aún daño de órgano blanco documentado."
       ],
-      "correct": 0,
+      "correct": 1,
       "feedback": "Es correcta porque la combinación de hipertensión en rango límite (grado 1) con obesidad (IMC 31), sin evidencia de daño de órgano blanco, ubica al paciente en un riesgo cardiovascular bajo a moderado según la estratificación habitual, que integra cifras tensionales, factores de riesgo adicionales y daño de órgano ya presente. Clasificarlo como alto equipara indebidamente este caso a uno con daño de órgano confirmado; considerar que la obesidad por sí sola ya define moderado a alto ignora que la estratificación integra varios factores, no uno aislado; clasificarlo solo como bajo subestima el peso combinado de la hipertensión y la obesidad ya presentes."
     },
     {
@@ -6983,9 +6983,9 @@ window.SERUMS_DATA = {
       "statement": "En un puesto de salud de la región central se detecta un caso de fiebre amarilla selvática.",
       "question": "¿Con qué periodicidad corresponde notificar este caso?",
       "options": [
-        "Semanal, junto con el resto de casos acumulados de la semana epidemiológica.",
-        "De manera inmediata, dada la letalidad y el potencial epidémico de la enfermedad.",
         "Quincenal, según el cronograma regular de notificación de enfermedades metaxénicas.",
+        "De manera inmediata, dada la letalidad y el potencial epidémico de la enfermedad.",
+        "Semanal, junto con el resto de casos acumulados de la semana epidemiológica.",
         "Mensual, como parte del consolidado rutinario de vigilancia."
       ],
       "correct": 1,
@@ -7006,10 +7006,10 @@ window.SERUMS_DATA = {
       "statement": "Un establecimiento de salud necesita actualizar su cartera de servicios y verificar la de otros establecimientos de su red para coordinar una referencia.",
       "question": "¿Qué herramienta, creada por la reciente NTS 249-MINSA/DGAIN-2026, centraliza y actualiza las carteras de servicios normativas y de los establecimientos a nivel nacional?",
       "options": [
-        "El Registro Nacional de Establecimientos de Salud (RENAES).",
-        "El Repositorio Nacional de Carteras de Servicios de Salud (RENACSS).",
         "El Sistema de Información en Salud (HIS).",
-        "El Aplicativo de Seguimiento y Evaluación (ASIS)."
+        "El Repositorio Nacional de Carteras de Servicios de Salud (RENACSS).",
+        "El Aplicativo de Seguimiento y Evaluación (ASIS).",
+        "El Registro Nacional de Establecimientos de Salud (RENAES)."
       ],
       "correct": 1,
       "feedback": "Es correcta porque el RENACSS es el repositorio creado específicamente por la NTS 249-MINSA/DGAIN-2026 (aprobada por RM 625-2026/MINSA) para reunir y actualizar las carteras de servicios normativas y las de cada establecimiento, servicio médico de apoyo y red de salud, facilitando su planificación y evaluación. El RENAES es un registro distinto (de establecimientos, no de carteras de servicios); el HIS es el sistema de información de atenciones, no de carteras; el ASIS no es un aplicativo de carteras de servicios sino el análisis de situación de salud."
@@ -7029,10 +7029,10 @@ window.SERUMS_DATA = {
       "statement": "Un establecimiento I-2 deriva un caso que excede su capacidad resolutiva a un hospital II-1 dentro de su misma red, según lo previsto en su cartera de servicios.",
       "question": "¿Qué principio de la NTS 249 sustenta esta derivación?",
       "options": [
-        "Autonomía funcional del establecimiento de origen.",
+        "Descentralización presupuestal entre establecimientos de la red.",
         "Libre elección del paciente sobre el establecimiento de destino.",
         "Articulación asistencial dentro de la Red Integrada de Salud, según la cartera de servicios de cada nivel.",
-        "Descentralización presupuestal entre establecimientos de la red."
+        "Autonomía funcional del establecimiento de origen."
       ],
       "correct": 2,
       "feedback": "Es correcta porque la cartera de servicios de cada establecimiento, definida según su capacidad resolutiva, sustenta la articulación asistencial dentro de la Red Integrada de Salud: cuando un caso excede lo que un nivel puede resolver, la derivación al nivel correspondiente dentro de la misma red es precisamente el mecanismo que la NTS 249 busca ordenar. La autonomía funcional no es el principio que rige la derivación en red; la libre elección del paciente no sustituye la organización por capacidad resolutiva; la descentralización presupuestal es un tema distinto, de gestión financiera, no de articulación asistencial."
@@ -7052,12 +7052,12 @@ window.SERUMS_DATA = {
       "statement": "En un establecimiento de primer nivel se atiende a un niño con fiebre alta y exantema, con antecedente de contacto con un caso sospechoso de sarampión en su colegio.",
       "question": "Según la NTS 247-MINSA/DGIESP-2026, ¿cuál es la conducta inmediata correcta ante este caso sospechoso?",
       "options": [
-        "Notificación obligatoria e inicio de vigilancia epidemiológica de inmediato.",
-        "Tratamiento sintomático y alta sin programar seguimiento.",
         "Solicitar confirmación serológica antes de notificar el caso.",
-        "Derivar al paciente sin notificar, dejando esa acción al nivel de referencia."
+        "Tratamiento sintomático y alta sin programar seguimiento.",
+        "Derivar al paciente sin notificar, dejando esa acción al nivel de referencia.",
+        "Notificación obligatoria e inicio de vigilancia epidemiológica de inmediato."
       ],
-      "correct": 0,
+      "correct": 3,
       "feedback": "Es correcta porque la NTS 247 exige notificación obligatoria e inicio de vigilancia epidemiológica ante todo caso sospechoso de sarampión, sin esperar confirmación de laboratorio, dado el alto potencial de transmisión de la enfermedad y la importancia de la respuesta oportuna. Dar de alta sin seguimiento desatiende un caso con riesgo de brote; esperar la serología retrasa una notificación que debe iniciarse con la sola sospecha clínica; derivar sin notificar deja sin activar la vigilancia en el nivel donde se detectó el caso."
     },
     {
@@ -7075,12 +7075,12 @@ window.SERUMS_DATA = {
       "statement": "Ante un caso confirmado de sarampión en una comunidad, el equipo de salud activa una de las medidas de control específicas previstas en la NTS 247.",
       "question": "¿A qué corresponde el \"bloqueo vacunal\" como medida de control de brote?",
       "options": [
+        "Cuarentena domiciliaria prolongada de todos los contactos del caso índice.",
         "Vacunación de los contactos y de la población en riesgo alrededor del caso índice.",
         "Suspensión temporal de la vacunación en la zona afectada hasta nueva evaluación.",
-        "Aislamiento hospitalario exclusivo del caso confirmado, sin otra medida adicional.",
-        "Cuarentena domiciliaria prolongada de todos los contactos del caso índice."
+        "Aislamiento hospitalario exclusivo del caso confirmado, sin otra medida adicional."
       ],
-      "correct": 0,
+      "correct": 1,
       "feedback": "Es correcta porque el bloqueo vacunal consiste en vacunar de forma focalizada a los contactos y a la población en riesgo alrededor del caso índice, buscando cortar la cadena de transmisión antes de que se disemine más el brote. Suspender la vacunación es contrario al objetivo de control; el aislamiento hospitalario aislado no sustituye la protección de los contactos susceptibles; la cuarentena domiciliaria prolongada no es la medida específica que define el bloqueo vacunal, que es una intervención inmunológica dirigida, no de aislamiento."
     },
     {
@@ -7098,12 +7098,12 @@ window.SERUMS_DATA = {
       "statement": "Tras la modificación de los artículos 25 y 26 del Reglamento de la Ley N° 23330 mediante RM 617-2026/MINSA, se precisó de forma expresa la fórmula para determinar el orden de mérito en la adjudicación de plazas SERUMS.",
       "question": "¿Cómo se compone el puntaje final de mérito según esta modificación?",
       "options": [
-        "50% nota de la Evaluación SERUMS y 50% promedio ponderado de la carrera.",
         "70% nota de la Evaluación SERUMS y 30% promedio ponderado de la carrera, incluido el internado cuando corresponda.",
+        "30% nota de la Evaluación SERUMS y 70% promedio ponderado de la carrera.",
         "100% nota de la Evaluación SERUMS, sin considerar el promedio de la carrera.",
-        "30% nota de la Evaluación SERUMS y 70% promedio ponderado de la carrera."
+        "50% nota de la Evaluación SERUMS y 50% promedio ponderado de la carrera."
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Es correcta porque la RM 617-2026/MINSA precisó expresamente que el 70% del puntaje final corresponde a la nota de la Evaluación para el SERUMS, mientras que el 30% restante corresponde al promedio ponderado promocional de la carrera (incluyendo la nota del internado cuando aplique). Cualquier otra proporción (50/50, 100/0 o invertida 30/70) no corresponde a la fórmula fijada por esta modificación reglamentaria reciente."
     },
     {
@@ -7122,11 +7122,11 @@ window.SERUMS_DATA = {
       "question": "¿Qué bonificaciones fueron eliminadas del proceso de adjudicación de plazas SERUMS con esta modificación?",
       "options": [
         "Las bonificaciones para postulantes de zonas rurales de origen.",
-        "Las bonificaciones para personas con discapacidad y para licenciados de las Fuerzas Armadas.",
         "Las bonificaciones para postulantes con maestría o doctorado concluido.",
+        "Las bonificaciones para personas con discapacidad y para licenciados de las Fuerzas Armadas.",
         "Las bonificaciones para quienes postulan por segunda vez al proceso."
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Es correcta porque la RM 617-2026/MINSA eliminó específicamente las bonificaciones para personas con discapacidad y para licenciados de las Fuerzas Armadas dentro del proceso de adjudicación de plazas SERUMS, adecuando el reglamento al criterio de SERVIR sobre este tipo de bonificaciones. Las demás opciones (origen rural, grado académico, segunda postulación) no corresponden a las bonificaciones específicamente eliminadas por esta modificación."
     },
     {
@@ -7145,11 +7145,11 @@ window.SERUMS_DATA = {
       "question": "Según la RM 379-2026/MINSA, ¿qué corresponde respecto a las fechas de inicio de cada modalidad?",
       "options": [
         "Ambas modalidades inician en la misma fecha, sin distinción entre plaza remunerada y equivalente.",
-        "La plaza remunerada inicia el 6 de mayo de 2026 y la plaza equivalente el 26 de mayo de 2026, ambas con término el 30 de abril de 2027.",
+        "El inicio de ambas modalidades queda a discreción de cada Red Integrada de Salud.",
         "La plaza equivalente inicia antes que la remunerada, por no requerir proceso de incorporación previo.",
-        "El inicio de ambas modalidades queda a discreción de cada Red Integrada de Salud."
+        "La plaza remunerada inicia el 6 de mayo de 2026 y la plaza equivalente el 26 de mayo de 2026, ambas con término el 30 de abril de 2027."
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Es correcta porque la RM 379-2026/MINSA estableció fechas diferenciadas: 6 de mayo de 2026 para quienes adjudican plaza remunerada, y 26 de mayo de 2026 para plaza equivalente, con término común el 30 de abril de 2027 para ambas modalidades. Asumir una fecha única, invertir el orden entre modalidades, o dejarlo a discreción regional no corresponde a lo dispuesto expresamente por esta resolución."
     },
     {
@@ -7167,12 +7167,12 @@ window.SERUMS_DATA = {
       "statement": "Un paciente acude con secreción uretral purulenta, sin resultado de laboratorio disponible en el momento de la consulta.",
       "question": "Según el manejo sindrómico de ITS previsto en la NTS 240, ¿cuál es la conducta correcta?",
       "options": [
-        "Tratar según el síndrome clínico presente, sin esperar la confirmación de laboratorio.",
-        "Solicitar siempre un cultivo antes de decidir cualquier tratamiento.",
         "Referir todo caso a un especialista, sin manejo inicial en el primer nivel.",
+        "Solicitar siempre un cultivo antes de decidir cualquier tratamiento.",
+        "Tratar según el síndrome clínico presente, sin esperar la confirmación de laboratorio.",
         "Tratar únicamente si se cuenta con confirmación serológica del agente causal."
       ],
-      "correct": 0,
+      "correct": 2,
       "feedback": "Es correcta porque el manejo sindrómico de ITS, previsto en la NTS 240, permite tratar según el conjunto de signos y síntomas presentes sin esperar la confirmación de laboratorio, dado que esto agiliza el tratamiento y corta la cadena de transmisión de forma oportuna. Solicitar cultivo o serología antes de tratar retrasa una intervención que el enfoque sindrómico busca precisamente agilizar; referir todo caso a especialista sin manejo inicial no aprovecha la capacidad resolutiva del primer nivel para este tipo de cuadros."
     },
     {
@@ -7191,11 +7191,11 @@ window.SERUMS_DATA = {
       "question": "Según el artículo 9 de la Ley N.° 23330, ¿qué modalidad puede realizar este profesional para cumplir con el servicio?",
       "options": [
         "Queda automáticamente excluido del proceso hasta el siguiente año.",
+        "Se le asigna de oficio una plaza remunerada en la región de menor demanda.",
         "SERUMS Equivalente (Ad Honorem), en una entidad pública o no pública previamente determinada, con compromiso de la entidad de proporcionar alimentación y movilidad local.",
-        "Debe esperar una nueva convocatoria de plazas presupuestadas antes de poder ejercer.",
-        "Se le asigna de oficio una plaza remunerada en la región de menor demanda."
+        "Debe esperar una nueva convocatoria de plazas presupuestadas antes de poder ejercer."
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Es correcta porque el artículo 9 de la Ley N.° 23330 prevé expresamente la modalidad de SERUMS Equivalente (Ad Honorem) para quienes no alcanzan una plaza presupuestada, a realizarse en una entidad pública o no pública previamente determinada por la autoridad competente, con el compromiso de esa entidad de proporcionar alimentación y movilidad local. Quedar excluido, esperar una nueva convocatoria sin alternativa, o asignar de oficio una plaza remunerada no corresponden a lo que la ley dispone para este escenario."
     },
     {
@@ -7213,12 +7213,12 @@ window.SERUMS_DATA = {
       "statement": "Un profesional SERUMS solicita una licencia justificada durante su año de servicio.",
       "question": "Según la modificación del Reglamento de la Ley N.° 23330 (RM N.° 047-2018/MINSA), ¿cómo se computan las licencias y permisos a los que tiene derecho el profesional SERUMS?",
       "options": [
+        "Solo se computan si la licencia dura menos de 24 horas.",
         "No se computan como tiempo de servicio, por lo que el profesional debe extender su periodo de SERUMS.",
         "Se computan como tiempo de servicio efectivo, sin afectar la duración total del SERUMS.",
-        "Solo se computan si la licencia dura menos de 24 horas.",
         "Se descuentan del puntaje final de la evaluación de desempeño del profesional."
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Es correcta porque la modificación al Reglamento de la Ley N.° 23330 incorporó las licencias y permisos como un derecho del profesional SERUMS, disponiendo expresamente que se computen como tiempo de servicio efectivo, sin necesidad de extender el periodo total del servicio. Considerar que no se computan, que solo aplican a licencias muy breves, o que afectan el puntaje de desempeño no corresponde a lo que estableció esta modificación reglamentaria."
     },
     {
@@ -7238,12 +7238,12 @@ window.SERUMS_DATA = {
       "statement": "Un profesional SERUMS es asignado a un establecimiento de salud y necesita entender qué nivel de complejidad y qué recursos humanos mínimos corresponden a su categoría, para dimensionar su capacidad resolutiva real.",
       "question": "¿Cuál de las siguientes describe correctamente la diferencia operativa central entre las categorías I-1, I-2, I-3 e I-4?",
       "options": [
-        "Todas las categorías del primer nivel cuentan obligatoriamente con médico cirujano; la diferencia está solo en el tamaño del local.",
-        "I-1 es un puesto de salud sin médico (atendido por personal técnico o profesional no médico); I-2 es un puesto de salud con médico; I-3 y I-4 son centros de salud, con I-4 incorporando camas de internamiento.",
+        "I-3 e I-4 corresponden a hospitales de mediana complejidad, equivalentes al segundo nivel de atención.",
         "La categoría se define únicamente por la cantidad de habitantes de la jurisdicción, sin relación con los recursos humanos disponibles.",
-        "I-3 e I-4 corresponden a hospitales de mediana complejidad, equivalentes al segundo nivel de atención."
+        "Todas las categorías del primer nivel cuentan obligatoriamente con médico cirujano; la diferencia está solo en el tamaño del local.",
+        "I-1 es un puesto de salud sin médico (atendido por personal técnico o profesional no médico); I-2 es un puesto de salud con médico; I-3 y I-4 son centros de salud, con I-4 incorporando camas de internamiento."
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Es correcta porque la categorización del primer nivel de atención distingue progresivamente la capacidad resolutiva: I-1 es un puesto de salud sin médico, cubierto por personal técnico o profesional no médico; I-2 ya cuenta con médico cirujano; I-3 y I-4 son centros de salud con mayor complejidad, siendo I-4 el que incorpora camas de internamiento dentro del primer nivel. Asumir que todas las categorías tienen médico, que la categoría depende solo de la población sin considerar los recursos humanos, o equiparar I-3/I-4 con el segundo nivel hospitalario no corresponde a los criterios reales de categorización."
     },
     {
@@ -7262,12 +7262,12 @@ window.SERUMS_DATA = {
       "statement": "Un establecimiento I-2 identifica un caso de mayor complejidad y lo deriva a un hospital II-1 dentro de su misma red de salud.",
       "question": "¿Qué principio de la NTS 249-MINSA/DGAIN-2026 sustenta esta derivación?",
       "options": [
-        "Autonomía funcional del establecimiento",
         "Articulación asistencial dentro de la Red Integrada de Salud",
-        "Libre elección del paciente",
-        "Descentralización presupuestal"
+        "Autonomía funcional del establecimiento",
+        "Descentralización presupuestal",
+        "Libre elección del paciente"
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Correcta porque la NTS 249 organiza la oferta de servicios en Redes Integradas de Salud (RIS), donde la derivación entre niveles responde a la articulación asistencial planificada de la red, no a decisiones autónomas ni presupuestales del establecimiento."
     },
     {
@@ -7287,11 +7287,11 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la función principal del RENACSS?",
       "options": [
         "Fiscalizar el gasto en salud",
-        "Centralizar y actualizar las carteras de servicios normativas y de establecimientos",
         "Certificar la discapacidad",
-        "Realizar vigilancia epidemiológica"
+        "Realizar vigilancia epidemiológica",
+        "Centralizar y actualizar las carteras de servicios normativas y de establecimientos"
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Correcta porque el RENACSS (Repositorio Nacional de Carteras de Servicios de Salud) centraliza y mantiene actualizada la información de las carteras de servicios a nivel nacional, no cumple funciones de fiscalización, certificación de discapacidad ni vigilancia epidemiológica."
     },
     {
@@ -7336,8 +7336,8 @@ window.SERUMS_DATA = {
       "options": [
         "Habilitar el acceso a derechos y beneficios establecidos por ley",
         "Determinar el pronóstico vital del paciente",
-        "Definir el tratamiento farmacológico a seguir",
-        "Autorizar la hospitalización"
+        "Autorizar la hospitalización",
+        "Definir el tratamiento farmacológico a seguir"
       ],
       "correct": 0,
       "feedback": "Correcta porque la certificación de discapacidad tiene como fin habilitar el ejercicio de derechos y el acceso a beneficios legales, no busca establecer pronóstico, tratamiento ni disposición de hospitalización."
@@ -7359,9 +7359,9 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta inmediata correcta según la NTS 247-MINSA/DGIESP-2026?",
       "options": [
         "Notificación obligatoria e inicio de vigilancia epidemiológica",
-        "Tratamiento sintomático y alta sin seguimiento",
+        "Derivar al paciente sin notificar el caso",
         "Solicitar serología antes de notificar",
-        "Derivar al paciente sin notificar el caso"
+        "Tratamiento sintomático y alta sin seguimiento"
       ],
       "correct": 0,
       "feedback": "Correcta porque todo caso sospechoso de sarampión exige notificación obligatoria inmediata que activa la vigilancia epidemiológica, sin condicionarla a la confirmación de laboratorio ni omitir el reporte antes de derivar."
@@ -7382,12 +7382,12 @@ window.SERUMS_DATA = {
       "statement": "Se confirma un brote de sarampión en una localidad y se activan las medidas de control establecidas en la norma.",
       "question": "¿A qué se refiere el 'bloqueo vacunal' en este contexto?",
       "options": [
-        "Vacunación de contactos y población en riesgo alrededor del caso índice",
+        "Cuarentena domiciliaria de 40 días",
         "Suspensión temporal de la vacunación en la zona",
-        "Aislamiento hospitalario exclusivo del caso índice",
-        "Cuarentena domiciliaria de 40 días"
+        "Vacunación de contactos y población en riesgo alrededor del caso índice",
+        "Aislamiento hospitalario exclusivo del caso índice"
       ],
-      "correct": 0,
+      "correct": 2,
       "feedback": "Correcta porque el bloqueo vacunal consiste en vacunar oportunamente a los contactos y a la población en riesgo alrededor del caso índice para cortar la cadena de transmisión, no implica suspender la vacunación ni medidas de aislamiento prolongado."
     },
     {
@@ -7405,12 +7405,12 @@ window.SERUMS_DATA = {
       "statement": "Un paciente acude con secreción uretral y dolor al orinar; el establecimiento no cuenta con resultados de laboratorio inmediatos.",
       "question": "¿Cómo se caracteriza el manejo sindrómico de las ITS según la NTS 240-MINSA/DGIESP-2026?",
       "options": [
-        "Tratar según el síndrome clínico presente, sin esperar confirmación de laboratorio",
-        "Solicitar siempre cultivo antes de iniciar tratamiento",
+        "Tratar solo si existe confirmación serológica",
         "Referir todo caso a un especialista",
-        "Tratar solo si existe confirmación serológica"
+        "Solicitar siempre cultivo antes de iniciar tratamiento",
+        "Tratar según el síndrome clínico presente, sin esperar confirmación de laboratorio"
       ],
-      "correct": 0,
+      "correct": 3,
       "feedback": "Correcta porque el manejo sindrómico permite iniciar tratamiento en base al síndrome clínico identificado, evitando el retraso terapéutico que implicaría esperar la confirmación de laboratorio."
     },
     {
@@ -7452,12 +7452,12 @@ window.SERUMS_DATA = {
       "statement": "Finalizada la Evaluación para el SERUMS, se procede a publicar los resultados según lo dispuesto en la Directiva Administrativa 386-MINSA/DIGEP-2026.",
       "question": "¿Cómo se determina principalmente el orden de mérito en este proceso?",
       "options": [
-        "Por la antigüedad de egreso del postulante",
         "Por el puntaje obtenido según los criterios establecidos en la directiva",
+        "Por la antigüedad de egreso del postulante",
         "Mediante sorteo aleatorio",
         "Según la región de origen del postulante"
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Correcta porque la Directiva 386 establece que el orden de mérito se determina por el puntaje obtenido en la evaluación conforme a sus criterios, sin recurrir a antigüedad, sorteo ni región de origen."
     },
     {
@@ -7475,12 +7475,12 @@ window.SERUMS_DATA = {
       "statement": "Durante el proceso de inscripción, un postulante completa sus datos en el sistema de la Evaluación SERUMS.",
       "question": "¿A quién corresponde verificar la exactitud de los datos consignados en la inscripción?",
       "options": [
-        "Al propio postulante",
         "Al establecimiento de destino",
         "Únicamente al comité de la sede regional",
-        "A MINSA de forma exclusiva, sin intervención del postulante"
+        "A MINSA de forma exclusiva, sin intervención del postulante",
+        "Al propio postulante"
       ],
-      "correct": 0,
+      "correct": 3,
       "feedback": "Correcta porque la Directiva 386 asigna al postulante la responsabilidad de verificar la exactitud de sus datos de inscripción; las instancias regionales y MINSA administran el proceso, pero no sustituyen esa responsabilidad individual."
     },
     {
@@ -7498,12 +7498,12 @@ window.SERUMS_DATA = {
       "statement": "Un postulante consulta bajo qué norma se rige actualmente la adjudicación de plazas del proceso SERUMS.",
       "question": "¿Qué norma modifica el Reglamento de la Ley SERUMS respecto a las condiciones de adjudicación?",
       "options": [
-        "RM 617-2026-MINSA",
-        "NTS 249-MINSA/DGAIN-2026",
+        "RM 147-2026-MINSA",
         "Directiva Administrativa 386-MINSA/DIGEP-2026",
-        "RM 147-2026-MINSA"
+        "NTS 249-MINSA/DGAIN-2026",
+        "RM 617-2026-MINSA"
       ],
-      "correct": 0,
+      "correct": 3,
       "feedback": "Correcta porque la RM 617-2026-MINSA es la norma que modifica el Reglamento de la Ley SERUMS en lo referido a las condiciones generales y reglas de adjudicación de plaza."
     },
     {
@@ -7521,12 +7521,12 @@ window.SERUMS_DATA = {
       "statement": "Se publica una modificación al Reglamento de la Ley SERUMS mientras un proceso de adjudicación se encuentra en curso.",
       "question": "¿A quiénes afecta directamente esta modificación reglamentaria?",
       "options": [
-        "Solo a los postulantes de años anteriores",
         "Las condiciones y reglas vigentes del proceso actual de adjudicación",
-        "Únicamente al personal de salud ya contratado",
-        "Solo a los establecimientos privados"
+        "Solo a los establecimientos privados",
+        "Solo a los postulantes de años anteriores",
+        "Únicamente al personal de salud ya contratado"
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Correcta porque una modificación al reglamento rige sobre las condiciones y reglas del proceso de adjudicación vigente al momento de su publicación, no se limita a procesos pasados ni a establecimientos privados."
     },
     {
@@ -7545,8 +7545,8 @@ window.SERUMS_DATA = {
       "question": "¿Qué formaliza la RM 379-2026-MINSA?",
       "options": [
         "El inicio oficial de actividades del proceso SERUMS 2026-I",
-        "La certificación de discapacidad",
         "El listado de nuevas plazas disponibles",
+        "La certificación de discapacidad",
         "El manejo sindrómico de ITS"
       ],
       "correct": 0,
@@ -7590,12 +7590,12 @@ window.SERUMS_DATA = {
       "statement": "Un establecimiento ofrece atención remota a la población de su jurisdicción a través de distintas modalidades de telesalud.",
       "question": "¿En qué se diferencia la teleorientación de la teleconsulta?",
       "options": [
+        "Reemplaza la atención presencial en situaciones de emergencia",
         "Es un espacio de información y consejería, sin acto médico diagnóstico definitivo",
         "Implica siempre prescripción farmacológica",
-        "Solo puede ser realizada por especialistas",
-        "Reemplaza la atención presencial en situaciones de emergencia"
+        "Solo puede ser realizada por especialistas"
       ],
-      "correct": 0,
+      "correct": 1,
       "feedback": "Correcta porque la teleorientación brinda información y consejería sin constituir un acto médico diagnóstico definitivo, a diferencia de la teleconsulta; no implica prescripción obligatoria ni reemplaza la atención presencial en emergencias."
     },
     {
@@ -7614,11 +7614,11 @@ window.SERUMS_DATA = {
       "question": "¿Qué fase del proceso analítico se ve comprometida y qué conducta corresponde?",
       "options": [
         "Fase postanalítica; informar el resultado con nota aclaratoria",
-        "Fase preanalítica; rechazar la muestra y solicitar nueva toma",
         "Fase analítica; recalibrar el equipo antes de continuar",
+        "Fase preanalítica; rechazar la muestra y solicitar nueva toma",
         "Ninguna fase se afecta; el resultado es válido"
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Correcta porque la hemólisis es un error de fase preanalítica (toma o manejo inadecuado de la muestra) que altera múltiples analitos; el procedimiento correcto es rechazar la muestra y solicitar una nueva extracción."
     },
     {
@@ -7636,12 +7636,12 @@ window.SERUMS_DATA = {
       "statement": "En el laboratorio se generan tubos de muestra usados, guantes descartables y torundas con sangre.",
       "question": "¿Cómo deben clasificarse y disponerse estos residuos según la normativa de gestión de residuos sólidos hospitalarios?",
       "options": [
-        "Residuo común, bolsa negra",
-        "Residuo biocontaminado clase A, bolsa roja con símbolo de bioseguridad",
         "Residuo especial, contenedor rígido amarillo",
-        "Residuo reciclable, bolsa verde"
+        "Residuo reciclable, bolsa verde",
+        "Residuo común, bolsa negra",
+        "Residuo biocontaminado clase A, bolsa roja con símbolo de bioseguridad"
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Correcta porque el material con fluidos biológicos corresponde a residuo biocontaminado clase A, que se dispone en bolsa roja rotulada con el símbolo de riesgo biológico, diferenciándolo del residuo común y del especial (químico/farmacéutico)."
     },
     {
@@ -7659,12 +7659,12 @@ window.SERUMS_DATA = {
       "statement": "Un establecimiento de primer nivel deriva muestras a un laboratorio de referencia para procesamiento especializado.",
       "question": "¿Qué elemento es indispensable para garantizar la trazabilidad de la muestra durante su transporte?",
       "options": [
-        "El color del tubo únicamente",
         "La cadena de custodia documentada (identificación, tiempos, responsables y condiciones de transporte)",
+        "El color del tubo únicamente",
         "El nombre del médico tratante en el tubo",
         "La firma del paciente en el tubo"
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Correcta porque la cadena de custodia documentada asegura la trazabilidad e integridad de la muestra desde la toma hasta el resultado, requisito de control de calidad interno en la referencia entre establecimientos."
     },
     {
@@ -7682,12 +7682,12 @@ window.SERUMS_DATA = {
       "statement": "Paciente de 35 años acude por dolor lumbar de 3 días tras cargar peso, sin irradiación, sin déficit neurológico ni signos de alarma.",
       "question": "¿Cuál es el manejo fisioterapéutico inicial más apropiado en el primer nivel de atención?",
       "options": [
-        "Reposo absoluto en cama por 2 semanas",
-        "Educación postural, mantenerse activo y ejercicios de movilidad gradual",
         "Derivación inmediata a resonancia magnética",
-        "Inmovilización con faja lumbar permanente"
+        "Reposo absoluto en cama por 2 semanas",
+        "Inmovilización con faja lumbar permanente",
+        "Educación postural, mantenerse activo y ejercicios de movilidad gradual"
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Correcta porque en lumbalgia mecánica sin signos de alarma la evidencia recomienda mantener actividad, educación postural y ejercicio gradual; el reposo prolongado y la inmovilización permanente retrasan la recuperación."
     },
     {
@@ -7705,9 +7705,9 @@ window.SERUMS_DATA = {
       "statement": "Paciente con hemiparesia derecha tras un ACV isquémico hace 3 semanas inicia terapia física ambulatoria.",
       "question": "¿Qué instrumento es el más adecuado para evaluar el nivel de independencia funcional en actividades básicas de la vida diaria?",
       "options": [
-        "Escala de Glasgow",
-        "Índice de Barthel",
         "Escala de Braden",
+        "Índice de Barthel",
+        "Escala de Glasgow",
         "Mini Mental State Examination"
       ],
       "correct": 1,
@@ -7728,12 +7728,12 @@ window.SERUMS_DATA = {
       "statement": "Un paciente que recibió terapia física en un hospital de referencia regresa a su establecimiento de origen para continuar el tratamiento.",
       "question": "¿Qué documento garantiza la continuidad adecuada del plan terapéutico entre ambos niveles de atención?",
       "options": [
-        "La hoja de contrarreferencia con el resumen del plan y evolución",
-        "Solo el carné de citas del paciente",
         "Una llamada telefónica informal entre terapeutas",
+        "Solo el carné de citas del paciente",
+        "La hoja de contrarreferencia con el resumen del plan y evolución",
         "No se requiere documento si el paciente recuerda el tratamiento"
       ],
-      "correct": 0,
+      "correct": 2,
       "feedback": "Correcta porque la hoja de contrarreferencia formaliza y documenta el resumen clínico y el plan terapéutico, asegurando la continuidad del cuidado entre niveles de atención."
     },
     {
@@ -7751,12 +7751,12 @@ window.SERUMS_DATA = {
       "statement": "En el control de crecimiento y desarrollo, una madre refiere que su hijo de 3 años aún no combina palabras en frases simples.",
       "question": "¿Qué conducta corresponde según los hitos esperados del desarrollo del lenguaje?",
       "options": [
-        "Es una variación normal, no requiere evaluación",
         "Referir para evaluación especializada del lenguaje, ya que a esa edad se espera el uso de frases de 2-3 palabras",
-        "Esperar hasta los 5 años para evaluar",
-        "Indicar únicamente estimulación en casa sin derivación"
+        "Es una variación normal, no requiere evaluación",
+        "Indicar únicamente estimulación en casa sin derivación",
+        "Esperar hasta los 5 años para evaluar"
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Correcta porque a los 3 años se espera la combinación de palabras en frases simples; la ausencia de este hito amerita evaluación especializada oportuna, no solo observación domiciliaria."
     },
     {
@@ -7774,12 +7774,12 @@ window.SERUMS_DATA = {
       "statement": "Un adulto mayor con ACV reciente presenta tos durante la ingesta de líquidos y voz húmeda tras deglutir.",
       "question": "¿Qué indica este cuadro clínico y cuál es la conducta inmediata?",
       "options": [
-        "Signo de disfagia con riesgo de broncoaspiración; suspender vía oral y evaluar deglución especializada",
-        "Es normal en el adulto mayor, continuar alimentación habitual",
+        "Requiere solo cambio de posición al comer, sin evaluación adicional",
         "Indica reflujo gastroesofágico, indicar antiácidos",
-        "Requiere solo cambio de posición al comer, sin evaluación adicional"
+        "Signo de disfagia con riesgo de broncoaspiración; suspender vía oral y evaluar deglución especializada",
+        "Es normal en el adulto mayor, continuar alimentación habitual"
       ],
-      "correct": 0,
+      "correct": 2,
       "feedback": "Correcta porque la tos y voz húmeda post-deglución son signos de alarma de disfagia con riesgo de broncoaspiración, que exigen suspender la vía oral y una evaluación especializada de la deglución antes de reiniciarla."
     },
     {
@@ -7797,12 +7797,12 @@ window.SERUMS_DATA = {
       "statement": "El establecimiento de primer nivel implementa tamizajes de lenguaje dentro del control CRED (Crecimiento y Desarrollo).",
       "question": "¿Cuál es el principal beneficio de la detección temprana de trastornos de comunicación en este nivel de atención?",
       "options": [
+        "Aumentar el número de derivaciones especializadas sin otro beneficio",
         "Reducir costos administrativos del establecimiento",
         "Permitir intervención oportuna que mejora el pronóstico del desarrollo del lenguaje y aprendizaje",
-        "Aumentar el número de derivaciones especializadas sin otro beneficio",
         "Sustituir la evaluación especializada posterior"
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Correcta porque la detección temprana en el primer nivel permite iniciar intervención oportuna, lo cual mejora el pronóstico del desarrollo lingüístico y del aprendizaje posterior."
     },
     {
@@ -7820,12 +7820,12 @@ window.SERUMS_DATA = {
       "statement": "En una campaña escolar, un niño de 7 años presenta agudeza visual de 20/40 en el ojo izquierdo y 20/20 en el derecho, sin síntomas referidos.",
       "question": "¿Cuál es la conducta más apropiada?",
       "options": [
-        "No requiere seguimiento por ser asintomático",
         "Derivar a evaluación oftalmológica para descartar ambliopía",
+        "Repetir el tamizaje en un año sin derivar",
         "Indicar solo lentes correctivos sin derivación",
-        "Repetir el tamizaje en un año sin derivar"
+        "No requiere seguimiento por ser asintomático"
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Correcta porque la diferencia de agudeza visual entre ambos ojos en edad escolar es un signo de alarma para ambliopía, que debe derivarse oportunamente ya que su tratamiento es más efectivo cuanto antes se detecta."
     },
     {
@@ -7843,12 +7843,12 @@ window.SERUMS_DATA = {
       "statement": "Un paciente de 55 años acude por control de rutina y refiere pérdida progresiva de la visión periférica, sin dolor.",
       "question": "¿Qué hallazgo debe hacer sospechar glaucoma y motivar derivación urgente?",
       "options": [
-        "Pérdida de visión periférica progresiva asociada a posible aumento de la presión intraocular",
         "Visión borrosa transitoria tras leer largo tiempo",
-        "Sequedad ocular leve",
-        "Enrojecimiento ocular por alergia estacional"
+        "Pérdida de visión periférica progresiva asociada a posible aumento de la presión intraocular",
+        "Enrojecimiento ocular por alergia estacional",
+        "Sequedad ocular leve"
       ],
-      "correct": 0,
+      "correct": 1,
       "feedback": "Correcta porque la pérdida progresiva e indolora del campo visual periférico es característica del glaucoma crónico, que requiere derivación oftalmológica para confirmar presión intraocular elevada y daño del nervio óptico."
     },
     {
@@ -7866,12 +7866,12 @@ window.SERUMS_DATA = {
       "statement": "El establecimiento de salud implementa un programa de tamizaje visual dirigido a adultos mayores de 40 años.",
       "question": "¿Cuál es el objetivo principal de este tipo de programas preventivos en salud ocular?",
       "options": [
-        "Vender lentes correctivos a la población",
-        "Detectar oportunamente patologías prevalentes (catarata, glaucoma, retinopatía) para reducir la ceguera evitable",
         "Sustituir la atención oftalmológica especializada",
-        "Cumplir metas administrativas sin impacto clínico"
+        "Cumplir metas administrativas sin impacto clínico",
+        "Detectar oportunamente patologías prevalentes (catarata, glaucoma, retinopatía) para reducir la ceguera evitable",
+        "Vender lentes correctivos a la población"
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Correcta porque los programas de tamizaje visual buscan la detección oportuna de patologías oculares prevalentes para reducir la ceguera evitable, articulándose con—y no sustituyendo—la atención especializada."
     },
     {
@@ -7890,9 +7890,9 @@ window.SERUMS_DATA = {
       "question": "¿Qué principio guía la reducción de la dosis de radiación al mínimo necesario sin comprometer la calidad diagnóstica?",
       "options": [
         "Principio ALARA (As Low As Reasonably Achievable)",
-        "Principio de precaución absoluta, evitando el estudio",
+        "Principio de doble exposición para confirmar hallazgos",
         "Principio de máxima dosis diagnóstica",
-        "Principio de doble exposición para confirmar hallazgos"
+        "Principio de precaución absoluta, evitando el estudio"
       ],
       "correct": 0,
       "feedback": "Correcta porque el principio ALARA establece mantener la dosis de radiación tan baja como sea razonablemente posible, sin sacrificar la calidad diagnóstica necesaria del estudio."
@@ -7913,11 +7913,11 @@ window.SERUMS_DATA = {
       "question": "¿Qué criterio debe primar para justificar la derivación a un estudio de imagen de mayor complejidad?",
       "options": [
         "La preferencia del paciente por un estudio más moderno",
-        "La pertinencia clínica según hallazgos y disponibilidad tecnológica del nivel de atención",
         "La disponibilidad de tiempo del tecnólogo",
-        "El costo más bajo del estudio, independiente de la indicación clínica"
+        "El costo más bajo del estudio, independiente de la indicación clínica",
+        "La pertinencia clínica según hallazgos y disponibilidad tecnológica del nivel de atención"
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Correcta porque la derivación a estudios de mayor complejidad debe basarse en la pertinencia clínica de los hallazgos y en la capacidad resolutiva del nivel de atención, no en preferencias o criterios ajenos a la indicación médica."
     },
     {
@@ -7935,12 +7935,12 @@ window.SERUMS_DATA = {
       "statement": "Un paciente será sometido a una tomografía abdominal con medio de contraste yodado endovenoso.",
       "question": "¿Qué debe verificarse prioritariamente antes de administrar el contraste?",
       "options": [
-        "Antecedente de alergia al yodo y función renal del paciente",
-        "Únicamente el ayuno de 2 horas",
+        "La talla del paciente exclusivamente",
         "El color de piel del paciente",
-        "La talla del paciente exclusivamente"
+        "Antecedente de alergia al yodo y función renal del paciente",
+        "Únicamente el ayuno de 2 horas"
       ],
-      "correct": 0,
+      "correct": 2,
       "feedback": "Correcta porque antes de administrar contraste yodado debe descartarse alergia previa e insuficiencia renal, dado el riesgo de reacción anafiláctica y nefropatía inducida por contraste."
     },
     {
@@ -7958,12 +7958,12 @@ window.SERUMS_DATA = {
       "statement": "Un adulto mayor con artrosis de manos refiere dificultad progresiva para vestirse y cocinar de forma independiente.",
       "question": "¿Cuál es el enfoque principal de la intervención de terapia ocupacional en este caso?",
       "options": [
-        "Entrenar estrategias compensatorias y adaptar el entorno para mantener la mayor independencia posible en las AVD",
         "Indicar reposo absoluto de las manos",
+        "Recomendar que un familiar realice todas las actividades por el paciente",
         "Derivar directamente a cuidados paliativos",
-        "Recomendar que un familiar realice todas las actividades por el paciente"
+        "Entrenar estrategias compensatorias y adaptar el entorno para mantener la mayor independencia posible en las AVD"
       ],
-      "correct": 0,
+      "correct": 3,
       "feedback": "Correcta porque la terapia ocupacional busca preservar la autonomía funcional mediante estrategias compensatorias y adaptaciones del entorno, evitando tanto la inmovilización innecesaria como la dependencia total de terceros."
     },
     {
@@ -8003,12 +8003,12 @@ window.SERUMS_DATA = {
       "statement": "En un establecimiento de rehabilitación, el terapeuta ocupacional participa en la elaboración del plan de atención de un paciente con discapacidad múltiple.",
       "question": "¿Qué característica debe tener este plan para ser efectivo?",
       "options": [
-        "Ser elaborado de forma aislada por cada profesional sin coordinación",
-        "Ser integrado y consensuado con el equipo interdisciplinario, con metas comunes centradas en el paciente",
+        "Basarse solo en la opinión del familiar responsable",
         "Priorizar únicamente los objetivos administrativos del establecimiento",
-        "Basarse solo en la opinión del familiar responsable"
+        "Ser integrado y consensuado con el equipo interdisciplinario, con metas comunes centradas en el paciente",
+        "Ser elaborado de forma aislada por cada profesional sin coordinación"
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Correcta porque un plan de intervención efectivo debe ser interdisciplinario, consensuado y centrado en metas comunes orientadas al paciente, evitando la fragmentación de la atención."
     },
     {
@@ -8026,12 +8026,12 @@ window.SERUMS_DATA = {
       "statement": "En una localidad rural se realiza el monitoreo de cloro residual libre en el agua distribuida por la red pública.",
       "question": "¿Cuál es el rango de cloro residual libre considerado adecuado para garantizar la desinfección sin riesgo para el consumo humano?",
       "options": [
-        "0.0 mg/L",
         "0.5 a 1.0 mg/L",
         "5.0 a 10.0 mg/L",
-        "No se requiere monitoreo si la fuente es subterránea"
+        "No se requiere monitoreo si la fuente es subterránea",
+        "0.0 mg/L"
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Correcta porque el rango de 0.5 a 1.0 mg/L de cloro residual libre garantiza la desinfección efectiva del agua sin representar riesgo para la salud, mientras que niveles insuficientes o excesivos comprometen la calidad o la seguridad del consumo."
     },
     {
@@ -8049,10 +8049,10 @@ window.SERUMS_DATA = {
       "statement": "Un establecimiento de salud requiere organizar la segregación de sus residuos sólidos según su naturaleza.",
       "question": "¿Cuál es el criterio correcto de clasificación de residuos sólidos hospitalarios?",
       "options": [
-        "Solo se clasifican en orgánicos e inorgánicos",
+        "La clasificación depende únicamente del volumen generado",
         "Se clasifican en biocontaminados, especiales y comunes, cada uno con su propio circuito de manejo",
         "Todo residuo se trata como peligroso independientemente de su origen",
-        "La clasificación depende únicamente del volumen generado"
+        "Solo se clasifican en orgánicos e inorgánicos"
       ],
       "correct": 1,
       "feedback": "Correcta porque la normativa de gestión de residuos sólidos hospitalarios establece tres categorías (biocontaminados, especiales y comunes), cada una con un circuito de manejo, almacenamiento y disposición diferenciado."
@@ -8072,12 +8072,12 @@ window.SERUMS_DATA = {
       "statement": "En una comunidad rural sin sistema de red pública, la población consume agua de pozo sin tratamiento previo.",
       "question": "¿Cuál es la intervención prioritaria del ingeniero sanitario en este contexto?",
       "options": [
-        "Recomendar el consumo directo sin intervención",
         "Evaluar la calidad del agua y promover métodos de desinfección domiciliaria (cloración, hervido) mientras se gestiona infraestructura",
+        "Recomendar el consumo directo sin intervención",
         "Prohibir el consumo de agua sin ofrecer alternativa",
         "Derivar el problema exclusivamente al gobierno central sin intervención local"
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Correcta porque, ante la ausencia de red tratada, la intervención prioritaria es evaluar la calidad del agua y promover medidas de desinfección domiciliaria como medida inmediata, mientras se gestiona una solución de infraestructura a mediano plazo."
     },
     {
@@ -8095,10 +8095,10 @@ window.SERUMS_DATA = {
       "statement": "En un brote de diarrea aguda en una comunidad, se envían muestras al laboratorio para determinar el agente etiológico.",
       "question": "¿Cuál es el primer paso metodológico para la identificación confiable del agente causal?",
       "options": [
-        "Aplicar tratamiento empírico sin identificar el agente",
+        "Descartar la investigación si los síntomas ya cedieron",
         "Realizar cultivo y pruebas bioquímicas/moleculares a partir de una muestra correctamente recolectada",
         "Basarse únicamente en la sintomatología reportada",
-        "Descartar la investigación si los síntomas ya cedieron"
+        "Aplicar tratamiento empírico sin identificar el agente"
       ],
       "correct": 1,
       "feedback": "Correcta porque la identificación confiable del agente causal requiere una muestra adecuadamente recolectada y su procesamiento mediante cultivo y pruebas bioquímicas o moleculares, no basta la sola sintomatología clínica."
@@ -8118,12 +8118,12 @@ window.SERUMS_DATA = {
       "statement": "En una zona con transmisión activa de dengue, el biólogo realiza vigilancia entomológica para estimar el índice aédico.",
       "question": "¿Qué representa el índice aédico y por qué es relevante en salud pública?",
       "options": [
-        "El número de casos confirmados de dengue en la semana",
-        "La proporción de viviendas con presencia de criaderos del vector, usada para estimar riesgo de transmisión",
+        "El número de defunciones asociadas al dengue",
         "La cantidad de fumigaciones realizadas",
-        "El número de defunciones asociadas al dengue"
+        "El número de casos confirmados de dengue en la semana",
+        "La proporción de viviendas con presencia de criaderos del vector, usada para estimar riesgo de transmisión"
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Correcta porque el índice aédico mide la proporción de viviendas infestadas con criaderos del vector, permitiendo estimar el riesgo de transmisión y orientar las medidas de control vectorial."
     },
     {
@@ -8141,12 +8141,12 @@ window.SERUMS_DATA = {
       "statement": "Un biólogo procesa muestras potencialmente infecciosas en el laboratorio de un establecimiento de salud.",
       "question": "¿Qué medida de bioseguridad es indispensable para minimizar el riesgo de exposición ocupacional?",
       "options": [
-        "Trabajar sin equipo de protección si la muestra parece de bajo riesgo",
         "Uso de equipo de protección personal y cabina de bioseguridad según el nivel de riesgo del agente",
         "Procesar todas las muestras en un mismo espacio sin distinción de riesgo",
+        "Trabajar sin equipo de protección si la muestra parece de bajo riesgo",
         "Delegar el manejo de muestras a personal no capacitado para ahorrar tiempo"
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Correcta porque el manejo seguro de muestras biológicas exige equipo de protección personal y, según el nivel de riesgo del agente, cabina de bioseguridad adecuada, minimizando la exposición ocupacional."
     },
     {
@@ -8165,11 +8165,11 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta correcta desde el enfoque de salud pública veterinaria?",
       "options": [
         "No requiere seguimiento si la herida es superficial",
-        "Notificar el caso, iniciar profilaxis antirrábica según protocolo y realizar seguimiento del animal agresor si es posible",
+        "Indicar solo antibiótico tópico sin notificación",
         "Sacrificar al animal de inmediato sin observación",
-        "Indicar solo antibiótico tópico sin notificación"
+        "Notificar el caso, iniciar profilaxis antirrábica según protocolo y realizar seguimiento del animal agresor si es posible"
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Correcta porque ante una mordedura de perro con estado vacunal desconocido corresponde notificar el caso, iniciar profilaxis antirrábica según el protocolo vigente y, de ser posible, realizar seguimiento u observación del animal agresor durante 10 días."
     },
     {
@@ -8187,12 +8187,12 @@ window.SERUMS_DATA = {
       "statement": "En una zona ganadera se detectan casos humanos de brucelosis asociados al consumo de productos lácteos no pasteurizados.",
       "question": "¿Cuál es la medida de control más efectiva a nivel poblacional?",
       "options": [
-        "Tratar solo a los casos humanos confirmados",
         "Promover la pasteurización de lácteos y coordinar el diagnóstico/control del ganado infectado con el sector agropecuario",
+        "Tratar solo a los casos humanos confirmados",
         "Prohibir el consumo de todo producto animal de forma permanente",
         "Esperar a que los casos disminuyan espontáneamente"
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Correcta porque el control efectivo de la brucelosis requiere un abordaje intersectorial: promover la pasteurización de lácteos y coordinar con el sector agropecuario el diagnóstico y control del ganado infectado, enfoque característico de 'Una Salud' (One Health)."
     },
     {
@@ -8234,11 +8234,11 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta correcta del profesional de farmacia según el enfoque de uso racional de medicamentos?",
       "options": [
         "Dispensar el antibiótico solicitado sin más indagación",
-        "No dispensar el antibiótico sin prescripción y orientar al paciente sobre el manejo sintomático y la consulta médica si persisten los síntomas",
         "Recomendar un antibiótico distinto de mayor espectro",
-        "Indicar que se automedique con la dosis que recuerde de tratamientos previos"
+        "Indicar que se automedique con la dosis que recuerde de tratamientos previos",
+        "No dispensar el antibiótico sin prescripción y orientar al paciente sobre el manejo sintomático y la consulta médica si persisten los síntomas"
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Correcta porque el uso racional de medicamentos exige no dispensar antibióticos sin prescripción médica, orientando al paciente hacia manejo sintomático y evaluación médica, dado que el resfrío común es de etiología viral y el uso indebido de antibióticos favorece la resistencia antimicrobiana."
     },
     {
@@ -8256,12 +8256,12 @@ window.SERUMS_DATA = {
       "statement": "Un establecimiento de primer nivel elabora su cuadro básico de medicamentos para el siguiente periodo.",
       "question": "¿Qué documento normativo debe orientar la selección de medicamentos esenciales en este proceso?",
       "options": [
-        "El criterio exclusivo del proveedor farmacéutico",
         "El Petitorio Nacional Único de Medicamentos Esenciales (PNUME)",
         "El listado de medicamentos más vendidos comercialmente",
-        "Las recomendaciones informales del personal de farmacia"
+        "Las recomendaciones informales del personal de farmacia",
+        "El criterio exclusivo del proveedor farmacéutico"
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Correcta porque el PNUME es el documento normativo oficial que orienta la selección de medicamentos esenciales según criterios de eficacia, seguridad y costo-efectividad para los establecimientos de salud."
     },
     {
@@ -8279,12 +8279,12 @@ window.SERUMS_DATA = {
       "statement": "Un paciente presenta una erupción cutánea generalizada tras iniciar un nuevo antihipertensivo prescrito hace 5 días.",
       "question": "¿Cuál es la acción correspondiente desde el sistema de farmacovigilancia?",
       "options": [
+        "Indicar al paciente que suspenda el reporte para no generar alarma",
         "No es necesario reportar si el paciente mejora espontáneamente",
-        "Notificar la sospecha de reacción adversa al sistema de farmacovigilancia, independientemente de la evolución posterior",
         "Reportar solo si la reacción es mortal",
-        "Indicar al paciente que suspenda el reporte para no generar alarma"
+        "Notificar la sospecha de reacción adversa al sistema de farmacovigilancia, independientemente de la evolución posterior"
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Correcta porque toda sospecha de reacción adversa a medicamentos debe notificarse al sistema de farmacovigilancia independientemente de su gravedad o evolución, ya que esta información es clave para la seguridad farmacológica poblacional."
     },
     {
@@ -8303,11 +8303,11 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta más adecuada del profesional de trabajo social junto al equipo de salud?",
       "options": [
         "Imponer el protocolo biomédico estándar desestimando la preferencia cultural",
-        "Facilitar la articulación entre la preferencia cultural de la paciente y la atención segura del parto, promoviendo el enfoque intercultural en salud",
         "Negar la atención institucional si la paciente mantiene su preferencia",
+        "Facilitar la articulación entre la preferencia cultural de la paciente y la atención segura del parto, promoviendo el enfoque intercultural en salud",
         "Ignorar el tema por no ser competencia del establecimiento"
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Correcta porque el enfoque intercultural en salud busca articular las prácticas y preferencias culturales de la paciente (parto vertical, acompañamiento de partera) con la atención segura institucional, sin imponer ni negar la atención."
     },
     {
@@ -8325,12 +8325,12 @@ window.SERUMS_DATA = {
       "statement": "Durante una visita domiciliaria, el trabajador social identifica signos de negligencia en el cuidado de un niño con desnutrición crónica.",
       "question": "¿Cuál es la acción prioritaria del profesional de trabajo social ante este hallazgo?",
       "options": [
-        "Registrar la visita sin acciones adicionales",
-        "Realizar la valoración social de riesgo, articular con el equipo de salud y activar la ruta de protección correspondiente",
         "Retirar al niño del hogar de forma unilateral",
-        "Esperar una segunda visita antes de reportar cualquier hallazgo"
+        "Registrar la visita sin acciones adicionales",
+        "Esperar una segunda visita antes de reportar cualquier hallazgo",
+        "Realizar la valoración social de riesgo, articular con el equipo de salud y activar la ruta de protección correspondiente"
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Correcta porque ante signos de negligencia el trabajador social debe realizar la valoración de riesgo, coordinar con el equipo de salud y activar la ruta de protección establecida (p. ej. DEMUNA/CEM), sin actuar unilateralmente ni omitir el reporte."
     },
     {
@@ -8348,12 +8348,12 @@ window.SERUMS_DATA = {
       "statement": "Se identifica un caso de violencia familiar en una paciente atendida en el establecimiento de salud.",
       "question": "¿Con qué instancia debe articularse prioritariamente el trabajo social para la protección de la víctima?",
       "options": [
-        "Centro de Emergencia Mujer (CEM) u otra instancia de protección correspondiente según el caso",
-        "Solo con la familia del agresor",
         "Ninguna, es un asunto exclusivamente clínico",
-        "Con un medio de comunicación local"
+        "Solo con la familia del agresor",
+        "Con un medio de comunicación local",
+        "Centro de Emergencia Mujer (CEM) u otra instancia de protección correspondiente según el caso"
       ],
-      "correct": 0,
+      "correct": 3,
       "feedback": "Correcta porque el trabajo social debe articularse con las instancias de protección social pertinentes (CEM, DEMUNA, Fiscalía según el caso) para garantizar la protección de la víctima, más allá de la atención clínica inicial."
     },
     {
@@ -8372,11 +8372,11 @@ window.SERUMS_DATA = {
       "question": "¿Qué diagnóstico nutricional corresponde a este hallazgo?",
       "options": [
         "Sobrepeso",
-        "Desnutrición aguda (emaciación)",
         "Talla baja crónica exclusivamente",
-        "Estado nutricional normal"
+        "Estado nutricional normal",
+        "Desnutrición aguda (emaciación)"
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Correcta porque un peso para la talla menor a -2 DE según los patrones de crecimiento de la OMS define desnutrición aguda (emaciación), distinta de la desnutrición crónica (talla/edad) o del sobrepeso."
     },
     {
@@ -8418,11 +8418,11 @@ window.SERUMS_DATA = {
       "question": "¿Qué aspecto debe priorizar la consejería nutricional en esta etapa?",
       "options": [
         "Indicar una dieta hipocalórica estricta para evitar sobrepeso",
-        "Orientar sobre una ganancia de peso adecuada según su IMC pregestacional y una alimentación balanceada con suplementación de ácido fólico/hierro según esquema",
         "Recomendar ayuno prolongado para reducir náuseas",
+        "Orientar sobre una ganancia de peso adecuada según su IMC pregestacional y una alimentación balanceada con suplementación de ácido fólico/hierro según esquema",
         "No brindar consejería hasta el tercer trimestre"
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Correcta porque la consejería nutricional en la gestante debe orientar sobre la ganancia de peso adecuada según su IMC pregestacional, una alimentación balanceada y la suplementación correspondiente (ácido fólico, hierro), evitando restricciones inapropiadas como dietas hipocalóricas o ayuno."
     },
     {
@@ -8440,12 +8440,12 @@ window.SERUMS_DATA = {
       "statement": "En una zona rural sin acceso a equipo odontológico convencional, se identifica una lesión de caries de profundidad moderada en un molar temporal.",
       "question": "¿Qué técnica es la más apropiada para este contexto de recursos limitados?",
       "options": [
-        "Extracción inmediata como única alternativa",
         "Tratamiento Restaurador Atraumático (ART), que permite remover tejido cariado y restaurar con instrumental manual sin electricidad",
         "Posponer el tratamiento indefinidamente hasta contar con equipo convencional",
-        "Aplicar solo flúor tópico sin remover el tejido cariado"
+        "Aplicar solo flúor tópico sin remover el tejido cariado",
+        "Extracción inmediata como única alternativa"
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Correcta porque el ART está diseñado para contextos de recursos limitados, permitiendo la remoción del tejido cariado y la restauración con instrumental manual, sin requerir electricidad ni equipo convencional."
     },
     {
@@ -8463,12 +8463,12 @@ window.SERUMS_DATA = {
       "statement": "Un programa de salud bucal escolar implementa aplicaciones tópicas de flúor en niños de una institución educativa.",
       "question": "¿Cuál es el fundamento principal de esta estrategia preventiva poblacional?",
       "options": [
-        "Reemplazar la necesidad de cepillado dental diario",
-        "Reducir la incidencia de caries dental mediante el fortalecimiento del esmalte, como medida preventiva poblacional costo-efectiva",
         "Sustituir la atención odontológica curativa completamente",
-        "Aplicarse solo en niños que ya presentan caries"
+        "Aplicarse solo en niños que ya presentan caries",
+        "Reducir la incidencia de caries dental mediante el fortalecimiento del esmalte, como medida preventiva poblacional costo-efectiva",
+        "Reemplazar la necesidad de cepillado dental diario"
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Correcta porque la aplicación tópica de flúor en el ámbito escolar es una medida preventiva poblacional costo-efectiva que fortalece el esmalte y reduce la incidencia de caries, sin reemplazar la higiene diaria ni la atención curativa cuando es necesaria."
     },
     {
@@ -8486,12 +8486,12 @@ window.SERUMS_DATA = {
       "statement": "Un paciente acude por dolor dental intenso, edema facial y fiebre, con antecedente de caries no tratada.",
       "question": "¿Cuál es el manejo inicial correcto en el primer nivel de atención ante sospecha de absceso dentoalveolar con compromiso sistémico?",
       "options": [
-        "Indicar solo analgésico y esperar evolución espontánea",
         "Drenaje si es posible, iniciar antibioticoterapia y referir si hay signos de extensión o compromiso sistémico",
-        "Extracción inmediata sin evaluar el estado sistémico del paciente",
-        "Indicar enjuagues bucales exclusivamente"
+        "Indicar solo analgésico y esperar evolución espontánea",
+        "Indicar enjuagues bucales exclusivamente",
+        "Extracción inmediata sin evaluar el estado sistémico del paciente"
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Correcta porque ante un absceso dentoalveolar con edema y fiebre (signos de compromiso sistémico) corresponde drenaje cuando es posible, inicio de antibioticoterapia y referencia oportuna si hay signos de extensión, evitando conductas expectantes o intervenciones sin evaluación sistémica."
     },
     {
@@ -8509,12 +8509,12 @@ window.SERUMS_DATA = {
       "statement": "El laboratorio procesa diariamente un suero control junto con las muestras de pacientes y registra los valores en una gráfica de control.",
       "question": "¿Cuál es el propósito principal de este procedimiento?",
       "options": [
-        "Cumplir un requisito administrativo sin impacto en los resultados",
-        "Detectar variaciones o errores sistemáticos del proceso analítico antes de liberar resultados de pacientes",
         "Reemplazar la calibración periódica del equipo",
-        "Reducir el tiempo de entrega de resultados"
+        "Reducir el tiempo de entrega de resultados",
+        "Detectar variaciones o errores sistemáticos del proceso analítico antes de liberar resultados de pacientes",
+        "Cumplir un requisito administrativo sin impacto en los resultados"
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Correcta porque el control de calidad interno (p. ej. mediante gráficas de Levey-Jennings) permite detectar variaciones o errores sistemáticos del proceso analítico antes de emitir resultados de pacientes, garantizando su confiabilidad."
     },
     {
@@ -8532,10 +8532,10 @@ window.SERUMS_DATA = {
       "statement": "Se obtiene una muestra de sangre arterial para gasometría en un paciente con dificultad respiratoria.",
       "question": "¿Qué condición de manejo de la muestra es indispensable para no alterar el resultado?",
       "options": [
-        "Dejarla a temperatura ambiente sin límite de tiempo",
-        "Evitar burbujas de aire, sellar herméticamente y procesarla en el menor tiempo posible (idealmente en hielo si hay demora)",
         "Agitarla vigorosamente antes de procesar",
-        "Almacenarla varias horas antes del análisis sin refrigeración"
+        "Evitar burbujas de aire, sellar herméticamente y procesarla en el menor tiempo posible (idealmente en hielo si hay demora)",
+        "Almacenarla varias horas antes del análisis sin refrigeración",
+        "Dejarla a temperatura ambiente sin límite de tiempo"
       ],
       "correct": 1,
       "feedback": "Correcta porque la exposición al aire, la demora y la falta de refrigeración alteran los valores de gases en sangre; se debe evitar burbujas, sellar la jeringa y procesar rápidamente, refrigerando si el traslado se prolonga."
@@ -8556,11 +8556,11 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta correcta del tecnólogo médico ante este hallazgo?",
       "options": [
         "Registrar el resultado en el sistema y esperar a que el médico lo revise en su próxima consulta programada",
+        "Descartar el resultado por posible error sin verificarlo",
         "Notificar de inmediato al médico tratante o responsable del establecimiento, dado que es un valor crítico",
-        "Repetir la prueba al día siguiente sin notificar",
-        "Descartar el resultado por posible error sin verificarlo"
+        "Repetir la prueba al día siguiente sin notificar"
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Correcta porque los valores críticos, como una hiperpotasemia severa, requieren notificación inmediata al personal responsable, ya que implican riesgo vital y necesitan intervención oportuna."
     },
     {
@@ -8580,8 +8580,8 @@ window.SERUMS_DATA = {
       "options": [
         "Continuar el plan de ejercicios habitual para lumbalgia mecánica",
         "Suspender el tratamiento fisioterapéutico habitual y derivar de urgencia por sospecha de síndrome de cauda equina",
-        "Indicar reposo en cama por una semana antes de reevaluar",
-        "Aplicar solo terapia con calor local"
+        "Aplicar solo terapia con calor local",
+        "Indicar reposo en cama por una semana antes de reevaluar"
       ],
       "correct": 1,
       "feedback": "Correcta porque la pérdida de control de esfínteres asociada a debilidad progresiva son 'banderas rojas' que sugieren síndrome de cauda equina, una urgencia neuroquirúrgica que exige derivación inmediata, no manejo fisioterapéutico ambulatorio."
@@ -8601,9 +8601,9 @@ window.SERUMS_DATA = {
       "statement": "Un paciente encamado de larga estancia presenta riesgo de desarrollar úlceras por presión.",
       "question": "¿Qué instrumento se utiliza para estratificar este riesgo y orientar las medidas preventivas?",
       "options": [
-        "Escala de Barthel",
-        "Escala de Braden",
         "Escala de Glasgow",
+        "Escala de Braden",
+        "Escala de Barthel",
         "Índice de masa corporal"
       ],
       "correct": 1,
@@ -8624,12 +8624,12 @@ window.SERUMS_DATA = {
       "statement": "En una zona rural sin acceso a centros de rehabilitación especializados, se plantea una estrategia para atender a personas con discapacidad física.",
       "question": "¿Qué estrategia es más costo-efectiva y sostenible en este contexto?",
       "options": [
+        "Limitar la atención solo a quienes puedan pagar transporte privado",
         "Trasladar a todos los pacientes a la capital regional de forma permanente",
-        "Implementar un programa de Rehabilitación Basada en la Comunidad (RBC) con participación de la familia y agentes comunitarios",
         "No intervenir hasta que se construya un hospital especializado",
-        "Limitar la atención solo a quienes puedan pagar transporte privado"
+        "Implementar un programa de Rehabilitación Basada en la Comunidad (RBC) con participación de la familia y agentes comunitarios"
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Correcta porque la Rehabilitación Basada en la Comunidad (RBC) es una estrategia costo-efectiva y sostenible que involucra a la familia y agentes comunitarios, ampliando la cobertura en zonas con acceso limitado a servicios especializados."
     },
     {
@@ -8648,11 +8648,11 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta más apropiada?",
       "options": [
         "Indicar a los padres que corrijan al niño cada vez que tartamudee",
+        "Indicar que hable más lento sin evaluación adicional",
         "Derivar a evaluación especializada en fluidez verbal, evitando presionar o corregir abruptamente al niño",
-        "Esperar hasta la adolescencia para evaluar",
-        "Indicar que hable más lento sin evaluación adicional"
+        "Esperar hasta la adolescencia para evaluar"
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Correcta porque ante signos de tartamudez con tensión física se recomienda derivación especializada oportuna, evitando estrategias que aumenten la ansiedad del niño como la corrección abrupta."
     },
     {
@@ -8670,12 +8670,12 @@ window.SERUMS_DATA = {
       "statement": "Una docente refiere ronquera persistente de 3 semanas, asociada al uso intensivo de la voz en el aula.",
       "question": "¿Cuál es el manejo inicial más adecuado desde terapia del lenguaje?",
       "options": [
+        "No intervenir porque es un problema exclusivamente laboral",
         "Indicar reposo vocal absoluto de forma indefinida sin evaluación",
-        "Evaluar la función vocal, orientar en higiene vocal y técnicas de uso eficiente de la voz, derivando si no hay mejoría",
         "Recomendar que deje de trabajar de forma permanente",
-        "No intervenir porque es un problema exclusivamente laboral"
+        "Evaluar la función vocal, orientar en higiene vocal y técnicas de uso eficiente de la voz, derivando si no hay mejoría"
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Correcta porque ante disfonía persistente corresponde evaluar la función vocal y orientar en higiene y técnica vocal, derivando a otorrinolaringología si no hay mejoría, sin recurrir a reposo vocal indefinido ni cese laboral como primera medida."
     },
     {
@@ -8694,11 +8694,11 @@ window.SERUMS_DATA = {
       "question": "¿Cómo debe organizarse la intervención de terapia del lenguaje en este caso?",
       "options": [
         "De manera aislada, sin coordinar con los otros profesionales",
-        "Articulada con el equipo interdisciplinario, dentro de un plan de intervención integral y consensuado",
         "Solo si los padres lo solicitan explícitamente",
+        "Articulada con el equipo interdisciplinario, dentro de un plan de intervención integral y consensuado",
         "Priorizando exclusivamente el componente motor sobre el comunicativo"
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Correcta porque en casos de discapacidad múltiple la intervención debe articularse dentro de un plan interdisciplinario integral, evitando la fragmentación entre las distintas áreas terapéuticas."
     },
     {
@@ -8716,12 +8716,12 @@ window.SERUMS_DATA = {
       "statement": "Un trabajador de oficina refiere ojos secos, dolor de cabeza y visión borrosa intermitente tras jornadas prolongadas frente a la computadora.",
       "question": "¿Cuál es la orientación inicial más apropiada?",
       "options": [
-        "Indicar el uso continuo de pantallas sin pausas, ya que no representa riesgo",
-        "Recomendar la regla 20-20-20 (pausas visuales), ajuste de brillo/distancia de pantalla y evaluación optométrica si persisten los síntomas",
+        "Indicar suspender el trabajo de forma indefinida",
         "Prescribir lentes de aumento sin evaluación previa",
-        "Indicar suspender el trabajo de forma indefinida"
+        "Indicar el uso continuo de pantallas sin pausas, ya que no representa riesgo",
+        "Recomendar la regla 20-20-20 (pausas visuales), ajuste de brillo/distancia de pantalla y evaluación optométrica si persisten los síntomas"
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Correcta porque la fatiga visual digital (astenopía) se maneja inicialmente con medidas ergonómicas como la regla 20-20-20 y ajuste del entorno de trabajo, derivando a evaluación optométrica si los síntomas persisten."
     },
     {
@@ -8739,12 +8739,12 @@ window.SERUMS_DATA = {
       "statement": "Un paciente con diagnóstico de diabetes mellitus tipo 2 de 5 años de evolución no ha tenido evaluación oftalmológica previa.",
       "question": "¿Cuál es la conducta preventiva correcta en este paciente?",
       "options": [
+        "Indicar únicamente control de glicemia sin evaluación ocular",
         "No requiere evaluación ocular si no refiere síntomas visuales",
-        "Realizar tamizaje de fondo de ojo para detectar retinopatía diabética, dado que puede ser asintomática en etapas iniciales",
         "Esperar a que aparezcan síntomas visuales evidentes antes de evaluar",
-        "Indicar únicamente control de glicemia sin evaluación ocular"
+        "Realizar tamizaje de fondo de ojo para detectar retinopatía diabética, dado que puede ser asintomática en etapas iniciales"
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Correcta porque la retinopatía diabética puede cursar asintomática en etapas iniciales, por lo que el tamizaje periódico de fondo de ojo está indicado en todo paciente diabético, independientemente de la presencia de síntomas visuales."
     },
     {
@@ -8762,12 +8762,12 @@ window.SERUMS_DATA = {
       "statement": "En un establecimiento de primer nivel sin especialista, se evalúa a un paciente con disminución súbita e indolora de la visión en un ojo.",
       "question": "¿Cuál es la conducta correcta desde la gestión de la atención?",
       "options": [
-        "Indicar reposo y control en una semana sin derivar",
         "Derivar de urgencia a oftalmología, dado que la pérdida visual súbita es un signo de alarma",
-        "Recetar lentes correctivos sin evaluación adicional",
-        "Registrar el caso y continuar con la atención programada habitual"
+        "Registrar el caso y continuar con la atención programada habitual",
+        "Indicar reposo y control en una semana sin derivar",
+        "Recetar lentes correctivos sin evaluación adicional"
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Correcta porque la pérdida visual súbita e indolora constituye un signo de alarma (posible oclusión vascular retiniana u otra urgencia oftalmológica) que exige derivación inmediata, no manejo diferido en el primer nivel."
     },
     {
@@ -8785,12 +8785,12 @@ window.SERUMS_DATA = {
       "statement": "Se realiza una radiografía de tórax a un lactante para descartar neumonía.",
       "question": "¿Qué medida es prioritaria para minimizar la exposición radiológica en este paciente?",
       "options": [
-        "Usar la misma técnica y colimación que en un adulto",
         "Ajustar la técnica radiográfica y colimar el haz al área de interés, usando protección gonadal cuando sea posible",
+        "Usar la misma técnica y colimación que en un adulto",
         "Repetir la placa varias veces para asegurar buena calidad de imagen",
         "Omitir la protección radiológica por ser un procedimiento rápido"
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Correcta porque en pacientes pediátricos, más sensibles a la radiación, se debe ajustar la técnica y colimar el haz al área de interés, aplicando protección gonadal cuando corresponda, minimizando la dosis sin comprometer la calidad diagnóstica."
     },
     {
@@ -8808,12 +8808,12 @@ window.SERUMS_DATA = {
       "statement": "Durante una tomografía contrastada, el paciente presenta urticaria generalizada, dificultad respiratoria e hipotensión.",
       "question": "¿Cuál es la conducta inmediata correcta?",
       "options": [
-        "Continuar el estudio para no perder la información diagnóstica",
         "Suspender la administración de contraste de inmediato y activar el protocolo de manejo de reacción anafiláctica",
+        "Continuar el estudio para no perder la información diagnóstica",
         "Esperar a que los síntomas remitan espontáneamente antes de actuar",
         "Solo registrar el evento sin intervención inmediata"
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Correcta porque ante signos de reacción anafiláctica (urticaria, dificultad respiratoria, hipotensión) debe suspenderse de inmediato la administración de contraste y activarse el protocolo de emergencia correspondiente, priorizando la seguridad del paciente sobre completar el estudio."
     },
     {
@@ -8832,9 +8832,9 @@ window.SERUMS_DATA = {
       "question": "¿Qué herramienta es indispensable para este monitoreo?",
       "options": [
         "El uso de un dosímetro personal registrado periódicamente",
-        "Confiar únicamente en la percepción subjetiva de exposición",
+        "No es necesario monitoreo si se usa delantal plomado",
         "Medir la radiación solo si aparecen síntomas",
-        "No es necesario monitoreo si se usa delantal plomado"
+        "Confiar únicamente en la percepción subjetiva de exposición"
       ],
       "correct": 0,
       "feedback": "Correcta porque el dosímetro personal es la herramienta estándar para monitorear de forma objetiva y periódica la exposición ocupacional a la radiación del personal de radiología, complementando —no sustituyendo— el uso de protección plomada."
@@ -8854,10 +8854,10 @@ window.SERUMS_DATA = {
       "statement": "Un adulto mayor con antecedente de caídas previas vive solo en una vivienda con escaleras y baño sin barras de apoyo.",
       "question": "¿Cuál es la intervención de terapia ocupacional más pertinente?",
       "options": [
-        "Recomendar que deje de movilizarse por la vivienda",
+        "Sugerir mudarse sin evaluar primero el entorno actual",
         "Evaluar el entorno domiciliario y proponer adaptaciones (barras de apoyo, iluminación, superficies antideslizantes) para reducir el riesgo de caídas",
-        "Indicar reposo permanente en cama",
-        "Sugerir mudarse sin evaluar primero el entorno actual"
+        "Recomendar que deje de movilizarse por la vivienda",
+        "Indicar reposo permanente en cama"
       ],
       "correct": 1,
       "feedback": "Correcta porque la terapia ocupacional interviene evaluando el entorno domiciliario y proponiendo adaptaciones concretas (barras de apoyo, iluminación adecuada, superficies antideslizantes) para reducir el riesgo de caídas, preservando la autonomía del adulto mayor."
@@ -8877,10 +8877,10 @@ window.SERUMS_DATA = {
       "statement": "Tras evaluar a un paciente con discapacidad, el terapeuta ocupacional debe documentar los hallazgos para sustentar solicitudes de ayudas técnicas.",
       "question": "¿Qué elemento debe contener prioritariamente este informe?",
       "options": [
-        "Solo la opinión personal del terapeuta sin datos objetivos",
+        "Solo el diagnóstico médico, sin datos funcionales",
         "La descripción objetiva del desempeño funcional del paciente en actividades específicas, con base en instrumentos estandarizados",
         "Un resumen genérico sin relación al caso evaluado",
-        "Solo el diagnóstico médico, sin datos funcionales"
+        "Solo la opinión personal del terapeuta sin datos objetivos"
       ],
       "correct": 1,
       "feedback": "Correcta porque el informe de terapia ocupacional debe sustentarse en la descripción objetiva del desempeño funcional del paciente, idealmente con instrumentos estandarizados, ya que de ello depende la pertinencia de las ayudas técnicas solicitadas."
@@ -8901,9 +8901,9 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es el enfoque de intervención más pertinente de terapia ocupacional en este caso?",
       "options": [
         "Enfoque de integración sensorial orientado a mejorar la regulación y participación funcional del niño",
-        "Indicar que el niño no participe en actividades escolares hasta que 'madure'",
         "Enfocarse únicamente en el diagnóstico, sin plan de intervención",
-        "Recomendar aislamiento sensorial completo"
+        "Recomendar aislamiento sensorial completo",
+        "Indicar que el niño no participe en actividades escolares hasta que 'madure'"
       ],
       "correct": 0,
       "feedback": "Correcta porque el enfoque de integración sensorial busca mejorar la regulación sensorial del niño para facilitar su participación funcional en el entorno escolar, en lugar de excluirlo o limitarse al diagnóstico sin intervención."
@@ -8923,12 +8923,12 @@ window.SERUMS_DATA = {
       "statement": "Un establecimiento de salud genera residuos de medicamentos vencidos y reactivos de laboratorio caducados.",
       "question": "¿Cómo deben gestionarse estos residuos según su clasificación?",
       "options": [
-        "Como residuo común, junto con los desechos de cocina",
-        "Como residuo especial, con manejo y disposición diferenciada según su naturaleza química",
         "Incinerarlos en cualquier contenedor disponible dentro del establecimiento",
-        "Verterlos directamente al sistema de alcantarillado"
+        "Como residuo común, junto con los desechos de cocina",
+        "Verterlos directamente al sistema de alcantarillado",
+        "Como residuo especial, con manejo y disposición diferenciada según su naturaleza química"
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Correcta porque los medicamentos vencidos y reactivos caducados se clasifican como residuos especiales, que requieren manejo y disposición diferenciada según su naturaleza química, distinto del circuito de residuos comunes o biocontaminados."
     },
     {
@@ -8946,12 +8946,12 @@ window.SERUMS_DATA = {
       "statement": "En una comunidad con alta incidencia de enfermedades diarreicas agudas, se identifica que la disposición de excretas se realiza a cielo abierto.",
       "question": "¿Cuál es la intervención de ingeniería sanitaria con mayor impacto en la reducción de estos casos?",
       "options": [
-        "Distribuir suero de rehidratación oral únicamente, sin intervenir en saneamiento",
-        "Implementar sistemas adecuados de disposición de excretas (letrinas sanitarias o alcantarillado) junto con promoción de agua segura",
+        "Fumigar la zona sin intervenir en el saneamiento básico",
         "Esperar a que la comunidad resuelva el problema por iniciativa propia",
-        "Fumigar la zona sin intervenir en el saneamiento básico"
+        "Distribuir suero de rehidratación oral únicamente, sin intervenir en saneamiento",
+        "Implementar sistemas adecuados de disposición de excretas (letrinas sanitarias o alcantarillado) junto con promoción de agua segura"
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Correcta porque la disposición inadecuada de excretas es un determinante directo de enfermedades diarreicas; la intervención de mayor impacto es implementar sistemas de saneamiento adecuados junto con la promoción de agua segura, más allá del manejo clínico puntual."
     },
     {
@@ -8969,10 +8969,10 @@ window.SERUMS_DATA = {
       "statement": "Se analiza una muestra de agua de una red comunitaria y se detecta presencia de coliformes fecales.",
       "question": "¿Qué implica este hallazgo desde la vigilancia de la calidad del agua?",
       "options": [
-        "El agua es apta para consumo si no hay quejas de la población",
-        "Indica contaminación fecal y riesgo de transmisión de enfermedades entéricas; el agua no es apta para consumo sin tratamiento",
         "Solo se debe repetir el análisis sin tomar medidas",
-        "Es un hallazgo esperado y no requiere intervención"
+        "Indica contaminación fecal y riesgo de transmisión de enfermedades entéricas; el agua no es apta para consumo sin tratamiento",
+        "Es un hallazgo esperado y no requiere intervención",
+        "El agua es apta para consumo si no hay quejas de la población"
       ],
       "correct": 1,
       "feedback": "Correcta porque la presencia de coliformes fecales indica contaminación de origen fecal y riesgo de transmisión de enfermedades entéricas, por lo que el agua debe considerarse no apta para consumo hasta aplicar el tratamiento correctivo correspondiente."
@@ -8992,12 +8992,12 @@ window.SERUMS_DATA = {
       "statement": "Tras varios ciclos de fumigación, se observa que la población de Aedes aegypti en una zona no disminuye como se esperaba.",
       "question": "¿Qué fenómeno debe investigarse prioritariamente desde el enfoque entomológico?",
       "options": [
+        "Descartar el problema porque el vector no puede desarrollar resistencia",
         "Asumir que la fumigación fue insuficiente en cantidad y repetirla sin más análisis",
         "Evaluar la posible resistencia del vector al insecticida utilizado mediante bioensayos",
-        "Descartar el problema porque el vector no puede desarrollar resistencia",
         "Cambiar de vector de estudio sin justificación técnica"
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Correcta porque ante la persistencia de la población vectorial pese a la fumigación, corresponde evaluar mediante bioensayos la posible resistencia del vector al insecticida empleado, antes de simplemente repetir la misma intervención."
     },
     {
@@ -9015,10 +9015,10 @@ window.SERUMS_DATA = {
       "statement": "Se aplica una prueba rápida serológica con alta sensibilidad pero baja especificidad para tamizaje poblacional de una infección.",
       "question": "¿Qué implicancia tiene esto en la interpretación de los resultados positivos?",
       "options": [
-        "Todo resultado positivo confirma definitivamente la infección",
-        "Un resultado positivo requiere confirmación con una prueba más específica, dado el riesgo de falsos positivos",
         "La prueba no debe usarse en tamizaje poblacional bajo ninguna circunstancia",
-        "La especificidad no influye en la interpretación del resultado"
+        "Un resultado positivo requiere confirmación con una prueba más específica, dado el riesgo de falsos positivos",
+        "La especificidad no influye en la interpretación del resultado",
+        "Todo resultado positivo confirma definitivamente la infección"
       ],
       "correct": 1,
       "feedback": "Correcta porque una prueba con baja especificidad genera más falsos positivos; por ello, todo resultado positivo en tamizaje debe confirmarse con una prueba de mayor especificidad antes de considerarse diagnóstico definitivo."
@@ -9038,12 +9038,12 @@ window.SERUMS_DATA = {
       "statement": "Durante un brote respiratorio, el laboratorio de referencia realiza secuenciación genómica de muestras positivas para identificar variantes circulantes.",
       "question": "¿Cuál es la utilidad principal de la vigilancia genómica en este contexto?",
       "options": [
+        "Determinar el tratamiento individual de cada paciente sin otro criterio clínico",
         "Reemplazar el diagnóstico clínico habitual",
         "Identificar variantes circulantes que orienten decisiones de salud pública (transmisibilidad, respuesta a tratamiento/vacunas)",
-        "Determinar el tratamiento individual de cada paciente sin otro criterio clínico",
         "No tiene utilidad práctica en la respuesta a brotes"
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Correcta porque la vigilancia genómica permite identificar variantes circulantes y orientar decisiones de salud pública sobre transmisibilidad y respuesta a intervenciones, complementando —no reemplazando— el diagnóstico clínico individual."
     },
     {
@@ -9061,12 +9061,12 @@ window.SERUMS_DATA = {
       "statement": "Tras inundaciones en una zona urbano-marginal, se incrementan los casos humanos con fiebre, mialgias e ictericia, en un área con presencia de roedores.",
       "question": "¿Qué enfoque debe orientar la respuesta epidemiológica ante esta sospecha de leptospirosis?",
       "options": [
-        "Manejar el evento exclusivamente desde el sector salud, sin intervenir sobre el vector o reservorio",
-        "Articular vigilancia y control de reservorios (roedores) con el diagnóstico y manejo clínico de los casos humanos",
+        "Descartar la sospecha por no ser una enfermedad frecuente",
         "Esperar la confirmación de todos los casos antes de iniciar cualquier medida de control",
-        "Descartar la sospecha por no ser una enfermedad frecuente"
+        "Articular vigilancia y control de reservorios (roedores) con el diagnóstico y manejo clínico de los casos humanos",
+        "Manejar el evento exclusivamente desde el sector salud, sin intervenir sobre el vector o reservorio"
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Correcta porque el control efectivo de la leptospirosis requiere una respuesta articulada entre la vigilancia y control de reservorios (roedores) y el manejo clínico oportuno de los casos humanos, enfoque característico de las zoonosis."
     },
     {
@@ -9084,10 +9084,10 @@ window.SERUMS_DATA = {
       "statement": "Un examen de orina muestra abundantes leucocitos, bacterias y nitritos positivos en una mujer con disuria.",
       "question": "¿Qué proceso sugiere este patrón de hallazgos?",
       "options": [
-        "Deshidratación simple sin infección",
-        "Infección del tracto urinario",
         "Contaminación de la muestra sin relevancia clínica",
-        "Insuficiencia renal crónica"
+        "Infección del tracto urinario",
+        "Insuficiencia renal crónica",
+        "Deshidratación simple sin infección"
       ],
       "correct": 1,
       "feedback": "Correcta porque la combinación de leucocituria, bacteriuria y nitritos positivos es un patrón característico de infección del tracto urinario, coherente con el cuadro clínico de disuria."
@@ -9107,12 +9107,12 @@ window.SERUMS_DATA = {
       "statement": "Se recibe un lote de reactivos para pruebas serológicas que debe conservarse entre 2 y 8°C.",
       "question": "¿Qué acción es indispensable para garantizar la validez de los resultados obtenidos con estos reactivos?",
       "options": [
+        "Congelarlos para mayor duración",
         "Almacenarlos a temperatura ambiente si el laboratorio no tiene espacio en refrigeradora",
         "Verificar y registrar continuamente la temperatura de conservación, descartando el lote si se rompe la cadena de frío",
-        "Usarlos igual, ajustando manualmente los resultados",
-        "Congelarlos para mayor duración"
+        "Usarlos igual, ajustando manualmente los resultados"
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Correcta porque el mantenimiento verificado y registrado de la cadena de frío es indispensable para la validez de los reactivos; su ruptura obliga a descartar el lote, ya que alterar temperaturas (ambiente o congelación) compromete su estabilidad."
     },
     {
@@ -9130,12 +9130,12 @@ window.SERUMS_DATA = {
       "statement": "Un paciente con EPOC moderada presenta disnea con esfuerzos leves y disminución de su tolerancia al ejercicio.",
       "question": "¿Cuál es el componente central de un programa de rehabilitación pulmonar en este paciente?",
       "options": [
-        "Reposo absoluto para evitar la disnea",
-        "Entrenamiento físico progresivo supervisado combinado con educación y técnicas de conservación de energía",
+        "Evitar cualquier actividad física de forma permanente",
         "Uso exclusivo de oxígeno suplementario sin ejercicio",
-        "Evitar cualquier actividad física de forma permanente"
+        "Entrenamiento físico progresivo supervisado combinado con educación y técnicas de conservación de energía",
+        "Reposo absoluto para evitar la disnea"
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Correcta porque la rehabilitación pulmonar se basa en entrenamiento físico progresivo y supervisado, junto con educación y técnicas de conservación de energía, mejorando la tolerancia al ejercicio; el reposo absoluto empeora el desacondicionamiento."
     },
     {
@@ -9153,12 +9153,12 @@ window.SERUMS_DATA = {
       "statement": "Un paciente con quemaduras en el antebrazo inicia manejo fisioterapéutico tras la fase aguda.",
       "question": "¿Cuál es el objetivo prioritario de la intervención temprana en este caso?",
       "options": [
-        "Inmovilizar completamente la zona hasta la cicatrización total",
-        "Prevenir contracturas y preservar el rango de movimiento articular mediante posicionamiento y movilización temprana",
         "Iniciar ejercicios de fuerza máxima desde el primer día",
-        "Esperar el alta médica completa antes de cualquier intervención"
+        "Esperar el alta médica completa antes de cualquier intervención",
+        "Prevenir contracturas y preservar el rango de movimiento articular mediante posicionamiento y movilización temprana",
+        "Inmovilizar completamente la zona hasta la cicatrización total"
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Correcta porque en quemaduras la movilización temprana y el posicionamiento adecuado previenen contracturas y preservan el rango articular; la inmovilización prolongada favorece precisamente las secuelas que se buscan evitar."
     },
     {
@@ -9176,12 +9176,12 @@ window.SERUMS_DATA = {
       "statement": "Un paciente tras un ACV isquémico presenta dificultad para comprender órdenes simples y para expresar palabras, aunque conserva la movilidad orofacial.",
       "question": "¿Qué tipo de trastorno de la comunicación sugiere este cuadro y qué implica para la intervención?",
       "options": [
-        "Disartria; requiere ejercicios exclusivamente motores orofaciales",
         "Afasia; requiere evaluación del lenguaje (comprensivo y expresivo) para definir un plan terapéutico específico",
         "Disfagia; requiere manejo exclusivo de la deglución",
+        "Disartria; requiere ejercicios exclusivamente motores orofaciales",
         "No requiere intervención si el paciente puede mover la boca con normalidad"
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Correcta porque la dificultad en comprensión y expresión verbal con motricidad orofacial conservada sugiere afasia (trastorno del lenguaje) y no disartria (trastorno motor del habla), por lo que la intervención debe centrarse en la evaluación y rehabilitación del lenguaje."
     },
     {
@@ -9199,12 +9199,12 @@ window.SERUMS_DATA = {
       "statement": "Un niño con parálisis cerebral severa no desarrolla lenguaje oral funcional pese a la terapia, pero comprende el lenguaje dirigido a él.",
       "question": "¿Qué estrategia es la más adecuada para favorecer su participación comunicativa?",
       "options": [
-        "Suspender la intervención al no lograrse el habla oral",
         "Implementar un sistema de Comunicación Aumentativa y Alternativa (CAA) adaptado a sus capacidades motoras y cognitivas",
         "Insistir exclusivamente en ejercicios orales sin otras alternativas",
-        "Esperar a que el lenguaje oral aparezca espontáneamente sin intervención adicional"
+        "Esperar a que el lenguaje oral aparezca espontáneamente sin intervención adicional",
+        "Suspender la intervención al no lograrse el habla oral"
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Correcta porque cuando el lenguaje oral funcional no es alcanzable, la Comunicación Aumentativa y Alternativa (CAA) permite al niño participar comunicativamente usando otros canales (pictogramas, dispositivos), en lugar de insistir únicamente en el habla oral."
     },
     {
@@ -9222,12 +9222,12 @@ window.SERUMS_DATA = {
       "statement": "Un niño de 2 años presenta desviación ocular hacia adentro que los padres notan de forma constante desde hace varios meses.",
       "question": "¿Cuál es la conducta correcta ante este hallazgo?",
       "options": [
+        "No es relevante si el niño no refiere molestias",
         "Esperar hasta los 6 años porque el estrabismo suele resolverse solo",
-        "Derivar oportunamente para evaluación oftalmológica, ya que el estrabismo no tratado puede generar ambliopía irreversible",
         "Indicar parche ocular sin evaluación especializada previa",
-        "No es relevante si el niño no refiere molestias"
+        "Derivar oportunamente para evaluación oftalmológica, ya que el estrabismo no tratado puede generar ambliopía irreversible"
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Correcta porque el estrabismo constante en la infancia requiere derivación oportuna, dado que su persistencia sin tratamiento puede generar ambliopía irreversible; la ventana de tratamiento efectivo se reduce con la edad."
     },
     {
@@ -9245,12 +9245,12 @@ window.SERUMS_DATA = {
       "statement": "En un programa de evaluación visual para conductores profesionales, se detecta un caso con agudeza visual disminuida no corregida.",
       "question": "¿Cuál es la relevancia de salud pública de este hallazgo?",
       "options": [
-        "No tiene relevancia si el conductor refiere manejar bien de memoria",
         "Una agudeza visual inadecuada en conductores incrementa el riesgo de accidentes de tránsito, por lo que amerita corrección antes de continuar la actividad",
+        "No tiene relevancia si el conductor refiere manejar bien de memoria",
         "Solo debe registrarse sin ninguna restricción",
         "Es un tema exclusivamente privado sin relación con la seguridad vial"
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Correcta porque la agudeza visual inadecuada en conductores profesionales constituye un riesgo directo para la seguridad vial, por lo que estos programas de tamizaje buscan la corrección oportuna antes de continuar la actividad conductiva."
     },
     {
@@ -9268,10 +9268,10 @@ window.SERUMS_DATA = {
       "statement": "En el control prenatal de un establecimiento de primer nivel se realiza una ecografía obstétrica básica a una gestante de 20 semanas.",
       "question": "¿Cuál es el objetivo principal de esta ecografía en este nivel de atención?",
       "options": [
-        "Determinar exclusivamente el sexo del bebé",
-        "Confirmar viabilidad, edad gestacional aproximada y descartar hallazgos que requieran derivación a mayor nivel de complejidad",
         "Reemplazar por completo el control prenatal clínico",
-        "Diagnosticar con certeza todas las malformaciones fetales posibles"
+        "Confirmar viabilidad, edad gestacional aproximada y descartar hallazgos que requieran derivación a mayor nivel de complejidad",
+        "Diagnosticar con certeza todas las malformaciones fetales posibles",
+        "Determinar exclusivamente el sexo del bebé"
       ],
       "correct": 1,
       "feedback": "Correcta porque en el primer nivel la ecografía obstétrica básica tiene como objetivo confirmar viabilidad, estimar edad gestacional y detectar hallazgos que ameriten derivación oportuna, sin pretender un diagnóstico ecográfico especializado completo."
@@ -9291,12 +9291,12 @@ window.SERUMS_DATA = {
       "statement": "Un paciente programado para resonancia magnética refiere ser portador de un marcapasos cardiaco.",
       "question": "¿Cuál es la conducta correcta antes de realizar el estudio?",
       "options": [
+        "Reemplazar la resonancia por una radiografía simple sin informar al médico tratante",
         "Proceder con el estudio sin verificar el tipo de dispositivo",
         "Verificar la compatibilidad del dispositivo con el campo magnético (condicional/no condicional a RM) antes de decidir si el estudio puede realizarse",
-        "Retirar el marcapasos temporalmente para el estudio",
-        "Reemplazar la resonancia por una radiografía simple sin informar al médico tratante"
+        "Retirar el marcapasos temporalmente para el estudio"
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Correcta porque no todos los marcapasos son compatibles con el campo magnético de la resonancia; debe verificarse la condición del dispositivo (RM-condicional o no) antes de decidir la realización del estudio, dado el riesgo de daño al dispositivo o al paciente."
     },
     {
@@ -9314,10 +9314,10 @@ window.SERUMS_DATA = {
       "statement": "Una trabajadora que realiza movimientos repetitivos de muñeca refiere hormigueo y dolor nocturno en los dedos pulgar, índice y medio.",
       "question": "¿Cuál es la intervención de terapia ocupacional más pertinente en esta etapa?",
       "options": [
-        "Indicar que continúe la misma actividad sin modificaciones",
+        "No intervenir hasta que aparezca atrofia muscular",
         "Evaluar y modificar factores ergonómicos del puesto de trabajo, junto con férula de reposo nocturna y educación en pausas activas",
         "Recomendar cirugía inmediata sin manejo conservador previo",
-        "No intervenir hasta que aparezca atrofia muscular"
+        "Indicar que continúe la misma actividad sin modificaciones"
       ],
       "correct": 1,
       "feedback": "Correcta porque en etapas iniciales del síndrome del túnel carpiano el manejo conservador —modificación ergonómica, férula de reposo nocturna y pausas activas— es la primera línea de intervención, reservando la cirugía para casos refractarios o avanzados."
@@ -9337,9 +9337,9 @@ window.SERUMS_DATA = {
       "statement": "En una empresa con alta incidencia de trastornos musculoesqueléticos, se solicita una intervención preventiva del terapeuta ocupacional.",
       "question": "¿Cuál es el enfoque más adecuado para esta intervención poblacional?",
       "options": [
-        "Atender solo a los trabajadores que ya presentan síntomas severos",
-        "Realizar un análisis ergonómico de los puestos de trabajo y capacitar en pausas activas y posturas adecuadas de forma preventiva",
         "Recomendar que la empresa contrate personal nuevo en lugar de intervenir",
+        "Realizar un análisis ergonómico de los puestos de trabajo y capacitar en pausas activas y posturas adecuadas de forma preventiva",
+        "Atender solo a los trabajadores que ya presentan síntomas severos",
         "Limitarse a repartir folletos informativos sin evaluación real de los puestos"
       ],
       "correct": 1,
@@ -9360,12 +9360,12 @@ window.SERUMS_DATA = {
       "statement": "En una zona rural andina, las familias cocinan con leña en ambientes cerrados y sin chimenea, con alta incidencia de infecciones respiratorias en niños.",
       "question": "¿Cuál es la intervención de ingeniería sanitaria más pertinente para reducir este riesgo?",
       "options": [
+        "Indicar solo tratamiento médico de las infecciones sin intervenir en el ambiente",
         "Prohibir el uso de leña sin ofrecer alternativa viable",
         "Promover la instalación de cocinas mejoradas con chimenea que reduzcan la exposición al humo intramural",
-        "Indicar solo tratamiento médico de las infecciones sin intervenir en el ambiente",
         "Esperar a que la comunidad adquiera cocinas a gas por cuenta propia"
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Correcta porque la promoción de cocinas mejoradas con chimenea reduce directamente la exposición al humo intramural, principal factor ambiental asociado a la alta incidencia de infecciones respiratorias en estas comunidades."
     },
     {
@@ -9384,11 +9384,11 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la prioridad de ingeniería sanitaria en la respuesta inmediata?",
       "options": [
         "Esperar la reconstrucción completa de la red antes de intervenir",
-        "Garantizar el acceso a agua segura (mediante tratamiento temporal o distribución controlada) y disposición adecuada de excretas en los albergues",
+        "No es un tema de ingeniería sanitaria en situaciones de emergencia",
         "Priorizar únicamente la reconstrucción de viviendas sin atender el saneamiento",
-        "No es un tema de ingeniería sanitaria en situaciones de emergencia"
+        "Garantizar el acceso a agua segura (mediante tratamiento temporal o distribución controlada) y disposición adecuada de excretas en los albergues"
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Correcta porque en la fase de emergencia la prioridad de ingeniería sanitaria es garantizar agua segura y disposición adecuada de excretas en los albergues, medidas críticas para prevenir brotes de enfermedades entéricas en población desplazada."
     },
     {
@@ -9406,12 +9406,12 @@ window.SERUMS_DATA = {
       "statement": "En un examen parasitológico seriado de heces se identifican huevos característicos de Ascaris lumbricoides.",
       "question": "¿Qué implica este hallazgo para el manejo del caso?",
       "options": [
+        "Indica una infección viral, no parasitaria",
         "No requiere tratamiento si el paciente está asintomático",
-        "Confirma la infección y orienta el tratamiento antiparasitario específico según el agente identificado",
         "Se debe repetir el examen indefinidamente sin dar tratamiento",
-        "Indica una infección viral, no parasitaria"
+        "Confirma la infección y orienta el tratamiento antiparasitario específico según el agente identificado"
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Correcta porque la identificación de huevos de Ascaris lumbricoides confirma la infección parasitaria y orienta el tratamiento antiparasitario específico, independientemente de la presencia de síntomas, dado el riesgo de complicaciones y transmisión."
     },
     {
@@ -9429,12 +9429,12 @@ window.SERUMS_DATA = {
       "statement": "Antes de liberar una unidad de sangre para transfusión, el laboratorio realiza tamizaje serológico obligatorio.",
       "question": "¿Cuál es el propósito principal de este tamizaje?",
       "options": [
+        "Confirmar la identidad del donante",
         "Determinar el grupo sanguíneo únicamente",
         "Detectar marcadores de infecciones transmisibles por transfusión (VIH, hepatitis B/C, sífilis, entre otros) antes de liberar la unidad",
-        "Verificar el volumen exacto de la unidad donada",
-        "Confirmar la identidad del donante"
+        "Verificar el volumen exacto de la unidad donada"
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Correcta porque el tamizaje serológico obligatorio en banco de sangre busca detectar marcadores de infecciones transmisibles por transfusión, garantizando la seguridad transfusional antes de liberar cualquier unidad para uso clínico."
     },
     {
@@ -9452,12 +9452,12 @@ window.SERUMS_DATA = {
       "statement": "En una campaña de salud pública se promueve la tenencia responsable de mascotas en una comunidad urbana.",
       "question": "¿Qué componente es esencial en este tipo de estrategias para la prevención de zoonosis?",
       "options": [
+        "Limitar la estrategia a la entrega de folletos informativos",
         "Promover únicamente la alimentación adecuada de las mascotas",
         "Promover la vacunación antirrábica, desparasitación periódica y esterilización para el control poblacional canino/felino",
-        "Limitar la estrategia a la entrega de folletos informativos",
         "No incluir a la comunidad en el diseño de la estrategia"
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Correcta porque la tenencia responsable, orientada a la prevención de zoonosis, integra la vacunación antirrábica, la desparasitación periódica y la esterilización para el control poblacional, más allá de la sola alimentación de las mascotas."
     },
     {
@@ -9475,12 +9475,12 @@ window.SERUMS_DATA = {
       "statement": "En un camal local, el médico veterinario realiza inspección ante-mortem y post-mortem de animales destinados al consumo humano.",
       "question": "¿Cuál es el objetivo principal de esta inspección?",
       "options": [
-        "Verificar el peso comercial del animal exclusivamente",
         "Garantizar la inocuidad de la carne, detectando enfermedades o lesiones que la hagan no apta para el consumo humano",
+        "Verificar el peso comercial del animal exclusivamente",
         "Determinar el precio de venta de la carne",
         "Certificar el origen genético del animal"
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Correcta porque la inspección veterinaria ante-mortem y post-mortem tiene como objetivo garantizar la inocuidad alimentaria, detectando enfermedades o lesiones que comprometan la seguridad de la carne para consumo humano."
     },
     {
@@ -9498,12 +9498,12 @@ window.SERUMS_DATA = {
       "statement": "Un paciente en tratamiento con warfarina solicita en farmacia un antiinflamatorio no esteroideo (AINE) de venta libre para dolor articular.",
       "question": "¿Cuál es la conducta correcta del profesional de farmacia?",
       "options": [
-        "Dispensar el AINE sin advertencia, ya que es de venta libre",
         "Advertir sobre el riesgo de interacción (aumento del riesgo de sangrado) y orientar hacia una alternativa más segura o consulta médica previa",
-        "Indicar que duplique la dosis de warfarina para compensar",
-        "Recomendar suspender la warfarina sin indicación médica"
+        "Recomendar suspender la warfarina sin indicación médica",
+        "Dispensar el AINE sin advertencia, ya que es de venta libre",
+        "Indicar que duplique la dosis de warfarina para compensar"
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Correcta porque los AINE pueden potenciar el efecto anticoagulante de la warfarina y aumentar el riesgo de sangrado; el profesional de farmacia debe advertir esta interacción y orientar hacia una alternativa más segura o la consulta médica previa, sin dispensarlo sin más ni modificar dosis por cuenta propia."
     },
     {
@@ -9521,10 +9521,10 @@ window.SERUMS_DATA = {
       "statement": "En el establecimiento de salud se recibe un lote de vacunas que debe mantenerse entre 2 y 8°C durante todo su almacenamiento y transporte.",
       "question": "¿Qué acción es indispensable si se detecta una interrupción de la cadena de frío durante el transporte?",
       "options": [
-        "Aplicar las vacunas igualmente si no hay otro lote disponible",
+        "Congelar el lote para 'reiniciar' la cadena de frío",
         "Registrar el evento, evaluar según protocolo si el lote es aún utilizable y descartarlo si se compromete su eficacia o seguridad",
         "Ignorar el registro de temperatura si el tiempo de exposición fue breve",
-        "Congelar el lote para 'reiniciar' la cadena de frío"
+        "Aplicar las vacunas igualmente si no hay otro lote disponible"
       ],
       "correct": 1,
       "feedback": "Correcta porque ante una interrupción de la cadena de frío debe registrarse el evento y evaluarse según el protocolo correspondiente si el lote conserva su eficacia y seguridad; de no garantizarse, debe descartarse, sin aplicar vacunas de dudosa integridad ni intentar 'corregir' con congelación."
@@ -9546,8 +9546,8 @@ window.SERUMS_DATA = {
       "options": [
         "Dar de alta al paciente sin más gestión, dejando que resuelva por sí mismo",
         "Realizar la valoración social del caso y activar la ruta de protección social correspondiente para adultos mayores en situación de abandono",
-        "Mantenerlo hospitalizado indefinidamente sin gestionar el caso",
-        "Delegar la responsabilidad exclusivamente al personal de seguridad del establecimiento"
+        "Delegar la responsabilidad exclusivamente al personal de seguridad del establecimiento",
+        "Mantenerlo hospitalizado indefinidamente sin gestionar el caso"
       ],
       "correct": 1,
       "feedback": "Correcta porque ante un caso de abandono de adulto mayor corresponde al trabajo social realizar la valoración social y activar la ruta de protección social pertinente (redes de apoyo, servicios sociales), sin dar de alta sin gestión ni prolongar la hospitalización sin plan de acción."
@@ -9567,9 +9567,9 @@ window.SERUMS_DATA = {
       "statement": "Una familia migrante sin documentación regularizada acude a un establecimiento de salud solicitando atención para un niño enfermo.",
       "question": "¿Cuál es la conducta correcta del trabajo social en este caso?",
       "options": [
-        "Negar la orientación por no contar con documentación regularizada",
-        "Orientar sobre las vías de acceso a la atención de salud disponibles para población migrante, priorizando el derecho a la salud del niño",
         "Derivar el caso a control migratorio antes de brindar cualquier orientación en salud",
+        "Orientar sobre las vías de acceso a la atención de salud disponibles para población migrante, priorizando el derecho a la salud del niño",
+        "Negar la orientación por no contar con documentación regularizada",
         "Condicionar la atención a la regularización previa de la documentación"
       ],
       "correct": 1,
@@ -9591,11 +9591,11 @@ window.SERUMS_DATA = {
       "question": "¿Qué implica este resultado y cuál es la conducta del tecnólogo médico?",
       "options": [
         "Es un valor esperado, no requiere notificación",
-        "Indica riesgo aumentado de sangrado; debe notificarse de inmediato al médico tratante por ser un valor crítico",
+        "El resultado no tiene relevancia clínica si el paciente está asintomático",
         "Se debe repetir la prueba en un mes sin notificar",
-        "El resultado no tiene relevancia clínica si el paciente está asintomático"
+        "Indica riesgo aumentado de sangrado; debe notificarse de inmediato al médico tratante por ser un valor crítico"
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Correcta porque un INR de 5.2, muy por encima del rango terapéutico, implica riesgo aumentado de sangrado y constituye un valor crítico que debe notificarse de inmediato al médico tratante para ajustar la anticoagulación."
     },
     {
@@ -9613,12 +9613,12 @@ window.SERUMS_DATA = {
       "statement": "En una campaña de tamizaje poblacional, un paciente asintomático de 45 años presenta glucosa en ayunas de 130 mg/dL en dos determinaciones distintas.",
       "question": "¿Qué interpretación corresponde a este hallazgo según los criterios estándar de tamizaje?",
       "options": [
-        "Valor normal, no requiere seguimiento",
         "Compatible con diabetes mellitus, por lo que debe derivarse para confirmación diagnóstica y manejo médico",
         "Indica hipoglicemia, requiere ingesta inmediata de azúcar",
-        "Es un error de laboratorio que debe descartarse sin más acción"
+        "Es un error de laboratorio que debe descartarse sin más acción",
+        "Valor normal, no requiere seguimiento"
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Correcta porque una glucosa en ayunas ≥126 mg/dL en dos determinaciones es compatible con diabetes mellitus según los criterios estándar, lo que amerita derivación para confirmación diagnóstica y manejo médico oportuno."
     },
     {
@@ -9636,12 +9636,12 @@ window.SERUMS_DATA = {
       "statement": "Un paciente en el segundo día postoperatorio de reemplazo total de rodilla inicia su programa de terapia física.",
       "question": "¿Cuál es el objetivo prioritario de la intervención en esta etapa temprana?",
       "options": [
-        "Lograr la flexión completa de la rodilla en la primera sesión",
         "Iniciar movilización temprana progresiva y control del dolor/edema para prevenir rigidez articular",
-        "Mantener la rodilla inmovilizada por dos semanas antes de iniciar terapia",
-        "Priorizar únicamente el fortalecimiento muscular intenso desde el primer día"
+        "Priorizar únicamente el fortalecimiento muscular intenso desde el primer día",
+        "Lograr la flexión completa de la rodilla en la primera sesión",
+        "Mantener la rodilla inmovilizada por dos semanas antes de iniciar terapia"
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Correcta porque en el postoperatorio temprano de reemplazo de rodilla se prioriza la movilización progresiva y el control del dolor y edema para prevenir rigidez articular, evitando tanto la inmovilización prolongada como el fortalecimiento intenso prematuro."
     },
     {
@@ -9659,12 +9659,12 @@ window.SERUMS_DATA = {
       "statement": "En un programa de salud escolar se realiza el test de Adams (flexión anterior del tronco) a estudiantes de secundaria.",
       "question": "¿Cuál es el objetivo de este tamizaje?",
       "options": [
-        "Diagnosticar definitivamente la escoliosis sin necesidad de otros estudios",
         "Detectar de forma temprana asimetrías sugestivas de escoliosis que ameriten evaluación especializada con radiografía",
         "Sustituir el control de crecimiento y desarrollo habitual",
-        "Aplicarse solo si el estudiante refiere dolor de espalda"
+        "Aplicarse solo si el estudiante refiere dolor de espalda",
+        "Diagnosticar definitivamente la escoliosis sin necesidad de otros estudios"
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Correcta porque el test de Adams es una herramienta de tamizaje que detecta asimetrías sugestivas de escoliosis, orientando la derivación para confirmación radiológica; no constituye por sí mismo un diagnóstico definitivo."
     },
     {
@@ -9683,11 +9683,11 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta correcta ante este resultado?",
       "options": [
         "Descartar hipoacusia si el niño reacciona a sonidos fuertes en casa",
-        "Referir para una segunda evaluación audiológica confirmatoria dentro de las primeras semanas de vida, dado el impacto de la detección temprana en el desarrollo del lenguaje",
+        "Indicar que el resultado no tiene relevancia si el embarazo fue sin complicaciones",
         "Esperar hasta el año de edad para reevaluar",
-        "Indicar que el resultado no tiene relevancia si el embarazo fue sin complicaciones"
+        "Referir para una segunda evaluación audiológica confirmatoria dentro de las primeras semanas de vida, dado el impacto de la detección temprana en el desarrollo del lenguaje"
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Correcta porque no pasar el tamizaje auditivo neonatal exige una segunda evaluación confirmatoria oportuna, ya que la detección temprana de hipoacusia es crítica para iniciar intervención antes de que se afecte el desarrollo del lenguaje."
     },
     {
@@ -9706,11 +9706,11 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es el enfoque terapéutico más pertinente desde terapia del lenguaje?",
       "options": [
         "Indicar que no hable en público para evitar la vergüenza",
+        "No intervenir porque es un signo esperado e irreversible de la enfermedad",
         "Aplicar un programa de tratamiento de intensidad vocal (como el enfoque LSVT) orientado a mejorar volumen e inteligibilidad",
-        "Recomendar cirugía de cuerdas vocales como primera opción",
-        "No intervenir porque es un signo esperado e irreversible de la enfermedad"
+        "Recomendar cirugía de cuerdas vocales como primera opción"
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Correcta porque en la disartria hipocinética asociada a Parkinson, los programas de tratamiento de intensidad vocal (como el enfoque LSVT) han demostrado mejorar el volumen y la inteligibilidad del habla, siendo la intervención de primera línea desde terapia del lenguaje."
     },
     {
@@ -9730,8 +9730,8 @@ window.SERUMS_DATA = {
       "options": [
         "Es indicativo de cataratas y requiere cirugía inmediata",
         "Es presbicia, proceso fisiológico relacionado con la edad; corresponde evaluación optométrica para prescribir corrección de cerca",
-        "Indica glaucoma y requiere derivación de urgencia",
-        "No tiene relación con la edad y debe descartarse enfermedad neurológica en primer lugar"
+        "No tiene relación con la edad y debe descartarse enfermedad neurológica en primer lugar",
+        "Indica glaucoma y requiere derivación de urgencia"
       ],
       "correct": 1,
       "feedback": "Correcta porque la dificultad progresiva para la visión cercana a partir de los 40-45 años con visión lejana conservada es característica de la presbicia, proceso fisiológico normal que se corrige con lentes adecuados tras evaluación optométrica."
@@ -9751,12 +9751,12 @@ window.SERUMS_DATA = {
       "statement": "Un estudiante universitario refiere cefalea frontal frecuente que se intensifica tras periodos prolongados de lectura.",
       "question": "¿Qué relación se debe descartar prioritariamente desde la evaluación optométrica?",
       "options": [
-        "Un error refractivo no corregido (como astigmatismo o hipermetropía) que genere esfuerzo visual sostenido",
-        "Una migraña sin ninguna relación con la actividad visual",
         "Un problema exclusivamente psicológico sin relación visual",
-        "Deshidratación como única causa posible"
+        "Deshidratación como única causa posible",
+        "Un error refractivo no corregido (como astigmatismo o hipermetropía) que genere esfuerzo visual sostenido",
+        "Una migraña sin ninguna relación con la actividad visual"
       ],
-      "correct": 0,
+      "correct": 2,
       "feedback": "Correcta porque un error refractivo no corregido puede generar esfuerzo visual sostenido (astenopía) que se manifiesta como cefalea relacionada con la actividad de lectura, por lo que la evaluación optométrica debe descartarlo antes de atribuir el síntoma a otras causas."
     },
     {
@@ -9774,12 +9774,12 @@ window.SERUMS_DATA = {
       "statement": "Un paciente ingresa a emergencia tras un accidente de tránsito con dolor abdominal e inestabilidad hemodinámica.",
       "question": "¿Cuál es la utilidad del protocolo FAST (Focused Assessment with Sonography for Trauma) en este contexto?",
       "options": [
-        "Reemplazar por completo la evaluación clínica del paciente",
         "Detectar rápidamente líquido libre intraabdominal sugestivo de hemorragia, orientando la conducta quirúrgica urgente",
         "Confirmar fracturas óseas asociadas al trauma",
+        "Reemplazar por completo la evaluación clínica del paciente",
         "Ser el único estudio necesario antes de decisiones de manejo definitivo"
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Correcta porque el protocolo FAST permite detectar rápidamente líquido libre intraabdominal sugestivo de hemorragia en el paciente politraumatizado inestable, orientando de forma ágil la decisión de manejo quirúrgico urgente, sin reemplazar la evaluación clínica integral."
     },
     {
@@ -9798,11 +9798,11 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es el fundamento de este tamizaje poblacional?",
       "options": [
         "Diagnosticar cáncer de mama solo en mujeres con síntomas evidentes",
+        "Aplicarse únicamente si existe antecedente familiar de cáncer",
         "Detectar lesiones mamarias en etapas tempranas y asintomáticas, mejorando el pronóstico mediante diagnóstico y tratamiento oportuno",
-        "Reemplazar el autoexamen y examen clínico mamario",
-        "Aplicarse únicamente si existe antecedente familiar de cáncer"
+        "Reemplazar el autoexamen y examen clínico mamario"
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Correcta porque el tamizaje mamográfico poblacional busca detectar lesiones en etapas tempranas y asintomáticas, mejorando el pronóstico mediante diagnóstico y tratamiento oportuno, complementando —no reemplazando— el examen clínico mamario."
     },
     {
@@ -9820,12 +9820,12 @@ window.SERUMS_DATA = {
       "statement": "Un paciente con fractura de radio distal es retirado de la inmovilización tras 6 semanas y presenta rigidez y disminución de fuerza en la muñeca.",
       "question": "¿Cuál es el enfoque inicial correcto de la terapia de mano en esta etapa?",
       "options": [
-        "Iniciar ejercicios de fuerza máxima de inmediato",
-        "Iniciar movilización progresiva y suave para recuperar el rango de movimiento antes de avanzar a ejercicios de fortalecimiento",
+        "No intervenir, ya que la rigidez se resuelve espontáneamente",
         "Recomendar reinmovilización por dos semanas adicionales",
-        "No intervenir, ya que la rigidez se resuelve espontáneamente"
+        "Iniciar movilización progresiva y suave para recuperar el rango de movimiento antes de avanzar a ejercicios de fortalecimiento",
+        "Iniciar ejercicios de fuerza máxima de inmediato"
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Correcta porque tras el retiro de la inmovilización se prioriza la recuperación progresiva del rango de movimiento mediante movilización suave, antes de avanzar hacia ejercicios de fortalecimiento, evitando tanto la reinmovilización innecesaria como el ejercicio de fuerza prematuro."
     },
     {
@@ -9844,11 +9844,11 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es el aporte de la terapia ocupacional en este caso?",
       "options": [
         "Prescribir el tratamiento farmacológico del TDAH",
+        "Excluir al niño de actividades grupales para evitar distracciones",
         "Diseñar estrategias de organización, rutinas y autorregulación, adaptando el entorno escolar para favorecer su desempeño",
-        "Recomendar que el niño repita el año escolar como única solución",
-        "Excluir al niño de actividades grupales para evitar distracciones"
+        "Recomendar que el niño repita el año escolar como única solución"
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Correcta porque la terapia ocupacional interviene diseñando estrategias de organización, rutinas y autorregulación, adaptando el entorno escolar para favorecer el desempeño del niño, sin prescribir fármacos ni recurrir a medidas de exclusión."
     },
     {
@@ -9868,8 +9868,8 @@ window.SERUMS_DATA = {
       "options": [
         "No representa riesgo si el río tiene suficiente caudal",
         "Contaminación del agua con potencial transmisión de enfermedades hídricas; se requiere implementar un sistema de tratamiento de aguas residuales antes del vertimiento",
-        "Solo afecta a la fauna acuática, sin relación con la salud humana",
-        "La solución es prohibir el uso del río sin intervenir en el origen del problema"
+        "La solución es prohibir el uso del río sin intervenir en el origen del problema",
+        "Solo afecta a la fauna acuática, sin relación con la salud humana"
       ],
       "correct": 1,
       "feedback": "Correcta porque el vertimiento de aguas residuales sin tratamiento contamina las fuentes de agua utilizadas aguas abajo, con riesgo de enfermedades hídricas; la medida correctiva prioritaria es implementar un sistema de tratamiento adecuado antes del vertimiento."
@@ -9889,12 +9889,12 @@ window.SERUMS_DATA = {
       "statement": "En un mercado municipal se identifica alta presencia de roedores y moscas, con quejas de la población por posibles enfermedades transmitidas.",
       "question": "¿Cuál es el enfoque más adecuado para el control sostenible de esta situación?",
       "options": [
-        "Aplicar fumigación intensiva única sin abordar las causas (manejo de residuos, almacenamiento de alimentos)",
-        "Implementar un manejo integrado de plagas que combine control de residuos, saneamiento del entorno y medidas químicas cuando sea necesario",
         "Ignorar el problema si no hay casos confirmados de enfermedad aún",
-        "Trasladar el mercado sin intervenir en las condiciones sanitarias"
+        "Aplicar fumigación intensiva única sin abordar las causas (manejo de residuos, almacenamiento de alimentos)",
+        "Trasladar el mercado sin intervenir en las condiciones sanitarias",
+        "Implementar un manejo integrado de plagas que combine control de residuos, saneamiento del entorno y medidas químicas cuando sea necesario"
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Correcta porque el control sostenible de plagas urbanas requiere un manejo integrado que combine el saneamiento del entorno (manejo de residuos, almacenamiento adecuado de alimentos) con medidas químicas puntuales, en lugar de depender únicamente de fumigaciones aisladas."
     },
     {
@@ -9914,8 +9914,8 @@ window.SERUMS_DATA = {
       "options": [
         "Considerar el tamizaje como completado y no repetir la toma",
         "Citar a la paciente para repetir la toma de muestra siguiendo la técnica adecuada, ya que una muestra insatisfactoria no permite el tamizaje",
-        "Asumir que el resultado es normal por defecto",
-        "Indicar tratamiento empírico sin repetir el examen"
+        "Indicar tratamiento empírico sin repetir el examen",
+        "Asumir que el resultado es normal por defecto"
       ],
       "correct": 1,
       "feedback": "Correcta porque una muestra insatisfactoria no permite evaluar adecuadamente la citología cervical; corresponde citar a la paciente para repetir la toma siguiendo la técnica correcta, ya que de lo contrario el tamizaje quedaría incompleto."
@@ -9936,11 +9936,11 @@ window.SERUMS_DATA = {
       "question": "¿Qué principio ético y de bioseguridad debe primar en el manejo de estos animales?",
       "options": [
         "Priorizar únicamente el costo de mantenimiento sobre el bienestar animal",
-        "Aplicar los principios de las 3R (Reemplazo, Reducción, Refinamiento) junto con medidas de bioseguridad para el personal y los animales",
+        "Usar la mayor cantidad de animales posible para asegurar resultados",
         "No es necesario ningún protocolo si los animales son de laboratorio",
-        "Usar la mayor cantidad de animales posible para asegurar resultados"
+        "Aplicar los principios de las 3R (Reemplazo, Reducción, Refinamiento) junto con medidas de bioseguridad para el personal y los animales"
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Correcta porque el manejo ético de animales de investigación se rige por los principios de las 3R (Reemplazo, Reducción, Refinamiento), junto con medidas de bioseguridad que protegen tanto a los animales como al personal del bioterio."
     },
     {
@@ -9958,12 +9958,12 @@ window.SERUMS_DATA = {
       "statement": "En una zona de selva se reporta la muerte de varios murciélagos y, posteriormente, un caso humano compatible con rabia sin antecedente de mordedura canina.",
       "question": "¿Qué línea de investigación epidemiológica debe priorizarse?",
       "options": [
-        "Descartar la rabia porque no hubo mordedura de perro",
         "Investigar la posible transmisión por fauna silvestre (murciélagos hematófagos), dado que constituyen un reservorio relevante de rabia en zonas selváticas",
-        "Atribuir el caso a una enfermedad no relacionada sin mayor investigación",
-        "Esperar más casos antes de iniciar cualquier investigación"
+        "Esperar más casos antes de iniciar cualquier investigación",
+        "Descartar la rabia porque no hubo mordedura de perro",
+        "Atribuir el caso a una enfermedad no relacionada sin mayor investigación"
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Correcta porque en zonas selváticas los murciélagos hematófagos son un reservorio relevante de rabia, por lo que ante un caso humano sin antecedente de mordedura canina debe investigarse la posible transmisión por fauna silvestre."
     },
     {
@@ -9982,11 +9982,11 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es el rol del médico veterinario en la investigación de este brote?",
       "options": [
         "No tiene participación, ya que es un tema exclusivo de salud humana",
-        "Investigar el origen animal del producto, las condiciones de producción y manipulación, en coordinación con el equipo de salud pública",
         "Limitarse a sancionar al proveedor sin investigar la causa",
-        "Recomendar el consumo de otros productos lácteos sin investigar el brote"
+        "Recomendar el consumo de otros productos lácteos sin investigar el brote",
+        "Investigar el origen animal del producto, las condiciones de producción y manipulación, en coordinación con el equipo de salud pública"
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Correcta porque el médico veterinario aporta la investigación del origen animal del producto y las condiciones de producción/manipulación, en coordinación con el equipo de salud pública, siendo clave en la investigación de brotes alimentarios de origen animal."
     },
     {
@@ -10004,12 +10004,12 @@ window.SERUMS_DATA = {
       "statement": "Una usuaria solicita en farmacia anticoncepción oral de emergencia tras una relación sexual sin protección ocurrida hace 24 horas.",
       "question": "¿Cuál es la conducta correcta del profesional de farmacia?",
       "options": [
-        "Negar la dispensación por requerir siempre receta médica",
-        "Dispensar el anticonceptivo de emergencia brindando consejería sobre su uso correcto y la importancia de un método anticonceptivo regular",
         "Indicar que espere 72 horas antes de tomarlo para mayor efectividad",
-        "Recomendar duplicar la dosis para mayor seguridad"
+        "Recomendar duplicar la dosis para mayor seguridad",
+        "Dispensar el anticonceptivo de emergencia brindando consejería sobre su uso correcto y la importancia de un método anticonceptivo regular",
+        "Negar la dispensación por requerir siempre receta médica"
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Correcta porque la anticoncepción oral de emergencia debe dispensarse oportunamente (siendo más efectiva cuanto antes se use) con consejería sobre su uso correcto y la importancia de adoptar un método anticonceptivo regular, sin exigir espera ni duplicar dosis."
     },
     {
@@ -10027,12 +10027,12 @@ window.SERUMS_DATA = {
       "statement": "El establecimiento de salud debe administrar el stock de medicamentos opioides sujetos a control especial (estupefacientes).",
       "question": "¿Qué medida de gestión es indispensable para estos medicamentos?",
       "options": [
-        "Almacenarlos junto con el resto de medicamentos sin diferenciación",
         "Mantener un registro de control (kárdex) específico, almacenamiento seguro bajo llave y verificación periódica de existencias",
         "No llevar ningún registro adicional si el volumen es pequeño",
-        "Permitir su dispensación sin receta especial para agilizar la atención"
+        "Permitir su dispensación sin receta especial para agilizar la atención",
+        "Almacenarlos junto con el resto de medicamentos sin diferenciación"
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Correcta porque los medicamentos de control especial requieren un registro específico (kárdex), almacenamiento seguro y verificación periódica de existencias, dado el riesgo de mal uso o desvío, además de exigir receta especial para su dispensación."
     },
     {
@@ -10050,12 +10050,12 @@ window.SERUMS_DATA = {
       "statement": "Una paciente revela durante la consulta que sufre violencia física por parte de su pareja de forma reiterada.",
       "question": "¿Cuál es la acción correspondiente del trabajo social en este caso?",
       "options": [
+        "No intervenir si la paciente no lo solicita explícitamente por escrito",
         "Aconsejar a la paciente que resuelva el problema en el ámbito privado de la pareja",
-        "Activar la ruta de atención a víctimas de violencia (Centro de Emergencia Mujer u otra instancia correspondiente), garantizando confidencialidad y acompañamiento",
         "Notificar directamente a la pareja para que se retracte",
-        "No intervenir si la paciente no lo solicita explícitamente por escrito"
+        "Activar la ruta de atención a víctimas de violencia (Centro de Emergencia Mujer u otra instancia correspondiente), garantizando confidencialidad y acompañamiento"
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Correcta porque ante la revelación de violencia de género corresponde activar la ruta de atención institucional (CEM u otra instancia pertinente), garantizando confidencialidad y acompañamiento a la víctima, sin minimizar el caso ni exigir formalidades que retrasen la protección."
     },
     {
@@ -10074,11 +10074,11 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la gestión prioritaria del trabajo social en este caso?",
       "options": [
         "Indicar que busque financiamiento privado sin más orientación",
-        "Evaluar su elegibilidad y facilitar el trámite de afiliación al Seguro Integral de Salud (SIS) u otra cobertura correspondiente",
         "Negar cualquier posibilidad de atención si no tiene seguro",
+        "Evaluar su elegibilidad y facilitar el trámite de afiliación al Seguro Integral de Salud (SIS) u otra cobertura correspondiente",
         "Aplazar la cirugía de forma indefinida sin gestionar alternativas"
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Correcta porque el trabajo social debe evaluar la elegibilidad del paciente y facilitar su afiliación al SIS u otra cobertura pertinente, gestión clave para garantizar el acceso oportuno a los servicios de salud que requiere."
     },
     {
@@ -10096,12 +10096,12 @@ window.SERUMS_DATA = {
       "statement": "Una madre primeriza consulta si debe iniciar alimentación complementaria a su bebé de 3 meses porque 'llora mucho después de lactar'.",
       "question": "¿Cuál es la orientación nutricional correcta según la recomendación vigente?",
       "options": [
-        "Iniciar alimentación complementaria de inmediato para calmar el llanto",
         "Mantener la lactancia materna exclusiva hasta los 6 meses, evaluando la técnica de lactancia y descartando otras causas del llanto antes de introducir otros alimentos",
         "Sustituir la leche materna por fórmula desde ya",
-        "Indicar agua además de la leche materna para 'completar' la alimentación"
+        "Indicar agua además de la leche materna para 'completar' la alimentación",
+        "Iniciar alimentación complementaria de inmediato para calmar el llanto"
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Correcta porque la recomendación vigente es mantener la lactancia materna exclusiva hasta los 6 meses; ante el llanto post-lactancia corresponde evaluar la técnica de lactancia y otras causas, sin introducir alimentación complementaria, fórmula ni agua antes de tiempo."
     },
     {
@@ -10120,11 +10120,11 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es el enfoque correcto de la intervención nutricional en este caso?",
       "options": [
         "Indicar una dieta hipocalórica estricta similar a la de un adulto",
-        "Promover cambios graduales en la alimentación y actividad física en familia, evitando dietas restrictivas severas en esta etapa de crecimiento",
         "No intervenir hasta la adolescencia",
+        "Promover cambios graduales en la alimentación y actividad física en familia, evitando dietas restrictivas severas en esta etapa de crecimiento",
         "Recomendar ayuno intermitente para reducir peso rápidamente"
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Correcta porque en obesidad infantil se prioriza un enfoque gradual y familiar (alimentación saludable y actividad física), evitando dietas restrictivas severas o estrategias de adultos, que pueden comprometer el crecimiento y desarrollo del niño."
     },
     {
@@ -10142,12 +10142,12 @@ window.SERUMS_DATA = {
       "statement": "Un niño de 8 años presenta una mordida cruzada anterior evidente durante el control odontológico de rutina.",
       "question": "¿Cuál es la conducta correcta ante este hallazgo?",
       "options": [
+        "Indicar extracción de las piezas afectadas de inmediato",
         "Esperar a que el niño termine el recambio dentario completo sin ninguna evaluación adicional",
         "Derivar oportunamente a evaluación ortodóntica, ya que ciertas maloclusiones se benefician de tratamiento temprano durante el crecimiento",
-        "Indicar extracción de las piezas afectadas de inmediato",
         "No es relevante si el niño no refiere dolor"
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Correcta porque ciertas maloclusiones, como la mordida cruzada anterior, se benefician de una intervención ortodóntica temprana durante el periodo de crecimiento activo, por lo que la derivación oportuna es la conducta correcta."
     },
     {
@@ -10166,11 +10166,11 @@ window.SERUMS_DATA = {
       "question": "¿Qué medida de bioseguridad es indispensable para minimizar el riesgo de transmisión de infecciones?",
       "options": [
         "Usar el mismo instrumental en varios pacientes sin esterilización si el tiempo es limitado",
+        "La bioseguridad solo aplica si el paciente refiere una infección conocida",
         "Aplicar barreras de protección personal, esterilización rigurosa del instrumental y desinfección de superficies entre pacientes",
-        "Ventilar el consultorio es suficiente sin otras medidas adicionales",
-        "La bioseguridad solo aplica si el paciente refiere una infección conocida"
+        "Ventilar el consultorio es suficiente sin otras medidas adicionales"
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Correcta porque la atención odontológica, al generar aerosoles y contacto con fluidos orales, requiere barreras de protección personal, esterilización rigurosa del instrumental y desinfección de superficies entre cada paciente, independientemente de si se conoce o no un antecedente infeccioso."
     },
     {
@@ -10210,12 +10210,12 @@ window.SERUMS_DATA = {
       "statement": "Un paciente solicita una radiografía de columna 'por si acaso', sin indicación médica ni síntomas actuales.",
       "question": "¿Cuál es la conducta correcta del tecnólogo médico ante esta solicitud?",
       "options": [
+        "Realizarlo sin problema porque la dosis de radiación es mínima",
         "Realizar el estudio de todas maneras si el paciente insiste",
         "Explicar que todo estudio radiológico requiere justificación clínica documentada, y orientar a consulta médica previa",
-        "Realizarlo sin problema porque la dosis de radiación es mínima",
         "Derivar directamente a un especialista sin dar ninguna explicación"
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Es correcta porque todo estudio radiológico debe estar clínicamente justificado según el principio de justificación de la protección radiológica; sin indicación médica, corresponde orientar al paciente a una evaluación clínica previa, no realizar el estudio por solicitud propia."
     },
     {
@@ -10233,12 +10233,12 @@ window.SERUMS_DATA = {
       "statement": "Un paciente en quimioterapia refiere fatiga intensa que le impide realizar sus actividades cotidianas básicas.",
       "question": "¿Cuál es el enfoque correcto de la terapia ocupacional en este caso?",
       "options": [
-        "Indicar reposo absoluto hasta finalizar el tratamiento oncológico",
         "Aplicar estrategias de conservación de energía y priorización de actividades significativas, adaptadas a su nivel de fatiga",
-        "Recomendar que retome su rutina previa sin modificaciones",
-        "No intervenir porque la fatiga es un efecto esperado del tratamiento"
+        "Indicar reposo absoluto hasta finalizar el tratamiento oncológico",
+        "No intervenir porque la fatiga es un efecto esperado del tratamiento",
+        "Recomendar que retome su rutina previa sin modificaciones"
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Es correcta porque la terapia ocupacional en fatiga oncológica se enfoca en estrategias de conservación de energía y priorización de actividades significativas según la tolerancia del paciente, evitando tanto el reposo absoluto como la sobreexigencia."
     },
     {
@@ -10256,10 +10256,10 @@ window.SERUMS_DATA = {
       "statement": "Una familia de una comunidad indígena rechaza ciertas adaptaciones sugeridas para el hogar de un adulto mayor con discapacidad, por no ser acordes a sus costumbres.",
       "question": "¿Cuál es la conducta más adecuada del terapeuta ocupacional?",
       "options": [
-        "Imponer las adaptaciones estándar sin considerar la objeción familiar",
+        "Ignorar la objeción y realizar las adaptaciones de todas formas",
         "Dialogar con la familia para encontrar alternativas que respeten sus costumbres y a la vez favorezcan la funcionalidad del paciente",
-        "Retirar la intervención por completo ante la negativa",
-        "Ignorar la objeción y realizar las adaptaciones de todas formas"
+        "Imponer las adaptaciones estándar sin considerar la objeción familiar",
+        "Retirar la intervención por completo ante la negativa"
       ],
       "correct": 1,
       "feedback": "Es correcta porque el enfoque intercultural exige dialogar con la familia para encontrar alternativas que respeten sus costumbres sin renunciar al objetivo funcional de la intervención, en lugar de imponer un estándar único o abandonar el caso."
@@ -10279,9 +10279,9 @@ window.SERUMS_DATA = {
       "statement": "Un médico veterinario detecta en su práctica un caso compatible con una enfermedad de declaración obligatoria en animales.",
       "question": "¿Cuál es su responsabilidad inmediata según el marco de vigilancia sanitaria?",
       "options": [
-        "Tratar el caso sin notificar si no hay certeza diagnóstica absoluta",
-        "Notificar de inmediato a la autoridad sanitaria correspondiente, incluso ante sospecha, para activar la vigilancia epidemiológica",
         "Esperar la confirmación de laboratorio antes de cualquier acción",
+        "Notificar de inmediato a la autoridad sanitaria correspondiente, incluso ante sospecha, para activar la vigilancia epidemiológica",
+        "Tratar el caso sin notificar si no hay certeza diagnóstica absoluta",
         "Consultar solo con colegas sin notificación oficial"
       ],
       "correct": 1,
@@ -10302,12 +10302,12 @@ window.SERUMS_DATA = {
       "statement": "Un animal es intervenido quirúrgicamente y el veterinario define el plan de manejo postoperatorio.",
       "question": "¿Qué principio ético-clínico debe orientar este plan?",
       "options": [
-        "El dolor animal no requiere manejo específico si el animal no vocaliza",
         "El bienestar animal exige manejo analgésico adecuado durante el postoperatorio, reconociendo la capacidad de los animales de experimentar dolor",
+        "El manejo del dolor es opcional y depende del costo",
         "Solo se debe tratar el dolor si el propietario lo solicita explícitamente",
-        "El manejo del dolor es opcional y depende del costo"
+        "El dolor animal no requiere manejo específico si el animal no vocaliza"
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Es correcta porque el bienestar animal y la ética veterinaria exigen un manejo analgésico adecuado en el postoperatorio, reconociendo que los animales experimentan dolor independientemente de si lo expresan de forma evidente o de la solicitud del propietario."
     },
     {
@@ -10325,10 +10325,10 @@ window.SERUMS_DATA = {
       "statement": "En una campaña de vacunación antigripal, el establecimiento cuenta con personal de farmacia para apoyar el proceso.",
       "question": "¿Cuál es un rol apropiado del profesional de farmacia y bioquímica en este contexto?",
       "options": [
-        "No tiene ningún rol posible en campañas de vacunación",
-        "Apoyar en la gestión de la cadena de frío, el registro y la consejería sobre la vacuna, dentro de sus competencias",
         "Administrar el diagnóstico de posibles reacciones adversas graves sin apoyo médico",
-        "Sustituir completamente al personal de enfermería en la aplicación"
+        "Apoyar en la gestión de la cadena de frío, el registro y la consejería sobre la vacuna, dentro de sus competencias",
+        "Sustituir completamente al personal de enfermería en la aplicación",
+        "No tiene ningún rol posible en campañas de vacunación"
       ],
       "correct": 1,
       "feedback": "Es correcta porque el profesional de farmacia puede apoyar en la gestión de la cadena de frío, el registro y la consejería sobre la vacuna dentro de sus competencias, articulado con el resto del equipo de salud, sin sustituir roles clínicos que no le corresponden."
@@ -10349,11 +10349,11 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la orientación correcta?",
       "options": [
         "Puede mantenerse a temperatura ambiente de forma indefinida sin ningún límite",
-        "El frasco en uso puede conservarse a temperatura ambiente (no mayor a 25-30°C) por un tiempo limitado según el fabricante; el resto del stock debe refrigerarse entre 2-8°C",
+        "Debe exponerse directamente al sol para 'esterilizarla'",
         "Debe congelarse para prolongar su vida útil",
-        "Debe exponerse directamente al sol para 'esterilizarla'"
+        "El frasco en uso puede conservarse a temperatura ambiente (no mayor a 25-30°C) por un tiempo limitado según el fabricante; el resto del stock debe refrigerarse entre 2-8°C"
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Es correcta porque el frasco de insulina en uso tolera temperatura ambiente moderada por un tiempo limitado según el fabricante, mientras que el stock no abierto debe mantenerse refrigerado entre 2-8°C; la congelación o la exposición al sol inutilizan el medicamento."
     },
     {
@@ -10371,12 +10371,12 @@ window.SERUMS_DATA = {
       "statement": "Antes de implementar un programa de salud comunitaria, el equipo solicita al trabajador social un diagnóstico de la situación social de la zona.",
       "question": "¿Qué debe priorizar este diagnóstico social?",
       "options": [
-        "Basarse únicamente en la percepción personal del trabajador social sin recolección de datos",
-        "Recoger información sistemática sobre necesidades, recursos y dinámicas sociales de la comunidad mediante técnicas de investigación social validadas",
+        "Omitir la participación de la comunidad en el proceso",
         "Copiar el diagnóstico de otra comunidad similar sin verificación local",
-        "Omitir la participación de la comunidad en el proceso"
+        "Recoger información sistemática sobre necesidades, recursos y dinámicas sociales de la comunidad mediante técnicas de investigación social validadas",
+        "Basarse únicamente en la percepción personal del trabajador social sin recolección de datos"
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Es correcta porque el diagnóstico social comunitario debe basarse en la recolección sistemática de información sobre necesidades, recursos y dinámicas sociales mediante técnicas validadas, con participación de la comunidad, no en percepciones personales ni diagnósticos prestados de otro contexto."
     },
     {
@@ -10394,9 +10394,9 @@ window.SERUMS_DATA = {
       "statement": "Un paciente con diabetes mal controlada falta reiteradamente a sus citas de control, y el equipo de salud sospecha barreras sociales de fondo.",
       "question": "¿Cuál es el aporte específico del trabajo social en este caso?",
       "options": [
-        "Sancionar al paciente por su inasistencia",
-        "Explorar con el paciente las barreras sociales y económicas que dificultan su adherencia (transporte, trabajo, red de apoyo) y articular soluciones posibles",
         "Excluirlo del programa de seguimiento por incumplimiento",
+        "Explorar con el paciente las barreras sociales y económicas que dificultan su adherencia (transporte, trabajo, red de apoyo) y articular soluciones posibles",
+        "Sancionar al paciente por su inasistencia",
         "Asumir que la inasistencia se debe a falta de interés del paciente sin explorar el contexto"
       ],
       "correct": 1,
@@ -10417,12 +10417,12 @@ window.SERUMS_DATA = {
       "statement": "El nutricionista aplica un recordatorio de 24 horas a un paciente para evaluar su ingesta habitual.",
       "question": "¿Cuál es una limitación reconocida de este método que debe considerarse al interpretar los resultados?",
       "options": [
+        "Reemplaza por completo la necesidad de evaluación antropométrica",
         "Es un método sin ninguna limitación metodológica",
-        "Puede no reflejar la ingesta habitual si el día evaluado no es representativo, y depende de la memoria y honestidad del paciente",
         "Solo sirve para evaluar la ingesta de líquidos",
-        "Reemplaza por completo la necesidad de evaluación antropométrica"
+        "Puede no reflejar la ingesta habitual si el día evaluado no es representativo, y depende de la memoria y honestidad del paciente"
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Es correcta porque el recordatorio de 24 horas depende de la memoria y honestidad del paciente y puede no representar su ingesta habitual si el día evaluado fue atípico, por lo que sus resultados deben interpretarse considerando esta limitación metodológica."
     },
     {
@@ -10441,11 +10441,11 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es el objetivo principal de esta estrategia de salud pública?",
       "options": [
         "Mejorar únicamente el sabor del producto",
-        "Prevenir deficiencias de micronutrientes a nivel poblacional, como los defectos del tubo neural y la anemia ferropénica",
         "Sustituir la necesidad de una alimentación balanceada",
-        "Aplicarse solo a la población que ya presenta deficiencias diagnosticadas"
+        "Aplicarse solo a la población que ya presenta deficiencias diagnosticadas",
+        "Prevenir deficiencias de micronutrientes a nivel poblacional, como los defectos del tubo neural y la anemia ferropénica"
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Es correcta porque la fortificación obligatoria de alimentos de consumo masivo busca prevenir deficiencias de micronutrientes a nivel poblacional (como defectos del tubo neural por déficit de ácido fólico o anemia por déficit de hierro), sin sustituir la necesidad de una alimentación balanceada."
     },
     {
@@ -10463,12 +10463,12 @@ window.SERUMS_DATA = {
       "statement": "En un estudio epidemiológico de salud bucal escolar se calcula el índice CPOD de la población evaluada.",
       "question": "¿Qué mide este índice?",
       "options": [
-        "Solo el número de piezas dentales presentes en boca",
         "El promedio de dientes permanentes cariados, perdidos y obturados por persona en la población evaluada",
         "Únicamente la presencia de placa bacteriana",
-        "El grado de maloclusión de la población"
+        "El grado de maloclusión de la población",
+        "Solo el número de piezas dentales presentes en boca"
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Es correcta porque el índice CPOD (Cariados, Perdidos, Obturados por persona) es un indicador epidemiológico estándar que mide el promedio de dientes permanentes afectados por caries a nivel poblacional, no la presencia de placa ni el grado de maloclusión."
     },
     {
@@ -10487,11 +10487,11 @@ window.SERUMS_DATA = {
       "question": "¿Por qué es indispensable confirmar este resultado antes de cualquier transfusión?",
       "options": [
         "Es un dato meramente administrativo sin relevancia clínica",
-        "Una incompatibilidad ABO/Rh no detectada puede causar una reacción hemolítica transfusional grave, potencialmente mortal",
+        "El resultado puede omitirse si el paciente refiere conocer su grupo sanguíneo de memoria",
         "Solo es relevante en mujeres gestantes",
-        "El resultado puede omitirse si el paciente refiere conocer su grupo sanguíneo de memoria"
+        "Una incompatibilidad ABO/Rh no detectada puede causar una reacción hemolítica transfusional grave, potencialmente mortal"
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Es correcta porque una incompatibilidad ABO/Rh no detectada puede desencadenar una reacción hemolítica transfusional grave y potencialmente mortal, por lo que la tipificación debe confirmarse en el laboratorio y no basarse en la referencia verbal del paciente."
     },
     {
@@ -10509,12 +10509,12 @@ window.SERUMS_DATA = {
       "statement": "Durante el procesamiento de muestras, se produce un derrame accidental de sangre sobre la mesa de trabajo del laboratorio.",
       "question": "¿Cuál es el procedimiento correcto inmediato?",
       "options": [
-        "Limpiar con un paño común sin protocolo especial",
         "Aplicar el protocolo de bioseguridad para derrames: uso de equipo de protección, desinfección con hipoclorito y disposición adecuada del material contaminado",
-        "Ignorar el derrame si es de poco volumen",
-        "Ventilar el ambiente como única medida"
+        "Limpiar con un paño común sin protocolo especial",
+        "Ventilar el ambiente como única medida",
+        "Ignorar el derrame si es de poco volumen"
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Es correcta porque todo derrame de material biológico debe manejarse con el protocolo de bioseguridad correspondiente: protección personal, desinfección con hipoclorito de sodio y disposición adecuada del material contaminado, independientemente del volumen derramado."
     },
     {
@@ -10532,12 +10532,12 @@ window.SERUMS_DATA = {
       "statement": "Un lactante con bronquiolitis leve presenta abundantes secreciones que dificultan su alimentación, sin signos de dificultad respiratoria severa.",
       "question": "¿Cuál es la conducta correcta respecto a la fisioterapia respiratoria en este caso?",
       "options": [
-        "Aplicar de rutina todas las técnicas de fisioterapia respiratoria disponibles",
-        "Priorizar medidas como el lavado nasal y posicionamiento; el uso de técnicas de fisioterapia respiratoria convencional no está sustentado como rutina en bronquiolitis leve",
         "No hacer ninguna intervención en absoluto",
-        "Indicar percusión torácica vigorosa varias veces al día"
+        "Indicar percusión torácica vigorosa varias veces al día",
+        "Aplicar de rutina todas las técnicas de fisioterapia respiratoria disponibles",
+        "Priorizar medidas como el lavado nasal y posicionamiento; el uso de técnicas de fisioterapia respiratoria convencional no está sustentado como rutina en bronquiolitis leve"
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Es correcta porque la evidencia actual no sustenta el uso rutinario de fisioterapia respiratoria convencional (percusión, vibración) en bronquiolitis leve; se priorizan medidas como el lavado nasal y el posicionamiento adecuado para facilitar el confort y la alimentación."
     },
     {
@@ -10555,12 +10555,12 @@ window.SERUMS_DATA = {
       "statement": "Un paciente sufre un esguince de tobillo grado I tras una torcedura durante actividad deportiva, sin signos de fractura.",
       "question": "¿Cuál es el manejo fisioterapéutico inicial más adecuado en las primeras 48-72 horas?",
       "options": [
-        "Reposo absoluto sin ningún tipo de carga por varias semanas",
-        "Protocolo de protección, carga progresiva controlada, hielo, compresión y elevación (POLICE), evitando la inmovilización prolongada",
+        "Iniciar ejercicios de máxima intensidad de inmediato",
         "Aplicar calor local inmediatamente para 'relajar' la zona",
-        "Iniciar ejercicios de máxima intensidad de inmediato"
+        "Reposo absoluto sin ningún tipo de carga por varias semanas",
+        "Protocolo de protección, carga progresiva controlada, hielo, compresión y elevación (POLICE), evitando la inmovilización prolongada"
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Es correcta porque el manejo actual de esguinces agudos prioriza el protocolo POLICE (protección, carga progresiva controlada, hielo, compresión, elevación), evitando tanto la inmovilización prolongada como el calor local o el ejercicio intenso en la fase aguda."
     },
     {
@@ -10578,10 +10578,10 @@ window.SERUMS_DATA = {
       "statement": "Un recién nacido con diagnóstico de paladar hendido presenta dificultad para lograr un sellado adecuado durante la succión.",
       "question": "¿Cuál es el rol inicial de terapia del lenguaje en este caso?",
       "options": [
-        "Esperar a la cirugía reparadora para iniciar cualquier intervención",
-        "Orientar sobre técnicas y dispositivos de alimentación adaptados para garantizar una nutrición adecuada mientras se coordina el manejo quirúrgico",
         "Indicar que se suspenda la alimentación oral de forma permanente",
-        "No tiene ningún rol hasta que el niño empiece a hablar"
+        "Orientar sobre técnicas y dispositivos de alimentación adaptados para garantizar una nutrición adecuada mientras se coordina el manejo quirúrgico",
+        "No tiene ningún rol hasta que el niño empiece a hablar",
+        "Esperar a la cirugía reparadora para iniciar cualquier intervención"
       ],
       "correct": 1,
       "feedback": "Es correcta porque en recién nacidos con paladar hendido, la intervención temprana de terapia del lenguaje se centra en técnicas y dispositivos de alimentación adaptados para asegurar una nutrición adecuada, en coordinación con el equipo que definirá el manejo quirúrgico posterior."
@@ -10601,12 +10601,12 @@ window.SERUMS_DATA = {
       "statement": "Un niño de 18 meses no responde a su nombre, no señala para pedir ni comparte atención con la mirada de forma consistente.",
       "question": "¿Cuál es la conducta correcta ante estos signos de alarma?",
       "options": [
+        "Asumir que es una variante normal de la timidez infantil",
         "Esperar hasta los 3 años porque a esa edad recién se puede evaluar el lenguaje",
         "Derivar para evaluación especializada del desarrollo, dado que estos son signos de alarma tempranos que ameritan intervención oportuna",
-        "Asumir que es una variante normal de la timidez infantil",
         "Indicar solo estimulación en casa sin derivación"
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Es correcta porque la falta de respuesta al nombre, señalar para pedir y compartir atención conjunta a los 18 meses son signos de alarma tempranos del desarrollo que ameritan derivación oportuna, dado que la intervención temprana mejora significativamente el pronóstico."
     },
     {
@@ -10624,12 +10624,12 @@ window.SERUMS_DATA = {
       "statement": "Un paciente presenta ojo rojo; se debe determinar si corresponde a una conjuntivitis banal o a un cuadro que amerita derivación urgente.",
       "question": "¿Qué hallazgo es más sugestivo de un cuadro que requiere derivación oftalmológica urgente en lugar de manejo como conjuntivitis simple?",
       "options": [
-        "Secreción mucopurulenta leve sin dolor ni afectación de la visión",
         "Dolor ocular intenso, fotofobia marcada y disminución de la agudeza visual asociados al enrojecimiento",
         "Picazón leve y lagrimeo sin otros síntomas",
-        "Enrojecimiento bilateral leve tras exposición al polvo"
+        "Enrojecimiento bilateral leve tras exposición al polvo",
+        "Secreción mucopurulenta leve sin dolor ni afectación de la visión"
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Es correcta porque el dolor ocular intenso, la fotofobia marcada y la disminución de la agudeza visual son signos de alarma que sugieren un cuadro más grave (como uveítis) y requieren derivación oftalmológica urgente, a diferencia de la conjuntivitis simple donde la visión se mantiene conservada."
     },
     {
@@ -10648,11 +10648,11 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es el objetivo de salud pública de este tamizaje?",
       "options": [
         "Diagnosticar cataratas solo cuando el paciente ya presenta ceguera total",
+        "Aplicarse únicamente en pacientes con antecedente familiar de cataratas",
         "Detectar oportunamente la opacidad del cristalino para derivar a manejo quirúrgico antes de que afecte significativamente la funcionalidad e independencia del paciente",
-        "Reemplazar la cirugía de cataratas por corrección con lentes",
-        "Aplicarse únicamente en pacientes con antecedente familiar de cataratas"
+        "Reemplazar la cirugía de cataratas por corrección con lentes"
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Es correcta porque el tamizaje busca detectar oportunamente la opacidad del cristalino para derivar a manejo quirúrgico antes de que la pérdida visual comprometa significativamente la funcionalidad e independencia del adulto mayor, siendo la cirugía —no los lentes— el tratamiento definitivo."
     },
     {
@@ -10670,12 +10670,12 @@ window.SERUMS_DATA = {
       "statement": "Se recibe una muestra de esputo de un paciente con tos persistente de más de 2 semanas, para descarte de tuberculosis.",
       "question": "¿Cuál es un requisito de calidad indispensable para que la baciloscopia sea confiable?",
       "options": [
-        "Cualquier muestra de saliva es aceptable para el análisis",
         "La muestra debe ser esputo real (no saliva), obtenido preferentemente en ayunas y con la técnica adecuada de expectoración",
-        "La muestra puede tomarse en cualquier momento sin indicaciones específicas",
-        "El resultado no depende de la calidad de la muestra"
+        "Cualquier muestra de saliva es aceptable para el análisis",
+        "El resultado no depende de la calidad de la muestra",
+        "La muestra puede tomarse en cualquier momento sin indicaciones específicas"
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Es correcta porque la confiabilidad de la baciloscopia depende de que la muestra sea esputo real (no saliva), obtenido con una técnica adecuada de expectoración, ya que una muestra de mala calidad puede generar un falso negativo en un paciente con tuberculosis activa."
     },
     {
@@ -10693,12 +10693,12 @@ window.SERUMS_DATA = {
       "statement": "El laboratorio procesa muestras de hisopado nasofaríngeo de pacientes con sospecha de una infección respiratoria de transmisión por aerosoles.",
       "question": "¿Qué medida de bioseguridad es prioritaria en el manejo de este tipo de muestras?",
       "options": [
-        "Procesarlas en el mismo espacio que otras muestras sin medidas adicionales",
         "Utilizar equipo de protección personal específico (incluyendo protección respiratoria) y procesar en un área con ventilación adecuada o cabina de bioseguridad",
+        "No se requiere ninguna medida adicional si el paciente no tiene fiebre",
         "Solo es necesario el uso de guantes",
-        "No se requiere ninguna medida adicional si el paciente no tiene fiebre"
+        "Procesarlas en el mismo espacio que otras muestras sin medidas adicionales"
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Es correcta porque el manejo de muestras respiratorias con riesgo de transmisión por aerosoles exige equipo de protección personal específico, incluyendo protección respiratoria, y procesamiento en un área con ventilación adecuada o cabina de bioseguridad, más allá del uso de guantes."
     },
     {
@@ -10717,11 +10717,11 @@ window.SERUMS_DATA = {
       "question": "¿Qué criterio técnico es indispensable al diseñar una letrina sanitaria en esta zona?",
       "options": [
         "La ubicación no tiene relevancia respecto a las fuentes de agua",
+        "El diseño no requiere considerar el nivel freático de la zona",
         "Debe ubicarse a una distancia segura de las fuentes de agua (pozos, manantiales) para evitar la contaminación del agua subterránea",
-        "Debe construirse lo más cerca posible del pozo de agua para facilitar su uso",
-        "El diseño no requiere considerar el nivel freático de la zona"
+        "Debe construirse lo más cerca posible del pozo de agua para facilitar su uso"
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Es correcta porque la ubicación de una letrina sanitaria debe respetar una distancia segura respecto a las fuentes de agua para evitar la contaminación del agua subterránea, considerando también el nivel freático de la zona, criterio técnico central del saneamiento básico rural."
     },
     {
@@ -10739,12 +10739,12 @@ window.SERUMS_DATA = {
       "statement": "Una institución educativa rural depende de un tanque de almacenamiento de agua sin mantenimiento periódico documentado.",
       "question": "¿Cuál es la medida de gestión sanitaria prioritaria en este caso?",
       "options": [
-        "No requiere intervención si no ha habido quejas de los estudiantes",
         "Establecer un programa de limpieza y desinfección periódica del tanque, con registro documentado, y monitoreo de cloro residual",
         "Cambiar el tanque únicamente si se rompe",
+        "No requiere intervención si no ha habido quejas de los estudiantes",
         "Delegar la responsabilidad exclusivamente a los estudiantes"
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Es correcta porque la gestión sanitaria del agua en instituciones educativas requiere un programa de limpieza y desinfección periódica del tanque, con registro documentado y monitoreo de cloro residual, para prevenir riesgos de contaminación antes de que se presenten síntomas o quejas."
     },
     {
@@ -10762,12 +10762,12 @@ window.SERUMS_DATA = {
       "statement": "Una paciente gestante de 20 semanas requiere una radiografía de tórax por sospecha de neumonía.",
       "question": "¿Cuál es la conducta correcta considerando el embarazo?",
       "options": [
-        "Negar el estudio por completo debido al embarazo, aunque exista indicación clínica clara",
-        "Realizar el estudio con protección abdominal adecuada, ya que la dosis en una radiografía de tórax bien colimada es mínima y el beneficio clínico justificado supera el riesgo",
         "Realizar el estudio sin ninguna protección adicional por ser de bajo riesgo",
-        "Posponer indefinidamente el diagnóstico hasta después del parto"
+        "Posponer indefinidamente el diagnóstico hasta después del parto",
+        "Realizar el estudio con protección abdominal adecuada, ya que la dosis en una radiografía de tórax bien colimada es mínima y el beneficio clínico justificado supera el riesgo",
+        "Negar el estudio por completo debido al embarazo, aunque exista indicación clínica clara"
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Es correcta porque, ante una indicación clínica clara, una radiografía de tórax bien colimada implica una dosis fetal mínima; debe realizarse con protección abdominal adecuada, ya que el beneficio diagnóstico justificado supera el riesgo, en lugar de negar el estudio o posponerlo indefinidamente."
     },
     {
@@ -10785,10 +10785,10 @@ window.SERUMS_DATA = {
       "statement": "Un establecimiento con lista de espera para terapia ocupacional debe decidir el orden de atención entre varios pacientes derivados.",
       "question": "¿Qué criterio debe primar en esta priorización?",
       "options": [
-        "El orden estricto de llegada de la derivación, sin excepción",
-        "El impacto funcional y el riesgo de deterioro si la intervención se retrasa, priorizando los casos de mayor urgencia funcional",
         "La cercanía del domicilio del paciente al establecimiento",
-        "El nivel socioeconómico del paciente"
+        "El impacto funcional y el riesgo de deterioro si la intervención se retrasa, priorizando los casos de mayor urgencia funcional",
+        "El nivel socioeconómico del paciente",
+        "El orden estricto de llegada de la derivación, sin excepción"
       ],
       "correct": 1,
       "feedback": "Es correcta porque la priorización clínica en listas de espera debe basarse en el impacto funcional y el riesgo de deterioro ante el retraso de la intervención, y no en el orden de llegada, la cercanía domiciliaria o criterios socioeconómicos ajenos a la necesidad clínica."
@@ -10808,12 +10808,12 @@ window.SERUMS_DATA = {
       "statement": "En una comunidad andina, las prácticas tradicionales de manejo del ganado difieren de las recomendaciones técnicas estándar de sanidad animal.",
       "question": "¿Cuál es el enfoque más apropiado del médico veterinario en este contexto?",
       "options": [
-        "Imponer únicamente el protocolo técnico estándar, descalificando las prácticas tradicionales",
-        "Dialogar con la comunidad para integrar el conocimiento técnico con las prácticas tradicionales, respetando su validez cultural cuando no comprometan la sanidad animal",
         "Ignorar las prácticas tradicionales sin ningún diálogo previo",
-        "Aplicar el protocolo técnico de forma impuesta sin explicación a la comunidad"
+        "Imponer únicamente el protocolo técnico estándar, descalificando las prácticas tradicionales",
+        "Aplicar el protocolo técnico de forma impuesta sin explicación a la comunidad",
+        "Dialogar con la comunidad para integrar el conocimiento técnico con las prácticas tradicionales, respetando su validez cultural cuando no comprometan la sanidad animal"
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Es correcta porque el enfoque intercultural en sanidad animal busca integrar el conocimiento técnico con las prácticas tradicionales de la comunidad mediante el diálogo, respetando su validez cultural siempre que no comprometan la salud animal o pública, en lugar de imponer un protocolo sin explicación."
     },
     {
@@ -10832,11 +10832,11 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta correcta del profesional de farmacia?",
       "options": [
         "Prohibir de forma tajante cualquier uso de medicina tradicional sin dialogar con el paciente",
-        "Indagar qué planta consume, evaluar posibles interacciones con el tratamiento farmacológico, y orientar respetando su contexto cultural",
+        "Suspender el antihipertensivo para evitar cualquier posible interacción",
         "Ignorar la información porque no es relevante para el tratamiento farmacológico",
-        "Suspender el antihipertensivo para evitar cualquier posible interacción"
+        "Indagar qué planta consume, evaluar posibles interacciones con el tratamiento farmacológico, y orientar respetando su contexto cultural"
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Es correcta porque el profesional de farmacia debe indagar específicamente qué planta consume el paciente para evaluar posibles interacciones con su tratamiento, orientando desde el respeto al contexto cultural, en lugar de prohibir tajantemente o ignorar la información."
     },
     {
@@ -10855,11 +10855,11 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es el rol del trabajo social en el fortalecimiento de este tipo de programas?",
       "options": [
         "Diseñar el programa sin ninguna consulta a la comunidad",
-        "Facilitar la organización y participación de agentes comunitarios de salud, fortaleciendo el vínculo entre el establecimiento y la comunidad",
         "Limitar la participación comunitaria a la asistencia pasiva a charlas informativas",
+        "Facilitar la organización y participación de agentes comunitarios de salud, fortaleciendo el vínculo entre el establecimiento y la comunidad",
         "Delegar todo el trabajo comunitario exclusivamente al personal médico"
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Es correcta porque el trabajo social aporta la facilitación de la organización y participación activa de agentes comunitarios de salud, fortaleciendo el vínculo entre el establecimiento y la comunidad, en lugar de un diseño impuesto sin consulta o una participación meramente pasiva."
     },
     {
@@ -10877,9 +10877,9 @@ window.SERUMS_DATA = {
       "question": "¿A qué nivel de prevención corresponde?",
       "options": [
         "Secundaria",
-        "Primaria",
+        "Cuaternaria",
         "Terciaria",
-        "Cuaternaria"
+        "Primaria"
       ],
       "correct": 2,
       "feedback": "Es correcta porque la prevención terciaria actúa sobre la enfermedad ya establecida, buscando reducir secuelas, discapacidad y complicaciones, a diferencia de la primaria (evita la aparición) o la secundaria (detección temprana).",
@@ -10900,12 +10900,12 @@ window.SERUMS_DATA = {
       "statement": "En la enfermedad de tuberculosis, la presencia del agente infeccioso Mycobacterium tuberculosis es indispensable para que ocurra la enfermedad, pero no todas las personas expuestas al bacilo desarrollan la enfermedad.",
       "question": "¿Qué tipo de causa representa el Mycobacterium tuberculosis en este contexto?",
       "options": [
-        "Necesaria pero no suficiente",
         "Necesaria y suficiente",
+        "De tipo ambiental",
         "No necesaria pero suficiente",
-        "De tipo ambiental"
+        "Necesaria pero no suficiente"
       ],
-      "correct": 0,
+      "correct": 3,
       "feedback": "Es correcta porque el bacilo es indispensable para que exista la enfermedad (causa necesaria), pero su sola presencia no basta para desarrollarla (no es suficiente), ya que intervienen otros factores del huésped y el ambiente.",
       "unverified": true
     },
@@ -10924,12 +10924,12 @@ window.SERUMS_DATA = {
       "statement": "Para medir el riesgo de una enfermedad en la comunidad se utilizan medidas de morbilidad como la incidencia y la prevalencia.",
       "question": "¿Qué mide cada una de estas medidas?",
       "options": [
-        "Virulencia / frecuencia",
         "Casos antiguos / casos nuevos",
+        "Velocidad / magnitud",
         "Proporción / frecuencia",
-        "Velocidad / magnitud"
+        "Virulencia / frecuencia"
       ],
-      "correct": 3,
+      "correct": 1,
       "feedback": "Es correcta porque la incidencia mide la velocidad de aparición de casos nuevos en un periodo (dinámica del riesgo), mientras que la prevalencia mide la magnitud o extensión de la enfermedad existente en un momento dado.",
       "unverified": true
     },
@@ -10949,11 +10949,11 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la medida que se construye sumando todos los datos observados y dividiendo entre el total de observaciones?",
       "options": [
         "Rango",
+        "Moda",
         "Media",
-        "Mediana",
-        "Moda"
+        "Mediana"
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Es correcta porque la media aritmética se calcula sumando todos los valores observados y dividiendo entre el número total de observaciones, a diferencia de la mediana (valor central) o la moda (valor más frecuente).",
       "unverified": true
     },
@@ -10972,12 +10972,12 @@ window.SERUMS_DATA = {
       "statement": "Una prueba de screening presenta muy baja sensibilidad para detectar una enfermedad en la población evaluada.",
       "question": "¿Qué tipo de resultado tiene mayor probabilidad de producirse con esta prueba?",
       "options": [
-        "Falso positivo",
-        "Valor predictivo positivo",
         "Falso negativo",
-        "Sensibilidad ineficiente"
+        "Sensibilidad ineficiente",
+        "Valor predictivo positivo",
+        "Falso positivo"
       ],
-      "correct": 2,
+      "correct": 0,
       "feedback": "Es correcta porque una baja sensibilidad implica que la prueba clasifica erróneamente como sanos a personas que sí están enfermas, generando falsos negativos con mayor frecuencia.",
       "unverified": true
     },
@@ -10995,12 +10995,12 @@ window.SERUMS_DATA = {
       "statement": "Se define como transición epidemiológica al proceso de cambio en el predominio de un tipo de enfermedades hacia otro tipo a nivel poblacional.",
       "question": "¿Cuál es el sentido correcto de esta transición?",
       "options": [
-        "Infecciosas hacia crónicas",
         "Degenerativas hacia infecciosas",
+        "Infecciosas hacia crónicas",
         "Infecciosas hacia prevalentes",
         "Crónicas hacia infecciosas"
       ],
-      "correct": 0,
+      "correct": 1,
       "feedback": "Es correcta porque la transición epidemiológica describe el paso histórico del predominio de enfermedades infecciosas hacia la preponderancia de enfermedades crónicas no transmisibles, asociado a cambios demográficos y sociales.",
       "unverified": true
     },
@@ -11044,9 +11044,9 @@ window.SERUMS_DATA = {
       "question": "¿A qué periodo de la historia natural corresponde y qué nivel de prevención se aplica al detectarla en esta fase?",
       "options": [
         "Patogénico / secundario",
-        "Patogénico / primario",
         "Patogénico / terciario",
-        "Pre patogénico / secundario"
+        "Pre patogénico / secundario",
+        "Patogénico / primario"
       ],
       "correct": 0,
       "feedback": "Es correcta porque la fase subclínica ya pertenece al periodo patogénico (la enfermedad está presente aunque sin manifestarse clínicamente), y su detección en esta etapa corresponde a prevención secundaria (diagnóstico y tratamiento precoz).",
@@ -11067,12 +11067,12 @@ window.SERUMS_DATA = {
       "statement": "Niño de 1 año 6 meses, en su control de crecimiento y desarrollo presenta: indicador Peso/Edad entre -2 y +2 DS, indicador Peso/Talla por debajo de -2 DS, e indicador Talla/Edad entre -2 y +2 DS.",
       "question": "¿Cuál es su clasificación nutricional?",
       "options": [
-        "Desnutrición aguda",
+        "Desnutrición crónica",
         "Desnutrición global",
-        "Ganancia inadecuada de peso",
-        "Desnutrición crónica"
+        "Desnutrición aguda",
+        "Ganancia inadecuada de peso"
       ],
-      "correct": 0,
+      "correct": 2,
       "feedback": "Es correcta porque un Peso/Talla bajo -2 DS con Talla/Edad normal define desnutrición aguda (déficit de peso reciente respecto a la talla actual), a diferencia de la desnutrición crónica, que se refleja en una Talla/Edad baja.",
       "unverified": true
     },
@@ -11091,10 +11091,10 @@ window.SERUMS_DATA = {
       "statement": "Varón de 35 años, como parte de la atención integral, se realiza tamizaje de VIH con prueba rápida y obtiene resultado reactivo; se aplica una segunda prueba rápida distinta con resultado No reactivo.",
       "question": "¿Cuál es el procedimiento correcto a seguir ante este resultado discordante?",
       "options": [
-        "Hacer seguimiento y tomar prueba en 3 días",
-        "Tomar muestra de suero para prueba confirmatoria",
         "Iniciar tratamiento con el primer resultado",
-        "Descartar el caso con el segundo resultado"
+        "Tomar muestra de suero para prueba confirmatoria",
+        "Descartar el caso con el segundo resultado",
+        "Hacer seguimiento y tomar prueba en 3 días"
       ],
       "correct": 1,
       "feedback": "Es correcta porque un resultado discordante entre dos pruebas rápidas de VIH exige tomar una muestra de suero para una prueba confirmatoria de laboratorio (como ELISA o Western Blot), sin iniciar tratamiento ni descartar el caso solo con pruebas rápidas.",
@@ -11115,10 +11115,10 @@ window.SERUMS_DATA = {
       "statement": "En un establecimiento de salud se revisan las condiciones de almacenamiento de medicamentos: congelación, refrigeración, temperatura ambiente o temperatura ambiente controlada.",
       "question": "¿Según qué criterio se determinan estas condiciones y en qué documento deben estar indicadas?",
       "options": [
+        "Jefe / procedimiento establecido",
         "Director / procedimiento organizativo",
-        "Farmacéutico / procedimiento rutinario",
         "Fabricante / procedimiento operativo",
-        "Jefe / procedimiento establecido"
+        "Farmacéutico / procedimiento rutinario"
       ],
       "correct": 2,
       "feedback": "Es correcta porque las condiciones de almacenamiento deben ser las recomendadas por el fabricante y autorizadas en el rotulado del producto, debiendo estar indicadas en el procedimiento operativo de almacenamiento del establecimiento.",
@@ -11139,12 +11139,12 @@ window.SERUMS_DATA = {
       "statement": "La promoción de la salud busca ofrecer a los pueblos las vías y medios suficientes para abordar sus problemas de salud.",
       "question": "¿Qué acción central persigue la promoción de la salud sobre el proceso salud-enfermedad, según su definición?",
       "options": [
-        "Restringir o acortar",
-        "Diferir o mitigar",
+        "Controlar o mantener",
         "Atenuar o eliminar",
-        "Controlar o mantener"
+        "Diferir o mitigar",
+        "Restringir o acortar"
       ],
-      "correct": 3,
+      "correct": 0,
       "feedback": "Es correcta porque la promoción de la salud, según la definición de la OMS, busca que las personas incrementen el control sobre su propia salud y autocontrolen el proceso salud-enfermedad, no solo mitigar o restringir sus manifestaciones.",
       "unverified": true
     },
@@ -11164,11 +11164,11 @@ window.SERUMS_DATA = {
       "question": "Considerando el Ro (número reproductivo básico) como el promedio de casos nuevos que genera un caso dado, ¿qué valor de Ro se espera en un brote activo como este?",
       "options": [
         "Ro > 0.5",
-        "Ro > 1",
+        "Ro = 0",
         "Ro < 1",
-        "Ro = 0"
+        "Ro > 1"
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Es correcta porque un brote activo con transmisión sostenida implica que cada caso genera, en promedio, más de un caso nuevo (Ro > 1); si Ro fuera menor a 1, la transmisión tendería a extinguirse por sí sola.",
       "unverified": true
     },
@@ -11187,12 +11187,12 @@ window.SERUMS_DATA = {
       "statement": "Se notifica un caso probable de una enfermedad prevenible por vacuna, y se debe ejecutar una actividad dentro de las 72 horas siguientes para completar dosis pendientes de vacunación en la zona rural (toda la comunidad) o urbana (5 manzanas a la redonda).",
       "question": "¿A qué actividad corresponde esta intervención?",
       "options": [
-        "Campaña de seguimiento",
         "Semana de vacunación de las Américas",
         "Bloqueo vacunal",
-        "Jornada de vacunación de cierre de brechas"
+        "Jornada de vacunación de cierre de brechas",
+        "Campaña de seguimiento"
       ],
-      "correct": 2,
+      "correct": 1,
       "feedback": "Es correcta porque el bloqueo vacunal es la actividad que se ejecuta dentro de las 72 horas de notificado un caso probable, completando dosis pendientes en el radio de exposición definido, ya sea comunidad rural completa o manzanas a la redonda en zona urbana.",
       "unverified": true
     },
@@ -11212,11 +11212,11 @@ window.SERUMS_DATA = {
       "question": "¿Cuáles son las medidas a implementar?",
       "options": [
         "Censo de contactos, barrido vacunal, investigación del caso índice",
-        "Jornada de vacunación, quimioprofilaxis, búsqueda de contactos indirectos",
         "Búsqueda de casos secundarios, barrido vacunal, inamovilidad del caso",
-        "Seguimiento de contactos, búsqueda activa comunitaria e institucional, bloqueo vacunal"
+        "Seguimiento de contactos, búsqueda activa comunitaria e institucional, bloqueo vacunal",
+        "Jornada de vacunación, quimioprofilaxis, búsqueda de contactos indirectos"
       ],
-      "correct": 3,
+      "correct": 2,
       "feedback": "Es correcta porque ante un caso probable de tos ferina corresponde el seguimiento de contactos, la búsqueda activa tanto comunitaria como institucional de otros casos, y el bloqueo vacunal, medidas integrales de respuesta ante enfermedades prevenibles por vacuna.",
       "unverified": true
     },
@@ -11236,12 +11236,12 @@ window.SERUMS_DATA = {
       "statement": "La transmisión del dengue a un huésped susceptible se da a través de la picadura de la hembra de Aedes aegypti infectada, mosquito que transmite la enfermedad a varias personas a lo largo de su vida.",
       "question": "¿En qué momento del día pica preferentemente este vector?",
       "options": [
-        "Solo en época de lluvias",
         "A medio día y sin lluvia",
+        "Al amanecer y al atardecer",
         "Al atardecer y durante la noche",
-        "Al amanecer y al atardecer"
+        "Solo en época de lluvias"
       ],
-      "correct": 3,
+      "correct": 1,
       "feedback": "Es correcta porque el Aedes aegypti es un mosquito de hábitos diurnos, con picos de actividad de picadura al amanecer y al atardecer (patrón crepuscular), a diferencia de vectores como el Anopheles que pican principalmente durante la noche.",
       "unverified": true
     },
@@ -11260,12 +11260,12 @@ window.SERUMS_DATA = {
       "statement": "El tamizaje de cáncer de mama se realiza en el grupo etario de 40 a 69 años como parte de la atención preventiva integral.",
       "question": "¿A través de qué esquema se realiza este tamizaje?",
       "options": [
+        "Autoexamen de mamas cada tres meses y examen clínico cada seis meses",
         "Mamografía bilateral cada año y examen clínico de mamas semestral",
-        "Mamografía bilateral cada dos años y examen clínico de mamas anual",
         "Radiografía bilateral cada año y examen clínico cada tres meses",
-        "Autoexamen de mamas cada tres meses y examen clínico cada seis meses"
+        "Mamografía bilateral cada dos años y examen clínico de mamas anual"
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Es correcta porque el esquema de tamizaje establecido para el grupo de 40 a 69 años es la mamografía bilateral cada dos años, complementada con examen clínico de mamas anual, y no el autoexamen como único método de tamizaje poblacional.",
       "unverified": true
     },
@@ -11309,9 +11309,9 @@ window.SERUMS_DATA = {
       "question": "¿A qué enfermedad corresponde esta descripción?",
       "options": [
         "Leptospirosis",
-        "Carbunco",
+        "Peste",
         "Tifus",
-        "Peste"
+        "Carbunco"
       ],
       "correct": 0,
       "feedback": "Es correcta porque la leptospirosis se transmite por contacto con orina de animales infectados (frecuentemente roedores) o agua/suelo contaminado, y su prevención se centra en el saneamiento básico y el control de roedores, a diferencia de otras zoonosis con mecanismos de transmisión distintos.",
@@ -11332,12 +11332,12 @@ window.SERUMS_DATA = {
       "statement": "Los pueblos indígenas tienen derecho a establecer y controlar sus sistemas e instituciones docentes que impartan educación en sus propios idiomas, conforme a sus métodos culturales de enseñanza y aprendizaje.",
       "question": "¿A qué tienen derecho, en consecuencia, sin ningún tipo de restricción?",
       "options": [
+        "A la tolerancia de otras culturas hacia la suya",
         "A todos los niveles y formas de educación del Estado sin discriminación",
         "A recibir educación solo en instituciones privadas",
-        "A la tolerancia de otras culturas hacia la suya",
         "A la comprensión exclusiva de su propia comunidad"
       ],
-      "correct": 0,
+      "correct": 1,
       "feedback": "Es correcta porque el derecho de los pueblos indígenas a la educación en su propio idioma y método cultural se extiende a todos los niveles y formas de educación estatal, sin discriminación alguna, conforme a los marcos internacionales de derechos de pueblos indígenas.",
       "unverified": true
     },
@@ -11356,12 +11356,12 @@ window.SERUMS_DATA = {
       "statement": "A una puérpera atendida en un establecimiento de salud se le realiza control de hemoglobina, obteniéndose un valor de 12.3 g/dL.",
       "question": "¿Cuál es el diagnóstico correspondiente a este resultado?",
       "options": [
-        "Anemia leve",
-        "Anemia severa",
+        "Sin anemia",
         "Anemia moderada",
-        "Sin anemia"
+        "Anemia leve",
+        "Anemia severa"
       ],
-      "correct": 3,
+      "correct": 0,
       "feedback": "Es correcta porque un valor de hemoglobina de 12.3 g/dL se encuentra por encima de los puntos de corte establecidos para definir anemia tanto en la gestante (11 g/dL) como en la mujer no gestante (12 g/dL), por lo que se clasifica como 'sin anemia'.",
       "unverified": true
     },
@@ -11381,9 +11381,9 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la prueba indicada para este fin?",
       "options": [
         "VDRL (Venereal Disease Research Laboratory)",
+        "TPHA (Treponema pallidum Haemagglutination)",
         "FTA-Abs (Fluorescent Treponemal Antibody-Absorption)",
-        "TPPA (Treponema pallidum particle agglutination)",
-        "TPHA (Treponema pallidum Haemagglutination)"
+        "TPPA (Treponema pallidum particle agglutination)"
       ],
       "correct": 0,
       "feedback": "Es correcta porque el VDRL, al ser una prueba no treponémica cuyo título se correlaciona con la actividad de la enfermedad, permite tanto la clasificación de la etapa clínica (mediante seguimiento de títulos) como el diagnóstico de neurosífilis cuando se aplica en líquido cefalorraquídeo; las pruebas treponémicas (FTA-Abs, TPPA, TPHA) permanecen reactivas de por vida y no reflejan actividad.",
@@ -11405,11 +11405,11 @@ window.SERUMS_DATA = {
       "question": "¿A qué nivel de prevención corresponde esta estrategia?",
       "options": [
         "Primaria",
-        "Cuaternaria",
+        "Secundaria",
         "Terciaria",
-        "Secundaria"
+        "Cuaternaria"
       ],
-      "correct": 3,
+      "correct": 1,
       "feedback": "Es correcta porque el tamizaje en personas asintomáticas busca la detección temprana de una enfermedad ya presente pero no manifestada clínicamente, lo cual corresponde a prevención secundaria.",
       "unverified": true
     },
@@ -11453,11 +11453,11 @@ window.SERUMS_DATA = {
       "question": "¿Cómo se denomina a la tuberculosis con esta resistencia combinada?",
       "options": [
         "Extensamente resistente",
-        "Multidrogorresistente",
         "Sensible",
-        "Pre-extensamente resistente"
+        "Pre-extensamente resistente",
+        "Multidrogorresistente"
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Es correcta porque la tuberculosis multidrogorresistente (TB-MDR) se define por la resistencia simultánea a Isoniacida y Rifampicina, los dos fármacos más importantes de primera línea; la resistencia extensa implica además resistencia a fluoroquinolonas y un inyectable de segunda línea.",
       "unverified": true
     },
@@ -11476,12 +11476,12 @@ window.SERUMS_DATA = {
       "statement": "Un adulto recibió el esquema completo de 3 dosis de vacunación contra difteria y tétanos.",
       "question": "¿Cada cuántos años debe reforzar su inmunidad con una dosis adicional?",
       "options": [
-        "15 años",
         "10 años",
-        "20 años",
-        "5 años"
+        "5 años",
+        "15 años",
+        "20 años"
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Es correcta porque, tras completar el esquema primario de 3 dosis, el refuerzo de la inmunidad contra difteria y tétanos en el adulto se recomienda cada 10 años.",
       "unverified": true
     },
@@ -11500,12 +11500,12 @@ window.SERUMS_DATA = {
       "statement": "En una comunidad amazónica se registra un brote de malaria por Plasmodium falciparum, con 50 casos confirmados por gota gruesa y PCR, de los cuales 2 niños fallecieron (4%).",
       "question": "¿A qué medida epidemiológica de frecuencia corresponde este 4%?",
       "options": [
-        "Tasa de ataque",
         "Tasa de letalidad",
-        "Incidencia acumulada",
-        "Tasa de mortalidad general"
+        "Tasa de mortalidad general",
+        "Tasa de ataque",
+        "Incidencia acumulada"
       ],
-      "correct": 1,
+      "correct": 0,
       "feedback": "Es correcta porque la tasa de letalidad mide la proporción de fallecidos entre el total de casos confirmados de una enfermedad específica (2/50 = 4%), a diferencia de la tasa de mortalidad general, que se calcula sobre el total de la población.",
       "unverified": true
     },
@@ -11524,12 +11524,12 @@ window.SERUMS_DATA = {
       "statement": "Un establecimiento de salud transfiere a un paciente hacia otro de mayor capacidad resolutiva para asegurar la continuidad de la atención de sus necesidades de salud.",
       "question": "¿Cómo se denomina este conjunto de procedimientos asistenciales?",
       "options": [
+        "Atención compartida",
         "Atención primaria",
         "Contrarreferencia",
-        "Referencia",
-        "Atención compartida"
+        "Referencia"
       ],
-      "correct": 2,
+      "correct": 3,
       "feedback": "Es correcta porque la referencia es el procedimiento que asegura la continuidad de la atención transfiriendo al paciente de un establecimiento de menor a otro de mayor capacidad resolutiva; la contrarreferencia es el proceso inverso, de retorno al establecimiento de origen.",
       "unverified": true
     },
@@ -11549,11 +11549,11 @@ window.SERUMS_DATA = {
       "question": "¿Desde qué edad se puede vacunar y cuántas dosis corresponden según el esquema vigente?",
       "options": [
         "9 años y dos dosis",
+        "9 años y dosis única",
         "13 años y dosis única",
-        "11 años y dosis única",
-        "9 años y dosis única"
+        "11 años y dosis única"
       ],
-      "correct": 3,
+      "correct": 1,
       "feedback": "Es correcta porque el esquema vigente de vacunación contra el VPH inicia a los 9 años (5º grado de primaria) con un esquema de dosis única, conforme a la actualización de la recomendación de la OMS adoptada por el MINSA.",
       "unverified": true
     },
@@ -11573,12 +11573,12 @@ window.SERUMS_DATA = {
       "statement": "Un neonato de 8 horas de vida, producto de parto domiciliario en zona rural, debe recibir las vacunas BCG y contra Hepatitis B correspondientes a su edad.",
       "question": "¿Cuál es el tiempo ideal para que reciba estas vacunas?",
       "options": [
-        "Dentro de las 24 horas",
         "Hasta un año",
+        "Dentro de las 24 horas",
         "Dentro de una semana",
         "Hasta un mes"
       ],
-      "correct": 0,
+      "correct": 1,
       "feedback": "Es correcta porque el esquema nacional de vacunación establece que BCG y la primera dosis de Hepatitis B deben aplicarse idealmente dentro de las primeras 24 horas de vida, incluso en partos domiciliarios, para máxima efectividad protectora.",
       "unverified": true
     },
@@ -11597,12 +11597,12 @@ window.SERUMS_DATA = {
       "statement": "A los 6 meses de nacido se realiza el dosaje de hemoglobina como parte de la lucha contra la anemia, resultando positivo para el diagnóstico de anemia.",
       "question": "¿Qué tipo de dosis de hierro se inicia a partir de este resultado positivo?",
       "options": [
-        "Promocional",
-        "Recuperativo",
+        "Preventivo",
         "Profiláctico",
-        "Preventivo"
+        "Recuperativo",
+        "Promocional"
       ],
-      "correct": 1,
+      "correct": 2,
       "feedback": "Es correcta porque, una vez confirmado el diagnóstico de anemia mediante el dosaje de hemoglobina, se pasa de la dosis preventiva (profiláctica) a la dosis recuperativa de hierro, con una posología distinta orientada a tratar la anemia ya instaurada.",
       "unverified": true
     },
@@ -11622,9 +11622,9 @@ window.SERUMS_DATA = {
       "question": "¿Qué acción es prioritaria para favorecer la alianza terapéutica inicial?",
       "options": [
         "Generar un clima de confianza mediante escucha activa, calidez y validación, antes de profundizar en el motivo de consulta.",
-        "Iniciar de inmediato la aplicación de una prueba psicométrica estructurada.",
         "Solicitar que firme el consentimiento informado y avanzar directamente a la anamnesis exhaustiva.",
-        "Señalar directamente su actitud evasiva para que se abra a hablar."
+        "Señalar directamente su actitud evasiva para que se abra a hablar.",
+        "Iniciar de inmediato la aplicación de una prueba psicométrica estructurada."
       ],
       "correct": 0,
       "feedback": "Es correcta porque el rapport se construye primero mediante escucha activa, calidez y validación, condición necesaria para que la persona se sienta segura antes de profundizar en contenidos sensibles. Aplicar pruebas o profundizar en la anamnesis sin ese vínculo previo puede aumentar la tensión; señalar la actitud evasiva de forma directa puede sentirse como un juicio y deteriorar la confianza inicial."
@@ -11645,11 +11645,11 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta inicial más adecuada?",
       "options": [
         "Indicar tratamiento farmacológico estimulante de inmediato sin evaluación adicional.",
-        "Realizar una evaluación integral que incluya entrevista clínica, información de al menos dos entornos (escuela y hogar) y pruebas complementarias antes de definir manejo.",
+        "Recomendar únicamente cambios en la dieta como manejo definitivo.",
         "Descartar el caso porque el TDAH solo se diagnostica después de los 12 años.",
-        "Recomendar únicamente cambios en la dieta como manejo definitivo."
+        "Realizar una evaluación integral que incluya entrevista clínica, información de al menos dos entornos (escuela y hogar) y pruebas complementarias antes de definir manejo."
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Es correcta porque el diagnóstico de TDAH requiere confirmar que los síntomas se presenten en más de un entorno (escuela y hogar) mediante una evaluación integral con múltiples fuentes de información, antes de definir cualquier manejo. Medicar sin evaluación es prematuro y no corresponde al psicólogo; descartar el caso por edad es incorrecto, pues el TDAH se identifica en la niñez; la dieta sola no sustituye la evaluación ni el manejo basado en evidencia."
     },
     {
@@ -11667,8 +11667,8 @@ window.SERUMS_DATA = {
       "statement": "En su establecimiento de primer nivel, usted identifica varios casos de trastornos mentales moderados que requieren seguimiento especializado y continuo, pero no cuentan con psiquiatra en la zona.",
       "question": "¿Cuál es la estrategia más coherente con el Modelo de Salud Mental Comunitaria?",
       "options": [
-        "Derivar todos los casos a un hospital de tercer nivel en la capital de la región, sin manejo previo en el primer nivel.",
         "Indicar reposo domiciliario prolongado hasta que exista disponibilidad de un especialista.",
+        "Derivar todos los casos a un hospital de tercer nivel en la capital de la región, sin manejo previo en el primer nivel.",
         "Coordinar con el Centro de Salud Mental Comunitario (CSMC) de la red para seguimiento ambulatorio, articulando el cuidado en el primer nivel y evitando la institucionalización.",
         "Suspender el seguimiento de estos casos hasta que se contrate un psiquiatra en el establecimiento."
       ],
@@ -11690,12 +11690,12 @@ window.SERUMS_DATA = {
       "statement": "Tras un sismo de magnitud considerable, su establecimiento activa el plan de contingencia y usted es asignado a la atención psicológica de los afectados en un albergue temporal.",
       "question": "¿Cuál es el enfoque más adecuado para la intervención inicial?",
       "options": [
+        "Brindar primeros auxilios psicológicos: seguridad, contención emocional y conexión con apoyo social y recursos básicos, priorizando casos de mayor riesgo.",
         "Aplicar psicoterapia estructurada de larga duración a todos los afectados desde el primer día.",
-        "Esperar a que disminuya el número de personas en el albergue antes de intervenir.",
         "Aplicar el mismo protocolo de evaluación clínica ambulatoria de consulta externa habitual, sin adaptarlo al contexto de emergencia.",
-        "Brindar primeros auxilios psicológicos: seguridad, contención emocional y conexión con apoyo social y recursos básicos, priorizando casos de mayor riesgo."
+        "Esperar a que disminuya el número de personas en el albergue antes de intervenir."
       ],
-      "correct": 3,
+      "correct": 0,
       "feedback": "Es correcta porque en el contexto de una emergencia lo indicado son los primeros auxilios psicológicos: garantizar seguridad, contención y conexión con redes de apoyo, priorizando a quienes muestran mayor riesgo. Un protocolo idéntico al de consulta ambulatoria no considera las particularidades de la emergencia; la psicoterapia estructurada de larga duración no es la respuesta inmediata en la fase aguda; esperar a que disminuya la afluencia retrasa una atención que debe ser oportuna."
     },
     {
@@ -11714,11 +11714,11 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es el rol del psicólogo en este caso?",
       "options": [
         "Derivar el componente emocional a otro nivel de atención, ya que no corresponde al manejo del primer nivel.",
-        "Evaluar el impacto emocional del diagnóstico, brindar apoyo psicológico y trabajar el estigma para favorecer la adherencia, en coordinación con el equipo de TB.",
         "Enfocarse solo en el componente biomédico y dejar el acompañamiento emocional a la familia del paciente.",
-        "Esperar a que el paciente termine el tratamiento antibacilar para recién abordar el aspecto emocional."
+        "Esperar a que el paciente termine el tratamiento antibacilar para recién abordar el aspecto emocional.",
+        "Evaluar el impacto emocional del diagnóstico, brindar apoyo psicológico y trabajar el estigma para favorecer la adherencia, en coordinación con el equipo de TB."
       ],
-      "correct": 1,
+      "correct": 3,
       "feedback": "Es correcta porque el abordaje de tuberculosis en el primer nivel incluye la salud mental del paciente, dado que el estigma y el malestar emocional son factores de riesgo directos para el abandono del tratamiento; el psicólogo debe intervenir de forma articulada con el equipo de TB desde el diagnóstico. Posponer el abordaje emocional hasta el final del tratamiento expone a mayor riesgo de abandono; delegarlo solo a la familia desatiende una necesidad clínica; derivarlo a otro nivel sin intervenir ignora que este componente sí corresponde al primer nivel."
     },
     {
@@ -11736,12 +11736,12 @@ window.SERUMS_DATA = {
       "statement": "Mujer de 49 años consulta por irritabilidad, tristeza y cambios de ánimo que ella asocia al inicio de la menopausia, afectando su relación familiar y laboral.",
       "question": "¿Cuál es el manejo psicológico inicial más apropiado?",
       "options": [
-        "Indicar que los síntomas son normales y no requieren ninguna intervención psicológica.",
+        "Recomendar que evite hablar del tema con su familia para no generar conflictos.",
         "Derivar directamente a psiquiatría sin evaluación previa por tratarse de una etapa hormonal.",
-        "Psicoeducar sobre los cambios propios del climaterio, evaluar el impacto funcional del malestar emocional y brindar apoyo psicológico, coordinando con el servicio médico si corresponde.",
-        "Recomendar que evite hablar del tema con su familia para no generar conflictos."
+        "Indicar que los síntomas son normales y no requieren ninguna intervención psicológica.",
+        "Psicoeducar sobre los cambios propios del climaterio, evaluar el impacto funcional del malestar emocional y brindar apoyo psicológico, coordinando con el servicio médico si corresponde."
       ],
-      "correct": 2,
+      "correct": 3,
       "feedback": "Es correcta porque el climaterio puede cursar con malestar emocional significativo que amerita psicoeducación, evaluación del impacto funcional y apoyo psicológico, articulando con el servicio médico cuando sea necesario. Descartar la necesidad de intervención ignora el impacto funcional referido; derivar sin evaluación previa salta un paso necesario del primer nivel; evitar el diálogo familiar no aborda el malestar y puede aislar aún más a la paciente."
     },
     {
@@ -11759,9 +11759,9 @@ window.SERUMS_DATA = {
       "statement": "Paciente con diagnóstico de trastorno de ansiedad generalizada solicita orientación sobre qué tipo de tratamiento psicológico sería más efectivo según la evidencia científica disponible.",
       "question": "¿Cuál es la respuesta más adecuada?",
       "options": [
-        "Cualquier enfoque terapéutico tiene la misma efectividad, por lo que la elección no es relevante.",
         "Recomendar únicamente técnicas de relajación como tratamiento único y suficiente.",
         "Indicar que solo el tratamiento farmacológico tiene sustento científico para la ansiedad.",
+        "Cualquier enfoque terapéutico tiene la misma efectividad, por lo que la elección no es relevante.",
         "Informar que la Terapia Cognitivo-Conductual cuenta con el mayor respaldo empírico para trastornos de ansiedad, y explicar en qué consiste su aplicación."
       ],
       "correct": 3,
@@ -11782,12 +11782,12 @@ window.SERUMS_DATA = {
       "statement": "Paciente de una comunidad indígena refiere haber recibido comentarios despectivos de otro usuario del establecimiento debido a su vestimenta tradicional y su lengua materna, lo que la hace dudar en seguir asistiendo a sus controles.",
       "question": "¿Cuál es la actuación más adecuada del psicólogo?",
       "options": [
-        "Sugerirle que evite usar su vestimenta tradicional para prevenir nuevos comentarios.",
         "Indicar que se trata de un problema ajeno al establecimiento de salud y no requiere intervención.",
-        "Registrar el hecho sin tomar ninguna acción adicional.",
-        "Validar su malestar, reforzar su derecho a la atención libre de discriminación, y coordinar con el establecimiento medidas para prevenir la estigmatización étnico-cultural."
+        "Sugerirle que evite usar su vestimenta tradicional para prevenir nuevos comentarios.",
+        "Validar su malestar, reforzar su derecho a la atención libre de discriminación, y coordinar con el establecimiento medidas para prevenir la estigmatización étnico-cultural.",
+        "Registrar el hecho sin tomar ninguna acción adicional."
       ],
-      "correct": 3,
+      "correct": 2,
       "feedback": "Es correcta porque frente a la discriminación étnico-cultural corresponde validar el malestar de la paciente, reafirmar su derecho a una atención libre de discriminación, y promover medidas institucionales de prevención del estigma, en línea con el enfoque intercultural en salud. Sugerir que oculte su identidad cultural refuerza la discriminación en lugar de combatirla; considerarlo un problema ajeno al establecimiento desatiende la responsabilidad institucional; registrar el hecho sin actuar no protege a la paciente ni previene su repetición."
     },
     {
@@ -11805,9 +11805,9 @@ window.SERUMS_DATA = {
       "statement": "En el diagnóstico situacional de su jurisdicción, usted observa un progresivo aumento de la población adulta mayor y una reducción sostenida de la natalidad en los últimos años.",
       "question": "¿Qué fenómeno describe mejor esta situación?",
       "options": [
-        "Una regresión epidemiológica sin relación con cambios poblacionales.",
-        "Una transición demográfica hacia una población más envejecida, con implicancias para la planificación de servicios de salud mental para adultos mayores.",
         "Un fenómeno exclusivamente urbano sin relevancia para la planificación en salud.",
+        "Una transición demográfica hacia una población más envejecida, con implicancias para la planificación de servicios de salud mental para adultos mayores.",
+        "Una regresión epidemiológica sin relación con cambios poblacionales.",
         "Una situación estadística irrelevante para la programación de servicios de salud."
       ],
       "correct": 1,
@@ -11829,11 +11829,11 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es el primer paso correcto según el Proceso de Atención de Enfermería?",
       "options": [
         "Formular directamente un plan de intervenciones sin haber realizado la valoración previa.",
-        "Registrar solo los signos vitales y omitir el resto de las etapas del proceso.",
         "Realizar la valoración integral del paciente (recolección de datos objetivos y subjetivos) para luego formular los diagnósticos de enfermería correspondientes.",
-        "Ejecutar de inmediato las intervenciones estándar para adultos mayores, sin individualizar el caso."
+        "Ejecutar de inmediato las intervenciones estándar para adultos mayores, sin individualizar el caso.",
+        "Registrar solo los signos vitales y omitir el resto de las etapas del proceso."
       ],
-      "correct": 2,
+      "correct": 1,
       "feedback": "Es correcta porque el Proceso de Atención de Enfermería inicia con la valoración integral (datos objetivos y subjetivos) como base para formular diagnósticos de enfermería pertinentes al caso, antes de planificar o ejecutar intervenciones. Formular un plan sin valoración previa invierte el orden metodológico del proceso; registrar solo signos vitales es una valoración incompleta; aplicar intervenciones estándar sin individualizar desconoce las particularidades del paciente, como su riesgo de caídas."
     },
     {
@@ -11851,12 +11851,12 @@ window.SERUMS_DATA = {
       "statement": "Lactante de 3 meses presenta retraso en hitos del desarrollo, rasgos dismórficos y antecedente de tamizaje neonatal ampliado no realizado al nacer.",
       "question": "¿Cuál es la conducta más apropiada del personal de enfermería?",
       "options": [
-        "Descartar cualquier alteración por tratarse de un lactante pequeño, sin registrar hallazgos.",
         "Indicar únicamente estimulación temprana en casa, sin derivación.",
-        "Documentar los hallazgos, informar al equipo médico y activar la referencia oportuna para evaluación especializada de una posible enfermedad rara o huérfana.",
-        "Esperar hasta el próximo control de CRED para reevaluar sin adelantar ninguna acción."
+        "Descartar cualquier alteración por tratarse de un lactante pequeño, sin registrar hallazgos.",
+        "Esperar hasta el próximo control de CRED para reevaluar sin adelantar ninguna acción.",
+        "Documentar los hallazgos, informar al equipo médico y activar la referencia oportuna para evaluación especializada de una posible enfermedad rara o huérfana."
       ],
-      "correct": 2,
+      "correct": 3,
       "feedback": "Es correcta porque ante signos de alarma compatibles con una posible enfermedad rara o huérfana corresponde documentar los hallazgos y activar la referencia oportuna para diagnóstico especializado, dado que la detección temprana mejora el pronóstico. Esperar al siguiente control retrasa una atención que debe ser oportuna; indicar solo estimulación temprana sin derivación no atiende la posible causa de fondo; descartar la alteración sin registro alguno omite un hallazgo clínicamente relevante."
     },
     {
@@ -11874,12 +11874,12 @@ window.SERUMS_DATA = {
       "statement": "Trabajador de una zona minera artesanal acude con cefalea persistente, irritabilidad y temblor fino en manos, con antecedente de exposición prolongada sin protección adecuada.",
       "question": "¿Cuál es la actuación inicial más adecuada?",
       "options": [
-        "Indicar que los síntomas corresponden únicamente a estrés laboral, sin explorar la exposición ocupacional.",
         "Recomendar que continúe trabajando en las mismas condiciones mientras se programan exámenes.",
+        "Recoger la historia de exposición ocupacional, identificar los factores de riesgo asociados y derivar para evaluación y manejo de una posible intoxicación por metales pesados.",
         "Indicar reposo por una semana sin ninguna evaluación adicional ni derivación.",
-        "Recoger la historia de exposición ocupacional, identificar los factores de riesgo asociados y derivar para evaluación y manejo de una posible intoxicación por metales pesados."
+        "Indicar que los síntomas corresponden únicamente a estrés laboral, sin explorar la exposición ocupacional."
       ],
-      "correct": 3,
+      "correct": 1,
       "feedback": "Es correcta porque los síntomas descritos junto con el antecedente de exposición ocupacional prolongada obligan a documentar la historia de exposición e identificar factores de riesgo antes de derivar para la evaluación de una posible intoxicación por metales pesados. Atribuir los síntomas solo a estrés laboral omite un antecedente clínicamente relevante; el reposo sin evaluación ni derivación no atiende la causa; permitir que continúe expuesto en las mismas condiciones perpetúa el riesgo."
     },
     {
@@ -11898,9 +11898,9 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la medida más importante para prevenir una infección asociada a la atención de salud (IAAS) en este contexto?",
       "options": [
         "Reforzar la higiene de manos según los momentos establecidos, como medida central y costo-efectiva de prevención de IAAS.",
-        "Aumentar la dosis de antibióticos profilácticos a todos los pacientes hospitalizados.",
+        "Delegar la prevención de infecciones exclusivamente al personal de limpieza del establecimiento.",
         "Aislar a todos los pacientes de la unidad sin distinción, independientemente de su condición clínica.",
-        "Delegar la prevención de infecciones exclusivamente al personal de limpieza del establecimiento."
+        "Aumentar la dosis de antibióticos profilácticos a todos los pacientes hospitalizados."
       ],
       "correct": 0,
       "feedback": "Es correcta porque la higiene de manos en los momentos establecidos es la medida individual más costo-efectiva y basada en evidencia para prevenir las infecciones asociadas a la atención de salud. Aumentar antibióticos profilácticos de forma indiscriminada favorece la resistencia antimicrobiana y no es la medida indicada; aislar a todos los pacientes sin criterio clínico es desproporcionado; delegar la prevención solo al personal de limpieza ignora que es una responsabilidad de todo el equipo de salud."
@@ -11920,12 +11920,12 @@ window.SERUMS_DATA = {
       "statement": "Durante el control de crecimiento y desarrollo de un niño de 3 años, la madre refiere que el niño aún no usa cepillo dental y consume golosinas con frecuencia.",
       "question": "¿Cuál es la intervención más adecuada del personal de enfermería?",
       "options": [
-        "Indicar que la salud bucal no corresponde evaluarla en el control de CRED.",
         "Recomendar eliminar por completo el consumo de azúcar sin brindar ninguna orientación sobre higiene bucal.",
         "Educar a la madre sobre la técnica de cepillado adecuada para la edad, el uso de hilo dental cuando corresponda, y derivar para evaluación odontológica.",
-        "Esperar a que el niño cumpla 6 años para abordar el tema de salud bucal."
+        "Esperar a que el niño cumpla 6 años para abordar el tema de salud bucal.",
+        "Indicar que la salud bucal no corresponde evaluarla en el control de CRED."
       ],
-      "correct": 2,
+      "correct": 1,
       "feedback": "Es correcta porque la promoción de la salud bucal, incluyendo la técnica de cepillado y la derivación odontológica oportuna, forma parte de las medidas preventivas que deben reforzarse desde el control de CRED. Considerar que no corresponde evaluarla en este control omite una responsabilidad establecida; esperar hasta los 6 años retrasa una intervención preventiva que debe iniciarse tempranamente; enfocarse solo en restringir el azúcar sin educar sobre higiene bucal es una intervención incompleta."
     },
     {
@@ -11943,12 +11943,12 @@ window.SERUMS_DATA = {
       "statement": "Puérpera inmediata presenta sangrado vaginal abundante y signos de hipotensión a los 20 minutos del parto, en un establecimiento sin médico presente en ese momento.",
       "question": "¿Cuál es la actuación inicial más adecuada del personal de enfermería?",
       "options": [
-        "Esperar la llegada del médico sin iniciar ninguna medida, para no exceder su competencia.",
         "Registrar el sangrado en la historia clínica y continuar con la atención de rutina.",
         "Activar la respuesta rápida ante emergencia obstétrica: masaje uterino, canalización de vía, monitoreo de signos vitales y coordinación inmediata para referencia si corresponde.",
+        "Esperar la llegada del médico sin iniciar ninguna medida, para no exceder su competencia.",
         "Indicar reposo y control en el siguiente turno sin intervención inmediata."
       ],
-      "correct": 2,
+      "correct": 1,
       "feedback": "Es correcta porque ante una hemorragia posparto con signos de inestabilidad se debe activar de inmediato la respuesta rápida: medidas iniciales como masaje uterino, canalización de vía y monitoreo, coordinando la referencia oportuna, dado que se trata de una emergencia que compromete la vida. Esperar al médico sin actuar retrasa medidas que sí están dentro de la competencia de enfermería en una emergencia; registrar sin intervenir y postergar la atención al siguiente turno exponen a la paciente a un mayor riesgo vital."
     },
     {
@@ -11966,12 +11966,12 @@ window.SERUMS_DATA = {
       "statement": "Gestante de una comunidad andina solicita que su parto se atienda en posición vertical, conforme a su costumbre cultural, en un establecimiento que cuenta con la implementación necesaria.",
       "question": "¿Cuál es la conducta correcta del personal de enfermería?",
       "options": [
-        "Explicarle que el parto vertical no está permitido en el sistema de salud formal.",
+        "Respetar y facilitar la atención del parto en la posición solicitada, conforme al enfoque intercultural y a la normativa vigente que promueve el parto vertical.",
         "Aceptar la solicitud solo si un familiar varón lo autoriza previamente.",
-        "Indicar que solo se atenderá en posición vertical si no hay ningún otro paciente en el servicio.",
-        "Respetar y facilitar la atención del parto en la posición solicitada, conforme al enfoque intercultural y a la normativa vigente que promueve el parto vertical."
+        "Explicarle que el parto vertical no está permitido en el sistema de salud formal.",
+        "Indicar que solo se atenderá en posición vertical si no hay ningún otro paciente en el servicio."
       ],
-      "correct": 3,
+      "correct": 0,
       "feedback": "Es correcta porque la normativa vigente promueve el parto vertical como parte de la atención con pertinencia intercultural, por lo que corresponde respetar y facilitar la posición solicitada por la gestante cuando el establecimiento cuenta con las condiciones para ello. Señalar que no está permitido contradice la política de promoción del parto vertical; condicionarlo a la autorización de un familiar varón vulnera la autonomía de la gestante; condicionarlo a la disponibilidad del servicio sin criterio clínico no corresponde a una negativa injustificada."
     },
     {
@@ -11990,9 +11990,9 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la estrategia más adecuada para garantizar la continuidad de atención?",
       "options": [
         "Utilizar los mecanismos de la Red Integrada de Salud, incluyendo telesalud, para coordinar el seguimiento especializado sin necesidad de traslados innecesarios.",
-        "Indicar al paciente que debe trasladarse por su cuenta a la capital de la región para cada control.",
+        "Delegar el seguimiento del caso a un establecimiento de menor nivel de complejidad.",
         "Suspender el seguimiento hasta que se contrate un especialista en el establecimiento.",
-        "Delegar el seguimiento del caso a un establecimiento de menor nivel de complejidad."
+        "Indicar al paciente que debe trasladarse por su cuenta a la capital de la región para cada control."
       ],
       "correct": 0,
       "feedback": "Es correcta porque las Redes Integradas de Salud, junto con herramientas como la telesalud, están diseñadas precisamente para garantizar la continuidad de atención especializada sin necesidad de traslados innecesarios, optimizando los recursos de la red. Indicar traslados por cuenta propia ignora el mecanismo de la RIS disponible; suspender el seguimiento desatiende la continuidad de cuidado; delegar el caso a un nivel de menor complejidad no resuelve la necesidad de manejo especializado."
@@ -12012,12 +12012,12 @@ window.SERUMS_DATA = {
       "statement": "Paciente acude por lesiones producidas en un episodio de violencia familiar y solicita un documento que respalde legalmente los hallazgos para su denuncia.",
       "question": "¿Cuál es la conducta médico-legal correcta?",
       "options": [
-        "Indicar que la elaboración de este tipo de documento no corresponde al establecimiento de salud.",
-        "Redactar el certificado basándose únicamente en el relato de la paciente, sin examen físico.",
         "Realizar el examen clínico correspondiente, elaborar el certificado médico legal describiendo objetivamente los hallazgos, y orientar sobre la ruta de denuncia.",
-        "Diferir la elaboración del certificado hasta que la paciente presente la denuncia policial previa."
+        "Indicar que la elaboración de este tipo de documento no corresponde al establecimiento de salud.",
+        "Diferir la elaboración del certificado hasta que la paciente presente la denuncia policial previa.",
+        "Redactar el certificado basándose únicamente en el relato de la paciente, sin examen físico."
       ],
-      "correct": 2,
+      "correct": 0,
       "feedback": "Es correcta porque corresponde al personal médico realizar el examen clínico y elaborar el certificado médico legal con la descripción objetiva de los hallazgos, documento que la paciente puede utilizar para su denuncia, además de orientarla sobre la ruta de atención. Condicionar el certificado a una denuncia previa invierte el orden correcto, pues el certificado suele ser el sustento de la denuncia; redactarlo sin examen físico carece de validez médico-legal; negar la elaboración del documento desatiende una responsabilidad del establecimiento de salud."
     },
     {
@@ -12037,10 +12037,10 @@ window.SERUMS_DATA = {
       "options": [
         "Indicar suplementación con hierro y control en un mes, sin mayor evaluación.",
         "Esperar la evolución espontánea del cuadro durante tres meses antes de derivar.",
-        "Reconocer estos como signos de alarma de posible cáncer infantil y derivar de forma prioritaria para evaluación especializada oportuna.",
-        "Atribuir los hallazgos únicamente a un cuadro digestivo común sin explorar otras causas."
+        "Atribuir los hallazgos únicamente a un cuadro digestivo común sin explorar otras causas.",
+        "Reconocer estos como signos de alarma de posible cáncer infantil y derivar de forma prioritaria para evaluación especializada oportuna."
       ],
-      "correct": 2,
+      "correct": 3,
       "feedback": "Es correcta porque la combinación de palidez progresiva, pérdida de peso y masa abdominal constituye signos de alarma que obligan a sospechar cáncer infantil y derivar de forma prioritaria, dado que la detección temprana mejora significativamente el pronóstico. Indicar solo hierro sin mayor evaluación minimiza signos de alarma relevantes; esperar la evolución retrasa un diagnóstico que debe ser oportuno; atribuirlo a una causa digestiva común sin explorar otras posibilidades desestima hallazgos de alarma."
     },
     {
@@ -12058,12 +12058,12 @@ window.SERUMS_DATA = {
       "statement": "Paciente de 5 años presenta un cuadro clínico atípico, de difícil clasificación con los diagnósticos habituales, y con antecedentes familiares de una condición similar no filiada.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
+        "Documentar exhaustivamente el cuadro clínico, considerar la posibilidad de una enfermedad rara o huérfana dentro del diagnóstico diferencial, y derivar oportunamente para evaluación especializada.",
         "Descartar cualquier posibilidad diagnóstica distinta a las enfermedades más frecuentes.",
         "Indicar tratamiento sintomático indefinido sin plantear un diagnóstico diferencial más amplio.",
-        "Esperar a que el paciente presente más síntomas antes de ampliar el diagnóstico diferencial.",
-        "Documentar exhaustivamente el cuadro clínico, considerar la posibilidad de una enfermedad rara o huérfana dentro del diagnóstico diferencial, y derivar oportunamente para evaluación especializada."
+        "Esperar a que el paciente presente más síntomas antes de ampliar el diagnóstico diferencial."
       ],
-      "correct": 3,
+      "correct": 0,
       "feedback": "Es correcta porque ante un cuadro atípico con antecedente familiar sugerente corresponde documentar el caso, considerar una enfermedad rara o huérfana dentro del diagnóstico diferencial y derivar oportunamente, ya que estas condiciones suelen requerir manejo especializado. Descartar de plano estas posibilidades limita el razonamiento diagnóstico; el tratamiento sintomático indefinido sin diagnóstico diferencial amplio no resuelve la causa; esperar más síntomas retrasa una derivación que debe ser oportuna."
     },
     {
@@ -12082,9 +12082,9 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta inicial más adecuada?",
       "options": [
         "Reconocer el cuadro como sugerente de intoxicación por plomo, iniciar manejo inicial y coordinar la referencia oportuna para confirmación y tratamiento especializado.",
-        "Indicar manejo sintomático del dolor abdominal sin vincularlo a la exposición ocupacional referida.",
+        "Indicar que continúe en el mismo ambiente laboral mientras se programan exámenes complementarios.",
         "Descartar cualquier relación con la exposición minera por tratarse de síntomas digestivos inespecíficos.",
-        "Indicar que continúe en el mismo ambiente laboral mientras se programan exámenes complementarios."
+        "Indicar manejo sintomático del dolor abdominal sin vincularlo a la exposición ocupacional referida."
       ],
       "correct": 0,
       "feedback": "Es correcta porque el cuadro clínico descrito, junto con el antecedente de exposición a plomo, es sugerente de intoxicación por metales pesados, lo que obliga a iniciar el manejo inicial y coordinar la referencia oportuna para confirmación diagnóstica y tratamiento especializado. Tratar solo el síntoma sin vincularlo a la exposición ignora una causa tratable; descartar la relación con la exposición minera pasa por alto un antecedente clínicamente relevante; mantenerlo en el mismo ambiente laboral perpetúa la exposición."
@@ -12104,12 +12104,12 @@ window.SERUMS_DATA = {
       "statement": "Paciente post-operado de una herida quirúrgica limpia presenta, al tercer día, eritema, calor local y secreción purulenta en la zona de la incisión.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Indicar que es una evolución normal del proceso de cicatrización sin necesidad de evaluación adicional.",
-        "Indicar solo curaciones diarias sin investigar la causa del cuadro.",
+        "Esperar una semana adicional para reevaluar antes de tomar alguna conducta.",
         "Reconocer los signos como sugerentes de una infección de sitio quirúrgico (IAAS), iniciar evaluación y manejo correspondiente, y reforzar las medidas de prevención en el servicio.",
-        "Esperar una semana adicional para reevaluar antes de tomar alguna conducta."
+        "Indicar solo curaciones diarias sin investigar la causa del cuadro.",
+        "Indicar que es una evolución normal del proceso de cicatrización sin necesidad de evaluación adicional."
       ],
-      "correct": 2,
+      "correct": 1,
       "feedback": "Es correcta porque el eritema, calor local y secreción purulenta en el sitio quirúrgico son signos sugerentes de una infección asociada a la atención de salud, lo que amerita evaluación y manejo oportuno, además de reforzar las medidas de prevención en el servicio. Considerarlo una evolución normal minimiza signos de infección; las curaciones sin investigar la causa no resuelven el problema de fondo; esperar una semana adicional retrasa un manejo que debe ser oportuno."
     },
     {
@@ -12128,11 +12128,11 @@ window.SERUMS_DATA = {
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
         "Omitir el hallazgo por no ser el motivo principal de la consulta.",
-        "Indicar que acuda a un consultorio odontológico particular, sin brindar ninguna orientación preventiva.",
         "Brindar orientación breve sobre técnica de cepillado y uso de hilo dental, y derivar para evaluación odontológica.",
-        "Registrar el hallazgo sin comunicarlo al paciente ni derivarlo."
+        "Registrar el hallazgo sin comunicarlo al paciente ni derivarlo.",
+        "Indicar que acuda a un consultorio odontológico particular, sin brindar ninguna orientación preventiva."
       ],
-      "correct": 2,
+      "correct": 1,
       "feedback": "Es correcta porque, independientemente del motivo principal de consulta, corresponde aprovechar el contacto para brindar orientación preventiva en salud bucal y derivar oportunamente para evaluación odontológica, como parte de la atención integral. Omitir el hallazgo o registrarlo sin comunicarlo desaprovecha una oportunidad de prevención; derivarlo sin brindar ninguna orientación preventiva es una intervención incompleta."
     },
     {
@@ -12150,12 +12150,12 @@ window.SERUMS_DATA = {
       "statement": "Mujer de 50 años consulta por bochornos frecuentes, sequedad vaginal y alteraciones del sueño, compatibles con climaterio, sin contraindicaciones evidentes para tratamiento hormonal.",
       "question": "¿Cuál es la conducta inicial más adecuada?",
       "options": [
-        "Indicar que estos síntomas no requieren ninguna evaluación ni manejo por ser propios de la edad.",
-        "Indicar terapia hormonal de reemplazo de forma inmediata sin evaluar antecedentes ni posibles contraindicaciones.",
         "Derivar directamente a un nivel de mayor complejidad sin realizar ninguna evaluación previa en el primer nivel.",
-        "Evaluar de forma integral el cuadro clínico, descartar contraindicaciones y ofrecer las opciones de manejo disponibles, incluyendo medidas no farmacológicas y, si corresponde, terapia hormonal, con seguimiento clínico."
+        "Evaluar de forma integral el cuadro clínico, descartar contraindicaciones y ofrecer las opciones de manejo disponibles, incluyendo medidas no farmacológicas y, si corresponde, terapia hormonal, con seguimiento clínico.",
+        "Indicar que estos síntomas no requieren ninguna evaluación ni manejo por ser propios de la edad.",
+        "Indicar terapia hormonal de reemplazo de forma inmediata sin evaluar antecedentes ni posibles contraindicaciones."
       ],
-      "correct": 3,
+      "correct": 1,
       "feedback": "Es correcta porque el manejo del climaterio requiere una evaluación clínica integral que descarte contraindicaciones antes de ofrecer las opciones de manejo disponibles, incluyendo medidas no farmacológicas y terapia hormonal cuando corresponda, con seguimiento posterior. Indicar terapia hormonal sin evaluación previa expone a riesgos evitables; descartar la necesidad de manejo ignora el impacto funcional de los síntomas; derivar sin evaluación previa en el primer nivel omite un paso que sí corresponde a este nivel de atención."
     },
     {
@@ -12173,12 +12173,12 @@ window.SERUMS_DATA = {
       "statement": "Puérpera inmediata tras un parto vaginal sin complicaciones se encuentra estable, con útero contraído, sangrado dentro de límites normales y signos vitales estables.",
       "question": "¿Cuál es la conducta más adecuada durante el puerperio inmediato normal?",
       "options": [
-        "Realizar el monitoreo clínico habitual del puerperio inmediato (involución uterina, sangrado, signos vitales), favorecer el contacto piel a piel y el inicio de la lactancia materna, y vigilar la aparición de signos de alarma.",
+        "Indicar reposo absoluto sin favorecer el contacto piel a piel ni el inicio de la lactancia.",
         "Aplicar de forma rutinaria medidas de manejo reservadas para complicaciones obstétricas, sin que existan signos de alarma.",
-        "Dar de alta de inmediato sin ningún periodo de observación posparto.",
-        "Indicar reposo absoluto sin favorecer el contacto piel a piel ni el inicio de la lactancia."
+        "Realizar el monitoreo clínico habitual del puerperio inmediato (involución uterina, sangrado, signos vitales), favorecer el contacto piel a piel y el inicio de la lactancia materna, y vigilar la aparición de signos de alarma.",
+        "Dar de alta de inmediato sin ningún periodo de observación posparto."
       ],
-      "correct": 0,
+      "correct": 2,
       "feedback": "Es correcta porque el puerperio inmediato normal requiere el monitoreo clínico habitual, favoreciendo el contacto piel a piel y el inicio temprano de la lactancia materna, además de vigilar la aparición de signos de alarma que ameriten una conducta distinta. Dar de alta sin observación omite el periodo de vigilancia necesario tras el parto; aplicar medidas reservadas para complicaciones sin que existan signos de alarma sobremedicaliza un proceso normal; indicar reposo absoluto sin favorecer el contacto piel a piel y la lactancia contradice las prácticas recomendadas en el puerperio fisiológico."
     },
     {
@@ -12196,12 +12196,12 @@ window.SERUMS_DATA = {
       "statement": "Gestante de una comunidad amazónica solicita que, además del parto vertical, se permita el acompañamiento de una partera tradicional de su comunidad durante la atención institucional.",
       "question": "¿Cuál es la conducta más adecuada?",
       "options": [
-        "Rechazar la participación de la partera tradicional por tratarse de un establecimiento formal de salud.",
-        "Aceptar el acompañamiento solo si la partera tradicional asume la responsabilidad legal completa de la atención.",
         "Facilitar, en la medida de lo posible, la atención con pertinencia intercultural: parto vertical y acompañamiento de la partera tradicional, articulando su participación con el equipo de salud dentro de los protocolos de seguridad.",
-        "Indicar que debe elegir entre la atención institucional o la atención tradicional, pero no ambas."
+        "Rechazar la participación de la partera tradicional por tratarse de un establecimiento formal de salud.",
+        "Indicar que debe elegir entre la atención institucional o la atención tradicional, pero no ambas.",
+        "Aceptar el acompañamiento solo si la partera tradicional asume la responsabilidad legal completa de la atención."
       ],
-      "correct": 2,
+      "correct": 0,
       "feedback": "Es correcta porque la atención con enfoque intercultural busca articular las prácticas tradicionales, como el parto vertical y el acompañamiento de la partera, con la atención institucional dentro de los protocolos de seguridad, sin que sean mutuamente excluyentes. Obligar a elegir entre una u otra modalidad desconoce el enfoque intercultural; rechazar la participación de la partera tradicional deniega un derecho reconocido en la normativa; condicionar la participación a que asuma la responsabilidad legal completa no corresponde al marco de colaboración esperado."
     },
     {
@@ -12219,12 +12219,12 @@ window.SERUMS_DATA = {
       "statement": "Como médico responsable de un establecimiento de primer nivel, necesita definir con claridad las funciones específicas de cada puesto del personal para evitar duplicidad de funciones y vacíos en la atención.",
       "question": "¿Qué documento técnico normativo debe consultar y, de ser necesario, actualizar?",
       "options": [
-        "El Plan Operativo Institucional (POI), que corresponde únicamente a metas y actividades anuales.",
-        "El Análisis FODA del establecimiento, que es una herramienta de diagnóstico y no de asignación de funciones.",
         "El Manual de Organización y Funciones (MOP), que detalla las funciones específicas de cada cargo, en concordancia con el Reglamento de Organización y Funciones (ROF).",
-        "El Plan Estratégico Institucional (PEI), que define lineamientos de largo plazo y no funciones específicas por cargo."
+        "El Plan Estratégico Institucional (PEI), que define lineamientos de largo plazo y no funciones específicas por cargo.",
+        "El Plan Operativo Institucional (POI), que corresponde únicamente a metas y actividades anuales.",
+        "El Análisis FODA del establecimiento, que es una herramienta de diagnóstico y no de asignación de funciones."
       ],
-      "correct": 2,
+      "correct": 0,
       "feedback": "Es correcta porque el Manual de Organización y Funciones (MOP), en concordancia con el Reglamento de Organización y Funciones (ROF), es el documento técnico normativo que detalla las funciones específicas de cada puesto, siendo la herramienta adecuada para evitar duplicidades o vacíos de función. El POI y el PEI son instrumentos de planificación de actividades y lineamientos estratégicos, no de asignación de funciones por cargo; el FODA es una herramienta diagnóstica, no normativa de funciones."
     }
   ],
