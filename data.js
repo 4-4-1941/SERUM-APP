@@ -1371,7 +1371,7 @@ window.SERUMS_DATA = {
       "career": "Odontología",
       "block": "Cuidado integral",
       "title": "Absceso dentoalveolar",
-      "level": "I-2",
+      "level": "I-4",
       "specialty": "Odontología",
       "tags": [
         "absceso dental",
@@ -1394,7 +1394,7 @@ window.SERUMS_DATA = {
       "career": "Odontología",
       "block": "Cuidado integral",
       "title": "Fobia dental con evitación",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Odontología / Psicología",
       "tags": [
         "fobia dental",
@@ -1441,7 +1441,7 @@ window.SERUMS_DATA = {
       "career": "Odontología",
       "block": "Salud pública",
       "title": "Prevención de caries en escolares",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Odontología / Nutrición",
       "tags": [
         "caries",
@@ -1465,7 +1465,7 @@ window.SERUMS_DATA = {
       "career": "Odontología",
       "block": "Cuidado integral",
       "title": "Traumatismo dentoalveolar",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Odontología",
       "tags": [
         "trauma dental",
@@ -2273,7 +2273,7 @@ window.SERUMS_DATA = {
       "career": "Odontología",
       "block": "Cuidado integral",
       "title": "Gingivitis en paciente con diabetes",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Odontología / Medicina",
       "tags": [
         "gingivitis",
@@ -2321,7 +2321,7 @@ window.SERUMS_DATA = {
       "career": "Odontología",
       "block": "Salud pública",
       "title": "Programa de salud bucal escolar",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Odontología / Salud Pública",
       "tags": [
         "salud bucal escolar",
@@ -2804,7 +2804,7 @@ window.SERUMS_DATA = {
       "career": "Odontología",
       "block": "Salud pública",
       "title": "Fluorización comunitaria del agua",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Odontología / Salud Pública",
       "tags": [
         "fluorización",
@@ -3632,7 +3632,7 @@ window.SERUMS_DATA = {
       "career": "Farmacia y Bioquímica",
       "block": "Cuidado integral",
       "title": "Dispensación de un medicamento de alto riesgo",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Farmacia y Bioquímica",
       "tags": [
         "dispensación",
@@ -3655,7 +3655,7 @@ window.SERUMS_DATA = {
       "career": "Farmacia y Bioquímica",
       "block": "Gestión",
       "title": "Buenas prácticas de almacenamiento de medicamentos",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Farmacia y Bioquímica",
       "tags": [
         "almacenamiento",
@@ -3701,7 +3701,7 @@ window.SERUMS_DATA = {
       "career": "Trabajo Social",
       "block": "Ética e interculturalidad",
       "title": "Sospecha de abandono de un adulto mayor",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Trabajo Social",
       "tags": [
         "abandono",
@@ -3724,7 +3724,7 @@ window.SERUMS_DATA = {
       "career": "Trabajo Social",
       "block": "Gestión",
       "title": "Articulación con redes de protección social",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Trabajo Social",
       "tags": [
         "redes de protección social",
@@ -3747,7 +3747,7 @@ window.SERUMS_DATA = {
       "career": "Trabajo Social",
       "block": "Cuidado integral",
       "title": "Visita social en un caso de violencia familiar",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Trabajo Social / Psicología",
       "tags": [
         "violencia familiar",
@@ -4047,7 +4047,7 @@ window.SERUMS_DATA = {
       "career": "Farmacia y Bioquímica",
       "block": "Salud pública",
       "title": "Reporte de una reacción adversa a medicamento",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Farmacia y Bioquímica",
       "tags": [
         "farmacovigilancia",
@@ -4070,7 +4070,7 @@ window.SERUMS_DATA = {
       "career": "Farmacia y Bioquímica",
       "block": "Cuidado integral",
       "title": "Atención farmacéutica en un adulto mayor polimedicado",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Farmacia y Bioquímica",
       "tags": [
         "polifarmacia",
@@ -4093,7 +4093,7 @@ window.SERUMS_DATA = {
       "career": "Trabajo Social",
       "block": "Cuidado integral",
       "title": "Visita social a una gestante adolescente en situación de riesgo",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Trabajo Social",
       "tags": [
         "gestante adolescente",
@@ -4116,7 +4116,7 @@ window.SERUMS_DATA = {
       "career": "Trabajo Social",
       "block": "Gestión",
       "title": "Articulación con instituciones educativas",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Trabajo Social",
       "tags": [
         "articulación educativa",
@@ -4923,7 +4923,7 @@ window.SERUMS_DATA = {
       "career": "Odontología",
       "block": "Cuidado integral",
       "title": "Periodontitis severa con movilidad dentaria",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Odontología",
       "tags": [
         "periodontitis",
@@ -4969,7 +4969,7 @@ window.SERUMS_DATA = {
       "career": "Odontología",
       "block": "Cuidado integral",
       "title": "Lesión bucal persistente como señal de alarma",
-      "level": "I-2",
+      "level": "I-4",
       "specialty": "Odontología",
       "tags": [
         "cáncer oral",
@@ -5062,7 +5062,7 @@ window.SERUMS_DATA = {
       "career": "Farmacia y Bioquímica",
       "block": "Cuidado integral",
       "title": "Interacción medicamentosa relevante",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Farmacia y Bioquímica",
       "tags": [
         "interacción medicamentosa",
@@ -5131,7 +5131,7 @@ window.SERUMS_DATA = {
       "career": "Trabajo Social",
       "block": "Gestión",
       "title": "Gestión de apoyo económico en fase terminal",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Trabajo Social",
       "tags": [
         "fase terminal",
@@ -5707,7 +5707,7 @@ window.SERUMS_DATA = {
       "career": "Trabajo Social",
       "block": "Ética e interculturalidad",
       "title": "Veracidad en el informe social ante una autoridad judicial",
-      "level": "I-2",
+      "level": "I-4",
       "specialty": "Trabajo Social",
       "tags": [
         "informe social",
@@ -8246,7 +8246,7 @@ window.SERUMS_DATA = {
       "career": "Farmacia y Bioquímica",
       "block": "Gestión",
       "title": "Petitorio Nacional Único de Medicamentos Esenciales",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Farmacia y Bioquímica",
       "tags": [
         "PNUME",
@@ -8269,7 +8269,7 @@ window.SERUMS_DATA = {
       "career": "Farmacia y Bioquímica",
       "block": "Cuidado integral",
       "title": "Notificación de reacción adversa a medicamento",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Farmacia y Bioquímica",
       "tags": [
         "farmacovigilancia",
@@ -8315,7 +8315,7 @@ window.SERUMS_DATA = {
       "career": "Trabajo Social",
       "block": "Cuidado integral",
       "title": "Valoración social de riesgo familiar",
-      "level": "I-2",
+      "level": "I-4",
       "specialty": "Trabajo Social",
       "tags": [
         "riesgo familiar",
@@ -8338,7 +8338,7 @@ window.SERUMS_DATA = {
       "career": "Trabajo Social",
       "block": "Gestión",
       "title": "Articulación con CEM ante violencia familiar",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Trabajo Social",
       "tags": [
         "DEMUNA",
@@ -8430,7 +8430,7 @@ window.SERUMS_DATA = {
       "career": "Odontología",
       "block": "Cuidado integral",
       "title": "Tratamiento restaurador atraumático (ART)",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Odontología",
       "tags": [
         "ART",
@@ -8476,7 +8476,7 @@ window.SERUMS_DATA = {
       "career": "Odontología",
       "block": "Cuidado integral",
       "title": "Urgencia odontológica: absceso dentoalveolar",
-      "level": "I-2",
+      "level": "I-4",
       "specialty": "Odontología",
       "tags": [
         "absceso dentoalveolar",
@@ -9488,7 +9488,7 @@ window.SERUMS_DATA = {
       "career": "Farmacia y Bioquímica",
       "block": "Cuidado integral",
       "title": "Interacción warfarina–AINE de venta libre",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Farmacia y Bioquímica",
       "tags": [
         "interacciones medicamentosas",
@@ -9511,7 +9511,7 @@ window.SERUMS_DATA = {
       "career": "Farmacia y Bioquímica",
       "block": "Gestión",
       "title": "Cadena de frío de vacunas",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Farmacia y Bioquímica",
       "tags": [
         "cadena de frío",
@@ -9534,7 +9534,7 @@ window.SERUMS_DATA = {
       "career": "Trabajo Social",
       "block": "Cuidado integral",
       "title": "Abandono en adulto mayor",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Trabajo Social",
       "tags": [
         "adulto mayor",
@@ -10017,7 +10017,7 @@ window.SERUMS_DATA = {
       "career": "Farmacia y Bioquímica",
       "block": "Gestión",
       "title": "Gestión de medicamentos de control especial",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Farmacia y Bioquímica",
       "tags": [
         "estupefacientes",
@@ -10040,7 +10040,7 @@ window.SERUMS_DATA = {
       "career": "Trabajo Social",
       "block": "Ética e interculturalidad",
       "title": "Ruta de atención en violencia de género",
-      "level": "I-2",
+      "level": "I-4",
       "specialty": "Trabajo Social",
       "tags": [
         "violencia de género",
@@ -10063,7 +10063,7 @@ window.SERUMS_DATA = {
       "career": "Trabajo Social",
       "block": "Gestión",
       "title": "Articulación con el Seguro Integral de Salud (SIS)",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Trabajo Social",
       "tags": [
         "SIS",
@@ -10155,7 +10155,7 @@ window.SERUMS_DATA = {
       "career": "Odontología",
       "block": "Salud pública",
       "title": "Bioseguridad en el consultorio dental",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Odontología",
       "tags": [
         "bioseguridad",
@@ -10315,7 +10315,7 @@ window.SERUMS_DATA = {
       "career": "Farmacia y Bioquímica",
       "block": "Salud pública",
       "title": "Participación en campañas de vacunación",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Farmacia y Bioquímica",
       "tags": [
         "vacunación",
@@ -10361,7 +10361,7 @@ window.SERUMS_DATA = {
       "career": "Trabajo Social",
       "block": "Investigación",
       "title": "Diagnóstico social comunitario",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Trabajo Social",
       "tags": [
         "diagnóstico social",
@@ -10384,7 +10384,7 @@ window.SERUMS_DATA = {
       "career": "Trabajo Social",
       "block": "Cuidado integral",
       "title": "Acompañamiento social en enfermedad crónica",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Trabajo Social",
       "tags": [
         "enfermedad crónica",
@@ -10453,7 +10453,7 @@ window.SERUMS_DATA = {
       "career": "Odontología",
       "block": "Investigación",
       "title": "Índice CPOD en vigilancia epidemiológica bucal",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Odontología",
       "tags": [
         "CPOD",
@@ -10844,7 +10844,7 @@ window.SERUMS_DATA = {
       "career": "Trabajo Social",
       "block": "Salud pública",
       "title": "Participación comunitaria en programas de salud",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Trabajo Social",
       "tags": [
         "participación comunitaria",
