@@ -259,7 +259,7 @@ window.SERUMS_DATA = {
       "career": "Enfermería",
       "block": "Cuidado integral",
       "title": "Hipertensión no controlada",
-      "level": "I-3",
+      "level": "I-2",
       "specialty": "Enfermería / Medicina",
       "tags": [
         "crónicos",
@@ -374,7 +374,7 @@ window.SERUMS_DATA = {
       "career": "Enfermería",
       "block": "Salud pública",
       "title": "Cobertura de vacunación",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Salud Pública",
       "tags": [
         "vacunas",
@@ -1069,7 +1069,7 @@ window.SERUMS_DATA = {
       "career": "Enfermería",
       "block": "Cuidado integral",
       "title": "Alerta en Control de Crecimiento y Desarrollo",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Enfermería",
       "tags": [
         "CRED",
@@ -1092,7 +1092,7 @@ window.SERUMS_DATA = {
       "career": "Enfermería",
       "block": "Cuidado integral",
       "title": "Úlcera por presión en paciente postrado",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Enfermería",
       "tags": [
         "úlcera por presión",
@@ -1115,7 +1115,7 @@ window.SERUMS_DATA = {
       "career": "Enfermería",
       "block": "Cuidado integral",
       "title": "Cuidados paliativos domiciliarios",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Enfermería / Psicología",
       "tags": [
         "cuidados paliativos",
@@ -1162,7 +1162,7 @@ window.SERUMS_DATA = {
       "career": "Enfermería",
       "block": "Cuidado integral",
       "title": "Visita domiciliaria a paciente diabético",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Enfermería",
       "tags": [
         "diabetes",
@@ -1185,7 +1185,7 @@ window.SERUMS_DATA = {
       "career": "Enfermería",
       "block": "Salud pública",
       "title": "Bioseguridad ante brote epidémico",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Enfermería",
       "tags": [
         "bioseguridad",
@@ -2064,7 +2064,7 @@ window.SERUMS_DATA = {
       "career": "Enfermería",
       "block": "Cuidado integral",
       "title": "Shock anafiláctico durante una inmunización",
-      "level": "I-2",
+      "level": "I-4",
       "specialty": "Enfermería",
       "tags": [
         "anafilaxia",
@@ -2111,7 +2111,7 @@ window.SERUMS_DATA = {
       "career": "Enfermería",
       "block": "Salud pública",
       "title": "Tamizaje comunitario de hipertensión",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Enfermería / Salud Pública",
       "tags": [
         "hipertensión",
@@ -2134,7 +2134,7 @@ window.SERUMS_DATA = {
       "career": "Enfermería",
       "block": "Cuidado integral",
       "title": "Pie diabético en visita domiciliaria",
-      "level": "I-2",
+      "level": "I-4",
       "specialty": "Enfermería",
       "tags": [
         "pie diabético",
@@ -2551,7 +2551,7 @@ window.SERUMS_DATA = {
       "career": "Enfermería",
       "block": "Cuidado integral",
       "title": "Exposición ocupacional a fluido biológico",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Enfermería",
       "tags": [
         "VIH",
@@ -3333,7 +3333,7 @@ window.SERUMS_DATA = {
       "career": "Enfermería",
       "block": "Gestión",
       "title": "Desabastecimiento de insumos médicos",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Enfermería / Gestión",
       "tags": [
         "gestión logística",
@@ -3563,7 +3563,7 @@ window.SERUMS_DATA = {
       "career": "Enfermería",
       "block": "Salud pública",
       "title": "Gestión integral de residuos sólidos en el establecimiento",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Enfermería / Salud Pública",
       "tags": [
         "residuos sólidos",
@@ -3609,7 +3609,7 @@ window.SERUMS_DATA = {
       "career": "Enfermería",
       "block": "Cuidado integral",
       "title": "Aplicación del modelo de cuidado integral por curso de vida",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Enfermería",
       "tags": [
         "curso de vida",
@@ -4807,7 +4807,7 @@ window.SERUMS_DATA = {
       "career": "Enfermería",
       "block": "Gestión",
       "title": "Clasificación de pacientes en el triaje de emergencia",
-      "level": "I-2",
+      "level": "I-4",
       "specialty": "Enfermería",
       "tags": [
         "triaje",
@@ -5983,7 +5983,7 @@ window.SERUMS_DATA = {
       "career": "Enfermería",
       "block": "Salud pública",
       "title": "Ruptura de cadena de frío en vacunas",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Salud Pública / DMUNI",
       "tags": [
         "inmunizaciones",
@@ -11009,7 +11009,7 @@ window.SERUMS_DATA = {
       "career": "Enfermería",
       "block": "Salud pública",
       "title": "Tasa de ataque en brote institucional",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Enfermería",
       "tags": [
         "examen real SERUMS",
@@ -11081,7 +11081,7 @@ window.SERUMS_DATA = {
       "career": "Enfermería",
       "block": "Cuidado integral",
       "title": "Discordancia en tamizaje de VIH",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Enfermería",
       "tags": [
         "examen real SERUMS",
@@ -11153,7 +11153,7 @@ window.SERUMS_DATA = {
       "career": "Enfermería",
       "block": "Salud pública",
       "title": "Número reproductivo básico en brote de fiebre amarilla",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Enfermería",
       "tags": [
         "examen real SERUMS",
@@ -11177,7 +11177,7 @@ window.SERUMS_DATA = {
       "career": "Enfermería",
       "block": "Salud pública",
       "title": "Bloqueo vacunal ante caso probable prevenible por vacuna",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Enfermería",
       "tags": [
         "examen real SERUMS",
@@ -11201,7 +11201,7 @@ window.SERUMS_DATA = {
       "career": "Enfermería",
       "block": "Salud pública",
       "title": "Medidas ante caso probable de tos ferina",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Enfermería",
       "tags": [
         "examen real SERUMS",
@@ -11274,7 +11274,7 @@ window.SERUMS_DATA = {
       "career": "Enfermería",
       "block": "Ética e interculturalidad",
       "title": "Autonomía en rechazo de hemoderivados",
-      "level": "I-2",
+      "level": "I-4",
       "specialty": "Enfermería",
       "tags": [
         "examen real SERUMS",
@@ -11442,7 +11442,7 @@ window.SERUMS_DATA = {
       "career": "Enfermería",
       "block": "Cuidado integral",
       "title": "Clasificación de tuberculosis multidrogorresistente",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Enfermería",
       "tags": [
         "examen real SERUMS",
@@ -11490,7 +11490,7 @@ window.SERUMS_DATA = {
       "career": "Enfermería",
       "block": "Investigación",
       "title": "Indicador epidemiológico en brote de malaria con letalidad",
-      "level": "I-2",
+      "level": "I-4",
       "specialty": "Enfermería",
       "tags": [
         "examen real SERUMS",
@@ -11538,7 +11538,7 @@ window.SERUMS_DATA = {
       "career": "Enfermería",
       "block": "Salud pública",
       "title": "Esquema de vacunación contra el VPH",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Enfermería",
       "tags": [
         "examen real SERUMS",
@@ -11933,7 +11933,7 @@ window.SERUMS_DATA = {
       "career": "Enfermería",
       "block": "Cuidado integral",
       "title": "Manejo inicial de hemorragia posparto",
-      "level": "I-3",
+      "level": "I-4",
       "specialty": "Enfermería",
       "tags": [
         "emergencia obstétrica",
