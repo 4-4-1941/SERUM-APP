@@ -1231,7 +1231,7 @@ window.SERUMS_DATA = {
       "career": "Obstetricia",
       "block": "Cuidado integral",
       "title": "Parto pretérmino en zona rural",
-      "level": "I-3",
+      "level": "I-4",
       "specialty": "Obstetricia",
       "tags": [
         "parto pretérmino",
@@ -1254,7 +1254,7 @@ window.SERUMS_DATA = {
       "career": "Obstetricia",
       "block": "Ética e interculturalidad",
       "title": "Rechazo de la pareja a planificación familiar",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Obstetricia / Psicología",
       "tags": [
         "planificación familiar",
@@ -1278,7 +1278,7 @@ window.SERUMS_DATA = {
       "career": "Obstetricia",
       "block": "Cuidado integral",
       "title": "Preeclampsia",
-      "level": "I-3",
+      "level": "I-4",
       "specialty": "Obstetricia / Medicina",
       "tags": [
         "preeclampsia",
@@ -1301,7 +1301,7 @@ window.SERUMS_DATA = {
       "career": "Obstetricia",
       "block": "Cuidado integral",
       "title": "Hemorragia posparto",
-      "level": "I-3",
+      "level": "I-4",
       "specialty": "Obstetricia",
       "tags": [
         "hemorragia posparto",
@@ -1324,7 +1324,7 @@ window.SERUMS_DATA = {
       "career": "Obstetricia",
       "block": "Ética e interculturalidad",
       "title": "Embarazo adolescente",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Obstetricia / Psicología",
       "tags": [
         "embarazo adolescente",
@@ -2157,7 +2157,7 @@ window.SERUMS_DATA = {
       "career": "Obstetricia",
       "block": "Cuidado integral",
       "title": "Ruptura prematura de membranas",
-      "level": "I-3",
+      "level": "I-4",
       "specialty": "Obstetricia",
       "tags": [
         "RPM",
@@ -2227,7 +2227,7 @@ window.SERUMS_DATA = {
       "career": "Obstetricia",
       "block": "Cuidado integral",
       "title": "Signos de infección puerperal",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Obstetricia",
       "tags": [
         "puerperio",
@@ -4853,7 +4853,7 @@ window.SERUMS_DATA = {
       "career": "Obstetricia",
       "block": "Cuidado integral",
       "title": "Diabetes gestacional",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Obstetricia",
       "tags": [
         "diabetes gestacional",
@@ -5845,7 +5845,7 @@ window.SERUMS_DATA = {
       "career": "Obstetricia",
       "block": "Salud pública",
       "title": "Vigilancia epidemiológica de muerte materna",
-      "level": "I-3",
+      "level": "I-4",
       "specialty": "Salud Pública / Obstetricia",
       "tags": [
         "muerte materna",
@@ -6190,7 +6190,7 @@ window.SERUMS_DATA = {
       "career": "Obstetricia",
       "block": "Salud pública",
       "title": "Tamizaje alterado de cáncer de cuello uterino",
-      "level": "I-2",
+      "level": "I-3",
       "specialty": "Salud Pública / DPCAN",
       "tags": [
         "cáncer",
