@@ -4,7 +4,7 @@ window.SERUMS_DATA = {
     {
       "id": 1,
       "career": "Psicología",
-      "block": "Psicología",
+      "block": "Cuidado integral",
       "title": "Riesgo suicida en adolescente",
       "level": "I-4",
       "specialty": "Psicología",
@@ -27,7 +27,7 @@ window.SERUMS_DATA = {
     {
       "id": 2,
       "career": "Psicología",
-      "block": "Psicología",
+      "block": "Cuidado integral",
       "title": "Violencia familiar con ansiedad",
       "level": "I-3",
       "specialty": "Psicología",
@@ -50,7 +50,7 @@ window.SERUMS_DATA = {
     {
       "id": 3,
       "career": "Psicología",
-      "block": "Psicología",
+      "block": "Cuidado integral",
       "title": "Ataque de pánico en consulta",
       "level": "I-2",
       "specialty": "Psicología",
@@ -73,7 +73,7 @@ window.SERUMS_DATA = {
     {
       "id": 4,
       "career": "Psicología",
-      "block": "Psicología",
+      "block": "Cuidado integral",
       "title": "Depresión y baja adherencia",
       "level": "I-2",
       "specialty": "Psicología",
@@ -96,7 +96,7 @@ window.SERUMS_DATA = {
     {
       "id": 5,
       "career": "Psicología",
-      "block": "Psicología",
+      "block": "Cuidado integral",
       "title": "Duelo complicado",
       "level": "I-2",
       "specialty": "Psicología",
@@ -119,7 +119,7 @@ window.SERUMS_DATA = {
     {
       "id": 6,
       "career": "Psicología",
-      "block": "Psicología",
+      "block": "Cuidado integral",
       "title": "Violencia sexual y contención",
       "level": "I-4",
       "specialty": "Psicología",
@@ -142,7 +142,7 @@ window.SERUMS_DATA = {
     {
       "id": 7,
       "career": "Psicología",
-      "block": "Psicología",
+      "block": "Cuidado integral",
       "title": "Ansiedad generalizada",
       "level": "I-3",
       "specialty": "Psicología",
@@ -165,7 +165,7 @@ window.SERUMS_DATA = {
     {
       "id": 8,
       "career": "Psicología",
-      "block": "Psicología",
+      "block": "Cuidado integral",
       "title": "Consumo problemático",
       "level": "I-3",
       "specialty": "Psicología",
@@ -188,7 +188,7 @@ window.SERUMS_DATA = {
     {
       "id": 9,
       "career": "Psicología",
-      "block": "Psicología",
+      "block": "Cuidado integral",
       "title": "Riesgo de violencia en pareja",
       "level": "I-3",
       "specialty": "Psicología",
@@ -211,7 +211,7 @@ window.SERUMS_DATA = {
     {
       "id": 10,
       "career": "Psicología",
-      "block": "Psicología",
+      "block": "Cuidado integral",
       "title": "Estrés laboral severo",
       "level": "I-3",
       "specialty": "Psicología",
@@ -326,7 +326,7 @@ window.SERUMS_DATA = {
     {
       "id": 15,
       "career": "Psicología",
-      "block": "Psicología",
+      "block": "Cuidado integral",
       "title": "Evaluación de ansiedad en adolescente",
       "level": "I-2",
       "specialty": "Psicología",
@@ -349,7 +349,7 @@ window.SERUMS_DATA = {
     {
       "id": 16,
       "career": "Psicología",
-      "block": "Psicología",
+      "block": "Cuidado integral",
       "title": "Intervención breve por crisis",
       "level": "I-3",
       "specialty": "Psicología",
@@ -418,7 +418,7 @@ window.SERUMS_DATA = {
     {
       "id": 19,
       "career": "Psicología",
-      "block": "Psicología",
+      "block": "Cuidado integral",
       "title": "Duelo por pérdida reciente",
       "level": "I-2",
       "specialty": "Psicología",
@@ -441,7 +441,7 @@ window.SERUMS_DATA = {
     {
       "id": 20,
       "career": "Psicología",
-      "block": "Psicología",
+      "block": "Cuidado integral",
       "title": "Psicoeducación familiar",
       "level": "I-2",
       "specialty": "Psicología",
@@ -464,7 +464,7 @@ window.SERUMS_DATA = {
     {
       "id": 21,
       "career": "Psicología",
-      "block": "Psicología",
+      "block": "Cuidado integral",
       "title": "Estrés postraumático tras accidente",
       "level": "I-3",
       "specialty": "Psicología",
@@ -487,7 +487,7 @@ window.SERUMS_DATA = {
     {
       "id": 22,
       "career": "Psicología",
-      "block": "Psicología",
+      "block": "Cuidado integral",
       "title": "Primer episodio psicótico",
       "level": "I-4",
       "specialty": "Psicología / Medicina",
@@ -511,7 +511,7 @@ window.SERUMS_DATA = {
     {
       "id": 23,
       "career": "Psicología",
-      "block": "Psicología",
+      "block": "Cuidado integral",
       "title": "Restricción alimentaria en adolescente",
       "level": "I-3",
       "specialty": "Psicología / Nutrición",
@@ -558,7 +558,7 @@ window.SERUMS_DATA = {
     {
       "id": 25,
       "career": "Psicología",
-      "block": "Psicología",
+      "block": "Cuidado integral",
       "title": "Ideación homicida con plan",
       "level": "I-4",
       "specialty": "Psicología",
@@ -581,7 +581,7 @@ window.SERUMS_DATA = {
     {
       "id": 26,
       "career": "Psicología",
-      "block": "Psicología",
+      "block": "Cuidado integral",
       "title": "Episodio maníaco",
       "level": "I-4",
       "specialty": "Psicología / Medicina",
@@ -674,7 +674,7 @@ window.SERUMS_DATA = {
     {
       "id": 30,
       "career": "Psicología",
-      "block": "Psicología",
+      "block": "Cuidado integral",
       "title": "Uso problemático de videojuegos",
       "level": "I-2",
       "specialty": "Psicología",
@@ -720,7 +720,7 @@ window.SERUMS_DATA = {
     {
       "id": 32,
       "career": "Psicología",
-      "block": "Psicología",
+      "block": "Cuidado integral",
       "title": "Seguimiento tras intento de suicidio",
       "level": "I-3",
       "specialty": "Psicología",
@@ -767,7 +767,7 @@ window.SERUMS_DATA = {
     {
       "id": 34,
       "career": "Psicología",
-      "block": "Psicología",
+      "block": "Cuidado integral",
       "title": "Ansiedad social limitante",
       "level": "I-2",
       "specialty": "Psicología",
@@ -1392,7 +1392,7 @@ window.SERUMS_DATA = {
     {
       "id": 61,
       "career": "Odontología",
-      "block": "Psicología",
+      "block": "Cuidado integral",
       "title": "Fobia dental con evitación",
       "level": "I-2",
       "specialty": "Odontología / Psicología",
@@ -4275,7 +4275,7 @@ window.SERUMS_DATA = {
     {
       "id": 186,
       "career": "Tecnología Médica - Terapia del Lenguaje",
-      "block": "Psicología",
+      "block": "Cuidado integral",
       "title": "Tartamudez y su impacto emocional en un escolar",
       "level": "I-2",
       "specialty": "Tecnología Médica / Psicología",
@@ -4529,7 +4529,7 @@ window.SERUMS_DATA = {
     {
       "id": 197,
       "career": "Psicología",
-      "block": "Psicología",
+      "block": "Cuidado integral",
       "title": "Trastorno de pánico con agorafobia",
       "level": "I-3",
       "specialty": "Psicología",
@@ -4552,7 +4552,7 @@ window.SERUMS_DATA = {
     {
       "id": 198,
       "career": "Psicología",
-      "block": "Psicología",
+      "block": "Cuidado integral",
       "title": "Duelo prolongado tras la pérdida de un hijo",
       "level": "I-3",
       "specialty": "Psicología",
@@ -4575,7 +4575,7 @@ window.SERUMS_DATA = {
     {
       "id": 199,
       "career": "Psicología",
-      "block": "Psicología",
+      "block": "Cuidado integral",
       "title": "Autolesión no suicida en una adolescente",
       "level": "I-3",
       "specialty": "Psicología",
@@ -4598,7 +4598,7 @@ window.SERUMS_DATA = {
     {
       "id": 200,
       "career": "Psicología",
-      "block": "Psicología",
+      "block": "Cuidado integral",
       "title": "Trastorno obsesivo-compulsivo con rituales de verificación",
       "level": "I-3",
       "specialty": "Psicología",
@@ -5244,7 +5244,7 @@ window.SERUMS_DATA = {
     {
       "id": 228,
       "career": "Tecnología Médica - Terapia Ocupacional",
-      "block": "Psicología",
+      "block": "Cuidado integral",
       "title": "Terapia ocupacional en un paciente con depresión severa",
       "level": "I-2",
       "specialty": "Tecnología Médica / Psicología",
@@ -11609,7 +11609,7 @@ window.SERUMS_DATA = {
     {
       "id": 503,
       "career": "Psicología",
-      "block": "Psicología",
+      "block": "Cuidado integral",
       "title": "Establecimiento de rapport en primera consulta",
       "level": "I-2",
       "specialty": "Psicología",
@@ -11632,7 +11632,7 @@ window.SERUMS_DATA = {
     {
       "id": 504,
       "career": "Psicología",
-      "block": "Psicología",
+      "block": "Cuidado integral",
       "title": "Sospecha de TDAH en escolar",
       "level": "I-3",
       "specialty": "Psicología",
@@ -11747,7 +11747,7 @@ window.SERUMS_DATA = {
     {
       "id": 509,
       "career": "Psicología",
-      "block": "Psicología",
+      "block": "Cuidado integral",
       "title": "Elección de enfoque terapéutico basado en evidencia",
       "level": "I-2",
       "specialty": "Psicología",
