@@ -1473,6 +1473,12 @@ function renderScreeningTools() {
       url: "https://4-4-1941.github.io/AUDIT-INTEACTIVO/assist.html"
     },
     {
+      name: "CRAFFT",
+      badge: "6 ítems · Knight, 1999 · v2.1",
+      desc: "Tamizaje breve de consumo de alcohol y drogas en adolescentes y jóvenes (10-21 años). Corte oficial: 2 o más respuestas afirmativas = riesgo alto. © Boston Children's Hospital.",
+      url: "https://4-4-1941.github.io/AUDIT-INTEACTIVO/crafft.html"
+    },
+    {
       name: "TDAH",
       badge: "ASRS-v1.1 · Vanderbilt · SNAP-IV",
       desc: "Tamizaje de TDAH en adultos (ASRS-v1.1, OMS) y niños (Vanderbilt Padres o SNAP-IV 26, a elegir al ingresar).",
