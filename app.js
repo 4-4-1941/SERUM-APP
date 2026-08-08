@@ -1467,6 +1467,12 @@ function renderScreeningTools() {
       url: "https://4-4-1941.github.io/AUDIT-INTEACTIVO/wast.html"
     },
     {
+      name: "ASSIST",
+      badge: "10 sustancias · OMS v3.0",
+      desc: "Tamizaje de consumo de alcohol y drogas por sustancia (alcohol, tabaco, marihuana, cocaína y otras). Cortes oficiales OMS 2011, con alerta adicional para adolescentes (RM N.° 753-2021-MINSA).",
+      url: "https://4-4-1941.github.io/AUDIT-INTEACTIVO/assist.html"
+    },
+    {
       name: "TDAH",
       badge: "ASRS-v1.1 · Vanderbilt · SNAP-IV",
       desc: "Tamizaje de TDAH en adultos (ASRS-v1.1, OMS) y niños (Vanderbilt Padres o SNAP-IV 26, a elegir al ingresar).",
