@@ -1215,6 +1215,57 @@ function renderAssistantPractice(docId) {
   });
 }
 
+function renderHisCodesChild() {
+  pageTitle.textContent = "Códigos HIS — Etapa de Vida Niño";
+  pageSubtitle.textContent = "Buscador de códigos CIE10/CPMS y reglas de registro para la Hoja HIS. Fuente: Manual de Registro y Codificación — Etapa de Vida Niño, MINSA 2021.";
+
+  const categories = [...new Set(data.hisCodigosNino.map(d => d.categoria))];
+
+  root.innerHTML = `
+    <section class="two-col">
+      <div class="panel">
+        <input id="hiscodes-search" class="search" placeholder="Buscar por código, diagnóstico o actividad (ej. J189, CRED, hierro, EDA)..." />
+        <div id="hiscodes-list"></div>
+      </div>
+      <div class="panel">
+        <h3 class="section-title">Sobre esta tabla</h3>
+        <p style="line-height:1.6;color:#5B6E6A">Codificación CIE10/CPMS para las secciones de mayor uso diario: CRED por grupo de edad, Infecciones Respiratorias Agudas (IRA) y Enfermedad Diarreica Aguda (EDA). Cada tarjeta indica cómo marcar "Tipo de diagnóstico" y qué anotar en el campo LAB. Este material es de consulta administrativa — no reemplaza el manual completo del MINSA.</p>
+      </div>
+    </section>
+  `;
+
+  const list = document.getElementById("hiscodes-list");
+  const search = document.getElementById("hiscodes-search");
+
+  function draw(filter = "") {
+    const q = filter.toLowerCase();
+    const filtered = data.hisCodigosNino.filter(d => {
+      const text = [d.codigo, d.descripcion, d.categoria, d.tipo].join(" ").toLowerCase();
+      return text.includes(q);
+    });
+
+    const grouped = categories
+      .map(cat => ({ category: cat, items: filtered.filter(d => d.categoria === cat) }))
+      .filter(g => g.items.length);
+
+    list.innerHTML = grouped.map(g => `
+      <h3 class="section-title" style="margin-top:18px">${g.category}</h3>
+      <div class="norm-list">
+        ${g.items.map((d, i) => `
+          <article class="norm-card">
+            <span>${d.tipo}</span>
+            <h3>${d.codigo} — ${d.descripcion}</h3>
+            ${d.notaRegistro ? `<p style="color:#5B6E6A;margin-top:4px"><strong>Registro:</strong> ${d.notaRegistro}</p>` : ""}
+          </article>
+        `).join("")}
+      </div>
+    `).join("") || `<p style="color:#5B6E6A">No hay códigos con ese filtro.</p>`;
+  }
+
+  draw();
+  search.addEventListener("input", () => draw(search.value));
+}
+
 let trainingState = loadProgress("trainingState", {});
 let activeTrainingScenario = null;
 let activeTrainingStepId = null;
@@ -1429,6 +1480,7 @@ function renderView(view) {
   if (view === "norms") renderNorms();
   if (view === "priorityNorms") renderPriorityNorms();
   if (view === "assistant") renderAssistant();
+  if (view === "hisCodesChild") renderHisCodesChild();
   if (view === "training") renderTraining();
   if (view === "decrees") renderDecrees();
   if (view === "resources") renderResources();
