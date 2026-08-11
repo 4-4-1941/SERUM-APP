@@ -1541,6 +1541,30 @@ function renderScreeningTools() {
       badge: "Calculadora clínica",
       desc: "IMC, peso ideal (Devine/Robinson/Miller/Hamwi) y gasto energético (Harris-Benedict/Mifflin-St Jeor). Herramienta de apoyo para el profesional.",
       url: "https://4-4-1941.github.io/AUDIT-INTEACTIVO/nutricion.html"
+    },
+    {
+      name: "SRQ-18",
+      badge: "18 ítems · Screening de Salud General",
+      desc: "Cuestionario de autorreporte para detección de síntomas ansioso-depresivos en población general. Punto de corte: ≥8 = positivo.",
+      url: "screening/srq18.html"
+    },
+    {
+      name: "PSC Pediátrico",
+      badge: "30 ítems · Lista de Síntomas Pediátricos",
+      desc: "Cribado de disfunción psicosocial infantil (4-16 años), completado por padres/cuidadores. Detecta problemas emocionales, conductuales y sociales.",
+      url: "screening/psc-pediatrico.html"
+    },
+    {
+      name: "M-CHAT-R/F",
+      badge: "20 ítems · Detección de Riesgo TEA",
+      desc: "Cribado de riesgo de Trastorno del Espectro Autista en lactantes 16-30 meses. Puntos de corte: 0-2 (bajo), 3-7 (medio), 8+ (alto/derivación urgente).",
+      url: "screening/m-chat-r-f.html"
+    },
+    {
+      name: "GDS-15",
+      badge: "15 ítems · Escala de Depresión Geriátrica (Yesavage)",
+      desc: "Escala validada para detección de depresión en adultos ≥65 años. Sensible a cambios clínicos. Puntos de corte: 0-4 (sin), 5-8 (leve), 9-15 (moderada-severa).",
+      url: "screening/gds15-yesavage.html"
     }
   ];
   root.innerHTML = `
