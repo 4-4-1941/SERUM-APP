@@ -1,1 +1,410 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screening Clínico - SERUM-APP v2.0</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 16px;
+            color: #2d3748;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 4px;
+        }
+
+        .header p {
+            font-size: 13px;
+            color: #718096;
+            line-height: 1.5;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-bottom: 16px;
+            padding: 8px 16px;
+            background: #edf2f7;
+            border: none;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #4a5568;
+            cursor: pointer;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.2s;
+        }
+
+        .back-button:hover {
+            background: #e2e8f0;
+        }
+
+        .tests-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .test-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s;
+            border-left: 4px solid #667eea;
+            cursor: pointer;
+        }
+
+        .test-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .test-card.new {
+            border-left-color: #f5576c;
+            background: linear-gradient(135deg, rgba(245, 87, 108, 0.05) 0%, rgba(102, 126, 234, 0.05) 100%);
+        }
+
+        .test-badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .badge-new {
+            background: #fed7d7;
+            color: #c53030;
+        }
+
+        .badge-existing {
+            background: #c6f6d5;
+            color: #22543d;
+        }
+
+        .test-card h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 4px;
+        }
+
+        .test-card .subtitle {
+            font-size: 12px;
+            color: #718096;
+            margin-bottom: 12px;
+            font-style: italic;
+        }
+
+        .test-info {
+            display: flex;
+            gap: 16px;
+            font-size: 12px;
+            color: #4a5568;
+            margin-bottom: 12px;
+        }
+
+        .test-info-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .test-info-label {
+            font-weight: 600;
+            color: #2d3748;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .test-description {
+            font-size: 13px;
+            color: #4a5568;
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+
+        .cutoff {
+            background: #fffaf0;
+            border-left: 3px solid #ed8936;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            color: #7c2d12;
+            line-height: 1.4;
+        }
+
+        .section-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 24px;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .footer {
+            background: white;
+            border-radius: 12px;
+            padding: 16px;
+            text-align: center;
+            font-size: 12px;
+            color: #718096;
+        }
+
+        .footer strong {
+            color: #2d3748;
+        }
+
+        @media (max-width: 600px) {
+            .test-info {
+                flex-direction: column;
+                gap: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html" class="back-button">← Volver</a>
+
+        <div class="header">
+            <h1>Screening Clínico</h1>
+            <p>9 instrumentos de cribado evaluados y validados por MINSA Perú</p>
+        </div>
+
+        <div class="section-title">🆕 TESTS NUEVOS (FASE 2)</div>
+
+        <div class="tests-grid">
+            <!-- SRQ-18 -->
+            <a href="srq18.html" class="test-card new">
+                <span class="test-badge badge-new">NUEVO</span>
+                <h3>SRQ-18</h3>
+                <p class="subtitle">Screening de Salud General</p>
+                <div class="test-info">
+                    <div class="test-info-item">
+                        <span class="test-info-label">Población</span>
+                        <span>Adultos ≥18</span>
+                    </div>
+                    <div class="test-info-item">
+                        <span class="test-info-label">Ítems</span>
+                        <span>18</span>
+                    </div>
+                    <div class="test-info-item">
+                        <span class="test-info-label">Tiempo</span>
+                        <span>3-5 min</span>
+                    </div>
+                </div>
+                <p class="test-description">Cuestionario de autorreporte para detección de síntomas ansioso-depresivos en la población general.</p>
+                <div class="cutoff"><strong>Punto de corte:</strong> ≥ 8 = positivo (sospecha de trastorno)</div>
+            </a>
+
+            <!-- PSC -->
+            <a href="psc-pediatrico.html" class="test-card new">
+                <span class="test-badge badge-new">NUEVO</span>
+                <h3>PSC Pediátrico</h3>
+                <p class="subtitle">Lista de Síntomas Pediátricos</p>
+                <div class="test-info">
+                    <div class="test-info-item">
+                        <span class="test-info-label">Población</span>
+                        <span>Niños 4-16 años</span>
+                    </div>
+                    <div class="test-info-item">
+                        <span class="test-info-label">Ítems</span>
+                        <span>30</span>
+                    </div>
+                    <div class="test-info-item">
+                        <span class="test-info-label">Tiempo</span>
+                        <span>5-7 min</span>
+                    </div>
+                </div>
+                <p class="test-description">Cribado de disfunción psicosocial infantil, completado por padres/cuidadores. Detecta problemas emocionales, conductuales y sociales.</p>
+                <div class="cutoff"><strong>Puntos de corte:</strong> 4-5 años: ≥24 | 6-16 años: ≥28</div>
+            </a>
+
+            <!-- M-CHAT-R/F -->
+            <a href="mchat-rf.html" class="test-card new">
+                <span class="test-badge badge-new">NUEVO</span>
+                <h3>M-CHAT-R/F</h3>
+                <p class="subtitle">Detección de Riesgo TEA</p>
+                <div class="test-info">
+                    <div class="test-info-item">
+                        <span class="test-info-label">Población</span>
+                        <span>Lactantes 16-30 meses</span>
+                    </div>
+                    <div class="test-info-item">
+                        <span class="test-info-label">Ítems</span>
+                        <span>20</span>
+                    </div>
+                    <div class="test-info-item">
+                        <span class="test-info-label">Tiempo</span>
+                        <span>2-3 min</span>
+                    </div>
+                </div>
+                <p class="test-description">Cribado de riesgo de Trastorno del Espectro Autista (TEA) en primera infancia. Requiere evaluación posterior si positivo.</p>
+                <div class="cutoff"><strong>Puntos de corte:</strong> 0-2: bajo | 3-7: medio | 8+: alto (derivación urgente)</div>
+            </a>
+
+            <!-- GDS-15 -->
+            <a href="gds15-yesavage.html" class="test-card new">
+                <span class="test-badge badge-new">NUEVO</span>
+                <h3>GDS-15</h3>
+                <p class="subtitle">Escala de Depresión Geriátrica</p>
+                <div class="test-info">
+                    <div class="test-info-item">
+                        <span class="test-info-label">Población</span>
+                        <span>Adultos ≥65 años</span>
+                    </div>
+                    <div class="test-info-item">
+                        <span class="test-info-label">Ítems</span>
+                        <span>15</span>
+                    </div>
+                    <div class="test-info-item">
+                        <span class="test-info-label">Tiempo</span>
+                        <span>3-5 min</span>
+                    </div>
+                </div>
+                <p class="test-description">Escala validada para detección de depresión en adultos mayores. Sensible a cambios clínicos y útil en seguimiento.</p>
+                <div class="cutoff"><strong>Puntos de corte:</strong> 0-4: sin | 5-8: leve | 9-15: moderada-severa</div>
+            </a>
+        </div>
+
+        <div class="section-title">✓ TESTS EXISTENTES</div>
+
+        <div class="tests-grid">
+            <!-- PHQ-9 -->
+            <a href="phq9.html" class="test-card">
+                <span class="test-badge badge-existing">EXISTENTE</span>
+                <h3>PHQ-9</h3>
+                <p class="subtitle">Cuestionario de Depresión</p>
+                <div class="test-info">
+                    <div class="test-info-item">
+                        <span class="test-info-label">Población</span>
+                        <span>Adultos ≥18</span>
+                    </div>
+                    <div class="test-info-item">
+                        <span class="test-info-label">Ítems</span>
+                        <span>9</span>
+                    </div>
+                </div>
+                <p class="test-description">Cribado y medición de severidad de depresión mayor. Punto de corte MINSA: ≥5.</p>
+            </a>
+
+            <!-- GAD-7 -->
+            <a href="gad7.html" class="test-card">
+                <span class="test-badge badge-existing">EXISTENTE</span>
+                <h3>GAD-7</h3>
+                <p class="subtitle">Cuestionario de Ansiedad</p>
+                <div class="test-info">
+                    <div class="test-info-item">
+                        <span class="test-info-label">Población</span>
+                        <span>Adultos ≥18</span>
+                    </div>
+                    <div class="test-info-item">
+                        <span class="test-info-label">Ítems</span>
+                        <span>7</span>
+                    </div>
+                </div>
+                <p class="test-description">Cribado de trastorno de ansiedad generalizada (TAG). Rápido y eficiente.</p>
+            </a>
+
+            <!-- WAST -->
+            <a href="wast.html" class="test-card">
+                <span class="test-badge badge-existing">EXISTENTE</span>
+                <h3>WAST</h3>
+                <p class="subtitle">Tamizaje de Violencia de Pareja</p>
+                <div class="test-info">
+                    <div class="test-info-item">
+                        <span class="test-info-label">Población</span>
+                        <span>Mujeres ≥18</span>
+                    </div>
+                    <div class="test-info-item">
+                        <span class="test-info-label">Ítems</span>
+                        <span>2</span>
+                    </div>
+                </div>
+                <p class="test-description">Cribado rápido de violencia íntima de pareja. Si positivo, derivación inmediata.</p>
+            </a>
+
+            <!-- ASSIST -->
+            <a href="assist.html" class="test-card">
+                <span class="test-badge badge-existing">EXISTENTE</span>
+                <h3>ASSIST</h3>
+                <p class="subtitle">Cribado de Uso de Sustancias</p>
+                <div class="test-info">
+                    <div class="test-info-item">
+                        <span class="test-info-label">Población</span>
+                        <span>Adolescentes y adultos</span>
+                    </div>
+                    <div class="test-info-item">
+                        <span class="test-info-label">Sustancias</span>
+                        <span>10</span>
+                    </div>
+                </div>
+                <p class="test-description">WHO ASSIST v3.0. Cribado de 10 sustancias. Alertas por edad según RM 753-2021-MINSA.</p>
+            </a>
+
+            <!-- CRAFFT -->
+            <a href="crafft.html" class="test-card">
+                <span class="test-badge badge-existing">EXISTENTE</span>
+                <h3>CRAFFT</h3>
+                <p class="subtitle">Cribado de Uso de Alcohol/Drogas (Adolescentes)</p>
+                <div class="test-info">
+                    <div class="test-info-item">
+                        <span class="test-info-label">Población</span>
+                        <span>Adolescentes 12-21</span>
+                    </div>
+                    <div class="test-info-item">
+                        <span class="test-info-label">Ítems</span>
+                        <span>6</span>
+                    </div>
+                </div>
+                <p class="test-description">Herramienta validada para detección temprana de problemas de alcohol/drogas en adolescentes. Punto de corte: ≥2.</p>
+            </a>
+        </div>
+
+        <div class="footer">
+            <strong>SERUM-APP v2.0</strong> | Screening Clínico Integrado<br>
+            Todos los instrumentos han sido validados y adaptados según estándares MINSA Perú 2024
+        </div>
+    </div>
+</body>
+</html>
