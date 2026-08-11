@@ -1,1 +1,976 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M-CHAT-R/F - Detección de Riesgo TEA</title>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            min-height: 100vh;
+            padding: 16px;
+            color: #2d3748;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            color: white;
+            padding: 24px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .header p {
+            font-size: 14px;
+            opacity: 0.9;
+            margin-bottom: 4px;
+        }
+
+        .header .source {
+            font-size: 12px;
+            opacity: 0.8;
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        .content {
+            padding: 24px;
+        }
+
+        .section {
+            margin-bottom: 32px;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        .demographics {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-size: 13px;
+            font-weight: 500;
+            color: #4a5568;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .form-group input,
+        .form-group select {
+            padding: 10px 12px;
+            border: 1px solid #cbd5e0;
+            border-radius: 6px;
+            font-size: 14px;
+            font-family: inherit;
+            transition: border-color 0.2s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #6366f1;
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+        }
+
+        .age-note {
+            background: #fef5e7;
+            border-left: 4px solid #f39c12;
+            padding: 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            color: #7d6608;
+            line-height: 1.5;
+            margin-top: 8px;
+        }
+
+        .items-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .item {
+            background: #f7f3ff;
+            padding: 16px;
+            border-radius: 8px;
+            border-left: 4px solid #6366f1;
+        }
+
+        .item-number {
+            font-size: 12px;
+            font-weight: 600;
+            color: #6366f1;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .item-text {
+            font-size: 14px;
+            color: #2d3748;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        .response-group {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .response-option {
+            flex: 1;
+            min-width: 80px;
+        }
+
+        .response-option input[type="radio"] {
+            display: none;
+        }
+
+        .response-option label {
+            display: block;
+            padding: 10px 12px;
+            border: 1px solid #cbd5e0;
+            border-radius: 6px;
+            text-align: center;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s;
+            background: white;
+        }
+
+        .response-option input[type="radio"]:checked + label {
+            background: #6366f1;
+            color: white;
+            border-color: #6366f1;
+            font-weight: 600;
+        }
+
+        .results-section {
+            display: none;
+            background: #f7f3ff;
+            padding: 24px;
+            border-radius: 8px;
+            border-left: 4px solid #6366f1;
+            margin-top: 24px;
+        }
+
+        .results-section.show {
+            display: block;
+        }
+
+        .score-box {
+            background: white;
+            padding: 16px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .score-value {
+            font-size: 48px;
+            font-weight: 700;
+            color: #6366f1;
+            margin-bottom: 4px;
+        }
+
+        .score-label {
+            font-size: 13px;
+            color: #718096;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .risk-badge {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 8px;
+        }
+
+        .risk-low {
+            background: #c6f6d5;
+            color: #22543d;
+        }
+
+        .risk-medium {
+            background: #feebc8;
+            color: #7c2d12;
+        }
+
+        .risk-high {
+            background: #fed7d7;
+            color: #c53030;
+        }
+
+        .interpretation {
+            background: white;
+            padding: 16px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+        }
+
+        .interpretation-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 8px;
+        }
+
+        .interpretation-text {
+            font-size: 13px;
+            color: #4a5568;
+            line-height: 1.6;
+        }
+
+        .interpretation-alert {
+            background: #fed7d7;
+            color: #c53030;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.6;
+            margin-top: 8px;
+        }
+
+        .interpretation-alert.medium {
+            background: #feebc8;
+            color: #7c2d12;
+        }
+
+        .interpretation-alert.low {
+            background: #c6f6d5;
+            color: #22543d;
+        }
+
+        .clinical-guidance {
+            background: white;
+            padding: 16px;
+            border-radius: 8px;
+            border-left: 4px solid #38a169;
+        }
+
+        .clinical-guidance-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: #22543d;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .clinical-guidance-text {
+            font-size: 13px;
+            color: #2f855a;
+            line-height: 1.6;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 12px;
+            margin-top: 24px;
+            flex-wrap: wrap;
+        }
+
+        button {
+            flex: 1;
+            padding: 12px 16px;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-submit {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            color: white;
+            flex: 2;
+        }
+
+        .btn-submit:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+        }
+
+        .btn-submit:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .btn-new {
+            background: #edf2f7;
+            color: #4a5568;
+        }
+
+        .btn-new:hover {
+            background: #e2e8f0;
+        }
+
+        .btn-back {
+            background: #fed7e2;
+            color: #742a2a;
+        }
+
+        .btn-back:hover {
+            background: #fbb6ce;
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            color: #6366f1;
+            font-weight: 600;
+            margin-top: 12px;
+        }
+
+        .loading.show {
+            display: block;
+        }
+
+        .status-message {
+            display: none;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 13px;
+            margin-top: 12px;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .status-message.success {
+            display: block;
+            background: #c6f6d5;
+            color: #22543d;
+        }
+
+        .status-message.error {
+            display: block;
+            background: #fed7d7;
+            color: #c53030;
+        }
+
+        .cutoff-info {
+            background: #fffaf0;
+            border-left: 4px solid #ed8936;
+            padding: 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            color: #7c2d12;
+            line-height: 1.5;
+            margin-top: 8px;
+        }
+
+        @media (max-width: 600px) {
+            .demographics {
+                grid-template-columns: 1fr;
+            }
+
+            .response-group {
+                gap: 8px;
+            }
+
+            .response-option {
+                min-width: 70px;
+            }
+
+            .button-group {
+                flex-direction: column;
+            }
+
+            .btn-submit {
+                flex: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>M-CHAT-R/F</h1>
+            <p>Modified Checklist for Autism in Toddlers</p>
+            <p>Cribado de Riesgo de Trastorno del Espectro Autista</p>
+            <div class="source">Versión MINSA Perú / Robins, Fein & Barton</div>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <div class="section-title">Datos del Menor</div>
+                <div class="demographics">
+                    <div class="form-group">
+                        <label for="edad_meses">Edad (meses)</label>
+                        <input type="number" id="edad_meses" placeholder="ej: 24" min="16" max="30" required>
+                        <div class="age-note">
+                            <strong>Rango válido:</strong> 16-30 meses. Aplicable solo en este período.
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="sexo">Sexo</label>
+                        <select id="sexo">
+                            <option value="">Seleccionar</option>
+                            <option value="M">Masculino</option>
+                            <option value="F">Femenino</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Instrucciones</div>
+                <p style="font-size: 13px; color: #4a5568; line-height: 1.6;">
+                    Responda <strong>Sí</strong> o <strong>No</strong> según si ha observado cada comportamiento 
+                    en el menor durante el <strong>último mes</strong>. Si el comportamiento es muy infrecuente, marque <strong>No</strong>.
+                </p>
+            </div>
+
+            <form id="mchatForm">
+                <div class="items-container">
+                    <!-- 20 ítems M-CHAT-R/F -->
+                    <div class="item">
+                        <div class="item-number">Pregunta 1</div>
+                        <div class="item-text">¿Si usted apunta a algo en el otro lado de la habitación, ¿el niño mira hacia donde usted está apuntando?</div>
+                        <div class="response-group">
+                            <div class="response-option">
+                                <input type="radio" id="q1_si" name="q1" value="0">
+                                <label for="q1_si">Sí</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q1_no" name="q1" value="1">
+                                <label for="q1_no">No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-number">Pregunta 2</div>
+                        <div class="item-text">¿Ha señalado alguna vez con su dedo para mostrar interés en algo (no para pedir)?</div>
+                        <div class="response-group">
+                            <div class="response-option">
+                                <input type="radio" id="q2_si" name="q2" value="0">
+                                <label for="q2_si">Sí</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q2_no" name="q2" value="1">
+                                <label for="q2_no">No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-number">Pregunta 3</div>
+                        <div class="item-text">¿Le interesa jugar con juguetes de forma funcional? (como empujar un auto, meter bloques en un recipiente)</div>
+                        <div class="response-group">
+                            <div class="response-option">
+                                <input type="radio" id="q3_si" name="q3" value="0">
+                                <label for="q3_si">Sí</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q3_no" name="q3" value="1">
+                                <label for="q3_no">No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-number">Pregunta 4</div>
+                        <div class="item-text">¿Le gusta trepar (sofás, juegos, etc.)?</div>
+                        <div class="response-group">
+                            <div class="response-option">
+                                <input type="radio" id="q4_si" name="q4" value="0">
+                                <label for="q4_si">Sí</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q4_no" name="q4" value="1">
+                                <label for="q4_no">No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-number">Pregunta 5</div>
+                        <div class="item-text">¿Hace sonidos inusuales? (gritos, ruidos corporales)</div>
+                        <div class="response-group">
+                            <div class="response-option">
+                                <input type="radio" id="q5_si" name="q5" value="1">
+                                <label for="q5_si">Sí</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q5_no" name="q5" value="0">
+                                <label for="q5_no">No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-number">Pregunta 6</div>
+                        <div class="item-text">¿Mantiene contacto visual con usted cuando habla, juega o le viste?</div>
+                        <div class="response-group">
+                            <div class="response-option">
+                                <input type="radio" id="q6_si" name="q6" value="0">
+                                <label for="q6_si">Sí</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q6_no" name="q6" value="1">
+                                <label for="q6_no">No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-number">Pregunta 7</div>
+                        <div class="item-text">¿Entiende cuando le dice "no" o "espera"?</div>
+                        <div class="response-group">
+                            <div class="response-option">
+                                <input type="radio" id="q7_si" name="q7" value="0">
+                                <label for="q7_si">Sí</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q7_no" name="q7" value="1">
+                                <label for="q7_no">No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-number">Pregunta 8</div>
+                        <div class="item-text">¿Imitará o jugará al "simón dice"? (o imita otras acciones como aplaudir)</div>
+                        <div class="response-group">
+                            <div class="response-option">
+                                <input type="radio" id="q8_si" name="q8" value="0">
+                                <label for="q8_si">Sí</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q8_no" name="q8" value="1">
+                                <label for="q8_no">No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-number">Pregunta 9</div>
+                        <div class="item-text">¿Apunta con el dedo para pedir u obtener ayuda?</div>
+                        <div class="response-group">
+                            <div class="response-option">
+                                <input type="radio" id="q9_si" name="q9" value="0">
+                                <label for="q9_si">Sí</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q9_no" name="q9" value="1">
+                                <label for="q9_no">No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-number">Pregunta 10</div>
+                        <div class="item-text">¿Anda bien o corre?</div>
+                        <div class="response-group">
+                            <div class="response-option">
+                                <input type="radio" id="q10_si" name="q10" value="0">
+                                <label for="q10_si">Sí</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q10_no" name="q10" value="1">
+                                <label for="q10_no">No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-number">Pregunta 11</div>
+                        <div class="item-text">¿Mira directamente a la cara cuando habla con usted?</div>
+                        <div class="response-group">
+                            <div class="response-option">
+                                <input type="radio" id="q11_si" name="q11" value="0">
+                                <label for="q11_si">Sí</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q11_no" name="q11" value="1">
+                                <label for="q11_no">No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-number">Pregunta 12</div>
+                        <div class="item-text">¿Participa en juegos de interacción simples? (como "esto lindo, eso malo")</div>
+                        <div class="response-group">
+                            <div class="response-option">
+                                <input type="radio" id="q12_si" name="q12" value="0">
+                                <label for="q12_si">Sí</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q12_no" name="q12" value="1">
+                                <label for="q12_no">No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-number">Pregunta 13</div>
+                        <div class="item-text">¿Expresa interés en otros niños?</div>
+                        <div class="response-group">
+                            <div class="response-option">
+                                <input type="radio" id="q13_si" name="q13" value="0">
+                                <label for="q13_si">Sí</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q13_no" name="q13" value="1">
+                                <label for="q13_no">No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-number">Pregunta 14</div>
+                        <div class="item-text">¿Muestra un juguete, trapo o algo similar para mostrar algo a alguien?</div>
+                        <div class="response-group">
+                            <div class="response-option">
+                                <input type="radio" id="q14_si" name="q14" value="0">
+                                <label for="q14_si">Sí</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q14_no" name="q14" value="1">
+                                <label for="q14_no">No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-number">Pregunta 15</div>
+                        <div class="item-text">¿Entiende palabras simples? (como "pelota", "zapato" o "libro")</div>
+                        <div class="response-group">
+                            <div class="response-option">
+                                <input type="radio" id="q15_si" name="q15" value="0">
+                                <label for="q15_si">Sí</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q15_no" name="q15" value="1">
+                                <label for="q15_no">No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-number">Pregunta 16</div>
+                        <div class="item-text">¿Dice algunas palabras? (como "mamá", "papá")</div>
+                        <div class="response-group">
+                            <div class="response-option">
+                                <input type="radio" id="q16_si" name="q16" value="0">
+                                <label for="q16_si">Sí</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q16_no" name="q16" value="1">
+                                <label for="q16_no">No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-number">Pregunta 17</div>
+                        <div class="item-text">¿Juega a dar y tomar cosas con usted?</div>
+                        <div class="response-group">
+                            <div class="response-option">
+                                <input type="radio" id="q17_si" name="q17" value="0">
+                                <label for="q17_si">Sí</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q17_no" name="q17" value="1">
+                                <label for="q17_no">No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-number">Pregunta 18</div>
+                        <div class="item-text">¿Hace cosas por imitación que acaba de ver hacer? (como hacer un ruido o un movimiento)</div>
+                        <div class="response-group">
+                            <div class="response-option">
+                                <input type="radio" id="q18_si" name="q18" value="0">
+                                <label for="q18_si">Sí</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q18_no" name="q18" value="1">
+                                <label for="q18_no">No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-number">Pregunta 19</div>
+                        <div class="item-text">¿Entiende frases simples? (como "toma tu zapato" sin gesto)</div>
+                        <div class="response-group">
+                            <div class="response-option">
+                                <input type="radio" id="q19_si" name="q19" value="0">
+                                <label for="q19_si">Sí</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q19_no" name="q19" value="1">
+                                <label for="q19_no">No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-number">Pregunta 20</div>
+                        <div class="item-text">¿Cuando dice su nombre, se vuelve y lo mira?</div>
+                        <div class="response-group">
+                            <div class="response-option">
+                                <input type="radio" id="q20_si" name="q20" value="0">
+                                <label for="q20_si">Sí</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q20_no" name="q20" value="1">
+                                <label for="q20_no">No</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="button-group">
+                    <button type="submit" class="btn-submit">Calcular Resultado</button>
+                    <button type="button" class="btn-new" onclick="resetForm()">Nuevo</button>
+                    <button type="button" class="btn-back" onclick="goBack()">Volver</button>
+                </div>
+
+                <div class="loading" id="loading">
+                    Guardando resultado...
+                </div>
+                <div class="status-message" id="statusMessage"></div>
+            </form>
+
+            <div class="results-section" id="resultsSection">
+                <div class="score-box">
+                    <div class="score-value" id="scoreValue">0</div>
+                    <div class="score-label">Score Total (0-20)</div>
+                    <div class="risk-badge" id="riskBadge"></div>
+                </div>
+
+                <div class="interpretation">
+                    <div class="interpretation-title">Interpretación Clínica</div>
+                    <div class="interpretation-text" id="interpretationText"></div>
+                    <div class="interpretation-alert" id="interpretationAlert"></div>
+                </div>
+
+                <div class="clinical-guidance">
+                    <div class="clinical-guidance-title">Recomendación Clínica</div>
+                    <div class="clinical-guidance-text" id="clinicalGuidance"></div>
+                    <div class="cutoff-info">
+                        <strong>Puntos de corte MINSA (M-CHAT-R/F):</strong><br>
+                        • 0-2 puntos = Riesgo bajo<br>
+                        • 3-7 puntos = Riesgo medio (requiere entrevista)<br>
+                        • 8-20 puntos = Riesgo alto (derivación inmediata)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+        const SUPABASE_URL = 'https://xcfdhwqjudzngvlssyeg.supabase.co';
+        const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhjZmRod3FqdWR6bmd2bHNzeWVnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDAwMjE4OTUsImV4cCI6MTcxNTU5Mzg5NX0.wXN8N7Z3Z1Z1Z1Z1Z1Z1Z1Z1Z1Z1Z1Z1Z1Z1Z1Z1Z1Z';
+
+        if (!window.__appSupabase) { window.__appSupabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY); }
+            const supabase = window.__appSupabase;
+        const form = document.getElementById('mchatForm');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const edad_meses = parseInt(document.getElementById('edad_meses').value);
+            
+            if (!edad_meses || edad_meses < 16 || edad_meses > 30) {
+                showStatus('Por favor ingrese una edad válida (16-30 meses)', 'error');
+                return;
+            }
+
+            const allAnswered = Array.from({ length: 20 }, (_, i) => {
+                const q = i + 1;
+                return document.querySelector(`input[name="q${q}"]:checked`);
+            }).every(el => el !== undefined && el !== null);
+
+            if (!allAnswered) {
+                showStatus('Por favor responda todas las preguntas', 'error');
+                return;
+            }
+
+            let score = 0;
+            for (let i = 1; i <= 20; i++) {
+                const answer = document.querySelector(`input[name="q${i}"]:checked`);
+                if (answer) {
+                    score += parseInt(answer.value);
+                }
+            }
+
+            displayResults(score);
+
+            try {
+                document.getElementById('loading').classList.add('show');
+                
+                const sexo = document.getElementById('sexo').value;
+                const usuario = await supabase.auth.getUser();
+                
+                const { error } = await supabase
+                    .from('evaluaciones_clinicas')
+                    .insert([{
+                        test_nombre: 'M-CHAT-R/F',
+                        score: score,
+                        edad: edad_meses,
+                        sexo: sexo || null,
+                        usuario_id: usuario.data.user?.id || null,
+                        timestamp: new Date().toISOString()
+                    }]);
+
+                document.getElementById('loading').classList.remove('show');
+
+                if (!error) {
+                    showStatus('✓ Resultado guardado correctamente', 'success');
+                }
+            } catch (err) {
+                document.getElementById('loading').classList.remove('show');
+            }
+        });
+
+        function displayResults(score) {
+            document.getElementById('scoreValue').textContent = score;
+            
+            const resultSection = document.getElementById('resultsSection');
+            const interpretationText = document.getElementById('interpretationText');
+            const interpretationAlert = document.getElementById('interpretationAlert');
+            const clinicalGuidance = document.getElementById('clinicalGuidance');
+            const riskBadge = document.getElementById('riskBadge');
+
+            let riskLevel, badgeClass;
+
+            if (score >= 0 && score <= 2) {
+                riskLevel = 'RIESGO BAJO';
+                badgeClass = 'risk-low';
+                
+                interpretationText.textContent = `Puntuación: ${score}/20. Probable DESARROLLO TÍPICO.`;
+                interpretationAlert.className = 'interpretation-alert low';
+                interpretationAlert.innerHTML = `
+                    <strong>✓ Resultado negativo:</strong> La puntuación ≤ 2 sugiere desarrollo neurológico típico 
+                    para la edad. Riesgo bajo de trastorno del espectro autista.
+                `;
+                clinicalGuidance.innerHTML = `
+                    <strong>Recomendaciones:</strong><br>
+                    1. Continuar monitoreo preventivo del desarrollo en consultas rutinarias<br>
+                    2. Vigilancia: si emergen signos posteriores, reevaluar inmediatamente<br>
+                    3. Enseñanza a padres sobre hitos de desarrollo esperados<br>
+                    4. Próxima evaluación formal a los 3 años (cribado universal)
+                `;
+            } else if (score >= 3 && score <= 7) {
+                riskLevel = 'RIESGO MEDIO';
+                badgeClass = 'risk-medium';
+                
+                interpretationText.textContent = `Puntuación: ${score}/20. RIESGO MEDIO DE TEA.`;
+                interpretationAlert.className = 'interpretation-alert medium';
+                interpretationAlert.innerHTML = `
+                    <strong>⚠️ Resultado positivo (moderado):</strong> La puntuación 3-7 indica probable riesgo moderado de TEA. 
+                    Se requiere entrevista diagnóstica estructurada (M-CHAT-R/F Follow-up Interview) con especialista.
+                `;
+                clinicalGuidance.innerHTML = `
+                    <strong>Acciones clínicas INMEDIATAS:</strong><br>
+                    1. Administrar entrevista M-CHAT-R/F Follow-up para confirmación<br>
+                    2. Considerar derivación a pediatría del desarrollo o neuropediatría<br>
+                    3. Si persisten sospechas: derivación a psicología infantil y/o terapia del lenguaje<br>
+                    4. Inicio de evaluación psicométrica formal (Bayley, ADOS-2, MULLEN)<br>
+                    5. Seguimiento: control en 2-4 semanas
+                `;
+            } else if (score >= 8) {
+                riskLevel = 'RIESGO ALTO';
+                badgeClass = 'risk-high';
+                
+                interpretationText.textContent = `Puntuación: ${score}/20. RIESGO ALTO DE TEA.`;
+                interpretationAlert.className = 'interpretation-alert';
+                interpretationAlert.innerHTML = `
+                    <strong>⚠️ Resultado positivo (severo):</strong> La puntuación ≥ 8 indica riesgo ALTO de trastorno 
+                    del espectro autista. Requiere derivación URGENTE para evaluación diagnóstica especializada.
+                `;
+                clinicalGuidance.innerHTML = `
+                    <strong>Acciones clínicas URGENTES:</strong><br>
+                    1. Derivación INMEDIATA a especialista (neuropediatría, psicología infantil)<br>
+                    2. Solicitar evaluación ADOS-2, MULLEN o Bayley Scales<br>
+                    3. Evaluación de lenguaje (fonoaudiología)<br>
+                    4. Valoración de desarrollo motor y sensoriomotor<br>
+                    5. Comunicación urgente a familia sobre próximos pasos<br>
+                    6. Inicio precoz de intervención temprana si confirma diagnóstico
+                `;
+            }
+
+            riskBadge.textContent = riskLevel;
+            riskBadge.className = `risk-badge ${badgeClass}`;
+
+            resultSection.classList.add('show');
+            resultSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function showStatus(message, type) {
+            const statusEl = document.getElementById('statusMessage');
+            statusEl.textContent = message;
+            statusEl.className = `status-message ${type}`;
+            setTimeout(() => {
+                statusEl.className = 'status-message';
+            }, 4000);
+        }
+
+        function resetForm() {
+            form.reset();
+            document.getElementById('resultsSection').classList.remove('show');
+            document.getElementById('statusMessage').className = 'status-message';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        })();
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
