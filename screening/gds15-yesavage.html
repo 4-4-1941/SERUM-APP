@@ -3,901 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GDS-15 - Escala de Depresión Geriátrica</title>
+    <title>GDS-15 · SERUMS Toolkit</title>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #b8860b 0%, #daa520 100%);
-            min-height: 100vh;
-            padding: 16px;
-            color: #2d3748;
-        }
-
-        .container {
-            max-width: 700px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-            overflow: hidden;
-        }
-
-        .header {
-            background: linear-gradient(135deg, #b8860b 0%, #daa520 100%);
-            color: white;
-            padding: 24px;
-            text-align: center;
-        }
-
-        .header h1 {
-            font-size: 28px;
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
-
-        .header p {
-            font-size: 14px;
-            opacity: 0.9;
-            margin-bottom: 4px;
-        }
-
-        .header .source {
-            font-size: 12px;
-            opacity: 0.8;
-            margin-top: 8px;
-            font-style: italic;
-        }
-
-        .content {
-            padding: 24px;
-        }
-
-        .section {
-            margin-bottom: 32px;
-        }
-
-        .section-title {
-            font-size: 16px;
-            font-weight: 600;
-            color: #2d3748;
-            margin-bottom: 16px;
-            padding-bottom: 8px;
-            border-bottom: 2px solid #e2e8f0;
-        }
-
-        .demographics {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-            margin-bottom: 24px;
-        }
-
-        .form-group {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .form-group label {
-            font-size: 13px;
-            font-weight: 500;
-            color: #4a5568;
-            margin-bottom: 6px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .form-group input,
-        .form-group select {
-            padding: 10px 12px;
-            border: 1px solid #cbd5e0;
-            border-radius: 6px;
-            font-size: 14px;
-            font-family: inherit;
-            transition: border-color 0.2s;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: #b8860b;
-            box-shadow: 0 0 0 3px rgba(184, 134, 11, 0.1);
-        }
-
-        .age-note {
-            background: #fef5e7;
-            border-left: 4px solid #f39c12;
-            padding: 12px;
-            border-radius: 4px;
-            font-size: 12px;
-            color: #7d6608;
-            line-height: 1.5;
-            margin-top: 8px;
-        }
-
-        .items-container {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .item {
-            background: #fef9e7;
-            padding: 16px;
-            border-radius: 8px;
-            border-left: 4px solid #b8860b;
-        }
-
-        .item-number {
-            font-size: 12px;
-            font-weight: 600;
-            color: #b8860b;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 8px;
-        }
-
-        .item-text {
-            font-size: 14px;
-            color: #2d3748;
-            margin-bottom: 12px;
-            font-weight: 500;
-        }
-
-        .response-group {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-
-        .response-option {
-            flex: 1;
-            min-width: 80px;
-        }
-
-        .response-option input[type="radio"] {
-            display: none;
-        }
-
-        .response-option label {
-            display: block;
-            padding: 10px 12px;
-            border: 1px solid #cbd5e0;
-            border-radius: 6px;
-            text-align: center;
-            font-size: 13px;
-            cursor: pointer;
-            transition: all 0.2s;
-            background: white;
-        }
-
-        .response-option input[type="radio"]:checked + label {
-            background: #b8860b;
-            color: white;
-            border-color: #b8860b;
-            font-weight: 600;
-        }
-
-        .results-section {
-            display: none;
-            background: #fef9e7;
-            padding: 24px;
-            border-radius: 8px;
-            border-left: 4px solid #b8860b;
-            margin-top: 24px;
-        }
-
-        .results-section.show {
-            display: block;
-        }
-
-        .score-box {
-            background: white;
-            padding: 16px;
-            border-radius: 8px;
-            margin-bottom: 16px;
-            text-align: center;
-        }
-
-        .score-value {
-            font-size: 48px;
-            font-weight: 700;
-            color: #b8860b;
-            margin-bottom: 4px;
-        }
-
-        .score-label {
-            font-size: 13px;
-            color: #718096;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .severity-badge {
-            display: inline-block;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-top: 8px;
-        }
-
-        .severity-normal {
-            background: #c6f6d5;
-            color: #22543d;
-        }
-
-        .severity-mild {
-            background: #feebc8;
-            color: #7c2d12;
-        }
-
-        .severity-moderate {
-            background: #fed7d7;
-            color: #c53030;
-        }
-
-        .interpretation {
-            background: white;
-            padding: 16px;
-            border-radius: 8px;
-            margin-bottom: 16px;
-        }
-
-        .interpretation-title {
-            font-size: 14px;
-            font-weight: 600;
-            color: #2d3748;
-            margin-bottom: 8px;
-        }
-
-        .interpretation-text {
-            font-size: 13px;
-            color: #4a5568;
-            line-height: 1.6;
-        }
-
-        .interpretation-alert {
-            background: #fed7d7;
-            color: #c53030;
-            padding: 12px;
-            border-radius: 6px;
-            font-size: 13px;
-            line-height: 1.6;
-            margin-top: 8px;
-        }
-
-        .interpretation-alert.mild {
-            background: #feebc8;
-            color: #7c2d12;
-        }
-
-        .interpretation-alert.normal {
-            background: #c6f6d5;
-            color: #22543d;
-        }
-
-        .clinical-guidance {
-            background: white;
-            padding: 16px;
-            border-radius: 8px;
-            border-left: 4px solid #38a169;
-        }
-
-        .clinical-guidance-title {
-            font-size: 13px;
-            font-weight: 600;
-            color: #22543d;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 8px;
-        }
-
-        .clinical-guidance-text {
-            font-size: 13px;
-            color: #2f855a;
-            line-height: 1.6;
-        }
-
-        .button-group {
-            display: flex;
-            gap: 12px;
-            margin-top: 24px;
-            flex-wrap: wrap;
-        }
-
-        button {
-            flex: 1;
-            padding: 12px 16px;
-            border: none;
-            border-radius: 6px;
-            font-size: 14px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .btn-submit {
-            background: linear-gradient(135deg, #b8860b 0%, #daa520 100%);
-            color: white;
-            flex: 2;
-        }
-
-        .btn-submit:hover:not(:disabled) {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(184, 134, 11, 0.3);
-        }
-
-        .btn-submit:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-        }
-
-        .btn-new {
-            background: #edf2f7;
-            color: #4a5568;
-        }
-
-        .btn-new:hover {
-            background: #e2e8f0;
-        }
-
-        .btn-back {
-            background: #fed7e2;
-            color: #742a2a;
-        }
-
-        .btn-back:hover {
-            background: #fbb6ce;
-        }
-
-        .loading {
-            display: none;
-            text-align: center;
-            color: #b8860b;
-            font-weight: 600;
-            margin-top: 12px;
-        }
-
-        .loading.show {
-            display: block;
-        }
-
-        .status-message {
-            display: none;
-            padding: 12px;
-            border-radius: 6px;
-            font-size: 13px;
-            margin-top: 12px;
-            text-align: center;
-            font-weight: 500;
-        }
-
-        .status-message.success {
-            display: block;
-            background: #c6f6d5;
-            color: #22543d;
-        }
-
-        .status-message.error {
-            display: block;
-            background: #fed7d7;
-            color: #c53030;
-        }
-
-        .cutoff-info {
-            background: #fffaf0;
-            border-left: 4px solid #ed8936;
-            padding: 12px;
-            border-radius: 4px;
-            font-size: 12px;
-            color: #7c2d12;
-            line-height: 1.5;
-            margin-top: 8px;
-        }
-
-        @media (max-width: 600px) {
-            .demographics {
-                grid-template-columns: 1fr;
-            }
-
-            .response-group {
-                gap: 8px;
-            }
-
-            .response-option {
-                min-width: 70px;
-            }
-
-            .button-group {
-                flex-direction: column;
-            }
-
-            .btn-submit {
-                flex: none;
-            }
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f5f5; color: #333; }
+        .app-container { display: flex; flex-direction: column; min-height: 100vh; }
+        .app-header { background: #0C3B34; color: white; padding: 12px 20px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+        .header-back { background: none; border: none; color: white; cursor: pointer; font-size: 14px; opacity: 0.9; text-decoration: none; }
+        .header-back:hover { opacity: 1; }
+        .header-title { font-size: 16px; font-weight: 600; flex: 1; text-align: center; }
+        .header-btn { background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.3); color: white; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-size: 12px; }
+        .header-btn:hover { background: rgba(255,255,255,0.3); }
+        .container { flex: 1; max-width: 700px; margin: 0 auto; width: 100%; padding: 20px; }
+        header { text-align: center; margin-bottom: 30px; }
+        header h1 { font-size: 2em; font-weight: 700; margin-bottom: 8px; color: #0C3B34; }
+        header p { font-size: 0.95em; color: #666; }
+        .card { background: white; border-radius: 8px; padding: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        .question-group { margin-bottom: 20px; }
+        .question-group label { display: block; font-weight: 500; margin-bottom: 10px; color: #333; font-size: 0.9em; line-height: 1.3; }
+        .options { display: flex; gap: 12px; }
+        .option { flex: 1; }
+        .option input[type="radio"] { display: none; }
+        .option input[type="radio"] + label { display: block; padding: 10px; text-align: center; border: 2px solid #ddd; border-radius: 6px; cursor: pointer; font-weight: 500; font-size: 0.9em; margin: 0; }
+        .option input[type="radio"]:checked + label { background: #0C3B34; color: white; border-color: #0C3B34; }
+        button { padding: 12px 20px; background: #0C3B34; color: white; border: none; border-radius: 6px; font-weight: 600; font-size: 0.95em; cursor: pointer; width: 100%; margin-top: 20px; }
+        button:hover { background: #0A2E28; }
+        .resultado { display: none; }
+        .resultado.mostrar { display: block; }
+        .score-box { background: white; padding: 20px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #0C3B34; text-align: center; }
+        .score-value { font-size: 2.5em; font-weight: 700; color: #0C3B34; }
+        .score-label { font-size: 0.9em; color: #666; margin-top: 8px; }
+        .interpretacion { padding: 15px; border-radius: 6px; margin-bottom: 15px; }
+        .interpretacion.positivo { background: #FFF3CD; border-left: 4px solid #FF6B6B; color: #856404; }
+        .interpretacion.negativo { background: #D4EDDA; border-left: 4px solid #51CF66; color: #155724; }
+        .botones-accion { display: flex; flex-direction: column; gap: 10px; margin-top: 20px; }
+        .btn-secondary { background: #e0e0e0; color: #333; }
+        .btn-secondary:hover { background: #d0d0d0; }
+        .btn-toolkit { background: #0C3B34; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>GDS-15</h1>
-            <p>Escala de Depresión Geriátrica</p>
-            <p>Geriatric Depression Scale - Short Form</p>
-            <div class="source">Versión MINSA Perú / Yesavage & Brink</div>
+    <div class="app-container">
+        <div class="app-header">
+            <a href="javascript:history.back()" class="header-back">← Volver</a>
+            <div class="header-title">GDS-15 · SERUMS</div>
+            <button class="header-btn" onclick="irAlToolkit()">📋 Toolkit</button>
         </div>
-
-        <div class="content">
-            <div class="section">
-                <div class="section-title">Datos del Adulto Mayor</div>
-                <div class="demographics">
-                    <div class="form-group">
-                        <label for="edad">Edad</label>
-                        <input type="number" id="edad" placeholder="ej: 72" min="65" max="120" required>
-                        <div class="age-note">
-                            <strong>Población:</strong> ≥ 65 años. Instrumento validado para adultos mayores.
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="sexo">Sexo</label>
-                        <select id="sexo">
-                            <option value="">Seleccionar</option>
-                            <option value="M">Masculino</option>
-                            <option value="F">Femenino</option>
-                        </select>
-                    </div>
-                </div>
+        <div class="container">
+            <header>
+                <h1>GDS-15</h1>
+                <p>Escala de Depresión Geriátrica (Yesavage)</p>
+            </header>
+            <div class="card" id="formulario">
+                <form id="form-gds">
+                    <div id="preguntas-container"></div>
+                    <button type="submit">Calcular Resultado</button>
+                </form>
             </div>
-
-            <div class="section">
-                <div class="section-title">Instrucciones</div>
-                <p style="font-size: 13px; color: #4a5568; line-height: 1.6;">
-                    Marque <strong>Sí</strong> o <strong>No</strong> según cómo se haya sentido <strong>durante la última semana</strong>. 
-                    Responda a cada pregunta tal como representa su experiencia honestamente.
-                </p>
-            </div>
-
-            <form id="gdsForm">
-                <div class="items-container">
-                    <!-- 15 ítems del GDS-15 -->
-                    <div class="item">
-                        <div class="item-number">Pregunta 1</div>
-                        <div class="item-text">¿Está satisfecho con su vida?</div>
-                        <div class="response-group">
-                            <div class="response-option">
-                                <input type="radio" id="q1_si" name="q1" value="0">
-                                <label for="q1_si">Sí</label>
-                            </div>
-                            <div class="response-option">
-                                <input type="radio" id="q1_no" name="q1" value="1">
-                                <label for="q1_no">No</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="item-number">Pregunta 2</div>
-                        <div class="item-text">¿Ha abandonado muchas de sus actividades e intereses?</div>
-                        <div class="response-group">
-                            <div class="response-option">
-                                <input type="radio" id="q2_si" name="q2" value="1">
-                                <label for="q2_si">Sí</label>
-                            </div>
-                            <div class="response-option">
-                                <input type="radio" id="q2_no" name="q2" value="0">
-                                <label for="q2_no">No</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="item-number">Pregunta 3</div>
-                        <div class="item-text">¿Siente que su vida está vacía?</div>
-                        <div class="response-group">
-                            <div class="response-option">
-                                <input type="radio" id="q3_si" name="q3" value="1">
-                                <label for="q3_si">Sí</label>
-                            </div>
-                            <div class="response-option">
-                                <input type="radio" id="q3_no" name="q3" value="0">
-                                <label for="q3_no">No</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="item-number">Pregunta 4</div>
-                        <div class="item-text">¿Se aburre a menudo?</div>
-                        <div class="response-group">
-                            <div class="response-option">
-                                <input type="radio" id="q4_si" name="q4" value="1">
-                                <label for="q4_si">Sí</label>
-                            </div>
-                            <div class="response-option">
-                                <input type="radio" id="q4_no" name="q4" value="0">
-                                <label for="q4_no">No</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="item-number">Pregunta 5</div>
-                        <div class="item-text">¿Está de buen humor la mayoría del tiempo?</div>
-                        <div class="response-group">
-                            <div class="response-option">
-                                <input type="radio" id="q5_si" name="q5" value="0">
-                                <label for="q5_si">Sí</label>
-                            </div>
-                            <div class="response-option">
-                                <input type="radio" id="q5_no" name="q5" value="1">
-                                <label for="q5_no">No</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="item-number">Pregunta 6</div>
-                        <div class="item-text">¿Tiene miedo de que algo malo le vaya a suceder?</div>
-                        <div class="response-group">
-                            <div class="response-option">
-                                <input type="radio" id="q6_si" name="q6" value="1">
-                                <label for="q6_si">Sí</label>
-                            </div>
-                            <div class="response-option">
-                                <input type="radio" id="q6_no" name="q6" value="0">
-                                <label for="q6_no">No</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="item-number">Pregunta 7</div>
-                        <div class="item-text">¿Se siente feliz la mayoría del tiempo?</div>
-                        <div class="response-group">
-                            <div class="response-option">
-                                <input type="radio" id="q7_si" name="q7" value="0">
-                                <label for="q7_si">Sí</label>
-                            </div>
-                            <div class="response-option">
-                                <input type="radio" id="q7_no" name="q7" value="1">
-                                <label for="q7_no">No</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="item-number">Pregunta 8</div>
-                        <div class="item-text">¿Se siente desamparado(a) frecuentemente?</div>
-                        <div class="response-group">
-                            <div class="response-option">
-                                <input type="radio" id="q8_si" name="q8" value="1">
-                                <label for="q8_si">Sí</label>
-                            </div>
-                            <div class="response-option">
-                                <input type="radio" id="q8_no" name="q8" value="0">
-                                <label for="q8_no">No</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="item-number">Pregunta 9</div>
-                        <div class="item-text">¿Prefiere quedarse en casa durante el día en lugar de salir a hacer cosas?</div>
-                        <div class="response-group">
-                            <div class="response-option">
-                                <input type="radio" id="q9_si" name="q9" value="1">
-                                <label for="q9_si">Sí</label>
-                            </div>
-                            <div class="response-option">
-                                <input type="radio" id="q9_no" name="q9" value="0">
-                                <label for="q9_no">No</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="item-number">Pregunta 10</div>
-                        <div class="item-text">¿Cree que tiene más problemas de memoria que la mayoría de personas?</div>
-                        <div class="response-group">
-                            <div class="response-option">
-                                <input type="radio" id="q10_si" name="q10" value="1">
-                                <label for="q10_si">Sí</label>
-                            </div>
-                            <div class="response-option">
-                                <input type="radio" id="q10_no" name="q10" value="0">
-                                <label for="q10_no">No</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="item-number">Pregunta 11</div>
-                        <div class="item-text">¿Cree que es maravilloso estar vivo ahora?</div>
-                        <div class="response-group">
-                            <div class="response-option">
-                                <input type="radio" id="q11_si" name="q11" value="0">
-                                <label for="q11_si">Sí</label>
-                            </div>
-                            <div class="response-option">
-                                <input type="radio" id="q11_no" name="q11" value="1">
-                                <label for="q11_no">No</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="item-number">Pregunta 12</div>
-                        <div class="item-text">¿Se siente sin valor tal como está ahora?</div>
-                        <div class="response-group">
-                            <div class="response-option">
-                                <input type="radio" id="q12_si" name="q12" value="1">
-                                <label for="q12_si">Sí</label>
-                            </div>
-                            <div class="response-option">
-                                <input type="radio" id="q12_no" name="q12" value="0">
-                                <label for="q12_no">No</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="item-number">Pregunta 13</div>
-                        <div class="item-text">¿Se siente lleno(a) de energía?</div>
-                        <div class="response-group">
-                            <div class="response-option">
-                                <input type="radio" id="q13_si" name="q13" value="0">
-                                <label for="q13_si">Sí</label>
-                            </div>
-                            <div class="response-option">
-                                <input type="radio" id="q13_no" name="q13" value="1">
-                                <label for="q13_no">No</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="item-number">Pregunta 14</div>
-                        <div class="item-text">¿Siente que su situación es desesperada?</div>
-                        <div class="response-group">
-                            <div class="response-option">
-                                <input type="radio" id="q14_si" name="q14" value="1">
-                                <label for="q14_si">Sí</label>
-                            </div>
-                            <div class="response-option">
-                                <input type="radio" id="q14_no" name="q14" value="0">
-                                <label for="q14_no">No</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="item-number">Pregunta 15</div>
-                        <div class="item-text">¿Piensa que la mayoría de personas están mejor que usted?</div>
-                        <div class="response-group">
-                            <div class="response-option">
-                                <input type="radio" id="q15_si" name="q15" value="1">
-                                <label for="q15_si">Sí</label>
-                            </div>
-                            <div class="response-option">
-                                <input type="radio" id="q15_no" name="q15" value="0">
-                                <label for="q15_no">No</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="button-group">
-                    <button type="submit" class="btn-submit">Calcular Resultado</button>
-                    <button type="button" class="btn-new" onclick="resetForm()">Nuevo</button>
-                    <button type="button" class="btn-back" onclick="goBack()">Volver</button>
-                </div>
-
-                <div class="loading" id="loading">
-                    Guardando resultado...
-                </div>
-                <div class="status-message" id="statusMessage"></div>
-            </form>
-
-            <div class="results-section" id="resultsSection">
+            <div class="card resultado" id="resultado-box">
+                <h2>Resultado</h2>
                 <div class="score-box">
-                    <div class="score-value" id="scoreValue">0</div>
-                    <div class="score-label">Score Total (0-15)</div>
-                    <div class="severity-badge" id="severityBadge"></div>
+                    <div class="score-value" id="score-total">0</div>
+                    <div class="score-label">Puntuación Total (0-15)</div>
                 </div>
-
-                <div class="interpretation">
-                    <div class="interpretation-title">Interpretación Clínica</div>
-                    <div class="interpretation-text" id="interpretationText"></div>
-                    <div class="interpretation-alert" id="interpretationAlert"></div>
-                </div>
-
-                <div class="clinical-guidance">
-                    <div class="clinical-guidance-title">Recomendación Clínica</div>
-                    <div class="clinical-guidance-text" id="clinicalGuidance"></div>
-                    <div class="cutoff-info">
-                        <strong>Puntos de corte MINSA (GDS-15):</strong><br>
-                        • 0-4 puntos = Sin depresión<br>
-                        • 5-8 puntos = Depresión leve<br>
-                        • 9-15 puntos = Depresión moderada a severa
-                    </div>
+                <div id="interpretacion-box"></div>
+                <div class="botones-accion">
+                    <button class="btn-secondary" onclick="descargarJSON()">📥 Descargar JSON</button>
+                    <button class="btn-secondary" onclick="reiniciar()">🔄 Nuevo Tamizaje</button>
+                    <button class="btn-toolkit" onclick="irAlToolkit()">← Volver a Toolkit</button>
                 </div>
             </div>
         </div>
     </div>
-
     <script>
-        (function() {
         const SUPABASE_URL = 'https://xcfdhwqjudzngvlssyeg.supabase.co';
-        const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhjZmRod3FqdWR6bmd2bHNzeWVnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDAwMjE4OTUsImV4cCI6MTcxNTU5Mzg5NX0.wXN8N7Z3Z1Z1Z1Z1Z1Z1Z1Z1Z1Z1Z1Z1Z1Z1Z1Z1Z1Z';
-
-        if (!window.__appSupabase) { window.__appSupabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY); }
-            const supabase = window.__appSupabase;
-        const form = document.getElementById('gdsForm');
-
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-
-            const edad = parseInt(document.getElementById('edad').value);
-            
-            if (!edad || edad < 65) {
-                showStatus('Por favor ingrese una edad válida (≥ 65 años)', 'error');
-                return;
-            }
-
-            const allAnswered = Array.from({ length: 15 }, (_, i) => {
-                const q = i + 1;
-                return document.querySelector(`input[name="q${q}"]:checked`);
-            }).every(el => el !== undefined && el !== null);
-
-            if (!allAnswered) {
-                showStatus('Por favor responda todas las preguntas', 'error');
-                return;
-            }
-
+        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhjZmRod3FqdWR6bmd2bHNzeWVnIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTk1NjQ3NDAsImV4cCI6MTk5OTk5NDc0MH0.p2QSwDgAQvFaI1ztHQ2RiPHsgNRmvqYQ2JvGxGP7VvE';
+        const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+        const preguntas = ["¿Está satisfecho/a con su vida?", "¿Ha dejado muchas de sus actividades e intereses?", "¿Siente que su vida está vacía?", "¿Se aburre a menudo?", "¿Está de buen humor la mayoría del tiempo?", "¿Tiene miedo de que algo malo le vaya a suceder?", "¿Se siente feliz la mayoría del tiempo?", "¿Se siente con frecuencia desvalido/a?", "¿Prefiere quedarse en casa en lugar de salir a hacer cosas nuevas?", "¿Cree que tiene más problemas de memoria que la mayoría de las personas de su edad?", "¿Piensa que es maravilloso estar vivo ahora?", "¿Se siente bastante inútil tal como está ahora?", "¿Se siente lleno/a de energía?", "¿Siente que su situación es desesperada?", "¿Cree que la mayoría de las personas están mejor que usted?"];
+        const puntajes = [0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1];
+        function irAlToolkit() { if (window.opener) { window.opener.focus(); window.close(); } else { window.history.back(); } }
+        function inicializarFormulario() {
+            const container = document.getElementById('preguntas-container');
+            preguntas.forEach((pregunta, idx) => {
+                const div = document.createElement('div');
+                div.className = 'question-group';
+                div.innerHTML = `<label>${idx + 1}. ${pregunta}</label><div class="options"><div class="option"><input type="radio" id="q${idx}_no" name="q${idx}" value="0" required><label for="q${idx}_no">No</label></div><div class="option"><input type="radio" id="q${idx}_si" name="q${idx}" value="1"><label for="q${idx}_si">Sí</label></div></div>`;
+                container.appendChild(div);
+            });
+        }
+        function calcularScore() {
             let score = 0;
-            for (let i = 1; i <= 15; i++) {
-                const answer = document.querySelector(`input[name="q${i}"]:checked`);
-                if (answer) {
-                    score += parseInt(answer.value);
+            preguntas.forEach((_, idx) => {
+                const respuesta = document.querySelector(`input[name="q${idx}"]:checked`);
+                if (respuesta) {
+                    const valorRespuesta = parseInt(respuesta.value);
+                    const puntajeItem = puntajes[idx];
+                    if (valorRespuesta === puntajeItem) score++;
                 }
+            });
+            return score;
+        }
+        function mostrarResultado(score) {
+            document.getElementById('formulario').style.display = 'none';
+            document.getElementById('resultado-box').classList.add('mostrar');
+            document.getElementById('score-total').textContent = score;
+            let html = '';
+            if (score >= 10) {
+                html = `<div class="interpretacion positivo"><strong>🔴 Depresión severa (≥10)</strong><br>Requiere intervención inmediata farmacológica y/o psicoterapéutica.</div>`;
+            } else if (score >= 5) {
+                html = `<div class="interpretacion positivo"><strong>🟠 Depresión moderada (5-9)</strong><br>Evaluación con especialista en salud mental.</div>`;
+            } else {
+                html = `<div class="interpretacion negativo"><strong>🟢 Normal (&lt;5)</strong><br>Sin síntomas depresivos significativos.</div>`;
             }
-
-            displayResults(score);
-
+            document.getElementById('interpretacion-box').innerHTML = html;
+            guardarEnSupabase(score);
+        }
+        async function guardarEnSupabase(score) {
             try {
-                document.getElementById('loading').classList.add('show');
-                
-                const sexo = document.getElementById('sexo').value;
-                const usuario = await supabase.auth.getUser();
-                
-                const { error } = await supabase
-                    .from('evaluaciones_clinicas')
-                    .insert([{
-                        test_nombre: 'GDS-15',
-                        score: score,
-                        edad: edad,
-                        sexo: sexo || null,
-                        usuario_id: usuario.data.user?.id || null,
-                        timestamp: new Date().toISOString()
-                    }]);
-
-                document.getElementById('loading').classList.remove('show');
-
-                if (!error) {
-                    showStatus('✓ Resultado guardado correctamente', 'success');
-                }
-            } catch (err) {
-                document.getElementById('loading').classList.remove('show');
-            }
+                const respuestas = {};
+                preguntas.forEach((_, idx) => { respuestas[`q${idx}`] = document.querySelector(`input[name="q${idx}"]:checked`).value; });
+                let zona = 'NEGATIVO';
+                if (score >= 10) zona = 'CRITICO';
+                else if (score >= 5) zona = 'POSITIVO';
+                await supabase.from('tamizajes_clinicos').insert({
+                    test_tipo: 'GDS-15',
+                    puntaje_total: score,
+                    zona_riesgo: zona,
+                    respuestas: respuestas,
+                    consentimiento: true
+                });
+            } catch (e) { console.log('Guardado offline'); }
+        }
+        function descargarJSON() {
+            const score = parseInt(document.getElementById('score-total').textContent);
+            const respuestas = {};
+            preguntas.forEach((_, idx) => { respuestas[`q${idx}`] = document.querySelector(`input[name="q${idx}"]:checked`).value; });
+            let resultado = 'NORMAL';
+            if (score >= 10) resultado = 'SEVERA';
+            else if (score >= 5) resultado = 'MODERADA';
+            const datos = { test: 'GDS-15', fecha: new Date().toISOString(), puntaje: score, resultado: resultado, respuestas };
+            const blob = new Blob([JSON.stringify(datos, null, 2)], { type: 'application/json' });
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = `GDS-15_${new Date().toISOString().split('T')[0]}.json`;
+            a.click();
+        }
+        function reiniciar() {
+            document.getElementById('form-gds').reset();
+            document.getElementById('formulario').style.display = 'block';
+            document.getElementById('resultado-box').classList.remove('mostrar');
+            window.scrollTo(0, 0);
+        }
+        document.getElementById('form-gds').addEventListener('submit', (e) => {
+            e.preventDefault();
+            mostrarResultado(calcularScore());
         });
-
-        function displayResults(score) {
-            document.getElementById('scoreValue').textContent = score;
-            
-            const resultSection = document.getElementById('resultsSection');
-            const interpretationText = document.getElementById('interpretationText');
-            const interpretationAlert = document.getElementById('interpretationAlert');
-            const clinicalGuidance = document.getElementById('clinicalGuidance');
-            const severityBadge = document.getElementById('severityBadge');
-
-            let severity, badgeClass;
-
-            if (score >= 0 && score <= 4) {
-                severity = 'SIN DEPRESIÓN';
-                badgeClass = 'severity-normal';
-                
-                interpretationText.textContent = `Puntuación: ${score}/15. RESULTADO NEGATIVO.`;
-                interpretationAlert.className = 'interpretation-alert normal';
-                interpretationAlert.innerHTML = `
-                    <strong>✓ Resultado negativo:</strong> La puntuación ≤ 4 sugiere ausencia de depresión en la evaluación actual. 
-                    El adulto mayor no presenta síntomas depresivos significativos.
-                `;
-                clinicalGuidance.innerHTML = `
-                    <strong>Recomendaciones:</strong><br>
-                    1. Continuar monitoreo del bienestar emocional en consultas rutinarias<br>
-                    2. Promover actividades físicas, sociales y recreativas<br>
-                    3. Mantener seguimiento preventivo anual<br>
-                    4. Educación sobre factores de protección mental
-                `;
-            } else if (score >= 5 && score <= 8) {
-                severity = 'DEPRESIÓN LEVE';
-                badgeClass = 'severity-mild';
-                
-                interpretationText.textContent = `Puntuación: ${score}/15. DEPRESIÓN LEVE PROBABLE.`;
-                interpretationAlert.className = 'interpretation-alert mild';
-                interpretationAlert.innerHTML = `
-                    <strong>⚠️ Hallazgo positivo (leve):</strong> La puntuación 5-8 indica probable depresión leve. 
-                    Se recomienda evaluación clínica adicional y seguimiento cercano.
-                `;
-                clinicalGuidance.innerHTML = `
-                    <strong>Acciones clínicas:</strong><br>
-                    1. Evaluación clínica completa (antecedentes, medicamentos, comorbilidades médicas)<br>
-                    2. Descartar causas médicas de síntomas (hipotiroidismo, B12, demencia incipiente)<br>
-                    3. Iniciar intervenciones psicosociales: actividad física, terapia social<br>
-                    4. Considerar referencia a psicología/psiquiatría geriátrica<br>
-                    5. Seguimiento en 4 semanas; si persisten síntomas, considerar farmacoterapia<br>
-                    6. Evaluar riesgo suicida (importante en población geriátrica)
-                `;
-            } else if (score >= 9) {
-                severity = 'DEPRESIÓN MODERADA-SEVERA';
-                badgeClass = 'severity-moderate';
-                
-                interpretationText.textContent = `Puntuación: ${score}/15. DEPRESIÓN MODERADA A SEVERA.`;
-                interpretationAlert.className = 'interpretation-alert';
-                interpretationAlert.innerHTML = `
-                    <strong>⚠️ Hallazgo positivo (severo):</strong> La puntuación ≥ 9 indica probable depresión moderada a severa. 
-                    Requiere intervención clínica urgente especializada.
-                `;
-                clinicalGuidance.innerHTML = `
-                    <strong>Acciones clínicas URGENTES:</strong><br>
-                    1. Evaluación psiquiátrica INMEDIATA para confirmación diagnóstica<br>
-                    2. Evaluación de riesgo suicida completo (factor crítico en adultos mayores)<br>
-                    3. Descartar depresión secundaria a condiciones médicas (ACV, infarto, cáncer)<br>
-                    4. Revisar medicamentos que pueden causar depresión (betabloqueantes, benzodiacepinas)<br>
-                    5. Considerar iniciación de antidepresivo (ISRS como primera línea)<br>
-                    6. Psicoterapia + farmacoterapia<br>
-                    7. Hospitalización si hay ideación suicida con plan/intención
-                `;
-            }
-
-            severityBadge.textContent = severity;
-            severityBadge.className = `severity-badge ${badgeClass}`;
-
-            resultSection.classList.add('show');
-            resultSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-
-        function showStatus(message, type) {
-            const statusEl = document.getElementById('statusMessage');
-            statusEl.textContent = message;
-            statusEl.className = `status-message ${type}`;
-            setTimeout(() => {
-                statusEl.className = 'status-message';
-            }, 4000);
-        }
-
-        function resetForm() {
-            form.reset();
-            document.getElementById('resultsSection').classList.remove('show');
-            document.getElementById('statusMessage').className = 'status-message';
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        })();
-        function goBack() {
-            window.history.back();
-        }
+        inicializarFormulario();
     </script>
 </body>
 </html>

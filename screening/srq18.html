@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SRQ-18 - Screening de Salud General</title>
+    <title>SRQ-18 · SERUMS Toolkit</title>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <style>
         * {
@@ -11,860 +11,411 @@
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+        }
+        .app-container {
+            display: flex;
+            flex-direction: column;
             min-height: 100vh;
-            padding: 16px;
-            color: #2d3748;
         }
-
-        .container {
-            max-width: 700px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-            overflow: hidden;
-        }
-
-        .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        .app-header {
+            background: #0C3B34;
             color: white;
-            padding: 24px;
-            text-align: center;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
         }
-
-        .header h1 {
-            font-size: 28px;
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
-
-        .header p {
+        .header-back {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
             font-size: 14px;
             opacity: 0.9;
-            margin-bottom: 4px;
+            transition: opacity 0.3s;
+            text-decoration: none;
         }
-
-        .header .source {
-            font-size: 12px;
-            opacity: 0.8;
-            margin-top: 8px;
-            font-style: italic;
+        .header-back:hover {
+            opacity: 1;
         }
-
-        .content {
-            padding: 24px;
-        }
-
-        .section {
-            margin-bottom: 32px;
-        }
-
-        .section-title {
+        .header-title {
             font-size: 16px;
             font-weight: 600;
-            color: #2d3748;
-            margin-bottom: 16px;
-            padding-bottom: 8px;
-            border-bottom: 2px solid #e2e8f0;
+            flex: 1;
+            text-align: center;
         }
-
-        .demographics {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
+        .header-btn {
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: all 0.3s;
+        }
+        .header-btn:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        .container {
+            flex: 1;
+            max-width: 700px;
+            margin: 0 auto;
+            width: 100%;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        header h1 {
+            font-size: 2em;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #0C3B34;
+        }
+        header p {
+            font-size: 0.95em;
+            color: #666;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 24px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .question-group {
             margin-bottom: 24px;
         }
-
-        .form-group {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .form-group label {
-            font-size: 13px;
+        .question-group label {
+            display: block;
             font-weight: 500;
-            color: #4a5568;
-            margin-bottom: 6px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .form-group input,
-        .form-group select {
-            padding: 10px 12px;
-            border: 1px solid #cbd5e0;
-            border-radius: 6px;
-            font-size: 14px;
-            font-family: inherit;
-            transition: border-color 0.2s;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: #667eea;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
-        }
-
-        .items-container {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .item {
-            background: #f7fafc;
-            padding: 16px;
-            border-radius: 8px;
-            border-left: 4px solid #667eea;
-        }
-
-        .item-number {
-            font-size: 12px;
-            font-weight: 600;
-            color: #667eea;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 8px;
-        }
-
-        .item-text {
-            font-size: 14px;
-            color: #2d3748;
             margin-bottom: 12px;
-            font-weight: 500;
+            color: #333;
+            font-size: 0.95em;
+            line-height: 1.4;
         }
-
-        .response-group {
+        .options {
             display: flex;
             gap: 12px;
-            flex-wrap: wrap;
         }
-
-        .response-option {
+        .option {
             flex: 1;
-            min-width: 80px;
         }
-
-        .response-option input[type="radio"] {
+        .option input[type="radio"] {
             display: none;
         }
-
-        .response-option label {
+        .option input[type="radio"] + label {
             display: block;
-            padding: 10px 12px;
-            border: 1px solid #cbd5e0;
-            border-radius: 6px;
+            padding: 10px;
             text-align: center;
-            font-size: 13px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
             cursor: pointer;
-            transition: all 0.2s;
-            background: white;
+            font-weight: 500;
+            font-size: 0.9em;
+            transition: all 0.3s;
+            margin: 0;
         }
-
-        .response-option input[type="radio"]:checked + label {
-            background: #667eea;
+        .option input[type="radio"]:checked + label {
+            background: #0C3B34;
             color: white;
-            border-color: #667eea;
-            font-weight: 600;
+            border-color: #0C3B34;
         }
-
-        .results-section {
-            display: none;
-            background: #f0f4ff;
-            padding: 24px;
-            border-radius: 8px;
-            border-left: 4px solid #667eea;
-            margin-top: 24px;
-        }
-
-        .results-section.show {
-            display: block;
-        }
-
-        .score-box {
-            background: white;
-            padding: 16px;
-            border-radius: 8px;
-            margin-bottom: 16px;
-            text-align: center;
-        }
-
-        .score-value {
-            font-size: 48px;
-            font-weight: 700;
-            color: #667eea;
-            margin-bottom: 4px;
-        }
-
-        .score-label {
-            font-size: 13px;
-            color: #718096;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .interpretation {
-            background: white;
-            padding: 16px;
-            border-radius: 8px;
-            margin-bottom: 16px;
-        }
-
-        .interpretation-title {
-            font-size: 14px;
-            font-weight: 600;
-            color: #2d3748;
-            margin-bottom: 8px;
-        }
-
-        .interpretation-text {
-            font-size: 13px;
-            color: #4a5568;
-            line-height: 1.6;
-        }
-
-        .interpretation-alert {
-            background: #fed7d7;
-            color: #c53030;
-            padding: 12px;
-            border-radius: 6px;
-            font-size: 13px;
-            line-height: 1.6;
-            margin-top: 8px;
-        }
-
-        .interpretation-alert.positive {
-            background: #c6f6d5;
-            color: #22543d;
-        }
-
-        .clinical-guidance {
-            background: white;
-            padding: 16px;
-            border-radius: 8px;
-            border-left: 4px solid #38a169;
-        }
-
-        .clinical-guidance-title {
-            font-size: 13px;
-            font-weight: 600;
-            color: #22543d;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 8px;
-        }
-
-        .clinical-guidance-text {
-            font-size: 13px;
-            color: #2f855a;
-            line-height: 1.6;
-        }
-
-        .button-group {
-            display: flex;
-            gap: 12px;
-            margin-top: 24px;
-            flex-wrap: wrap;
-        }
-
         button {
-            flex: 1;
-            padding: 12px 16px;
+            padding: 12px 20px;
+            background: #0C3B34;
+            color: white;
             border: none;
             border-radius: 6px;
-            font-size: 14px;
             font-weight: 600;
+            font-size: 0.95em;
             cursor: pointer;
-            transition: all 0.2s;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            transition: all 0.3s;
+            width: 100%;
+            margin-top: 20px;
         }
-
-        .btn-submit {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            flex: 2;
+        button:hover {
+            background: #0A2E28;
+            transform: translateY(-1px);
         }
-
-        .btn-submit:hover:not(:disabled) {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
-        }
-
-        .btn-submit:disabled {
+        button:disabled {
             opacity: 0.5;
             cursor: not-allowed;
         }
-
-        .btn-new {
-            background: #edf2f7;
-            color: #4a5568;
-        }
-
-        .btn-new:hover {
-            background: #e2e8f0;
-        }
-
-        .btn-back {
-            background: #fed7e2;
-            color: #742a2a;
-        }
-
-        .btn-back:hover {
-            background: #fbb6ce;
-        }
-
-        .loading {
+        .resultado {
             display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+        }
+        .resultado.mostrar {
+            display: block;
+        }
+        .score-box {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border-left: 4px solid #0C3B34;
             text-align: center;
-            color: #667eea;
-            font-weight: 600;
-            margin-top: 12px;
         }
-
-        .loading.show {
-            display: block;
+        .score-value {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #0C3B34;
         }
-
-        .status-message {
-            display: none;
-            padding: 12px;
-            border-radius: 6px;
-            font-size: 13px;
-            margin-top: 12px;
-            text-align: center;
-            font-weight: 500;
-        }
-
-        .status-message.success {
-            display: block;
-            background: #c6f6d5;
-            color: #22543d;
-        }
-
-        .status-message.error {
-            display: block;
-            background: #fed7d7;
-            color: #c53030;
-        }
-
-        .cutoff-info {
-            background: #fffaf0;
-            border-left: 4px solid #ed8936;
-            padding: 12px;
-            border-radius: 4px;
-            font-size: 12px;
-            color: #7c2d12;
-            line-height: 1.5;
+        .score-label {
+            font-size: 0.9em;
+            color: #666;
             margin-top: 8px;
         }
-
-        @media (max-width: 600px) {
-            .demographics {
-                grid-template-columns: 1fr;
+        .interpretacion {
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
+        .interpretacion.positivo {
+            background: #FFF3CD;
+            border-left: 4px solid #FF6B6B;
+            color: #856404;
+        }
+        .interpretacion.negativo {
+            background: #D4EDDA;
+            border-left: 4px solid #51CF66;
+            color: #155724;
+        }
+        .botones-accion {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .btn-secondary {
+            background: #e0e0e0;
+            color: #333;
+        }
+        .btn-secondary:hover {
+            background: #d0d0d0;
+        }
+        .btn-toolkit {
+            background: #0C3B34;
+        }
+        .btn-toolkit:hover {
+            background: #0A2E28;
+        }
+        @media (max-width: 640px) {
+            .app-header {
+                padding: 10px 12px;
             }
-
-            .response-group {
-                gap: 8px;
+            .header-title {
+                font-size: 14px;
             }
-
-            .response-option {
-                min-width: 70px;
-            }
-
-            .button-group {
-                flex-direction: column;
-            }
-
-            .btn-submit {
-                flex: none;
+            .header-btn {
+                padding: 5px 10px;
+                font-size: 11px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>SRQ-18</h1>
-            <p>Screening de Salud General</p>
-            <p>Cuestionario de Autorreporte de Síntomas</p>
-            <div class="source">Versión OMS / MINSA Perú</div>
+    <div class="app-container">
+        <div class="app-header">
+            <a href="javascript:history.back()" class="header-back">← Volver</a>
+            <div class="header-title">SRQ-18 · SERUMS</div>
+            <button class="header-btn" onclick="irAlToolkit()">📋 Toolkit</button>
         </div>
 
-        <div class="content">
-            <div class="section">
-                <div class="section-title">Datos del Paciente</div>
-                <div class="demographics">
-                    <div class="form-group">
-                        <label for="edad">Edad</label>
-                        <input type="number" id="edad" placeholder="ej: 35" min="18" max="120">
-                    </div>
-                    <div class="form-group">
-                        <label for="sexo">Sexo</label>
-                        <select id="sexo">
-                            <option value="">Seleccionar</option>
-                            <option value="M">Masculino</option>
-                            <option value="F">Femenino</option>
-                            <option value="O">Otro</option>
-                        </select>
-                    </div>
-                </div>
+        <div class="container">
+            <header>
+                <h1>SRQ-18</h1>
+                <p>Cuestionario Breve de Síntomas de Morbilidad Psiquiátrica</p>
+            </header>
+
+            <div class="card" id="formulario">
+                <form id="form-srq">
+                    <div id="preguntas-container"></div>
+                    <button type="submit">Calcular Resultado</button>
+                </form>
             </div>
 
-            <div class="section">
-                <div class="section-title">Instrucciones</div>
-                <p style="font-size: 13px; color: #4a5568; line-height: 1.6;">
-                    A continuación se presentan preguntas sobre síntomas que puede haber experimentado en las <strong>últimas 4 semanas</strong>. 
-                    Marque <strong>Sí</strong> si la pregunta describe su experiencia, o <strong>No</strong> si no aplica.
-                </p>
-            </div>
-
-            <form id="srqForm">
-                <div class="items-container">
-                    <!-- Ítems del SRQ-18 -->
-                    <div class="item">
-                        <div class="item-number">Pregunta 1</div>
-                        <div class="item-text">¿Ha tenido dolores de cabeza frecuentes?</div>
-                        <div class="response-group">
-                            <div class="response-option">
-                                <input type="radio" id="q1_si" name="q1" value="1">
-                                <label for="q1_si">Sí</label>
-                            </div>
-                            <div class="response-option">
-                                <input type="radio" id="q1_no" name="q1" value="0">
-                                <label for="q1_no">No</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="item-number">Pregunta 2</div>
-                        <div class="item-text">¿Ha tenido dificultad para tomar decisiones?</div>
-                        <div class="response-group">
-                            <div class="response-option">
-                                <input type="radio" id="q2_si" name="q2" value="1">
-                                <label for="q2_si">Sí</label>
-                            </div>
-                            <div class="response-option">
-                                <input type="radio" id="q2_no" name="q2" value="0">
-                                <label for="q2_no">No</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="item-number">Pregunta 3</div>
-                        <div class="item-text">¿Ha tenido dificultad para realizar su trabajo diario?</div>
-                        <div class="response-group">
-                            <div class="response-option">
-                                <input type="radio" id="q3_si" name="q3" value="1">
-                                <label for="q3_si">Sí</label>
-                            </div>
-                            <div class="response-option">
-                                <input type="radio" id="q3_no" name="q3" value="0">
-                                <label for="q3_no">No</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="item-number">Pregunta 4</div>
-                        <div class="item-text">¿Ha perdido interés en las cosas?</div>
-                        <div class="response-group">
-                            <div class="response-option">
-                                <input type="radio" id="q4_si" name="q4" value="1">
-                                <label for="q4_si">Sí</label>
-                            </div>
-                            <div class="response-option">
-                                <input type="radio" id="q4_no" name="q4" value="0">
-                                <label for="q4_no">No</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="item-number">Pregunta 5</div>
-                        <div class="item-text">¿Se siente fácilmente asustado o nervioso?</div>
-                        <div class="response-group">
-                            <div class="response-option">
-                                <input type="radio" id="q5_si" name="q5" value="1">
-                                <label for="q5_si">Sí</label>
-                            </div>
-                            <div class="response-option">
-                                <input type="radio" id="q5_no" name="q5" value="0">
-                                <label for="q5_no">No</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="item-number">Pregunta 6</div>
-                        <div class="item-text">¿Ha tenido sensaciones desagradables en el estómago?</div>
-                        <div class="response-group">
-                            <div class="response-option">
-                                <input type="radio" id="q6_si" name="q6" value="1">
-                                <label for="q6_si">Sí</label>
-                            </div>
-                            <div class="response-option">
-                                <input type="radio" id="q6_no" name="q6" value="0">
-                                <label for="q6_no">No</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="item-number">Pregunta 7</div>
-                        <div class="item-text">¿Ha tenido dificultad para dormir?</div>
-                        <div class="response-group">
-                            <div class="response-option">
-                                <input type="radio" id="q7_si" name="q7" value="1">
-                                <label for="q7_si">Sí</label>
-                            </div>
-                            <div class="response-option">
-                                <input type="radio" id="q7_no" name="q7" value="0">
-                                <label for="q7_no">No</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="item-number">Pregunta 8</div>
-                        <div class="item-text">¿Ha sentido tristeza con frecuencia?</div>
-                        <div class="response-group">
-                            <div class="response-option">
-                                <input type="radio" id="q8_si" name="q8" value="1">
-                                <label for="q8_si">Sí</label>
-                            </div>
-                            <div class="response-option">
-                                <input type="radio" id="q8_no" name="q8" value="0">
-                                <label for="q8_no">No</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="item-number">Pregunta 9</div>
-                        <div class="item-text">¿Ha llorado más de lo usual?</div>
-                        <div class="response-group">
-                            <div class="response-option">
-                                <input type="radio" id="q9_si" name="q9" value="1">
-                                <label for="q9_si">Sí</label>
-                            </div>
-                            <div class="response-option">
-                                <input type="radio" id="q9_no" name="q9" value="0">
-                                <label for="q9_no">No</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="item-number">Pregunta 10</div>
-                        <div class="item-text">¿Ha tenido dificultad para concentrarse?</div>
-                        <div class="response-group">
-                            <div class="response-option">
-                                <input type="radio" id="q10_si" name="q10" value="1">
-                                <label for="q10_si">Sí</label>
-                            </div>
-                            <div class="response-option">
-                                <input type="radio" id="q10_no" name="q10" value="0">
-                                <label for="q10_no">No</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="item-number">Pregunta 11</div>
-                        <div class="item-text">¿Se siente sin esperanza en el futuro?</div>
-                        <div class="response-group">
-                            <div class="response-option">
-                                <input type="radio" id="q11_si" name="q11" value="1">
-                                <label for="q11_si">Sí</label>
-                            </div>
-                            <div class="response-option">
-                                <input type="radio" id="q11_no" name="q11" value="0">
-                                <label for="q11_no">No</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="item-number">Pregunta 12</div>
-                        <div class="item-text">¿Ha tenido pensamientos de darse fin a la vida?</div>
-                        <div class="response-group">
-                            <div class="response-option">
-                                <input type="radio" id="q12_si" name="q12" value="1">
-                                <label for="q12_si">Sí</label>
-                            </div>
-                            <div class="response-option">
-                                <input type="radio" id="q12_no" name="q12" value="0">
-                                <label for="q12_no">No</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="item-number">Pregunta 13</div>
-                        <div class="item-text">¿Ha tenido una sensación de cansancio o agotamiento constante?</div>
-                        <div class="response-group">
-                            <div class="response-option">
-                                <input type="radio" id="q13_si" name="q13" value="1">
-                                <label for="q13_si">Sí</label>
-                            </div>
-                            <div class="response-option">
-                                <input type="radio" id="q13_no" name="q13" value="0">
-                                <label for="q13_no">No</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="item-number">Pregunta 14</div>
-                        <div class="item-text">¿Ha tenido sensaciones de tensión o nerviosismo en el cuerpo?</div>
-                        <div class="response-group">
-                            <div class="response-option">
-                                <input type="radio" id="q14_si" name="q14" value="1">
-                                <label for="q14_si">Sí</label>
-                            </div>
-                            <div class="response-option">
-                                <input type="radio" id="q14_no" name="q14" value="0">
-                                <label for="q14_no">No</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="item-number">Pregunta 15</div>
-                        <div class="item-text">¿Ha tenido una disminución del apetito?</div>
-                        <div class="response-group">
-                            <div class="response-option">
-                                <input type="radio" id="q15_si" name="q15" value="1">
-                                <label for="q15_si">Sí</label>
-                            </div>
-                            <div class="response-option">
-                                <input type="radio" id="q15_no" name="q15" value="0">
-                                <label for="q15_no">No</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="item-number">Pregunta 16</div>
-                        <div class="item-text">¿Ha tenido dificultad para permanecer dormido?</div>
-                        <div class="response-group">
-                            <div class="response-option">
-                                <input type="radio" id="q16_si" name="q16" value="1">
-                                <label for="q16_si">Sí</label>
-                            </div>
-                            <div class="response-option">
-                                <input type="radio" id="q16_no" name="q16" value="0">
-                                <label for="q16_no">No</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="item-number">Pregunta 17</div>
-                        <div class="item-text">¿Ha sentido que sus manos tiemblan?</div>
-                        <div class="response-group">
-                            <div class="response-option">
-                                <input type="radio" id="q17_si" name="q17" value="1">
-                                <label for="q17_si">Sí</label>
-                            </div>
-                            <div class="response-option">
-                                <input type="radio" id="q17_no" name="q17" value="0">
-                                <label for="q17_no">No</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="item-number">Pregunta 18</div>
-                        <div class="item-text">¿Ha sentido que tiene poco que hacer?</div>
-                        <div class="response-group">
-                            <div class="response-option">
-                                <input type="radio" id="q18_si" name="q18" value="1">
-                                <label for="q18_si">Sí</label>
-                            </div>
-                            <div class="response-option">
-                                <input type="radio" id="q18_no" name="q18" value="0">
-                                <label for="q18_no">No</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="button-group">
-                    <button type="submit" class="btn-submit">Calcular Resultado</button>
-                    <button type="button" class="btn-new" onclick="resetForm()">Nuevo</button>
-                    <button type="button" class="btn-back" onclick="goBack()">Volver</button>
-                </div>
-
-                <div class="loading" id="loading">
-                    Guardando resultado...
-                </div>
-                <div class="status-message" id="statusMessage"></div>
-            </form>
-
-            <div class="results-section" id="resultsSection">
+            <div class="card resultado" id="resultado-box">
+                <h2>Resultado de la Evaluación</h2>
+                
                 <div class="score-box">
-                    <div class="score-value" id="scoreValue">0</div>
-                    <div class="score-label">Score Total (0-18)</div>
+                    <div class="score-value" id="score-total">0</div>
+                    <div class="score-label">Puntuación Total (0-18)</div>
                 </div>
 
-                <div class="interpretation">
-                    <div class="interpretation-title">Interpretación Clínica</div>
-                    <div class="interpretation-text" id="interpretationText"></div>
-                    <div class="interpretation-alert" id="interpretationAlert"></div>
-                </div>
+                <div id="interpretacion-box"></div>
 
-                <div class="clinical-guidance">
-                    <div class="clinical-guidance-title">Recomendación Clínica</div>
-                    <div class="clinical-guidance-text" id="clinicalGuidance"></div>
-                    <div class="cutoff-info">
-                        <strong>Punto de corte MINSA:</strong> ≥ 8 puntos = Sospecha de trastorno ansioso-depresivo. Requiere evaluación clínica adicional.
-                    </div>
+                <div class="botones-accion">
+                    <button class="btn-secondary" onclick="descargarJSON()">📥 Descargar JSON</button>
+                    <button class="btn-secondary" onclick="reiniciar()">🔄 Nuevo Tamizaje</button>
+                    <button class="btn-toolkit" onclick="irAlToolkit()">← Volver a Toolkit</button>
                 </div>
             </div>
         </div>
     </div>
 
     <script>
-        (function() {
-        // Configuración Supabase (reemplazar con tus valores)
         const SUPABASE_URL = 'https://xcfdhwqjudzngvlssyeg.supabase.co';
-        const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhjZmRod3FqdWR6bmd2bHNzeWVnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDAwMjE4OTUsImV4cCI6MTcxNTU5Mzg5NX0.wXN8N7Z3Z1Z1Z1Z1Z1Z1Z1Z1Z1Z1Z1Z1Z1Z1Z1Z1Z1Z'; // Reemplazar
+        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhjZmRod3FqdWR6bmd2bHNzeWVnIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTk1NjQ3NDAsImV4cCI6MTk5OTk5NDc0MH0.p2QSwDgAQvFaI1ztHQ2RiPHsgNRmvqYQ2JvGxGP7VvE';
+        const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-        if (!window.__appSupabase) { window.__appSupabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY); }
-            const supabase = window.__appSupabase;
+        const preguntas = [
+            "¿Ha tenido problemas de sueño?",
+            "¿Se asusta fácilmente?",
+            "¿Se siente nervioso/a?",
+            "¿Ha sentido latidos del corazón o dolor en el pecho?",
+            "¿Ha tenido malas digestiones o problemas de estómago?",
+            "¿Ha tenido dolores de cabeza?",
+            "¿Tiene dificultad para pensar con claridad?",
+            "¿Se siente cansado/a todo el tiempo?",
+            "¿Tiene dificultad para realizar sus actividades diarias?",
+            "¿Es incapaz de jugar un papel útil en su vida?",
+            "¿Ha perdido interés en cosas?",
+            "¿Cree que es una persona sin valor?",
+            "¿Ha tenido ganas de morir?",
+            "¿Se siente perjudicado/a por otras personas?",
+            "¿Tiene miedo de algo?",
+            "¿Tiene trastornos emocionales que interfieren con su vida familiar, laboral o social?",
+            "¿Ha tenido depresión?",
+            "¿Ha tenido ansiedad o preocupación?"
+        ];
 
-        const form = document.getElementById('srqForm');
-
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-
-            // Validar que todas las preguntas estén respondidas
-            const allAnswered = Array.from({ length: 18 }, (_, i) => {
-                const q = i + 1;
-                return document.querySelector(`input[name="q${q}"]:checked`);
-            }).every(el => el !== undefined && el !== null);
-
-            if (!allAnswered) {
-                showStatus('Por favor responda todas las preguntas', 'error');
-                return;
+        function irAlToolkit() {
+            // Volver al toolkit en la ventana padre (window.opener) o ir a URL conocida
+            if (window.opener) {
+                window.opener.focus();
+                window.close();
+            } else {
+                window.history.back();
             }
+        }
 
-            // Calcular score
+        function inicializarFormulario() {
+            const container = document.getElementById('preguntas-container');
+            preguntas.forEach((pregunta, idx) => {
+                const div = document.createElement('div');
+                div.className = 'question-group';
+                div.innerHTML = `
+                    <label>${idx + 1}. ${pregunta}</label>
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" id="q${idx}_no" name="q${idx}" value="0" required>
+                            <label for="q${idx}_no">No</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q${idx}_si" name="q${idx}" value="1">
+                            <label for="q${idx}_si">Sí</label>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(div);
+            });
+        }
+
+        function calcularScore() {
             let score = 0;
-            for (let i = 1; i <= 18; i++) {
-                const answer = document.querySelector(`input[name="q${i}"]:checked`);
-                if (answer) {
-                    score += parseInt(answer.value);
+            preguntas.forEach((_, idx) => {
+                const respuesta = document.querySelector(`input[name="q${idx}"]:checked`);
+                if (respuesta) {
+                    score += parseInt(respuesta.value);
                 }
-            }
+            });
+            return score;
+        }
 
-            // Mostrar resultados
-            displayResults(score);
+        function mostrarResultado(score) {
+            const form = document.getElementById('formulario');
+            const resultBox = document.getElementById('resultado-box');
+            const interpretBox = document.getElementById('interpretacion-box');
+            
+            form.style.display = 'none';
+            resultBox.classList.add('mostrar');
+            document.getElementById('score-total').textContent = score;
 
-            // Intentar guardar en Supabase
+            const esPositivo = score >= 7;
+            const html = esPositivo 
+                ? `<div class="interpretacion positivo">
+                    <strong>⚠️ Posible TMC (≥7)</strong><br>
+                    Puntuación indica posibles síntomas de trastorno mental común. Se recomienda evaluación clínica más profunda.
+                   </div>`
+                : `<div class="interpretacion negativo">
+                    <strong>✓ Normal (&lt;7)</strong><br>
+                    Puntuación sugiere ausencia de TMC. Continúe con seguimiento preventivo.
+                   </div>`;
+            
+            interpretBox.innerHTML = html;
+            guardarEnSupabase(score);
+        }
+
+        async function guardarEnSupabase(score) {
             try {
-                document.getElementById('loading').classList.add('show');
-                
-                const edad = document.getElementById('edad').value;
-                const sexo = document.getElementById('sexo').value;
-                const usuario = await supabase.auth.getUser();
-                
-                const { error } = await supabase
-                    .from('evaluaciones_clinicas')
-                    .insert([{
-                        test_nombre: 'SRQ-18',
-                        score: score,
-                        edad: edad || null,
-                        sexo: sexo || null,
-                        usuario_id: usuario.data.user?.id || null,
-                        timestamp: new Date().toISOString()
-                    }]);
+                const respuestas = {};
+                preguntas.forEach((_, idx) => {
+                    respuestas[`q${idx}`] = document.querySelector(`input[name="q${idx}"]:checked`).value;
+                });
 
-                document.getElementById('loading').classList.remove('show');
-
-                if (error) {
-                    console.log('Nota: Resultado calculado pero no guardado en BD (tabla puede no existir aún)');
-                } else {
-                    showStatus('✓ Resultado guardado correctamente', 'success');
-                }
-            } catch (err) {
-                document.getElementById('loading').classList.remove('show');
-                console.log('Offline: Resultado disponible localmente');
+                await supabase
+                    .from('tamizajes_clinicos')
+                    .insert({
+                        test_tipo: 'SRQ-18',
+                        puntaje_total: score,
+                        zona_riesgo: score >= 7 ? 'POSITIVO' : 'NEGATIVO',
+                        respuestas: respuestas,
+                        consentimiento: true
+                    });
+            } catch (e) {
+                console.log('Nota: Guardado offline disponible');
             }
+        }
+
+        function descargarJSON() {
+            const score = parseInt(document.getElementById('score-total').textContent);
+            const respuestas = {};
+            preguntas.forEach((_, idx) => {
+                respuestas[`q${idx}`] = document.querySelector(`input[name="q${idx}"]:checked`).value;
+            });
+            
+            const datos = {
+                test: 'SRQ-18',
+                fecha: new Date().toISOString(),
+                puntaje: score,
+                resultado: score >= 7 ? 'POSITIVO' : 'NEGATIVO',
+                respuestas
+            };
+
+            const blob = new Blob([JSON.stringify(datos, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `SRQ-18_${new Date().toISOString().split('T')[0]}.json`;
+            a.click();
+        }
+
+        function reiniciar() {
+            document.getElementById('form-srq').reset();
+            document.getElementById('formulario').style.display = 'block';
+            document.getElementById('resultado-box').classList.remove('mostrar');
+            window.scrollTo(0, 0);
+        }
+
+        document.getElementById('form-srq').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const score = calcularScore();
+            mostrarResultado(score);
         });
 
-        function displayResults(score) {
-            document.getElementById('scoreValue').textContent = score;
-            
-            const resultsSection = document.getElementById('resultsSection');
-            const interpretationText = document.getElementById('interpretationText');
-            const interpretationAlert = document.getElementById('interpretationAlert');
-            const clinicalGuidance = document.getElementById('clinicalGuidance');
-
-            if (score >= 8) {
-                interpretationText.textContent = `Puntuación: ${score}/18. SOSPECHA DE TRASTORNO ANSIOSO-DEPRESIVO.`;
-                interpretationAlert.classList.remove('positive');
-                interpretationAlert.innerHTML = `
-                    <strong>⚠️ Hallazgo positivo:</strong> La puntuación ≥ 8 indica probable presencia de síntomas de ansiedad y/o depresión. 
-                    Se recomienda derivación urgente para evaluación psiquiátrica y diagnóstico diferencial.
-                `;
-                clinicalGuidance.innerHTML = `
-                    <strong>Acciones clínicas:</strong><br>
-                    1. Derivar a psiquiatría o psicología clínica para diagnóstico<br>
-                    2. Descartar riesgo suicida (pregunta 12: si respondió "Sí", es referencia inmediata)<br>
-                    3. Evaluar impacto funcional (trabajo, familia, vida diaria)<br>
-                    4. Considerar fármacoterapia + psicoterapia<br>
-                    5. Seguimiento: control en 2-4 semanas
-                `;
-            } else {
-                interpretationText.textContent = `Puntuación: ${score}/18. DENTRO DE PARÁMETROS NORMALES.`;
-                interpretationAlert.classList.add('positive');
-                interpretationAlert.innerHTML = `
-                    <strong>✓ Resultado negativo:</strong> La puntuación &lt; 8 sugiere ausencia de síntomas significativos 
-                    de trastorno ansioso-depresivo en el momento de la evaluación.
-                `;
-                clinicalGuidance.innerHTML = `
-                    <strong>Recomendaciones:</strong><br>
-                    1. Mantener seguimiento preventivo en consultas de rutina<br>
-                    2. Educación en salud mental y autocuidado<br>
-                    3. Reevaluar en próxima consulta anual<br>
-                    4. Si síntomas emergen, reevaluar inmediatamente
-                `;
-            }
-
-            resultsSection.classList.add('show');
-            resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-
-        function showStatus(message, type) {
-            const statusEl = document.getElementById('statusMessage');
-            statusEl.textContent = message;
-            statusEl.className = `status-message ${type}`;
-            setTimeout(() => {
-                statusEl.className = 'status-message';
-            }, 4000);
-        }
-
-        function resetForm() {
-            form.reset();
-            document.getElementById('resultsSection').classList.remove('show');
-            document.getElementById('statusMessage').className = 'status-message';
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        })();
-        function goBack() {
-            window.history.back();
-        }
+        inicializarFormulario();
     </script>
 </body>
 </html>
