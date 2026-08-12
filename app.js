@@ -1565,6 +1565,18 @@ function renderScreeningTools() {
       badge: "15 ítems · Escala de Depresión Geriátrica (Yesavage)",
       desc: "Escala validada para detección de depresión en adultos ≥65 años. Sensible a cambios clínicos. Puntos de corte: 0-4 (sin), 5-8 (leve), 9-15 (moderada-severa).",
       url: "screening/gds15-yesavage.html"
+    },
+    {
+      name: "Quiz Avanzado · Referencia-Contrarreferencia",
+      badge: "Simulador clínico",
+      desc: "Simulador interactivo de casos clínicos de referencia-contrarreferencia. Toma de decisiones en contexto SERUMS con feedback inmediato.",
+      url: "https://4-4-1941.github.io/AUDIT-INTEACTIVO/simulador/quiz-avanzado-referencia.html"
+    },
+    {
+      name: "Quiz Etapa Niño",
+      badge: "Simulador pediatría",
+      desc: "Evaluación de competencias en pediatría básica. Casos clínicos pediátricos con criterios de evaluación SERUMS.",
+      url: "https://4-4-1941.github.io/AUDIT-INTEACTIVO/simulador/quiz-etapa-nino.html"
     }
   ];
   root.innerHTML = `
