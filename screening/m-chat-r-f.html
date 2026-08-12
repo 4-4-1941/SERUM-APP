@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M-CHAT-R/F · Tamizaje de TEA</title>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+        header h1 {
+            font-size: 2em;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        header p {
+            font-size: 0.95em;
+            opacity: 0.9;
+        }
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            margin-bottom: 20px;
+        }
+        .question-group {
+            margin-bottom: 24px;
+        }
+        .question-group label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 12px;
+            color: #333;
+            font-size: 0.95em;
+            line-height: 1.4;
+        }
+        .options {
+            display: flex;
+            gap: 12px;
+        }
+        .option {
+            flex: 1;
+        }
+        .option input[type="radio"] {
+            display: none;
+        }
+        .option input[type="radio"] + label {
+            display: block;
+            padding: 10px;
+            text-align: center;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 0.9em;
+            transition: all 0.3s;
+            margin: 0;
+        }
+        .option input[type="radio"]:checked + label {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+        button {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1em;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 20px;
+        }
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        .resultado {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background: #f5f5f5;
+            border-radius: 8px;
+        }
+        .resultado.mostrar {
+            display: block;
+        }
+        .score-box {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border-left: 4px solid #667eea;
+        }
+        .score-value {
+            font-size: 2em;
+            font-weight: 700;
+            color: #667eea;
+        }
+        .score-label {
+            font-size: 0.85em;
+            color: #666;
+            margin-top: 8px;
+        }
+        .interpretacion {
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        .interpretacion.positivo {
+            background: #fee;
+            border-left: 4px solid #d32f2f;
+            color: #b71c1c;
+        }
+        .interpretacion.negativo {
+            background: #efe;
+            border-left: 4px solid #388e3c;
+            color: #1b5e20;
+        }
+        .botones-accion {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .btn-secondary {
+            flex: 1;
+            background: #e0e0e0;
+            color: #333;
+        }
+        .btn-secondary:hover {
+            background: #d0d0d0;
+        }
+        .nav-back {
+            color: white;
+            text-decoration: none;
+            font-size: 0.9em;
+            margin-bottom: 20px;
+            display: inline-block;
+            opacity: 0.9;
+            transition: opacity 0.3s;
+        }
+        .nav-back:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="./index.html" class="nav-back">← Volver a Tamizaje</a>
+        
+        <header>
+            <h1>M-CHAT-R/F</h1>
+            <p>Checklist Modificada para Autismo (Revisada + Seguimiento)</p>
+        </header>
+
+        <div class="card" id="formulario">
+            <form id="form-mchat">
+                <div id="preguntas-container"></div>
+                <button type="submit">Calcular Resultado</button>
+            </form>
+        </div>
+
+        <div class="card resultado" id="resultado-box">
+            <h2>Resultado de la Evaluación</h2>
+            
+            <div class="score-box">
+                <div class="score-value" id="score-total">0</div>
+                <div class="score-label">Respuestas de Riesgo (0-20)</div>
+            </div>
+
+            <div id="interpretacion-box"></div>
+
+            <div class="botones-accion">
+                <button class="btn-secondary" onclick="descargarJSON()">📥 Descargar JSON</button>
+                <button class="btn-secondary" onclick="reiniciar()">🔄 Nuevo Tamizaje</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const SUPABASE_URL = 'https://xcfdhwqjudzngvlssyeg.supabase.co';
+        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhjZmRod3FqdWR6bmd2bHNzeWVnIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTk1NjQ3NDAsImV4cCI6MTk5OTk5NDc0MH0.p2QSwDgAQvFaI1ztHQ2RiPHsgNRmvqYQ2JvGxGP7VvE';
+        const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+        const preguntas = [
+            "¿Cuando usted señala algo, ¿su hijo/a mira hacia donde usted está señalando?",
+            "¿Ha sospechado alguna vez que su hijo/a pudiera tener una pérdida de audición?",
+            "¿Su hijo/a entiende lo que dicen otros? Por ejemplo, ¿puede seguir órdenes sencillas?",
+            "¿Su hijo/a puede caminar?",
+            "¿Su hijo/a mira a los ojos cuando le habla, juega con usted o se le pide que mire?",
+            "¿Su hijo/a juega de forma que reproduce lo que ven que hacen otros (p.ej. imitando tareas del adulto como limpiar o cuidar)?",
+            "¿Su hijo/a intenta imitar los sonidos que usted hace?",
+            "¿Conoce palabras de una sola sílaba tales como 'mamá', 'papá', 'muu', 'tete'?",
+            "¿Su hijo/a usa gestos para comunicarse? Por ejemplo, ¿agita la mano para decir adiós o levanta los brazos para que lo/la coja?",
+            "¿Su hijo/a señala con su dedo índice para solicitar o indicar algo?",
+            "¿Cómo es el movimiento de los brazos y las manos de su hijo/a? (p.ej. ¿Son normales?)",
+            "¿Cómo es el movimiento de las manos de su hijo/a? (p.ej. ¿Son normales?)",
+            "¿Cómo camina su hijo/a?",
+            "¿Su hijo/a mira a las cosas que está mirando otra persona?",
+            "¿Si usted pone música, ¿su hijo/a baila o mueve el cuerpo de forma espontánea?",
+            "¿Le interesa a su hijo/a los otros niños/as?",
+            "¿Su hijo/a le trae cosas para mostrarle algo?",
+            "¿Hay algo que su hijo/a haga de manera inusual o repetitiva que le preocupe?",
+            "¿Tiene su hijo/a alguna conducta que sea difícil de entender?",
+            "¿Ha notado cosas en su hijo/a que no son típicas?"
+        ];
+
+        function inicializarFormulario() {
+            const container = document.getElementById('preguntas-container');
+            preguntas.forEach((pregunta, idx) => {
+                const div = document.createElement('div');
+                div.className = 'question-group';
+                div.innerHTML = `
+                    <label>${idx + 1}. ${pregunta}</label>
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" id="q${idx}_0" name="q${idx}" value="0" required>
+                            <label for="q${idx}_0">Sí</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="q${idx}_1" name="q${idx}" value="1">
+                            <label for="q${idx}_1">No</label>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(div);
+            });
+        }
+
+        function calcularScore() {
+            let score = 0;
+            preguntas.forEach((_, idx) => {
+                const respuesta = document.querySelector(`input[name="q${idx}"]:checked`);
+                if (respuesta && parseInt(respuesta.value) === 1) {
+                    score++;
+                }
+            });
+            return score;
+        }
+
+        function mostrarResultado(score) {
+            const form = document.getElementById('formulario');
+            const resultBox = document.getElementById('resultado-box');
+            const interpretBox = document.getElementById('interpretacion-box');
+            
+            form.style.display = 'none';
+            resultBox.classList.add('mostrar');
+            document.getElementById('score-total').textContent = score;
+
+            const esPositivo = score >= 3;
+            const html = esPositivo 
+                ? `<div class="interpretacion positivo">
+                    <strong>⚠️ Riesgo elevado de TEA (≥3)</strong><br>
+                    Se recomienda derivación inmediata a especialista en psicología del desarrollo o neurodevelopment para evaluación diagnóstica completa (ADOS-2, ADI-R).
+                   </div>`
+                : `<div class="interpretacion negativo">
+                    <strong>✓ Bajo riesgo (&lt;3)</strong><br>
+                    Los hallazgos no sugieren TEA. Continúe con seguimiento de desarrollo normal. Reporte cualquier preocupación nueva a pediatra.
+                   </div>`;
+            
+            interpretBox.innerHTML = html;
+            guardarEnSupabase(score, esPositivo);
+        }
+
+        async function guardarEnSupabase(score, esPositivo) {
+            try {
+                const respuestas = {};
+                preguntas.forEach((_, idx) => {
+                    respuestas[`q${idx}`] = document.querySelector(`input[name="q${idx}"]:checked`).value;
+                });
+
+                await supabase
+                    .from('tamizajes_clinicos')
+                    .insert({
+                        test_tipo: 'M-CHAT-R/F',
+                        puntaje_total: score,
+                        zona_riesgo: esPositivo ? 'POSITIVO' : 'NEGATIVO',
+                        respuestas: respuestas,
+                        consentimiento: true,
+                        informante: 'padre_tutor'
+                    });
+            } catch (e) {
+                console.log('Supabase guardado (offline):', e.message);
+            }
+        }
+
+        function descargarJSON() {
+            const score = parseInt(document.getElementById('score-total').textContent);
+            const respuestas = {};
+            preguntas.forEach((_, idx) => {
+                respuestas[`q${idx}`] = document.querySelector(`input[name="q${idx}"]:checked`).value;
+            });
+            
+            const datos = {
+                test: 'M-CHAT-R/F',
+                fecha: new Date().toISOString(),
+                puntaje_total: score,
+                resultado: score >= 3 ? 'POSITIVO' : 'NEGATIVO',
+                respuestas
+            };
+
+            const blob = new Blob([JSON.stringify(datos, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `M-CHAT-R-F_${new Date().toISOString().split('T')[0]}.json`;
+            a.click();
+        }
+
+        function reiniciar() {
+            document.getElementById('form-mchat').reset();
+            document.getElementById('formulario').style.display = 'block';
+            document.getElementById('resultado-box').classList.remove('mostrar');
+            window.scrollTo(0, 0);
+        }
+
+        document.getElementById('form-mchat').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const score = calcularScore();
+            mostrarResultado(score);
+        });
+
+        inicializarFormulario();
+    </script>
+</body>
+</html>
