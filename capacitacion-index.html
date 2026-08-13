@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SERUM-APP · Capacitación AUDIT</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            padding-top: 20px;
+        }
+        header h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+        header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.25);
+        }
+        .card-header {
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .card-header h2 {
+            font-size: 1.3em;
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+        .card-header .subtitle {
+            font-size: 0.85em;
+            opacity: 0.9;
+            font-weight: 400;
+        }
+        .card-body {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .card-body p {
+            font-size: 0.95em;
+            line-height: 1.6;
+            color: #666;
+            margin-bottom: 12px;
+        }
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            background: #e8d4f8;
+            color: #764ba2;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+            font-size: 0.9em;
+            padding: 8px 0;
+            border-top: 1px solid #f0f0f0;
+        }
+        .info-row:first-child {
+            border-top: none;
+        }
+        .info-label {
+            font-weight: 600;
+            color: #555;
+        }
+        .info-value {
+            color: #764ba2;
+            font-weight: 500;
+        }
+        .card-footer {
+            padding: 16px 20px;
+            background: #f9f9f9;
+            border-top: 1px solid #e8e8e8;
+            margin-top: auto;
+        }
+        .btn {
+            display: inline-block;
+            width: 100%;
+            padding: 12px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 0.95em;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+            transform: scale(1.02);
+        }
+        .btn:active {
+            transform: scale(0.98);
+        }
+        .navigation {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .nav-link {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 0.95em;
+            transition: opacity 0.3s ease;
+        }
+        .nav-link:hover {
+            opacity: 0.7;
+        }
+        .progress-bar {
+            width: 100%;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 3px;
+            overflow: hidden;
+            margin-top: 12px;
+        }
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #51CF66 0%, #40C057 100%);
+            transition: width 0.3s ease;
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 Capacitación AUDIT</h1>
+            <p>Formación en Identificación de Trastornos por Consumo de Alcohol - 8 módulos interactivos</p>
+        </header>
+
+        <div class="grid">
+            <!-- Módulo 1 -->
+            <div class="card">
+                <div class="card-header">
+                    <h2>Módulo 1</h2>
+                    <div class="subtitle">Fundamentos del AUDIT</div>
+                </div>
+                <div class="card-body">
+                    <div class="badge">Introducción</div>
+                    <p>Conceptos básicos de la OMS sobre consumo de alcohol y criterios diagnósticos internacionales.</p>
+                    <div class="info-row">
+                        <span class="info-label">Duración:</span>
+                        <span class="info-value">15-20 min</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Tipo:</span>
+                        <span class="info-value">Teórico</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://4-4-1941.github.io/AUDIT-INTEACTIVO/modulo-1.html" class="btn">Acceder a Módulo 1 →</a>
+                </div>
+            </div>
+
+            <!-- Módulo 2 -->
+            <div class="card">
+                <div class="card-header">
+                    <h2>Módulo 2</h2>
+                    <div class="subtitle">Epidemiología del Consumo</div>
+                </div>
+                <div class="card-body">
+                    <div class="badge">Datos globales</div>
+                    <p>Prevalencia, patrones de consumo y carga de enfermedad por alcohol a nivel mundial y regional.</p>
+                    <div class="info-row">
+                        <span class="info-label">Duración:</span>
+                        <span class="info-value">15-20 min</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Tipo:</span>
+                        <span class="info-value">Teórico</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://4-4-1941.github.io/AUDIT-INTEACTIVO/modulo-2.html" class="btn">Acceder a Módulo 2 →</a>
+                </div>
+            </div>
+
+            <!-- Módulo 3 -->
+            <div class="card">
+                <div class="card-header">
+                    <h2>Módulo 3</h2>
+                    <div class="subtitle">Factores de Riesgo y Protección</div>
+                </div>
+                <div class="card-body">
+                    <div class="badge">Determinantes</div>
+                    <p>Factores biológicos, psicosociales y ambientales que favorecen o previenen trastornos por consumo.</p>
+                    <div class="info-row">
+                        <span class="info-label">Duración:</span>
+                        <span class="info-value">20-25 min</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Tipo:</span>
+                        <span class="info-value">Teórico</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://4-4-1941.github.io/AUDIT-INTEACTIVO/modulo-3.html" class="btn">Acceder a Módulo 3 →</a>
+                </div>
+            </div>
+
+            <!-- Módulo 4 -->
+            <div class="card">
+                <div class="card-header">
+                    <h2>Módulo 4</h2>
+                    <div class="subtitle">Criterios Diagnósticos DSM-5-TR</div>
+                </div>
+                <div class="card-body">
+                    <div class="badge">Diagnóstico</div>
+                    <p>Criterios para trastorno por consumo de alcohol según DSM-5-TR e ICD-11 con ejemplos clínicos.</p>
+                    <div class="info-row">
+                        <span class="info-label">Duración:</span>
+                        <span class="info-value">20-25 min</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Tipo:</span>
+                        <span class="info-value">Teórico</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://4-4-1941.github.io/AUDIT-INTEACTIVO/modulo-4.html" class="btn">Acceder a Módulo 4 →</a>
+                </div>
+            </div>
+
+            <!-- Módulo 5 -->
+            <div class="card">
+                <div class="card-header">
+                    <h2>Módulo 5</h2>
+                    <div class="subtitle">Administración e Interpretación AUDIT</div>
+                </div>
+                <div class="card-body">
+                    <div class="badge">Aplicación práctica</div>
+                    <p>Proceso de administración del instrumento AUDIT completo y rápido (AUDIT-C) con puntuación e interpretación.</p>
+                    <div class="info-row">
+                        <span class="info-label">Duración:</span>
+                        <span class="info-value">25-30 min</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Tipo:</span>
+                        <span class="info-value">Práctico</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://4-4-1941.github.io/AUDIT-INTEACTIVO/modulo-5.html" class="btn">Acceder a Módulo 5 →</a>
+                </div>
+            </div>
+
+            <!-- Módulo 6 -->
+            <div class="card">
+                <div class="card-header">
+                    <h2>Módulo 6</h2>
+                    <div class="subtitle">Abordaje Motivacional</div>
+                </div>
+                <div class="card-body">
+                    <div class="badge">Intervención</div>
+                    <p>Entrevista motivacional (EM) y estrategias de cambio conductual en poblaciones con consumo de riesgo.</p>
+                    <div class="info-row">
+                        <span class="info-label">Duración:</span>
+                        <span class="info-value">25-30 min</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Tipo:</span>
+                        <span class="info-value">Práctico</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://4-4-1941.github.io/AUDIT-INTEACTIVO/modulo-6.html" class="btn">Acceder a Módulo 6 →</a>
+                </div>
+            </div>
+
+            <!-- Módulo 7 -->
+            <div class="card">
+                <div class="card-header">
+                    <h2>Módulo 7</h2>
+                    <div class="subtitle">Manejo en Atención Primaria</div>
+                </div>
+                <div class="card-body">
+                    <div class="badge">Gestión clínica</div>
+                    <p>Protocolos SERUMS para derivación, seguimiento y coordinación en trastornos por consumo de alcohol.</p>
+                    <div class="info-row">
+                        <span class="info-label">Duración:</span>
+                        <span class="info-value">25-30 min</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Tipo:</span>
+                        <span class="info-value">Práctico</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://4-4-1941.github.io/AUDIT-INTEACTIVO/modulo-7.html" class="btn">Acceder a Módulo 7 →</a>
+                </div>
+            </div>
+
+            <!-- Módulo 8 -->
+            <div class="card">
+                <div class="card-header">
+                    <h2>Módulo 8</h2>
+                    <div class="subtitle">Simulador Clínico Integrado</div>
+                </div>
+                <div class="card-body">
+                    <div class="badge">Competencias finales</div>
+                    <p>3 casos clínicos con 9 decisiones críticas: referencia-contrarreferencia, diagnóstico diferencial y plan terapéutico.</p>
+                    <div class="info-row">
+                        <span class="info-label">Duración:</span>
+                        <span class="info-value">30-40 min</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Tipo:</span>
+                        <span class="info-value">Simulador</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://4-4-1941.github.io/AUDIT-INTEACTIVO/simulador/quiz-avanzado-referencia.html" class="btn">Acceder a Módulo 8 →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="navigation">
+            <a href="../index.html" class="nav-link">← Volver al Dashboard</a>
+            <a href="#" class="nav-link">Reportar Progreso →</a>
+        </div>
+    </div>
+</body>
+</html>
