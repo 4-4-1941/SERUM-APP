@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SERUM-APP · Plataforma Unificada Capacitación y Simulacro SERUMS</title>
+    <title>SERUM-APP · Plataforma Unificada</title>
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="styles.css">
     <meta name="theme-color" content="#1e3c72">
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
-    <!-- PANTALLA DE LOGIN (muestra hasta autenticación) -->
+    <!-- LOGIN SCREEN -->
     <div id="login-screen" class="login-container">
         <div class="login-box">
             <div class="login-header">
@@ -20,7 +20,7 @@
             </div>
             <form class="login-form" onsubmit="return false;">
                 <div class="form-group">
-                    <label for="login-email">Correo electrónico:</label>
+                    <label for="login-email">Correo:</label>
                     <input type="email" id="login-email" placeholder="tu@correo.com" required>
                 </div>
                 <div class="form-group">
@@ -30,40 +30,101 @@
                 <div id="login-error" class="error-msg"></div>
                 <button id="login-submit" type="submit" class="login-btn">Ingresar</button>
             </form>
-            <div class="login-footer">
-                <p>SERUMS 2026 — Plataforma de Preparación Clínica</p>
-            </div>
         </div>
     </div>
 
-    <!-- APLICACIÓN PRINCIPAL (oculta hasta login exitoso) -->
-    <div class="app" style="display: none;">
+    <!-- MAIN APP -->
+    <div class="app" style="display:none;">
         <header class="header">
             <div class="logo">📚</div>
-            <h1>SERUM-APP v2.0</h1>
-            <p>Plataforma Integrada: Capacitación, Casos Clínicos y Simulacro</p>
+            <div>
+                <h1>SERUM-APP v2.0</h1>
+                <p>Plataforma Integrada: Capacitación, Casos Clínicos y Simulacro</p>
+            </div>
+            <div class="header-badges">
+                <span id="score-badge" class="badge"></span>
+                <span id="resolved-badge" class="badge"></span>
+            </div>
             <button id="logout-btn" class="logout-btn">Salir</button>
         </header>
 
         <nav class="nav">
-            <button class="nav-btn active" onclick="renderView('dashboard')" type="button">Tablero</button>
-            <button class="nav-btn" onclick="renderView('cases')" type="button">Casos Clínicos</button>
-            <button class="nav-btn" onclick="renderView('simulacro')" type="button">Simulacro (100)</button>
-            <button class="nav-btn" onclick="renderView('concepts')" type="button">Conceptos Clave</button>
-            <button class="nav-btn" onclick="renderView('norms')" type="button">Normativa</button>
-            <button class="nav-btn" onclick="renderView('priority')" type="button">Normas Prioritarias 2026</button>
-            <button class="nav-btn" onclick="renderView('decrees')" type="button">Decretos y Lineamientos</button>
-            <button class="nav-btn" onclick="renderView('resources')" type="button">Recursos</button>
+            <button class="nav-btn active" data-view="dashboard" onclick="renderView('dashboard')" type="button">Tablero</button>
+            <button class="nav-btn" data-view="cases" onclick="renderView('cases')" type="button">Casos Clínicos</button>
+            <button class="nav-btn" data-view="simulacro" onclick="renderView('simulacro')" type="button">Simulacro (100)</button>
+            <button class="nav-btn" data-view="concepts" onclick="renderView('concepts')" type="button">Conceptos Clave</button>
+            <button class="nav-btn" data-view="norms" onclick="renderView('norms')" type="button">Normativa</button>
+            <button class="nav-btn" data-view="priority" onclick="renderView('priority')" type="button">Normas Prioritarias 2026</button>
+            <button class="nav-btn" data-view="decrees" onclick="renderView('decrees')" type="button">Decretos</button>
+            <button class="nav-btn" data-view="resources" onclick="renderView('resources')" type="button">Recursos</button>
             <div class="nav-section-label">ENTRENAMIENTO</div>
-            <button class="nav-btn" onclick="renderView('training')" type="button">Entrenamiento SERUMS</button>
-            <button class="nav-btn" onclick="location.href='https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/capacitacion/capacitacion.html'" type="button">Capacitación Screening</button>
+            <button class="nav-btn" data-view="training" onclick="renderView('training')" type="button">Entrenamiento SERUMS</button>
+            <button class="nav-btn" data-view="screening" onclick="renderView('screening')" type="button">Capacitación Screening</button>
             <div class="nav-section-label">ASISTENTE PROFESIONAL</div>
-            <button class="nav-btn" onclick="renderView('assistant')" type="button">Formatos y oficios</button>
-            <button class="nav-btn" onclick="renderView('codes')" type="button">Códigos HIS — Niño</button>
-            <button class="nav-btn" onclick="renderView('screening')" type="button">Clinical Screening Toolkit</button>
+            <button class="nav-btn" data-view="assistant" onclick="renderView('assistant')" type="button">Formatos y oficios</button>
+            <button class="nav-btn" data-view="hisCodesChild" onclick="renderView('hisCodesChild')" type="button">Códigos HIS</button>
+            <button class="nav-btn" data-view="screeningTools" onclick="renderView('screeningTools')" type="button">Clinical Screening</button>
         </nav>
 
-        <main id="view-root" class="main"></main>
+        <main id="view-root" class="main">
+            <h2 id="page-title"></h2>
+            <p id="page-subtitle"></p>
+            <div id="dashboard"></div>
+            <div id="case-list"></div>
+            <div id="career-list"></div>
+            <div id="block-list"></div>
+            <div id="level-list"></div>
+            <div id="case-search"></div>
+            <div id="case-panel"></div>
+            <div id="case-feedback"></div>
+            <div id="case-actions"></div>
+            <button id="back-to-dashboard-btn" class="action-btn" style="display:none;">← Volver al Tablero</button>
+            <button id="next-btn" class="action-btn" style="display:none;">Siguiente →</button>
+            <button id="confirm-btn" class="action-btn" style="display:none;">Confirmar respuesta</button>
+            <button id="retry-btn" class="action-btn" style="display:none;">Reintentar</button>
+            <div id="simulacro-career-select"></div>
+            <div id="simulacro-timer"></div>
+            <div id="simulacro-feedback"></div>
+            <div id="simulacro-actions"></div>
+            <button id="start-simulacro-btn" class="action-btn" style="display:none;">Iniciar Simulacro</button>
+            <button id="next-sim-btn" class="action-btn" style="display:none;">Siguiente →</button>
+            <button id="confirm-sim-btn" class="action-btn" style="display:none;">Confirmar</button>
+            <button id="finish-early-btn" class="action-btn" style="display:none;">Finalizar ahora</button>
+            <button id="retry-simulacro-btn" class="action-btn" style="display:none;">Reintentar</button>
+            <div id="glossary-search"></div>
+            <div id="glossary-chips"></div>
+            <div id="glossary-list"></div>
+            <div id="hiscodes-search"></div>
+            <div id="hiscodes-list"></div>
+            <div id="assistant-search"></div>
+            <div id="assistant-list"></div>
+            <div id="assistant-actions"></div>
+            <button id="back-to-assistant-btn" class="action-btn" style="display:none;">← Volver</button>
+            <div id="training-list"></div>
+            <div id="training-feedback"></div>
+            <div id="training-actions"></div>
+            <button id="back-to-training-btn" class="action-btn" style="display:none;">← Volver</button>
+            <button id="next-step-btn" class="action-btn" style="display:none;">Siguiente →</button>
+            <button id="restart-scenario-btn" class="action-btn" style="display:none;">Reiniciar escenario</button>
+            <div id="practice-draft"></div>
+            <button id="save-notes" class="action-btn" style="display:none;">Guardar notas</button>
+            <textarea id="notes" style="display:none;"></textarea>
+            <button id="review-btn" class="action-btn" style="display:none;">Repasar ahora →</button>
+            <button id="exam-registry-btn" class="toggle" style="display:none;">📚 Base de Datos SERUMS</button>
+            <div id="examRegistry"></div>
+            <button id="back-to-filters-btn" class="action-btn" style="display:none;">← Volver a filtros</button>
+            <button id="compare-btn" class="action-btn" style="display:none;">Comparar con respuesta →</button>
+            <button id="export-pdf-btn" class="action-btn" style="display:none;">Exportar PDF</button>
+            <input id="export-name" type="text" style="display:none;" placeholder="Nombre reporte">
+            <button id="print-report" class="action-btn" style="display:none;">Imprimir</button>
+            <button id="priority-toggle" class="toggle" style="display:none;">Mostrar solo prioritarios</button>
+            <input id="filter-career" style="display:none;" placeholder="Filtro carrera">
+            <input id="filter-block" style="display:none;" placeholder="Filtro bloque">
+            <input id="filter-level" style="display:none;" placeholder="Filtro nivel">
+            <input id="change" style="display:none;">
+            <div id="open"></div>
+            <div id="click"></div>
+        </main>
     </div>
 
     <script src="data.js"></script>
