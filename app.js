@@ -1498,49 +1498,49 @@ function renderScreeningTools() {
       name: "AUDIT / AUDIT-C",
       badge: "10 ítems · OMS 2001",
       desc: "Identificación de Trastornos por Consumo de Alcohol. Incluye modo de tamizaje rápido AUDIT-C (3 preguntas, con opción de continuar al AUDIT completo si sale positivo). Disponible en español y quechua ayacuchano validado (Douglas Hospital Research Centre / IPAZ).",
-      url: "https://4-4-1941.github.io/AUDIT-INTEACTIVO/"
+      url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/capacitacion/capacitacion.html"
     },
     {
       name: "GAD-7",
       badge: "7 ítems · Spitzer et al., 2006",
       desc: "Escala de Ansiedad Generalizada. Versión en castellano.",
-      url: "https://4-4-1941.github.io/AUDIT-INTEACTIVO/gad7.html"
+      url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/screening/gad7.html"
     },
     {
       name: "PHQ-9",
       badge: "9 ítems · Kroenke, Spitzer & Williams, 2001",
       desc: "Cuestionario de Salud del Paciente para depresión. Corte de cribado preventivo MINSA ≥5 (además del corte internacional ≥10). Incluye alerta clínica en el ítem de ideación suicida/autolesión.",
-      url: "https://4-4-1941.github.io/AUDIT-INTEACTIVO/phq9.html"
+      url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/screening/phq9.html"
     },
     {
       name: "WAST",
       badge: "2 ítems · Brown et al., 1996",
       desc: "Tamizaje corto de violencia de pareja hacia la mujer (Woman Abuse Screening Tool). Versión validada en español (Plazaola-Castaño et al., 2008).",
-      url: "https://4-4-1941.github.io/AUDIT-INTEACTIVO/wast.html"
+      url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/screening/wast.html"
     },
     {
       name: "ASSIST",
       badge: "10 sustancias · OMS v3.0",
       desc: "Tamizaje de consumo de alcohol y drogas por sustancia (alcohol, tabaco, marihuana, cocaína y otras). Cortes oficiales OMS 2011, con alerta adicional para adolescentes (RM N.° 753-2021-MINSA).",
-      url: "https://4-4-1941.github.io/AUDIT-INTEACTIVO/assist.html"
+      url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/screening/assist.html"
     },
     {
       name: "CRAFFT",
       badge: "6 ítems · Knight, 1999 · v2.1",
       desc: "Tamizaje breve de consumo de alcohol y drogas en adolescentes y jóvenes (10-21 años). Corte oficial: 2 o más respuestas afirmativas = riesgo alto. © Boston Children's Hospital.",
-      url: "https://4-4-1941.github.io/AUDIT-INTEACTIVO/crafft.html"
+      url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/screening/crafft.html"
     },
     {
       name: "TDAH",
       badge: "ASRS-v1.1 · Vanderbilt · SNAP-IV",
       desc: "Tamizaje de TDAH en adultos (ASRS-v1.1, OMS) y niños (Vanderbilt Padres o SNAP-IV 26, a elegir al ingresar).",
-      url: "https://4-4-1941.github.io/AUDIT-INTEACTIVO/tdah.html"
+      url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/screening/tdah.html"
     },
     {
       name: "Nutrición",
       badge: "Calculadora clínica",
       desc: "IMC, peso ideal (Devine/Robinson/Miller/Hamwi) y gasto energético (Harris-Benedict/Mifflin-St Jeor). Herramienta de apoyo para el profesional.",
-      url: "https://4-4-1941.github.io/AUDIT-INTEACTIVO/nutricion.html"
+      url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/screening/nutricion.html"
     },
     {
       name: "SRQ-18",
@@ -1570,13 +1570,13 @@ function renderScreeningTools() {
       name: "Quiz Avanzado · Referencia-Contrarreferencia",
       badge: "Simulador clínico",
       desc: "Simulador interactivo de casos clínicos de referencia-contrarreferencia. Toma de decisiones en contexto SERUMS con feedback inmediato.",
-      url: "https://4-4-1941.github.io/AUDIT-INTEACTIVO/simulador/quiz-avanzado-referencia.html"
+      url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/simulador/quiz-avanzado-referencia.html"
     },
     {
       name: "Quiz Etapa Niño",
       badge: "Simulador pediatría",
       desc: "Evaluación de competencias en pediatría básica. Casos clínicos pediátricos con criterios de evaluación SERUMS.",
-      url: "https://4-4-1941.github.io/AUDIT-INTEACTIVO/simulador/quiz-etapa-nino.html"
+      url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/simulador/quiz-etapa-nino.html"
     }
   ];
   root.innerHTML = `
