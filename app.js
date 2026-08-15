@@ -1,120 +1,53 @@
-// ============================================
-// SERUM-APP v2.0 — PLATAFORMA UNIFICADA
-// ============================================
-// Plataforma integrada para SERUMS Perú con:
-// - 529 casos clínicos validados
-// - Simulacro de 100 preguntas estratificado
-// - 7 módulos de capacitación
-// - Screening tools integrados
-// - Consultor profesional
-// - Base de normas MINSA
-// ============================================
+const root = document.getElementById("view-root");
+const navButtons = document.querySelectorAll(".nav-btn");
+const pageTitle = document.getElementById("page-title");
+const pageSubtitle = document.getElementById("page-subtitle");
+const scoreBadge = document.getElementById("score-badge");
+const resolvedBadge = document.getElementById("resolved-badge");
+const data = window.SERUMS_DATA;
 
-const { createClient } = supabase;
+let score = Number(localStorage.getItem(data.scoreKey) || 0);
+let caseState = loadProgress(data.caseStateKey, {});
+let notes = localStorage.getItem(data.notesKey) || "";
+let timerId = null;
+let timeLeft = 60;
+let activeCase = null;
+let currentList = [];      // lista filtrada vigente, para "Siguiente caso"
+let selectedOption = null; // opción marcada, aún no confirmada
+let confirmed = false;     // true tras pulsar "Confirmar respuesta"
+let priorityReviewMode = false; // true cuando se navega desde "Repasar ahora"
 
-// ========== CONFIGURACIÓN ==========
-const SUPABASE_URL = "https://xcfdhwqjudzngvlssyeg.supabase.co";
-const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhjZmRod3FqdWR6bmd2bHNzeWVnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDk3NjUxMDEsImV4cCI6MTkyNTM0MTEwMX0.zk0pHDhx4aJf-Yw1Q27Wm_V2CzHvMhDKPz8WsD3vJ7I";
+// ---------- Simulacro (100 preguntas, 5 bloques oficiales SERUMS) ----------
+const OFFICIAL_BLOCKS = ["Salud pública", "Cuidado integral", "Ética e interculturalidad", "Investigación", "Gestión"];
+const SIMULACRO_TARGET = 100;
+const SIMULACRO_SECONDS_PER_Q = 60; // ritmo de referencia ~1 min/pregunta
 
-const supabaseClient = createClient(SUPABASE_URL, SUPABASE_KEY);
-
-// Bloques oficiales SERUMS (5)
-const OFFICIAL_BLOCKS = [
-  "Gestión",
-  "Salud Pública",
-  "Cuidado integral",
-  "Ética e Interculturalidad",
-  "Investigación"
-];
-
-// Pesos distribución bloques en examen real
+// Distribución aproximada por bloque, calculada a partir de la lectura de 4 exámenes reales
+// SERUMS Psicología (2025-I tipo A/B, 2025-I agosto, 2026-I — 400 preguntas en total).
+// Es una aproximación manual (no un conteo automatizado exacto) y debe tratarse como
+// una calibración inicial: se ajustará según se sumen exámenes reales de más profesiones.
+// Si una carrera no tiene pesos propios calculados aún, se usa este mismo perfil por defecto.
 const REAL_EXAM_BLOCK_WEIGHTS = {
   "Gestión": 0.26,
-  "Salud Pública": 0.26,
+  "Salud pública": 0.26,
+  "Ética e interculturalidad": 0.16,
   "Cuidado integral": 0.18,
-  "Ética e Interculturalidad": 0.16,
   "Investigación": 0.14
 };
 
-// Carreras SERUMS (18)
-const SERUMS_CAREERS = [
-  "Psicología", "Medicina", "Enfermería", "Transversal",
-  "Obstetricia", "Odontología", "Nutrición", "Farmacia y Bioquímica",
-  "Trabajo Social", "Tecnología Médica - Laboratorio Clínico",
-  "Tecnología Médica - Radiología", "Tecnología Médica - Terapia Física",
-  "Tecnología Médica - Terapia del Lenguaje", "Tecnología Médica - Terapia Ocupacional",
-  "Tecnología Médica - Optometría", "Medicina Veterinaria",
-  "Biología", "Ingeniería Sanitaria"
-];
+let simulacroQueue = [];
+let simulacroIndex = 0;
+let simulacroResults = []; // {caseId, career, block, correct}
+let simulacroSelected = null;
+let simulacroConfirmed = false;
+let simulacroTimerId = null;
+let simulacroTimeLeft = 0;
+let simulacroPhase = "intro"; // intro | running | finished
+let simulacroHistory = loadProgress("simulacroHistory", []);
+let simulacroCareer = localStorage.getItem("simulacroCareer") || ""; // "" = todas las carreras (modo mixto)
 
-// ========== ESTADO GLOBAL ==========
-let currentUser = null;
-let simulacroHistory = [];
-
-// ========== DOM ==========
-const loginScreen = document.getElementById("login-screen");
-const appContainer = document.querySelector(".app");
-const pageTitle = document.getElementById("page-title");
-const pageSubtitle = document.getElementById("page-subtitle");
-const root = document.getElementById("view-root");
-const navButtons = document.querySelectorAll(".nav-btn");
-const logoutBtn = document.getElementById("logout-btn");
-const loginForm = document.querySelector(".login-form");
-const loginEmail = document.getElementById("login-email");
-const loginPassword = document.getElementById("login-password");
-const loginError = document.getElementById("login-error");
-const loginSubmit = document.getElementById("login-submit");
-
-// ========== AUTENTICACIÓN ==========
-async function handleLogin(e) {
-  e.preventDefault();
-  loginError.textContent = "";
-  loginSubmit.disabled = true;
-  loginSubmit.textContent = "Ingresando...";
-
-  const { data, error } = await supabaseClient.auth.signInWithPassword({
-    email: loginEmail.value,
-    password: loginPassword.value
-  });
-
-  if (error) {
-    loginError.textContent = error.message || "Error al ingresar. Verifica credenciales.";
-    loginSubmit.disabled = false;
-    loginSubmit.textContent = "Ingresar";
-    return;
-  }
-
-  currentUser = data.user;
-  loginScreen.style.display = "none";
-  appContainer.style.display = "flex";
-  renderView("dashboard");
-}
-
-function handleLogout() {
-  supabaseClient.auth.signOut().then(() => {
-    currentUser = null;
-    loginScreen.style.display = "block";
-    appContainer.style.display = "none";
-    loginForm.reset();
-    loginError.textContent = "";
-  });
-}
-
-loginForm.addEventListener("submit", handleLogin);
-logoutBtn.addEventListener("click", handleLogout);
-
-// ========== CARGAR DATA ==========
-async function loadCasesFromSupabase() {
-  const { data, error } = await supabaseClient.from("cases").select("*");
-  if (error) {
-    console.error("Error cargando casos:", error);
-    return [];
-  }
-  return data || [];
-}
-
-// ========== UTILIDADES ==========
-function shuffle(a) {
+function shuffle(arr) {
+  const a = [...arr];
   for (let i = a.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [a[i], a[j]] = [a[j], a[i]];
@@ -122,6 +55,10 @@ function shuffle(a) {
   return a;
 }
 
+// Devuelve una copia del caso con sus opciones en orden aleatorio y el índice
+// "correct" ya remapeado a esa nueva posición. Se usa tanto en la práctica
+// individual (openCase) como en el Simulacro, para que la respuesta correcta
+// no quede siempre en la misma letra.
 function shuffleCaseOptions(original) {
   const order = original.options.map((_, i) => i);
   const shuffledOrder = shuffle(order);
@@ -129,6 +66,8 @@ function shuffleCaseOptions(original) {
   return { ...original, options: shuffledOrder.map(i => original.options[i]), correct: newCorrect };
 }
 
+// Casos ya usados en los últimos 2 intentos de simulacro (para no repetirlos de inmediato
+// en el siguiente intento, salvo que no haya suficientes casos alternativos disponibles).
 function recentlyUsedCaseIds() {
   const recent = simulacroHistory.slice(-2);
   const ids = new Set();
@@ -136,12 +75,20 @@ function recentlyUsedCaseIds() {
   return ids;
 }
 
+// Dentro de un pool ya filtrado, separa primero los casos NO usados recientemente
+// (para priorizarlos) y deja los usados recientemente al final como relleno.
 function orderPoolAvoidingRepeats(pool, usedIds) {
   const fresh = shuffle(pool.filter(c => !usedIds.has(c.id)));
   const repeated = shuffle(pool.filter(c => usedIds.has(c.id)));
   return fresh.concat(repeated);
 }
 
+// Muestreo estratificado: reparte cupos entre los 5 bloques oficiales según la
+// distribución real observada en exámenes SERUMS (REAL_EXAM_BLOCK_WEIGHTS), respetando
+// el máximo disponible en cada bloque, evitando repetir preguntas de los últimos intentos
+// cuando hay alternativas suficientes, y filtrando por carrera los bloques clínicos
+// (Cuidado integral y el bloque propio de cada profesión, p. ej. "Psicología") para que
+// el simulacro de una carrera no mezcle casos clínicos de otra, igual que el examen real.
 function buildSimulacroQueue(career) {
   const usedIds = recentlyUsedCaseIds();
   const isClinicalBlock = b => b === "Cuidado integral" || !OFFICIAL_BLOCKS.includes(b);
@@ -153,24 +100,1379 @@ function buildSimulacroQueue(career) {
     if (isClinicalBlock(b)) cases = cases.filter(matchesCareer);
     pools[b] = orderPoolAvoidingRepeats(cases, usedIds);
   });
+  // Casos que no caen en un bloque oficial (p. ej. "Psicología" como bloque propio):
+  // solo se ofrecen como relleno si corresponden a la carrera elegida (o no se eligió ninguna).
+  const extraPool = orderPoolAvoidingRepeats(
+    data.cases.filter(c => !OFFICIAL_BLOCKS.includes(c.block) && matchesCareer(c)),
+    usedIds
+  );
 
-  const queue = [];
+  const totalAvailable = OFFICIAL_BLOCKS.reduce((sum, b) => sum + pools[b].length, 0) + extraPool.length;
+  const target = Math.min(SIMULACRO_TARGET, totalAvailable);
+
+  // Cupo base por bloque según el peso real observado (en vez de un reparto uniforme)
+  const weights = REAL_EXAM_BLOCK_WEIGHTS;
+  const baseQuotas = {};
+  OFFICIAL_BLOCKS.forEach(b => { baseQuotas[b] = Math.round(target * (weights[b] || (1 / OFFICIAL_BLOCKS.length))); });
+  const capPerBlock = {};
+  OFFICIAL_BLOCKS.forEach(b => { capPerBlock[b] = Math.ceil(baseQuotas[b] * 1.5); });
+
+  let queue = [];
+  let remainder = target;
+  const taken = {};
+
   OFFICIAL_BLOCKS.forEach(b => {
-    const weight = REAL_EXAM_BLOCK_WEIGHTS[b];
-    const quota = Math.round(100 * weight);
-    const available = pools[b].slice(0, quota);
-    queue.push(...available);
+    const take = Math.min(baseQuotas[b], pools[b].length);
+    queue = queue.concat(pools[b].slice(0, take));
+    taken[b] = take;
+    remainder -= take;
   });
 
-  return shuffle(queue).slice(0, 100);
+  // Completar remanente respetando el tope por bloque, en orden aleatorio de bloques
+  let blocksCycle = shuffle(OFFICIAL_BLOCKS);
+  let progress = true;
+  while (remainder > 0 && progress) {
+    progress = false;
+    for (const b of blocksCycle) {
+      if (remainder <= 0) break;
+      if (taken[b] < Math.min(capPerBlock[b], pools[b].length)) {
+        queue.push(pools[b][taken[b]]);
+        taken[b] += 1;
+        remainder -= 1;
+        progress = true;
+      }
+    }
+  }
+
+  // Si aún falta (bloques oficiales en su tope), usar el pool extra (p. ej. Psicología)
+  if (remainder > 0 && extraPool.length) {
+    const take = Math.min(remainder, extraPool.length);
+    queue = queue.concat(extraPool.slice(0, take));
+    remainder -= take;
+  }
+
+  // Último recurso: si sigue faltando, exceder el tope en bloques oficiales con margen real
+  if (remainder > 0) {
+    progress = true;
+    while (remainder > 0 && progress) {
+      progress = false;
+      for (const b of blocksCycle) {
+        if (remainder <= 0) break;
+        if (taken[b] < pools[b].length) {
+          queue.push(pools[b][taken[b]]);
+          taken[b] += 1;
+          remainder -= 1;
+          progress = true;
+        }
+      }
+    }
+  }
+
+  return shuffle(queue).map(shuffleCaseOptions);
 }
 
-// ========== VISTAS ==========
-function renderView(view) {
-  navButtons.forEach(b => b.classList.remove("active"));
-  const activeBtn = document.querySelector(`[data-view="${view}"]`);
-  if (activeBtn) activeBtn.classList.add("active");
+function goToSimulacro() {
+  priorityReviewMode = false;
+  renderView("simulacro");
+}
 
+function loadProgress(key, fallback) {
+  try { return JSON.parse(localStorage.getItem(key)) ?? fallback; } catch { return fallback; }
+}
+
+function saveProgress(key, value) {
+  localStorage.setItem(key, JSON.stringify(value));
+}
+
+function setActive(view) {
+  navButtons.forEach(btn => btn.classList.toggle("active", btn.dataset.view === view));
+}
+
+function updateBadges() {
+  scoreBadge.textContent = String(score);
+  resolvedBadge.textContent = String(Object.values(caseState).filter(x => x.correct).length);
+}
+
+function fmtPct(n) {
+  return Math.max(0, Math.min(100, n));
+}
+
+// Prioridad de repaso: 0 = nunca intentado (máxima prioridad),
+// 1 = intentado pero con error (ordenado por más antiguo primero),
+// 2 = ya resuelto correctamente (ordenado por más antiguo primero, para refuerzo espaciado).
+function reviewPriority(c) {
+  const st = caseState[c.id];
+  if (!st || !st.attempts) return { tier: 0, date: "" };
+  const lastDate = st.lastAttemptDate || (st.history && st.history.length ? st.history[st.history.length - 1].date : "");
+  return { tier: st.correct ? 2 : 1, date: lastDate };
+}
+
+function sortByPriority(list) {
+  return [...list].sort((a, b) => {
+    const pa = reviewPriority(a);
+    const pb = reviewPriority(b);
+    if (pa.tier !== pb.tier) return pa.tier - pb.tier;
+    return (pa.date || "").localeCompare(pb.date || "");
+  });
+}
+
+function goToReview() {
+  priorityReviewMode = true;
+  renderView("cases");
+}
+
+function renderDashboard() {
+  pageTitle.textContent = "Tablero SERUMS";
+  pageSubtitle.textContent = "Casos, normativa y progreso en una sola vista.";
+
+  const careers = [...new Set(data.cases.map(c => c.career || c.specialty))];
+  const byCareer = careers.map(career => {
+    const casesOfCareer = data.cases.filter(c => (c.career || c.specialty) === career);
+    const resolved = casesOfCareer.filter(c => (caseState[c.id] || {}).correct).length;
+    return { career, total: casesOfCareer.length, resolved };
+  });
+
+  const byBlock = data.chips.map(block => {
+    const casesOfBlock = data.cases.filter(c => c.block === block);
+    const resolved = casesOfBlock.filter(c => (caseState[c.id] || {}).correct).length;
+    return { block, total: casesOfBlock.length, resolved };
+  }).filter(b => b.total > 0);
+
+  root.innerHTML = `
+    <section class="grid metrics">
+      <div class="card"><span class="label">Puntaje</span><div class="value">${score}</div></div>
+      <div class="card"><span class="label">Casos</span><div class="value">${data.cases.length}</div></div>
+      <div class="card"><span class="label">Normas</span><div class="value">${data.norms.length}</div></div>
+      <div class="card"><span class="label">Normas prioritarias 2026</span><div class="value">${data.priorityNorms2026.length}</div></div>
+      <div class="card"><span class="label">Decretos</span><div class="value">${data.decrees.length}</div></div>
+    </section>
+    <section style="margin-bottom:16px">
+      <button id="review-btn" class="action-btn">Repasar ahora →</button>
+      <span style="margin-left:10px;color:#5B6E6A;font-size:13px">Prioriza casos nunca intentados y con error, empezando por los más antiguos.</span>
+    </section>
+    <section style="margin-bottom:16px">
+      <button id="exam-registry-btn" class="toggle">📚 Base de Datos SERUMS — exámenes reales analizados</button>
+    </section>
+    <section class="two-col">
+      <div class="panel">
+        <h3 class="section-title">Progreso por carrera</h3>
+        <div class="progress-list">
+          ${byCareer.map(bc => {
+            const pct = bc.total ? fmtPct(Math.round((bc.resolved / bc.total) * 100)) : 0;
+            return `
+              <div>
+                <div class="progress-head"><span>${bc.career}</span><span>${bc.resolved}/${bc.total} · ${pct}%</span></div>
+                <div class="bar"><span style="width:${pct}%"></span></div>
+              </div>
+            `;
+          }).join("")}
+        </div>
+      </div>
+      <div class="panel">
+        <h3 class="section-title">Progreso por bloque temático</h3>
+        <div class="progress-list">
+          ${byBlock.map(bb => {
+            const pct = bb.total ? fmtPct(Math.round((bb.resolved / bb.total) * 100)) : 0;
+            return `
+              <div>
+                <div class="progress-head"><span>${bb.block}</span><span>${bb.resolved}/${bb.total} · ${pct}%</span></div>
+                <div class="bar"><span style="width:${pct}%"></span></div>
+              </div>
+            `;
+          }).join("")}
+        </div>
+        <p style="margin-top:14px;color:#5B6E6A;line-height:1.5">Bloques temáticos oficiales SERUMS, con prioridad en Psicología e integración interdisciplinaria de las demás carreras de la salud.</p>
+      </div>
+    </section>
+  `;
+  document.getElementById("review-btn").addEventListener("click", goToReview);
+  document.getElementById("exam-registry-btn").addEventListener("click", () => renderView("examRegistry"));
+}
+
+function renderCases() {
+  pageTitle.textContent = priorityReviewMode ? "Repaso priorizado" : "Casos interactivos";
+  pageSubtitle.textContent = priorityReviewMode
+    ? "Orden sugerido: nunca intentados primero, luego con error, luego resueltos hace más tiempo."
+    : "Elige carrera, bloque o nivel para ver sus casos.";
+  root.innerHTML = `
+    <section class="two-col">
+      <div class="panel">
+        <input id="case-search" class="search" placeholder="Buscar caso, bloque o carrera..." />
+
+        <button id="priority-toggle" class="toggle">${priorityReviewMode ? "✓ Repaso priorizado activo — click para desactivar" : "Activar orden de repaso priorizado"}</button>
+
+        <details class="filter-box" id="filter-career" open>
+          <summary>Carrera</summary>
+          <div class="option-list" id="career-list"></div>
+        </details>
+
+        <details class="filter-box" id="filter-block">
+          <summary>Bloque temático</summary>
+          <div class="option-list" id="block-list"></div>
+        </details>
+
+        <details class="filter-box" id="filter-level">
+          <summary>Nivel de establecimiento</summary>
+          <div class="option-list" id="level-list"></div>
+        </details>
+
+        <div class="case-list" id="case-list"></div>
+      </div>
+
+      <div class="panel" id="case-panel">
+        <h3 class="section-title">Selecciona un caso</h3>
+        <p>Elige un filtro y luego un caso de la lista para comenzar.</p>
+      </div>
+    </section>
+  `;
+
+  document.getElementById("priority-toggle").addEventListener("click", () => {
+    priorityReviewMode = !priorityReviewMode;
+    renderCases();
+  });
+
+  const list = document.getElementById("case-list");
+  const search = document.getElementById("case-search");
+  const careerList = document.getElementById("career-list");
+  const blockList = document.getElementById("block-list");
+  const levelList = document.getElementById("level-list");
+
+  const careers = [...new Set(data.cases.map(c => c.career || c.specialty))];
+  const blocks = [...new Set(data.cases.map(c => c.block))];
+  const levels = [...new Set(data.cases.map(c => c.level))].sort();
+
+  let selectedCareer = "";
+  let selectedBlock = "";
+  let selectedLevel = "";
+
+  function renderFilters() {
+    careerList.innerHTML = careers.map(c => `
+      <button class="option-btn" data-career="${c}">${c}</button>
+    `).join("");
+
+    blockList.innerHTML = blocks.map(b => `
+      <button class="option-btn" data-block="${b}">${b}</button>
+    `).join("");
+
+    levelList.innerHTML = levels.map(l => `
+      <button class="option-btn" data-level="${l}">${l}</button>
+    `).join("");
+
+    careerList.querySelectorAll(".option-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        selectedCareer = selectedCareer === btn.dataset.career ? "" : btn.dataset.career;
+        draw(search.value);
+        document.getElementById("filter-career").open = false;
+        scrollToCaseList();
+      });
+    });
+
+    blockList.querySelectorAll(".option-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        selectedBlock = selectedBlock === btn.dataset.block ? "" : btn.dataset.block;
+        draw(search.value);
+        document.getElementById("filter-block").open = false;
+        scrollToCaseList();
+      });
+    });
+
+    levelList.querySelectorAll(".option-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        selectedLevel = selectedLevel === btn.dataset.level ? "" : btn.dataset.level;
+        draw(search.value);
+        document.getElementById("filter-level").open = false;
+        scrollToCaseList();
+      });
+    });
+  }
+
+  function scrollToCaseList() {
+    // Pequeño retraso para que el DOM ya haya pintado la lista filtrada antes de desplazar
+    setTimeout(() => {
+      list.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 60);
+  }
+
+  function draw(filter = "") {
+    const q = filter.toLowerCase();
+    let filtered = data.cases.filter(c => {
+      const text = [c.title, c.block, c.specialty, c.career, c.statement, ...(c.tags || [])].join(" ").toLowerCase();
+      return text.includes(q) &&
+        (!selectedCareer || (c.career || c.specialty) === selectedCareer) &&
+        (!selectedBlock || c.block === selectedBlock) &&
+        (!selectedLevel || c.level === selectedLevel);
+    });
+
+    if (priorityReviewMode) filtered = sortByPriority(filtered);
+
+    currentList = filtered;
+
+    list.innerHTML = filtered.map(c => {
+      const st = caseState[c.id];
+      let statusTag = `<span class="badge">Nuevo</span>`;
+      if (st && st.correct) statusTag = `<span class="badge">Resuelto</span>`;
+      else if (st && st.attempts) statusTag = `<span class="badge" style="background:#FCEBEA;color:#8A2A24">Con error</span>`;
+      const unverifiedTag = c.unverified
+        ? `<span class="badge" style="background:#FFF3CD;color:#8A6D1D;margin-left:6px">⚠ Clave sin verificar</span>`
+        : "";
+      const cardStyle = c.unverified ? ' style="background:#FFFBF0;border-left:4px solid #E9B949"' : "";
+      return `
+        <button class="case-card" data-id="${c.id}"${cardStyle}>
+          <span>${c.career || c.specialty} · ${c.block} · ${c.level}</span>
+          <strong>${c.title}</strong>
+          <small>${c.statement}</small>
+          ${statusTag}${unverifiedTag}
+        </button>
+      `;
+    }).join("") || `<p style="color:#5B6E6A">No hay casos con este filtro.</p>`;
+
+    list.querySelectorAll(".case-card").forEach(btn => {
+      btn.addEventListener("click", () => {
+        openCase(Number(btn.dataset.id));
+        const panel = document.getElementById("case-panel");
+        if (panel) setTimeout(() => panel.scrollIntoView({ behavior: "smooth", block: "start" }), 60);
+      });
+    });
+  }
+
+  search.addEventListener("input", e => draw(e.target.value));
+  renderFilters();
+  draw();
+}
+
+function openCase(id) {
+  const original = data.cases.find(c => c.id === id);
+  activeCase = shuffleCaseOptions(original);
+  selectedOption = null;
+  confirmed = false;
+  timeLeft = 60;
+  clearInterval(timerId);
+  timerId = setInterval(() => {
+    timeLeft -= 1;
+    if (timeLeft <= 0) {
+      timeLeft = 0;
+      clearInterval(timerId);
+    }
+    renderCasePanel();
+  }, 1000);
+  renderCasePanel();
+}
+
+const MAX_ATTEMPTS_BEFORE_REVEAL = 2;
+
+function renderCasePanel() {
+  const panel = document.getElementById("case-panel");
+  if (!panel || !activeCase) return;
+  const st = caseState[activeCase.id] || { attempts: 0, correct: false };
+
+  const correct = confirmed && selectedOption === activeCase.correct;
+  // Solo se revela la opción correcta y la explicación técnica si acertó,
+  // o si ya agotó los intentos permitidos. En un primer error, no se da pista.
+  const reveal = confirmed && (correct || st.attempts >= MAX_ATTEMPTS_BEFORE_REVEAL);
+  const attemptsLeft = Math.max(MAX_ATTEMPTS_BEFORE_REVEAL - st.attempts, 0);
+
+  const optionsHtml = activeCase.options.map((o, i) => {
+    let cls = "option-btn";
+    if (confirmed) {
+      if (reveal && i === activeCase.correct) cls += " success";
+      else if (i === selectedOption) cls += " error";
+    } else if (i === selectedOption) {
+      cls += " selected";
+    }
+    return `<button class="${cls}" data-opt="${i}" ${confirmed ? "disabled" : ""}>${String.fromCharCode(65 + i)}. ${o}</button>`;
+  }).join("");
+
+  const interNote = activeCase.interdisciplinaryNote
+    ? `<p style="margin-top:10px;color:#5B6E6A"><strong>Enfoque interdisciplinario:</strong> ${activeCase.interdisciplinaryNote}</p>`
+    : "";
+
+  panel.innerHTML = `
+    <button id="back-to-filters-btn" class="toggle" style="margin-bottom:12px;margin-top:0">← Volver a carreras / filtros</button>
+    <div class="badge">${activeCase.career || activeCase.specialty} · ${activeCase.block} · ${activeCase.level}</div>
+    ${activeCase.unverified ? `<div class="card" style="background:#FFF3CD;border-left:4px solid #E9B949;margin:10px 0;padding:8px 12px"><strong style="color:#8A6D1D">⚠ Clave de respuesta sin verificar</strong><p style="margin:4px 0 0;font-size:13px;color:#5B6E6A">Este caso proviene de un examen real subido, pero la respuesta correcta es un criterio técnico propio, no una clave oficial confirmada.</p></div>` : ""}
+    <h3 class="section-title">${activeCase.title}</h3>
+    <p>${activeCase.statement}</p>
+    <p><strong>${activeCase.question}</strong></p>
+    <div class="option-list">${optionsHtml}</div>
+    <div class="chips" style="margin-top:12px">${(activeCase.tags || []).map(t => `<span class="chip">${t}</span>`).join("")}</div>
+    <p style="margin-top:12px;color:#5B6E6A">Tiempo: ${timeLeft}s · Intentos: ${st.attempts} · Puntaje: ${score}</p>
+    <div id="case-feedback" style="margin-top:12px"></div>
+    <div id="case-actions" style="margin-top:12px"></div>
+  `;
+
+  const backBtn = document.getElementById("back-to-filters-btn");
+  if (backBtn) {
+    backBtn.addEventListener("click", () => {
+      const careerFilter = document.getElementById("filter-career");
+      if (careerFilter) careerFilter.open = true;
+      const search = document.getElementById("case-search");
+      if (search) search.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  }
+
+  panel.querySelectorAll(".option-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      if (confirmed) return;
+      selectedOption = Number(btn.dataset.opt);
+      renderCasePanel();
+    });
+  });
+
+  const actions = document.getElementById("case-actions");
+  const feedback = document.getElementById("case-feedback");
+
+  if (!confirmed) {
+    actions.innerHTML = `<button class="action-btn" id="confirm-btn" ${selectedOption === null ? "disabled" : ""}>Confirmar respuesta</button>`;
+    document.getElementById("confirm-btn").addEventListener("click", confirmAnswer);
+  } else if (correct) {
+    feedback.innerHTML = `
+      <div class="card success">
+        <strong>Correcto</strong>
+        <p>${activeCase.feedback}</p>
+      </div>
+      ${interNote}
+    `;
+    actions.innerHTML = `<button class="action-btn" id="next-btn">Siguiente caso →</button>`;
+    document.getElementById("next-btn").addEventListener("click", nextCase);
+  } else if (reveal) {
+    // Intentos agotados: recién aquí se muestra el razonamiento técnico completo,
+    // en un bloque separado del rótulo "Incorrecto" para no generar confusión.
+    const correctLetter = String.fromCharCode(65 + activeCase.correct);
+    const cleanedFeedback = activeCase.feedback
+      .replace(/^\s*Es\s+correcta\s+porque\s*/i, "")
+      .replace(/^\s*Correcta\s+porque\s*/i, "")
+      .trim();
+    const explanationText = cleanedFeedback.charAt(0).toLowerCase() + cleanedFeedback.slice(1);
+    feedback.innerHTML = `
+      <div class="card error">
+        <strong>Incorrecto</strong>
+      </div>
+      <div class="card" style="margin-top:10px;background:#F7F5F2;border-left:4px solid #0C3B34">
+        <p><strong>Es correcta la opción ${correctLetter}</strong>, porque ${explanationText}</p>
+      </div>
+      ${interNote}
+    `;
+    actions.innerHTML = `<button class="action-btn" id="next-btn">Siguiente caso →</button>`;
+    document.getElementById("next-btn").addEventListener("click", nextCase);
+  } else {
+    // Error dentro del margen de intentos: sin pista ni explicación, solo invitación a reintentar.
+    feedback.innerHTML = `
+      <div class="card error">
+        <strong>Incorrecto</strong>
+        <p>Inténtalo de nuevo. Te queda${attemptsLeft === 1 ? "" : "n"} ${attemptsLeft} intento${attemptsLeft === 1 ? "" : "s"} antes de ver la explicación.</p>
+      </div>
+    `;
+    actions.innerHTML = `<button class="action-btn secondary" id="retry-btn">Reintentar</button>`;
+    document.getElementById("retry-btn").addEventListener("click", retryAnswer);
+  }
+}
+
+function confirmAnswer() {
+  if (!activeCase || selectedOption === null || confirmed) return;
+  confirmed = true;
+
+  const correct = selectedOption === activeCase.correct;
+  const st = caseState[activeCase.id] || { attempts: 0, correct: false, history: [] };
+  st.attempts += 1;
+  st.correct = st.correct || correct;
+  st.history = st.history || [];
+  st.history.push({ date: new Date().toISOString(), selectedIndex: selectedOption, correct });
+  st.lastAttemptDate = st.history[st.history.length - 1].date;
+  caseState[activeCase.id] = st;
+
+  if (correct) score += 10;
+
+  localStorage.setItem(data.scoreKey, String(score));
+  saveProgress(data.caseStateKey, caseState);
+  updateBadges();
+  clearInterval(timerId);
+  renderCasePanel();
+}
+
+function retryAnswer() {
+  selectedOption = null;
+  confirmed = false;
+  timeLeft = 60;
+  clearInterval(timerId);
+  timerId = setInterval(() => {
+    timeLeft -= 1;
+    if (timeLeft <= 0) { timeLeft = 0; clearInterval(timerId); }
+    renderCasePanel();
+  }, 1000);
+  renderCasePanel();
+}
+
+function nextCase() {
+  if (!currentList.length) return;
+  const idx = currentList.findIndex(c => c.id === activeCase.id);
+  const next = currentList[(idx + 1) % currentList.length];
+  openCase(next.id);
+}
+
+function renderSimulacro() {
+  if (simulacroPhase === "running" && simulacroQueue.length) {
+    if (!simulacroTimerId) {
+      simulacroTimerId = setInterval(() => {
+        simulacroTimeLeft -= 1;
+        if (simulacroTimeLeft <= 0) {
+          simulacroTimeLeft = 0;
+          clearInterval(simulacroTimerId);
+          finishSimulacro();
+          return;
+        }
+        updateSimulacroTimerDisplay();
+      }, 1000);
+    }
+    return renderSimulacroRunning();
+  }
+  if (simulacroPhase === "finished") return renderSimulacroResults();
+  renderSimulacroIntro();
+}
+
+function renderSimulacroIntro() {
+  pageTitle.textContent = "Simulacro SERUMS";
+  pageSubtitle.textContent = "100 preguntas, 5 bloques oficiales, cronómetro y puntaje final.";
+
+  const totalAvailable = data.cases.length;
+  const target = Math.min(SIMULACRO_TARGET, totalAvailable);
+  const lastAttempts = simulacroHistory.slice(-5).reverse();
+  const careers = [...new Set(data.cases.map(c => c.career || c.specialty))].filter(c => c !== "Transversal").sort();
+
+  root.innerHTML = `
+    <section class="two-col">
+      <div class="panel">
+        <h3 class="section-title">Cómo funciona</h3>
+        <label style="display:block;margin-bottom:10px;color:#5B6E6A;font-size:13px">
+          Carrera del simulacro
+          <select id="simulacro-career-select" class="search" style="margin-top:4px">
+            <option value="">Todas las carreras (modo mixto)</option>
+            ${careers.map(c => `<option value="${c}" ${simulacroCareer === c ? "selected" : ""}>${c}</option>`).join("")}
+          </select>
+        </label>
+        <ul style="margin:0;padding-left:18px;color:#5B6E6A;line-height:1.7">
+          <li>${target} preguntas seleccionadas al azar, repartidas entre los 5 bloques oficiales SERUMS según la proporción real observada en exámenes anteriores (mayor peso en Gestión y Salud Pública).</li>
+          <li>Si eliges una carrera, los casos clínicos propios de otras profesiones no aparecen — igual que el examen real, que es específico por profesión.</li>
+          <li>Se evitan repetir las preguntas de tus últimos 2 intentos, siempre que haya suficientes casos alternativos disponibles.</li>
+          <li>Cronómetro total de ${Math.round(target * SIMULACRO_SECONDS_PER_Q / 60)} minutos (ritmo de referencia de 1 min/pregunta).</li>
+          <li>Una sola oportunidad de respuesta por pregunta, sin reintentos — igual que el examen real.</li>
+          <li>Sin penalización por error: cada acierto suma un punto.</li>
+        </ul>
+        <button class="action-btn" id="start-simulacro-btn">Iniciar simulacro →</button>
+      </div>
+      <div class="panel">
+        <h3 class="section-title">Tus últimos intentos</h3>
+        ${lastAttempts.length ? `
+          <div class="progress-list">
+            ${lastAttempts.map(a => `
+              <div>
+                <div class="progress-head"><span>${new Date(a.date).toLocaleDateString("es-PE")}${a.career ? " · " + a.career : ""}</span><span>${a.correctCount}/${a.total} · ${a.pct}%</span></div>
+                <div class="bar"><span style="width:${a.pct}%"></span></div>
+              </div>
+            `).join("")}
+          </div>
+        ` : `<p style="color:#5B6E6A">Aún no rindes ningún simulacro.</p>`}
+      </div>
+    </section>
+  `;
+
+  document.getElementById("simulacro-career-select").addEventListener("change", e => {
+    simulacroCareer = e.target.value;
+    localStorage.setItem("simulacroCareer", simulacroCareer);
+  });
+  document.getElementById("start-simulacro-btn").addEventListener("click", startSimulacro);
+}
+
+function startSimulacro() {
+  simulacroQueue = buildSimulacroQueue(simulacroCareer);
+  simulacroIndex = 0;
+  simulacroResults = [];
+  simulacroSelected = null;
+  simulacroConfirmed = false;
+  simulacroTimeLeft = simulacroQueue.length * SIMULACRO_SECONDS_PER_Q;
+  simulacroPhase = "running";
+
+  clearInterval(simulacroTimerId);
+  simulacroTimerId = setInterval(() => {
+    simulacroTimeLeft -= 1;
+    if (simulacroTimeLeft <= 0) {
+      simulacroTimeLeft = 0;
+      clearInterval(simulacroTimerId);
+      finishSimulacro();
+      return;
+    }
+    updateSimulacroTimerDisplay();
+  }, 1000);
+
+  renderSimulacroRunning();
+}
+
+function updateSimulacroTimerDisplay() {
+  const el = document.getElementById("simulacro-timer");
+  if (!el) return;
+  const m = Math.floor(simulacroTimeLeft / 60);
+  const s = simulacroTimeLeft % 60;
+  el.textContent = `${m}:${String(s).padStart(2, "0")}`;
+}
+
+function renderSimulacroRunning() {
+  pageTitle.textContent = `Simulacro · Pregunta ${simulacroIndex + 1} de ${simulacroQueue.length}`;
+  pageSubtitle.textContent = "Responde con calma; no hay reintentos en este modo.";
+
+  const c = simulacroQueue[simulacroIndex];
+  const pct = fmtPct(Math.round((simulacroIndex / simulacroQueue.length) * 100));
+
+  const optionsHtml = c.options.map((o, i) => {
+    let cls = "option-btn";
+    if (simulacroConfirmed) {
+      if (i === c.correct) cls += " success";
+      else if (i === simulacroSelected) cls += " error";
+    } else if (i === simulacroSelected) {
+      cls += " selected";
+    }
+    return `<button class="${cls}" data-opt="${i}" ${simulacroConfirmed ? "disabled" : ""}>${String.fromCharCode(65 + i)}. ${o}</button>`;
+  }).join("");
+
+  root.innerHTML = `
+    <section class="panel">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+        <span class="badge">${c.career || c.specialty} · ${c.block}</span>
+        <div style="display:flex;gap:8px;align-items:center">
+          <span class="badge" id="simulacro-timer" style="background:#F1E9D8;color:#8A6D3B">--:--</span>
+          <button class="action-btn secondary" id="finish-early-btn" style="margin:0;padding:6px 10px;font-size:12px">Finalizar ahora</button>
+        </div>
+      </div>
+      <div class="bar" style="margin-bottom:14px"><span style="width:${pct}%"></span></div>
+      <h3 class="section-title">${c.title}</h3>
+      <p>${c.statement}</p>
+      <p><strong>${c.question}</strong></p>
+      <div class="option-list">${optionsHtml}</div>
+      <div id="simulacro-feedback" style="margin-top:12px"></div>
+      <div id="simulacro-actions" style="margin-top:12px"></div>
+    </section>
+  `;
+
+  updateSimulacroTimerDisplay();
+
+  document.getElementById("finish-early-btn").addEventListener("click", () => {
+    const answered = simulacroResults.length;
+    if (confirm(`Llevas ${answered} de ${simulacroQueue.length} preguntas respondidas. ¿Finalizar el simulacro ahora con ese avance?`)) {
+      clearInterval(simulacroTimerId);
+      finishSimulacro();
+    }
+  });
+
+  root.querySelectorAll(".option-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      if (simulacroConfirmed) return;
+      simulacroSelected = Number(btn.dataset.opt);
+      renderSimulacroRunning();
+    });
+  });
+
+  const actions = document.getElementById("simulacro-actions");
+  const feedback = document.getElementById("simulacro-feedback");
+
+  if (!simulacroConfirmed) {
+    actions.innerHTML = `<button class="action-btn" id="confirm-sim-btn" ${simulacroSelected === null ? "disabled" : ""}>Confirmar respuesta</button>`;
+    document.getElementById("confirm-sim-btn").addEventListener("click", confirmSimulacroAnswer);
+  } else {
+    const correct = simulacroSelected === c.correct;
+    feedback.innerHTML = `
+      <div class="card ${correct ? "success" : "error"}">
+        <strong>${correct ? "Correcto" : "Incorrecto"}</strong>
+        <p>${c.feedback}</p>
+      </div>
+    `;
+    const isLast = simulacroIndex === simulacroQueue.length - 1;
+    actions.innerHTML = `<button class="action-btn" id="next-sim-btn">${isLast ? "Ver resultados →" : "Siguiente pregunta →"}</button>`;
+    document.getElementById("next-sim-btn").addEventListener("click", nextSimulacroQuestion);
+  }
+}
+
+function confirmSimulacroAnswer() {
+  if (simulacroSelected === null || simulacroConfirmed) return;
+  simulacroConfirmed = true;
+  const c = simulacroQueue[simulacroIndex];
+  const correct = simulacroSelected === c.correct;
+  simulacroResults.push({ caseId: c.id, career: c.career || c.specialty, block: c.block, correct });
+  renderSimulacroRunning();
+}
+
+function nextSimulacroQuestion() {
+  if (simulacroIndex < simulacroQueue.length - 1) {
+    simulacroIndex += 1;
+    simulacroSelected = null;
+    simulacroConfirmed = false;
+    renderSimulacroRunning();
+  } else {
+    clearInterval(simulacroTimerId);
+    finishSimulacro();
+  }
+}
+
+function finishSimulacro() {
+  simulacroPhase = "finished";
+  const total = simulacroResults.length; // preguntas efectivamente respondidas (permite cierre anticipado)
+  const correctCount = simulacroResults.filter(r => r.correct).length;
+  const pct = total ? fmtPct(Math.round((correctCount / total) * 100)) : 0;
+
+  const byBlock = {};
+  simulacroResults.forEach(r => {
+    byBlock[r.block] = byBlock[r.block] || { correct: 0, total: 0 };
+    byBlock[r.block].total += 1;
+    if (r.correct) byBlock[r.block].correct += 1;
+  });
+
+  const record = {
+    date: new Date().toISOString(),
+    total,
+    correctCount,
+    pct,
+    byBlock,
+    career: simulacroCareer || null,
+    caseIds: simulacroResults.map(r => r.caseId)
+  };
+  simulacroHistory.push(record);
+  saveProgress("simulacroHistory", simulacroHistory);
+
+  renderSimulacroResults();
+}
+
+function renderSimulacroResults() {
+  pageTitle.textContent = "Resultados del simulacro";
+  pageSubtitle.textContent = "Resumen de tu último intento.";
+
+  const last = simulacroHistory[simulacroHistory.length - 1];
+  if (!last) { simulacroPhase = "intro"; return renderSimulacroIntro(); }
+
+  const savedName = localStorage.getItem("preserum_userName") || "";
+
+  root.innerHTML = `
+    <section class="grid metrics">
+      <div class="card"><span class="label">Puntaje</span><div class="value">${last.correctCount}/${last.total}</div></div>
+      <div class="card"><span class="label">Porcentaje</span><div class="value">${last.pct}%</div></div>
+      <div class="card"><span class="label">Fecha</span><div class="value" style="font-size:18px">${new Date(last.date).toLocaleDateString("es-PE")}</div></div>
+    </section>
+    <section class="two-col">
+      <div class="panel">
+        <h3 class="section-title">Desglose por bloque oficial</h3>
+        <div class="progress-list">
+          ${Object.entries(last.byBlock).map(([block, v]) => {
+            const p = v.total ? fmtPct(Math.round((v.correct / v.total) * 100)) : 0;
+            return `
+              <div>
+                <div class="progress-head"><span>${block}</span><span>${v.correct}/${v.total} · ${p}%</span></div>
+                <div class="bar"><span style="width:${p}%"></span></div>
+              </div>
+            `;
+          }).join("")}
+        </div>
+      </div>
+      <div class="panel">
+        <h3 class="section-title">Exportar constancia</h3>
+        <p style="color:#5B6E6A;line-height:1.6;margin-bottom:10px">Genera un PDF de este resultado para guardar o compartir. Tu nombre queda guardado en este dispositivo para tus próximas constancias.</p>
+        <input id="export-name" class="search" placeholder="Tu nombre (opcional)" value="${savedName}" style="margin-bottom:10px" />
+        <button class="action-btn" id="export-pdf-btn">Descargar constancia (PDF)</button>
+        <p style="color:#5B6E6A;font-size:12px;margin-top:8px">Se abrirá el diálogo de impresión de tu navegador; elige "Guardar como PDF".</p>
+      </div>
+    </section>
+    <section style="margin-top:16px">
+      <div class="panel">
+        <h3 class="section-title">Siguiente paso</h3>
+        <p style="color:#5B6E6A;line-height:1.6">Cada intento queda guardado en tu historial. Repite el simulacro cuando quieras: la selección de preguntas y su orden cambian cada vez.</p>
+        <button class="action-btn" id="retry-simulacro-btn">Rendir otro simulacro</button>
+      </div>
+    </section>
+  `;
+
+  document.getElementById("export-pdf-btn").addEventListener("click", () => {
+    const name = document.getElementById("export-name").value.trim();
+    localStorage.setItem("preserum_userName", name);
+    exportSimulacroPDF(last, name);
+  });
+
+  document.getElementById("retry-simulacro-btn").addEventListener("click", () => {
+    simulacroPhase = "intro";
+    renderSimulacroIntro();
+  });
+}
+
+function exportSimulacroPDF(record, name) {
+  const printRoot = document.getElementById("print-report");
+  const blockRows = Object.entries(record.byBlock).map(([block, v]) => {
+    const p = v.total ? Math.round((v.correct / v.total) * 100) : 0;
+    return `<tr><td>${block}</td><td>${v.correct}/${v.total}</td><td>${p}%</td></tr>`;
+  }).join("");
+
+  printRoot.innerHTML = `
+    <div class="print-page">
+      <h1>PRE SERUMS PERÚ</h1>
+      <h2>Constancia de Autoevaluación — Simulacro SERUMS</h2>
+      <p class="print-meta">${name ? "Nombre: " + name + " · " : ""}Fecha: ${new Date(record.date).toLocaleDateString("es-PE", { day: "2-digit", month: "long", year: "numeric" })}</p>
+      <div class="print-score">
+        <div><span>Puntaje</span><strong>${record.correctCount} / ${record.total}</strong></div>
+        <div><span>Porcentaje</span><strong>${record.pct}%</strong></div>
+      </div>
+      <h3>Desglose por bloque oficial</h3>
+      <table class="print-table">
+        <thead><tr><th>Bloque temático</th><th>Aciertos</th><th>%</th></tr></thead>
+        <tbody>${blockRows}</tbody>
+      </table>
+      <p class="print-note">Este documento es una autoevaluación generada por la aplicación PRE SERUMS PERÚ con fines de estudio personal. No constituye un resultado oficial del proceso SERUMS ni un documento emitido por el MINSA.</p>
+    </div>
+  `;
+
+  window.print();
+}
+
+function renderGlossary() {
+  pageTitle.textContent = "Conceptos clave";
+  pageSubtitle.textContent = "Repaso rápido de términos y definiciones frecuentes en la evaluación SERUMS.";
+
+  root.innerHTML = `
+    <section class="panel">
+      <input id="glossary-search" class="search" placeholder="Buscar un término (ej. incidencia, PEI, FODA, VPN)..." />
+      <div class="chips" id="glossary-chips" style="margin-bottom:16px"></div>
+      <div id="glossary-list"></div>
+    </section>
+  `;
+
+  const search = document.getElementById("glossary-search");
+  const chipsBox = document.getElementById("glossary-chips");
+  const list = document.getElementById("glossary-list");
+  let activeCategory = "";
+
+  chipsBox.innerHTML = data.glossary.map(g => `<span class="chip" data-cat="${g.category}" style="cursor:pointer">${g.category}</span>`).join("");
+  chipsBox.querySelectorAll(".chip").forEach(chip => {
+    chip.addEventListener("click", () => {
+      activeCategory = activeCategory === chip.dataset.cat ? "" : chip.dataset.cat;
+      chipsBox.querySelectorAll(".chip").forEach(c => c.style.outline = "");
+      if (activeCategory) chip.style.outline = "2px solid var(--primary)";
+      draw(search.value);
+    });
+  });
+
+  function draw(filter = "") {
+    const q = filter.toLowerCase();
+    let html = "";
+    data.glossary.forEach(g => {
+      if (activeCategory && g.category !== activeCategory) return;
+      const filtered = g.terms.filter(t =>
+        !q || t.term.toLowerCase().includes(q) || t.definition.toLowerCase().includes(q)
+      );
+      if (!filtered.length) return;
+      html += `<h3 class="section-title" style="margin-top:18px">${g.category}</h3>`;
+      html += `<div class="norm-list">`;
+      filtered.forEach(t => {
+        html += `
+          <article class="norm-card">
+            <h3 style="margin:0 0 6px;font-size:16px;color:var(--primary-dark)">${t.term}</h3>
+            <p style="margin:0;color:#33403D">${t.definition}</p>
+          </article>
+        `;
+      });
+      html += `</div>`;
+    });
+    list.innerHTML = html || `<p style="color:#5B6E6A">No se encontraron términos con ese filtro.</p>`;
+  }
+
+  search.addEventListener("input", e => draw(e.target.value));
+  draw();
+}
+
+function renderNorms() {
+  pageTitle.textContent = "Normativa SERUMS";
+  pageSubtitle.textContent = "Ley base, bibliografía oficial y normas de evaluación.";
+  root.innerHTML = `
+    <section class="two-col">
+      <div class="panel">
+        <h3 class="section-title">Normas principales</h3>
+        <div class="norm-list">
+          ${data.norms.map((n, i) => `
+            <article class="norm-card">
+              <span>${n.code}</span>
+              <h3>${n.title}</h3>
+              <p>${n.summary}</p>
+              <button class="toggle" data-target="norm-${i}">Ver detalle</button>
+              <div class="toggle-panel" id="norm-${i}">
+                <p>${n.detail}</p>
+              </div>
+            </article>
+          `).join("")}
+        </div>
+      </div>
+      <div class="panel">
+        <h3 class="section-title">Base oficial</h3>
+        <p style="line-height:1.6;color:#5B6E6A">La Ley N.° 23330 figura como norma base del SERUMS, complementada por su reglamento y las modificatorias vigentes que el MINSA publica junto con la bibliografía oficial de cada proceso.</p>
+      </div>
+    </section>
+  `;
+  bindToggles();
+}
+
+function renderDecrees() {
+  pageTitle.textContent = "Decretos y lineamientos";
+  pageSubtitle.textContent = "Estructura expandible para resoluciones, decretos y directivas.";
+  root.innerHTML = `
+    <section class="two-col">
+      <div class="panel">
+        <h3 class="section-title">Documentos</h3>
+        <div class="norm-list">
+          ${data.decrees.map((d, i) => `
+            <article class="norm-card">
+              <span>${d.code}</span>
+              <h3>${d.title}</h3>
+              <p>${d.summary}</p>
+              <button class="toggle" data-target="dec-${i}">Ver detalle</button>
+              <div class="toggle-panel" id="dec-${i}">
+                <p>${d.detail}</p>
+              </div>
+            </article>
+          `).join("")}
+        </div>
+      </div>
+      <div class="panel">
+        <h3 class="section-title">Enfoque</h3>
+        <p style="line-height:1.6;color:#5B6E6A">Esta sección deja preparado el proyecto para cargar más resoluciones, directivas y lineamientos oficiales sin tocar la arquitectura.</p>
+      </div>
+    </section>
+  `;
+  bindToggles();
+}
+
+function renderPriorityNorms() {
+  pageTitle.textContent = "Normas prioritarias SERUMS 2026";
+  pageSubtitle.textContent = "NTS y RM 2026 con mayor probabilidad de evaluación, organizadas por prioridad.";
+  const order = ["muy alta", "alta", "media-alta", "media", "base obligatoria"];
+  const grouped = order
+    .map(p => ({ priority: p, items: data.priorityNorms2026.filter(n => n.priority === p) }))
+    .filter(g => g.items.length);
+  root.innerHTML = `
+    <section class="two-col">
+      <div class="panel">
+        ${grouped.map(g => `
+          <h3 class="section-title" style="margin-top:18px;text-transform:capitalize">Prioridad ${g.priority}</h3>
+          <div class="norm-list">
+            ${g.items.map((n, i) => `
+              <article class="norm-card">
+                <span>${n.code}</span>
+                <h3>${n.title}</h3>
+                <p>${n.summary}</p>
+                <button class="toggle" data-target="pnorm-${g.priority}-${i}">Ver detalle</button>
+                <div class="toggle-panel" id="pnorm-${g.priority}-${i}">
+                  <p>${n.detail}</p>
+                  <p style="margin-top:8px;color:#5B6E6A"><strong>Bloque:</strong> ${n.block} &middot; <strong>Temas evaluables:</strong> ${n.topics.join(", ")}</p>
+                </div>
+              </article>
+            `).join("")}
+          </div>
+        `).join("")}
+      </div>
+      <div class="panel">
+        <h3 class="section-title">Sobre esta sección</h3>
+        <p style="line-height:1.6;color:#5B6E6A">Normas técnicas y resoluciones ministeriales priorizadas para el proceso SERUMS 2026, verificadas en el portal MINSA y el Diario Oficial El Peruano. Las 15 preguntas derivadas de estas normas ya forman parte del banco de casos (bloques Gestión, Salud pública y Cuidado integral).</p>
+      </div>
+    </section>
+  `;
+  bindToggles();
+}
+
+// Badge que distingue documentos con formato oficial verificado (MINSA) de
+// documentos elaborados con criterio técnico propio, aún no contrastados con
+// fuente oficial. No confundir con error: solo marca qué revisar con más rigor.
+function sourceStatusBadge(doc) {
+  if (doc.sourceStatus === "criterio_tecnico") {
+    return `<div class="badge" style="background:#F4E3B2;color:#6B4E00;border:1px solid #D8B94A">⚠ Criterio técnico — pendiente de validación</div>`;
+  }
+  return `<div class="badge" style="background:#DCEEE4;color:#1F5C3D;border:1px solid #9FCBB0">✓ Formato oficial MINSA</div>`;
+}
+
+function renderAssistant() {
+  pageTitle.textContent = "Asistente Profesional";
+  pageSubtitle.textContent = "Formatos, oficios e informes frecuentes en el ejercicio SERUMS: procedimiento, campos obligatorios, ejemplo y errores comunes.";
+  const categories = [...new Set(data.assistantDocs.map(d => d.category))];
+  root.innerHTML = `
+    <section class="two-col">
+      <div class="panel">
+        <input id="assistant-search" class="search" placeholder="Buscar formato, oficio, informe..." />
+        <div id="assistant-list"></div>
+      </div>
+      <div class="panel">
+        <h3 class="section-title">Sobre esta sección</h3>
+        <p style="line-height:1.6;color:#5B6E6A">Documentos de uso frecuente cuando ya estás trabajando en un establecimiento de salud. No es material de examen — es soporte profesional para tu día a día en la plaza SERUMS.</p>
+      </div>
+    </section>
+  `;
+
+  const list = document.getElementById("assistant-list");
+  const search = document.getElementById("assistant-search");
+
+  function draw(filter = "") {
+    const q = filter.toLowerCase();
+    const filtered = data.assistantDocs.filter(d => {
+      const text = [d.title, d.category, d.purpose].join(" ").toLowerCase();
+      return text.includes(q);
+    });
+
+    const grouped = categories
+      .map(cat => ({ category: cat, items: filtered.filter(d => d.category === cat) }))
+      .filter(g => g.items.length);
+
+    list.innerHTML = grouped.map(g => `
+      <h3 class="section-title" style="margin-top:18px">${g.category}</h3>
+      <div class="norm-list">
+        ${g.items.map((d, i) => `
+          <article class="norm-card">
+            <span>${d.category}</span>
+            ${sourceStatusBadge(d)}
+            <h3>${d.title}</h3>
+            <p>${d.purpose}</p>
+            <button class="toggle" data-target="doc-${d.id}">Ver formato completo</button>
+            <div class="toggle-panel" id="doc-${d.id}">
+              <p><strong>Campos obligatorios:</strong></p>
+              <ul style="margin:6px 0 12px 18px;color:#5B6E6A">
+                ${d.requiredFields.map(f => `<li>${f}</li>`).join("")}
+              </ul>
+              <p><strong>Formato base:</strong></p>
+              <pre style="white-space:pre-wrap;background:#F7F5F2;padding:10px;border-radius:6px;font-size:13px;margin:6px 0 12px">${d.templateText}</pre>
+              <p><strong>Ejemplo de llenado:</strong></p>
+              <p style="margin:6px 0 12px;color:#5B6E6A">${d.exampleFilled}</p>
+              <p><strong>Errores frecuentes:</strong></p>
+              <ul style="margin:6px 0 12px 18px;color:#8A2A24">
+                ${d.commonErrors.map(e => `<li>${e}</li>`).join("")}
+              </ul>
+              ${d.relatedNormCodes.length ? `<p style="color:#5B6E6A"><strong>Normativa relacionada:</strong> ${d.relatedNormCodes.join(", ")}</p>` : ""}
+              <button class="action-btn" data-practice="${d.id}" style="margin-top:12px">Practicar llenado →</button>
+            </div>
+          </article>
+        `).join("")}
+      </div>
+    `).join("") || `<p style="color:#5B6E6A">No hay documentos con ese filtro.</p>`;
+
+    bindToggles();
+    list.querySelectorAll("[data-practice]").forEach(btn => {
+      btn.addEventListener("click", () => renderAssistantPractice(btn.dataset.practice));
+    });
+  }
+
+  draw();
+  search.addEventListener("input", () => draw(search.value));
+}
+
+let assistantPracticeState = loadProgress("assistantPracticeState", {});
+
+function renderAssistantPractice(docId) {
+  const doc = data.assistantDocs.find(d => d.id === docId);
+  if (!doc) return;
+  pageTitle.textContent = `Práctica: ${doc.title}`;
+  pageSubtitle.textContent = "Redacta el documento a partir del caso planteado y luego compáralo con el modelo.";
+
+  const st = assistantPracticeState[docId] || { attempts: 0, draft: "", revealed: false };
+
+  root.innerHTML = `
+    <button id="back-to-assistant-btn" class="toggle" style="margin-bottom:12px;margin-top:0">← Volver a Asistente Profesional</button>
+    <section class="two-col">
+      <div class="panel">
+        <div class="badge">${doc.category}</div>
+        ${sourceStatusBadge(doc)}
+        <h3 class="section-title">${doc.title}</h3>
+        <p><strong>Caso:</strong> ${doc.practiceScenario}</p>
+        <p style="margin-top:10px;color:#5B6E6A"><strong>Recuerda incluir:</strong></p>
+        <ul style="margin:6px 0 12px 18px;color:#5B6E6A">
+          ${doc.requiredFields.map(f => `<li>${f}</li>`).join("")}
+        </ul>
+        <textarea id="practice-draft" placeholder="Redacta aquí tu documento..." style="width:100%;min-height:220px;padding:10px;border-radius:6px;border:1px solid #D8D2C4;font-family:inherit;font-size:14px">${st.draft || ""}</textarea>
+        <p style="margin-top:8px;color:#5B6E6A;font-size:13px">Intentos de práctica: ${st.attempts}</p>
+        <button class="action-btn" id="compare-btn" style="margin-top:8px">${st.revealed ? "Comparar de nuevo" : "Comparar con el modelo"}</button>
+      </div>
+      <div class="panel" id="practice-model" style="display:${st.revealed ? "block" : "none"}">
+        <h3 class="section-title">Documento modelo</h3>
+        <pre style="white-space:pre-wrap;background:#F7F5F2;padding:10px;border-radius:6px;font-size:13px;margin:6px 0 12px">${doc.templateText}</pre>
+        <p><strong>Ejemplo aplicado al caso:</strong></p>
+        <p style="color:#5B6E6A">${doc.exampleFilled}</p>
+        <p style="margin-top:12px"><strong>Autoevalúa tu redacción — ¿incluiste todo esto?</strong></p>
+        <ul style="margin:6px 0 12px 18px;color:#5B6E6A">
+          ${doc.requiredFields.map(f => `<li>${f}</li>`).join("")}
+        </ul>
+        <p><strong>Errores frecuentes a evitar:</strong></p>
+        <ul style="margin:6px 0 12px 18px;color:#8A2A24">
+          ${doc.commonErrors.map(e => `<li>${e}</li>`).join("")}
+        </ul>
+      </div>
+    </section>
+  `;
+
+  document.getElementById("back-to-assistant-btn").addEventListener("click", renderAssistant);
+
+  const draft = document.getElementById("practice-draft");
+  document.getElementById("compare-btn").addEventListener("click", () => {
+    st.attempts += 1;
+    st.draft = draft.value;
+    st.revealed = true;
+    assistantPracticeState[docId] = st;
+    saveProgress("assistantPracticeState", assistantPracticeState);
+    renderAssistantPractice(docId);
+  });
+}
+
+function renderHisCodesChild() {
+  pageTitle.textContent = "Códigos HIS — Etapa de Vida Niño";
+  pageSubtitle.textContent = "Buscador de códigos CIE10/CPMS y reglas de registro para la Hoja HIS. Fuente: Manual de Registro y Codificación — Etapa de Vida Niño, MINSA 2021.";
+
+  const categories = [...new Set(data.hisCodigosNino.map(d => d.categoria))];
+
+  root.innerHTML = `
+    <section class="two-col">
+      <div class="panel">
+        <input id="hiscodes-search" class="search" placeholder="Buscar por código, diagnóstico o actividad (ej. J189, CRED, hierro, EDA)..." />
+        <div id="hiscodes-list"></div>
+      </div>
+      <div class="panel">
+        <h3 class="section-title">Sobre esta tabla</h3>
+        <p style="line-height:1.6;color:#5B6E6A">Codificación CIE10/CPMS para las secciones de mayor uso diario: CRED por grupo de edad, Infecciones Respiratorias Agudas (IRA) y Enfermedad Diarreica Aguda (EDA). Cada tarjeta indica cómo marcar "Tipo de diagnóstico" y qué anotar en el campo LAB. Este material es de consulta administrativa — no reemplaza el manual completo del MINSA.</p>
+      </div>
+    </section>
+  `;
+
+  const list = document.getElementById("hiscodes-list");
+  const search = document.getElementById("hiscodes-search");
+
+  function draw(filter = "") {
+    const q = filter.toLowerCase();
+    const filtered = data.hisCodigosNino.filter(d => {
+      const text = [d.codigo, d.descripcion, d.categoria, d.tipo].join(" ").toLowerCase();
+      return text.includes(q);
+    });
+
+    const grouped = categories
+      .map(cat => ({ category: cat, items: filtered.filter(d => d.categoria === cat) }))
+      .filter(g => g.items.length);
+
+    list.innerHTML = grouped.map(g => `
+      <h3 class="section-title" style="margin-top:18px">${g.category}</h3>
+      <div class="norm-list">
+        ${g.items.map((d, i) => `
+          <article class="norm-card">
+            <span>${d.tipo}</span>
+            <h3>${d.codigo} — ${d.descripcion}</h3>
+            ${d.notaRegistro ? `<p style="color:#5B6E6A;margin-top:4px"><strong>Registro:</strong> ${d.notaRegistro}</p>` : ""}
+          </article>
+        `).join("")}
+      </div>
+    `).join("") || `<p style="color:#5B6E6A">No hay códigos con ese filtro.</p>`;
+  }
+
+  draw();
+  search.addEventListener("input", () => draw(search.value));
+}
+
+let trainingState = loadProgress("trainingState", {});
+let activeTrainingScenario = null;
+let activeTrainingStepId = null;
+
+function renderTraining() {
+  pageTitle.textContent = "Entrenamiento SERUMS";
+  pageSubtitle.textContent = "Escenarios progresivos de campo: cada decisión cambia el curso del caso. No es teoría — es práctica de criterio.";
+  root.innerHTML = `<div id="training-list" class="norm-list"></div>`;
+  const list = document.getElementById("training-list");
+  list.innerHTML = data.trainingScenarios.map(sc => {
+    const st = trainingState[sc.id];
+    const badge = st && st.completed
+      ? `<span class="badge">Completado</span>`
+      : st ? `<span class="badge" style="background:#FCEBEA;color:#8A2A24">En progreso</span>`
+      : `<span class="badge">Nuevo</span>`;
+    return `
+      <article class="norm-card">
+        <span>${sc.skillsEvaluated.join(" · ")}</span>
+        <h3>${sc.title}</h3>
+        <p>${sc.context}</p>
+        ${badge}
+        <button class="action-btn" data-scenario="${sc.id}" style="margin-top:10px">${st ? "Continuar escenario →" : "Iniciar escenario →"}</button>
+      </article>
+    `;
+  }).join("");
+
+  list.querySelectorAll("[data-scenario]").forEach(btn => {
+    btn.addEventListener("click", () => startTrainingScenario(btn.dataset.scenario));
+  });
+}
+
+function startTrainingScenario(scenarioId) {
+  activeTrainingScenario = data.trainingScenarios.find(s => s.id === scenarioId);
+  if (!activeTrainingScenario) return;
+  const st = trainingState[scenarioId];
+  activeTrainingStepId = (st && !st.completed) ? st.currentStepId : activeTrainingScenario.startStep;
+  renderTrainingStep();
+}
+
+function renderTrainingStep() {
+  const sc = activeTrainingScenario;
+  pageTitle.textContent = sc.title;
+  pageSubtitle.textContent = "Escenario de Entrenamiento SERUMS";
+
+  if (activeTrainingStepId === "end") {
+    trainingState[sc.id] = { completed: true, currentStepId: "end" };
+    saveProgress("trainingState", trainingState);
+    root.innerHTML = `
+      <button id="back-to-training-btn" class="toggle" style="margin-bottom:12px;margin-top:0">← Volver a Entrenamiento SERUMS</button>
+      <div class="panel">
+        <h3 class="section-title">Escenario completado</h3>
+        <p style="color:#5B6E6A">Competencias entrenadas en este escenario:</p>
+        <ul style="margin:6px 0 12px 18px;color:#5B6E6A">${sc.skillsEvaluated.map(s => `<li>${s}</li>`).join("")}</ul>
+        <button class="action-btn" id="restart-scenario-btn">Reiniciar escenario</button>
+      </div>
+    `;
+    document.getElementById("back-to-training-btn").addEventListener("click", renderTraining);
+    document.getElementById("restart-scenario-btn").addEventListener("click", () => {
+      activeTrainingStepId = sc.startStep;
+      trainingState[sc.id] = { completed: false, currentStepId: sc.startStep };
+      saveProgress("trainingState", trainingState);
+      renderTrainingStep();
+    });
+    return;
+  }
+
+  const step = sc.steps.find(s => s.id === activeTrainingStepId);
+  trainingState[sc.id] = { completed: false, currentStepId: step.id };
+  saveProgress("trainingState", trainingState);
+
+  root.innerHTML = `
+    <button id="back-to-training-btn" class="toggle" style="margin-bottom:12px;margin-top:0">← Volver a Entrenamiento SERUMS</button>
+    <div class="badge">${sc.title}</div>
+    <h3 class="section-title">${step.title}</h3>
+    <p>${step.prompt}</p>
+    <div class="option-list" id="training-options">
+      ${step.options.map((o, i) => `<button class="option-btn" data-opt="${i}">${o.text}</button>`).join("")}
+    </div>
+    <div id="training-feedback" style="margin-top:12px"></div>
+    <div id="training-actions" style="margin-top:12px"></div>
+  `;
+
+  document.getElementById("back-to-training-btn").addEventListener("click", renderTraining);
+
+  document.querySelectorAll("#training-options .option-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const opt = step.options[Number(btn.dataset.opt)];
+      document.querySelectorAll("#training-options .option-btn").forEach(b => b.disabled = true);
+      btn.classList.add(opt.correct ? "success" : "error");
+      document.getElementById("training-feedback").innerHTML = `
+        <div class="card ${opt.correct ? "success" : "error"}">
+          <strong>${opt.correct ? "Buena decisión" : "Decisión con consecuencias"}</strong>
+          <p>${opt.feedback}</p>
+        </div>
+      `;
+      document.getElementById("training-actions").innerHTML = `<button class="action-btn" id="next-step-btn">Continuar →</button>`;
+      document.getElementById("next-step-btn").addEventListener("click", () => {
+        activeTrainingStepId = opt.next;
+        renderTrainingStep();
+      });
+    });
+  });
+}
+
+function renderResources() {
+  pageTitle.textContent = "Recursos";
+  pageSubtitle.textContent = "Apuntes, compendios y material de apoyo.";
+  root.innerHTML = `
+    <section class="two-col">
+      <div class="panel">
+        <h3 class="section-title">Material de estudio</h3>
+        <div class="resource-list">
+          ${data.resources.map(r => `
+            <article class="resource-card">
+              <span>${r.type}</span>
+              <h3>${r.title}</h3>
+              <p>${r.summary}</p>
+            </article>
+          `).join("")}
+        </div>
+      </div>
+      <div class="panel">
+        <h3 class="section-title">Notas rápidas</h3>
+        <textarea id="notes" class="input" placeholder="Escribe aquí tus apuntes SERUMS...">${notes}</textarea>
+        <button id="save-notes" class="action-btn">Guardar notas</button>
+      </div>
+    </section>
+  `;
+  document.getElementById("save-notes").addEventListener("click", () => {
+    notes = document.getElementById("notes").value;
+    localStorage.setItem(data.notesKey, notes);
+  });
+}
+
+// Base de Datos SERUMS: catálogo de exámenes reales del MINSA ya analizados,
+// con los casos originales generados a partir de cada uno y el perfil de pesos
+// por bloque usado en el Simulacro. No reproduce las preguntas reales (derechos
+// de autor); es un registro de trazabilidad para saber qué ya se procesó y
+// poder sumar nuevas carreras/exámenes sin perder este trabajo.
+function renderExamRegistry() {
+  pageTitle.textContent = "Base de Datos SERUMS";
+  pageSubtitle.textContent = "Exámenes reales del MINSA ya analizados, y los casos originales generados a partir de ellos.";
+
+  const registry = data.realExamRegistry || [];
+  const byCareer = {};
+  registry.forEach(r => {
+    byCareer[r.career] = byCareer[r.career] || [];
+    byCareer[r.career].push(r);
+  });
+
+  const weights = data.examBlockWeights || {};
+
+  root.innerHTML = `
+    <button id="back-to-dashboard-btn" class="toggle" style="margin-bottom:12px">← Volver al tablero</button>
+    <section class="two-col">
+      <div class="panel">
+        <h3 class="section-title">Exámenes reales analizados por carrera</h3>
+        ${Object.keys(byCareer).length ? Object.entries(byCareer).map(([career, exams]) => `
+          <div style="margin-bottom:18px">
+            <h4 style="margin:0 0 8px 0">${career} <span style="color:#5B6E6A;font-weight:normal">(${exams.length} examen${exams.length !== 1 ? "es" : ""}, ${exams.reduce((s, e) => s + e.questionCount, 0)} preguntas revisadas)</span></h4>
+            <div class="progress-list">
+              ${exams.map(e => `
+                <div class="card" style="margin-bottom:8px">
+                  <strong>${e.examLabel}</strong>
+                  <p style="margin:4px 0;color:#5B6E6A;font-size:13px">Fecha del examen: ${e.date} · Archivo fuente: ${e.sourceFile}</p>
+                  <p style="margin:4px 0;color:#5B6E6A;font-size:13px">Analizado el ${e.analyzedDate} · ${e.gapsGeneratedIds.length} casos originales del banco derivados de este análisis</p>
+                </div>
+              `).join("")}
+            </div>
+          </div>
+        `).join("") : `<p style="color:#5B6E6A">Aún no se ha analizado ningún examen real.</p>`}
+      </div>
+      <div class="panel">
+        <h3 class="section-title">Perfil de pesos usado en el Simulacro</h3>
+        <p style="color:#5B6E6A;font-size:13px;margin-bottom:12px">Calculado a partir de la lectura manual de los exámenes reales registrados (aproximación, no conteo automatizado). Se usa para que el Simulacro reparta las preguntas según la proporción real observada, en vez de un reparto uniforme entre bloques.</p>
+        <div class="progress-list">
+          ${Object.entries(weights).map(([block, w]) => `
+            <div>
+              <div class="progress-head"><span>${block}</span><span>${Math.round(w * 100)}%</span></div>
+              <div class="bar"><span style="width:${Math.round(w * 100)}%"></span></div>
+            </div>
+          `).join("")}
+        </div>
+        <p style="margin-top:16px;color:#5B6E6A;font-size:13px">Por derechos de autor, este registro no guarda las preguntas literales de los exámenes reales — solo su metadata y los casos <strong>originales</strong> redactados a partir del análisis de sus temas y nivel de dificultad.</p>
+      </div>
+    </section>
+  `;
+
+  document.getElementById("back-to-dashboard-btn").addEventListener("click", () => renderView("dashboard"));
+}
+
+function bindToggles() {
+  root.querySelectorAll(".toggle").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.getElementById(btn.dataset.target).classList.toggle("open");
+    });
+  });
+}
+
+function renderView(view) {
+  clearInterval(timerId);
+  timerId = null;
+  activeCase = null;
+  if (view !== "simulacro") {
+    clearInterval(simulacroTimerId);
+    simulacroTimerId = null;
+  }
   if (view === "dashboard") renderDashboard();
   if (view === "cases") renderCases();
   if (view === "simulacro") renderSimulacro();
@@ -180,496 +1482,15 @@ function renderView(view) {
   if (view === "assistant") renderAssistant();
   if (view === "hisCodesChild") renderHisCodesChild();
   if (view === "training") renderTraining();
-  if (view === "screening") renderCapacitacionScreening();
   if (view === "decrees") renderDecrees();
   if (view === "resources") renderResources();
   if (view === "examRegistry") renderExamRegistry();
   if (view === "screeningTools") renderScreeningTools();
+  if (view === "screening") renderCapacitacionScreening();
+  setActive(view);
+  updateBadges();
 }
 
-// ========== DASHBOARD ==========
-function renderDashboard() {
-  pageTitle.textContent = "Tablero";
-  pageSubtitle.textContent = "";
-  const scoreBadge = document.getElementById("score-badge");
-  const resolvedBadge = document.getElementById("resolved-badge");
-  scoreBadge.textContent = `PUNTAJE: 0%`;
-  resolvedBadge.textContent = `RESUELTOS: 0/${data.cases.length}`;
-
-  root.innerHTML = `
-    <div class="dashboard">
-      <div class="cards-row">
-        <div class="card">
-          <h3 class="card-label">PUNTAJE</h3>
-          <p class="card-value">0</p>
-        </div>
-        <div class="card">
-          <h3 class="card-label">CASOS</h3>
-          <p class="card-value">${data.cases.length}</p>
-        </div>
-      </div>
-      <div class="cards-row">
-        <div class="card">
-          <h3 class="card-label">NORMAS</h3>
-          <p class="card-value">${data.norms ? data.norms.length : 0}</p>
-        </div>
-        <div class="card">
-          <h3 class="card-label">NORMAS PRIORITARIAS 2026</h3>
-          <p class="card-value">${data.priorityNorms ? data.priorityNorms.length : 0}</p>
-        </div>
-      </div>
-      <div class="cards-row">
-        <div class="card">
-          <h3 class="card-label">DECRETOS</h3>
-          <p class="card-value">${data.decrees ? data.decrees.length : 0}</p>
-        </div>
-      </div>
-      <div class="action-card">
-        <h3>Repasar ahora →</h3>
-        <p>Prioriza casos nunca intentados y con error, comenzando por los más antiguos.</p>
-        <button onclick="renderView('cases')" class="btn-primary">Iniciar práctica</button>
-      </div>
-      <div class="section-title">ENTRENAMIENTO</div>
-      <div class="progress-grid">
-        <div class="progress-col">
-          <h4>Progreso por carrera</h4>
-          ${SERUMS_CAREERS.map(c => `
-            <div class="progress-item">
-              <span>${c}</span>
-              <span>0/${data.cases.filter(cs => cs.career === c).length} · 0%</span>
-            </div>
-          `).join("")}
-        </div>
-        <div class="progress-col">
-          <h4>Progreso por bloque temático</h4>
-          ${OFFICIAL_BLOCKS.map(b => `
-            <div class="progress-item">
-              <span>${b}</span>
-              <span>0/${data.cases.filter(cs => cs.block === b).length} · 0%</span>
-            </div>
-          `).join("")}
-        </div>
-      </div>
-      <div style="margin-top:20px;padding:10px;background:#f0f4f3;border-radius:6px;font-size:13px;color:#5b6e6a">
-        <strong>Base de Datos SERUMS — exámenes reales analizados</strong><br>
-        Bloques temáticos oficiales SERUMS, con prioridad en Psicología e integración interdisciplinaria de las demás carreras de la salud.
-      </div>
-    </div>
-  `;
-}
-
-// ========== CASOS CLÍNICOS ==========
-function renderCases() {
-  pageTitle.textContent = "Casos clínicos";
-  pageSubtitle.textContent = `Base de ${data.cases.length} casos validados`;
-
-  const careerFilter = new Set();
-  let filteredCases = data.cases;
-
-  const html = `
-    <div style="margin-bottom:16px;display:flex;gap:8px;flex-wrap:wrap">
-      <input type="text" id="case-search" placeholder="Buscar por síntoma, diagnóstico..." style="flex:1;padding:8px;border:1px solid #ccc;border-radius:4px">
-      <select id="career-filter" style="padding:8px;border:1px solid #ccc;border-radius:4px">
-        <option value="">Todas las carreras</option>
-        ${SERUMS_CAREERS.map(c => `<option value="${c}">${c}</option>`).join("")}
-      </select>
-    </div>
-    <div id="cases-list" style="display:grid;gap:12px"></div>
-  `;
-
-  root.innerHTML = html;
-
-  const searchInput = document.getElementById("case-search");
-  const careerSelect = document.getElementById("career-filter");
-  const casesList = document.getElementById("cases-list");
-
-  function renderList() {
-    let result = filteredCases;
-    if (careerFilter.size > 0) {
-      result = result.filter(c => careerFilter.has(c.career));
-    }
-    if (searchInput.value.trim()) {
-      const q = searchInput.value.toLowerCase();
-      result = result.filter(c => 
-        c.title?.toLowerCase().includes(q) || 
-        c.desc?.toLowerCase().includes(q)
-      );
-    }
-    casesList.innerHTML = result.map(c => `
-      <article class="case-card" onclick="openCase(${c.id})">
-        <h3>${c.title}</h3>
-        <p>${c.desc}</p>
-        <small>${c.career} · ${c.block}</small>
-      </article>
-    `).join("");
-  }
-
-  searchInput.addEventListener("input", renderList);
-  careerSelect.addEventListener("change", (e) => {
-    careerFilter.clear();
-    if (e.target.value) careerFilter.add(e.target.value);
-    renderList();
-  });
-
-  renderList();
-}
-
-function openCase(caseId) {
-  const caseData = data.cases.find(c => c.id === caseId);
-  if (!caseData) return;
-
-  const shuffled = shuffleCaseOptions(caseData);
-  pageTitle.textContent = caseData.title;
-  pageSubtitle.textContent = `${caseData.career} · ${caseData.block}`;
-
-  root.innerHTML = `
-    <div class="case-detail">
-      <p>${caseData.desc}</p>
-      <div style="margin:20px 0;padding:16px;background:#f9faf9;border-radius:6px">
-        <strong>Pregunta:</strong> ${caseData.question}
-      </div>
-      <div class="options" id="options-list">
-        ${shuffled.options.map((opt, i) => `
-          <button class="option-btn" data-index="${i}" onclick="checkAnswer(${shuffled.correct}, ${i}, this)">
-            ${String.fromCharCode(65 + i)}. ${opt}
-          </button>
-        `).join("")}
-      </div>
-      <button onclick="renderView('cases')" class="btn-secondary" style="margin-top:16px">Volver</button>
-    </div>
-  `;
-}
-
-function checkAnswer(correct, selected, btn) {
-  const allBtns = document.querySelectorAll(".option-btn");
-  allBtns.forEach(b => b.disabled = true);
-  
-  if (selected === correct) {
-    btn.style.backgroundColor = "#27ae60";
-    btn.style.color = "white";
-  } else {
-    btn.style.backgroundColor = "#e74c3c";
-    btn.style.color = "white";
-    allBtns[correct].style.backgroundColor = "#27ae60";
-    allBtns[correct].style.color = "white";
-  }
-}
-
-// ========== SIMULACRO ==========
-function renderSimulacro() {
-  pageTitle.textContent = "Simulacro (100)";
-  pageSubtitle.textContent = "Examen estratificado basado en pesos reales de SERUMS";
-
-  root.innerHTML = `
-    <div style="display:grid;gap:12px">
-      <div style="padding:12px;background:#f0f4f3;border-radius:6px">
-        <strong>Selecciona carrera:</strong>
-        <div id="career-list" style="display:grid;gap:8px;margin-top:12px"></div>
-      </div>
-    </div>
-  `;
-
-  const careerList = document.getElementById("career-list");
-  careerList.innerHTML = SERUMS_CAREERS.map(c => `
-    <button class="btn-secondary" onclick="startSimulacro('${c}')">
-      ${c}
-    </button>
-  `).join("");
-
-  const transversalBtn = careerList.querySelector("button:last-child");
-  if (transversalBtn) {
-    transversalBtn.innerHTML = "Transversal (todas las carreras)";
-    transversalBtn.setAttribute("onclick", "startSimulacro('Transversal')");
-  }
-}
-
-function startSimulacro(career) {
-  const queue = buildSimulacroQueue(career === "Transversal" ? null : career);
-  pageTitle.textContent = `Simulacro (100) · ${career}`;
-  pageSubtitle.textContent = "Estratificado según distribución de examen real SERUMS";
-
-  let currentIndex = 0;
-  let score = 0;
-  let answers = [];
-
-  function showQuestion() {
-    if (currentIndex >= queue.length) {
-      showResults();
-      return;
-    }
-    const caseData = queue[currentIndex];
-    const shuffled = shuffleCaseOptions(caseData);
-
-    root.innerHTML = `
-      <div class="simulacro-container">
-        <div class="progress-bar">
-          <div class="progress-fill" style="width:${(currentIndex / queue.length) * 100}%"></div>
-        </div>
-        <p style="text-align:center;color:#5b6e6a">${currentIndex + 1} de ${queue.length}</p>
-        <h3>${caseData.question}</h3>
-        <div class="options">
-          ${shuffled.options.map((opt, i) => `
-            <button class="option-btn" onclick="recordAnswer(${currentIndex}, ${shuffled.correct}, ${i}, this)">
-              ${String.fromCharCode(65 + i)}. ${opt}
-            </button>
-          `).join("")}
-        </div>
-      </div>
-    `;
-  }
-
-  window.recordAnswer = function(idx, correct, selected, btn) {
-    const allBtns = document.querySelectorAll(".option-btn");
-    allBtns.forEach(b => b.disabled = true);
-    answers[idx] = selected;
-    if (selected === correct) {
-      score++;
-      btn.style.backgroundColor = "#27ae60";
-      btn.style.color = "white";
-    } else {
-      btn.style.backgroundColor = "#e74c3c";
-      btn.style.color = "white";
-      allBtns[correct].style.backgroundColor = "#27ae60";
-      allBtns[correct].style.color = "white";
-    }
-    setTimeout(() => {
-      currentIndex++;
-      showQuestion();
-    }, 1000);
-  };
-
-  window.showResults = function() {
-    simulacroHistory.push({ date: new Date(), score, caseIds: queue.map(c => c.id) });
-    const percentage = Math.round((score / queue.length) * 100);
-    root.innerHTML = `
-      <div style="text-align:center;padding:40px">
-        <h2>Simulacro completado</h2>
-        <p style="font-size:32px;font-weight:bold;color:#1e3c72">${score} / ${queue.length}</p>
-        <p style="font-size:20px">${percentage}%</p>
-        <button onclick="renderView('simulacro')" class="btn-primary" style="margin-top:20px">Hacer otro simulacro</button>
-        <button onclick="renderView('dashboard')" class="btn-secondary" style="margin-top:10px">Ir al tablero</button>
-      </div>
-    `;
-  };
-
-  showQuestion();
-}
-
-// ========== GLOSARIO ==========
-function renderGlossary() {
-  pageTitle.textContent = "Conceptos clave";
-  pageSubtitle.textContent = "66 términos clínicos, epidemiológicos y administrativos";
-
-  root.innerHTML = `
-    <input type="text" id="glossary-search" placeholder="Buscar término..." style="width:100%;padding:10px;margin-bottom:16px;border:1px solid #ccc;border-radius:4px">
-    <div id="glossary-list" style="display:grid;gap:12px"></div>
-  `;
-
-  const glossaryData = data.glossary || [];
-  const searchInput = document.getElementById("glossary-search");
-  const glossaryList = document.getElementById("glossary-list");
-
-  function renderGlossaryList() {
-    const q = searchInput.value.toLowerCase();
-    const filtered = glossaryData.filter(g => g.term.toLowerCase().includes(q) || g.def.toLowerCase().includes(q));
-    glossaryList.innerHTML = filtered.map(g => `
-      <div style="padding:12px;background:#f9faf9;border-radius:6px;border-left:4px solid #1e3c72">
-        <h4>${g.term}</h4>
-        <p>${g.def}</p>
-      </div>
-    `).join("");
-  }
-
-  searchInput.addEventListener("input", renderGlossaryList);
-  renderGlossaryList();
-}
-
-// ========== NORMAS ==========
-function renderNorms() {
-  pageTitle.textContent = "Normativa oficial";
-  pageSubtitle.textContent = "4 normas MINSA para SERUMS";
-
-  const norms = data.norms || [];
-  root.innerHTML = `
-    <div style="display:grid;gap:12px">
-      ${norms.map(n => `
-        <article class="norm-card">
-          <h3>${n.code}</h3>
-          <p>${n.title}</p>
-          <button class="action-btn" onclick="alert('Descargar: ${n.url}')">Ver documento →</button>
-        </article>
-      `).join("")}
-    </div>
-  `;
-}
-
-function renderPriorityNorms() {
-  pageTitle.textContent = "Normas prioritarias 2026";
-  pageSubtitle.textContent = "10 resoluciones claves para SERUMS";
-
-  const norms = data.priorityNorms || [];
-  root.innerHTML = `
-    <div style="display:grid;gap:12px">
-      ${norms.map(n => `
-        <article class="norm-card">
-          <h3>${n.code}</h3>
-          <p>${n.title}</p>
-          <small>${n.date}</small>
-          <button class="action-btn">Leer →</button>
-        </article>
-      `).join("")}
-    </div>
-  `;
-}
-
-function renderDecrees() {
-  pageTitle.textContent = "Decretos y lineamientos";
-  pageSubtitle.textContent = "14 decretos legislativos vigentes";
-
-  const decrees = data.decrees || [];
-  root.innerHTML = `
-    <div style="display:grid;gap:12px">
-      ${decrees.map(d => `
-        <article class="norm-card">
-          <h3>${d.code}</h3>
-          <p>${d.title}</p>
-          <button class="action-btn">Descargar →</button>
-        </article>
-      `).join("")}
-    </div>
-  `;
-}
-
-// ========== ENTRENAMIENTO ==========
-function renderTraining() {
-  pageTitle.textContent = "Entrenamiento SERUMS";
-  pageSubtitle.textContent = "10 escenarios clínicos ramificados";
-
-  root.innerHTML = `
-    <div style="display:grid;gap:12px">
-      <div class="scenario-card">
-        <h3>Escenario 1: Consejería en adicciones</h3>
-        <p>Simulación de entrevista motivacional con paciente en fase de precontemplación.</p>
-        <button class="btn-primary">Iniciar →</button>
-      </div>
-      <div class="scenario-card">
-        <h3>Escenario 2: Evaluación clínica integral</h3>
-        <p>Toma de decisiones en contexto comunitario con recursos limitados.</p>
-        <button class="btn-primary">Iniciar →</button>
-      </div>
-    </div>
-  `;
-}
-
-// ========== CAPACITACIÓN SCREENING ==========
-function renderCapacitacionScreening() {
-  pageTitle.textContent = "Capacitación · Screening";
-  pageSubtitle.textContent = "Módulos de tamizaje clínico validados para formación de SERUMS.";
-  const tools = [
-    {
-      name: "AUDIT / AUDIT-C",
-      badge: "10 ítems · OMS 2001",
-      desc: "Identificación de Trastornos por Consumo de Alcohol. Incluye modo de tamizaje rápido AUDIT-C (3 preguntas, con opción de continuar al AUDIT completo si sale positivo). Disponible en español y quechua ayacuchano validado (Douglas Hospital Research Centre / IPAZ).",
-      url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/capacitacion/capacitacion.html"
-    },
-    {
-      name: "GAD-7",
-      badge: "7 ítems · Spitzer et al., 2006",
-      desc: "Escala de Ansiedad Generalizada. Versión en castellano.",
-      url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/screening/gad7.html"
-    },
-    {
-      name: "PHQ-9",
-      badge: "9 ítems · Kroenke, Spitzer & Williams, 2001",
-      desc: "Cuestionario de Salud del Paciente para depresión. Corte de cribado preventivo MINSA ≥5 (además del corte internacional ≥10). Incluye alerta clínica en el ítem de ideación suicida/autolesión.",
-      url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/screening/phq9.html"
-    },
-    {
-      name: "WAST",
-      badge: "2 ítems · Brown et al., 1996",
-      desc: "Tamizaje corto de violencia de pareja hacia la mujer (Woman Abuse Screening Tool). Versión validada en español (Plazaola-Castaño et al., 2008).",
-      url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/screening/wast.html"
-    },
-    {
-      name: "ASSIST",
-      badge: "10 sustancias · OMS v3.0",
-      desc: "Tamizaje de consumo de alcohol y drogas por sustancia (alcohol, tabaco, marihuana, cocaína y otras). Cortes oficiales OMS 2011, con alerta adicional para adolescentes (RM N.° 753-2021-MINSA).",
-      url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/screening/assist.html"
-    },
-    {
-      name: "CRAFFT",
-      badge: "6 ítems · Knight, 1999 · v2.1",
-      desc: "Tamizaje breve de consumo de alcohol y drogas en adolescentes y jóvenes (10-21 años). Corte oficial: 2 o más respuestas afirmativas = riesgo alto. © Boston Children's Hospital.",
-      url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/screening/crafft.html"
-    },
-    {
-      name: "TDAH",
-      badge: "ASRS-v1.1 · Vanderbilt · SNAP-IV",
-      desc: "Tamizaje de TDAH en adultos (ASRS-v1.1, OMS) y niños (Vanderbilt Padres o SNAP-IV 26, a elegir al ingresar).",
-      url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/screening/tdah.html"
-    },
-    {
-      name: "Nutrición",
-      badge: "Calculadora clínica",
-      desc: "IMC, peso ideal (Devine/Robinson/Miller/Hamwi) y gasto energético (Harris-Benedict/Mifflin-St Jeor). Herramienta de apoyo para el profesional.",
-      url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/screening/nutricion.html"
-    },
-    {
-      name: "SRQ-18",
-      badge: "18 ítems · Screening de Salud General",
-      desc: "Cuestionario de autorreporte para detección de síntomas ansioso-depresivos en población general. Punto de corte: ≥8 = positivo.",
-      url: "screening/srq18.html"
-    },
-    {
-      name: "PSC Pediátrico",
-      badge: "30 ítems · Lista de Síntomas Pediátricos",
-      desc: "Cribado de disfunción psicosocial infantil (4-16 años), completado por padres/cuidadores. Detecta problemas emocionales, conductuales y sociales.",
-      url: "screening/psc-pediatrico.html"
-    },
-    {
-      name: "M-CHAT-R/F",
-      badge: "20 ítems · Detección de Riesgo TEA",
-      desc: "Cribado de riesgo de Trastorno del Espectro Autista en lactantes 16-30 meses. Puntos de corte: 0-2 (bajo), 3-7 (medio), 8+ (alto/derivación urgente).",
-      url: "screening/m-chat-r-f.html"
-    },
-    {
-      name: "GDS-15",
-      badge: "15 ítems · Escala de Depresión Geriátrica (Yesavage)",
-      desc: "Escala validada para detección de depresión en adultos ≥65 años. Sensible a cambios clínicos. Puntos de corte: 0-4 (sin), 5-8 (leve), 9-15 (moderada-severa).",
-      url: "screening/gds15-yesavage.html"
-    },
-    {
-      name: "Quiz Avanzado · Referencia-Contrarreferencia",
-      badge: "Simulador clínico",
-      desc: "Simulador interactivo de casos clínicos de referencia-contrarreferencia. Toma de decisiones en contexto SERUMS con feedback inmediato.",
-      url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/simulador/quiz-avanzado-referencia.html"
-    },
-    {
-      name: "Quiz Etapa Niño",
-      badge: "Simulador pediatría",
-      desc: "Evaluación de competencias en pediatría básica. Casos clínicos pediátricos con criterios de evaluación SERUMS.",
-      url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/simulador/quiz-etapa-nino.html"
-    }
-  ];
-  root.innerHTML = `
-    <div class="norm-list">
-      ${tools.map(t => `
-        <article class="norm-card">
-          <span>${t.badge}</span>
-          <h3>${t.name}</h3>
-          <p>${t.desc}</p>
-          <button class="action-btn" data-url="${t.url}" style="margin-top:10px">Abrir ${t.name} →</button>
-        </article>
-      `).join("")}
-    </div>
-    <p style="margin-top:16px;color:#5B6E6A;font-size:13px">Cada aplicación queda registrada con datos demográficos anonimizados en la base de datos SERUMS.</p>
-  `;
-  root.querySelectorAll("[data-url]").forEach(btn => {
-    btn.addEventListener("click", () => window.open(btn.dataset.url, "_blank"));
-  });
-}
-
-// ========== CLINICAL SCREENING TOOLS ==========
 function renderScreeningTools() {
   pageTitle.textContent = "Clinical Screening Toolkit";
   pageSubtitle.textContent = "Instrumentos de tamizaje clínico validados, con registro automático del caso para investigación epidemiológica.";
@@ -777,93 +1598,45 @@ function renderScreeningTools() {
   });
 }
 
-// ========== HIS CODES CHILD ==========
-function renderHisCodesChild() {
-  pageTitle.textContent = "Códigos HIS — Niño";
-  pageSubtitle.textContent = "173 códigos CIE10 / CPMS para atención pediátrica";
-
+function renderCapacitacionScreening() {
+  pageTitle.textContent = "Capacitación · Screening";
+  pageSubtitle.textContent = "Módulos de tamizaje clínico validados para formación de SERUMS.";
+  const tools = [
+    { name: "AUDIT / AUDIT-C", badge: "10 ítems · OMS 2001", desc: "Identificación de Trastornos por Consumo de Alcohol. Incluye modo de tamizaje rápido AUDIT-C (3 preguntas, con opción de continuar al AUDIT completo si sale positivo). Disponible en español y quechua ayacuchano validado (Douglas Hospital Research Centre / IPAZ).", url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/capacitacion/capacitacion.html" },
+    { name: "GAD-7", badge: "7 ítems · Spitzer et al., 2006", desc: "Escala de Ansiedad Generalizada. Versión en castellano.", url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/screening/gad7.html" },
+    { name: "PHQ-9", badge: "9 ítems · Kroenke, Spitzer & Williams, 2001", desc: "Cuestionario de Salud del Paciente para depresión. Corte de cribado preventivo MINSA ≥5 (además del corte internacional ≥10). Incluye alerta clínica en el ítem de ideación suicida/autolesión.", url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/screening/phq9.html" },
+    { name: "WAST", badge: "2 ítems · Brown et al., 1996", desc: "Tamizaje corto de violencia de pareja hacia la mujer (Woman Abuse Screening Tool). Versión validada en español (Plazaola-Castaño et al., 2008).", url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/screening/wast.html" },
+    { name: "ASSIST", badge: "10 sustancias · OMS v3.0", desc: "Tamizaje de consumo de alcohol y drogas por sustancia (alcohol, tabaco, marihuana, cocaína y otras). Cortes oficiales OMS 2011, con alerta adicional para adolescentes (RM N.° 753-2021-MINSA).", url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/screening/assist.html" },
+    { name: "CRAFFT", badge: "6 ítems · Knight, 1999 · v2.1", desc: "Tamizaje breve de consumo de alcohol y drogas en adolescentes y jóvenes (10-21 años). Corte oficial: 2 o más respuestas afirmativas = riesgo alto. © Boston Children's Hospital.", url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/screening/crafft.html" },
+    { name: "TDAH", badge: "ASRS-v1.1 · Vanderbilt · SNAP-IV", desc: "Tamizaje de TDAH en adultos (ASRS-v1.1, OMS) y niños (Vanderbilt Padres o SNAP-IV 26, a elegir al ingresar).", url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/screening/tdah.html" },
+    { name: "Nutrición", badge: "Calculadora clínica", desc: "IMC, peso ideal (Devine/Robinson/Miller/Hamwi) y gasto energético (Harris-Benedict/Mifflin-St Jeor). Herramienta de apoyo para el profesional.", url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/screening/nutricion.html" },
+    { name: "SRQ-18", badge: "18 ítems · Screening de Salud General", desc: "Cuestionario de autorreporte para detección de síntomas ansioso-depresivos en población general. Punto de corte: ≥8 = positivo.", url: "screening/srq18.html" },
+    { name: "PSC Pediátrico", badge: "30 ítems · Lista de Síntomas Pediátricos", desc: "Cribado de disfunción psicosocial infantil (4-16 años), completado por padres/cuidadores. Detecta problemas emocionales, conductuales y sociales.", url: "screening/psc-pediatrico.html" },
+    { name: "M-CHAT-R/F", badge: "20 ítems · Detección de Riesgo TEA", desc: "Cribado de riesgo de Trastorno del Espectro Autista en lactantes 16-30 meses. Puntos de corte: 0-2 (bajo), 3-7 (medio), 8+ (alto/derivación urgente).", url: "screening/m-chat-r-f.html" },
+    { name: "GDS-15", badge: "15 ítems · Escala de Depresión Geriátrica (Yesavage)", desc: "Escala validada para detección de depresión en adultos ≥65 años. Sensible a cambios clínicos. Puntos de corte: 0-4 (sin), 5-8 (leve), 9-15 (moderada-severa).", url: "screening/gds15-yesavage.html" },
+    { name: "Quiz Avanzado · Referencia-Contrarreferencia", badge: "Simulador clínico", desc: "Simulador interactivo de casos clínicos de referencia-contrarreferencia. Toma de decisiones en contexto SERUMS con feedback inmediato.", url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/simulador/quiz-avanzado-referencia.html" },
+    { name: "Quiz Etapa Niño", badge: "Simulador pediatría", desc: "Evaluación de competencias en pediatría básica. Casos clínicos pediátricos con criterios de evaluación SERUMS.", url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/simulador/quiz-etapa-nino.html" }
+  ];
   root.innerHTML = `
-    <input type="text" id="his-search" placeholder="Buscar código o diagnóstico..." style="width:100%;padding:10px;margin-bottom:16px;border:1px solid #ccc;border-radius:4px">
-    <div id="his-list" style="display:grid;gap:8px"></div>
-  `;
-
-  const hisCodes = data.hisCodigosNino || [];
-  const searchInput = document.getElementById("his-search");
-  const hisList = document.getElementById("his-list");
-
-  function renderHisList() {
-    const q = searchInput.value.toLowerCase();
-    const filtered = hisCodes.filter(h => h.code.toLowerCase().includes(q) || h.desc.toLowerCase().includes(q));
-    hisList.innerHTML = filtered.map(h => `
-      <div style="padding:8px;background:#f9faf9;border-radius:4px;font-size:13px;border-left:3px solid #1e3c72">
-        <strong>${h.code}</strong> — ${h.desc}
-      </div>
-    `).join("");
-  }
-
-  searchInput.addEventListener("input", renderHisList);
-  renderHisList();
-}
-
-// ========== ASSISTANT ==========
-function renderAssistant() {
-  pageTitle.textContent = "Asistente profesional";
-  pageSubtitle.textContent = "Consultor con acceso a normas MINSA y criterios diagnósticos";
-
-  root.innerHTML = `
-    <div style="padding:16px;background:#f0f4f3;border-radius:6px;margin-bottom:16px">
-      <p><strong>Asesoría clínica:</strong> Ingresa síntomas, diagnóstico diferencial o criterios para recibir consulta basada en normas MINSA y evidencia.</p>
+    <div class="norm-list">
+      ${tools.map(t => `
+        <article class="norm-card">
+          <span>${t.badge}</span>
+          <h3>${t.name}</h3>
+          <p>${t.desc}</p>
+          <button class="action-btn" data-url="${t.url}" style="margin-top:10px">Abrir ${t.name} →</button>
+        </article>
+      `).join("")}
     </div>
-    <textarea id="assistant-input" placeholder="Describe el caso clínico..." style="width:100%;height:100px;padding:10px;border:1px solid #ccc;border-radius:4px;margin-bottom:10px"></textarea>
-    <button id="assistant-submit" class="btn-primary">Enviar consulta</button>
-    <div id="assistant-output" style="margin-top:20px"></div>
+    <p style="margin-top:16px;color:#5B6E6A;font-size:13px">Cada aplicación queda registrada con datos demográficos anonimizados en la base de datos SERUMS.</p>
   `;
-
-  document.getElementById("assistant-submit").addEventListener("click", () => {
-    alert("Funcionalidad integrada con API Claude (próxima fase)");
+  root.querySelectorAll("[data-url]").forEach(btn => {
+    btn.addEventListener("click", () => window.open(btn.dataset.url, "_blank"));
   });
 }
 
-// ========== RECURSOS ==========
-function renderResources() {
-  pageTitle.textContent = "Recursos";
-  pageSubtitle.textContent = "";
-
-  root.innerHTML = `
-    <div style="display:grid;gap:12px">
-      <div class="scenario-card">
-        <h3>Documentación SERUMS</h3>
-        <p>Acceso a documentos oficiales, cronogramas y normativa.</p>
-        <button class="btn-secondary">Descargar →</button>
-      </div>
-      <div class="scenario-card">
-        <h3>Bibliografía de referencia</h3>
-        <p>Artículos, guías clínicas y literatura actualizada.</p>
-        <button class="btn-secondary">Consultar →</button>
-      </div>
-    </div>
-  `;
-}
-
-// ========== EXAM REGISTRY ==========
-function renderExamRegistry() {
-  pageTitle.textContent = "Registro de exámenes";
-  pageSubtitle.textContent = "";
-
-  root.innerHTML = `
-    <div style="padding:16px;background:#f9faf9;border-radius:6px">
-      <p>Historial vacío. Completa simulacros para registrar intentos.</p>
-    </div>
-  `;
-}
-
-// ========== INICIALIZACIÓN ==========
-window.addEventListener("DOMContentLoaded", async () => {
-  const session = await supabaseClient.auth.getSession();
-  if (session.data.session) {
-    currentUser = session.data.session.user;
-    loginScreen.style.display = "none";
-    appContainer.style.display = "flex";
-    renderView("dashboard");
-  }
-});
+navButtons.forEach(btn => btn.addEventListener("click", () => {
+  priorityReviewMode = false;
+  renderView(btn.dataset.view);
+}));
+renderView("dashboard");
