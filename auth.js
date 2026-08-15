@@ -16,7 +16,6 @@ const errorMsg = document.getElementById("login-error");
 function showApp() {
   loginScreen.style.display = "none";
   appRoot.style.display = "flex";
-  // Notifica a app.js (si ya cargó) que puede iniciar el render.
   window.dispatchEvent(new Event("sip-authenticated"));
 }
 
@@ -26,32 +25,55 @@ function showLogin() {
 }
 
 async function checkSession() {
-  const { data: { session } } = await supabaseClient.auth.getSession();
-  if (session) {
-    showApp();
-  } else {
+  try {
+    const { data: { session } } = await supabaseClient.auth.getSession();
+    if (session) {
+      showApp();
+    } else {
+      showLogin();
+    }
+  } catch (err) {
+    console.error("Error checking session:", err);
     showLogin();
   }
 }
 
 submitBtn.addEventListener("click", async () => {
+  errorMsg.innerHTML = "";
   errorMsg.style.display = "none";
   submitBtn.disabled = true;
   submitBtn.textContent = "Ingresando...";
-  const { error } = await supabaseClient.auth.signInWithPassword({
-    email: emailInput.value.trim(),
-    password: passwordInput.value
-  });
-  submitBtn.disabled = false;
-  submitBtn.textContent = "Ingresar";
-  if (error) {
+  
+  try {
+    const { error, data } = await supabaseClient.auth.signInWithPassword({
+      email: emailInput.value.trim(),
+      password: passwordInput.value
+    });
+    
+    submitBtn.disabled = false;
+    submitBtn.textContent = "Ingresar";
+    
+    if (error) {
+      console.error("Login error:", error);
+      errorMsg.innerHTML = error.message || "Error al iniciar sesión. Verifica credenciales.";
+      errorMsg.style.display = "block";
+      return;
+    }
+    
+    if (data.session) {
+      console.log("Login exitoso");
+      showApp();
+    }
+  } catch (err) {
+    console.error("Auth exception:", err);
+    submitBtn.disabled = false;
+    submitBtn.textContent = "Ingresar";
+    errorMsg.innerHTML = "Error inesperado. Intenta nuevamente.";
     errorMsg.style.display = "block";
-    return;
   }
-  showApp();
 });
 
-// Permite iniciar sesión presionando Enter en el campo de contraseña.
+// Permite iniciar sesión presionando Enter
 passwordInput.addEventListener("keydown", (e) => {
   if (e.key === "Enter") submitBtn.click();
 });
@@ -62,8 +84,11 @@ document.addEventListener("DOMContentLoaded", () => {
     logoutBtn.addEventListener("click", async () => {
       await supabaseClient.auth.signOut();
       showLogin();
+      emailInput.value = "";
+      passwordInput.value = "";
     });
   }
 });
 
+// Verificar sesión al cargar
 checkSession();
