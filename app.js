@@ -1505,43 +1505,43 @@ function renderScreeningTools() {
       name: "GAD-7",
       badge: "7 ítems · Spitzer et al., 2006",
       desc: "Escala de Ansiedad Generalizada. Versión en castellano.",
-      url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/screening/gad7.html"
+      url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/gad7.html"
     },
     {
       name: "PHQ-9",
       badge: "9 ítems · Kroenke, Spitzer & Williams, 2001",
       desc: "Cuestionario de Salud del Paciente para depresión. Corte de cribado preventivo MINSA ≥5 (además del corte internacional ≥10). Incluye alerta clínica en el ítem de ideación suicida/autolesión.",
-      url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/screening/phq9.html"
+      url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/phq9.html"
     },
     {
       name: "WAST",
       badge: "2 ítems · Brown et al., 1996",
       desc: "Tamizaje corto de violencia de pareja hacia la mujer (Woman Abuse Screening Tool). Versión validada en español (Plazaola-Castaño et al., 2008).",
-      url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/screening/wast.html"
+      url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/wast.html"
     },
     {
       name: "ASSIST",
       badge: "10 sustancias · OMS v3.0",
       desc: "Tamizaje de consumo de alcohol y drogas por sustancia (alcohol, tabaco, marihuana, cocaína y otras). Cortes oficiales OMS 2011, con alerta adicional para adolescentes (RM N.° 753-2021-MINSA).",
-      url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/screening/assist.html"
+      url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/assist.html"
     },
     {
       name: "CRAFFT",
       badge: "6 ítems · Knight, 1999 · v2.1",
       desc: "Tamizaje breve de consumo de alcohol y drogas en adolescentes y jóvenes (10-21 años). Corte oficial: 2 o más respuestas afirmativas = riesgo alto. © Boston Children's Hospital.",
-      url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/screening/crafft.html"
+      url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/crafft.html"
     },
     {
       name: "TDAH",
       badge: "ASRS-v1.1 · Vanderbilt · SNAP-IV",
       desc: "Tamizaje de TDAH en adultos (ASRS-v1.1, OMS) y niños (Vanderbilt Padres o SNAP-IV 26, a elegir al ingresar).",
-      url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/screening/tdah.html"
+      url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/tdah.html"
     },
     {
       name: "Nutrición",
       badge: "Calculadora clínica",
       desc: "IMC, peso ideal (Devine/Robinson/Miller/Hamwi) y gasto energético (Harris-Benedict/Mifflin-St Jeor). Herramienta de apoyo para el profesional.",
-      url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/screening/nutricion.html"
+      url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/nutricion.html"
     },
     {
       name: "SRQ-18",
@@ -1603,19 +1603,21 @@ function renderCapacitacionScreening() {
   pageSubtitle.textContent = "Módulos de tamizaje clínico validados para formación de SERUMS.";
   const tools = [
     { name: "AUDIT / AUDIT-C", badge: "10 ítems · OMS 2001", desc: "Identificación de Trastornos por Consumo de Alcohol. Incluye modo de tamizaje rápido AUDIT-C (3 preguntas, con opción de continuar al AUDIT completo si sale positivo). Disponible en español y quechua ayacuchano validado (Douglas Hospital Research Centre / IPAZ).", url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/capacitacion/capacitacion.html" },
-    { name: "GAD-7", badge: "7 ítems · Spitzer et al., 2006", desc: "Escala de Ansiedad Generalizada. Versión en castellano.", url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/screening/gad7.html" },
-    { name: "PHQ-9", badge: "9 ítems · Kroenke, Spitzer & Williams, 2001", desc: "Cuestionario de Salud del Paciente para depresión. Corte de cribado preventivo MINSA ≥5 (además del corte internacional ≥10). Incluye alerta clínica en el ítem de ideación suicida/autolesión.", url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/screening/phq9.html" },
-    { name: "WAST", badge: "2 ítems · Brown et al., 1996", desc: "Tamizaje corto de violencia de pareja hacia la mujer (Woman Abuse Screening Tool). Versión validada en español (Plazaola-Castaño et al., 2008).", url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/screening/wast.html" },
-    { name: "ASSIST", badge: "10 sustancias · OMS v3.0", desc: "Tamizaje de consumo de alcohol y drogas por sustancia (alcohol, tabaco, marihuana, cocaína y otras). Cortes oficiales OMS 2011, con alerta adicional para adolescentes (RM N.° 753-2021-MINSA).", url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/screening/assist.html" },
-    { name: "CRAFFT", badge: "6 ítems · Knight, 1999 · v2.1", desc: "Tamizaje breve de consumo de alcohol y drogas en adolescentes y jóvenes (10-21 años). Corte oficial: 2 o más respuestas afirmativas = riesgo alto. © Boston Children's Hospital.", url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/screening/crafft.html" },
-    { name: "TDAH", badge: "ASRS-v1.1 · Vanderbilt · SNAP-IV", desc: "Tamizaje de TDAH en adultos (ASRS-v1.1, OMS) y niños (Vanderbilt Padres o SNAP-IV 26, a elegir al ingresar).", url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/screening/tdah.html" },
-    { name: "Nutrición", badge: "Calculadora clínica", desc: "IMC, peso ideal (Devine/Robinson/Miller/Hamwi) y gasto energético (Harris-Benedict/Mifflin-St Jeor). Herramienta de apoyo para el profesional.", url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/screening/nutricion.html" },
+    { name: "GAD-7", badge: "7 ítems · Spitzer et al., 2006", desc: "Escala de Ansiedad Generalizada. Versión en castellano.", url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/gad7.html" },
+    { name: "PHQ-9", badge: "9 ítems · Kroenke, Spitzer & Williams, 2001", desc: "Cuestionario de Salud del Paciente para depresión. Corte de cribado preventivo MINSA ≥5 (además del corte internacional ≥10). Incluye alerta clínica en el ítem de ideación suicida/autolesión.", url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/phq9.html" },
+    { name: "WAST", badge: "2 ítems · Brown et al., 1996", desc: "Tamizaje corto de violencia de pareja hacia la mujer (Woman Abuse Screening Tool). Versión validada en español (Plazaola-Castaño et al., 2008).", url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/wast.html" },
+    { name: "ASSIST", badge: "10 sustancias · OMS v3.0", desc: "Tamizaje de consumo de alcohol y drogas por sustancia (alcohol, tabaco, marihuana, cocaína y otras). Cortes oficiales OMS 2011, con alerta adicional para adolescentes (RM N.° 753-2021-MINSA).", url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/assist.html" },
+    { name: "CRAFFT", badge: "6 ítems · Knight, 1999 · v2.1", desc: "Tamizaje breve de consumo de alcohol y drogas en adolescentes y jóvenes (10-21 años). Corte oficial: 2 o más respuestas afirmativas = riesgo alto. © Boston Children's Hospital.", url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/crafft.html" },
+    { name: "TDAH", badge: "ASRS-v1.1 · Vanderbilt · SNAP-IV", desc: "Tamizaje de TDAH en adultos (ASRS-v1.1, OMS) y niños (Vanderbilt Padres o SNAP-IV 26, a elegir al ingresar).", url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/tdah.html" },
+    { name: "Nutrición", badge: "Calculadora clínica", desc: "IMC, peso ideal (Devine/Robinson/Miller/Hamwi) y gasto energético (Harris-Benedict/Mifflin-St Jeor). Herramienta de apoyo para el profesional.", url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/nutricion.html" },
     { name: "SRQ-18", badge: "18 ítems · Screening de Salud General", desc: "Cuestionario de autorreporte para detección de síntomas ansioso-depresivos en población general. Punto de corte: ≥8 = positivo.", url: "screening/srq18.html" },
     { name: "PSC Pediátrico", badge: "30 ítems · Lista de Síntomas Pediátricos", desc: "Cribado de disfunción psicosocial infantil (4-16 años), completado por padres/cuidadores. Detecta problemas emocionales, conductuales y sociales.", url: "screening/psc-pediatrico.html" },
     { name: "M-CHAT-R/F", badge: "20 ítems · Detección de Riesgo TEA", desc: "Cribado de riesgo de Trastorno del Espectro Autista en lactantes 16-30 meses. Puntos de corte: 0-2 (bajo), 3-7 (medio), 8+ (alto/derivación urgente).", url: "screening/m-chat-r-f.html" },
     { name: "GDS-15", badge: "15 ítems · Escala de Depresión Geriátrica (Yesavage)", desc: "Escala validada para detección de depresión en adultos ≥65 años. Sensible a cambios clínicos. Puntos de corte: 0-4 (sin), 5-8 (leve), 9-15 (moderada-severa).", url: "screening/gds15-yesavage.html" },
     { name: "Quiz Avanzado · Referencia-Contrarreferencia", badge: "Simulador clínico", desc: "Simulador interactivo de casos clínicos de referencia-contrarreferencia. Toma de decisiones en contexto SERUMS con feedback inmediato.", url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/simulador/quiz-avanzado-referencia.html" },
-    { name: "Quiz Etapa Niño", badge: "Simulador pediatría", desc: "Evaluación de competencias en pediatría básica. Casos clínicos pediátricos con criterios de evaluación SERUMS.", url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/simulador/quiz-etapa-nino.html" }
+    { name: "Quiz Etapa Niño", badge: "Simulador pediatría", desc: "Evaluación de competencias en pediatría básica. Casos clínicos pediátricos con criterios de evaluación SERUMS.", url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/simulador/quiz-etapa-nino.html" },
+    { name: "Contrarreferencia — Formato Interactivo", badge: "Anexo MINSA · Campos reales para llenar", desc: "Formulario interactivo (no cuadro de texto): datos de alta, diagnóstico CIE-10, medicación y plan de seguimiento con campos individuales.", url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/simulador/formato-contrarreferencia-realista.html" },
+    { name: "Derivación — Formato Interactivo", badge: "Anexo MINSA · Campos reales para llenar", desc: "Formulario interactivo (no cuadro de texto) para derivación/referencia, con los mismos campos del documento oficial MINSA.", url: "https://4-4-1941.github.io/SCREENING-TOOLS-SERUMS-PER--SIP/simulador/formato-derivacion-realista.html" }
   ];
   root.innerHTML = `
     <div class="norm-list">
