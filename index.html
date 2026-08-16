@@ -14,9 +14,8 @@
     <div id="login-screen" class="login-container">
         <div class="login-box">
             <div class="login-header">
-                <div class="logo">📚</div>
-                <h1>SERUM-APP v2.0</h1>
-                <p>Plataforma Integrada: Capacitación, Casos Clínicos y Simulacro</p>
+                <img src="logo-sidebar.png" alt="SIP SYSTEM INTELLIGENCE PLATFORM" class="login-logo">
+                <div class="login-brand">© SIP SYSTEM INTELLIGENCE PLATFORM</div>
             </div>
             <form class="login-form" onsubmit="return false;">
                 <div class="form-group">
@@ -36,8 +35,8 @@
     <!-- MAIN APP -->
     <div class="app" style="display:none;">
         <header class="header">
-            <div class="logo">📚</div>
-            <div>
+            <img src="logo-sidebar.png" alt="SIP SYSTEM INTELLIGENCE PLATFORM" class="header-logo" onclick="renderView('dashboard')" style="cursor:pointer" title="Ir al Tablero">
+            <div onclick="renderView('dashboard')" style="cursor:pointer" title="Ir al Tablero">
                 <h1>SERUM-APP v2.0</h1>
                 <p>Plataforma Integrada: Capacitación, Casos Clínicos y Simulacro</p>
             </div>
@@ -132,3 +131,8 @@
     <script src="app.js"></script>
 </body>
 </html>
+
+
+
+
+
