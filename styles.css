@@ -95,20 +95,24 @@ textarea#notes,textarea.input,select,input[type="text"],input:not([type]){width:
 /* ===== MÓVIL (< 861px): columna verde pasa arriba ===== */
 @media (max-width:860px){
   .app{grid-template-columns:1fr;grid-template-rows:auto 1fr}
-  .sidebar{position:static;height:auto;width:100%;padding:14px 12px;gap:10px}
+  html,body{overflow-x:hidden;-webkit-text-size-adjust:100%}
+  .sidebar{position:static;height:auto;width:100%;padding:16px 14px;gap:10px}
   .brand{flex-direction:row;text-align:left;align-items:center;gap:12px;border-bottom:1px solid rgba(234,243,240,.16);padding-bottom:10px;width:100%}
-  .brand .brand-logo{width:52px;height:52px;margin-bottom:0}
-  .brand .institucion{font-size:9px;letter-spacing:.1em}
-  .brand .app-title{font-size:19px}
-  .nav{flex-direction:row;flex-wrap:nowrap;overflow-x:auto;gap:6px}
-  .nav-section-label{flex:0 0 auto;margin:0 4px;border-bottom:none}
-  .nav-btn{width:auto;flex:0 0 auto;padding:9px 12px;font-size:12.5px;white-space:nowrap}
+  .brand .brand-logo{width:56px;height:56px;margin-bottom:0;flex-shrink:0}
+  .brand .institucion{font-size:10px;letter-spacing:.08em}
+  .brand .app-title{font-size:20px}
+  /* Menú en rejilla que ENVUELVE (no comprimido en una fila) */
+  .nav{flex-direction:row;flex-wrap:wrap;gap:8px}
+  .nav-section-label{flex:1 0 100%;margin:8px 4px 0;border-bottom:none;font-size:11px}
+  .nav-btn{width:auto;flex:1 1 auto;min-width:min(46%,140px);padding:12px 14px;font-size:14px;white-space:normal;text-align:center}
   .side-foot{flex-direction:row;justify-content:flex-end;align-items:center;width:100%}
-  main.main{padding:18px 14px 60px}
-  #page-title{font-size:22px}
+  main.main{padding:20px 14px 60px;width:100%}
+  #page-title{font-size:24px}
   .two-col{grid-template-columns:1fr}
-  .metrics{grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
-  .card,.panel{padding:15px}
+  .metrics{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+  .card,.panel{padding:16px}
+  .value{font-size:26px}
+  .section-title{font-size:19px}
 }
 
 @media (prefers-reduced-motion:reduce){*{transition:none !important}}
@@ -133,3 +137,4 @@ textarea#notes,textarea.input,select,input[type="text"],input:not([type]){width:
   .print-table th{color:#5B6E6A;font-weight:600;text-transform:uppercase;font-size:11px;letter-spacing:.05em}
   .print-note{font-size:11px;color:#5B6E6A;line-height:1.6;margin-top:20px}
 }
+
