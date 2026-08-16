@@ -119,23 +119,27 @@ nav.nav .app-sub{display:block;font-family:"IBM Plex Sans",Arial,serif;font-size
 .nav-btn:hover{background:#1E4A42;border-color:rgba(255,255,255,.25)}
 .nav-btn.active{background:var(--seal-soft);color:#3A2E14;border-color:var(--seal);font-weight:600}
 
-/* ---------- Encabezado (PC) ---------- */
+/* ---------- Encabezado (se integra con el verde del sidebar) ---------- */
 header.header{
-  background:var(--surface);border-bottom:1px solid var(--line);
-  padding:14px 24px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+  background:linear-gradient(180deg,var(--primary-dark),#0C3B34);
+  color:#EAF3F0;
+  padding:16px 24px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+  border-bottom:2px solid var(--seal);
 }
 header.header .header-logo{
-  width:44px;height:44px;border-radius:50%;object-fit:cover;
-  flex-shrink:0;box-shadow:0 0 0 2px rgba(20,92,82,.12);
+  width:46px;height:46px;border-radius:50%;object-fit:cover;
+  flex-shrink:0;box-shadow:0 0 0 2px rgba(234,243,240,.18);
+  background:#fff;
 }
-header.header .logo-text h1{margin:0;font-size:18px;color:var(--primary-dark)}
-header.header .logo-text p{margin:2px 0 0;color:var(--muted);font-size:12px}
+header.header h1{margin:0;font-size:19px;color:#fff;font-family:"Source Serif 4",Georgia,serif}
+header.header p{margin:2px 0 0;color:#B9CFC9;font-size:12px}
 .header-badges{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
-.badge{display:inline-block;padding:6px 11px;border-radius:999px;background:var(--primary-soft);
-  color:var(--primary-dark);font-size:11.5px;font-weight:700}
-.logout-btn{padding:8px 14px;border:1px solid var(--line);border-radius:10px;background:#FBFDFC;
-  color:var(--primary-dark);font:inherit;font-weight:600;font-size:13px;cursor:pointer}
-.logout-btn:hover{background:var(--primary-soft);border-color:var(--primary)}
+.badge{display:inline-block;padding:6px 11px;border-radius:999px;background:var(--seal-soft);
+  color:#3A2E14;font-size:11.5px;font-weight:700}
+.logout-btn{padding:8px 14px;border:1px solid rgba(255,255,255,.25);border-radius:10px;
+  background:rgba(255,255,255,.08);color:#EAF3F0;font:inherit;font-weight:600;font-size:13px;cursor:pointer;
+  transition:background .15s ease}
+.logout-btn:hover{background:rgba(255,255,255,.18)}
 
 /* ---------- Contenido (PC) ---------- */
 main.main{padding:26px 26px 44px;min-width:0}
@@ -282,5 +286,6 @@ textarea#notes,textarea.input,select,input[type="text"],input:not([type]){width:
   .print-table th{color:#5B6E6A;font-weight:600;text-transform:uppercase;font-size:11px;letter-spacing:.05em}
   .print-note{font-size:11px;color:#5B6E6A;line-height:1.6;margin-top:20px}
 }
+
 
 
