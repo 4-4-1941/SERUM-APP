@@ -239,17 +239,39 @@ textarea#notes,textarea.input,select,input[type="text"],input:not([type]){width:
   background:#FBFDFC;color:var(--primary-dark)}
 .filter-box summary::marker{color:var(--primary)}
 
-/* ===== Responsive ===== */
+/* ===== Responsive: PC (≥860px) mantiene sidebar | Móvil (<860px) = barra superior ===== */
+@media (min-width:861px){
+  .app{grid-template-columns:272px 1fr}
+  nav.nav{position:sticky;top:0;height:100vh;overflow-y:auto}
+  .nav-logo-mobile, .brand-mobile{display:none}
+}
+
 @media (max-width:860px){
-  .app{grid-template-columns:1fr}
-  nav.nav{height:auto;position:static;flex-direction:row;flex-wrap:wrap;align-items:center}
+  .app{grid-template-columns:1fr;grid-template-rows:auto 1fr}
+  /* Sidebar se convierte en barra superior pegada arriba: logo SIEMPRE visible + menu horizontal */
+  nav.nav{
+    position:sticky;top:0;z-index:20;
+    display:flex;flex-direction:column;align-items:stretch;
+    gap:4px;height:auto;
+    padding:10px 12px;background:linear-gradient(180deg,var(--primary-dark),#0A2B26);
+  }
+  /* Marca / logo compacto arriba, SIEMPRE visible */
+  nav.nav .logo{
+    display:flex;margin:0 0 4px;padding-bottom:8px;
+    border-bottom:1px solid rgba(255,255,255,.15);
+  }
   nav.nav .logo::before{display:none}
-  nav.nav .logo{display:none}
-  .nav-section-label{display:none}
-  .nav-btn{width:auto}
+  nav.nav .logo .app-name{font-size:17px}
+  nav.nav .logo .app-sub{font-size:10.5px}
+  /* Menú en fila horizontal con scroll */
+  nav.nav .nav{flex-direction:row;flex-wrap:nowrap;gap:6px;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch}
+  .nav-section-label{display:block;font-size:9.5px;margin:6px 0 0}
+  .nav-btn{width:auto;flex:0 0 auto;padding:9px 12px;font-size:13px;white-space:nowrap}
   .two-col{grid-template-columns:1fr}
-  .main{padding:20px}
-  .header .header-badges{order:5;margin-left:0}
+  .main{padding:16px}
+  header.header{flex-wrap:wrap;padding:14px 16px}
+  .header-badges{order:5;margin-left:0;width:100%;justify-content:flex-start}
+  .metrics{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
 }
 
 @media (prefers-reduced-motion:reduce){*{transition:none !important}}
@@ -277,4 +299,6 @@ textarea#notes,textarea.input,select,input[type="text"],input:not([type]){width:
   .print-table th{color:#5B6E6A;font-weight:600;text-transform:uppercase;font-size:11px;letter-spacing:.05em}
   .print-note{font-size:11px;color:#5B6E6A;line-height:1.6;margin-top:20px}
 }
+
+
 
