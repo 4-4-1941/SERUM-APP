@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SERUMS SIP · Plataforma Unificada</title>
     <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=20260816">
     <meta name="theme-color" content="#1e3c72">
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
@@ -34,17 +34,13 @@
 
     <!-- MAIN APP -->
     <div class="app" style="display:none;">
+      <div class="side">
         <header class="header">
             <img src="logo-sidebar.png" alt="SIP SYSTEM INTELLIGENCE PLATFORM" class="header-logo" onclick="renderView('dashboard')" style="cursor:pointer" title="Ir al Tablero">
-            <div onclick="renderView('dashboard')" style="cursor:pointer" title="Ir al Tablero">
-                <h1>SERUMS SIP</h1>
-                <p>SIP SYSTEM INTELLIGENCE PLATFORM · Capacitación, Casos Clínicos y Simulacro</p>
+            <div class="brand-text" onclick="renderView('dashboard')" style="cursor:pointer" title="Ir al Tablero">
+                <span class="institucion">SIP SYSTEM INTELLIGENCE PLATFORM</span>
+                <span class="app-title">SERUMS SIP V2</span>
             </div>
-            <div class="header-badges">
-                <span id="score-badge" class="badge"></span>
-                <span id="resolved-badge" class="badge"></span>
-            </div>
-            <button id="logout-btn" class="logout-btn">Salir</button>
         </header>
 
         <nav class="nav">
@@ -131,6 +127,8 @@
     <script src="app.js"></script>
 </body>
 </html>
+
+
 
 
 
