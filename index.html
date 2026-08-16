@@ -32,34 +32,41 @@
         </div>
     </div>
 
-    <!-- MAIN APP -->
+    <!-- MAIN APP: DOS COLUMNAS -->
     <div class="app" style="display:none;">
-      <div class="side">
-        <header class="header">
-            <img src="logo-sidebar.png" alt="SIP SYSTEM INTELLIGENCE PLATFORM" class="header-logo" onclick="renderView('dashboard')" style="cursor:pointer" title="Ir al Tablero">
-            <div class="brand-text" onclick="renderView('dashboard')" style="cursor:pointer" title="Ir al Tablero">
+        <aside class="sidebar">
+            <div class="brand" onclick="renderView('dashboard')" style="cursor:pointer" title="Ir al Tablero">
+                <img src="logo-sidebar.png" alt="SIP SYSTEM INTELLIGENCE PLATFORM" class="brand-logo">
                 <span class="institucion">SIP SYSTEM INTELLIGENCE PLATFORM</span>
                 <span class="app-title">SERUMS SIP V2</span>
             </div>
-        </header>
 
-        <nav class="nav">
-            <button class="nav-btn active" data-view="dashboard" onclick="renderView('dashboard')" type="button">Tablero</button>
-            <button class="nav-btn" data-view="cases" onclick="renderView('cases')" type="button">Casos Clínicos</button>
-            <button class="nav-btn" data-view="simulacro" onclick="renderView('simulacro')" type="button">Simulacro (100)</button>
-            <button class="nav-btn" data-view="glossary" onclick="renderView('glossary')" type="button">Conceptos Clave</button>
-            <button class="nav-btn" data-view="norms" onclick="renderView('norms')" type="button">Normativa</button>
-            <button class="nav-btn" data-view="priorityNorms" onclick="renderView('priorityNorms')" type="button">Normas Prioritarias 2026</button>
-            <button class="nav-btn" data-view="decrees" onclick="renderView('decrees')" type="button">Decretos</button>
-            <button class="nav-btn" data-view="resources" onclick="renderView('resources')" type="button">Recursos</button>
-            <div class="nav-section-label">ENTRENAMIENTO</div>
-            <button class="nav-btn" data-view="training" onclick="renderView('training')" type="button">Entrenamiento SERUMS</button>
-            <button class="nav-btn" data-view="screening" onclick="renderView('screening')" type="button">Capacitación Screening</button>
-            <div class="nav-section-label">ASISTENTE PROFESIONAL</div>
-            <button class="nav-btn" data-view="assistant" onclick="renderView('assistant')" type="button">Formatos y oficios</button>
-            <button class="nav-btn" data-view="hisCodesChild" onclick="renderView('hisCodesChild')" type="button">Códigos HIS</button>
-            <button class="nav-btn" data-view="screeningTools" onclick="renderView('screeningTools')" type="button">Clinical Screening</button>
-        </nav>
+            <nav class="nav">
+                <button class="nav-btn active" data-view="dashboard" onclick="renderView('dashboard')" type="button">Tablero</button>
+                <button class="nav-btn" data-view="cases" onclick="renderView('cases')" type="button">Casos Clínicos</button>
+                <button class="nav-btn" data-view="simulacro" onclick="renderView('simulacro')" type="button">Simulacro (100)</button>
+                <button class="nav-btn" data-view="glossary" onclick="renderView('glossary')" type="button">Conceptos Clave</button>
+                <button class="nav-btn" data-view="norms" onclick="renderView('norms')" type="button">Normativa</button>
+                <button class="nav-btn" data-view="priorityNorms" onclick="renderView('priorityNorms')" type="button">Normas Prioritarias 2026</button>
+                <button class="nav-btn" data-view="decrees" onclick="renderView('decrees')" type="button">Decretos</button>
+                <button class="nav-btn" data-view="resources" onclick="renderView('resources')" type="button">Recursos</button>
+                <div class="nav-section-label">ENTRENAMIENTO</div>
+                <button class="nav-btn" data-view="training" onclick="renderView('training')" type="button">Entrenamiento SERUMS</button>
+                <button class="nav-btn" data-view="screening" onclick="renderView('screening')" type="button">Capacitación Screening</button>
+                <div class="nav-section-label">ASISTENTE PROFESIONAL</div>
+                <button class="nav-btn" data-view="assistant" onclick="renderView('assistant')" type="button">Formatos y oficios</button>
+                <button class="nav-btn" data-view="hisCodesChild" onclick="renderView('hisCodesChild')" type="button">Códigos HIS</button>
+                <button class="nav-btn" data-view="screeningTools" onclick="renderView('screeningTools')" type="button">Clinical Screening</button>
+            </nav>
+
+            <div class="side-foot">
+                <div class="header-badges">
+                    <span id="score-badge" class="badge"></span>
+                    <span id="resolved-badge" class="badge"></span>
+                </div>
+                <button id="logout-btn" class="logout-btn">Salir</button>
+            </div>
+        </aside>
 
         <main id="view-root" class="main">
             <h2 id="page-title"></h2>
@@ -105,7 +112,7 @@
             <button id="save-notes" class="action-btn" style="display:none;">Guardar notas</button>
             <textarea id="notes" style="display:none;"></textarea>
             <button id="review-btn" class="action-btn" style="display:none;">Repasar ahora →</button>
-            <button id="exam-registry-btn" class="toggle" style="display:none;">📚 Base de Datos SERUMS</button>
+            <button id="exam-registry-btn" class="toggle" style="display:none;">Base de Datos SERUMS</button>
             <div id="examRegistry"></div>
             <button id="back-to-filters-btn" class="action-btn" style="display:none;">← Volver a filtros</button>
             <button id="compare-btn" class="action-btn" style="display:none;">Comparar con respuesta →</button>
@@ -127,12 +134,3 @@
     <script src="app.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
