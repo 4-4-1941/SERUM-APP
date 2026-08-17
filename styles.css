@@ -3,6 +3,12 @@
    DOS COLUMNAS: .sidebar verde (cabecera + comandos) | .main clara (contenido)
    Encaja 1:1 con el index.html (sidebar/brand/brand-logo/institucion/app-title)
    SOLO ESTILOS — no altera app.js, data.js ni auth.js
+   
+   ESTILO AIREADO (julio) aplicado por petición del usuario:
+     · columna 272px (antes 300px)
+     · gap 20px entre secciones del sidebar (antes 12px)
+     · botones de menú suaves: rgba(255,255,255,.04) + borde transparente (antes #163A33)
+     · móvil: menú en fila horizontal deslizable (flex-direction:row + scroll), no rejilla
    ============================================================ */
 :root{--ink:#152726;--muted:#5B6E6A;--paper:#EEF2F0;--surface:#fff;--line:#DCE4E1;--primary:#145C52;--primary-dark:#0C3B34;--primary-soft:#DCEAE6;--seal:#8A6D3B;--seal-soft:#F1E9D8;--green:#1B7A4D;--red:#B3261E;--shadow:0 10px 28px rgba(12,45,40,.1);--r:14px}
 *{box-sizing:border-box}
@@ -26,18 +32,18 @@ h1,h2,h3{font-family:"Source Serif 4",Georgia,serif}
 .login-btn:disabled{background:#A9B7B3;cursor:not-allowed}
 
 /* ===== APLICACIÓN: DOS COLUMNAS ===== */
-.app{display:grid;grid-template-columns:300px 1fr;align-items:start;min-height:100vh}
+.app{display:grid;grid-template-columns:272px 1fr;align-items:start;min-height:100vh}
 
 /* --- Columna IZQUIERDA (verde) --- */
-.sidebar{background:linear-gradient(180deg,var(--primary-dark),#0A2B26 92%);color:#EAF3F0;padding:26px 22px;display:flex;flex-direction:column;gap:12px;position:sticky;top:0;height:100vh;overflow-y:auto}
+.sidebar{background:linear-gradient(180deg,var(--primary-dark),#0A2B26 92%);color:#EAF3F0;padding:26px 22px;display:flex;flex-direction:column;gap:20px;position:sticky;top:0;height:100vh;overflow-y:auto}
 .brand{display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px;padding:6px 0 16px;border-bottom:1px solid rgba(234,243,240,.16);margin-bottom:8px}
 .brand .brand-logo{width:72px;height:72px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 2px rgba(234,243,240,.18);background:#fff;margin-bottom:6px}
 .brand .institucion{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#9FB8B2;font-weight:600}
 .brand .app-title{font-family:"Source Serif 4",Georgia,serif;font-size:21px;color:#fff;font-weight:600}
 .nav{display:flex;flex-direction:column;gap:10px}
 .nav-section-label{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:#8FA9A3;margin:18px 4px 4px;font-weight:700;border-bottom:1px solid rgba(255,255,255,.08);padding-bottom:6px}
-.nav-btn{padding:13px 16px;border:1px solid rgba(255,255,255,.14);border-radius:10px;background:#163A33;color:#EAF3F0;text-align:left;cursor:pointer;font:inherit;font-size:14px;font-weight:600;transition:background .15s ease;width:100%}
-.nav-btn:hover{background:#1E4A42}
+.nav-btn{padding:13px 16px;border:1px solid transparent;border-radius:10px;background:rgba(255,255,255,.04);color:#EAF3F0;text-align:left;cursor:pointer;font:inherit;font-size:14px;font-weight:600;transition:background .15s ease;width:100%}
+.nav-btn:hover{background:rgba(255,255,255,.08)}
 .nav-btn.active{background:var(--seal-soft);color:#3A2E14;border-color:var(--seal)}
 .side-foot{margin-top:auto;border-top:1px solid rgba(234,243,240,.15);padding-top:12px;display:flex;flex-direction:column;gap:10px}
 .header-badges{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
@@ -101,10 +107,10 @@ textarea#notes,textarea.input,select,input[type="text"],input:not([type]){width:
   .brand .brand-logo{width:56px;height:56px;margin-bottom:0;flex-shrink:0}
   .brand .institucion{font-size:10px;letter-spacing:.08em}
   .brand .app-title{font-size:20px}
-  /* Menú en rejilla que ENVUELVE (no comprimido en una fila) */
-  .nav{flex-direction:row;flex-wrap:wrap;gap:8px}
+  /* Menú en FILA HORIZONTAL deslizable (estilo julio) */
+  .nav{flex-direction:row;flex-wrap:nowrap;gap:10px;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:6px}
   .nav-section-label{flex:1 0 100%;margin:8px 4px 0;border-bottom:none;font-size:11px}
-  .nav-btn{width:auto;flex:1 1 auto;min-width:min(46%,140px);padding:12px 14px;font-size:14px;white-space:normal;text-align:center}
+  .nav-btn{width:auto;flex:0 0 auto;padding:12px 16px;font-size:14px;white-space:nowrap;text-align:center}
   .side-foot{flex-direction:row;justify-content:flex-end;align-items:center;width:100%}
   main.main{padding:20px 14px 60px;width:100%}
   #page-title{font-size:24px}
@@ -137,7 +143,4 @@ textarea#notes,textarea.input,select,input[type="text"],input:not([type]){width:
   .print-table th{color:#5B6E6A;font-weight:600;text-transform:uppercase;font-size:11px;letter-spacing:.05em}
   .print-note{font-size:11px;color:#5B6E6A;line-height:1.6;margin-top:20px}
 }
-
-
-
 
