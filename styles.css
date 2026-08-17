@@ -26,17 +26,17 @@ h1,h2,h3{font-family:"Source Serif 4",Georgia,serif}
 .login-btn:disabled{background:#A9B7B3;cursor:not-allowed}
 
 /* ===== APLICACIÓN: DOS COLUMNAS ===== */
-.app{display:grid;grid-template-columns:280px 1fr;align-items:start;min-height:100vh}
+.app{display:grid;grid-template-columns:300px 1fr;align-items:start;min-height:100vh}
 
 /* --- Columna IZQUIERDA (verde) --- */
-.sidebar{background:linear-gradient(180deg,var(--primary-dark),#0A2B26 92%);color:#EAF3F0;padding:22px 18px;display:flex;flex-direction:column;gap:8px;position:sticky;top:0;height:100vh;overflow-y:auto}
+.sidebar{background:linear-gradient(180deg,var(--primary-dark),#0A2B26 92%);color:#EAF3F0;padding:26px 22px;display:flex;flex-direction:column;gap:12px;position:sticky;top:0;height:100vh;overflow-y:auto}
 .brand{display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px;padding:6px 0 16px;border-bottom:1px solid rgba(234,243,240,.16);margin-bottom:8px}
 .brand .brand-logo{width:72px;height:72px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 2px rgba(234,243,240,.18);background:#fff;margin-bottom:6px}
 .brand .institucion{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#9FB8B2;font-weight:600}
 .brand .app-title{font-family:"Source Serif 4",Georgia,serif;font-size:21px;color:#fff;font-weight:600}
-.nav{display:flex;flex-direction:column;gap:7px}
-.nav-section-label{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:#8FA9A3;margin:14px 4px 2px;font-weight:700;border-bottom:1px solid rgba(255,255,255,.08);padding-bottom:5px}
-.nav-btn{padding:11px 14px;border:1px solid rgba(255,255,255,.14);border-radius:10px;background:#163A33;color:#EAF3F0;text-align:left;cursor:pointer;font:inherit;font-size:13.5px;font-weight:600;transition:background .15s ease;width:100%}
+.nav{display:flex;flex-direction:column;gap:10px}
+.nav-section-label{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:#8FA9A3;margin:18px 4px 4px;font-weight:700;border-bottom:1px solid rgba(255,255,255,.08);padding-bottom:6px}
+.nav-btn{padding:13px 16px;border:1px solid rgba(255,255,255,.14);border-radius:10px;background:#163A33;color:#EAF3F0;text-align:left;cursor:pointer;font:inherit;font-size:14px;font-weight:600;transition:background .15s ease;width:100%}
 .nav-btn:hover{background:#1E4A42}
 .nav-btn.active{background:var(--seal-soft);color:#3A2E14;border-color:var(--seal)}
 .side-foot{margin-top:auto;border-top:1px solid rgba(234,243,240,.15);padding-top:12px;display:flex;flex-direction:column;gap:10px}
@@ -137,4 +137,7 @@ textarea#notes,textarea.input,select,input[type="text"],input:not([type]){width:
   .print-table th{color:#5B6E6A;font-weight:600;text-transform:uppercase;font-size:11px;letter-spacing:.05em}
   .print-note{font-size:11px;color:#5B6E6A;line-height:1.6;margin-top:20px}
 }
+
+
+
 
