@@ -1,94 +1,95 @@
-// auth.js — Puerta de acceso con Supabase Authentication
-// La app (data.js / app.js) solo se ejecuta después de un login exitoso.
+// Autenticación Supabase - SERUM-APP-PROD
+const SUPABASE_URL = "https://mznvjujrjababgvrprym.supabase.co";
+const SUPABASE_ANON_KEY = "sb_publishable_ZfcZqv4xmVzoVCZddjeBbQ_gIyoruYY";
 
-const SUPABASE_URL = "https://xcfdhwqjudzngvlssyeg.supabase.co";
-const SUPABASE_ANON_KEY = "sb_publishable_SMfnQmaqkzsFXn23qDriEQ_tG-Xb_Jd";
+const { createClient } = supabase;
+const supabaseClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-
-const loginScreen = document.getElementById("login-screen");
-const appRoot = document.querySelector(".app");
-const emailInput = document.getElementById("login-email");
-const passwordInput = document.getElementById("login-password");
-const submitBtn = document.getElementById("login-submit");
-const errorMsg = document.getElementById("login-error");
-
-function showApp() {
-  loginScreen.style.display = "none";
-  appRoot.style.display = "flex";
-  window.dispatchEvent(new Event("sip-authenticated"));
-}
-
-function showLogin() {
-  appRoot.style.display = "none";
-  loginScreen.style.display = "flex";
-}
-
+// Verificar sesión al cargar
 async function checkSession() {
   try {
-    const { data: { session } } = await supabaseClient.auth.getSession();
-    if (session) {
+    const { data } = await supabaseClient.auth.getSession();
+    if (data.session) {
+      currentUser = data.session.user;
       showApp();
     } else {
       showLogin();
     }
-  } catch (err) {
-    console.error("Error checking session:", err);
+  } catch (error) {
+    console.error("Error al verificar sesión:", error);
     showLogin();
   }
 }
 
-submitBtn.addEventListener("click", async () => {
-  errorMsg.innerHTML = "";
-  errorMsg.style.display = "none";
-  submitBtn.disabled = true;
-  submitBtn.textContent = "Ingresando...";
-  
+// Login
+async function login() {
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value;
+
+  if (!email || !password) {
+    alert("Ingresa email y contraseña");
+    return;
+  }
+
   try {
-    const { error, data } = await supabaseClient.auth.signInWithPassword({
-      email: emailInput.value.trim(),
-      password: passwordInput.value
+    const { data, error } = await supabaseClient.auth.signInWithPassword({
+      email,
+      password
     });
-    
-    submitBtn.disabled = false;
-    submitBtn.textContent = "Ingresar";
-    
+
     if (error) {
-      console.error("Login error:", error);
-      errorMsg.innerHTML = error.message || "Error al iniciar sesión. Verifica credenciales.";
-      errorMsg.style.display = "block";
+      alert("Error de autenticación: " + error.message);
       return;
     }
-    
-    if (data.session) {
-      console.log("Login exitoso");
-      showApp();
+
+    currentUser = data.user;
+    showApp();
+  } catch (error) {
+    console.error("Error login:", error);
+    alert("Error: " + error.message);
+  }
+}
+
+// Logout
+async function logout() {
+  try {
+    await supabaseClient.auth.signOut();
+    currentUser = null;
+    showLogin();
+  } catch (error) {
+    console.error("Error logout:", error);
+  }
+}
+
+// Cargar casos desde Supabase
+async function loadCasesFromSupabase() {
+  try {
+    const { data, error } = await supabaseClient
+      .from("banco_preguntas")
+      .select("*");
+
+    if (error) {
+      console.error("Error cargando casos:", error);
+      return null;
     }
-  } catch (err) {
-    console.error("Auth exception:", err);
-    submitBtn.disabled = false;
-    submitBtn.textContent = "Ingresar";
-    errorMsg.innerHTML = "Error inesperado. Intenta nuevamente.";
-    errorMsg.style.display = "block";
+
+    return data || [];
+  } catch (error) {
+    console.error("Error en loadCasesFromSupabase:", error);
+    return null;
   }
-});
+}
 
-// Permite iniciar sesión presionando Enter
-passwordInput.addEventListener("keydown", (e) => {
-  if (e.key === "Enter") submitBtn.click();
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const logoutBtn = document.getElementById("logout-btn");
-  if (logoutBtn) {
-    logoutBtn.addEventListener("click", async () => {
-      await supabaseClient.auth.signOut();
-      showLogin();
-      emailInput.value = "";
-      passwordInput.value = "";
-    });
+// Guardar resultado de simulacro
+async function saveSimulacroResult(result) {
+  try {
+    // Opcional: guardar en tabla de resultados
+    // const { error } = await supabaseClient
+    //   .from("simulacro_results")
+    //   .insert([result]);
+    
+    console.log("Resultado simulacro guardado localmente:", result);
+  } catch (error) {
+    console.error("Error guardando resultado:", error);
   }
-});
-
-// Verificar sesión al cargar
-checkSession();
+}
