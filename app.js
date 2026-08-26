@@ -326,19 +326,36 @@ function renderCases() {
     </section>
   `;
 
+  // Agregar listener al botón priority-toggle
   document.getElementById("priority-toggle").addEventListener("click", () => {
     priorityReviewMode = !priorityReviewMode;
     renderCases();
   });
 
+  // VALIDAR que los elementos existen ANTES de usarlos
   const list = document.getElementById("case-list");
   const search = document.getElementById("case-search");
   const careerList = document.getElementById("career-list");
   const blockList = document.getElementById("block-list");
   const levelList = document.getElementById("level-list");
 
-  const careers = [...new Set(data.cases.map(c => c.career || c.specialty))];
-  const blocks = [...new Set(data.cases.map(c => c.block))];
+  // DEBUG: Log en consola (visible en Chrome móvil)
+  console.log("🔍 renderCases() ejecutado");
+  console.log("   list:", list ? "✅" : "❌");
+  console.log("   search:", search ? "✅" : "❌");
+  console.log("   careerList:", careerList ? "✅" : "❌");
+  console.log("   data.cases:", data.cases ? data.cases.length : "❌");
+
+  // SI NO EXISTEN LOS ELEMENTOS, SALIR
+  if (!list || !search || !careerList || !blockList || !levelList) {
+    console.error("❌ ERROR: Faltan elementos del DOM. Recargando...");
+    setTimeout(() => location.reload(), 1000);
+    return;
+  }
+
+  // Extraer carreras, bloques, niveles ÚNICOS y ORDENADOS
+  const careers = [...new Set(data.cases.map(c => c.career || c.specialty))].sort();
+  const blocks = [...new Set(data.cases.map(c => c.block))].sort();
   const levels = [...new Set(data.cases.map(c => c.level))].sort();
 
   let selectedCareer = "";
@@ -358,6 +375,7 @@ function renderCases() {
       <button class="option-btn" data-level="${l}">${l}</button>
     `).join("");
 
+    // LISTENERS PARA CARRERAS
     careerList.querySelectorAll(".option-btn").forEach(btn => {
       btn.addEventListener("click", () => {
         selectedCareer = selectedCareer === btn.dataset.career ? "" : btn.dataset.career;
@@ -367,6 +385,7 @@ function renderCases() {
       });
     });
 
+    // LISTENERS PARA BLOQUES
     blockList.querySelectorAll(".option-btn").forEach(btn => {
       btn.addEventListener("click", () => {
         selectedBlock = selectedBlock === btn.dataset.block ? "" : btn.dataset.block;
@@ -376,6 +395,7 @@ function renderCases() {
       });
     });
 
+    // LISTENERS PARA NIVELES
     levelList.querySelectorAll(".option-btn").forEach(btn => {
       btn.addEventListener("click", () => {
         selectedLevel = selectedLevel === btn.dataset.level ? "" : btn.dataset.level;
@@ -386,58 +406,71 @@ function renderCases() {
     });
   }
 
-  function scrollToCaseList() {
-    // Pequeño retraso para que el DOM ya haya pintado la lista filtrada antes de desplazar
-    setTimeout(() => {
-      list.scrollIntoView({ behavior: "smooth", block: "start" });
-    }, 60);
-  }
-
   function draw(filter = "") {
-    const q = filter.toLowerCase();
-    let filtered = data.cases.filter(c => {
-      const text = [c.title, c.block, c.specialty, c.career, c.statement, ...(c.tags || [])].join(" ").toLowerCase();
-      return text.includes(q) &&
-        (!selectedCareer || (c.career || c.specialty) === selectedCareer) &&
-        (!selectedBlock || c.block === selectedBlock) &&
-        (!selectedLevel || c.level === selectedLevel);
-    });
-
-    if (priorityReviewMode) filtered = sortByPriority(filtered);
-
-    currentList = filtered;
-
-    list.innerHTML = filtered.map(c => {
-      const st = caseState[c.id];
-      let statusTag = `<span class="badge">Nuevo</span>`;
-      if (st && st.correct) statusTag = `<span class="badge">Resuelto</span>`;
-      else if (st && st.attempts) statusTag = `<span class="badge" style="background:#FCEBEA;color:#8A2A24">Con error</span>`;
-      const unverifiedTag = c.unverified
-        ? `<span class="badge" style="background:#FFF3CD;color:#8A6D1D;margin-left:6px">⚠ Clave sin verificar</span>`
-        : "";
-      const cardStyle = c.unverified ? ' style="background:#FFFBF0;border-left:4px solid #E9B949"' : "";
-      return `
-        <button class="case-card" data-id="${c.id}"${cardStyle}>
-          <span>${c.career || c.specialty} · ${c.block} · ${c.level}</span>
-          <strong>${c.title}</strong>
-          <small>${c.statement}</small>
-          ${statusTag}${unverifiedTag}
-        </button>
-      `;
-    }).join("") || `<p style="color:#5B6E6A">No hay casos con este filtro.</p>`;
-
-    list.querySelectorAll(".case-card").forEach(btn => {
-      btn.addEventListener("click", () => {
-        openCase(Number(btn.dataset.id));
-        const panel = document.getElementById("case-panel");
-        if (panel) setTimeout(() => panel.scrollIntoView({ behavior: "smooth", block: "start" }), 60);
+    try {
+      const q = filter.toLowerCase();
+      let filtered = data.cases.filter(c => {
+        const text = [c.title, c.block, c.specialty, c.career, c.statement, ...(c.tags || [])].join(" ").toLowerCase();
+        return text.includes(q) &&
+          (!selectedCareer || (c.career || c.specialty) === selectedCareer) &&
+          (!selectedBlock || c.block === selectedBlock) &&
+          (!selectedLevel || c.level === selectedLevel);
       });
-    });
+
+      if (priorityReviewMode) filtered = sortByPriority(filtered);
+
+      currentList = filtered;
+
+      list.innerHTML = filtered.map(c => {
+        const st = caseState[c.id];
+        let statusTag = `<span class="badge">Nuevo</span>`;
+        if (st && st.correct) statusTag = `<span class="badge">Resuelto</span>`;
+        else if (st && st.attempts) statusTag = `<span class="badge" style="background:#FCEBEA;color:#8A2A24">Con error</span>`;
+        const unverifiedTag = c.unverified
+          ? `<span class="badge" style="background:#FFF3CD;color:#8A6D1D;margin-left:6px">⚠ Clave sin verificar</span>`
+          : "";
+        const cardStyle = c.unverified ? ' style="background:#FFFBF0;border-left:4px solid #E9B949"' : "";
+        return `
+          <button class="case-card" data-id="${c.id}"${cardStyle}>
+            <span>${c.career || c.specialty} · ${c.block} · ${c.level}</span>
+            <strong>${c.title}</strong>
+            <small>${c.statement}</small>
+            ${statusTag}${unverifiedTag}
+          </button>
+        `;
+      }).join("") || `<p style="color:#5B6E6A">No hay casos con este filtro.</p>`;
+
+      list.querySelectorAll(".case-card").forEach(btn => {
+        btn.addEventListener("click", () => {
+          openCase(Number(btn.dataset.id));
+          const panel = document.getElementById("case-panel");
+          if (panel) setTimeout(() => panel.scrollIntoView({ behavior: "smooth", block: "start" }), 60);
+        });
+      });
+
+      console.log(`🔎 Búsqueda: "${q}" → ${filtered.length} resultados`);
+    } catch (error) {
+      console.error("❌ Error en draw():", error);
+      list.innerHTML = `<p style="color:red">Error al filtrar. Recargando...</p>`;
+      setTimeout(() => location.reload(), 2000);
+    }
   }
 
-  search.addEventListener("input", e => draw(e.target.value));
+  // AGREGAR LISTENER AL INPUT DE BÚSQUEDA
+  if (search) {
+    search.addEventListener("input", (e) => {
+      console.log("📝 Input cambió:", e.target.value);
+      draw(e.target.value);
+    });
+    console.log("✅ Listener 'input' agregado a #case-search");
+  } else {
+    console.error("❌ #case-search NO EXISTE al agregar listener");
+  }
+
+  // RENDERIZAR FILTROS Y DIBUJAR CASOS
   renderFilters();
   draw();
+  console.log("✅ renderCases() completado");
 }
 
 function openCase(id) {
