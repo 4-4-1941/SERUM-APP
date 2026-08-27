@@ -1,94 +1,54 @@
-// auth.js — Puerta de acceso con Supabase Authentication
-// La app (data.js / app.js) solo se ejecuta después de un login exitoso.
+// SERUM-APP v2.0 - Supabase Auth
+// SERUM-APP-PROD Project (mznvjujrjababgvrprym)
 
-const SUPABASE_URL = "https://xcfdhwqjudzngvlssyeg.supabase.co";
-const SUPABASE_ANON_KEY = "sb_publishable_SMfnQmaqkzsFXn23qDriEQ_tG-Xb_Jd";
+const supabaseUrl = 'https://mznvjujrjababgvrprym.supabase.co';
+const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im16bnZ1anJqYWJhYmdycnByeW0iLCJyb2xlIjoiYW5vbiIsImlhdCI6MTcyNDc4NDI4OCwiZXhwIjoxNzI0Nzg3ODg4fQ.ZfcZqv4xmVzoVCZddjeBbQ_gIyoruYY';
 
-const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+const { createClient } = supabase;
+const supabaseClient = createClient(supabaseUrl, supabaseAnonKey);
 
-const loginScreen = document.getElementById("login-screen");
-const appRoot = document.querySelector(".app");
-const emailInput = document.getElementById("login-email");
-const passwordInput = document.getElementById("login-password");
-const submitBtn = document.getElementById("login-submit");
-const errorMsg = document.getElementById("login-error");
+let currentUser = null;
 
-function showApp() {
-  loginScreen.style.display = "none";
-  appRoot.style.display = "flex";
-  window.dispatchEvent(new Event("sip-authenticated"));
+async function loginUser(email, password) {
+  try {
+    const { data, error } = await supabaseClient.auth.signInWithPassword({
+      email,
+      password
+    });
+    if (error) throw error;
+    currentUser = data.user;
+    console.log('✅ Login exitoso:', currentUser.email);
+    return true;
+  } catch (err) {
+    console.error('❌ Error de login:', err.message);
+    return false;
+  }
 }
 
-function showLogin() {
-  appRoot.style.display = "none";
-  loginScreen.style.display = "flex";
+async function logoutUser() {
+  try {
+    await supabaseClient.auth.signOut();
+    currentUser = null;
+    console.log('✅ Sesión cerrada');
+  } catch (err) {
+    console.error('❌ Error al cerrar sesión:', err.message);
+  }
 }
 
 async function checkSession() {
   try {
-    const { data: { session } } = await supabaseClient.auth.getSession();
-    if (session) {
-      showApp();
-    } else {
-      showLogin();
+    const { data } = await supabaseClient.auth.getSession();
+    if (data.session) {
+      currentUser = data.session.user;
+      console.log('✅ Sesión activa:', currentUser.email);
+      return true;
     }
+    return false;
   } catch (err) {
-    console.error("Error checking session:", err);
-    showLogin();
+    console.error('❌ Error verificando sesión:', err.message);
+    return false;
   }
 }
 
-submitBtn.addEventListener("click", async () => {
-  errorMsg.innerHTML = "";
-  errorMsg.style.display = "none";
-  submitBtn.disabled = true;
-  submitBtn.textContent = "Ingresando...";
-  
-  try {
-    const { error, data } = await supabaseClient.auth.signInWithPassword({
-      email: emailInput.value.trim(),
-      password: passwordInput.value
-    });
-    
-    submitBtn.disabled = false;
-    submitBtn.textContent = "Ingresar";
-    
-    if (error) {
-      console.error("Login error:", error);
-      errorMsg.innerHTML = error.message || "Error al iniciar sesión. Verifica credenciales.";
-      errorMsg.style.display = "block";
-      return;
-    }
-    
-    if (data.session) {
-      console.log("Login exitoso");
-      showApp();
-    }
-  } catch (err) {
-    console.error("Auth exception:", err);
-    submitBtn.disabled = false;
-    submitBtn.textContent = "Ingresar";
-    errorMsg.innerHTML = "Error inesperado. Intenta nuevamente.";
-    errorMsg.style.display = "block";
-  }
-});
-
-// Permite iniciar sesión presionando Enter
-passwordInput.addEventListener("keydown", (e) => {
-  if (e.key === "Enter") submitBtn.click();
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const logoutBtn = document.getElementById("logout-btn");
-  if (logoutBtn) {
-    logoutBtn.addEventListener("click", async () => {
-      await supabaseClient.auth.signOut();
-      showLogin();
-      emailInput.value = "";
-      passwordInput.value = "";
-    });
-  }
-});
-
 // Verificar sesión al cargar
-checkSession();
+document.addEventListener('DOMContentLoaded', checkSession);
