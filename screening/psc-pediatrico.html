@@ -3,392 +3,1166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PSC · SERUMS Toolkit</title>
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <style>
+    <title>PSC - Lista de Síntomas Pediátricos</title>
+<style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #f5f5f5;
-            color: #333;
-        }
-        .app-container {
-            display: flex;
-            flex-direction: column;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
             min-height: 100vh;
+            padding: 16px;
+            color: #2d3748;
         }
-        .app-header {
-            background: #0C3B34;
-            color: white;
-            padding: 12px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 12px;
-        }
-        .header-back {
-            background: none;
-            border: none;
-            color: white;
-            cursor: pointer;
-            font-size: 14px;
-            opacity: 0.9;
-            transition: opacity 0.3s;
-            text-decoration: none;
-        }
-        .header-back:hover {
-            opacity: 1;
-        }
-        .header-title {
-            font-size: 16px;
-            font-weight: 600;
-            flex: 1;
-            text-align: center;
-        }
-        .header-btn {
-            background: rgba(255,255,255,0.2);
-            border: 1px solid rgba(255,255,255,0.3);
-            color: white;
-            padding: 6px 12px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 12px;
-            transition: all 0.3s;
-        }
-        .header-btn:hover {
-            background: rgba(255,255,255,0.3);
-        }
+
         .container {
-            flex: 1;
             max-width: 700px;
             margin: 0 auto;
-            width: 100%;
-            padding: 20px;
-        }
-        header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        header h1 {
-            font-size: 2em;
-            font-weight: 700;
-            margin-bottom: 8px;
-            color: #0C3B34;
-        }
-        header p {
-            font-size: 0.95em;
-            color: #666;
-        }
-        .card {
             background: white;
-            border-radius: 8px;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
             padding: 24px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
+            text-align: center;
         }
-        .question-group {
-            margin-bottom: 20px;
+
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+            font-weight: 600;
         }
-        .question-group label {
-            display: block;
-            font-weight: 500;
-            margin-bottom: 10px;
-            color: #333;
-            font-size: 0.9em;
-            line-height: 1.3;
+
+        .header p {
+            font-size: 14px;
+            opacity: 0.9;
+            margin-bottom: 4px;
         }
-        .options {
+
+        .header .source {
+            font-size: 12px;
+            opacity: 0.8;
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        .content {
+            padding: 24px;
+        }
+
+        .section {
+            margin-bottom: 32px;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        .demographics {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .form-group {
             display: flex;
-            gap: 8px;
+            flex-direction: column;
         }
-        .option {
+
+        .form-group label {
+            font-size: 13px;
+            font-weight: 500;
+            color: #4a5568;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .form-group input,
+        .form-group select {
+            padding: 10px 12px;
+            border: 1px solid #cbd5e0;
+            border-radius: 6px;
+            font-size: 14px;
+            font-family: inherit;
+            transition: border-color 0.2s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #f5576c;
+            box-shadow: 0 0 0 3px rgba(245, 87, 108, 0.1);
+        }
+
+        .age-note {
+            background: #fef5e7;
+            border-left: 4px solid #f39c12;
+            padding: 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            color: #7d6608;
+            line-height: 1.5;
+            margin-top: 8px;
+        }
+
+        .items-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .item {
+            background: #fef5f7;
+            padding: 16px;
+            border-radius: 8px;
+            border-left: 4px solid #f5576c;
+        }
+
+        .item-number {
+            font-size: 12px;
+            font-weight: 600;
+            color: #f5576c;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .item-text {
+            font-size: 14px;
+            color: #2d3748;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        .response-group {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .response-option {
             flex: 1;
+            min-width: 80px;
         }
-        .option input[type="radio"] {
+
+        .response-option input[type="radio"] {
             display: none;
         }
-        .option input[type="radio"] + label {
+
+        .response-option label {
             display: block;
-            padding: 8px;
-            text-align: center;
-            border: 2px solid #ddd;
+            padding: 10px 12px;
+            border: 1px solid #cbd5e0;
             border-radius: 6px;
+            text-align: center;
+            font-size: 13px;
             cursor: pointer;
-            font-weight: 500;
-            font-size: 0.8em;
-            transition: all 0.3s;
-            margin: 0;
+            transition: all 0.2s;
+            background: white;
         }
-        .option input[type="radio"]:checked + label {
-            background: #0C3B34;
+
+        .response-option input[type="radio"]:checked + label {
+            background: #f5576c;
             color: white;
-            border-color: #0C3B34;
+            border-color: #f5576c;
+            font-weight: 600;
         }
+
+        .results-section {
+            display: none;
+            background: #fef5f7;
+            padding: 24px;
+            border-radius: 8px;
+            border-left: 4px solid #f5576c;
+            margin-top: 24px;
+        }
+
+        .results-section.show {
+            display: block;
+        }
+
+        .score-box {
+            background: white;
+            padding: 16px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .score-value {
+            font-size: 48px;
+            font-weight: 700;
+            color: #f5576c;
+            margin-bottom: 4px;
+        }
+
+        .score-label {
+            font-size: 13px;
+            color: #718096;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .age-category {
+            background: white;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            color: #4a5568;
+            text-align: center;
+            margin-bottom: 12px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .interpretation {
+            background: white;
+            padding: 16px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+        }
+
+        .interpretation-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 8px;
+        }
+
+        .interpretation-text {
+            font-size: 13px;
+            color: #4a5568;
+            line-height: 1.6;
+        }
+
+        .interpretation-alert {
+            background: #fed7d7;
+            color: #c53030;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.6;
+            margin-top: 8px;
+        }
+
+        .interpretation-alert.positive {
+            background: #c6f6d5;
+            color: #22543d;
+        }
+
+        .clinical-guidance {
+            background: white;
+            padding: 16px;
+            border-radius: 8px;
+            border-left: 4px solid #38a169;
+        }
+
+        .clinical-guidance-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: #22543d;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .clinical-guidance-text {
+            font-size: 13px;
+            color: #2f855a;
+            line-height: 1.6;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 12px;
+            margin-top: 24px;
+            flex-wrap: wrap;
+        }
+
         button {
-            padding: 12px 20px;
-            background: #0C3B34;
-            color: white;
+            flex: 1;
+            padding: 12px 16px;
             border: none;
             border-radius: 6px;
+            font-size: 14px;
             font-weight: 600;
-            font-size: 0.95em;
             cursor: pointer;
-            transition: all 0.3s;
-            width: 100%;
-            margin-top: 20px;
+            transition: all 0.2s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
-        button:hover {
-            background: #0A2E28;
-            transform: translateY(-1px);
+
+        .btn-submit {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            flex: 2;
         }
-        button:disabled {
+
+        .btn-submit:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(245, 87, 108, 0.3);
+        }
+
+        .btn-submit:disabled {
             opacity: 0.5;
             cursor: not-allowed;
         }
-        .resultado {
-            display: none;
+
+        .btn-new {
+            background: #edf2f7;
+            color: #4a5568;
         }
-        .resultado.mostrar {
+
+        .btn-new:hover {
+            background: #e2e8f0;
+        }
+
+        .btn-back {
+            background: #fed7e2;
+            color: #742a2a;
+        }
+
+        .btn-back:hover {
+            background: #fbb6ce;
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            color: #f5576c;
+            font-weight: 600;
+            margin-top: 12px;
+        }
+
+        .loading.show {
             display: block;
         }
-        .score-box {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 15px;
-            border-left: 4px solid #0C3B34;
+
+        .status-message {
+            display: none;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 13px;
+            margin-top: 12px;
             text-align: center;
+            font-weight: 500;
         }
-        .score-value {
-            font-size: 2.5em;
-            font-weight: 700;
-            color: #0C3B34;
+
+        .status-message.success {
+            display: block;
+            background: #c6f6d5;
+            color: #22543d;
         }
-        .score-label {
-            font-size: 0.9em;
-            color: #666;
+
+        .status-message.error {
+            display: block;
+            background: #fed7d7;
+            color: #c53030;
+        }
+
+        .cutoff-info {
+            background: #fffaf0;
+            border-left: 4px solid #ed8936;
+            padding: 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            color: #7c2d12;
+            line-height: 1.5;
             margin-top: 8px;
         }
-        .interpretacion {
-            padding: 15px;
-            border-radius: 6px;
-            margin-bottom: 15px;
-        }
-        .interpretacion.positivo {
-            background: #FFF3CD;
-            border-left: 4px solid #FF6B6B;
-            color: #856404;
-        }
-        .interpretacion.negativo {
-            background: #D4EDDA;
-            border-left: 4px solid #51CF66;
-            color: #155724;
-        }
-        .botones-accion {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-top: 20px;
-        }
-        .btn-secondary {
-            background: #e0e0e0;
-            color: #333;
-        }
-        .btn-secondary:hover {
-            background: #d0d0d0;
-        }
-        .btn-toolkit {
-            background: #0C3B34;
-        }
-        .btn-toolkit:hover {
-            background: #0A2E28;
+
+        @media (max-width: 600px) {
+            .demographics {
+                grid-template-columns: 1fr;
+            }
+
+            .response-group {
+                gap: 8px;
+            }
+
+            .response-option {
+                min-width: 70px;
+            }
+
+            .button-group {
+                flex-direction: column;
+            }
+
+            .btn-submit {
+                flex: none;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="app-container">
-        <div class="app-header">
-            <a href="javascript:history.back()" class="header-back">← Volver</a>
-            <div class="header-title">PSC · SERUMS</div>
-            <button class="header-btn" onclick="irAlToolkit()">📋 Toolkit</button>
+    <div class="container">
+        <div class="header">
+            <h1>PSC</h1>
+            <p>Lista de Síntomas Pediátricos</p>
+            <p>Pediatric Symptom Checklist</p>
+            <div class="source">Versión MINSA Perú / Jellinek & Murphy</div>
         </div>
 
-        <div class="container">
-            <header>
-                <h1>PSC</h1>
-                <p>Lista de Síntomas Pediátrica (Pediatric Symptom Checklist)</p>
-            </header>
-
-            <div class="card" id="formulario">
-                <form id="form-psc">
-                    <div id="preguntas-container"></div>
-                    <button type="submit">Calcular Resultado</button>
-                </form>
+        <div class="content">
+            <div class="section">
+                <div class="section-title">Aplicación</div>
+                <div class="demographics">
+                    <div class="form-group">
+                        <label for="edad">Edad (años)</label>
+                        <input type="number" id="edad" placeholder="ej: 8" min="4" max="16" required>
+                        <div class="age-note">
+                            <strong>Rango válido:</strong> 4-16 años. Puntos de corte varían por edad.
+                        </div>
+                    </div>
+                </div>
+                <div class="age-note" style="margin-top:12px"><strong>Privacidad:</strong> la edad se usa solo para calcular el punto de corte en esta versión y no se almacena ni se transmite.</div>
             </div>
 
-            <div class="card resultado" id="resultado-box">
-                <h2>Resultado de la Evaluación</h2>
-                
-                <div class="score-box">
-                    <div class="score-value" id="score-total">0</div>
-                    <div class="score-label">Puntuación Total (0-105)</div>
+            <div class="section">
+                <div class="section-title">Instrucciones</div>
+                <p style="font-size: 13px; color: #4a5568; line-height: 1.6;">
+                    Marque cuánto tiempo el menor ha manifestado cada síntoma en las <strong>últimas 4 semanas</strong>.
+                    Responda según su observación directa como cuidador(a).
+                </p>
+            </div>
+
+            <form id="pscForm">
+                <div class="items-container">
+                    <!-- Ítems PSC (30 ítems) -->
+                    <div class="item">
+                        <div class="item-number">Pregunta 1</div>
+                        <div class="item-text">Quejas de dolores o dolencias sin causa médica clara</div>
+                        <div class="response-group">
+                            <div class="response-option">
+                                <input type="radio" id="q1_nunca" name="q1" value="0">
+                                <label for="q1_nunca">Nunca</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q1_a_veces" name="q1" value="1">
+                                <label for="q1_a_veces">A veces</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q1_a_menudo" name="q1" value="2">
+                                <label for="q1_a_menudo">A menudo</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-number">Pregunta 2</div>
+                        <div class="item-text">Gasta demasiada energía en actividades repetidas/rituales</div>
+                        <div class="response-group">
+                            <div class="response-option">
+                                <input type="radio" id="q2_nunca" name="q2" value="0">
+                                <label for="q2_nunca">Nunca</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q2_a_veces" name="q2" value="1">
+                                <label for="q2_a_veces">A veces</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q2_a_menudo" name="q2" value="2">
+                                <label for="q2_a_menudo">A menudo</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-number">Pregunta 3</div>
+                        <div class="item-text">Problemas para concentrarse en la escuela</div>
+                        <div class="response-group">
+                            <div class="response-option">
+                                <input type="radio" id="q3_nunca" name="q3" value="0">
+                                <label for="q3_nunca">Nunca</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q3_a_veces" name="q3" value="1">
+                                <label for="q3_a_veces">A veces</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q3_a_menudo" name="q3" value="2">
+                                <label for="q3_a_menudo">A menudo</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-number">Pregunta 4</div>
+                        <div class="item-text">Menos interés en amigos</div>
+                        <div class="response-group">
+                            <div class="response-option">
+                                <input type="radio" id="q4_nunca" name="q4" value="0">
+                                <label for="q4_nunca">Nunca</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q4_a_veces" name="q4" value="1">
+                                <label for="q4_a_veces">A veces</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q4_a_menudo" name="q4" value="2">
+                                <label for="q4_a_menudo">A menudo</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-number">Pregunta 5</div>
+                        <div class="item-text">Dificultad para separarse de padres</div>
+                        <div class="response-group">
+                            <div class="response-option">
+                                <input type="radio" id="q5_nunca" name="q5" value="0">
+                                <label for="q5_nunca">Nunca</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q5_a_veces" name="q5" value="1">
+                                <label for="q5_a_veces">A veces</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q5_a_menudo" name="q5" value="2">
+                                <label for="q5_a_menudo">A menudo</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-number">Pregunta 6</div>
+                        <div class="item-text">Miedo a ciertas cosas, personas o lugares</div>
+                        <div class="response-group">
+                            <div class="response-option">
+                                <input type="radio" id="q6_nunca" name="q6" value="0">
+                                <label for="q6_nunca">Nunca</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q6_a_veces" name="q6" value="1">
+                                <label for="q6_a_veces">A veces</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q6_a_menudo" name="q6" value="2">
+                                <label for="q6_a_menudo">A menudo</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-number">Pregunta 7</div>
+                        <div class="item-text">Comportamiento agresivo o irascible</div>
+                        <div class="response-group">
+                            <div class="response-option">
+                                <input type="radio" id="q7_nunca" name="q7" value="0">
+                                <label for="q7_nunca">Nunca</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q7_a_veces" name="q7" value="1">
+                                <label for="q7_a_veces">A veces</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q7_a_menudo" name="q7" value="2">
+                                <label for="q7_a_menudo">A menudo</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-number">Pregunta 8</div>
+                        <div class="item-text">Cambios de humor abruptos</div>
+                        <div class="response-group">
+                            <div class="response-option">
+                                <input type="radio" id="q8_nunca" name="q8" value="0">
+                                <label for="q8_nunca">Nunca</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q8_a_veces" name="q8" value="1">
+                                <label for="q8_a_veces">A veces</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q8_a_menudo" name="q8" value="2">
+                                <label for="q8_a_menudo">A menudo</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-number">Pregunta 9</div>
+                        <div class="item-text">No parece estar feliz</div>
+                        <div class="response-group">
+                            <div class="response-option">
+                                <input type="radio" id="q9_nunca" name="q9" value="0">
+                                <label for="q9_nunca">Nunca</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q9_a_veces" name="q9" value="1">
+                                <label for="q9_a_veces">A veces</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q9_a_menudo" name="q9" value="2">
+                                <label for="q9_a_menudo">A menudo</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-number">Pregunta 10</div>
+                        <div class="item-text">Diciendo que es malo, malo o inútil</div>
+                        <div class="response-group">
+                            <div class="response-option">
+                                <input type="radio" id="q10_nunca" name="q10" value="0">
+                                <label for="q10_nunca">Nunca</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q10_a_veces" name="q10" value="1">
+                                <label for="q10_a_veces">A veces</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q10_a_menudo" name="q10" value="2">
+                                <label for="q10_a_menudo">A menudo</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-number">Pregunta 11</div>
+                        <div class="item-text">Dificultades con relaciones interpersonales</div>
+                        <div class="response-group">
+                            <div class="response-option">
+                                <input type="radio" id="q11_nunca" name="q11" value="0">
+                                <label for="q11_nunca">Nunca</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q11_a_veces" name="q11" value="1">
+                                <label for="q11_a_veces">A veces</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q11_a_menudo" name="q11" value="2">
+                                <label for="q11_a_menudo">A menudo</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-number">Pregunta 12</div>
+                        <div class="item-text">Problemas de audición o visión no explicados</div>
+                        <div class="response-group">
+                            <div class="response-option">
+                                <input type="radio" id="q12_nunca" name="q12" value="0">
+                                <label for="q12_nunca">Nunca</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q12_a_veces" name="q12" value="1">
+                                <label for="q12_a_veces">A veces</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q12_a_menudo" name="q12" value="2">
+                                <label for="q12_a_menudo">A menudo</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-number">Pregunta 13</div>
+                        <div class="item-text">Preocupación persistente o inquietud</div>
+                        <div class="response-group">
+                            <div class="response-option">
+                                <input type="radio" id="q13_nunca" name="q13" value="0">
+                                <label for="q13_nunca">Nunca</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q13_a_veces" name="q13" value="1">
+                                <label for="q13_a_veces">A veces</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q13_a_menudo" name="q13" value="2">
+                                <label for="q13_a_menudo">A menudo</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-number">Pregunta 14</div>
+                        <div class="item-text">Desempeño académico por debajo del potencial</div>
+                        <div class="response-group">
+                            <div class="response-option">
+                                <input type="radio" id="q14_nunca" name="q14" value="0">
+                                <label for="q14_nunca">Nunca</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q14_a_veces" name="q14" value="1">
+                                <label for="q14_a_veces">A veces</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q14_a_menudo" name="q14" value="2">
+                                <label for="q14_a_menudo">A menudo</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-number">Pregunta 15</div>
+                        <div class="item-text">Problemas para adaptarse a cambios</div>
+                        <div class="response-group">
+                            <div class="response-option">
+                                <input type="radio" id="q15_nunca" name="q15" value="0">
+                                <label for="q15_nunca">Nunca</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q15_a_veces" name="q15" value="1">
+                                <label for="q15_a_veces">A veces</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q15_a_menudo" name="q15" value="2">
+                                <label for="q15_a_menudo">A menudo</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-number">Pregunta 16</div>
+                        <div class="item-text">Cries fácilmente</div>
+                        <div class="response-group">
+                            <div class="response-option">
+                                <input type="radio" id="q16_nunca" name="q16" value="0">
+                                <label for="q16_nunca">Nunca</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q16_a_veces" name="q16" value="1">
+                                <label for="q16_a_veces">A veces</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q16_a_menudo" name="q16" value="2">
+                                <label for="q16_a_menudo">A menudo</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-number">Pregunta 17</div>
+                        <div class="item-text">Problemas de atención o concentración</div>
+                        <div class="response-group">
+                            <div class="response-option">
+                                <input type="radio" id="q17_nunca" name="q17" value="0">
+                                <label for="q17_nunca">Nunca</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q17_a_veces" name="q17" value="1">
+                                <label for="q17_a_veces">A veces</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q17_a_menudo" name="q17" value="2">
+                                <label for="q17_a_menudo">A menudo</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-number">Pregunta 18</div>
+                        <div class="item-text">Dificultades para hacerse amigo de otros</div>
+                        <div class="response-group">
+                            <div class="response-option">
+                                <input type="radio" id="q18_nunca" name="q18" value="0">
+                                <label for="q18_nunca">Nunca</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q18_a_veces" name="q18" value="1">
+                                <label for="q18_a_veces">A veces</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q18_a_menudo" name="q18" value="2">
+                                <label for="q18_a_menudo">A menudo</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-number">Pregunta 19</div>
+                        <div class="item-text">Conflicto con hermanos u otros niños</div>
+                        <div class="response-group">
+                            <div class="response-option">
+                                <input type="radio" id="q19_nunca" name="q19" value="0">
+                                <label for="q19_nunca">Nunca</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q19_a_veces" name="q19" value="1">
+                                <label for="q19_a_veces">A veces</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q19_a_menudo" name="q19" value="2">
+                                <label for="q19_a_menudo">A menudo</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-number">Pregunta 20</div>
+                        <div class="item-text">Dificultad para escuchar a otros</div>
+                        <div class="response-group">
+                            <div class="response-option">
+                                <input type="radio" id="q20_nunca" name="q20" value="0">
+                                <label for="q20_nunca">Nunca</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q20_a_veces" name="q20" value="1">
+                                <label for="q20_a_veces">A veces</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q20_a_menudo" name="q20" value="2">
+                                <label for="q20_a_menudo">A menudo</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-number">Pregunta 21</div>
+                        <div class="item-text">Pedir permiso para nuevas actividades</div>
+                        <div class="response-group">
+                            <div class="response-option">
+                                <input type="radio" id="q21_nunca" name="q21" value="0">
+                                <label for="q21_nunca">Nunca</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q21_a_veces" name="q21" value="1">
+                                <label for="q21_a_veces">A veces</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q21_a_menudo" name="q21" value="2">
+                                <label for="q21_a_menudo">A menudo</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-number">Pregunta 22</div>
+                        <div class="item-text">Falta de energía o motivación</div>
+                        <div class="response-group">
+                            <div class="response-option">
+                                <input type="radio" id="q22_nunca" name="q22" value="0">
+                                <label for="q22_nunca">Nunca</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q22_a_veces" name="q22" value="1">
+                                <label for="q22_a_veces">A veces</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q22_a_menudo" name="q22" value="2">
+                                <label for="q22_a_menudo">A menudo</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-number">Pregunta 23</div>
+                        <div class="item-text">Comportamiento impulsivo</div>
+                        <div class="response-group">
+                            <div class="response-option">
+                                <input type="radio" id="q23_nunca" name="q23" value="0">
+                                <label for="q23_nunca">Nunca</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q23_a_veces" name="q23" value="1">
+                                <label for="q23_a_veces">A veces</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q23_a_menudo" name="q23" value="2">
+                                <label for="q23_a_menudo">A menudo</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-number">Pregunta 24</div>
+                        <div class="item-text">Dificultad para resolver conflictos</div>
+                        <div class="response-group">
+                            <div class="response-option">
+                                <input type="radio" id="q24_nunca" name="q24" value="0">
+                                <label for="q24_nunca">Nunca</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q24_a_veces" name="q24" value="1">
+                                <label for="q24_a_veces">A veces</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q24_a_menudo" name="q24" value="2">
+                                <label for="q24_a_menudo">A menudo</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-number">Pregunta 25</div>
+                        <div class="item-text">Tiene déficit de atención o problemas TDAH</div>
+                        <div class="response-group">
+                            <div class="response-option">
+                                <input type="radio" id="q25_nunca" name="q25" value="0">
+                                <label for="q25_nunca">Nunca</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q25_a_veces" name="q25" value="1">
+                                <label for="q25_a_veces">A veces</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q25_a_menudo" name="q25" value="2">
+                                <label for="q25_a_menudo">A menudo</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-number">Pregunta 26</div>
+                        <div class="item-text">Comportamiento desobediente</div>
+                        <div class="response-group">
+                            <div class="response-option">
+                                <input type="radio" id="q26_nunca" name="q26" value="0">
+                                <label for="q26_nunca">Nunca</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q26_a_veces" name="q26" value="1">
+                                <label for="q26_a_veces">A veces</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q26_a_menudo" name="q26" value="2">
+                                <label for="q26_a_menudo">A menudo</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-number">Pregunta 27</div>
+                        <div class="item-text">Siesta o sueño excesivo</div>
+                        <div class="response-group">
+                            <div class="response-option">
+                                <input type="radio" id="q27_nunca" name="q27" value="0">
+                                <label for="q27_nunca">Nunca</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q27_a_veces" name="q27" value="1">
+                                <label for="q27_a_veces">A veces</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q27_a_menudo" name="q27" value="2">
+                                <label for="q27_a_menudo">A menudo</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-number">Pregunta 28</div>
+                        <div class="item-text">Incontinencia urinaria</div>
+                        <div class="response-group">
+                            <div class="response-option">
+                                <input type="radio" id="q28_nunca" name="q28" value="0">
+                                <label for="q28_nunca">Nunca</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q28_a_veces" name="q28" value="1">
+                                <label for="q28_a_veces">A veces</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q28_a_menudo" name="q28" value="2">
+                                <label for="q28_a_menudo">A menudo</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-number">Pregunta 29</div>
+                        <div class="item-text">Problemas para mantener amistades</div>
+                        <div class="response-group">
+                            <div class="response-option">
+                                <input type="radio" id="q29_nunca" name="q29" value="0">
+                                <label for="q29_nunca">Nunca</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q29_a_veces" name="q29" value="1">
+                                <label for="q29_a_veces">A veces</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q29_a_menudo" name="q29" value="2">
+                                <label for="q29_a_menudo">A menudo</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-number">Pregunta 30</div>
+                        <div class="item-text">Pelear frecuentemente con otros</div>
+                        <div class="response-group">
+                            <div class="response-option">
+                                <input type="radio" id="q30_nunca" name="q30" value="0">
+                                <label for="q30_nunca">Nunca</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q30_a_veces" name="q30" value="1">
+                                <label for="q30_a_veces">A veces</label>
+                            </div>
+                            <div class="response-option">
+                                <input type="radio" id="q30_a_menudo" name="q30" value="2">
+                                <label for="q30_a_menudo">A menudo</label>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div id="interpretacion-box"></div>
+                <div class="button-group">
+                    <button type="submit" class="btn-submit">Calcular Resultado</button>
+                    <button type="button" class="btn-new" onclick="resetForm()">Nuevo</button>
+                    <button type="button" class="btn-back" onclick="goBack()">Volver</button>
+                </div>
 
-                <div class="botones-accion">
-                    <button class="btn-secondary" onclick="descargarJSON()">📥 Descargar JSON</button>
-                    <button class="btn-secondary" onclick="reiniciar()">🔄 Nuevo Tamizaje</button>
-                    <button class="btn-toolkit" onclick="irAlToolkit()">← Volver a Toolkit</button>
+                <div class="loading" id="loading">
+                    Guardando resultado...
+                </div>
+                <div class="status-message" id="statusMessage"></div>
+            </form>
+
+            <div class="results-section" id="resultsSection">
+                <div class="score-box">
+                    <div class="score-value" id="scoreValue">0</div>
+                    <div class="score-label">Score Total (0-60)</div>
+                </div>
+
+                <div class="age-category" id="ageCategory"></div>
+
+                <div class="interpretation">
+                    <div class="interpretation-title">Interpretación Clínica</div>
+                    <div class="interpretation-text" id="interpretationText"></div>
+                    <div class="interpretation-alert" id="interpretationAlert"></div>
+                </div>
+
+                <div class="clinical-guidance">
+                    <div class="clinical-guidance-title">Recomendación Clínica</div>
+                    <div class="clinical-guidance-text" id="clinicalGuidance"></div>
+                    <div class="cutoff-info">
+                        <strong>Puntos de corte MINSA (PSC):</strong><br>
+                        • 4-5 años: ≥ 24 = Riesgo detectado<br>
+                        • 6-16 años: ≥ 28 = Disfunción psicosocial activa
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
     <script>
-        const SUPABASE_URL = 'https://xcfdhwqjudzngvlssyeg.supabase.co';
-        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhjZmRod3FqdWR6bmd2bHNzeWVnIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTk1NjQ3NDAsImV4cCI6MTk5OTk5NDc0MH0.p2QSwDgAQvFaI1ztHQ2RiPHsgNRmvqYQ2JvGxGP7VvE';
-        const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+        (function() {
+const form = document.getElementById('pscForm');
 
-        const preguntas = [
-            "Demanda mucha atención", "Tiene problemas de sueño", "Es muy activo, no puede quedarse quieto", "Es rudo con otras personas",
-            "No le importa lastimar a otros", "Se distrae fácilmente, tiene dificultad de concentración", "Es ansioso, miedoso o preocupado",
-            "Se rehúsa a compartir", "Es maleducado con adultos", "Culpa a otros por sus problemas", "Tiene recuerdos dolorosos y no se los puede sacar de la mente",
-            "No entiende las emociones de otros", "Cuando se molesta, se altera demasiado", "Tiene cambios drásticos de humor",
-            "No muestra remordimiento o culpa después de portarse mal", "Tiene dificultad para entender lo que escucha", "Tiene bajo rendimiento en la escuela",
-            "Parece triste, infeliz", "Ama demasiado, se apega excesivamente a personas adultas", "Dice ser malo o sin valor",
-            "Se queja de dolores y achaques", "Se preocupa por cosas que sucedieron en el pasado", "Es rechazado por otros niños",
-            "Se niega a ir a la escuela", "Se queja de ser solo", "Es confundido, parece estar en otro mundo", "Es tímido",
-            "Tiene miedo de cometer errores", "Es impulsivo y actúa sin pensar", "Tiene dificultad para mantener amistades",
-            "Tiene baja autoestima", "Rompe reglas en el hogar, en la escuela o en otros lugares", "No participa en actividades normales de su edad",
-            "Ha sido suspendido de la escuela", "Ha pensado en lastimarse a sí mismo"
-        ];
-
-        function irAlToolkit() {
-            if (window.opener) {
-                window.opener.focus();
-                window.close();
-            } else {
-                window.history.back();
-            }
-        }
-
-        function inicializarFormulario() {
-            const container = document.getElementById('preguntas-container');
-            preguntas.forEach((pregunta, idx) => {
-                const div = document.createElement('div');
-                div.className = 'question-group';
-                div.innerHTML = `
-                    <label>${idx + 1}. ${pregunta}</label>
-                    <div class="options">
-                        <div class="option">
-                            <input type="radio" id="q${idx}_0" name="q${idx}" value="0" required>
-                            <label for="q${idx}_0">Nunca</label>
-                        </div>
-                        <div class="option">
-                            <input type="radio" id="q${idx}_1" name="q${idx}" value="1">
-                            <label for="q${idx}_1">A veces</label>
-                        </div>
-                        <div class="option">
-                            <input type="radio" id="q${idx}_2" name="q${idx}" value="2">
-                            <label for="q${idx}_2">A menudo</label>
-                        </div>
-                    </div>
-                `;
-                container.appendChild(div);
-            });
-        }
-
-        function calcularScore() {
-            let score = 0;
-            preguntas.forEach((_, idx) => {
-                const respuesta = document.querySelector(`input[name="q${idx}"]:checked`);
-                if (respuesta) score += parseInt(respuesta.value);
-            });
-            return score;
-        }
-
-        function mostrarResultado(score) {
-            const form = document.getElementById('formulario');
-            const resultBox = document.getElementById('resultado-box');
-            const interpretBox = document.getElementById('interpretacion-box');
-            
-            form.style.display = 'none';
-            resultBox.classList.add('mostrar');
-            document.getElementById('score-total').textContent = score;
-
-            const esPositivo = score >= 28;
-            const html = esPositivo 
-                ? `<div class="interpretacion positivo"><strong>⚠️ Puntuación elevada (≥28)</strong><br>Sugiere posibles problemas emocionales o conductuales. Requiere evaluación clínica especializada.</div>`
-                : `<div class="interpretacion negativo"><strong>✓ Puntuación normal (&lt;28)</strong><br>No sugiere problemas significativos. Continúe con seguimiento.</div>`;
-            
-            interpretBox.innerHTML = html;
-            guardarEnSupabase(score);
-        }
-
-        async function guardarEnSupabase(score) {
-            try {
-                const respuestas = {};
-                preguntas.forEach((_, idx) => {
-                    respuestas[`q${idx}`] = document.querySelector(`input[name="q${idx}"]:checked`).value;
-                });
-
-                await supabase
-                    .from('tamizajes_clinicos')
-                    .insert({
-                        test_tipo: 'PSC',
-                        puntaje_total: score,
-                        zona_riesgo: score >= 28 ? 'POSITIVO' : 'NEGATIVO',
-                        respuestas: respuestas,
-                        consentimiento: true,
-                        informante: 'padre_tutor'
-                    });
-            } catch (e) {
-                console.log('Nota: Guardado offline');
-            }
-        }
-
-        function descargarJSON() {
-            const score = parseInt(document.getElementById('score-total').textContent);
-            const respuestas = {};
-            preguntas.forEach((_, idx) => {
-                respuestas[`q${idx}`] = document.querySelector(`input[name="q${idx}"]:checked`).value;
-            });
-            
-            const datos = {
-                test: 'PSC',
-                fecha: new Date().toISOString(),
-                puntaje: score,
-                resultado: score >= 28 ? 'POSITIVO' : 'NEGATIVO',
-                respuestas
-            };
-
-            const blob = new Blob([JSON.stringify(datos, null, 2)], { type: 'application/json' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = `PSC_${new Date().toISOString().split('T')[0]}.json`;
-            a.click();
-        }
-
-        function reiniciar() {
-            document.getElementById('form-psc').reset();
-            document.getElementById('formulario').style.display = 'block';
-            document.getElementById('resultado-box').classList.remove('mostrar');
-            window.scrollTo(0, 0);
-        }
-
-        document.getElementById('form-psc').addEventListener('submit', (e) => {
+        form.addEventListener('submit', (e) => {
             e.preventDefault();
-            const score = calcularScore();
-            mostrarResultado(score);
-        });
 
-        inicializarFormulario();
+            const edad = parseInt(document.getElementById('edad').value);
+            
+            if (!edad || edad < 4 || edad > 16) {
+                showStatus('Por favor ingrese una edad válida (4-16 años)', 'error');
+                return;
+            }
+
+            const allAnswered = Array.from({ length: 30 }, (_, i) => {
+                const q = i + 1;
+                return document.querySelector(`input[name="q${q}"]:checked`);
+            }).every(el => el !== undefined && el !== null);
+
+            if (!allAnswered) {
+                showStatus('Por favor responda todas las preguntas', 'error');
+                return;
+            }
+
+            let score = 0;
+            for (let i = 1; i <= 30; i++) {
+                const answer = document.querySelector(`input[name="q${i}"]:checked`);
+                if (answer) {
+                    score += parseInt(answer.value);
+                }
+            }
+
+            displayResults(score, edad);
+});
+
+        function displayResults(score, edad) {
+            document.getElementById('scoreValue').textContent = score;
+            
+            const resultSection = document.getElementById('resultsSection');
+            const ageCategory = document.getElementById('ageCategory');
+            const interpretationText = document.getElementById('interpretationText');
+            const interpretationAlert = document.getElementById('interpretationAlert');
+            const clinicalGuidance = document.getElementById('clinicalGuidance');
+
+            let cutoff, categoria;
+            
+            if (edad >= 4 && edad <= 5) {
+                cutoff = 24;
+                categoria = '4-5 años';
+            } else if (edad >= 6 && edad <= 16) {
+                cutoff = 28;
+                categoria = '6-16 años';
+            }
+
+            ageCategory.textContent = `Grupo etario: ${categoria} | Punto de corte: ≥ ${cutoff}`;
+
+            if (score >= cutoff) {
+                interpretationText.textContent = `Puntuación: ${score}/60. RIESGO DETECTADO / DISFUNCIÓN PSICOSOCIAL ACTIVA.`;
+                interpretationAlert.classList.remove('positive');
+                interpretationAlert.innerHTML = `
+                    <strong>⚠️ Hallazgo positivo:</strong> La puntuación ≥ ${cutoff} para edad ${categoria} indica probable 
+                    disfunción psicosocial. Requiere evaluación profunda por psicólogo o psiquiatra pediátrico.
+                `;
+                clinicalGuidance.innerHTML = `
+                    <strong>Acciones clínicas:</strong><br>
+                    1. Referir a psicología/psiquiatría pediátrica para diagnóstico diferencial<br>
+                    2. Evaluar factores estresores (familia, escuela, victimización, abuso)<br>
+                    3. Explorar comorbilidades (TDAH, trastornos del espectro autista, depresión, ansiedad)<br>
+                    4. Valorar necesidad de intervención psicosocial inmediata<br>
+                    5. Implicar a padres/cuidadores en plan de tratamiento<br>
+                    6. Seguimiento: control en 2-4 semanas
+                `;
+            } else {
+                interpretationText.textContent = `Puntuación: ${score}/60. DENTRO DE PARÁMETROS NORMALES.`;
+                interpretationAlert.classList.add('positive');
+                interpretationAlert.innerHTML = `
+                    <strong>✓ Resultado negativo:</strong> La puntuación &lt; ${cutoff} sugiere ausencia de disfunción 
+                    psicosocial significativa en el momento de la evaluación.
+                `;
+                clinicalGuidance.innerHTML = `
+                    <strong>Recomendaciones:</strong><br>
+                    1. Continuar seguimiento preventivo en consultas de rutina<br>
+                    2. Educación a padres sobre desarrollo psicosocial normal<br>
+                    3. Orientación sobre factores protectores (resiliencia, apoyo familiar)<br>
+                    4. Reevaluar en próxima consulta anual o si cambian las circunstancias
+                `;
+            }
+
+            resultSection.classList.add('show');
+            resultSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function showStatus(message, type) {
+            const statusEl = document.getElementById('statusMessage');
+            statusEl.textContent = message;
+            statusEl.className = `status-message ${type}`;
+            setTimeout(() => {
+                statusEl.className = 'status-message';
+            }, 4000);
+        }
+
+        function resetForm() {
+            form.reset();
+            document.getElementById('resultsSection').classList.remove('show');
+            document.getElementById('statusMessage').className = 'status-message';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        })();
+        function goBack() { window.location.href = 'screening-index.html'; }
     </script>
 </body>
 </html>
