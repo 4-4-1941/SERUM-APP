@@ -505,13 +505,26 @@ function renderCases() {
 
   // AGREGAR LISTENER AL INPUT DE BÚSQUEDA
   if (search) {
-    search.addEventListener("input", (e) => {
-      console.log("📝 Input cambió:", e.target.value);
-      draw(e.target.value);
-    });
-    console.log("✅ Listener 'input' agregado a #case-search");
-  } else {
-    console.error("❌ #case-search NO EXISTE al agregar listener");
+  search.placeholder = "Buscar desde 2 caracteres…";
+  search.setAttribute("autocomplete", "off");
+
+  search.addEventListener("input", (e) => {
+    const termino = e.target.value.trim();
+
+    // Campo vacío: vuelve a mostrar la lista normal.
+    if (termino.length === 0) {
+      draw("");
+      return;
+    }
+
+    // No buscar todavía con un solo carácter.
+    if (termino.length < 2) {
+      return;
+    }
+
+    // Buscar desde 2 caracteres.
+    draw(termino);
+  });
   }
 
   // RENDERIZAR FILTROS Y DIBUJAR CASOS
