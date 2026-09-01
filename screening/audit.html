@@ -10,14 +10,15 @@
 header{background:linear-gradient(135deg,#0a2e44,#1a5a7a);color:#fff;padding:16px}
 .top{display:flex;gap:10px;align-items:center;justify-content:space-between}.top a{color:#fff;text-decoration:none;font-size:.9rem}
 h1{margin:8px 0 0;font-size:1.6rem}.sub{opacity:.86;font-size:.9rem;margin-top:4px}
-main{padding:16px}.notice,.credits{border-radius:10px;padding:10px 12px;margin-bottom:12px;line-height:1.45}
-.notice{background:#fff8e6;border-left:4px solid #d97706;font-size:.88rem}.credits{background:#f7f5ee;border-left:4px solid #b08d3e;font-size:.78rem}
+main{padding:16px}.notice,.credits,.warning{border-radius:10px;padding:10px 12px;margin-bottom:12px;line-height:1.45}
+.notice{background:#eef6ff;border-left:4px solid #2563eb;font-size:.88rem}.credits{background:#f7f5ee;border-left:4px solid #b08d3e;font-size:.78rem}.warning{background:#fef2f2;border-left:4px solid #dc2626;color:#7f1d1d;font-size:.82rem;display:none}
 .controls{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}.controls label{font-weight:700}.controls select{padding:8px;border-radius:8px;border:1px solid #cbd5e1}
 .progress{display:flex;align-items:center;gap:10px;margin:10px 0 14px}.barbox{height:8px;background:#e5e7eb;flex:1;border-radius:99px;overflow:hidden}.bar{height:100%;background:#2563eb;width:10%}
 .question{background:#fff;border:1px solid #dbe3ec;border-radius:14px;padding:16px;box-shadow:0 3px 12px #0000000a}
 .qnum{font-size:.78rem;color:#64748b;font-weight:700}.qtext{font-size:1.05rem;font-weight:700;line-height:1.45;margin:6px 0 10px}.context{font-size:.84rem;background:#effbf2;border-left:4px solid #22c55e;padding:8px;border-radius:8px;margin-bottom:10px}
 .option{display:flex;gap:9px;align-items:flex-start;padding:9px 11px;border:1px solid #d9e2ec;border-radius:10px;margin:7px 0;cursor:pointer}.option:has(input:checked){background:#e8f1ff;border-color:#2563eb}
-.option input{margin-top:3px}.nav{display:flex;gap:10px;margin-top:14px}.nav button{border:0;border-radius:999px;padding:10px 16px;font-weight:700;cursor:pointer}.prev{background:#e5e7eb}.next{background:#1e4a7a;color:#fff;flex:1}.result{display:none;margin-top:16px;padding:16px;border-radius:14px}.result.show{display:block}.z1{background:#dcfce7;color:#14532d}.z2{background:#ffedd5;color:#9a3412}.z3{background:#fee2e2;color:#991b1b}.z4{background:#fce7f3;color:#831843}
+.option input{margin-top:3px}.nav{display:flex;gap:10px;margin-top:14px}.nav button{border:0;border-radius:999px;padding:10px 16px;font-weight:700;cursor:pointer}.prev{background:#e5e7eb}.next{background:#1e4a7a;color:#fff;flex:1}
+.result{display:none;margin-top:16px;padding:16px;border-radius:14px}.result.show{display:block}.z1{background:#dcfce7;color:#14532d}.z2{background:#ffedd5;color:#9a3412}.z3{background:#fee2e2;color:#991b1b}.z4{background:#fce7f3;color:#831843}
 .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}.actions a,.actions button{padding:9px 13px;border-radius:999px;text-decoration:none;border:0;font-weight:700;cursor:pointer}.actions a{background:#0f2b44;color:#fff}.actions button{background:#e5e7eb;color:#111827}
 .small{font-size:.78rem;color:#64748b;margin-top:8px}
 @media(max-width:600px){.app{box-shadow:none}.top{align-items:flex-start}.nav{position:sticky;bottom:0;background:#fff;padding-top:8px}.controls{display:block}.controls select{width:100%;margin-top:6px}}
@@ -31,105 +32,109 @@ main{padding:16px}.notice,.credits{border-radius:10px;padding:10px 12px;margin-b
   <div class="sub">Cuestionario de Identificación de los Trastornos debidos al Consumo de Alcohol</div>
 </header>
 <main>
-  <div class="notice"><strong>Tamizaje clínico.</strong> Se calcula localmente en este dispositivo. No solicita contraseña, datos personales ni consentimiento de investigación y no transmite resultados.</div>
+  <div class="notice"><strong>Consentimiento e información previa.</strong> Antes de aplicar este instrumento, informe a la persona evaluada sobre el propósito del tamizaje, su carácter voluntario y que el resultado no constituye por sí solo un diagnóstico. Respete la confidencialidad según la práctica profesional.<br><span style="display:block;margin-top:6px"><strong>Privacidad:</strong> esta versión calcula el resultado localmente y no almacena ni transmite datos identificatorios.</span></div>
   <div class="controls">
     <label>Idioma
       <select id="lang">
         <option value="es">Español</option>
         <option value="qu">Quechua · Ayacucho (adaptación validada)</option>
+        <option value="ay">Aymara · pendiente de validación</option>
+        <option value="con">Conihua · pendiente de validación</option>
+        <option value="ship">Shipibo · pendiente de validación</option>
       </select>
     </label>
   </div>
+  <div class="warning" id="langNotice"><strong>Versión lingüística en desarrollo.</strong> Esta traducción se conserva para futura adaptación y validación. No debe presentarse como versión validada.</div>
   <div class="credits" id="credits" style="display:none">
     <strong>AUDIT Versión Español/Quechua.</strong><br>
-    Proyecto Estabilización Post Conflicto y Rehabilitación Psicosocial en Comunidades Alto-Andinas del Perú.<br>
-    <strong>Adaptación:</strong> Thomas Brown, Consuelo Errázuriz, Duncan Pedersen, Jefrey Gamarra, Edith Huayllasco y Julián Berrocal.
-    Douglas Hospital Research Centre – McGill University e IPAZ, Ayacucho, Perú.<br>
-    <strong>Autores originales AUDIT:</strong> Thomas F. Babor, John C. Higgins-Biddle, John B. Saunders y Maristela G. Monteiro · OMS.
+    Cuestionario de Identificación de los Trastornos debidos al Consumo de Alcohol — Proyecto Estabilización Post Conflicto y Rehabilitación Psicosocial en Comunidades Alto-Andinas del Perú.<br><br>
+    <strong>Adaptación:</strong> Thomas Brown, Consuelo Errázuriz, Duncan Pedersen, Jefrey Gamarra, Edith Huayllasco y Julián Berrocal.<br>
+    Douglas Hospital Research Centre – McGill University, Montreal, Canadá; IPAZ, Ayacucho, Perú.<br><br>
+    <strong>Autores originales AUDIT:</strong> Thomas F. Babor, John C. Higgins-Biddle, John B. Saunders y Maristela G. Monteiro — Organización Mundial de la Salud.
   </div>
   <div class="progress"><strong id="counter">1/10</strong><div class="barbox"><div class="bar" id="bar"></div></div><span id="pct">10%</span></div>
   <div id="question" class="question"></div>
-  <div class="nav">
-    <button id="prev" class="prev">← Anterior</button>
-    <button id="next" class="next">Siguiente →</button>
-  </div>
+  <div class="nav"><button id="prev" class="prev">← Anterior</button><button id="next" class="next">Siguiente →</button></div>
   <div id="result" class="result"></div>
 </main>
 </div>
 <script>
-const LANG = {
-es: {
-  questions: [
-    {t:'¿Con qué frecuencia consume alguna bebida alcohólica?',o:['Nunca','1 o menos veces al mes','De 2 a 4 veces al mes','De 2 a 3 veces por semana','4 o más veces por semana']},
-    {t:'¿Cuántos tragos estándar suele tomar en un día de consumo normal?',o:['1 o 2','3 o 4','5 o 6','De 7 a 9','10 o más']},
-    {t:'¿Con qué frecuencia toma 6 o más tragos estándar en una sola ocasión?',o:['Nunca','Menos de una vez al mes','Mensualmente','Semanalmente','A diario o casi a diario']},
-    {t:'En el último año, ¿con qué frecuencia no pudo parar de beber una vez que había empezado?',o:['Nunca','Menos de una vez al mes','Mensualmente','Semanalmente','A diario o casi a diario']},
-    {t:'En el último año, ¿con qué frecuencia no pudo hacer lo que se esperaba de usted debido a la bebida?',o:['Nunca','Menos de una vez al mes','Mensualmente','Semanalmente','A diario o casi a diario']},
-    {t:'En el último año, ¿con qué frecuencia necesitó beber en ayunas para recuperarse después de haber bebido mucho?',o:['Nunca','Menos de una vez al mes','Mensualmente','Semanalmente','A diario o casi a diario']},
-    {t:'En el último año, ¿con qué frecuencia ha tenido remordimientos o culpa después de beber?',o:['Nunca','Menos de una vez al mes','Mensualmente','Semanalmente','A diario o casi a diario']},
-    {t:'En el último año, ¿con qué frecuencia no ha recordado lo que pasó porque había bebido?',o:['Nunca','Menos de una vez al mes','Mensualmente','Semanalmente','A diario o casi a diario']},
-    {t:'¿Usted o alguien más ha resultado herido debido a su consumo de alcohol?',o:['No','Sí, pero no en el último año','Sí, durante el último año'],v:[0,2,4]},
-    {t:'¿Algún familiar, amigo o médico ha mostrado preocupación por su consumo o le ha sugerido dejar de beber?',o:['No','Sí, pero no en el último año','Sí, durante el último año'],v:[0,2,4]}
-  ]
-},
-qu: {
-  questions: [
-    {t:'Qampa usuykipi (costumbriyki), ¿hayka kutitataq upyanki?',c:'Kumparikiykiwan, amiguykikunawan huñunakuspa, minkakunapi utaq llamkaykunapipas, tragukunata upyanki (cerveza, sidra, kañasu, aqa, yakuwan alkul chaqwasqa utaq huk rikchaq upyaykuna).',o:['Mana huk kutitapas','Huk kutita killapi','Iskay, kimsa utaq tawa kutita sapa killa','Iskay utaq kinsa kutita sapa simana','Sapa punchaw, yaqa sapa punchaw']},
-    {t:'2A/2B. ¿Hayka bebida estándar upyanki?',c:'Kay adaptaciónpi Ítem 2 iskay tikrasqa: raymi/huñunakuy punchawpi chaymanta wakin punchawpi. Kay versión digitalpi iskaynin tapuykunamanta chawpi puntajeqa Ítem 2 puntaje hina llamkan.',sub:[
-      {t:'2A. ¿Hayka bebida estándar raymi punchawpi (fiesta) utaq huñunakuykunapipas (compromiso) upyanki?',o:['Hukta utaq iskayta','Kinsata utaq tawata','Pichqata utaq suqtata','Qanchista, pusaqta utaq isqunta','Chunkamanta aswan mastaraq']},
-      {t:'2B. ¿Hayka bebida estándar wakin punchaw upyanki?',o:['Hukta utaq iskayta','Kinsata utaq tawata','Pichqata utaq suqtata','Qanchista, pusaqta utaq isqunta','Chunkamanta aswan mastaraq']}
-    ]},
-    {t:'¿Suqtamanta aswan mastaraq (bebida estándar), huk punchawllapi, hayka kutitataq upyarqanki?',o:['Nunkapas','Raymillapi utaq compromisollapi','Sapa killa','Sapa simana','Sapa punchaw, yaqa sapa punchaw']},
-    {t:'Kay wata upyapakusqaykipi, ¿tukuy punchaw upyayta munarqankichu utaq mana upyay saqiyta atirqankichu?',o:['Nunkapas','Raymillapi utaq compromisollapi','Sapa killa','Sapa simana','Sapa punchaw, yaqa sapa punchaw']},
-    {t:'Kay wata upyasqaykirayku, ¿hayka kutitaq mana llamkargankichu nitaq ruwanaykita ruwargankichu?',o:['Nunkapas','Raymillapi utaq compromisollapi','Sapa killa','Sapa simana','Sapa punchaw, yaqa sapa punchaw']},
-    {t:'Kay wata, ¿hayka kutitam alli-allinta upyaruspa, urmaykita hampirqanki?',o:['Nunkapas','Sapa raymillapi utaq compromisollapi','Sapa killa','Sapa simana','Sapa punchaw, yaqa sapa punchaw']},
-    {t:'Kay wata, ¿upyarquspaña, hayka kutim nakakuq hina karqanki utaq huchayuq hina rikukurqanki?',o:['Nunkapas','Sapa raymillapi utaq compromisollapi','Sapa killa','Sapa simana','Sapa punchaw, yaqa sapa punchaw']},
-    {t:'Kay wata, ¿macharuspa imapas ruwasqaykita mana yuyarqankichu?',o:['Nunkapas','Raymillapi utaq compromisullapi','Sapa killa','Sapa simana','Sapa punchaw, yaqa sapa punchaw']},
-    {t:'Upyasqaykipi, ¿accidentakurqankichu, macharuspa piwanpas maqanakurankichu, pitapas maqarqankichu?',o:['Nunkapas','Ari, aswan unay watapi (manam kay watachu)','Ari, kay watapi'],v:[0,2,4]},
-    {t:'¿Hukkaq aylluyki, amiguyki, vecinuyki, hampina wasipi llamkaqpas utaq llaqtamasiykipas "amaña upyaychu" nisurqankichu?',o:['Nunkapas','Ari, aswan unay watañam (manam kay watachu)','Ari, kay watapi'],v:[0,2,4]}
-  ]
-}};
-let lang='es', idx=0, answers=Array(10).fill(null), sub2=[null,null];
-const qEl=document.getElementById('question'), next=document.getElementById('next'), prev=document.getElementById('prev');
+const LANG={
+es:{verified:true,questions:[
+{t:'¿Con qué frecuencia consume alguna bebida alcohólica?',o:['Nunca','1 o menos veces al mes','De 2 a 4 veces al mes','De 2 a 3 veces por semana','4 o más veces por semana']},
+{t:'¿Cuántos tragos estándar suele tomar en un día de consumo normal?',o:['1 o 2','3 o 4','5 o 6','De 7 a 9','10 o más']},
+{t:'¿Con qué frecuencia toma 6 o más tragos estándar en una sola ocasión?',o:['Nunca','Menos de una vez al mes','Mensualmente','Semanalmente','A diario o casi a diario']},
+{t:'En el último año, ¿con qué frecuencia no pudo parar de beber una vez que había empezado?',o:['Nunca','Menos de una vez al mes','Mensualmente','Semanalmente','A diario o casi a diario']},
+{t:'En el último año, ¿con qué frecuencia no pudo hacer lo que se esperaba de usted debido a la bebida?',o:['Nunca','Menos de una vez al mes','Mensualmente','Semanalmente','A diario o casi a diario']},
+{t:'En el último año, ¿con qué frecuencia necesitó beber en ayunas para recuperarse después de haber bebido mucho?',o:['Nunca','Menos de una vez al mes','Mensualmente','Semanalmente','A diario o casi a diario']},
+{t:'En el último año, ¿con qué frecuencia ha tenido remordimientos o culpa después de beber?',o:['Nunca','Menos de una vez al mes','Mensualmente','Semanalmente','A diario o casi a diario']},
+{t:'En el último año, ¿con qué frecuencia no ha recordado lo que pasó porque había bebido?',o:['Nunca','Menos de una vez al mes','Mensualmente','Semanalmente','A diario o casi a diario']},
+{t:'¿Usted o alguien más ha resultado herido debido a su consumo de alcohol?',o:['No','Sí, pero no en el último año','Sí, durante el último año'],v:[0,2,4]},
+{t:'¿Algún familiar, amigo o médico ha mostrado preocupación por su consumo o le ha sugerido dejar de beber?',o:['No','Sí, pero no en el último año','Sí, durante el último año'],v:[0,2,4]}]},
+qu:{verified:true,questions:[
+{t:'Qampa usuykipi (costumbriyki), ¿hayka kutitataq upyanki?',c:'Kumparikiykiwan, amiguykikunawan huñunakuspa, minkakunapi utaq llamkaykunapipas, tragukunata upyanki (cerveza, sidra, kañasu, aqa, yakuwan alkul chaqwasqa utaq huk rikchaq upyaykuna).',o:['Mana huk kutitapas','Huk kutita killapi','Iskay, kimsa utaq tawa kutita sapa killa','Iskay utaq kinsa kutita sapa simana','Sapa punchaw, yaqa sapa punchaw']},
+{t:'Ítem 2',c:'Kay tapuyqa iskay tikrasqa kaptillan (2A raymipaq, 2B sapa punchawpaq); puntajeqa taqwan yupasqa kanqa, chaymi Ítem 2 hina qillqasqa kanqa.',sub:[
+{t:'2A. ¿Hayka bebida estándar raymi punchawpi (fiesta) utaq huñunakuykunapipas (compromiso) upyanki?',o:['Hukta utaq iskayta','Kinsata utaq tawata','Pichqata utaq suqtata','Qanchista, pusaqta utaq isqunta','Chunkamanta aswan mastaraq']},
+{t:'2B. ¿Hayka bebida estándar wakin punchaw upyanki?',o:['Hukta utaq iskayta','Kinsata utaq tawata','Pichqata utaq suqtata','Qanchista, pusaqta utaq isqunta','Chunkamanta aswan mastaraq']}]},
+{t:'¿Suqtamanta aswan mastaraq (bebida estándar), huk punchawllapi, hayka kutitataq upyarqanki?',o:['Nunkapas','Raymillapi utaq compromisollapi','Sapa killa','Sapa simana','Sapa punchaw, yaqa sapa punchaw']},
+{t:'Kay wata upyapakusqaykipi, ¿tukuy punchaw upyayta munarqankichu utaq mana upyay saqiyta atirqankichu?',o:['Nunkapas','Raymillapi utaq compromisollapi','Sapa killa','Sapa simana','Sapa punchaw, yaqa sapa punchaw']},
+{t:'Kay wata upyasqaykirayku, ¿hayka kutitaq mana llamkargankichu nitaq ruwanaykita ruwargankichu?',o:['Nunkapas','Raymillapi utaq compromisollapi','Sapa killa','Sapa simana','Sapa punchaw, yaqa sapa punchaw']},
+{t:'Kay wata, ¿hayka kutitam alli-allinta upyaruspa, urmaykita hampirqanki?',o:['Nunkapas','Sapa raymillapi utaq compromisollapi','Sapa killa','Sapa simana','Sapa punchaw, yaqa sapa punchaw']},
+{t:'Kay wata, ¿upyarquspaña, hayka kutim nakakuq hina karqanki utaq huchayuq hina rikukurqanki?',o:['Nunkapas','Sapa raymillapi utaq compromisollapi','Sapa killa','Sapa simana','Sapa punchaw, yaqa sapa punchaw']},
+{t:'Kay wata, ¿macharuspa imapas ruwasqaykita mana yuyarqankichu?',o:['Nunkapas','Raymillapi utaq compromisullapi','Sapa killa','Sapa simana','Sapa punchaw, yaqa sapa punchaw']},
+{t:'Upyasqaykipi, ¿accidentakurqankichu, macharuspa piwanpas maqanakurankichu, pitapas maqarqankichu?',o:['Nunkapas','Ari, aswan unay watapi (manam kay watachu)','Ari, kay watapi'],v:[0,2,4]},
+{t:'¿Hukkaq aylluyki, amiguyki, vecinuyki, hampina wasipi llamkaqpas utaq llaqtamasiykipas "amaña upyaychu" nisurqankichu?',o:['Nunkapas','Ari, aswan unay watañam (manam kay watachu)','Ari, kay watapi'],v:[0,2,4]}]},
+ay:{verified:false,questions:[
+{t:'Kuna sapüru umantasma alcochol?',c:'Aka askixa qan umañamampiwa.',o:['Janipuniw','May mä phaxsin','Phaxsi 2-4','Sämana 2-3','Sämana 4+']},
+{t:'Kuna umañanaka umantasma maya uru?',o:['1-2','3-4','5-6','7-9','10+']},
+{t:'Kuna sapüru umantasma 6+ umañanaka?',o:['Janipuniw','May mä phaxsin','Phaxsin','Sämanan','Uru urun']},
+{t:"Mä mara, kuna sapüru mana atispasma jayt'añataki?",o:['Janipuniw','May mä phaxsin','Phaxsin','Sämanan','Uru urun']},
+{t:'Mä mara, kuna sapüru mana luraspasma lurañataki?',o:['Janipuniw','May mä phaxsin','Phaxsin','Sämanan','Uru urun']},
+{t:'Mä mara, kuna sapüru umantasma qʼiwin jani umañanakata?',o:['Janipuniw','May mä phaxsin','Phaxsin','Sämanan','Uru urun']},
+{t:'Mä mara, kuna sapüru llakista umasqata?',o:['Janipuniw','May mä phaxsin','Phaxsin','Sämanan','Uru urun']},
+{t:'Mä mara, kuna sapüru jani amuytaspa umasqata?',o:['Janipuniw','May mä phaxsin','Phaxsin','Sämanan','Uru urun']},
+{t:'¿Jumajj o mayniti dañasktam umasqatamata?',o:['Janipuniw','Jisa, jani mä marachi','Jisa, mä mara'],v:[0,2,4]},
+{t:'¿May familiamajj, amigumajj o médico llakiskam umasqatamata?',o:['Janipuniw','Jisa, jani mä marachi','Jisa, mä mara'],v:[0,2,4]}]},
+con:{verified:false,questions:[
+{t:'¿Inóquera oquebega conihua?',c:'Ea tapui tsinané qui oquebega.',o:['Nébiri','Jatari 1','Jatari 2-4','Ajá 2-3','Ajá 4+']},
+{t:'¿Inóqui oquequé jatari?',o:['1-2','3-4','5-6','7-9','10+']},
+{t:'¿Inóqui oquequé 6+ inó jatari?',o:['Nébiri','Jatari 1','Jatari','Ajá','Ajá jae']},
+{t:'Inóqui nequecureó qui niri inó?',o:['Nébiri','Jatari 1','Jatari','Ajá','Ajá jae']},
+{t:'Inóqui nequecureó qui pague inó?',o:['Nébiri','Jatari 1','Jatari','Ajá','Ajá jae']},
+{t:'Inóqui nequecureó qui oqué inó?',o:['Nébiri','Jatari 1','Jatari','Ajá','Ajá jae']},
+{t:'Inóqui nequecureó qui quea inó?',o:['Nébiri','Jatari 1','Jatari','Ajá','Ajá jae']},
+{t:'Inóqui nequecureó qui nécara inó?',o:['Nébiri','Jatari 1','Jatari','Ajá','Ajá jae']},
+{t:'¿Ué o fane dañabé inó?',o:['Nébiri','Hué, ne jatarí','Hué, jatarí'],v:[0,2,4]},
+{t:'¿Fane, nihue o médico tabaqué inó?',o:['Nébiri','Hué, ne jatarí','Hué, jatarí'],v:[0,2,4]}]},
+ship:{verified:false,questions:[
+{t:'¿Jawen káti pakeá jene?',c:'Ea póti jawen káti pakenki.',o:['Noká','Méa 1','Méa 2-4','Méa 2-3','Méa 4+']},
+{t:'¿Jawen káti pakeá jene méa?',o:['1-2','3-4','5-6','7-9','10+']},
+{t:'¿Jawen káti pakeá 6+ káti méa?',o:['Noká','Méa 1','Méa','Ká','Ká jé']},
+{t:'Jawen káti noká jé jene káti?',o:['Noká','Méa 1','Méa','Ká','Ká jé']},
+{t:'Jawen káti noká jé jene pake?',o:['Noká','Méa 1','Méa','Ká','Ká jé']},
+{t:'Jawen káti noká jé jene káti?',o:['Noká','Méa 1','Méa','Ká','Ká jé']},
+{t:'Jawen káti noká jé jene wajá?',o:['Noká','Méa 1','Méa','Ká','Ká jé']},
+{t:'Jawen káti noká jé jene noká?',o:['Noká','Méa 1','Méa','Ká','Ká jé']},
+{t:'¿Jene o joní dañá káti?',o:['Noká','Jé, noká méa','Jé, méa'],v:[0,2,4]},
+{t:'¿Joní, beko o médico wajá káti?',o:['Noká','Jé, noká méa','Jé, méa'],v:[0,2,4]}]}
+};
+let lang='es',idx=0,answers=Array(10).fill(null),sub2=[null,null];
+const qEl=document.getElementById('question'),next=document.getElementById('next'),prev=document.getElementById('prev');
 function render(){
-  const q=LANG[lang].questions[idx];
-  let html=`<div class="qnum">Pregunta ${idx+1} de 10</div><div class="qtext">${q.t}</div>`;
-  if(q.c) html+=`<div class="context">${q.c}</div>`;
-  if(q.sub){
-    q.sub.forEach((s,si)=>{
-      html+=`<div class="qtext" style="font-size:.95rem">${s.t}</div>`;
-      s.o.forEach((op,i)=>{html+=`<label class="option"><input type="radio" name="sub${si}" value="${i}" ${sub2[si]===i?'checked':''}> <span>${op}</span></label>`});
-    });
-  }else{
-    q.o.forEach((op,i)=>{
-      const val=q.v?q.v[i]:i;
-      html+=`<label class="option"><input type="radio" name="answer" value="${val}" ${answers[idx]===val?'checked':''}> <span>${op}</span></label>`;
-    });
-  }
-  qEl.innerHTML=html;
-  qEl.querySelectorAll('input[name="answer"]').forEach(r=>r.onchange=()=>{answers[idx]=Number(r.value); updateButtons();});
-  qEl.querySelectorAll('input[name^="sub"]').forEach(r=>r.onchange=()=>{
-    const si=Number(r.name.replace('sub','')); sub2[si]=Number(r.value);
-    if(sub2[0]!==null&&sub2[1]!==null) answers[1]=Math.round((sub2[0]+sub2[1])/2);
-    updateButtons();
-  });
-  document.getElementById('counter').textContent=`${idx+1}/10`;
-  const pct=(idx+1)*10; document.getElementById('pct').textContent=pct+'%'; document.getElementById('bar').style.width=pct+'%';
-  prev.disabled=idx===0; next.textContent=idx===9?'Ver resultado':'Siguiente →'; updateButtons();
+ const q=LANG[lang].questions[idx];let h=`<div class="qnum">Pregunta ${idx+1} de 10</div><div class="qtext">${q.t}</div>`;
+ if(q.c)h+=`<div class="context">${q.c}</div>`;
+ if(q.sub){q.sub.forEach((s,si)=>{h+=`<div class="qtext" style="font-size:.95rem">${s.t}</div>`;s.o.forEach((op,i)=>h+=`<label class="option"><input type="radio" name="sub${si}" value="${i}" ${sub2[si]===i?'checked':''}><span>${op}</span></label>`);});}
+ else{q.o.forEach((op,i)=>{const v=q.v?q.v[i]:i;h+=`<label class="option"><input type="radio" name="answer" value="${v}" ${answers[idx]===v?'checked':''}><span>${op}</span></label>`;});}
+ qEl.innerHTML=h;
+ qEl.querySelectorAll('input[name="answer"]').forEach(r=>r.onchange=()=>{answers[idx]=Number(r.value);update();});
+ qEl.querySelectorAll('input[name^="sub"]').forEach(r=>r.onchange=()=>{const si=Number(r.name.replace('sub',''));sub2[si]=Number(r.value);if(sub2[0]!==null&&sub2[1]!==null)answers[1]=Math.round((sub2[0]+sub2[1])/2);update();});
+ document.getElementById('counter').textContent=`${idx+1}/10`;const pct=(idx+1)*10;document.getElementById('pct').textContent=pct+'%';document.getElementById('bar').style.width=pct+'%';prev.disabled=idx===0;next.textContent=idx===9?'Ver resultado':'Siguiente →';update();
 }
-function updateButtons(){ next.disabled=answers[idx]===null; }
-prev.onclick=()=>{if(idx>0){idx--;render();}};
-next.onclick=()=>{if(answers[idx]===null)return;if(idx<9){idx++;render();}else result();};
-document.getElementById('lang').onchange=e=>{lang=e.target.value;idx=0;answers=Array(10).fill(null);sub2=[null,null];document.getElementById('credits').style.display=lang==='qu'?'block':'none';document.getElementById('result').className='result';render();};
-function result(){
-  const score=answers.reduce((a,b)=>a+b,0); let cls='z1', title='Zona I · Bajo riesgo', guidance='Educación sobre alcohol y seguimiento preventivo.';
-  if(score>=8&&score<=15){cls='z2';title='Zona II · Consumo de riesgo';guidance='Corresponde valoración clínica y consejo/intervención breve según contexto.'}
-  else if(score>=16&&score<=19){cls='z3';title='Zona III · Consumo perjudicial';guidance='Requiere evaluación clínica más amplia e intervención apropiada.'}
-  else if(score>=20){cls='z4';title='Zona IV · Posible dependencia';guidance='Puntaje compatible con necesidad de evaluación diagnóstica especializada; AUDIT no establece diagnóstico por sí solo.'}
-  const r=document.getElementById('result');r.className=`result show ${cls}`;r.innerHTML=`<div style="font-size:1.35rem;font-weight:800">${score} / 40</div><div style="margin-top:5px;font-weight:800">${title}</div><div style="margin-top:8px">${guidance}</div><div class="small">Resultado de tamizaje, no diagnóstico.</div><div class="actions"><button onclick="restart()">Nuevo tamizaje</button><a href="screening-index.html">← Screening</a><a href="../index.html">Tablero SERUMS</a></div>`;r.scrollIntoView({behavior:'smooth'});
-}
+function update(){next.disabled=answers[idx]===null;}
+prev.onclick=()=>{if(idx>0){idx--;render();}};next.onclick=()=>{if(answers[idx]===null)return;if(idx<9){idx++;render();}else result();};
+document.getElementById('lang').onchange=e=>{lang=e.target.value;idx=0;answers=Array(10).fill(null);sub2=[null,null];document.getElementById('credits').style.display=lang==='qu'?'block':'none';document.getElementById('langNotice').style.display=LANG[lang].verified?'none':'block';document.getElementById('result').className='result';render();};
+function result(){const score=answers.reduce((a,b)=>a+b,0);let cls='z1',title='Zona I · Bajo riesgo',g='Educación sobre alcohol y seguimiento preventivo.';if(score>=8&&score<=15){cls='z2';title='Zona II · Consumo de riesgo';g='Corresponde valoración clínica y consejo/intervención breve según contexto.'}else if(score>=16&&score<=19){cls='z3';title='Zona III · Consumo perjudicial';g='Requiere evaluación clínica más amplia e intervención apropiada.'}else if(score>=20){cls='z4';title='Zona IV · Posible dependencia';g='Requiere evaluación diagnóstica especializada; AUDIT no establece diagnóstico por sí solo.'}const r=document.getElementById('result');r.className=`result show ${cls}`;r.innerHTML=`<div style="font-size:1.35rem;font-weight:800">${score} / 40</div><div style="margin-top:5px;font-weight:800">${title}</div><div style="margin-top:8px">${g}</div><div class="small">Resultado de tamizaje, no diagnóstico.</div><div class="actions"><button onclick="restart()">Nuevo tamizaje</button><a href="screening-index.html">← Screening</a><a href="../index.html">Tablero SERUMS</a></div>`;r.scrollIntoView({behavior:'smooth'});}
 function restart(){idx=0;answers=Array(10).fill(null);sub2=[null,null];document.getElementById('result').className='result';render();window.scrollTo({top:0,behavior:'smooth'});}
 render();
 </script>
-</body>
-</html>
+</body></html>
