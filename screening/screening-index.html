@@ -1,24 +1,42 @@
-<!doctype html>
-<html lang="es">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Screening Clínico · SERUM-APP</title>
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Screening y Evaluación Clínica · SERUM-APP</title>
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:linear-gradient(135deg,#183a6a,#31599a);min-height:100vh;color:#1f2937}
-.wrap{max-width:1050px;margin:auto;padding:18px}.head{color:#fff;text-align:center;padding:16px 0 22px}.head h1{margin:0;font-size:2rem}.head p{opacity:.9}
-.nav{display:flex;gap:10px;justify-content:center;margin:10px 0 22px;flex-wrap:wrap}.nav a{color:#fff;border:1px solid #ffffff55;padding:8px 12px;border-radius:999px;text-decoration:none}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}.card{background:#fff;border-radius:14px;padding:18px;box-shadow:0 8px 25px #0002;display:flex;flex-direction:column}
-.card h2{margin:0 0 4px}.tag{font-size:.76rem;font-weight:800;color:#31599a}.desc{color:#64748b;line-height:1.45;flex:1}.meta{font-size:.84rem;background:#f8fafc;padding:9px;border-radius:9px;margin:8px 0}.btn{display:block;background:#234d87;color:#fff;padding:10px;border-radius:9px;text-align:center;text-decoration:none;font-weight:800}
-</style>
-</head>
-<body><div class="wrap">
-<div class="head"><h1>Screening Clínico</h1><p>Instrumentos de tamizaje para la práctica profesional</p></div>
-<div class="nav"><a href="../index.html">← Tablero SERUMS</a></div>
-<div class="grid">
- <article class="card"><span class="tag">ALCOHOL</span><h2>AUDIT</h2><p class="desc">Identificación de patrones de consumo de alcohol y nivel de riesgo.</p><div class="meta">Español · Quechua Ayacucho · versiones lingüísticas en desarrollo</div><a class="btn" href="audit.html">Abrir AUDIT</a></article>
- <article class="card"><span class="tag">SALUD MENTAL</span><h2>SRQ-18</h2><p class="desc">Tamizaje breve de síntomas asociados a problemas de salud mental.</p><div class="meta">18 ítems</div><a class="btn" href="srq18.html">Abrir SRQ-18</a></article>
- <article class="card"><span class="tag">PEDIATRÍA</span><h2>PSC</h2><p class="desc">Tamizaje de síntomas psicosociales en población pediátrica.</p><div class="meta">Aplicación a cuidador/a</div><a class="btn" href="psc-pediatrico.html">Abrir PSC</a></article>
- <article class="card"><span class="tag">NEURODESARROLLO</span><h2>M-CHAT-R/F</h2><p class="desc">Tamizaje de riesgo de trastorno del espectro autista en primera infancia.</p><div class="meta">16–30 meses</div><a class="btn" href="mchat-rf.html">Abrir M-CHAT-R/F</a></article>
- <article class="card"><span class="tag">ADULTO MAYOR</span><h2>GDS-15</h2><p class="desc">Tamizaje de síntomas depresivos en personas adultas mayores.</p><div class="meta">15 ítems</div><a class="btn" href="gds15-yesavage.html">Abrir GDS-15</a></article>
-</div>
-</div></body></html>
+*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:#eef3f8;color:#172033}
+.app{max-width:820px;margin:auto;min-height:100vh;background:#fff;box-shadow:0 0 25px #0001}
+header{background:linear-gradient(135deg,#0a2e44,#1a5a7a);color:#fff;padding:16px 18px}
+.navtop{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}.navtop a{color:#fff;text-decoration:none;border:1px solid #ffffff66;padding:7px 11px;border-radius:999px;font-size:.82rem;font-weight:700}
+h1{margin:12px 0 2px;font-size:1.65rem}.sub{opacity:.85;font-size:.9rem}
+main{padding:16px}.info,.warn,.credit{padding:11px 13px;border-radius:10px;margin-bottom:13px;line-height:1.5;font-size:.85rem}
+.info{background:#eef6ff;border-left:4px solid #2563eb}.warn{background:#fff4e5;border-left:4px solid #d97706;color:#7c4a1a}.danger{background:#fee2e2;border-left:4px solid #dc2626;color:#7f1d1d}.credit{background:#f8f7f2;border-left:4px solid #b08d3e;color:#4a4335;font-size:.78rem}
+.card{border:1px solid #dbe3ec;border-radius:14px;padding:15px;margin:12px 0;background:#fff;box-shadow:0 3px 10px #0000000b}
+.item{border:1px solid #dbe3ec;border-radius:12px;padding:13px;margin:10px 0}.item h3,.item p{margin:0 0 10px;line-height:1.45}
+.opts{display:grid;gap:7px}.opt{display:flex;gap:8px;align-items:flex-start;border:1px solid #dbe3ec;border-radius:10px;padding:9px 10px;cursor:pointer}.opt:has(input:checked){background:#e8f1ff;border-color:#2563eb}
+input[type=radio],input[type=checkbox]{margin-top:3px}.btn{border:0;border-radius:999px;padding:10px 15px;font-weight:800;cursor:pointer;background:#1e4a7a;color:#fff;text-decoration:none;display:inline-block}
+.btn.secondary{background:#e5e7eb;color:#172033}.btn.warnb{background:#b45309}.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:14px}
+.result{display:none;border-radius:14px;padding:15px;margin-top:15px;background:#eef6ff}.result.show{display:block}.score{font-size:1.7rem;font-weight:800}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}.field{display:flex;flex-direction:column;gap:5px;margin:8px 0}.field input,.field select{padding:9px;border:1px solid #cbd5e1;border-radius:8px;font:inherit}
+table{width:100%;border-collapse:collapse;margin-top:8px;font-size:.86rem}td,th{padding:7px;border-bottom:1px solid #e2e8f0;text-align:left}
+.small{font-size:.78rem;color:#64748b;line-height:1.45}.hidden{display:none!important}
+@media(max-width:600px){.app{box-shadow:none}.grid{grid-template-columns:1fr}.actions{position:sticky;bottom:0;background:#fff;padding:8px 0}.btn{flex:1;text-align:center}}
+
+body{background:linear-gradient(135deg,#183a6a,#31599a)}.app{max-width:1120px;background:transparent;box-shadow:none}header{background:transparent;text-align:center}main{padding-top:4px}.cat{background:#ffffff12;border:1px solid #ffffff22;border-radius:16px;padding:14px;margin:15px 0}.cat h2{color:#fff;margin:0 0 11px}.tool{background:#fff;border-radius:13px;padding:15px;display:flex;flex-direction:column;min-height:180px}.tool h3{margin:0 0 5px}.tool p{color:#64748b;line-height:1.4;flex:1}.tool a{background:#234d87;color:#fff;text-decoration:none;text-align:center;padding:9px;border-radius:9px;font-weight:800}.road{background:#f8fafc;opacity:.82}.road span{display:block;background:#e2e8f0;padding:9px;border-radius:9px;text-align:center;font-weight:700;color:#64748b}
+</style></head><body><div class="app"><header><div class="navtop"><a href="../index.html">← Tablero SERUMS</a></div><h1>Screening y Evaluación Clínica</h1><div class="sub">Instrumentos organizados por área de aplicación</div></header><main>
+<section class="cat"><h2>Salud mental</h2><div class="grid">
+<div class="tool"><h3>PHQ-9</h3><p>Síntomas depresivos. Incluye alerta independiente para ítem 9.</p><a href="phq9.html">Abrir PHQ-9</a></div>
+<div class="tool"><h3>GAD-7</h3><p>Síntomas de ansiedad generalizada.</p><a href="gad7.html">Abrir GAD-7</a></div>
+<div class="tool"><h3>SRQ-18</h3><p>Tamizaje general de salud mental.</p><a href="srq18.html">Abrir SRQ-18</a></div>
+<div class="tool"><h3>GDS-15</h3><p>Síntomas depresivos en persona adulta mayor.</p><a href="gds15-yesavage.html">Abrir GDS-15</a></div>
+</div></section>
+<section class="cat"><h2>Alcohol y otras sustancias</h2><div class="grid">
+<div class="tool"><h3>AUDIT</h3><p>Alcohol. Español, Quechua Ayacucho validado y versiones lingüísticas en desarrollo.</p><a href="audit.html">Abrir AUDIT</a></div>
+<div class="tool"><h3>ASSIST</h3><p>Riesgo relacionado con tabaco, alcohol y otras sustancias.</p><a href="assist.html">Abrir ASSIST</a></div>
+<div class="tool"><h3>CRAFFT</h3><p>Consumo de alcohol y otras sustancias en adolescentes.</p><a href="crafft.html">Abrir CRAFFT</a></div>
+</div></section>
+<section class="cat"><h2>Infancia, neurodesarrollo y TDAH</h2><div class="grid">
+<div class="tool"><h3>M-CHAT-R/F</h3><p>Riesgo de TEA en primera infancia.</p><a href="mchat-rf.html">Abrir M-CHAT-R/F</a></div>
+<div class="tool"><h3>PSC</h3><p>Síntomas psicosociales pediátricos.</p><a href="psc-pediatrico.html">Abrir PSC</a></div>
+<div class="tool"><h3>TDAH</h3><p>ASRS-v1.1 para adultos y SNAP-IV 26 para niños/adolescentes.</p><a href="tdah.html">Abrir TDAH</a></div>
+</div></section>
+<section class="cat"><h2>Violencia y seguridad</h2><div class="grid"><div class="tool"><h3>WAST corto</h3><p>Tamizaje breve de violencia de pareja.</p><a href="wast.html">Abrir WAST</a></div></div></section>
+<section class="cat"><h2>Nutrición clínica</h2><div class="grid"><div class="tool"><h3>Calculadoras nutricionales</h3><p>IMC, peso ideal estimado y gasto energético.</p><a href="nutricion.html">Abrir Nutrición</a></div></div></section>
+<section class="cat"><h2>Evaluación cognitiva y neuropsicológica</h2><div class="grid"><div class="tool road"><h3>Módulo preparado</h3><p>Espacio reservado para instrumentos que se incorporen después de revisar licencia, población, versión validada y reglas de puntuación.</p><span>Sin pruebas añadidas todavía</span></div></div></section>
+</main></div></body></html>
