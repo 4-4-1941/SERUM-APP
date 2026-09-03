@@ -627,15 +627,14 @@
 
     function nuevoCaso() {
         casoActual = null;
-        document.getElementById('casoSexo').value = '';
-        document.getElementById('casoEdad').value = '';
-        document.getElementById('casoEstadoCivil').value = '';
-        document.getElementById('casoDepartamento').value = '';
-        document.getElementById('casoProvincia').value = '';
-        document.getElementById('casoConsentimiento').checked = false;
         soloPreguntaCarro = false;
         respuestaCarroSola = null;
-        mostrarPantalla('datosCasoScreen');
+        respuestas = new Array(totalPreguntas).fill(null);
+        preguntaActual = 0;
+        document.getElementById('resultadoBox').className = 'resultado';
+        document.getElementById('resultadoBox').innerHTML = '';
+        cargarPreguntas();
+        mostrarPantalla('testScreen');
     }
 </script>
 <script>
@@ -823,7 +822,7 @@
                 <div style="font-size: 1.1rem; margin-bottom:4px;">${mensaje}</div>
                 ${consejosExtra}
                 <div class="nota-corte">Regla oficial CRAFFT 2.1: si la Parte A (alcohol/marihuana/otras drogas) es 0 en los 3 ítems, solo se aplica la pregunta del Carro y se detiene la entrevista — no se calcula un puntaje CRAFFT completo.</div>
-                <div id="notaGuardado" class="nota-guardado">💾 Guardando caso...</div>
+                <div id="notaGuardado" class="nota-guardado">Resultado calculado localmente.</div>
             `;
         } else {
             if (respuestas.some(r => r === null)) {
@@ -851,14 +850,14 @@
                 <div>${mensaje}</div>
                 ${consejosExtra}
                 <div class="nota-corte">Corte oficial CRAFFT 2.1: 0-1 riesgo bajo · 2-6 riesgo alto (2 o más respuestas "Sí" sugieren un problema grave y la necesidad de otra evaluación).</div>
-                <div id="notaGuardado" class="nota-guardado">💾 Guardando caso...</div>
+                <div id="notaGuardado" class="nota-guardado">Resultado calculado localmente.</div>
             `;
         }
 
         const btnNuevo = document.createElement('button');
         btnNuevo.className = 'btn-form-primary';
         btnNuevo.style.marginTop = '10px';
-        btnNuevo.textContent = '➕ Registrar nuevo caso';
+        btnNuevo.textContent = '↻ Nueva evaluación';
         btnNuevo.onclick = nuevoCaso;
         divResultado.appendChild(btnNuevo);
 
@@ -882,7 +881,8 @@
         guardarResultado(total, zonaTexto, detalleGuardado);
     }
 
-    mostrarPantalla('datosCasoScreen');
+    cargarPreguntas();
+    mostrarPantalla('testScreen');
 </script>
 </body>
 </html>

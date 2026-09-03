@@ -300,8 +300,8 @@ let itemsActuales = [];   // array de {texto, sub, ...} de la pregunta actual (a
 
 function seleccionarTest(test) {
     testSeleccionado = test;
-    prepararDatosCaso();
-    mostrarPantalla('datosCasoScreen');
+    prepararTest();
+    mostrarPantalla('testScreen');
 }
 
 
@@ -465,7 +465,7 @@ function calcularASRS() {
             <div><span>Suma total Parte B (ítems 7-18)</span><strong>${sumaB}/48</strong></div>
         </div>
         <div class="nota-corte">Kessler et al. (2005): 4+ respuestas en las casillas sombreadas de la Parte A indican síntomas altamente consistentes con TDAH en adultos y ameritan evaluación adicional. La Parte B aporta información complementaria de perfil sintomático, no tiene punto de corte oficial propio.</div>
-        <div id="notaGuardado" class="nota-guardado">💾 Guardando caso...</div>
+        <div id="notaGuardado" class="nota-guardado">Resultado calculado localmente.</div>
     `;
     agregarBotonNuevoCaso(div);
     div.scrollIntoView({behavior:'smooth', block:'nearest'});
@@ -514,7 +514,7 @@ function calcularVanderbilt() {
             <div><span>Ítems de desempeño afectado (4-5)</span><strong>${perfPositivo}/8</strong></div>
         </div>
         <div class="nota-corte">Criterios NICHQ/AAP (2002): cada dominio requiere el umbral de síntomas indicado Y al menos 1 ítem de desempeño puntuado 4-5 (afectación funcional), condición necesaria para cumplir criterio diagnóstico DSM-IV/5 de impacto funcional.</div>
-        <div id="notaGuardado" class="nota-guardado">💾 Guardando caso...</div>
+        <div id="notaGuardado" class="nota-guardado">Resultado calculado localmente.</div>
     `;
     agregarBotonNuevoCaso(div);
     div.scrollIntoView({behavior:'smooth', block:'nearest'});
@@ -544,7 +544,7 @@ function calcularSNAP() {
             <div><span>Oposicionismo desafiante (referencial, ≥6/8)</span><strong>${oddCount}/8 ${oddPositivo?'✓':''}</strong></div>
         </div>
         <div class="nota-corte">Criterio heurístico DSM-5 (conteo de síntomas): 6 o más de 9 ítems puntuados "Bastante" o "Muchísimo" en un dominio sugiere criterio sintomático cumplido. Los puntos de corte normativos publicados (percentil poblacional) pueden variar según informante; se recomienda contrastar con juicio clínico.</div>
-        <div id="notaGuardado" class="nota-guardado">💾 Guardando caso...</div>
+        <div id="notaGuardado" class="nota-guardado">Resultado calculado localmente.</div>
     `;
     agregarBotonNuevoCaso(div);
     div.scrollIntoView({behavior:'smooth', block:'nearest'});
@@ -555,7 +555,7 @@ function agregarBotonNuevoCaso(div) {
     const btn = document.createElement('button');
     btn.className = 'btn-form-primary';
     btn.style.marginTop = '10px';
-    btn.textContent = '➕ Registrar nuevo caso';
+    btn.textContent = '↻ Nueva evaluación';
     btn.onclick = nuevoCaso;
     div.appendChild(btn);
 
@@ -583,13 +583,6 @@ function guardarResultado() {
 
 function nuevoCaso() {
     casoActual = null;
-    document.getElementById('casoInformante').value = '';
-    document.getElementById('casoSexo').value = '';
-    document.getElementById('casoEdad').value = '';
-    document.getElementById('casoEstadoCivil').value = '';
-    document.getElementById('casoDepartamento').value = '';
-    document.getElementById('casoProvincia').value = '';
-    document.getElementById('casoConsentimiento').checked = false;
     mostrarPantalla('menuScreen');
 }
 

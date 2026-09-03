@@ -708,7 +708,8 @@
         resultadosPorSustancia = {};
         sustanciasActivas.forEach(s => { resultadosPorSustancia[s.id] = { p2: null, p3: null, p4: null, p5: null, p6: null, p7: null }; });
 
-        edadEsAdolescente = casoActual.edad >= 12 && casoActual.edad <= 17;
+        // La versión integrada no solicita ni conserva edad u otros datos identificables.
+        edadEsAdolescente = false;
 
         construirCola();
         document.getElementById('p1Container').style.display = 'none';
@@ -843,7 +844,7 @@
         divResultado.innerHTML = `
             <div style="font-size: 1.26rem;">✅ Sin consumo reportado</div>
             <div class="consejos"><strong>💡 Orientación:</strong><ul><li>El/la paciente no reportó consumo de ninguna sustancia en P1</li><li>Refuerce factores protectores y mantenga la pregunta abierta en controles futuros</li></ul></div>
-            <div id="notaGuardado" class="nota-guardado">💾 Guardando caso...</div>
+            <div id="notaGuardado" class="nota-guardado">Resultado calculado localmente.</div>
         `;
         agregarBotonesFinales(divResultado);
         divResultado.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
@@ -905,7 +906,7 @@
             ${notaP8}
             ${notaAdolescente}
             <div class="nota-corte">Cortes OMS 2011: alcohol 0-10 bajo · 11-26 moderado · 27+ alto. Resto de sustancias: 0-3 bajo · 4-26 moderado · 27+ alto. Puntaje = suma P2 a P7 (P5 no aplica a tabaco).</div>
-            <div id="notaGuardado" class="nota-guardado">💾 Guardando caso...</div>
+            <div id="notaGuardado" class="nota-guardado">Resultado calculado localmente.</div>
         `;
 
         agregarBotonesFinales(divResultado);
@@ -919,7 +920,7 @@
         const btnNuevo = document.createElement('button');
         btnNuevo.className = 'btn-form-primary';
         btnNuevo.style.marginTop = '10px';
-        btnNuevo.textContent = '➕ Registrar nuevo caso';
+        btnNuevo.textContent = '↻ Nueva evaluación';
         btnNuevo.onclick = nuevoCaso;
         divResultado.appendChild(btnNuevo);
 
@@ -947,13 +948,6 @@
 
     function nuevoCaso() {
         casoActual = null;
-        document.getElementById('casoSexo').value = '';
-        document.getElementById('casoEdad').value = '';
-        document.getElementById('casoEstadoCivil').value = '';
-        document.getElementById('casoDepartamento').value = '';
-        document.getElementById('casoProvincia').value = '';
-        document.getElementById('casoConsentimiento').checked = false;
-
         sustanciasActivas = []; otrosEspecificado = ''; cola = []; colaIndex = 0;
         resultadosPorSustancia = {}; respuestaP8 = null; respuestaActualTemp = null;
         document.getElementById('resultadoBox').className = 'resultado';
@@ -962,11 +956,11 @@
         document.getElementById('p1Container').style.display = 'block';
         cargarP1();
 
-        mostrarPantalla('datosCasoScreen');
+        mostrarPantalla('testScreen');
     }
 
     cargarP1();
-    mostrarPantalla('datosCasoScreen');
+    mostrarPantalla('testScreen');
 </script>
 </body>
 </html>

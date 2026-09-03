@@ -605,14 +605,13 @@
 
     function nuevoCaso() {
         casoActual = null;
-        document.getElementById('casoSexo').value = '';
-        document.getElementById('casoEdad').value = '';
-        document.getElementById('casoEstadoCivil').value = '';
-        document.getElementById('casoDepartamento').value = '';
-        document.getElementById('casoProvincia').value = '';
-        document.getElementById('casoConsentimiento').checked = false;
+        respuestas = new Array(totalPreguntas).fill(null);
+        preguntaActual = 0;
+        document.getElementById('resultadoBox').className = 'resultado';
+        document.getElementById('resultadoBox').innerHTML = '';
         document.getElementById('alertaItem9').style.display = 'none';
-        mostrarPantalla('datosCasoScreen');
+        cargarPreguntas();
+        mostrarPantalla('testScreen');
     }
 </script>
 <script>
@@ -773,7 +772,7 @@
             ${consejosExtra}
             ${alertaFinal}
             <div class="nota-corte">Categorías de severidad estándar: 0-4 sin depresión · 5-9 leve · 10-14 moderada · 15-19 moderadamente severa · 20-27 severa. Cribado positivo MINSA (Guía Técnica de Depresión, enfoque preventivo de primer nivel): ≥5. Corte internacional de sospecha clínica: ≥10.</div>
-            <div id="notaGuardado" class="nota-guardado">💾 Guardando caso...</div>
+            <div id="notaGuardado" class="nota-guardado">Resultado calculado localmente.</div>
         `;
 
         mostrarImpactoFuncional(divResultado);
@@ -781,7 +780,7 @@
         const btnNuevo = document.createElement('button');
         btnNuevo.className = 'btn-form-primary';
         btnNuevo.style.marginTop = '10px';
-        btnNuevo.textContent = '➕ Registrar nuevo caso';
+        btnNuevo.textContent = '↻ Nueva evaluación';
         btnNuevo.onclick = nuevoCaso;
         divResultado.appendChild(btnNuevo);
 
@@ -830,7 +829,8 @@
         });
     }
 
-    mostrarPantalla('datosCasoScreen');
+    cargarPreguntas();
+    mostrarPantalla('testScreen');
 </script>
 </body>
 </html>

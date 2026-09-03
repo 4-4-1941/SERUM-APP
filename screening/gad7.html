@@ -600,13 +600,12 @@
 
     function nuevoCaso() {
         casoActual = null;
-        document.getElementById('casoSexo').value = '';
-        document.getElementById('casoEdad').value = '';
-        document.getElementById('casoEstadoCivil').value = '';
-        document.getElementById('casoDepartamento').value = '';
-        document.getElementById('casoProvincia').value = '';
-        document.getElementById('casoConsentimiento').checked = false;
-        mostrarPantalla('datosCasoScreen');
+        respuestas = new Array(totalPreguntas).fill(null);
+        preguntaActual = 0;
+        document.getElementById('resultadoBox').className = 'resultado';
+        document.getElementById('resultadoBox').innerHTML = '';
+        cargarPreguntas();
+        mostrarPantalla('testScreen');
     }
 </script>
 <script>
@@ -747,7 +746,7 @@
             <div>${mensaje}</div>
             ${consejosExtra}
             <div class="nota-corte">Spitzer et al. (2006): punto de corte ≥10 (sensibilidad 89%, especificidad 82%) para probable Trastorno de Ansiedad Generalizada. Zonas: 0-4 mínima · 5-9 leve · 10-14 moderada · 15-21 severa.</div>
-            <div id="notaGuardado" class="nota-guardado">💾 Guardando caso...</div>
+            <div id="notaGuardado" class="nota-guardado">Resultado calculado localmente.</div>
         `;
 
         mostrarImpactoFuncional(divResultado);
@@ -755,7 +754,7 @@
         const btnNuevo = document.createElement('button');
         btnNuevo.className = 'btn-form-primary';
         btnNuevo.style.marginTop = '10px';
-        btnNuevo.textContent = '➕ Registrar nuevo caso';
+        btnNuevo.textContent = '↻ Nueva evaluación';
         btnNuevo.onclick = nuevoCaso;
         divResultado.appendChild(btnNuevo);
 
@@ -804,7 +803,8 @@
         });
     }
 
-    mostrarPantalla('datosCasoScreen');
+    cargarPreguntas();
+    mostrarPantalla('testScreen');
 </script>
 </body>
 </html>
