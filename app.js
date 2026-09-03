@@ -409,6 +409,23 @@ function renderCases() {
   let selectedBlock = "";
   let selectedLevel = "";
 
+  function scrollToCaseList({ collapseMobileFilters = false } = {}) {
+    const isMobile = window.matchMedia("(max-width: 760px)").matches;
+
+    if (collapseMobileFilters && isMobile) {
+      document.querySelectorAll(".filter-box[open]").forEach(details => {
+        details.open = false;
+      });
+    }
+
+    requestAnimationFrame(() => {
+      const listTop = list.getBoundingClientRect().top;
+      if (listTop < 0 || listTop >= window.innerHeight) {
+        list.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    });
+  }
+
   function renderFilters() {
     careerList.innerHTML = careers.map(c => `
       <button class="option-btn" data-career="${c}">${c}</button>
@@ -519,11 +536,13 @@ function renderCases() {
 
     // No buscar todavía con un solo carácter.
     if (termino.length < 2) {
+      draw("");
       return;
     }
 
     // Buscar desde 2 caracteres.
     draw(termino);
+    scrollToCaseList({ collapseMobileFilters: true });
   });
   }
 

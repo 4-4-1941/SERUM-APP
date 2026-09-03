@@ -19,14 +19,14 @@ function renderScreeningTools() {
   });
 }
 function renderCapacitacionScreening() {
-  pageTitle.textContent = "Capacitación · Screening";
-  pageSubtitle.textContent = "Formación y aplicación clínica en espacios diferenciados.";
+  pageTitle.textContent = "Capacitación Continua";
+  pageSubtitle.textContent = "Cursos clínicos y sanitarios para el trabajo SERUMS.";
   root.innerHTML = `
     <section class="two-col">
       <div class="panel">
-        <h3 class="section-title">Capacitación AUDIT</h3>
-        <p style="color:#5B6E6A;line-height:1.6">Administración, interpretación e intervención vinculada al AUDIT.</p>
-        <button id="open-audit-training" class="action-btn" style="margin-top:12px">Abrir capacitación AUDIT →</button>
+        <h3 class="section-title">Catálogo de capacitación</h3>
+        <p style="color:#5B6E6A;line-height:1.6">AUDIT y cursos de tamizajes integrados en una arquitectura preparada para nuevas líneas SERUMS.</p>
+        <button id="open-audit-training" class="action-btn" style="margin-top:12px">Abrir Capacitación Continua →</button>
       </div>
       <div class="panel">
         <h3 class="section-title">Aplicación clínica</h3>
@@ -34,6 +34,6 @@ function renderCapacitacionScreening() {
         <button id="open-screening-panel" class="action-btn" style="margin-top:12px">Ir a Screening →</button>
       </div>
     </section>`;
-  document.getElementById("open-audit-training").addEventListener("click", () => { window.location.href = "capacitacion.html"; });
+  document.getElementById("open-audit-training").addEventListener("click", () => { window.location.href = "capacitacion/index.html"; });
   document.getElementById("open-screening-panel").addEventListener("click", () => { window.location.href = "screening/screening-index.html"; });
 }
