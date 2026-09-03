@@ -3,7 +3,7 @@ window.SERUMS_DATA = {
   "cases": [
     {
       "id": 1,
-      "career": "Biología",
+      "career": "Psicología",
       "block": "Cuidado integral",
       "title": "Riesgo suicida en adolescente",
       "level": "I-2",
@@ -26,7 +26,7 @@ window.SERUMS_DATA = {
     },
     {
       "id": 2,
-      "career": "Farmacia y Bioquímica",
+      "career": "Psicología",
       "block": "Cuidado integral",
       "title": "Violencia familiar con ansiedad",
       "level": "I-2",
@@ -49,7 +49,7 @@ window.SERUMS_DATA = {
     },
     {
       "id": 3,
-      "career": "Ingeniería Sanitaria",
+      "career": "Psicología",
       "block": "Cuidado integral",
       "title": "Ataque de pánico en consulta",
       "level": "I-2",
@@ -72,7 +72,7 @@ window.SERUMS_DATA = {
     },
     {
       "id": 4,
-      "career": "Medicina Veterinaria",
+      "career": "Psicología",
       "block": "Cuidado integral",
       "title": "Depresión y baja adherencia",
       "level": "I-3",
@@ -95,7 +95,7 @@ window.SERUMS_DATA = {
     },
     {
       "id": 5,
-      "career": "Nutrición",
+      "career": "Psicología",
       "block": "Cuidado integral",
       "title": "Duelo complicado",
       "level": "I-2",
@@ -118,7 +118,7 @@ window.SERUMS_DATA = {
     },
     {
       "id": 6,
-      "career": "Obstetricia",
+      "career": "Psicología",
       "block": "Cuidado integral",
       "title": "Violencia sexual y contención",
       "level": "I-2",
@@ -141,7 +141,7 @@ window.SERUMS_DATA = {
     },
     {
       "id": 7,
-      "career": "Odontología",
+      "career": "Psicología",
       "block": "Cuidado integral",
       "title": "Ansiedad generalizada",
       "level": "I-3",
@@ -164,7 +164,7 @@ window.SERUMS_DATA = {
     },
     {
       "id": 8,
-      "career": "Tecnología Médica - Laboratorio Clínico",
+      "career": "Psicología",
       "block": "Cuidado integral",
       "title": "Consumo problemático",
       "level": "I-3",
@@ -187,7 +187,7 @@ window.SERUMS_DATA = {
     },
     {
       "id": 9,
-      "career": "Tecnología Médica - Optometría",
+      "career": "Psicología",
       "block": "Cuidado integral",
       "title": "Riesgo de violencia en pareja",
       "level": "I-2",
@@ -210,7 +210,7 @@ window.SERUMS_DATA = {
     },
     {
       "id": 10,
-      "career": "Tecnología Médica - Radiología",
+      "career": "Psicología",
       "block": "Cuidado integral",
       "title": "Estrés laboral severo",
       "level": "I-3",
@@ -325,7 +325,7 @@ window.SERUMS_DATA = {
     },
     {
       "id": 15,
-      "career": "Tecnología Médica - Terapia Ocupacional",
+      "career": "Psicología",
       "block": "Cuidado integral",
       "title": "Evaluación de ansiedad en adolescente",
       "level": "I-2",
@@ -348,7 +348,7 @@ window.SERUMS_DATA = {
     },
     {
       "id": 16,
-      "career": "Tecnología Médica - Terapia del Lenguaje",
+      "career": "Psicología",
       "block": "Cuidado integral",
       "title": "Intervención breve por crisis",
       "level": "I-2",
@@ -417,7 +417,7 @@ window.SERUMS_DATA = {
     },
     {
       "id": 19,
-      "career": "Trabajo Social",
+      "career": "Psicología",
       "block": "Cuidado integral",
       "title": "Duelo por pérdida reciente",
       "level": "I-2",
