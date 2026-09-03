@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>WAST - SIP SYSTEM</title>
+<title>CRAFFT - SIP SYSTEM</title>
 <meta name="theme-color" content="#0a2e44">
 <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -434,8 +434,8 @@
                 </div>
             </div>
             <div class="app-title">
-                WAST
-                <small>VIOLENCIA PAREJA</small>
+                CRAFFT
+                <small>ADOLESCENTES</small>
             </div>
         </div>
 
@@ -444,7 +444,7 @@
             <!-- ===== PANTALLA 1: INICIO DE SESIÓN ===== -->
             <div id="authScreen" style="display:none;">
                 <div class="disclaimer">
-                    <strong>🔒 Acceso restringido:</strong> Inicia sesión con tu cuenta de PRE SERUMS PERÚ para aplicar el tamizaje WAST y registrar el caso.
+                    <strong>🔒 Acceso restringido:</strong> Inicia sesión con tu cuenta de PRE SERUMS PERÚ para aplicar el tamizaje CRAFFT y registrar el caso.
                 </div>
                 <div class="form-caso">
                     <label class="campo-form">Correo electrónico
@@ -513,33 +513,54 @@
                 </div>
             </div>
 
-            <!-- ===== PANTALLA 3: TEST WAST ===== -->
+            <!-- ===== PANTALLA 3: TEST CRAFFT ===== -->
             <div id="testScreen" style="display:none;">
 
                 <div class="creditos-adaptacion">
-                    <strong>WAST</strong> (Woman Abuse Screening Tool — versión corta, 2 ítems) — Brown JB, Lent B, Brett PJ, Sas G, Pederson LL. <em>Development of the Woman Abuse Screening Tool for use in family practice.</em> Fam Med. 1996;28(6):422-8. Versión española: Plazaola-Castaño J, Ruiz-Pérez I, Montero-Piñar MI. <em>Validación de la versión corta del Woman Abuse Screening Tool para su uso en atención primaria en España.</em> Gac Sanit. 2008;22(5):415-420.
+                    <strong>CRAFFT</strong> (versión 2.1) — Knight JR, Boston Children's Hospital. <em>A new brief screen for adolescent substance abuse.</em> Arch Pediatr Adolesc Med. 1999;153(6):591-6. © John R. Knight, MD, Boston Children's Hospital, 2016. Reproducido con fines clínicos/educativos. Aplicación en adolescentes referenciada en RM N.° 753-2021-MINSA (verificar contenido específico con la norma completa).
                 </div>
 
                 <div class="disclaimer">
-                    <strong>⚠️ Aplicabilidad:</strong> Este tamizaje corresponde a pacientes mujeres que tienen o han tenido pareja en los últimos 12 meses. Aplíquelo con criterio clínico en un espacio privado, sin la presencia de la pareja.
+                    <strong>⚠️ Aplicabilidad:</strong> Diseñado para adolescentes y jóvenes de 10 a 21 años. Introduzca: "Le voy a hacer algunas preguntas que le hago a todos mis pacientes. Le ruego que responda con la mayor sinceridad posible. Trataré sus respuestas de manera confidencial."
                 </div>
 
-                <div class="progreso">
-                    <span class="contador" id="contadorPregunta">Pregunta 1/2</span>
-                    <div class="barra-container"><div class="barra" id="barraProgreso"></div></div>
-                    <span class="pregunta-num" id="textoProgreso">0%</span>
+                <!-- PARTE A: 3 preguntas de días de consumo (determina si se aplican las 6 preguntas o solo la del Carro) -->
+                <div id="parteAContainer">
+                    <div class="guia-trago">
+                        <strong>📋 Parte A:</strong> Durante los <u>ÚLTIMOS 12 MESES</u>, ¿cuántos días usted...
+                    </div>
+                    <label class="campo-form">a. ¿Bebió más de unos sorbos de cerveza, vino u otra bebida con alcohol? (0 si ninguno)
+                        <input type="number" id="parteA1" min="0" max="365" placeholder="0" inputmode="numeric">
+                    </label>
+                    <label class="campo-form">b. ¿Usó marihuana (hierba, aceite, hachís) o "marihuana sintética" (K2, Spice)? (0 si ninguno)
+                        <input type="number" id="parteA2" min="0" max="365" placeholder="0" inputmode="numeric">
+                    </label>
+                    <label class="campo-form">c. ¿Usó algo más para drogarse (otras drogas ilegales, medicamentos de venta libre, inhalantes)? (0 si ninguno)
+                        <input type="number" id="parteA3" min="0" max="365" placeholder="0" inputmode="numeric">
+                    </label>
+                    <div id="parteAError" class="form-error" style="display:none;"></div>
+                    <button class="btn-form-primary" style="margin-top:10px;" onclick="confirmarParteA()">Continuar →</button>
                 </div>
 
-                <div class="guia-trago">
-                    <strong>📋 Instrucción:</strong> <span id="textoInstruccion">Responda pensando en su relación de pareja actual o más reciente.</span>
-                </div>
+                <!-- PARTE B: preguntas CRAFFT (dinámicas según resultado de Parte A) -->
+                <div id="parteBContainer" style="display:none;">
+                    <div class="progreso">
+                        <span class="contador" id="contadorPregunta">Pregunta 1/6</span>
+                        <div class="barra-container"><div class="barra" id="barraProgreso"></div></div>
+                        <span class="pregunta-num" id="textoProgreso">0%</span>
+                    </div>
 
-                <div class="pregunta-container" id="preguntaContainer"></div>
+                    <div class="guia-trago">
+                        <strong>📋 Instrucción:</strong> <span id="textoInstruccion">Responda pensando en los últimos 12 meses.</span>
+                    </div>
 
-                <div class="nav-buttons">
-                    <button class="btn-prev" id="btnPrev" onclick="cambiarPregunta(-1)">← Anterior</button>
-                    <button class="btn-next" id="btnNext" onclick="cambiarPregunta(1)">Siguiente →</button>
-                    <button class="btn-calcular" id="btnCalcular" onclick="calcularWast()" style="display:none;">📊 Resultado</button>
+                    <div class="pregunta-container" id="preguntaContainer"></div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-prev" id="btnPrev" onclick="cambiarPregunta(-1)">← Anterior</button>
+                        <button class="btn-next" id="btnNext" onclick="cambiarPregunta(1)">Siguiente →</button>
+                        <button class="btn-calcular" id="btnCalcular" onclick="calcularCrafft()" style="display:none;">📊 Resultado</button>
+                    </div>
                 </div>
 
                 <div id="resultadoBox" class="resultado"></div>
@@ -549,7 +570,7 @@
 
         <div class="app-footer">
             © 2026 SIP SYSTEM INTELLIGENCE PLATFORM<br>
-            WAST corto (Brown et al., 1996 · Plazaola-Castaño et al., 2008) · Versión Castellano · v1.0
+            CRAFFT v2.1 (Knight, 1999 · © Boston Children's Hospital) · Versión Castellano · v1.0
         </div>
     </div>
 <script>
@@ -586,12 +607,14 @@
 
         casoActual = { sexo, edad: parseInt(edad, 10), estadoCivil, departamento, provincia, consentimiento };
 
-        // Reinicia el test para un caso nuevo
-        respuestas = new Array(totalPreguntas).fill(null);
-        preguntaActual = 0;
+        // Reinicia el test para un caso nuevo: comienza en la Parte A
         document.getElementById('resultadoBox').className = 'resultado';
         document.getElementById('resultadoBox').innerHTML = '';
-        cargarPreguntas();
+        document.getElementById('parteAContainer').style.display = 'block';
+        document.getElementById('parteBContainer').style.display = 'none';
+        document.getElementById('parteA1').value = '';
+        document.getElementById('parteA2').value = '';
+        document.getElementById('parteA3').value = '';
         mostrarPantalla('testScreen');
     }
 
@@ -610,33 +633,86 @@
         document.getElementById('casoDepartamento').value = '';
         document.getElementById('casoProvincia').value = '';
         document.getElementById('casoConsentimiento').checked = false;
+        soloPreguntaCarro = false;
+        respuestaCarroSola = null;
         mostrarPantalla('datosCasoScreen');
     }
 </script>
 <script>
-    const totalPreguntas = 2;
+    const totalPreguntas = 6;
     let preguntaActual = 0;
     let respuestas = new Array(totalPreguntas).fill(null);
+    let soloPreguntaCarro = false;
+    let respuestaCarroSola = null;
 
-    // WAST corto: cada ítem tiene sus propias opciones y valores (1-3), a diferencia del GAD-7.
+    // Las 6 preguntas CRAFFT (versión 2.1, texto oficial en español, Boston Children's Hospital).
     const preguntas = [
-        {
-            texto: 'En general, ¿cómo describiría usted su relación con su pareja?',
-            opciones: [
-                { label: 'Ninguna tensión', valor: 1 },
-                { label: 'Alguna tensión', valor: 2 },
-                { label: 'Mucha tensión', valor: 3 }
-            ]
-        },
-        {
-            texto: 'Usted y su pareja resuelven sus discusiones con...',
-            opciones: [
-                { label: 'Ninguna dificultad', valor: 1 },
-                { label: 'Alguna dificultad', valor: 2 },
-                { label: 'Mucha dificultad', valor: 3 }
-            ]
-        }
+        { letra: 'C', texto: '¿Ha viajado alguna vez en un CARRO o vehículo conducido por una persona (o usted mismo/a) que estaba "drogada" o había consumido alcohol o drogas?' },
+        { letra: 'R', texto: '¿Consume alguna vez alcohol o drogas para RELAJARSE, sentirse mejor consigo mismo/a o integrarse en un grupo?' },
+        { letra: 'A', texto: '¿Consume alguna vez alcohol o drogas mientras está SOLO/A (ALONE), sin compañía?' },
+        { letra: 'F', texto: '¿Alguna vez se le OLVIDAN (FORGET) cosas que hizo mientras consumía alcohol o drogas?' },
+        { letra: 'F', texto: '¿Le han sugerido alguna vez sus FAMILIARES o AMIGOS (FRIENDS) que disminuya el consumo de alcohol o drogas?' },
+        { letra: 'T', texto: '¿Se ha metido alguna vez en LÍOS o problemas (TROUBLE) al tomar alcohol o drogas?' }
     ];
+
+    // ===== PARTE A: determina si se aplican las 6 preguntas o solo la del Carro =====
+    function confirmarParteA() {
+        const a1 = parseInt(document.getElementById('parteA1').value, 10) || 0;
+        const a2 = parseInt(document.getElementById('parteA2').value, 10) || 0;
+        const a3 = parseInt(document.getElementById('parteA3').value, 10) || 0;
+        const errorBox = document.getElementById('parteAError');
+
+        if (a1 < 0 || a2 < 0 || a3 < 0) {
+            errorBox.textContent = 'Los valores no pueden ser negativos.';
+            errorBox.style.display = 'block';
+            return;
+        }
+        errorBox.style.display = 'none';
+
+        soloPreguntaCarro = (a1 === 0 && a2 === 0 && a3 === 0);
+
+        document.getElementById('parteAContainer').style.display = 'none';
+        document.getElementById('parteBContainer').style.display = 'block';
+
+        if (soloPreguntaCarro) {
+            // Regla oficial: si Parte A = 0 en las 3, solo se hace la pregunta del Carro y se detiene la entrevista.
+            mostrarSoloPreguntaCarro();
+        } else {
+            respuestas = new Array(totalPreguntas).fill(null);
+            preguntaActual = 0;
+            cargarPreguntas();
+        }
+    }
+
+    function mostrarSoloPreguntaCarro() {
+        document.getElementById('contadorPregunta').textContent = 'Pregunta única';
+        document.getElementById('barraProgreso').style.width = '100%';
+        document.getElementById('textoProgreso').textContent = '100%';
+        document.getElementById('btnPrev').style.display = 'none';
+        document.getElementById('btnNext').style.display = 'none';
+
+        const container = document.getElementById('preguntaContainer');
+        container.innerHTML = `
+            <div class="pregunta active">
+                <p><strong>C</strong> — ${preguntas[0].texto}</p>
+                <label><input type="radio" name="carroSolo" onchange="marcarCarroSolo(0)"> No</label>
+                <label><input type="radio" name="carroSolo" onchange="marcarCarroSolo(1)"> Sí</label>
+            </div>
+        `;
+
+        const btnCalcular = document.getElementById('btnCalcular');
+        btnCalcular.style.display = 'flex';
+        btnCalcular.disabled = true;
+    }
+
+    function marcarCarroSolo(val) {
+        respuestaCarroSola = val;
+        document.querySelectorAll('#preguntaContainer label').forEach(label => {
+            const radio = label.querySelector('input[type="radio"]');
+            label.classList.toggle('selected', radio && radio.checked);
+        });
+        document.getElementById('btnCalcular').disabled = false;
+    }
 
     function cargarPreguntas() {
         const container = document.getElementById('preguntaContainer');
@@ -649,16 +725,15 @@
 
             let html = `
                 <div class="p-label">Pregunta ${idx+1} de ${totalPreguntas}</div>
-                <p>${p.texto}</p>
+                <p><strong>${p.letra}</strong> — ${p.texto}</p>
             `;
 
-            p.opciones.forEach((opcion) => {
-                const val = opcion.valor;
+            [['No', 0], ['Sí', 1]].forEach(([label, val]) => {
                 const checked = respuestas[idx] === val ? 'checked' : '';
                 html += `
                     <label class="${checked ? 'selected' : ''}">
                         <input type="radio" name="p${idx}" value="${val}" ${checked} onchange="seleccionarRespuesta(${idx}, ${val})">
-                        ${opcion.label}
+                        ${label}
                     </label>
                 `;
             });
@@ -720,45 +795,65 @@
         document.getElementById('btnCalcular').disabled = !todasRespondidas;
     }
 
-    function calcularWast() {
-        if (respuestas.some(r => r === null)) {
-            alert('⚠️ Responda todas las preguntas antes de ver el resultado.');
-            return;
-        }
-
-        const total = respuestas.reduce((a, b) => a + b, 0); // rango 2-6
-        // Criterio 2 (recomendado por la validación en población general, Sanz-Barbero et al. 2020):
-        // se considera cribado positivo si hay una respuesta extrema ("mucha tensión" o "mucha dificultad", valor=3) en cualquiera de los 2 ítems.
-        const respuestaExtrema = respuestas.some(r => r === 3);
+    function calcularCrafft() {
         const divResultado = document.getElementById('resultadoBox');
+        let zona, zonaTexto, mensaje, consejosExtra, total, detalleGuardado;
 
-        let zona, zonaTexto, mensaje, consejosExtra;
+        if (soloPreguntaCarro) {
+            if (respuestaCarroSola === null) {
+                alert('⚠️ Responda la pregunta antes de ver el resultado.');
+                return;
+            }
+            total = null; // No se calcula un puntaje CRAFFT completo: solo se administró la pregunta C.
+            zonaTexto = respuestaCarroSola === 1 ? 'Solo pregunta Carro — respuesta positiva' : 'Solo pregunta Carro — sin consumo reportado';
+            detalleGuardado = { parteA: 'todas en 0', soloCarro: true, respuestaCarro: respuestaCarroSola };
 
-        if (respuestaExtrema) {
-            zona = 'zona-severa';
-            zonaTexto = 'Positivo';
-            mensaje = '🔴 Cribado positivo — posible violencia de pareja';
-            consejosExtra = `<div class="consejos"><strong>💡 Pasos a seguir:</strong><ul><li>Entreviste a la paciente en privado, sin la pareja presente</li><li>Valore riesgo inmediato y necesidad de derivación a servicios de protección (CEM, línea 100, Fiscalía)</li><li>Documente con cautela y respete la voluntad de la paciente sobre los siguientes pasos</li><li>Este resultado no sustituye una evaluación clínica completa de violencia de pareja</li></ul></div>`;
-        } else if (total >= 3) {
-            zona = 'zona-moderada';
-            zonaTexto = 'Tensión presente, sin criterio positivo';
-            mensaje = '🟠 Se identifica tensión o dificultad, sin cumplir criterio de cribado positivo';
-            consejosExtra = `<div class="consejos"><strong>💡 Orientación:</strong><ul><li>Explore con mayor profundidad la dinámica de pareja en la consulta</li><li>Mantenga una actitud de escucha abierta ante señales adicionales</li></ul></div>`;
+            if (respuestaCarroSola === 1) {
+                zona = 'zona-moderada';
+                mensaje = '🟠 Sin consumo propio reportado, pero sí viajó con conductor bajo efectos de alcohol/drogas';
+                consejosExtra = `<div class="consejos"><strong>💡 Orientación:</strong><ul><li>No se administraron las 6 preguntas CRAFFT (no hubo consumo propio en Parte A)</li><li>Igual amerita consejería breve sobre los riesgos de viajar con un conductor bajo efectos de sustancias</li></ul></div>`;
+            } else {
+                zona = 'zona-minima';
+                mensaje = '🟢 Sin consumo reportado en los últimos 12 meses';
+                consejosExtra = `<div class="consejos"><strong>💡 Orientación:</strong><ul><li>Felicite al/la adolescente y refuerce factores protectores</li><li>Mantenga la pregunta abierta en controles futuros</li></ul></div>`;
+            }
+
+            divResultado.className = `resultado show ${zona}`;
+            divResultado.innerHTML = `
+                <div style="font-size: 1.1rem; margin-bottom:4px;">${mensaje}</div>
+                ${consejosExtra}
+                <div class="nota-corte">Regla oficial CRAFFT 2.1: si la Parte A (alcohol/marihuana/otras drogas) es 0 en los 3 ítems, solo se aplica la pregunta del Carro y se detiene la entrevista — no se calcula un puntaje CRAFFT completo.</div>
+                <div id="notaGuardado" class="nota-guardado">💾 Guardando caso...</div>
+            `;
         } else {
-            zona = 'zona-minima';
-            zonaTexto = 'Negativo';
-            mensaje = '🟢 Sin indicios de tensión relevante en la relación de pareja';
-            consejosExtra = `<div class="consejos"><strong>💡 Orientación:</strong><ul><li>No se identifican señales de alerta con este instrumento</li><li>Mantenga la pregunta abierta en controles futuros</li></ul></div>`;
-        }
+            if (respuestas.some(r => r === null)) {
+                alert('⚠️ Responda todas las preguntas antes de ver el resultado.');
+                return;
+            }
+            total = respuestas.reduce((a, b) => a + b, 0); // rango 0-6
+            detalleGuardado = { parteA: 'al menos un ítem > 0', respuestasCrafft: respuestas };
 
-        divResultado.className = `resultado show ${zona}`;
-        divResultado.innerHTML = `
-            <div style="font-size: 1.84rem; margin-bottom:4px;">${total} / 6</div>
-            <div>${mensaje}</div>
-            ${consejosExtra}
-            <div class="nota-corte">Criterio de cribado positivo (Plazaola-Castaño et al., 2008; validación en población general, Gac Sanit 2020): respuesta extrema ("mucha tensión" o "mucha dificultad") en cualquiera de los 2 ítems.</div>
-            <div id="notaGuardado" class="nota-guardado">💾 Guardando caso...</div>
-        `;
+            if (total >= 2) {
+                zona = 'zona-severa';
+                zonaTexto = 'Riesgo alto';
+                mensaje = '🔴 Riesgo alto — amerita evaluación integral';
+                consejosExtra = `<div class="consejos"><strong>💡 Pasos a seguir:</strong><ul><li>Derivación asistida a psicología, psiquiatría o Centro de Salud Mental Comunitario (CSMC)</li><li>No demore la derivación — 2 o más respuestas afirmativas sugieren un problema grave</li></ul></div>`;
+            } else {
+                zona = 'zona-minima';
+                zonaTexto = 'Riesgo bajo';
+                mensaje = '🟢 Riesgo bajo';
+                consejosExtra = `<div class="consejos"><strong>💡 Orientación:</strong><ul><li>Felicitación y educación preventiva general</li><li>Consejería breve sobre riesgos de viajar con un conductor bajo efectos de sustancias (pregunta Carro)</li></ul></div>`;
+            }
+
+            divResultado.className = `resultado show ${zona}`;
+            divResultado.innerHTML = `
+                <div style="font-size: 1.84rem; margin-bottom:4px;">${total} / 6</div>
+                <div>${mensaje}</div>
+                ${consejosExtra}
+                <div class="nota-corte">Corte oficial CRAFFT 2.1: 0-1 riesgo bajo · 2-6 riesgo alto (2 o más respuestas "Sí" sugieren un problema grave y la necesidad de otra evaluación).</div>
+                <div id="notaGuardado" class="nota-guardado">💾 Guardando caso...</div>
+            `;
+        }
 
         const btnNuevo = document.createElement('button');
         btnNuevo.className = 'btn-form-primary';
@@ -784,7 +879,7 @@
         divResultado.appendChild(btnTablero);
 
         divResultado.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        guardarResultado(total, zonaTexto);
+        guardarResultado(total, zonaTexto, detalleGuardado);
     }
 
     mostrarPantalla('datosCasoScreen');

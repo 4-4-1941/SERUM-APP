@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>WAST - SIP SYSTEM</title>
+<title>ASSIST - SIP SYSTEM</title>
 <meta name="theme-color" content="#0a2e44">
 <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -409,6 +409,29 @@
         .pregunta p { font-size: 0.98rem; }
         .nav-buttons button { font-size: 0.83rem; padding: 7px 10px; }
     }
+
+    /* ===== ASSIST: lista P1 y tabla resumen por sustancia ===== */
+    .p1-lista { display: flex; flex-direction: column; gap: 6px; margin-top: 10px; }
+    .p1-item {
+        display: flex; align-items: flex-start; gap: 10px;
+        padding: 10px 12px; border: 1.5px solid #e2e8f0; border-radius: 12px;
+        cursor: pointer; transition: all .15s;
+    }
+    .p1-item.selected { border-color: #2563eb; background: #eef6ff; }
+    .p1-item input { margin-top: 3px; width: 18px; height: 18px; flex-shrink: 0; }
+    .p1-item .p1-nombre { font-weight: 700; font-size: 0.94rem; color: #0f2b44; }
+    .p1-item .p1-ejemplo { font-size: 0.78rem; color: #64748b; font-weight: 400; }
+
+    .tabla-assist { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 0.83rem; }
+    .tabla-assist th, .tabla-assist td { padding: 6px 8px; border-bottom: 1px solid #e2e8f0; text-align: left; }
+    .tabla-assist th { background: #f1f5f9; font-weight: 700; color: #0f2b44; }
+    .banda-bajo { color: #16a34a; font-weight: 700; }
+    .banda-moderado { color: #ea580c; font-weight: 700; }
+    .banda-alto { color: #dc2626; font-weight: 700; }
+    .alerta-adolescente {
+        margin-top: 3px; font-size: 0.72rem; color: #dc2626; font-weight: 700;
+        background: #fee2e2; padding: 2px 6px; border-radius: 6px; display: inline-block;
+    }
 </style>
 
 <style>
@@ -434,8 +457,8 @@
                 </div>
             </div>
             <div class="app-title">
-                WAST
-                <small>VIOLENCIA PAREJA</small>
+                ASSIST
+                <small>DROGAS Y ALCOHOL</small>
             </div>
         </div>
 
@@ -444,7 +467,7 @@
             <!-- ===== PANTALLA 1: INICIO DE SESIÓN ===== -->
             <div id="authScreen" style="display:none;">
                 <div class="disclaimer">
-                    <strong>🔒 Acceso restringido:</strong> Inicia sesión con tu cuenta de PRE SERUMS PERÚ para aplicar el tamizaje WAST y registrar el caso.
+                    <strong>🔒 Acceso restringido:</strong> Inicia sesión con tu cuenta de PRE SERUMS PERÚ para aplicar el tamizaje ASSIST y registrar el caso.
                 </div>
                 <div class="form-caso">
                     <label class="campo-form">Correo electrónico
@@ -513,33 +536,43 @@
                 </div>
             </div>
 
-            <!-- ===== PANTALLA 3: TEST WAST ===== -->
+            <!-- ===== PANTALLA 3: TEST ASSIST ===== -->
             <div id="testScreen" style="display:none;">
 
                 <div class="creditos-adaptacion">
-                    <strong>WAST</strong> (Woman Abuse Screening Tool — versión corta, 2 ítems) — Brown JB, Lent B, Brett PJ, Sas G, Pederson LL. <em>Development of the Woman Abuse Screening Tool for use in family practice.</em> Fam Med. 1996;28(6):422-8. Versión española: Plazaola-Castaño J, Ruiz-Pérez I, Montero-Piñar MI. <em>Validación de la versión corta del Woman Abuse Screening Tool para su uso en atención primaria en España.</em> Gac Sanit. 2008;22(5):415-420.
+                    <strong>ASSIST</strong> (Alcohol, Smoking and Substance Involvement Screening Test v3.0) — OMS/WHO ASSIST Working Group, 2010. Humeniuk R, Henry-Edwards S, Ali R, Poznyak V, Monteiro M. <em>Intervención breve vinculada al ASSIST para el uso riesgoso y nocivo de sustancias.</em> Ginebra: OMS, 2011. Puntos de corte oficiales OMS. Aplicación en adolescentes según RM N.° 753-2021-MINSA (verificar contenido específico con la norma completa).
                 </div>
 
-                <div class="disclaimer">
-                    <strong>⚠️ Aplicabilidad:</strong> Este tamizaje corresponde a pacientes mujeres que tienen o han tenido pareja en los últimos 12 meses. Aplíquelo con criterio clínico en un espacio privado, sin la presencia de la pareja.
+                <!-- PASO 1: Selección de sustancias (Pregunta 1) -->
+                <div id="p1Container">
+                    <div class="guia-trago">
+                        <strong>📋 Pregunta 1:</strong> Alguna vez en su vida, ¿ha consumido alguna de las siguientes sustancias? (sin receta o indicación médica)
+                    </div>
+                    <div id="p1Lista" class="p1-lista"></div>
+                    <div id="p1OtrosEspecifique" style="display:none; margin-top:8px;">
+                        <label class="campo-form">Especifique "otras drogas"<input type="text" id="p1OtrosTexto" placeholder="Ej. modafinilo, esteroides..."></label>
+                    </div>
+                    <div id="p1Error" class="form-error" style="display:none;"></div>
+                    <button class="btn-form-primary" style="margin-top:12px;" onclick="confirmarP1()">Continuar →</button>
                 </div>
 
-                <div class="progreso">
-                    <span class="contador" id="contadorPregunta">Pregunta 1/2</span>
-                    <div class="barra-container"><div class="barra" id="barraProgreso"></div></div>
-                    <span class="pregunta-num" id="textoProgreso">0%</span>
-                </div>
+                <!-- PASO 2: Motor adaptativo de preguntas 2-7 por sustancia -->
+                <div id="motorContainer" style="display:none;">
+                    <div class="progreso">
+                        <span class="contador" id="contadorPregunta">Pregunta 1/1</span>
+                        <div class="barra-container"><div class="barra" id="barraProgreso"></div></div>
+                        <span class="pregunta-num" id="textoProgreso">0%</span>
+                    </div>
 
-                <div class="guia-trago">
-                    <strong>📋 Instrucción:</strong> <span id="textoInstruccion">Responda pensando en su relación de pareja actual o más reciente.</span>
-                </div>
+                    <div class="guia-trago">
+                        <strong id="tituloSustanciaActual">Sustancia</strong>
+                    </div>
 
-                <div class="pregunta-container" id="preguntaContainer"></div>
+                    <div class="pregunta-container" id="preguntaContainer"></div>
 
-                <div class="nav-buttons">
-                    <button class="btn-prev" id="btnPrev" onclick="cambiarPregunta(-1)">← Anterior</button>
-                    <button class="btn-next" id="btnNext" onclick="cambiarPregunta(1)">Siguiente →</button>
-                    <button class="btn-calcular" id="btnCalcular" onclick="calcularWast()" style="display:none;">📊 Resultado</button>
+                    <div class="nav-buttons">
+                        <button class="btn-next" id="btnSiguientePregunta" onclick="responderYAvanzar()" disabled>Siguiente →</button>
+                    </div>
                 </div>
 
                 <div id="resultadoBox" class="resultado"></div>
@@ -549,7 +582,7 @@
 
         <div class="app-footer">
             © 2026 SIP SYSTEM INTELLIGENCE PLATFORM<br>
-            WAST corto (Brown et al., 1996 · Plazaola-Castaño et al., 2008) · Versión Castellano · v1.0
+            ASSIST v3.0 (OMS, 2010/2011) · Versión Castellano · v1.0
         </div>
     </div>
 <script>
@@ -586,180 +619,303 @@
 
         casoActual = { sexo, edad: parseInt(edad, 10), estadoCivil, departamento, provincia, consentimiento };
 
-        // Reinicia el test para un caso nuevo
-        respuestas = new Array(totalPreguntas).fill(null);
-        preguntaActual = 0;
+        // Reinicia el test para un caso nuevo (motor ASSIST: comienza en la Pregunta 1 de selección de sustancias)
         document.getElementById('resultadoBox').className = 'resultado';
         document.getElementById('resultadoBox').innerHTML = '';
-        cargarPreguntas();
+        document.getElementById('p1Container').style.display = 'block';
+        document.getElementById('motorContainer').style.display = 'none';
+        cargarP1();
         mostrarPantalla('testScreen');
-    }
-
-    // ===== RESULTADO LOCAL (SIN PERSISTENCIA) =====
-
-    function guardarResultado() {
-        const nota = document.getElementById('notaGuardado');
-        if (nota) nota.textContent = 'Resultado calculado localmente; no se transmitieron ni almacenaron datos.';
-    }
-
-    function nuevoCaso() {
-        casoActual = null;
-        document.getElementById('casoSexo').value = '';
-        document.getElementById('casoEdad').value = '';
-        document.getElementById('casoEstadoCivil').value = '';
-        document.getElementById('casoDepartamento').value = '';
-        document.getElementById('casoProvincia').value = '';
-        document.getElementById('casoConsentimiento').checked = false;
-        mostrarPantalla('datosCasoScreen');
     }
 </script>
 <script>
-    const totalPreguntas = 2;
-    let preguntaActual = 0;
-    let respuestas = new Array(totalPreguntas).fill(null);
-
-    // WAST corto: cada ítem tiene sus propias opciones y valores (1-3), a diferencia del GAD-7.
-    const preguntas = [
-        {
-            texto: 'En general, ¿cómo describiría usted su relación con su pareja?',
-            opciones: [
-                { label: 'Ninguna tensión', valor: 1 },
-                { label: 'Alguna tensión', valor: 2 },
-                { label: 'Mucha tensión', valor: 3 }
-            ]
-        },
-        {
-            texto: 'Usted y su pareja resuelven sus discusiones con...',
-            opciones: [
-                { label: 'Ninguna dificultad', valor: 1 },
-                { label: 'Alguna dificultad', valor: 2 },
-                { label: 'Mucha dificultad', valor: 3 }
-            ]
-        }
+    // ===== MODELO DE DATOS: 10 sustancias del ASSIST v3.0 (OMS) =====
+    const SUSTANCIAS = [
+        { id: 'a', nombre: 'Tabaco', ejemplo: 'cigarrillos, cigarros habanos, tabaco de mascar, pipa, etc.', p5Aplica: false },
+        { id: 'b', nombre: 'Bebidas alcohólicas', ejemplo: 'cerveza, vino, licores, destilados, etc.', esAlcohol: true, p5Aplica: true },
+        { id: 'c', nombre: 'Marihuana', ejemplo: 'cannabis, pitos, hierba, hashish, etc.', p5Aplica: true },
+        { id: 'd', nombre: 'Cocaína', ejemplo: 'coca, pasta base, falopa, crack, etc.', p5Aplica: true },
+        { id: 'e', nombre: 'Anfetaminas u otro tipo de estimulantes', ejemplo: 'speed, éxtasis, píldoras adelgazantes, cristal, etc.', p5Aplica: true },
+        { id: 'f', nombre: 'Inhalantes', ejemplo: 'neoprén, gasolina/bencina, pegamentos, solventes, poper, aerosoles, etc.', p5Aplica: true },
+        { id: 'g', nombre: 'Tranquilizantes o pastillas para dormir', ejemplo: 'valium/diazepam, Ravotril/Clonazepam, Alprazolam, Amparax/Lorazepam, Zopiclona, Dormonid/Midazolam, chicota/flunitrazepam, etc.', p5Aplica: true },
+        { id: 'h', nombre: 'Alucinógenos', ejemplo: 'LSD, ácidos, hongos, peyote, ketamina, PCP, etc.', p5Aplica: true },
+        { id: 'i', nombre: 'Opiáceos', ejemplo: 'codeína/jarabes, Tramal/Tramadol, morfina, metadona, heroína, petidina, etc.', p5Aplica: true },
+        { id: 'j', nombre: 'Otras drogas', ejemplo: 'relajantes/sedantes, modafinilo/Mentix, esteroides, anabólicos, etc.', p5Aplica: true, requiereEspecificar: true }
     ];
 
-    function cargarPreguntas() {
-        const container = document.getElementById('preguntaContainer');
-        container.innerHTML = '';
+    // Preguntas 2-7 (texto con {SUST} como marcador) y sus opciones/valores oficiales del manual OMS.
+    const P2 = { clave: 'p2', texto: 'En los últimos 3 meses, ¿con qué frecuencia ha consumido {SUST}?',
+        opciones: [['Nunca', 0], ['1 o 2 veces', 2], ['Mensualmente', 3], ['Semanalmente', 4], ['Diariamente o casi a diario', 6]] };
+    const P3 = { clave: 'p3', texto: 'En los últimos tres meses, ¿con qué frecuencia ha tenido fuertes deseos o ansias de consumir {SUST}?',
+        opciones: [['Nunca', 0], ['1 o 2 veces', 3], ['Mensualmente', 4], ['Semanalmente', 5], ['Diariamente o casi a diario', 6]] };
+    const P4 = { clave: 'p4', texto: 'En los últimos tres meses, ¿con qué frecuencia ha tenido problemas de salud, sociales, legales o económicos debido al consumo de {SUST}?',
+        opciones: [['Nunca', 0], ['1 o 2 veces', 4], ['Mensualmente', 5], ['Semanalmente', 6], ['Diariamente o casi a diario', 7]] };
+    const P5 = { clave: 'p5', texto: 'En los últimos tres meses, ¿con qué frecuencia ha tenido problemas para cumplir con sus obligaciones habituales a causa del consumo de {SUST}?',
+        opciones: [['Nunca', 0], ['1 o 2 veces', 5], ['Mensualmente', 6], ['Semanalmente', 7], ['Diariamente o casi a diario', 8]] };
+    const P6 = { clave: 'p6', texto: '¿Alguna vez amigos, familiares o alguien más le han mostrado preocupación por su consumo de {SUST}?',
+        opciones: [['No, nunca', 0], ['Sí, pero no en los últimos 3 meses', 3], ['Sí, en los últimos 3 meses', 6]] };
+    const P7 = { clave: 'p7', texto: '¿Alguna vez ha intentado controlar, reducir o dejar de consumir {SUST} y no lo ha logrado?',
+        opciones: [['No, nunca', 0], ['Sí, pero no en los últimos 3 meses', 3], ['Sí, en los últimos 3 meses', 6]] };
+    const P8_OPCIONES = [['No, nunca', 0], ['Sí, pero no en los últimos 3 meses', 1], ['Sí, en los últimos 3 meses', 2]];
 
-        preguntas.forEach((p, idx) => {
-            const div = document.createElement('div');
-            div.className = 'pregunta' + (idx === 0 ? ' active' : '');
-            div.id = `pregunta-${idx}`;
+    let sustanciasActivas = [];      // sustancias marcadas "Sí" en P1
+    let otrosEspecificado = '';
+    let cola = [];                   // cola de preguntas a mostrar: { sustanciaId, pregunta }
+    let colaIndex = 0;
+    let resultadosPorSustancia = {}; // { sustanciaId: { p2..p7: valor, puntaje, banda } }
+    let respuestaP8 = null;
+    let edadEsAdolescente = false;
 
-            let html = `
-                <div class="p-label">Pregunta ${idx+1} de ${totalPreguntas}</div>
-                <p>${p.texto}</p>
+    // ===== PASO 1: selección de sustancias =====
+    function cargarP1() {
+        const cont = document.getElementById('p1Lista');
+        cont.innerHTML = '';
+        SUSTANCIAS.forEach(s => {
+            const div = document.createElement('label');
+            div.className = 'p1-item';
+            div.id = `p1item-${s.id}`;
+            div.innerHTML = `
+                <input type="checkbox" value="${s.id}" onchange="toggleP1('${s.id}', this.checked)">
+                <span><span class="p1-nombre">${s.nombre}</span><br><span class="p1-ejemplo">${s.ejemplo}</span></span>
             `;
-
-            p.opciones.forEach((opcion) => {
-                const val = opcion.valor;
-                const checked = respuestas[idx] === val ? 'checked' : '';
-                html += `
-                    <label class="${checked ? 'selected' : ''}">
-                        <input type="radio" name="p${idx}" value="${val}" ${checked} onchange="seleccionarRespuesta(${idx}, ${val})">
-                        ${opcion.label}
-                    </label>
-                `;
-            });
-
-            div.innerHTML = html;
-            container.appendChild(div);
+            cont.appendChild(div);
         });
-
-        actualizarProgreso();
-        actualizarBotones();
     }
 
-    function seleccionarRespuesta(idx, val) {
-        respuestas[idx] = val;
-        const labels = document.querySelectorAll(`#pregunta-${idx} label`);
-        labels.forEach(label => {
-            const radio = label.querySelector('input[type="radio"]');
-            if (radio && parseInt(radio.value) === val) {
-                label.classList.add('selected');
-            } else {
-                label.classList.remove('selected');
-            }
-        });
-
-        if (idx < totalPreguntas - 1) {
-            setTimeout(() => cambiarPregunta(1), 250);
+    function toggleP1(id, marcado) {
+        const item = document.getElementById(`p1item-${id}`);
+        item.classList.toggle('selected', marcado);
+        if (id === 'j') {
+            document.getElementById('p1OtrosEspecifique').style.display = marcado ? 'block' : 'none';
         }
-        actualizarBotones();
     }
 
-    function cambiarPregunta(dir) {
-        const nuevo = preguntaActual + dir;
-        if (nuevo < 0 || nuevo >= totalPreguntas) return;
+    function confirmarP1() {
+        const marcados = SUSTANCIAS.filter(s => document.querySelector(`#p1item-${s.id} input`).checked);
+        const errorBox = document.getElementById('p1Error');
 
-        document.getElementById(`pregunta-${preguntaActual}`).classList.remove('active');
-        preguntaActual = nuevo;
-        document.getElementById(`pregunta-${preguntaActual}`).classList.add('active');
+        if (marcados.length === 0) {
+            // Ningún consumo reportado en la vida: se detiene la entrevista (regla del manual OMS).
+            errorBox.style.display = 'none';
+            mostrarResultadoSinConsumo();
+            return;
+        }
 
-        actualizarProgreso();
-        actualizarBotones();
+        otrosEspecificado = document.getElementById('p1OtrosTexto') ? document.getElementById('p1OtrosTexto').value.trim() : '';
+        errorBox.style.display = 'none';
+
+        sustanciasActivas = marcados;
+        resultadosPorSustancia = {};
+        sustanciasActivas.forEach(s => { resultadosPorSustancia[s.id] = { p2: null, p3: null, p4: null, p5: null, p6: null, p7: null }; });
+
+        edadEsAdolescente = casoActual.edad >= 12 && casoActual.edad <= 17;
+
+        construirCola();
+        document.getElementById('p1Container').style.display = 'none';
+        document.getElementById('motorContainer').style.display = 'block';
+        colaIndex = 0;
+        renderPreguntaActual();
     }
 
-    function actualizarProgreso() {
-        const pct = Math.round(((preguntaActual + 1) / totalPreguntas) * 100);
-        document.getElementById('contadorPregunta').textContent = `Pregunta ${preguntaActual+1}/${totalPreguntas}`;
+    // Construye la secuencia completa de preguntas a mostrar, sustancia por sustancia,
+    // respetando la regla de salto del manual: si P2 = "Nunca", se omiten P3-P5 y se continúa en P6.
+    function construirCola() {
+        cola = [];
+        sustanciasActivas.forEach(s => {
+            cola.push({ sustanciaId: s.id, pregunta: P2 });
+        });
+        // P3-P7 se insertan dinámicamente después de responder P2 de cada sustancia (ver responderYAvanzar).
+    }
+
+    function renderPreguntaActual() {
+        const item = cola[colaIndex];
+        const s = SUSTANCIAS.find(x => x.id === item.sustanciaId);
+        const nombreSust = s.id === 'j' && otrosEspecificado ? `otras drogas (${otrosEspecificado})` : s.nombre.toLowerCase();
+        const textoPregunta = item.pregunta.texto.replace('{SUST}', nombreSust);
+
+        document.getElementById('tituloSustanciaActual').textContent = `${s.nombre}${s.id === 'j' && otrosEspecificado ? ' — ' + otrosEspecificado : ''}`;
+
+        const container = document.getElementById('preguntaContainer');
+        container.innerHTML = `
+            <div class="pregunta active">
+                <p>${textoPregunta}</p>
+                ${item.pregunta.opciones.map(([label, val]) => `
+                    <label>
+                        <input type="radio" name="preguntaActual" value="${val}" onchange="marcarRespuestaActual(${val})">
+                        ${label}
+                    </label>
+                `).join('')}
+            </div>
+        `;
+
+        document.getElementById('btnSiguientePregunta').disabled = true;
+
+        const pct = Math.round(((colaIndex) / Math.max(cola.length, 1)) * 100);
+        document.getElementById('contadorPregunta').textContent = `Pregunta ${colaIndex + 1} de ${cola.length} (aprox.)`;
         document.getElementById('barraProgreso').style.width = pct + '%';
         document.getElementById('textoProgreso').textContent = pct + '%';
     }
 
-    function actualizarBotones() {
-        document.getElementById('btnPrev').disabled = preguntaActual === 0;
-
-        const esUltima = preguntaActual === totalPreguntas - 1;
-        document.getElementById('btnNext').style.display = esUltima ? 'none' : 'flex';
-        document.getElementById('btnCalcular').style.display = esUltima ? 'flex' : 'none';
-
-        const todasRespondidas = respuestas.every(r => r !== null);
-        document.getElementById('btnNext').disabled = respuestas[preguntaActual] === null;
-        document.getElementById('btnCalcular').disabled = !todasRespondidas;
+    let respuestaActualTemp = null;
+    function marcarRespuestaActual(val) {
+        respuestaActualTemp = val;
+        document.querySelectorAll('#preguntaContainer label').forEach(label => {
+            const radio = label.querySelector('input[type="radio"]');
+            label.classList.toggle('selected', radio && parseInt(radio.value) === val);
+        });
+        document.getElementById('btnSiguientePregunta').disabled = false;
     }
 
-    function calcularWast() {
-        if (respuestas.some(r => r === null)) {
-            alert('⚠️ Responda todas las preguntas antes de ver el resultado.');
-            return;
+    function responderYAvanzar() {
+        if (respuestaActualTemp === null) return;
+        const item = cola[colaIndex];
+        resultadosPorSustancia[item.sustanciaId][item.pregunta.clave] = respuestaActualTemp;
+
+        // Si se acaba de responder P2 y fue "Nunca" (0): saltar P3-P5, ir directo a P6-P7.
+        if (item.pregunta.clave === 'p2') {
+            const s = SUSTANCIAS.find(x => x.id === item.sustanciaId);
+            const nuevasPreguntas = [];
+            if (respuestaActualTemp > 0) {
+                nuevasPreguntas.push({ sustanciaId: item.sustanciaId, pregunta: P3 });
+                nuevasPreguntas.push({ sustanciaId: item.sustanciaId, pregunta: P4 });
+                if (s.p5Aplica) nuevasPreguntas.push({ sustanciaId: item.sustanciaId, pregunta: P5 });
+            }
+            nuevasPreguntas.push({ sustanciaId: item.sustanciaId, pregunta: P6 });
+            nuevasPreguntas.push({ sustanciaId: item.sustanciaId, pregunta: P7 });
+            cola.splice(colaIndex + 1, 0, ...nuevasPreguntas);
         }
 
-        const total = respuestas.reduce((a, b) => a + b, 0); // rango 2-6
-        // Criterio 2 (recomendado por la validación en población general, Sanz-Barbero et al. 2020):
-        // se considera cribado positivo si hay una respuesta extrema ("mucha tensión" o "mucha dificultad", valor=3) en cualquiera de los 2 ítems.
-        const respuestaExtrema = respuestas.some(r => r === 3);
-        const divResultado = document.getElementById('resultadoBox');
+        respuestaActualTemp = null;
+        colaIndex++;
 
-        let zona, zonaTexto, mensaje, consejosExtra;
-
-        if (respuestaExtrema) {
-            zona = 'zona-severa';
-            zonaTexto = 'Positivo';
-            mensaje = '🔴 Cribado positivo — posible violencia de pareja';
-            consejosExtra = `<div class="consejos"><strong>💡 Pasos a seguir:</strong><ul><li>Entreviste a la paciente en privado, sin la pareja presente</li><li>Valore riesgo inmediato y necesidad de derivación a servicios de protección (CEM, línea 100, Fiscalía)</li><li>Documente con cautela y respete la voluntad de la paciente sobre los siguientes pasos</li><li>Este resultado no sustituye una evaluación clínica completa de violencia de pareja</li></ul></div>`;
-        } else if (total >= 3) {
-            zona = 'zona-moderada';
-            zonaTexto = 'Tensión presente, sin criterio positivo';
-            mensaje = '🟠 Se identifica tensión o dificultad, sin cumplir criterio de cribado positivo';
-            consejosExtra = `<div class="consejos"><strong>💡 Orientación:</strong><ul><li>Explore con mayor profundidad la dinámica de pareja en la consulta</li><li>Mantenga una actitud de escucha abierta ante señales adicionales</li></ul></div>`;
+        if (colaIndex < cola.length) {
+            renderPreguntaActual();
         } else {
-            zona = 'zona-minima';
-            zonaTexto = 'Negativo';
-            mensaje = '🟢 Sin indicios de tensión relevante en la relación de pareja';
-            consejosExtra = `<div class="consejos"><strong>💡 Orientación:</strong><ul><li>No se identifican señales de alerta con este instrumento</li><li>Mantenga la pregunta abierta en controles futuros</li></ul></div>`;
+            mostrarPreguntaP8();
+        }
+    }
+
+    // ===== PREGUNTA 8: consumo inyectado (única, no repetida por sustancia) =====
+    function mostrarPreguntaP8() {
+        const container = document.getElementById('preguntaContainer');
+        document.getElementById('tituloSustanciaActual').textContent = 'Pregunta adicional';
+        container.innerHTML = `
+            <div class="pregunta active">
+                <p>¿Alguna vez ha consumido alguna droga por vía inyectada? (únicamente para usos no médicos)</p>
+                ${P8_OPCIONES.map(([label, val]) => `
+                    <label>
+                        <input type="radio" name="p8" value="${val}" onchange="marcarP8(${val})">
+                        ${label}
+                    </label>
+                `).join('')}
+            </div>
+        `;
+        document.getElementById('btnSiguientePregunta').textContent = 'Ver resultado →';
+        document.getElementById('btnSiguientePregunta').onclick = finalizarAssist;
+        document.getElementById('btnSiguientePregunta').disabled = true;
+        document.getElementById('barraProgreso').style.width = '95%';
+        document.getElementById('textoProgreso').textContent = '95%';
+        document.getElementById('contadorPregunta').textContent = 'Última pregunta';
+    }
+
+    function marcarP8(val) {
+        respuestaP8 = val;
+        document.querySelectorAll('#preguntaContainer label').forEach(label => {
+            const radio = label.querySelector('input[type="radio"]');
+            label.classList.toggle('selected', radio && parseInt(radio.value) === val);
+        });
+        document.getElementById('btnSiguientePregunta').disabled = false;
+    }
+
+    // ===== CÁLCULO Y RESULTADO =====
+    function bandaOMS(sustancia, puntaje) {
+        // Cortes oficiales OMS 2011 (Humeniuk et al.): alcohol 0-10/11-26/27+; resto 0-3/4-26/27+.
+        const umbralModerado = sustancia.esAlcohol ? 11 : 4;
+        const umbralAlto = 27;
+        if (puntaje >= umbralAlto) return { nivel: 'alto', texto: 'Riesgo alto', clase: 'banda-alto' };
+        if (puntaje >= umbralModerado) return { nivel: 'moderado', texto: 'Riesgo moderado', clase: 'banda-moderado' };
+        return { nivel: 'bajo', texto: 'Riesgo bajo', clase: 'banda-bajo' };
+    }
+
+    function mostrarResultadoSinConsumo() {
+        const divResultado = document.getElementById('resultadoBox');
+        divResultado.className = 'resultado show zona-minima';
+        divResultado.innerHTML = `
+            <div style="font-size: 1.26rem;">✅ Sin consumo reportado</div>
+            <div class="consejos"><strong>💡 Orientación:</strong><ul><li>El/la paciente no reportó consumo de ninguna sustancia en P1</li><li>Refuerce factores protectores y mantenga la pregunta abierta en controles futuros</li></ul></div>
+            <div id="notaGuardado" class="nota-guardado">💾 Guardando caso...</div>
+        `;
+        agregarBotonesFinales(divResultado);
+        divResultado.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        guardarResultadoAssist({ sinConsumo: true }, null, 'Sin consumo reportado');
+    }
+
+    function finalizarAssist() {
+        const divResultado = document.getElementById('resultadoBox');
+        document.getElementById('motorContainer').style.display = 'none';
+
+        let filas = '';
+        let maxPuntaje = -1;
+        let sustanciaMasAlta = null;
+        let hayRiesgoAlto = false;
+        let hayAlertaAdolescente = false;
+
+        sustanciasActivas.forEach(s => {
+            const r = resultadosPorSustancia[s.id];
+            const puntaje = (r.p2 || 0) + (r.p3 || 0) + (r.p4 || 0) + (r.p5 || 0) + (r.p6 || 0) + (r.p7 || 0);
+            const banda = bandaOMS(s, puntaje);
+            r.puntaje = puntaje;
+            r.banda = banda.nivel;
+
+            if (banda.nivel === 'alto') hayRiesgoAlto = true;
+            if (puntaje > maxPuntaje) { maxPuntaje = puntaje; sustanciaMasAlta = s.nombre; }
+
+            const alertaAdolescente = edadEsAdolescente && puntaje > 0;
+            if (alertaAdolescente) hayAlertaAdolescente = true;
+
+            filas += `
+                <tr>
+                    <td>${s.nombre}${s.id === 'j' && otrosEspecificado ? ' (' + otrosEspecificado + ')' : ''}</td>
+                    <td>${puntaje}</td>
+                    <td class="${banda.clase}">${banda.texto}${alertaAdolescente ? '<br><span class="alerta-adolescente">⚠️ Alerta MINSA adolescente</span>' : ''}</td>
+                </tr>
+            `;
+        });
+
+        let notaP8 = '';
+        if (respuestaP8 !== null && respuestaP8 > 0) {
+            const guia = respuestaP8 === 2
+                ? 'Patrón de inyección en los últimos 3 meses: requiere mayor evaluación y tratamiento más intensivo.'
+                : 'Patrón de inyección fuera de los últimos 3 meses: intervención breve, incluyendo información sobre riesgos asociados a inyectarse.';
+            notaP8 = `<div class="disclaimer" style="margin-top:8px;"><strong>💉 Consumo inyectado reportado:</strong> ${guia}</div>`;
         }
 
-        divResultado.className = `resultado show ${zona}`;
+        let notaAdolescente = '';
+        if (hayAlertaAdolescente) {
+            notaAdolescente = `<div class="disclaimer" style="border-left-color:#dc2626; background:#fee2e2; margin-top:8px;"><strong>🔶 Adolescente con consumo detectado (RM N.° 753-2021-MINSA):</strong> cualquier puntaje mayor a 0 en un/a adolescente amerita vigilancia estrecha por el impacto neurobiológico del consumo en el cerebro en desarrollo, independientemente de la banda de riesgo OMS. Considere consejería motivacional y seguimiento cercano. Verifique el criterio exacto en la norma completa antes de aplicarlo como protocolo institucional.</div>`;
+        }
+
+        divResultado.className = `resultado show ${hayRiesgoAlto ? 'zona-severa' : 'zona-leve'}`;
         divResultado.innerHTML = `
-            <div style="font-size: 1.84rem; margin-bottom:4px;">${total} / 6</div>
-            <div>${mensaje}</div>
-            ${consejosExtra}
-            <div class="nota-corte">Criterio de cribado positivo (Plazaola-Castaño et al., 2008; validación en población general, Gac Sanit 2020): respuesta extrema ("mucha tensión" o "mucha dificultad") en cualquiera de los 2 ítems.</div>
+            <div style="font-size: 1.15rem; margin-bottom:6px;">📊 Resultado por sustancia</div>
+            <table class="tabla-assist">
+                <thead><tr><th>Sustancia</th><th>Puntaje</th><th>Banda de riesgo</th></tr></thead>
+                <tbody>${filas}</tbody>
+            </table>
+            ${notaP8}
+            ${notaAdolescente}
+            <div class="nota-corte">Cortes OMS 2011: alcohol 0-10 bajo · 11-26 moderado · 27+ alto. Resto de sustancias: 0-3 bajo · 4-26 moderado · 27+ alto. Puntaje = suma P2 a P7 (P5 no aplica a tabaco).</div>
             <div id="notaGuardado" class="nota-guardado">💾 Guardando caso...</div>
         `;
 
+        agregarBotonesFinales(divResultado);
+        divResultado.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+        const zonaResumen = `Máximo: ${sustanciaMasAlta} (${maxPuntaje} pts)${hayRiesgoAlto ? ' — riesgo alto' : ''}${hayAlertaAdolescente ? ' — alerta adolescente MINSA' : ''}`;
+        guardarResultadoAssist(resultadosPorSustancia, maxPuntaje, zonaResumen);
+    }
+
+    function agregarBotonesFinales(divResultado) {
         const btnNuevo = document.createElement('button');
         btnNuevo.className = 'btn-form-primary';
         btnNuevo.style.marginTop = '10px';
@@ -782,11 +938,34 @@
         btnTablero.textContent = 'Tablero SERUMS';
         btnTablero.onclick = () => location.href = '../index.html';
         divResultado.appendChild(btnTablero);
-
-        divResultado.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        guardarResultado(total, zonaTexto);
     }
 
+    function guardarResultadoAssist() {
+        const nota = document.getElementById('notaGuardado');
+        if (nota) nota.textContent = 'Resultado calculado localmente; no se transmitieron ni almacenaron datos.';
+    }
+
+    function nuevoCaso() {
+        casoActual = null;
+        document.getElementById('casoSexo').value = '';
+        document.getElementById('casoEdad').value = '';
+        document.getElementById('casoEstadoCivil').value = '';
+        document.getElementById('casoDepartamento').value = '';
+        document.getElementById('casoProvincia').value = '';
+        document.getElementById('casoConsentimiento').checked = false;
+
+        sustanciasActivas = []; otrosEspecificado = ''; cola = []; colaIndex = 0;
+        resultadosPorSustancia = {}; respuestaP8 = null; respuestaActualTemp = null;
+        document.getElementById('resultadoBox').className = 'resultado';
+        document.getElementById('resultadoBox').innerHTML = '';
+        document.getElementById('motorContainer').style.display = 'none';
+        document.getElementById('p1Container').style.display = 'block';
+        cargarP1();
+
+        mostrarPantalla('datosCasoScreen');
+    }
+
+    cargarP1();
     mostrarPantalla('datosCasoScreen');
 </script>
 </body>

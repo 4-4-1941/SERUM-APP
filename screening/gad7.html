@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>WAST - SIP SYSTEM</title>
+<title>GAD-7 - SIP SYSTEM</title>
 <meta name="theme-color" content="#0a2e44">
 <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -434,8 +434,8 @@
                 </div>
             </div>
             <div class="app-title">
-                WAST
-                <small>VIOLENCIA PAREJA</small>
+                GAD-7
+                <small>ANSIEDAD</small>
             </div>
         </div>
 
@@ -444,7 +444,7 @@
             <!-- ===== PANTALLA 1: INICIO DE SESIÓN ===== -->
             <div id="authScreen" style="display:none;">
                 <div class="disclaimer">
-                    <strong>🔒 Acceso restringido:</strong> Inicia sesión con tu cuenta de PRE SERUMS PERÚ para aplicar el tamizaje WAST y registrar el caso.
+                    <strong>🔒 Acceso restringido:</strong> Inicia sesión con tu cuenta de PRE SERUMS PERÚ para aplicar el tamizaje y registrar el caso.
                 </div>
                 <div class="form-caso">
                     <label class="campo-form">Correo electrónico
@@ -513,25 +513,21 @@
                 </div>
             </div>
 
-            <!-- ===== PANTALLA 3: TEST WAST ===== -->
+            <!-- ===== PANTALLA 3: TEST GAD-7 ===== -->
             <div id="testScreen" style="display:none;">
 
                 <div class="creditos-adaptacion">
-                    <strong>WAST</strong> (Woman Abuse Screening Tool — versión corta, 2 ítems) — Brown JB, Lent B, Brett PJ, Sas G, Pederson LL. <em>Development of the Woman Abuse Screening Tool for use in family practice.</em> Fam Med. 1996;28(6):422-8. Versión española: Plazaola-Castaño J, Ruiz-Pérez I, Montero-Piñar MI. <em>Validación de la versión corta del Woman Abuse Screening Tool para su uso en atención primaria en España.</em> Gac Sanit. 2008;22(5):415-420.
-                </div>
-
-                <div class="disclaimer">
-                    <strong>⚠️ Aplicabilidad:</strong> Este tamizaje corresponde a pacientes mujeres que tienen o han tenido pareja en los últimos 12 meses. Aplíquelo con criterio clínico en un espacio privado, sin la presencia de la pareja.
+                    <strong>GAD-7</strong> (Generalized Anxiety Disorder 7-item scale) — Spitzer RL, Kroenke K, Williams JBW, Löwe B. <em>A brief measure for assessing generalized anxiety disorder: the GAD-7.</em> Arch Intern Med. 2006;166(10):1092-1097. Uso clínico y educativo de libre reproducción (Pfizer Inc.).
                 </div>
 
                 <div class="progreso">
-                    <span class="contador" id="contadorPregunta">Pregunta 1/2</span>
+                    <span class="contador" id="contadorPregunta">Pregunta 1/7</span>
                     <div class="barra-container"><div class="barra" id="barraProgreso"></div></div>
                     <span class="pregunta-num" id="textoProgreso">0%</span>
                 </div>
 
                 <div class="guia-trago">
-                    <strong>📋 Instrucción:</strong> <span id="textoInstruccion">Responda pensando en su relación de pareja actual o más reciente.</span>
+                    <strong>📋 Instrucción:</strong> <span id="textoInstruccion">Durante las últimas 2 semanas, ¿qué tan seguido le han molestado los siguientes problemas?</span>
                 </div>
 
                 <div class="pregunta-container" id="preguntaContainer"></div>
@@ -539,7 +535,7 @@
                 <div class="nav-buttons">
                     <button class="btn-prev" id="btnPrev" onclick="cambiarPregunta(-1)">← Anterior</button>
                     <button class="btn-next" id="btnNext" onclick="cambiarPregunta(1)">Siguiente →</button>
-                    <button class="btn-calcular" id="btnCalcular" onclick="calcularWast()" style="display:none;">📊 Resultado</button>
+                    <button class="btn-calcular" id="btnCalcular" onclick="calcularGad7()" style="display:none;">📊 Resultado</button>
                 </div>
 
                 <div id="resultadoBox" class="resultado"></div>
@@ -549,7 +545,7 @@
 
         <div class="app-footer">
             © 2026 SIP SYSTEM INTELLIGENCE PLATFORM<br>
-            WAST corto (Brown et al., 1996 · Plazaola-Castaño et al., 2008) · Versión Castellano · v1.0
+            Escala GAD-7 (Spitzer et al., 2006) · Versión Castellano · v1.0
         </div>
     </div>
 <script>
@@ -614,28 +610,20 @@
     }
 </script>
 <script>
-    const totalPreguntas = 2;
+    const totalPreguntas = 7;
     let preguntaActual = 0;
     let respuestas = new Array(totalPreguntas).fill(null);
 
-    // WAST corto: cada ítem tiene sus propias opciones y valores (1-3), a diferencia del GAD-7.
+    const opcionesEstandar = ['Nunca', 'Varios días', 'Más de la mitad de los días', 'Casi todos los días'];
+
     const preguntas = [
-        {
-            texto: 'En general, ¿cómo describiría usted su relación con su pareja?',
-            opciones: [
-                { label: 'Ninguna tensión', valor: 1 },
-                { label: 'Alguna tensión', valor: 2 },
-                { label: 'Mucha tensión', valor: 3 }
-            ]
-        },
-        {
-            texto: 'Usted y su pareja resuelven sus discusiones con...',
-            opciones: [
-                { label: 'Ninguna dificultad', valor: 1 },
-                { label: 'Alguna dificultad', valor: 2 },
-                { label: 'Mucha dificultad', valor: 3 }
-            ]
-        }
+        { texto: 'Sentirse nervioso/a, ansioso/a o con los nervios de punta' },
+        { texto: 'No ser capaz de parar o controlar su preocupación' },
+        { texto: 'Preocuparse demasiado por diferentes cosas' },
+        { texto: 'Dificultad para relajarse' },
+        { texto: 'Estar tan inquieto/a que le es difícil quedarse quieto/a' },
+        { texto: 'Molestarse o irritarse fácilmente' },
+        { texto: 'Sentir miedo, como si algo terrible pudiera pasar' }
     ];
 
     function cargarPreguntas() {
@@ -652,13 +640,13 @@
                 <p>${p.texto}</p>
             `;
 
-            p.opciones.forEach((opcion) => {
-                const val = opcion.valor;
+            opcionesEstandar.forEach((opcion, oi) => {
+                const val = oi;
                 const checked = respuestas[idx] === val ? 'checked' : '';
                 html += `
                     <label class="${checked ? 'selected' : ''}">
                         <input type="radio" name="p${idx}" value="${val}" ${checked} onchange="seleccionarRespuesta(${idx}, ${val})">
-                        ${opcion.label}
+                        ${opcion}
                     </label>
                 `;
             });
@@ -720,45 +708,49 @@
         document.getElementById('btnCalcular').disabled = !todasRespondidas;
     }
 
-    function calcularWast() {
+    function calcularGad7() {
         if (respuestas.some(r => r === null)) {
             alert('⚠️ Responda todas las preguntas antes de ver el resultado.');
             return;
         }
 
-        const total = respuestas.reduce((a, b) => a + b, 0); // rango 2-6
-        // Criterio 2 (recomendado por la validación en población general, Sanz-Barbero et al. 2020):
-        // se considera cribado positivo si hay una respuesta extrema ("mucha tensión" o "mucha dificultad", valor=3) en cualquiera de los 2 ítems.
-        const respuestaExtrema = respuestas.some(r => r === 3);
+        const total = respuestas.reduce((a, b) => a + b, 0);
         const divResultado = document.getElementById('resultadoBox');
 
         let zona, zonaTexto, mensaje, consejosExtra;
 
-        if (respuestaExtrema) {
-            zona = 'zona-severa';
-            zonaTexto = 'Positivo';
-            mensaje = '🔴 Cribado positivo — posible violencia de pareja';
-            consejosExtra = `<div class="consejos"><strong>💡 Pasos a seguir:</strong><ul><li>Entreviste a la paciente en privado, sin la pareja presente</li><li>Valore riesgo inmediato y necesidad de derivación a servicios de protección (CEM, línea 100, Fiscalía)</li><li>Documente con cautela y respete la voluntad de la paciente sobre los siguientes pasos</li><li>Este resultado no sustituye una evaluación clínica completa de violencia de pareja</li></ul></div>`;
-        } else if (total >= 3) {
-            zona = 'zona-moderada';
-            zonaTexto = 'Tensión presente, sin criterio positivo';
-            mensaje = '🟠 Se identifica tensión o dificultad, sin cumplir criterio de cribado positivo';
-            consejosExtra = `<div class="consejos"><strong>💡 Orientación:</strong><ul><li>Explore con mayor profundidad la dinámica de pareja en la consulta</li><li>Mantenga una actitud de escucha abierta ante señales adicionales</li></ul></div>`;
-        } else {
+        if (total <= 4) {
             zona = 'zona-minima';
-            zonaTexto = 'Negativo';
-            mensaje = '🟢 Sin indicios de tensión relevante en la relación de pareja';
-            consejosExtra = `<div class="consejos"><strong>💡 Orientación:</strong><ul><li>No se identifican señales de alerta con este instrumento</li><li>Mantenga la pregunta abierta en controles futuros</li></ul></div>`;
+            zonaTexto = 'Mínima';
+            mensaje = '🟢 Ansiedad mínima';
+            consejosExtra = `<div class="consejos"><strong>💡 Orientación:</strong><ul><li>No se identifican síntomas significativos de ansiedad</li><li>Mantenga hábitos saludables de manejo del estrés</li></ul></div>`;
+        } else if (total <= 9) {
+            zona = 'zona-leve';
+            zonaTexto = 'Leve';
+            mensaje = '🟠 Ansiedad leve';
+            consejosExtra = `<div class="consejos"><strong>💡 Orientación:</strong><ul><li>Síntomas leves de ansiedad</li><li>Considere técnicas de manejo del estrés y monitoreo</li><li>Revalúe si los síntomas persisten o aumentan</li></ul></div>`;
+        } else if (total <= 14) {
+            zona = 'zona-moderada';
+            zonaTexto = 'Moderada';
+            mensaje = '🔴 Ansiedad moderada';
+            consejosExtra = `<div class="consejos"><strong>💡 Orientación:</strong><ul><li>Síntomas moderados que ameritan evaluación clínica</li><li>Considere valoración por psicología o psiquiatría</li><li>El punto de corte ≥10 sugiere posible TAG</li></ul></div>`;
+        } else {
+            zona = 'zona-severa';
+            zonaTexto = 'Severa';
+            mensaje = '🔴 Ansiedad severa';
+            consejosExtra = `<div class="consejos"><strong>💡 Pasos a seguir:</strong><ul><li>Síntomas severos de ansiedad</li><li>Se recomienda evaluación diagnóstica formal por profesional de salud mental</li><li>No demore la búsqueda de ayuda profesional</li></ul></div>`;
         }
 
         divResultado.className = `resultado show ${zona}`;
         divResultado.innerHTML = `
-            <div style="font-size: 1.84rem; margin-bottom:4px;">${total} / 6</div>
+            <div style="font-size: 1.84rem; margin-bottom:4px;">${total} / 21</div>
             <div>${mensaje}</div>
             ${consejosExtra}
-            <div class="nota-corte">Criterio de cribado positivo (Plazaola-Castaño et al., 2008; validación en población general, Gac Sanit 2020): respuesta extrema ("mucha tensión" o "mucha dificultad") en cualquiera de los 2 ítems.</div>
+            <div class="nota-corte">Spitzer et al. (2006): punto de corte ≥10 (sensibilidad 89%, especificidad 82%) para probable Trastorno de Ansiedad Generalizada. Zonas: 0-4 mínima · 5-9 leve · 10-14 moderada · 15-21 severa.</div>
             <div id="notaGuardado" class="nota-guardado">💾 Guardando caso...</div>
         `;
+
+        mostrarImpactoFuncional(divResultado);
 
         const btnNuevo = document.createElement('button');
         btnNuevo.className = 'btn-form-primary';
@@ -785,6 +777,31 @@
 
         divResultado.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         guardarResultado(total, zonaTexto);
+    }
+
+    function mostrarImpactoFuncional(container) {
+        const div = document.createElement('div');
+        div.className = 'impacto-funcional';
+        div.innerHTML = `
+            <p>Si marcó algún problema, ¿qué tan difícil le han hecho estos problemas su trabajo, ocuparse de las tareas del hogar o relacionarse con otras personas? <span class="no-puntua">(opcional, no se suma al puntaje)</span></p>
+            <label><input type="radio" name="impacto" onchange="seleccionarImpacto('Nada en absoluto')"> Nada en absoluto</label>
+            <label><input type="radio" name="impacto" onchange="seleccionarImpacto('Algo difícil')"> Algo difícil</label>
+            <label><input type="radio" name="impacto" onchange="seleccionarImpacto('Muy difícil')"> Muy difícil</label>
+            <label><input type="radio" name="impacto" onchange="seleccionarImpacto('Extremadamente difícil')"> Extremadamente difícil</label>
+            <div id="notaImpacto"></div>
+        `;
+        container.appendChild(div);
+    }
+
+    function seleccionarImpacto(valor) {
+        const nota = document.getElementById('notaImpacto');
+        nota.style.display = 'block';
+        nota.innerHTML = `Estos problemas le han dificultado su día a día: <strong>${valor}</strong>. Este dato complementa el puntaje total y debe considerarse en el juicio clínico.`;
+
+        document.querySelectorAll('input[name="impacto"]').forEach(radio => {
+            const label = radio.closest('label');
+            if (radio.checked) { label.classList.add('selected'); } else { label.classList.remove('selected'); }
+        });
     }
 
     mostrarPantalla('datosCasoScreen');
