@@ -1216,7 +1216,7 @@ function renderAssistant() {
     </section>
   `;
 
-  const list = document.getElementById("assistant-list");
+  const list = document.getElementById("assistant-list"); const search = document.getElementById("assistant-search"); const integratedPracticeUrls = { "ref-001": "capacitacion/recursos/formatos/referencia.html", "ref-002": "capacitacion/recursos/formatos/contrarreferencia.html" };
   ;
 
   function draw(filter = "") {
@@ -1254,7 +1254,7 @@ function renderAssistant() {
                 ${d.commonErrors.map(e => `<li>${e}</li>`).join("")}
               </ul>
               ${d.relatedNormCodes.length ? `<p style="color:#5B6E6A"><strong>Normativa relacionada:</strong> ${d.relatedNormCodes.join(", ")}</p>` : ""}
-              <button class="action-btn" data-practice="${d.id}" style="margin-top:12px">Practicar llenado →</button>
+              <button class="action-btn" data-practice="${d.id}" style="margin-top:12px">${integratedPracticeUrls[d.id] ? "Abrir formato interactivo →" : "Practicar llenado →"}</button>
             </div>
           </article>
         `).join("")}
@@ -1263,7 +1263,7 @@ function renderAssistant() {
 
     bindToggles();
     list.querySelectorAll("[data-practice]").forEach(btn => {
-      btn.addEventListener("click", () => renderAssistantPractice(btn.dataset.practice));
+      btn.addEventListener("click", () => { const practiceUrl = integratedPracticeUrls[btn.dataset.practice]; if (practiceUrl) { window.location.href = practiceUrl; return; } renderAssistantPractice(btn.dataset.practice); });
     });
   }
 
