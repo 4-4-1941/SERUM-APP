@@ -1217,7 +1217,7 @@ function renderAssistant() {
   `;
 
   const list = document.getElementById("assistant-list");
-  const search = document.getElementById("assistant-search");
+  ;
 
   function draw(filter = "") {
     const q = filter.toLowerCase();
