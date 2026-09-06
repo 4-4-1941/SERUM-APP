@@ -1,0 +1,1 @@
+En capacitacion/index.html cambiar SOLO href="../capacitacion.html" por href="cursos/audit/index.html". No tocar las demás tarjetas.

@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",()=>document.querySelectorAll(".case button,.quiz button").forEach(b=>{let a=b.nextElementSibling;if(!a||!a.classList.contains("answer"))return;a.hidden=true;a.style.display="none";let l=b.textContent;b.onclick=()=>{let o=a.hidden;a.hidden=!o;a.style.display=o?"block":"none";b.textContent=o?"Ocultar respuesta":l}}));
