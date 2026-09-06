@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AUDIT-C · SERUM-APP Screening</title>
+<link rel="icon" href="../favicon-32.png" sizes="32x32">
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:#eef3f8;color:#172033}.app{max-width:760px;margin:auto;min-height:100vh;background:#fff;box-shadow:0 0 24px #0001}header{background:linear-gradient(135deg,#0a2e44,#1a5a7a);color:#fff;padding:16px}.top{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap}.top a{color:#fff;text-decoration:none;font-size:.9rem}h1{margin:8px 0 0;font-size:1.6rem}.sub{opacity:.86;font-size:.9rem;margin-top:4px}main{padding:16px}.notice,.credits{border-radius:10px;padding:11px 13px;margin-bottom:12px;line-height:1.5}.notice{background:#eef6ff;border-left:4px solid #2563eb;font-size:.88rem}.credits{background:#f7f5ee;border-left:4px solid #b08d3e;font-size:.78rem}.criterion{border:1px solid #cbd5e1;border-radius:12px;padding:13px;margin-bottom:14px}.criterion label{display:block;font-weight:700;margin-bottom:7px}.criterion select{width:100%;padding:10px;border:1px solid #94a3b8;border-radius:8px;font:inherit;background:#fff}.question{border:1px solid #dbe3ec;border-radius:14px;padding:15px;margin:12px 0}.question h2{font-size:1rem;line-height:1.45;margin:0 0 10px}.options{display:grid;gap:7px}.option{display:flex;gap:9px;align-items:flex-start;padding:9px 11px;border:1px solid #d9e2ec;border-radius:10px;cursor:pointer}.option:has(input:checked){background:#e8f1ff;border-color:#2563eb}.option input{margin-top:3px}.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:14px}.btn{border:0;border-radius:999px;padding:10px 15px;font-weight:800;cursor:pointer;background:#1e4a7a;color:#fff;text-decoration:none;text-align:center}.btn:disabled{opacity:.55;cursor:not-allowed}.result{display:none;border-radius:14px;padding:16px;margin-top:15px}.result.show{display:block}.positive{background:#fff1f2;border:1px solid #fda4af;color:#881337}.negative{background:#ecfdf5;border:1px solid #86efac;color:#14532d}.score{font-size:1.7rem;font-weight:800}.small{font-size:.78rem;color:#64748b;line-height:1.45;margin-top:8px}@media(max-width:600px){.app{box-shadow:none}.actions{position:sticky;bottom:0;background:#fff;padding:9px 0}.btn{flex:1}.top{align-items:flex-start}}
+</style>
+</head>
+<body><div class="app">
+<header><div class="top"><a href="screening-index.html">← Screening</a><a href="../index.html">Tablero SERUMS</a></div><h1>AUDIT-C</h1><div class="sub">Tamizaje breve del consumo de alcohol · 3 preguntas</div></header>
+<main>
+<div class="notice"><strong>Uso clínico.</strong> Lea las preguntas tal como están escritas y considere el consumo durante el último año. El resultado identifica riesgo y no constituye diagnóstico. Esta página calcula localmente y no almacena ni transmite respuestas.</div>
+<div class="criterion"><label for="criterion">Criterio de interpretación indicado por MINSA</label><select id="criterion"><option value="">Seleccionar criterio…</option><option value="4">Hombre · positivo desde 4 puntos</option><option value="3">Mujer · positivo desde 3 puntos</option></select><div class="small">La selección se usa únicamente para aplicar el punto de corte normativo y no se guarda.</div></div>
+<form id="auditc">
+<section class="question"><h2>1. ¿Con cuánta frecuencia toma una bebida que contiene alcohol?</h2><div class="options" data-question="1"></div></section>
+<section class="question"><h2>2. ¿Cuántas bebidas con alcohol toma en un día típico en que bebe?</h2><div class="options" data-question="2"></div></section>
+<section class="question"><h2>3. ¿Con cuánta frecuencia toma seis o más bebidas en una sola ocasión?</h2><div class="options" data-question="3"></div></section>
+<div class="actions"><button class="btn" id="calculate" type="submit" disabled>Calcular resultado</button><button class="btn" id="reset-button" type="button" style="background:#e5e7eb;color:#172033">Limpiar</button></div>
+</form>
+<div id="result" class="result" role="status" aria-live="polite"></div>
+<div class="credits"><strong>Fuente clínica:</strong> Ministerio de Salud del Perú. Anexo 3, Cuestionario de Identificación de los Trastornos debidos al Consumo de Alcohol (AUDIT-C), incorporado en la directiva aprobada por R.M. N.° 120-2024/MINSA y modificada por R.M. N.° 431-2024/MINSA. Instrumento derivado del AUDIT de la Organización Mundial de la Salud.<br><a href="https://bvs.minsa.gob.pe/local/MINSA/7560.pdf" target="_blank" rel="noopener noreferrer">Consultar documento oficial MINSA</a></div>
+</main></div>
+<script>
+const OPTIONS=[
+  ['Nunca','Una vez al mes o menos','2 – 4 veces al mes','2 – 3 veces a la semana','4 o más veces a la semana'],
+  ['1 o 2','3 o 4','5 o 6','7, 8, o 9','10 o más'],
+  ['Nunca','Menos de una vez al mes','Una vez al mes','Una vez por semana','A diario o casi a diario']
+];
+const form=document.getElementById('auditc');
+const criterion=document.getElementById('criterion');
+const calculate=document.getElementById('calculate');
+const result=document.getElementById('result');
+document.querySelectorAll('[data-question]').forEach((box,index)=>{
+  box.innerHTML=OPTIONS[index].map((label,value)=>`<label class="option"><input type="radio" name="q${index+1}" value="${value}"><span>${label} <small>(${value})</small></span></label>`).join('');
+});
+function complete(){return criterion.value&&[1,2,3].every(n=>form.elements[`q${n}`].value!=='');}
+form.addEventListener('change',()=>{calculate.disabled=!complete();result.className='result';result.innerHTML='';});
+criterion.addEventListener('change',()=>{calculate.disabled=!complete();result.className='result';result.innerHTML='';});
+form.addEventListener('submit',event=>{
+  event.preventDefault();
+  if(!complete())return;
+  const score=[1,2,3].reduce((sum,n)=>sum+Number(form.elements[`q${n}`].value),0);
+  const cutoff=Number(criterion.value);
+  const positive=score>=cutoff;
+  result.className=`result show ${positive?'positive':'negative'}`;
+  result.innerHTML=`<div class="score">${score} / 12</div><h2>${positive?'Tamizaje positivo':'Tamizaje no positivo'}</h2><p>${positive?'El puntaje alcanza el punto de corte seleccionado. Indica riesgo elevado de consumo perjudicial, abusivo o dependencia y requiere ampliar la evaluación; no confirma un diagnóstico.':'El puntaje no alcanza el punto de corte seleccionado. Mantenga la valoración clínica y el seguimiento preventivo según el contexto.'}</p>${positive?'<div class="actions"><a class="btn" href="audit.html">Continuar con AUDIT completo →</a></div>':''}<div class="small">Punto de corte aplicado: ${cutoff} puntos.</div>`;
+  result.scrollIntoView({behavior:'smooth',block:'nearest'});
+});
+document.getElementById('reset-button').addEventListener('click',()=>{form.reset();criterion.value='';calculate.disabled=true;result.className='result';result.innerHTML='';window.scrollTo({top:0,behavior:'smooth'});});
+</script>
+</body></html>
