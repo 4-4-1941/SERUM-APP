@@ -5,6 +5,7 @@ const pageSubtitle = document.getElementById("page-subtitle");
 const scoreBadge = document.getElementById("score-badge");
 const resolvedBadge = document.getElementById("resolved-badge");
 const data = window.SERUMS_DATA;
+const { loadProgress, saveProgress } = window.SERUMS_STORAGE;
 
 let score = Number(localStorage.getItem(data.scoreKey) || 0);
 let caseState = loadProgress(data.caseStateKey, {});
@@ -221,14 +222,6 @@ function buildSimulacroQueue(career) {
 function goToSimulacro() {
   priorityReviewMode = false;
   renderView("simulacro");
-}
-
-function loadProgress(key, fallback) {
-  try { return JSON.parse(localStorage.getItem(key)) ?? fallback; } catch { return fallback; }
-}
-
-function saveProgress(key, value) {
-  localStorage.setItem(key, JSON.stringify(value));
 }
 
 function setActive(view) {
