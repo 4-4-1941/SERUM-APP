@@ -85,7 +85,7 @@ const REAL_EXAM_BLOCK_WEIGHTS = {
 
 let simulacroQueue = [];
 let simulacroIndex = 0;
-let simulacroResults = []; // {caseId, career, block, correct}
+let simulacroResults = []; // {questionIndex, caseId, career, block, selected, correctOption, correct}
 let simulacroSelected = null;
 let simulacroConfirmed = false;
 let simulacroTimerId = null;
@@ -736,7 +736,7 @@ function renderSimulacro() {
 
 function renderSimulacroIntro() {
   pageTitle.textContent = "Simulacro SERUMS";
-  pageSubtitle.textContent = "100 preguntas, 5 bloques oficiales, cronómetro y puntaje final.";
+  pageSubtitle.textContent = "Cartilla de práctica e instrucciones antes de comenzar.";
 
   const totalAvailable = data.cases.length;
   const target = Math.min(SIMULACRO_TARGET, totalAvailable);
@@ -746,7 +746,8 @@ function renderSimulacroIntro() {
   root.innerHTML = `
     <section class="two-col">
       <div class="panel">
-        <h3 class="section-title">Cómo funciona</h3>
+        <div class="simulacro-kicker">CARTILLA DE PRÁCTICA</div>
+        <h3 class="section-title">Instrucciones del simulacro</h3>
         <label style="display:block;margin-bottom:10px;color:#5B6E6A;font-size:13px">
           Carrera del simulacro
           <select id="simulacro-career-select" class="search" style="margin-top:4px">
@@ -754,15 +755,18 @@ function renderSimulacroIntro() {
             ${careers.map(c => `<option value="${c}" ${simulacroCareer === c ? "selected" : ""}>${c}</option>`).join("")}
           </select>
         </label>
-        <ul style="margin:0;padding-left:18px;color:#5B6E6A;line-height:1.7">
-          <li>${target} preguntas seleccionadas al azar, repartidas entre los 5 bloques oficiales SERUMS según la proporción real observada en exámenes anteriores (mayor peso en Gestión y Salud Pública).</li>
-          <li>Si eliges una carrera, los casos clínicos propios de otras profesiones no aparecen — igual que el examen real, que es específico por profesión.</li>
-          <li>Se evitan repetir las preguntas de tus últimos 2 intentos, siempre que haya suficientes casos alternativos disponibles.</li>
-          <li>Cronómetro total de ${Math.round(target * SIMULACRO_SECONDS_PER_Q / 60)} minutos (ritmo de referencia de 1 min/pregunta).</li>
-          <li>Una sola oportunidad de respuesta por pregunta, sin reintentos — igual que el examen real.</li>
-          <li>Sin penalización por error: cada acierto suma un punto.</li>
-        </ul>
-        <button class="action-btn" id="start-simulacro-btn">Iniciar simulacro →</button>
+        <div class="simulacro-instructions">
+          <div><strong>Antes de comenzar</strong><span>Selecciona la carrera con la que practicarás. El cronómetro permanecerá detenido mientras lees esta cartilla.</span></div>
+          <div><strong>Estructura</strong><span>Se balotean hasta ${target} preguntas del banco disponible, relacionadas con Salud Pública, Cuidado Integral de Salud, Ética e Interculturalidad, Investigación y Gestión de Servicios de Salud.</span></div>
+          <div><strong>Cómo responder</strong><span>Marca una alternativa en la pregunta o su burbuja A–D en la hoja de respuestas. Ambas formas quedan sincronizadas.</span></div>
+          <div><strong>Tiempo</strong><span>Esta práctica asigna ${SIMULACRO_SECONDS_PER_Q} segundos por pregunta: aproximadamente ${Math.round(target * SIMULACRO_SECONDS_PER_Q / 60)} minutos si se generan ${target} preguntas.</span></div>
+          <div><strong>Navegación y finalización</strong><span>Confirma cada respuesta para avanzar. Puedes finalizar antes; las preguntas restantes aparecerán como no marcadas en el resumen.</span></div>
+          <div><strong>Resultados</strong><span>Al terminar verás aciertos, errores, no marcadas y desempeño por bloque. Estas métricas son pedagógicas y no constituyen un resultado oficial del MINSA.</span></div>
+        </div>
+        <div class="simulacro-blocks" aria-label="Bloques temáticos">
+          <span>Salud Pública</span><span>Cuidado Integral de Salud</span><span>Ética e Interculturalidad</span><span>Investigación</span><span>Gestión de Servicios de Salud</span>
+        </div>
+        <button class="action-btn simulacro-start" id="start-simulacro-btn">Comenzar simulacro →</button>
       </div>
       <div class="panel">
         <h3 class="section-title">Tus últimos intentos</h3>
@@ -837,6 +841,13 @@ function renderSimulacroRunning() {
     return `<button class="${cls}" data-opt="${i}" ${simulacroConfirmed ? "disabled" : ""}>${String.fromCharCode(65 + i)}. ${o}</button>`;
   }).join("");
 
+  const answerBubbles = c.options.map((_, i) => {
+    const letter = String.fromCharCode(65 + i);
+    return `<button class="answer-bubble${simulacroSelected === i ? " selected" : ""}" data-bubble-opt="${i}" ${simulacroConfirmed ? "disabled" : ""} aria-label="Marcar alternativa ${letter}" aria-pressed="${simulacroSelected === i}">${letter}</button>`;
+  }).join("");
+  const answeredIndexes = new Set(simulacroResults.map(r => r.questionIndex));
+  const progressCells = simulacroQueue.map((_, i) => `<span class="answer-progress-cell${i === simulacroIndex ? " current" : answeredIndexes.has(i) ? " answered" : ""}" title="Pregunta ${i + 1}">${i + 1}</span>`).join("");
+
   root.innerHTML = `
     <section class="panel">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
@@ -850,7 +861,21 @@ function renderSimulacroRunning() {
       <h3 class="section-title">${c.title}</h3>
       <p>${c.statement}</p>
       <p><strong>${c.question}</strong></p>
-      <div class="option-list">${optionsHtml}</div>
+      <div class="simulacro-running-layout">
+        <div>
+          <div class="option-list">${optionsHtml}</div>
+          <div class="current-answer-sheet" aria-label="Hoja de respuestas de la pregunta actual">
+            <strong>Pregunta ${simulacroIndex + 1}</strong>
+            <div class="answer-bubbles">${answerBubbles}</div>
+            <span>${simulacroSelected === null ? "Sin marcar" : `Marcada: ${String.fromCharCode(65 + simulacroSelected)}`}</span>
+          </div>
+        </div>
+        <aside class="simulacro-progress-sheet">
+          <h4>Hoja de avance</h4>
+          <div class="answer-progress-grid">${progressCells}</div>
+          <div class="answer-progress-legend"><span><i class="answered"></i>Respondida</span><span><i class="current"></i>Actual</span><span><i></i>No marcada</span></div>
+        </aside>
+      </div>
       <div id="simulacro-feedback" style="margin-top:12px"></div>
       <div id="simulacro-actions" style="margin-top:12px"></div>
     </section>
@@ -873,6 +898,13 @@ function renderSimulacroRunning() {
       renderSimulacroRunning();
     });
   });
+  root.querySelectorAll(".answer-bubble").forEach(btn => {
+    btn.addEventListener("click", () => {
+      if (simulacroConfirmed) return;
+      simulacroSelected = Number(btn.dataset.bubbleOpt);
+      renderSimulacroRunning();
+    });
+  });
 
   const actions = document.getElementById("simulacro-actions");
   const feedback = document.getElementById("simulacro-feedback");
@@ -881,11 +913,10 @@ function renderSimulacroRunning() {
     actions.innerHTML = `<button class="action-btn" id="confirm-sim-btn" ${simulacroSelected === null ? "disabled" : ""}>Confirmar respuesta</button>`;
     document.getElementById("confirm-sim-btn").addEventListener("click", confirmSimulacroAnswer);
   } else {
-    const correct = simulacroSelected === c.correct;
     feedback.innerHTML = `
-      <div class="card ${correct ? "success" : "error"}">
-        <strong>${correct ? "Correcto" : "Incorrecto"}</strong>
-        <p>${c.feedback}</p>
+      <div class="card">
+        <strong>Respuesta registrada</strong>
+        <p>El resultado de la respuesta se mostrará al finalizar el simulacro.</p>
       </div>
     `;
     const isLast = simulacroIndex === simulacroQueue.length - 1;
@@ -899,7 +930,15 @@ function confirmSimulacroAnswer() {
   simulacroConfirmed = true;
   const c = simulacroQueue[simulacroIndex];
   const correct = simulacroSelected === c.correct;
-  simulacroResults.push({ caseId: c.id, career: c.career || c.specialty, block: c.block, correct });
+  simulacroResults.push({
+    questionIndex: simulacroIndex,
+    caseId: c.id,
+    career: c.career || c.specialty,
+    block: c.block,
+    selected: simulacroSelected,
+    correctOption: c.correct,
+    correct
+  });
   renderSimulacroRunning();
 }
 
@@ -951,12 +990,30 @@ function renderSimulacroResults() {
   if (!last) { simulacroPhase = "intro"; return renderSimulacroIntro(); }
 
   const savedName = localStorage.getItem("preserum_userName") || "";
+  const resultByIndex = new Map(simulacroResults.map(r => [r.questionIndex, r]));
+  const answerSheet = simulacroQueue.map((_, i) => {
+    const r = resultByIndex.get(i);
+    if (!r) return `<div class="final-answer unanswered"><strong>${String(i + 1).padStart(2, "0")}</strong><span>—</span><small>No marcada</small></div>`;
+    const letter = String.fromCharCode(65 + r.selected);
+    return `<div class="final-answer ${r.correct ? "correct" : "incorrect"}"><strong>${String(i + 1).padStart(2, "0")}</strong><span>${letter}</span><small>${r.correct ? "Correcta" : "Incorrecta"}</small></div>`;
+  }).join("");
+  const unansweredCount = Math.max(0, simulacroQueue.length - last.total);
+  const incorrectCount = Math.max(0, last.total - last.correctCount);
 
   root.innerHTML = `
     <section class="grid metrics">
       <div class="card"><span class="label">Puntaje</span><div class="value">${last.correctCount}/${last.total}</div></div>
       <div class="card"><span class="label">Porcentaje</span><div class="value">${last.pct}%</div></div>
+      <div class="card"><span class="label">Incorrectas</span><div class="value">${incorrectCount}</div></div>
+      <div class="card"><span class="label">No marcadas</span><div class="value">${unansweredCount}</div></div>
       <div class="card"><span class="label">Fecha</span><div class="value" style="font-size:18px">${new Date(last.date).toLocaleDateString("es-PE")}</div></div>
+    </section>
+    <section class="panel final-answer-sheet">
+      <div class="simulacro-kicker">RESUMEN FINAL</div>
+      <h3 class="section-title">Hoja de respuestas del simulacro</h3>
+      <p class="simulacro-note">Revisa las respuestas registradas. La clasificación de aciertos y errores se muestra únicamente al finalizar.</p>
+      <div class="final-answer-grid">${answerSheet}</div>
+      <div class="final-answer-legend"><span><i class="correct"></i>Correcta</span><span><i class="incorrect"></i>Incorrecta</span><span><i class="unanswered"></i>No marcada</span></div>
     </section>
     <section class="two-col">
       <div class="panel">
