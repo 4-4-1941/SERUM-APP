@@ -758,7 +758,7 @@ function renderSimulacroIntro() {
         <div class="simulacro-instructions">
           <div><strong>Antes de comenzar</strong><span>Selecciona la carrera con la que practicarás. El cronómetro permanecerá detenido mientras lees esta cartilla.</span></div>
           <div><strong>Estructura</strong><span>Se balotean hasta ${target} preguntas del banco disponible, relacionadas con Salud Pública, Cuidado Integral de Salud, Ética e Interculturalidad, Investigación y Gestión de Servicios de Salud.</span></div>
-          <div><strong>Cómo responder</strong><span>Marca una alternativa en la pregunta o su burbuja A–D en la hoja de respuestas. Ambas formas quedan sincronizadas.</span></div>
+          <div><strong>Cómo responder</strong><span>Marca una alternativa A–D en la pregunta. La fila óptica mostrará automáticamente la letra elegida, sin exigir un segundo marcado.</span></div>
           <div><strong>Tiempo</strong><span>Esta práctica asigna ${SIMULACRO_SECONDS_PER_Q} segundos por pregunta: aproximadamente ${Math.round(target * SIMULACRO_SECONDS_PER_Q / 60)} minutos si se generan ${target} preguntas.</span></div>
           <div><strong>Navegación y finalización</strong><span>Confirma cada respuesta para avanzar. Puedes finalizar antes; las preguntas restantes aparecerán como no marcadas en el resumen.</span></div>
           <div><strong>Resultados</strong><span>Al terminar verás aciertos, errores, no marcadas y desempeño por bloque. Estas métricas son pedagógicas y no constituyen un resultado oficial del MINSA.</span></div>
@@ -843,10 +843,8 @@ function renderSimulacroRunning() {
 
   const answerBubbles = c.options.map((_, i) => {
     const letter = String.fromCharCode(65 + i);
-    return `<button class="answer-bubble${simulacroSelected === i ? " selected" : ""}" data-bubble-opt="${i}" ${simulacroConfirmed ? "disabled" : ""} aria-label="Marcar alternativa ${letter}" aria-pressed="${simulacroSelected === i}">${letter}</button>`;
+    return `<span class="answer-bubble${simulacroSelected === i ? " selected" : ""}" aria-label="Alternativa ${letter}${simulacroSelected === i ? " marcada" : ""}"><i></i>${letter}</span>`;
   }).join("");
-  const answeredIndexes = new Set(simulacroResults.map(r => r.questionIndex));
-  const progressCells = simulacroQueue.map((_, i) => `<span class="answer-progress-cell${i === simulacroIndex ? " current" : answeredIndexes.has(i) ? " answered" : ""}" title="Pregunta ${i + 1}">${i + 1}</span>`).join("");
 
   root.innerHTML = `
     <section class="panel">
@@ -861,20 +859,11 @@ function renderSimulacroRunning() {
       <h3 class="section-title">${c.title}</h3>
       <p>${c.statement}</p>
       <p><strong>${c.question}</strong></p>
-      <div class="simulacro-running-layout">
-        <div>
-          <div class="option-list">${optionsHtml}</div>
-          <div class="current-answer-sheet" aria-label="Hoja de respuestas de la pregunta actual">
-            <strong>Pregunta ${simulacroIndex + 1}</strong>
-            <div class="answer-bubbles">${answerBubbles}</div>
-            <span>${simulacroSelected === null ? "Sin marcar" : `Marcada: ${String.fromCharCode(65 + simulacroSelected)}`}</span>
-          </div>
-        </div>
-        <aside class="simulacro-progress-sheet">
-          <h4>Hoja de avance</h4>
-          <div class="answer-progress-grid">${progressCells}</div>
-          <div class="answer-progress-legend"><span><i class="answered"></i>Respondida</span><span><i class="current"></i>Actual</span><span><i></i>No marcada</span></div>
-        </aside>
+      <div class="option-list">${optionsHtml}</div>
+      <div class="current-answer-sheet" aria-label="Fila óptica de la pregunta actual">
+        <div class="optical-row-number"><span>Pregunta</span><strong>${simulacroIndex + 1}</strong></div>
+        <div class="answer-bubbles">${answerBubbles}</div>
+        <span>${simulacroSelected === null ? "Sin marcar" : `Respuesta reflejada: ${String.fromCharCode(65 + simulacroSelected)}`}</span>
       </div>
       <div id="simulacro-feedback" style="margin-top:12px"></div>
       <div id="simulacro-actions" style="margin-top:12px"></div>
@@ -895,13 +884,6 @@ function renderSimulacroRunning() {
     btn.addEventListener("click", () => {
       if (simulacroConfirmed) return;
       simulacroSelected = Number(btn.dataset.opt);
-      renderSimulacroRunning();
-    });
-  });
-  root.querySelectorAll(".answer-bubble").forEach(btn => {
-    btn.addEventListener("click", () => {
-      if (simulacroConfirmed) return;
-      simulacroSelected = Number(btn.dataset.bubbleOpt);
       renderSimulacroRunning();
     });
   });
