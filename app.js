@@ -832,10 +832,7 @@ function renderSimulacroRunning() {
 
   const optionsHtml = c.options.map((o, i) => {
     let cls = "option-btn";
-    if (simulacroConfirmed) {
-      if (i === c.correct) cls += " success";
-      else if (i === simulacroSelected) cls += " error";
-    } else if (i === simulacroSelected) {
+    if (i === simulacroSelected) {
       cls += " selected";
     }
     return `<button class="${cls}" data-opt="${i}" ${simulacroConfirmed ? "disabled" : ""}>${String.fromCharCode(65 + i)}. ${o}</button>`;
@@ -843,7 +840,7 @@ function renderSimulacroRunning() {
 
   const answerBubbles = c.options.map((_, i) => {
     const letter = String.fromCharCode(65 + i);
-    return `<span class="answer-bubble${simulacroSelected === i ? " selected" : ""}" aria-label="Alternativa ${letter}${simulacroSelected === i ? " marcada" : ""}"><i></i>${letter}</span>`;
+    return `<button type="button" class="answer-bubble${simulacroSelected === i ? " selected" : ""}" data-opt="${i}" aria-pressed="${simulacroSelected === i}" aria-label="Marcar alternativa ${letter}" ${simulacroConfirmed ? "disabled" : ""}><span>${letter}</span></button>`;
   }).join("");
 
   root.innerHTML = `
@@ -881,6 +878,14 @@ function renderSimulacroRunning() {
   });
 
   root.querySelectorAll(".option-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      if (simulacroConfirmed) return;
+      simulacroSelected = Number(btn.dataset.opt);
+      renderSimulacroRunning();
+    });
+  });
+
+  root.querySelectorAll(".answer-bubble").forEach(btn => {
     btn.addEventListener("click", () => {
       if (simulacroConfirmed) return;
       simulacroSelected = Number(btn.dataset.opt);
@@ -938,20 +943,27 @@ function nextSimulacroQuestion() {
 
 function finishSimulacro() {
   simulacroPhase = "finished";
-  const total = simulacroResults.length; // preguntas efectivamente respondidas (permite cierre anticipado)
+  const total = simulacroQueue.length;
+  const answeredCount = simulacroResults.length;
   const correctCount = simulacroResults.filter(r => r.correct).length;
   const pct = total ? fmtPct(Math.round((correctCount / total) * 100)) : 0;
 
   const byBlock = {};
-  simulacroResults.forEach(r => {
-    byBlock[r.block] = byBlock[r.block] || { correct: 0, total: 0 };
-    byBlock[r.block].total += 1;
-    if (r.correct) byBlock[r.block].correct += 1;
+  const resultByIndex = new Map(simulacroResults.map(r => [r.questionIndex, r]));
+  simulacroQueue.forEach((question, index) => {
+    const block = question.block;
+    const result = resultByIndex.get(index);
+    byBlock[block] = byBlock[block] || { correct: 0, incorrect: 0, unanswered: 0, total: 0 };
+    byBlock[block].total += 1;
+    if (!result) byBlock[block].unanswered += 1;
+    else if (result.correct) byBlock[block].correct += 1;
+    else byBlock[block].incorrect += 1;
   });
 
   const record = {
     date: new Date().toISOString(),
     total,
+    answeredCount,
     correctCount,
     pct,
     byBlock,
@@ -979,8 +991,9 @@ function renderSimulacroResults() {
     const letter = String.fromCharCode(65 + r.selected);
     return `<div class="final-answer ${r.correct ? "correct" : "incorrect"}"><strong>${String(i + 1).padStart(2, "0")}</strong><span>${letter}</span><small>${r.correct ? "Correcta" : "Incorrecta"}</small></div>`;
   }).join("");
-  const unansweredCount = Math.max(0, simulacroQueue.length - last.total);
-  const incorrectCount = Math.max(0, last.total - last.correctCount);
+  const answeredCount = last.answeredCount ?? simulacroResults.length;
+  const unansweredCount = Math.max(0, last.total - answeredCount);
+  const incorrectCount = Math.max(0, answeredCount - last.correctCount);
 
   root.innerHTML = `
     <section class="grid metrics">
@@ -1005,7 +1018,7 @@ function renderSimulacroResults() {
             const p = v.total ? fmtPct(Math.round((v.correct / v.total) * 100)) : 0;
             return `
               <div>
-                <div class="progress-head"><span>${block}</span><span>${v.correct}/${v.total} · ${p}%</span></div>
+                <div class="progress-head"><span>${block}</span><span>${v.correct} correctas · ${v.incorrect || 0} incorrectas · ${v.unanswered || 0} no marcadas · ${p}%</span></div>
                 <div class="bar"><span style="width:${p}%"></span></div>
               </div>
             `;
