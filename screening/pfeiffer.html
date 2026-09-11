@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Test de Pfeiffer · SERUM-APP</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;background:#eef3f7;color:#172033;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}.shell{max-width:900px;margin:auto;background:#fff;min-height:100vh}.hero{padding:16px 18px 20px;background:linear-gradient(135deg,#0a3148,#164e6e);color:#fff}.nav{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}.nav a{color:#fff;text-decoration:none;border:1px solid #ffffff66;border-radius:999px;padding:7px 11px;font-weight:700}.hero h1{margin:0 0 5px;font-size:1.45rem}.hero p{margin:0;opacity:.9}.wrap{padding:14px}.note,.source,.result{border-radius:12px;padding:12px 13px;margin:10px 0;line-height:1.45}.note{background:#fff7e8;border-left:4px solid #b7791f}.source{background:#f8fafc;border-left:4px solid #64748b;color:#475467;font-size:.84rem}.source a{color:#174f7a}.section{border:1px solid #d7e0e8;border-radius:14px;padding:13px;margin:12px 0}.section h2{margin:0 0 10px;font-size:1.08rem}.item{border:1px solid #d7e0e8;border-radius:11px;padding:12px;margin:9px 0}.prompt{font-weight:750;line-height:1.42;margin-bottom:8px}.instruction{font-size:.86rem;color:#667085;margin:0 0 9px}.response{width:100%;border:1px solid #cbd5e1;border-radius:9px;padding:10px;font:inherit;margin-bottom:9px}.scoreline{display:flex;gap:8px;flex-wrap:wrap}.scoreline label{border:1px solid #cbd5e1;border-radius:999px;padding:8px 11px}.scoreline input{margin-right:6px}.actions{position:sticky;bottom:0;background:#fffffff2;padding:10px 0;display:flex;gap:8px;flex-wrap:wrap;border-top:1px solid #d7e0e8}.actions button{border:0;border-radius:999px;padding:11px 16px;font-weight:800;font-size:.95rem}.primary{background:#1d4f7a;color:#fff}.secondary{background:#e6ebf0;color:#172033}.result{display:none;background:#eef6ff;border:1px solid #b8d7f1}.result.show{display:block}.score{font-size:1.65rem;font-weight:900}.error{color:#b42318;font-weight:800}.small{font-size:.82rem;color:#667085}@media(max-width:600px){.scoreline{display:grid;grid-template-columns:1fr 1fr}.scoreline label{text-align:center}.actions button{flex:1}}@media print{body{background:#fff}.actions,.note,.nav{display:none!important}.section,.item{break-inside:avoid}.result{display:block}}
+  </style>
+</head>
+<body><div class="shell">
+  <header class="hero">
+    <nav class="nav" aria-label="Navegación"><a href="screening-index.html">← Screening</a><a href="../index.html">Tablero SERUMS</a></nav>
+    <h1>Test de Pfeiffer (SPMSQ)</h1><p>Valoración cognitiva breve para personas adultas mayores · 10 ítems</p>
+  </header>
+  <main class="wrap">
+    <div class="note"><b>Aplicación profesional:</b> lea cada pregunta, registre la respuesta y califique. Las respuestas permanecen únicamente en esta página y no se transmiten ni almacenan. Es un tamizaje, no establece diagnóstico.</div>
+    <section class="section"><h2>Preguntas</h2><div id="questions"></div></section>
+    <section class="section"><h2>Ajuste por escolaridad</h2><div class="scoreline">
+      <label><input type="radio" name="edu" value="-1">Nivel educativo bajo</label>
+      <label><input type="radio" name="edu" value="0">Sin ajuste</label>
+      <label><input type="radio" name="edu" value="1">Estudios superiores</label>
+    </div><p class="small">Se resta un error cuando el nivel educativo es bajo y se añade un error cuando tiene estudios superiores.</p></section>
+    <div id="result" class="result" aria-live="polite"><div id="score" class="score"></div><div id="interpretation"></div><div id="trace" class="small"></div></div>
+    <div class="actions"><button class="primary" id="calc" type="button">Calcular resultado</button><button class="secondary" id="clear" type="button">Limpiar</button><button class="secondary" id="print" type="button">Imprimir</button></div>
+    <div class="source"><b>Interpretación:</b> 0–2 errores: normal; 3–4: deterioro cognitivo leve; 5–7: moderado; 8–10: severo. Fuente normativa: Ministerio de Salud del Perú, <a href="https://www.gob.pe/institucion/minsa/normas-legales/4557563-789-2023-minsa" target="_blank" rel="noopener">RM N.° 789-2023-MINSA / NTS N.° 207-MINSA/DGIESP-2023</a>, VACAM corta.</div>
+  </main>
+</div>
+<script>
+"use strict";
+const items=[
+ ["¿Cuál es la fecha de hoy? (día, mes y año).","Registre literalmente la respuesta."],
+ ["¿Qué día de la semana es hoy?","Registre la respuesta."],
+ ["¿Dónde estamos ahora?","Se acepta una descripción correcta del lugar."],
+ ["¿Cuál es su número de teléfono? Si no tiene teléfono, ¿cuál es su dirección completa?","Contraste con la información disponible."],
+ ["¿Qué edad tiene?","Contraste con la edad real."],
+ ["¿Cuándo nació? (día, mes y año).","Contraste con la fecha de nacimiento."],
+ ["¿Quién es el presidente actual del Perú?","Califique según la respuesta vigente al aplicar."],
+ ["¿Quién era el anterior presidente del Perú?","Califique según la sucesión presidencial vigente."],
+ ["¿Cuál era el primer apellido de su madre?","Contraste con la información disponible."],
+ ["Reste de 3 en 3 desde 20.","Cualquier error en la serie hace erróneo este ítem."]
+];
+const q=document.getElementById("questions");
+items.forEach((item,i)=>{const n=i+1;q.insertAdjacentHTML("beforeend",`<div class="item"><div class="prompt">${n}. ${item[0]}</div><div class="instruction">${item[1]}</div><input class="response" aria-label="Respuesta ${n}" autocomplete="off" placeholder="Respuesta del evaluado"><div class="scoreline"><label><input type="radio" name="p${n}" value="0">Correcta · 0 error</label><label><input type="radio" name="p${n}" value="1">Incorrecta · 1 error</label></div></div>`)});
+const $=s=>document.querySelector(s);
+function radioValue(name){const el=document.querySelector(`input[name="${name}"]:checked`);return el?Number(el.value):null}
+function show(title,body,trace="",error=false){$("#result").classList.add("show");$("#score").textContent=title;$("#interpretation").innerHTML=error?`<p class="error">${body}</p>`:`<p>${body}</p>`;$("#trace").textContent=trace;$("#result").scrollIntoView({behavior:"smooth",block:"center"})}
+function calculate(){let raw=0,missing=[];for(let i=1;i<=10;i++){const value=radioValue("p"+i);if(value===null)missing.push(i);else raw+=value}const education=radioValue("edu");if(education===null)missing.push("escolaridad");if(missing.length){show("Evaluación incompleta","Falta calificar: "+missing.join(", ")+".","",true);return false}const adjusted=Math.min(10,Math.max(0,raw+education));const label=adjusted<=2?"Resultado normal":adjusted<=4?"Posible deterioro cognitivo leve":adjusted<=7?"Posible deterioro cognitivo moderado":"Posible deterioro cognitivo severo";show(adjusted+" errores",label+". El resultado requiere interpretación clínica.",`Errores brutos: ${raw} · Ajuste: ${education>0?"+":""}${education} · Resultado: ${adjusted}`);return true}
+$("#calc").addEventListener("click",calculate);
+$("#clear").addEventListener("click",()=>{document.querySelectorAll("input").forEach(el=>el.checked=false);document.querySelectorAll(".response").forEach(el=>el.value="");$("#result").classList.remove("show")});
+$("#print").addEventListener("click",()=>{if(calculate())window.print()});
+</script></body></html>
