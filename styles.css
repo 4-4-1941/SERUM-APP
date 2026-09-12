@@ -124,11 +124,15 @@ textarea#notes,textarea.input,select,input[type="text"],input:not([type]){width:
 .final-answer-legend i.unanswered{background:#EFF2F1}
 .final-answer-sheet{margin-bottom:18px}
 .final-answer-grid{display:grid;grid-template-columns:repeat(10,minmax(66px,1fr));gap:7px;margin-top:14px}
-.final-answer{display:grid;grid-template-columns:auto 1fr;gap:2px 7px;align-items:center;padding:7px;border-radius:7px;border:1px solid var(--line)}
+.final-answer{display:grid;grid-template-columns:auto 1fr;gap:2px 7px;align-items:center;width:100%;padding:7px;border-radius:7px;border:1px solid var(--line);font:inherit;text-align:left;cursor:pointer}
 .final-answer strong{font-size:11px}.final-answer span{font-weight:800;text-align:right}.final-answer small{grid-column:1/-1;font-size:9px}
 .final-answer.correct{background:#E4F5EB;color:#11653E;border-color:#BCE4CC}
 .final-answer.incorrect{background:#FCEBEA;color:#A12626;border-color:#F2C4C1}
 .final-answer.unanswered{background:#EFF2F1;color:#64736F}
+.final-answer:focus-visible{outline:3px solid #F2C94C;outline-offset:2px}
+.simulacro-review-detail{margin-top:14px;padding:14px;border:1px solid var(--line);border-radius:10px;background:#F8FBFA;color:var(--ink);line-height:1.55}
+.simulacro-review-detail p{margin:7px 0}
+.learning-summary p{margin:8px 0;line-height:1.5}.learning-summary small{display:block;margin-top:12px;color:var(--muted);line-height:1.45}
 
 /* ===== MÓVIL (< 861px): columna verde pasa arriba ===== */
 @media (max-width:1024px){

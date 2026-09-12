@@ -1,0 +1,33 @@
+REPORTE OPERATIVO — SIMULACRO SERUMS
+Fecha: 12/09/2026
+
+ARCHIVOS MODIFICADOS
+- app.js
+- index.html
+- styles.css
+
+ARCHIVO DE VALIDACIÓN AÑADIDO
+- tools/validar_simulacro.js
+
+CAMBIOS OPERATIVOS
+1. Cronómetro único basado en una hora límite; evita intervalos duplicados y deriva de tiempo.
+2. El cronómetro permanece detenido en la cartilla y comienza al pulsar “Comenzar simulacro”.
+3. La alternativa elegida y su burbuja óptica permanecen sincronizadas.
+4. Durante el examen solo se confirma el registro; no se revela la clave correcta.
+5. El puntaje usa como denominador el total generado; las omitidas no se excluyen.
+6. El historial conserva pregunta, alternativas barajadas, selección, clave y explicación de cada intento.
+7. La ficha final es revisable: cada fila abre la pregunta, respuesta del usuario, clave y explicación.
+8. Se muestran correctas, incorrectas y no marcadas, además del desglose por los cinco bloques.
+9. Se añadió una lectura pedagógica explícitamente no oficial: fortalezas, progreso y bloques por reforzar.
+10. La constancia PDF incluye aciertos, errores, omitidas, total y porcentaje por bloque.
+11. Se actualizó la versión de caché de app.js en index.html.
+12. data.js no fue modificado.
+
+PRUEBAS EJECUTADAS
+- node --check app.js: correcta.
+- git diff --check: correcto.
+- Validación automatizada: 529 casos, 17 profesiones, IDs únicos, cuatro alternativas, claves válidas, retroalimentación presente y fórmulas consistentes.
+- Navegador local: cartilla visible antes del examen; cronómetro ausente/detenido en cartilla; inicio en 100:00; sincronización alternativa-burbuja; confirmación sin revelar clave.
+
+NOTA
+La distribución porcentual por bloque que ya existía en app.js se conserva. El propio código la identifica como calibración aproximada y no como distribución oficial del MINSA; no se alteró en esta intervención.
