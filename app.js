@@ -16,6 +16,7 @@ let activeCase = null;
 let currentList = [];      // lista filtrada vigente, para "Siguiente caso"
 let selectedOption = null; // opción marcada, aún no confirmada
 let confirmed = false;     // true tras pulsar "Confirmar respuesta"
+let activeCaseAttempts = 0; // intentos del caso abierto; no se heredan de sesiones anteriores
 let priorityReviewMode = false; // true cuando se navega desde "Repasar ahora"
 
 // ---------- Simulacro (100 preguntas, 5 bloques oficiales SERUMS) ----------
@@ -488,10 +489,6 @@ function renderCases() {
       currentList = filtered;
 
       list.innerHTML = filtered.map(c => {
-        const st = caseState[c.id];
-        let statusTag = `<span class="badge">Nuevo</span>`;
-        if (st && st.correct) statusTag = `<span class="badge">Resuelto</span>`;
-        else if (st && st.attempts) statusTag = `<span class="badge" style="background:#FCEBEA;color:#8A2A24">Con error</span>`;
         const unverifiedTag = c.unverified
           ? `<span class="badge" style="background:#FFF3CD;color:#8A6D1D;margin-left:6px">⚠ Clave sin verificar</span>`
           : "";
@@ -501,7 +498,7 @@ function renderCases() {
             <span>${careerLabel(c)} · ${c.block} · ${c.level}</span>
             <strong>${c.title}</strong>
             <small>${c.statement}</small>
-            ${statusTag}${unverifiedTag}
+            ${unverifiedTag}
           </button>
         `;
       }).join("") || `<p style="color:#5B6E6A">No hay casos con este filtro.</p>`;
@@ -559,6 +556,7 @@ function openCase(id) {
   activeCase = shuffleCaseOptions(original);
   selectedOption = null;
   confirmed = false;
+  activeCaseAttempts = 0;
   timeLeft = 60;
   clearInterval(timerId);
   timerId = setInterval(() => {
@@ -582,13 +580,13 @@ function renderCasePanel() {
   const correct = confirmed && selectedOption === activeCase.correct;
   // Solo se revela la opción correcta y la explicación técnica si acertó,
   // o si ya agotó los intentos permitidos. En un primer error, no se da pista.
-  const reveal = confirmed && (correct || st.attempts >= MAX_ATTEMPTS_BEFORE_REVEAL);
-  const attemptsLeft = Math.max(MAX_ATTEMPTS_BEFORE_REVEAL - st.attempts, 0);
+  const reveal = confirmed && (correct || activeCaseAttempts >= MAX_ATTEMPTS_BEFORE_REVEAL);
+  const attemptsLeft = Math.max(MAX_ATTEMPTS_BEFORE_REVEAL - activeCaseAttempts, 0);
 
   const optionsHtml = activeCase.options.map((o, i) => {
     let cls = "option-btn";
-    if (confirmed) {
-      if (reveal && i === activeCase.correct) cls += " success";
+    if (confirmed && reveal) {
+      if (i === activeCase.correct) cls += " success";
       else if (i === selectedOption) cls += " error";
     } else if (i === selectedOption) {
       cls += " selected";
@@ -609,7 +607,7 @@ function renderCasePanel() {
     <p><strong>${activeCase.question}</strong></p>
     <div class="option-list">${optionsHtml}</div>
     <div class="chips" style="margin-top:12px">${(activeCase.tags || []).map(t => `<span class="chip">${t}</span>`).join("")}</div>
-    <p style="margin-top:12px;color:#5B6E6A">Tiempo: ${timeLeft}s · Intentos: ${st.attempts} · Puntaje: ${score}</p>
+    <p style="margin-top:12px;color:#5B6E6A">Tiempo: ${timeLeft}s · Intentos: ${activeCaseAttempts}/${MAX_ATTEMPTS_BEFORE_REVEAL} · Puntaje: ${score}</p>
     <div id="case-feedback" style="margin-top:12px"></div>
     <div id="case-actions" style="margin-top:12px"></div>
   `;
@@ -687,6 +685,7 @@ function confirmAnswer() {
 
   const correct = selectedOption === activeCase.correct;
   const st = caseState[activeCase.id] || { attempts: 0, correct: false, history: [] };
+  activeCaseAttempts += 1;
   st.attempts += 1;
   st.correct = st.correct || correct;
   st.history = st.history || [];
