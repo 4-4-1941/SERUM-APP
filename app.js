@@ -139,13 +139,12 @@ function orderPoolAvoidingRepeats(pool, usedIds) {
 // el simulacro de una carrera no mezcle casos clínicos de otra, igual que el examen real.
 function buildSimulacroQueue(career) {
   const usedIds = recentlyUsedCaseIds();
-  const isClinicalBlock = b => b === "Cuidado integral" || !OFFICIAL_BLOCKS.includes(b);
   const matchesCareer = c => !career || c.career === career || c.career === "Transversal";
 
   const pools = {};
   OFFICIAL_BLOCKS.forEach(b => {
     let cases = data.cases.filter(c => c.block === b);
-    if (isClinicalBlock(b)) cases = cases.filter(matchesCareer);
+    if (career) cases = cases.filter(matchesCareer);
     pools[b] = orderPoolAvoidingRepeats(cases, usedIds);
   });
   // Casos que no caen en un bloque oficial (p. ej. "Psicología" como bloque propio):
@@ -968,7 +967,19 @@ function finishSimulacro() {
     pct,
     byBlock,
     career: simulacroCareer || null,
-    caseIds: simulacroResults.map(r => r.caseId)
+    caseIds: simulacroQueue.map(q => q.id),
+    answers: simulacroQueue.map((q, questionIndex) => {
+      const result = resultByIndex.get(questionIndex);
+      return {
+        questionIndex,
+        caseId: q.id,
+        block: q.block,
+        selected: result ? result.selected : null,
+        correctOption: q.correct,
+        correct: result ? result.correct : false,
+        unanswered: !result
+      };
+    })
   };
   simulacroHistory.push(record);
   saveProgress("simulacroHistory", simulacroHistory);
