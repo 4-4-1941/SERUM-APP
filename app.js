@@ -236,6 +236,11 @@ function fmtPct(n) {
   return Math.max(0, Math.min(100, n));
 }
 
+function careerLabel(c) {
+  const career = c.career || c.specialty;
+  return career === "Transversal" ? "Todas las profesiones" : career;
+}
+
 // Prioridad de repaso: 0 = nunca intentado (máxima prioridad),
 // 1 = intentado pero con error (ordenado por más antiguo primero),
 // 2 = ya resuelto correctamente (ordenado por más antiguo primero, para refuerzo espaciado).
@@ -264,9 +269,12 @@ function renderDashboard() {
   pageTitle.textContent = "Tablero SERUMS";
   pageSubtitle.textContent = "Casos, normativa y progreso en una sola vista.";
 
-  const careers = [...new Set(data.cases.map(c => c.career || c.specialty))];
+  const careers = [...new Set(data.cases.map(c => c.career || c.specialty))]
+    .filter(career => career !== "Transversal");
   const byCareer = careers.map(career => {
-    const casesOfCareer = data.cases.filter(c => (c.career || c.specialty) === career);
+    const casesOfCareer = data.cases.filter(c =>
+      (c.career || c.specialty) === career || c.career === "Transversal"
+    );
     const resolved = casesOfCareer.filter(c => (caseState[c.id] || {}).correct).length;
     return { career, total: casesOfCareer.length, resolved };
   });
@@ -393,7 +401,9 @@ function renderCases() {
   }
 
   // Extraer carreras, bloques, niveles ÚNICOS y ORDENADOS
-  const careers = [...new Set(data.cases.map(c => c.career || c.specialty))].sort();
+  const careers = [...new Set(data.cases.map(c => c.career || c.specialty))]
+    .filter(career => career !== "Transversal")
+    .sort();
   const blocks = [...new Set(data.cases.map(c => c.block))].sort();
   const levels = [...new Set(data.cases.map(c => c.level))].sort();
 
@@ -468,7 +478,7 @@ function renderCases() {
       let filtered = data.cases.filter(c => {
         const text = [c.title, c.block, c.specialty, c.career, c.statement, ...(c.tags || [])].join(" ").toLowerCase();
         return text.includes(q) &&
-          (!selectedCareer || (c.career || c.specialty) === selectedCareer) &&
+          (!selectedCareer || (c.career || c.specialty) === selectedCareer || c.career === "Transversal") &&
           (!selectedBlock || c.block === selectedBlock) &&
           (!selectedLevel || c.level === selectedLevel);
       });
@@ -488,7 +498,7 @@ function renderCases() {
         const cardStyle = c.unverified ? ' style="background:#FFFBF0;border-left:4px solid #E9B949"' : "";
         return `
           <button class="case-card" data-id="${c.id}"${cardStyle}>
-            <span>${c.career || c.specialty} · ${c.block} · ${c.level}</span>
+            <span>${careerLabel(c)} · ${c.block} · ${c.level}</span>
             <strong>${c.title}</strong>
             <small>${c.statement}</small>
             ${statusTag}${unverifiedTag}
@@ -592,7 +602,7 @@ function renderCasePanel() {
 
   panel.innerHTML = `
     <button id="back-to-filters-btn" class="toggle" style="margin-bottom:12px;margin-top:0">← Volver a carreras / filtros</button>
-    <div class="badge">${activeCase.career || activeCase.specialty} · ${activeCase.block} · ${activeCase.level}</div>
+    <div class="badge">${careerLabel(activeCase)} · ${activeCase.block} · ${activeCase.level}</div>
     ${activeCase.unverified ? `<div class="card" style="background:#FFF3CD;border-left:4px solid #E9B949;margin:10px 0;padding:8px 12px"><strong style="color:#8A6D1D">⚠ Clave de respuesta sin verificar</strong><p style="margin:4px 0 0;font-size:13px;color:#5B6E6A">Este caso proviene de un examen real subido, pero la respuesta correcta es un criterio técnico propio, no una clave oficial confirmada.</p></div>` : ""}
     <h3 class="section-title">${activeCase.title}</h3>
     <p>${activeCase.statement}</p>
@@ -845,7 +855,7 @@ function renderSimulacroRunning() {
   root.innerHTML = `
     <section class="panel">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
-        <span class="badge">${c.career || c.specialty} · ${c.block}</span>
+        <span class="badge">${careerLabel(c)} · ${c.block}</span>
         <div style="display:flex;gap:8px;align-items:center">
           <span class="badge" id="simulacro-timer" style="background:#F1E9D8;color:#8A6D3B">--:--</span>
           <button class="action-btn secondary" id="finish-early-btn" style="margin:0;padding:6px 10px;font-size:12px">Finalizar ahora</button>
