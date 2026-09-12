@@ -91,6 +91,7 @@ let simulacroSelected = null;
 let simulacroConfirmed = false;
 let simulacroTimerId = null;
 let simulacroTimeLeft = 0;
+let simulacroDeadline = 0;
 let simulacroPhase = "intro"; // intro | running | finished
 let simulacroHistory = loadProgress("simulacroHistory", []);
 let simulacroCareer = localStorage.getItem("simulacroCareer") || ""; // "" = todas las carreras (modo mixto)
@@ -724,18 +725,7 @@ function nextCase() {
 
 function renderSimulacro() {
   if (simulacroPhase === "running" && simulacroQueue.length) {
-    if (!simulacroTimerId) {
-      simulacroTimerId = setInterval(() => {
-        simulacroTimeLeft -= 1;
-        if (simulacroTimeLeft <= 0) {
-          simulacroTimeLeft = 0;
-          clearInterval(simulacroTimerId);
-          finishSimulacro();
-          return;
-        }
-        updateSimulacroTimerDisplay();
-      }, 1000);
-    }
+    if (simulacroTimerId === null) startSimulacroTimer();
     return renderSimulacroRunning();
   }
   if (simulacroPhase === "finished") return renderSimulacroResults();
@@ -808,19 +798,29 @@ function startSimulacro() {
   simulacroTimeLeft = simulacroQueue.length * SIMULACRO_SECONDS_PER_Q;
   simulacroPhase = "running";
 
-  clearInterval(simulacroTimerId);
-  simulacroTimerId = setInterval(() => {
-    simulacroTimeLeft -= 1;
-    if (simulacroTimeLeft <= 0) {
-      simulacroTimeLeft = 0;
-      clearInterval(simulacroTimerId);
-      finishSimulacro();
-      return;
-    }
-    updateSimulacroTimerDisplay();
-  }, 1000);
+  startSimulacroTimer();
 
   renderSimulacroRunning();
+}
+
+function stopSimulacroTimer() {
+  if (simulacroTimerId !== null) clearInterval(simulacroTimerId);
+  simulacroTimerId = null;
+}
+
+function tickSimulacroTimer() {
+  simulacroTimeLeft = Math.max(0, Math.ceil((simulacroDeadline - Date.now()) / 1000));
+  updateSimulacroTimerDisplay();
+  if (simulacroTimeLeft === 0) {
+    stopSimulacroTimer();
+    finishSimulacro();
+  }
+}
+
+function startSimulacroTimer() {
+  stopSimulacroTimer();
+  simulacroDeadline = Date.now() + simulacroTimeLeft * 1000;
+  simulacroTimerId = setInterval(tickSimulacroTimer, 250);
 }
 
 function updateSimulacroTimerDisplay() {
@@ -880,7 +880,7 @@ function renderSimulacroRunning() {
   document.getElementById("finish-early-btn").addEventListener("click", () => {
     const answered = simulacroResults.length;
     if (confirm(`Llevas ${answered} de ${simulacroQueue.length} preguntas respondidas. ¿Finalizar el simulacro ahora con ese avance?`)) {
-      clearInterval(simulacroTimerId);
+      stopSimulacroTimer();
       finishSimulacro();
     }
   });
@@ -944,12 +944,14 @@ function nextSimulacroQuestion() {
     simulacroConfirmed = false;
     renderSimulacroRunning();
   } else {
-    clearInterval(simulacroTimerId);
+    stopSimulacroTimer();
     finishSimulacro();
   }
 }
 
 function finishSimulacro() {
+  if (simulacroPhase === "finished") return;
+  stopSimulacroTimer();
   simulacroPhase = "finished";
   const total = simulacroQueue.length;
   const answeredCount = simulacroResults.length;
@@ -983,8 +985,14 @@ function finishSimulacro() {
         questionIndex,
         caseId: q.id,
         block: q.block,
+        title: q.title,
+        question: q.question,
+        options: [...q.options],
         selected: result ? result.selected : null,
         correctOption: q.correct,
+        selectedLetter: result ? String.fromCharCode(65 + result.selected) : null,
+        correctLetter: String.fromCharCode(65 + q.correct),
+        feedback: q.feedback || "",
         correct: result ? result.correct : false,
         unanswered: !result
       };
@@ -996,6 +1004,55 @@ function finishSimulacro() {
   renderSimulacroResults();
 }
 
+function renderOutcomeChart(correct, incorrect, unanswered, total) {
+  const safeTotal = Math.max(1, total);
+  const correctPct = Math.round((correct / safeTotal) * 100);
+  const incorrectPct = Math.round((incorrect / safeTotal) * 100);
+  const unansweredPct = Math.max(0, 100 - correctPct - incorrectPct);
+  const secondStop = correctPct + incorrectPct;
+  return `<div class="outcome-chart" role="img" aria-label="Distribución: ${correct} correctas, ${incorrect} incorrectas y ${unanswered} no marcadas de ${total} preguntas">
+    <div class="outcome-donut" style="--correct-stop:${correctPct}%;--incorrect-stop:${secondStop}%"><div><strong>${correctPct}%</strong><span>Acierto</span></div></div>
+    <div class="chart-legend">
+      <span><i class="chart-correct"></i><b>Correctas</b><em>${correct} · ${correctPct}%</em></span>
+      <span><i class="chart-incorrect"></i><b>Incorrectas</b><em>${incorrect} · ${incorrectPct}%</em></span>
+      <span><i class="chart-unanswered"></i><b>No marcadas</b><em>${unanswered} · ${unansweredPct}%</em></span>
+    </div>
+  </div>`;
+}
+
+function renderBlockChart(byBlock) {
+  return Object.entries(byBlock).map(([block, value]) => {
+    const pct = value.total ? Math.round((value.correct / value.total) * 100) : 0;
+    return `<div class="axis-bar-row">
+      <div class="axis-bar-label"><span>${block}</span><strong>${pct}%</strong></div>
+      <div class="axis-bar-track" role="img" aria-label="${block}: ${value.correct} de ${value.total} correctas, ${pct}%"><span style="width:${pct}%"></span></div>
+      <small>${value.correct} correctas · ${value.incorrect || 0} incorrectas · ${value.unanswered || 0} no marcadas · total ${value.total}</small>
+    </div>`;
+  }).join("");
+}
+
+function renderHistoryChart(history) {
+  const attempts = history.slice(-8);
+  if (!attempts.length) return "";
+  const width = 560, height = 190, left = 42, right = 18, top = 18, bottom = 34;
+  const plotWidth = width - left - right, plotHeight = height - top - bottom;
+  const step = attempts.length > 1 ? plotWidth / (attempts.length - 1) : 0;
+  const points = attempts.map((attempt, index) => ({
+    x: attempts.length > 1 ? left + index * step : left + plotWidth / 2,
+    y: top + plotHeight - (Number(attempt.pct) || 0) / 100 * plotHeight,
+    pct: Number(attempt.pct) || 0,
+    label: history.length - attempts.length + index + 1
+  }));
+  const polyline = points.map(point => `${point.x},${point.y}`).join(" ");
+  const guides = [0, 25, 50, 75, 100].map(value => {
+    const y = top + plotHeight - value / 100 * plotHeight;
+    return `<line x1="${left}" y1="${y}" x2="${width - right}" y2="${y}" class="trend-guide"/><text x="${left - 8}" y="${y + 4}" text-anchor="end">${value}%</text>`;
+  }).join("");
+  const marks = points.map(point => `<g><circle cx="${point.x}" cy="${point.y}" r="5"/><text class="trend-value" x="${point.x}" y="${point.y - 10}" text-anchor="middle">${point.pct}%</text><text x="${point.x}" y="${height - 10}" text-anchor="middle">I${point.label}</text></g>`).join("");
+  return `<svg class="history-chart" viewBox="0 0 ${width} ${height}" role="img" aria-label="Evolución del porcentaje en los últimos ${attempts.length} intentos">${guides}${attempts.length > 1 ? `<polyline points="${polyline}"/>` : ""}${marks}</svg>
+    <p class="chart-caption">Últimos ${attempts.length} intento${attempts.length === 1 ? "" : "s"}. Cada porcentaje usa como denominador el total generado.</p>`;
+}
+
 function renderSimulacroResults() {
   pageTitle.textContent = "Resultados del simulacro";
   pageSubtitle.textContent = "Resumen de tu último intento.";
@@ -1004,16 +1061,27 @@ function renderSimulacroResults() {
   if (!last) { simulacroPhase = "intro"; return renderSimulacroIntro(); }
 
   const savedName = localStorage.getItem("preserum_userName") || "";
-  const resultByIndex = new Map(simulacroResults.map(r => [r.questionIndex, r]));
-  const answerSheet = simulacroQueue.map((_, i) => {
-    const r = resultByIndex.get(i);
-    if (!r) return `<div class="final-answer unanswered"><strong>${String(i + 1).padStart(2, "0")}</strong><span>—</span><small>No marcada</small></div>`;
-    const letter = String.fromCharCode(65 + r.selected);
-    return `<div class="final-answer ${r.correct ? "correct" : "incorrect"}"><strong>${String(i + 1).padStart(2, "0")}</strong><span>${letter}</span><small>${r.correct ? "Correcta" : "Incorrecta"}</small></div>`;
+  const answers = Array.isArray(last.answers) && last.answers.length
+    ? last.answers
+    : simulacroQueue.map((q, questionIndex) => {
+        const r = simulacroResults.find(item => item.questionIndex === questionIndex);
+        return { questionIndex, caseId: q.id, block: q.block, title: q.title, question: q.question, options: [...q.options], selected: r?.selected ?? null, correctOption: q.correct, selectedLetter: r ? String.fromCharCode(65 + r.selected) : null, correctLetter: String.fromCharCode(65 + q.correct), feedback: q.feedback || "", correct: Boolean(r?.correct), unanswered: !r };
+      });
+  const answerSheet = answers.map((answer, i) => {
+    const status = answer.unanswered ? "unanswered" : (answer.correct ? "correct" : "incorrect");
+    const label = answer.unanswered ? "No marcada" : (answer.correct ? "Correcta" : "Incorrecta");
+    return `<button type="button" class="final-answer ${status}" data-review-index="${i}" aria-label="Revisar pregunta ${i + 1}: ${label}"><strong>${String(i + 1).padStart(2, "0")}</strong><span>${answer.selectedLetter || "—"}</span><small>${label}</small></button>`;
   }).join("");
   const answeredCount = last.answeredCount ?? simulacroResults.length;
   const unansweredCount = Math.max(0, last.total - answeredCount);
   const incorrectCount = Math.max(0, answeredCount - last.correctCount);
+  const blockPerformance = Object.entries(last.byBlock).map(([block, value]) => ({ block, pct: value.total ? Math.round((value.correct / value.total) * 100) : 0 }));
+  const strengths = blockPerformance.filter(item => item.pct >= 70);
+  const developing = blockPerformance.filter(item => item.pct >= 60 && item.pct < 70);
+  const weaknesses = blockPerformance.filter(item => item.pct < 60);
+  const outcomeChart = renderOutcomeChart(last.correctCount, incorrectCount, unansweredCount, last.total);
+  const blockChart = renderBlockChart(last.byBlock);
+  const historyChart = renderHistoryChart(simulacroHistory);
 
   root.innerHTML = `
     <section class="grid metrics">
@@ -1023,12 +1091,30 @@ function renderSimulacroResults() {
       <div class="card"><span class="label">No marcadas</span><div class="value">${unansweredCount}</div></div>
       <div class="card"><span class="label">Fecha</span><div class="value" style="font-size:18px">${new Date(last.date).toLocaleDateString("es-PE")}</div></div>
     </section>
+    <section class="simulacro-charts" aria-label="Estadísticas visuales del simulacro">
+      <article class="panel chart-panel">
+        <h3 class="section-title">Distribución del resultado</h3>
+        <p class="chart-subtitle">Composición de las ${last.total} preguntas generadas.</p>
+        ${outcomeChart}
+      </article>
+      <article class="panel chart-panel">
+        <h3 class="section-title">Rendimiento por eje temático</h3>
+        <p class="chart-subtitle">Porcentaje de aciertos sobre el total de cada eje.</p>
+        <div class="axis-bars">${blockChart}</div>
+      </article>
+      <article class="panel chart-panel chart-panel-wide">
+        <h3 class="section-title">Evolución entre intentos</h3>
+        <p class="chart-subtitle">Comparación de hasta ocho simulacros guardados en este dispositivo.</p>
+        ${historyChart}
+      </article>
+    </section>
     <section class="panel final-answer-sheet">
       <div class="simulacro-kicker">RESUMEN FINAL</div>
       <h3 class="section-title">Hoja de respuestas del simulacro</h3>
       <p class="simulacro-note">Revisa las respuestas registradas. La clasificación de aciertos y errores se muestra únicamente al finalizar.</p>
       <div class="final-answer-grid">${answerSheet}</div>
       <div class="final-answer-legend"><span><i class="correct"></i>Correcta</span><span><i class="incorrect"></i>Incorrecta</span><span><i class="unanswered"></i>No marcada</span></div>
+      <div id="simulacro-review-detail" class="simulacro-review-detail" aria-live="polite">Selecciona una fila para revisar la clave y la explicación.</div>
     </section>
     <section class="two-col">
       <div class="panel">
@@ -1044,6 +1130,13 @@ function renderSimulacroResults() {
             `;
           }).join("")}
         </div>
+      </div>
+      <div class="panel learning-summary">
+        <h3 class="section-title">Lectura pedagógica del desempeño</h3>
+        <p><strong>Fortalezas:</strong> ${strengths.length ? strengths.map(item => `${item.block} (${item.pct}%)`).join(", ") : "Aún no hay un bloque por encima del 70%."}</p>
+        <p><strong>En progreso:</strong> ${developing.length ? developing.map(item => `${item.block} (${item.pct}%)`).join(", ") : "Ninguno en el rango intermedio."}</p>
+        <p><strong>Prioriza reforzar:</strong> ${weaknesses.length ? weaknesses.map(item => `${item.block} (${item.pct}%)`).join(", ") : "Ningún bloque por debajo del 60%."}</p>
+        <small>Referencia pedagógica interna: fortaleza ≥70%, en progreso 60–69% y reforzar &lt;60%. No es una clasificación oficial del MINSA.</small>
       </div>
       <div class="panel">
         <h3 class="section-title">Exportar constancia</h3>
@@ -1062,6 +1155,21 @@ function renderSimulacroResults() {
     </section>
   `;
 
+  root.querySelectorAll(".final-answer").forEach(button => {
+    button.addEventListener("click", () => {
+      const answer = answers[Number(button.dataset.reviewIndex)];
+      const selectedText = answer.selected === null || answer.selected === undefined ? "No marcada" : `${answer.selectedLetter}. ${answer.options?.[answer.selected] || ""}`;
+      const correctText = `${answer.correctLetter || String.fromCharCode(65 + answer.correctOption)}. ${answer.options?.[answer.correctOption] || ""}`;
+      document.getElementById("simulacro-review-detail").innerHTML = `
+        <strong>Pregunta ${answer.questionIndex + 1}: ${answer.title || "Revisión"}</strong>
+        <p>${answer.question || ""}</p>
+        <p><b>Tu respuesta:</b> ${selectedText}</p>
+        <p><b>Clave:</b> ${correctText}</p>
+        <p><b>Explicación:</b> ${answer.feedback || "Sin explicación registrada."}</p>
+      `;
+    });
+  });
+
   document.getElementById("export-pdf-btn").addEventListener("click", () => {
     const name = document.getElementById("export-name").value.trim();
     localStorage.setItem("preserum_userName", name);
@@ -1078,7 +1186,7 @@ function exportSimulacroPDF(record, name) {
   const printRoot = document.getElementById("print-report");
   const blockRows = Object.entries(record.byBlock).map(([block, v]) => {
     const p = v.total ? Math.round((v.correct / v.total) * 100) : 0;
-    return `<tr><td>${block}</td><td>${v.correct}/${v.total}</td><td>${p}%</td></tr>`;
+    return `<tr><td>${block}</td><td>${v.correct}</td><td>${v.incorrect || 0}</td><td>${v.unanswered || 0}</td><td>${v.total}</td><td>${p}%</td></tr>`;
   }).join("");
 
   printRoot.innerHTML = `
@@ -1092,7 +1200,7 @@ function exportSimulacroPDF(record, name) {
       </div>
       <h3>Desglose por bloque oficial</h3>
       <table class="print-table">
-        <thead><tr><th>Bloque temático</th><th>Aciertos</th><th>%</th></tr></thead>
+        <thead><tr><th>Bloque temático</th><th>Aciertos</th><th>Errores</th><th>Omitidas</th><th>Total</th><th>%</th></tr></thead>
         <tbody>${blockRows}</tbody>
       </table>
       <p class="print-note">Este documento es una autoevaluación generada por la aplicación PRE SERUMS PERÚ con fines de estudio personal. No constituye un resultado oficial del proceso SERUMS ni un documento emitido por el MINSA.</p>
@@ -1657,10 +1765,6 @@ function renderView(view) {
   clearInterval(timerId);
   timerId = null;
   activeCase = null;
-  if (view !== "simulacro") {
-    clearInterval(simulacroTimerId);
-    simulacroTimerId = null;
-  }
   if (view === "dashboard") renderDashboard();
   if (view === "cases") renderCases();
   if (view === "simulacro") renderSimulacro();
