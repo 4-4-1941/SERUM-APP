@@ -1,5 +1,5 @@
 window.SERUMS_DATA = {
-  "lastUpdated": "2026-07-25",
+  "lastUpdated": "2026-09-14",
   "cases": [
     {
       "id": 1,
@@ -12226,6 +12226,931 @@ window.SERUMS_DATA = {
       ],
       "correct": 2,
       "feedback": "Es correcta porque el Manual de Organización y Funciones (MOP), en concordancia con el Reglamento de Organización y Funciones (ROF), es el documento técnico normativo que detalla las funciones específicas de cada puesto, siendo la herramienta adecuada para evitar duplicidades o vacíos de función. El POI y el PEI son instrumentos de planificación de actividades y lineamientos estratégicos, no de asignación de funciones por cargo; el FODA es una herramienta diagnóstica, no normativa de funciones."
+    },
+    {
+      "id": 530,
+      "career": "Psicología",
+      "block": "Investigación",
+      "title": "Evaluación Psicológica y Psicometría · PSI-001",
+      "level": "Por revisar",
+      "specialty": "Evaluación Psicológica y Psicometría",
+      "tags": [
+        "Evaluación Psicológica y Psicometría",
+        "medio-alto"
+      ],
+      "statement": "Un psicólogo aplica una prueba que obtiene un coeficiente de confiabilidad (alfa de Cronbach) de 0.55 en una muestra clínica.",
+      "question": "¿Cómo debe interpretar este resultado antes de usar la prueba para decisiones clínicas?",
+      "options": [
+        "Es un valor bajo de consistencia interna; el instrumento no es suficientemente confiable para tomar decisiones clínicas individuales",
+        "Un valor de 0.55 siempre indica un instrumento inválido, independiente de la confiabilidad",
+        "Solo aplica a pruebas proyectivas, no a pruebas psicométricas",
+        "Es un valor excelente que garantiza decisiones clínicas confiables"
+      ],
+      "correct": 0,
+      "feedback": "Un alfa de Cronbach de 0.55 se considera bajo (los estándares habituales exigen valores ≥0.70 para uso clínico), lo que indica que el instrumento carece de consistencia interna suficiente para sustentar decisiones clínicas individuales de forma confiable.",
+      "sourceId": "PSI-001",
+      "sourceOrigin": "banco_generado_ia",
+      "sourceVerified": false,
+      "validationStatus": "PENDIENTE_DE_VALIDACION_PROFESIONAL",
+      "originalFiveAlternatives": [
+        "Es un valor bajo de consistencia interna; el instrumento no es suficientemente confiable para tomar decisiones clínicas individuales",
+        "El alfa de Cronbach no es relevante para pruebas clínicas",
+        "Un valor de 0.55 siempre indica un instrumento inválido, independiente de la confiabilidad",
+        "Solo aplica a pruebas proyectivas, no a pruebas psicométricas",
+        "Es un valor excelente que garantiza decisiones clínicas confiables"
+      ],
+      "removedAlternative": {
+        "originalLetter": "B",
+        "text": "El alfa de Cronbach no es relevante para pruebas clínicas"
+      }
+    },
+    {
+      "id": 531,
+      "career": "Psicología",
+      "block": "Investigación",
+      "title": "Evaluación Psicológica y Psicometría · PSI-002",
+      "level": "Por revisar",
+      "specialty": "Evaluación Psicológica y Psicometría",
+      "tags": [
+        "Evaluación Psicológica y Psicometría",
+        "medio-alto"
+      ],
+      "statement": "En la interpretación de un test de inteligencia, un evaluado obtiene un CI de 68. Según la clasificación estándar utilizada en la práctica clínica,",
+      "question": "¿cómo se categoriza este resultado?",
+      "options": [
+        "Inteligencia límite (borderline)",
+        "Discapacidad intelectual (rango leve-moderado según criterios adicionales)",
+        "Inteligencia promedio baja",
+        "Inteligencia promedio"
+      ],
+      "correct": 1,
+      "feedback": "Un CI de 68 se encuentra por debajo de 70, umbral habitualmente utilizado como uno de los criterios (junto con el déficit en funcionamiento adaptativo) para considerar discapacidad intelectual, a diferencia del rango límite (70-79).",
+      "sourceId": "PSI-002",
+      "sourceOrigin": "banco_generado_ia",
+      "sourceVerified": false,
+      "validationStatus": "PENDIENTE_DE_VALIDACION_PROFESIONAL",
+      "originalFiveAlternatives": [
+        "Inteligencia límite (borderline)",
+        "Discapacidad intelectual (rango leve-moderado según criterios adicionales)",
+        "Inteligencia promedio baja",
+        "Inteligencia promedio",
+        "Superdotación"
+      ],
+      "removedAlternative": {
+        "originalLetter": "E",
+        "text": "Superdotación"
+      }
+    },
+    {
+      "id": 532,
+      "career": "Psicología",
+      "block": "Investigación",
+      "title": "Evaluación Psicológica y Psicometría · PSI-003",
+      "level": "Por revisar",
+      "specialty": "Evaluación Psicológica y Psicometría",
+      "tags": [
+        "Evaluación Psicológica y Psicometría",
+        "medio-alto"
+      ],
+      "statement": "Un psicólogo debe seleccionar un instrumento para evaluar síntomas de estrés postraumático en un paciente adulto expuesto a un evento traumático reciente.",
+      "question": "¿Cuál es un instrumento validado comúnmente utilizado para este propósito?",
+      "options": [
+        "WAIS-IV",
+        "MMPI-2 exclusivamente",
+        "PCL-5 (Lista de verificación de TEPT según DSM-5)",
+        "Test de Rorschach como único instrumento válido"
+      ],
+      "correct": 2,
+      "feedback": "El PCL-5 es un instrumento validado y ampliamente utilizado específicamente para evaluar la severidad de síntomas de trastorno de estrés postraumático según los criterios del DSM-5.",
+      "sourceId": "PSI-003",
+      "sourceOrigin": "banco_generado_ia",
+      "sourceVerified": false,
+      "validationStatus": "PENDIENTE_DE_VALIDACION_PROFESIONAL",
+      "originalFiveAlternatives": [
+        "16PF",
+        "MMPI-2 exclusivamente",
+        "PCL-5 (Lista de verificación de TEPT según DSM-5)",
+        "Test de Rorschach como único instrumento válido",
+        "WAIS-IV"
+      ],
+      "removedAlternative": {
+        "originalLetter": "A",
+        "text": "16PF"
+      }
+    },
+    {
+      "id": 533,
+      "career": "Psicología",
+      "block": "Investigación",
+      "title": "Evaluación Psicológica y Psicometría · PSI-004",
+      "level": "Por revisar",
+      "specialty": "Evaluación Psicológica y Psicometría",
+      "tags": [
+        "Evaluación Psicológica y Psicometría",
+        "medio-alto"
+      ],
+      "statement": "En la evaluación de personalidad de un paciente con sospecha de rasgos de personalidad patológicos,",
+      "question": "¿qué característica distintiva tiene el Inventario Clínico Multiaxial de Millon (MCMI) frente a otros instrumentos de personalidad?",
+      "options": [
+        "No tiene ninguna base teórica ni utilidad clínica documentada",
+        "Mide exclusivamente rasgos de personalidad normales sin relación con psicopatología",
+        "Evalúa exclusivamente inteligencia general",
+        "Está diseñado específicamente para evaluar patrones de personalidad y síndromes clínicos en población clínica, con escalas basadas en un modelo teórico específico"
+      ],
+      "correct": 3,
+      "feedback": "El MCMI está diseñado específicamente para la evaluación de patrones de personalidad y síndromes clínicos en población clínica (no normal), basado en el modelo teórico de Millon sobre los trastornos de personalidad.",
+      "sourceId": "PSI-004",
+      "sourceOrigin": "banco_generado_ia",
+      "sourceVerified": false,
+      "validationStatus": "PENDIENTE_DE_VALIDACION_PROFESIONAL",
+      "originalFiveAlternatives": [
+        "No tiene ninguna base teórica ni utilidad clínica documentada",
+        "Mide exclusivamente rasgos de personalidad normales sin relación con psicopatología",
+        "Evalúa exclusivamente inteligencia general",
+        "Está diseñado específicamente para evaluar patrones de personalidad y síndromes clínicos en población clínica, con escalas basadas en un modelo teórico específico",
+        "Solo es aplicable a población infantil"
+      ],
+      "removedAlternative": {
+        "originalLetter": "E",
+        "text": "Solo es aplicable a población infantil"
+      }
+    },
+    {
+      "id": 534,
+      "career": "Psicología",
+      "block": "Investigación",
+      "title": "Evaluación Psicológica y Psicometría · PSI-005",
+      "level": "Por revisar",
+      "specialty": "Evaluación Psicológica y Psicometría",
+      "tags": [
+        "Evaluación Psicológica y Psicometría",
+        "medio-alto"
+      ],
+      "statement": "Durante una evaluación psicológica forense, el psicólogo debe distinguir entre simulación y un trastorno genuino.",
+      "question": "¿Cuál es una estrategia metodológica apropiada para esta distinción?",
+      "options": [
+        "Utilizar instrumentos con escalas de validez (indicadores de simulación o distorsión de la respuesta) y triangular con múltiples fuentes de información",
+        "Asumir automáticamente que todo evaluado en contexto forense está simulando",
+        "Confiar exclusivamente en la impresión clínica sin ningún instrumento estandarizado",
+        "Basarse únicamente en el relato verbal del evaluado sin ninguna prueba adicional"
+      ],
+      "correct": 0,
+      "feedback": "En evaluaciones forenses, se recomienda el uso de instrumentos con escalas de validez que detecten patrones de sobre-reporte o simulación, además de triangular la información con entrevistas, observación conductual y fuentes colaterales.",
+      "sourceId": "PSI-005",
+      "sourceOrigin": "banco_generado_ia",
+      "sourceVerified": false,
+      "validationStatus": "PENDIENTE_DE_VALIDACION_PROFESIONAL",
+      "originalFiveAlternatives": [
+        "Asumir automáticamente que todo evaluado en contexto forense está simulando",
+        "Evitar cualquier instrumento psicométrico en contextos forenses",
+        "Confiar exclusivamente en la impresión clínica sin ningún instrumento estandarizado",
+        "Basarse únicamente en el relato verbal del evaluado sin ninguna prueba adicional",
+        "Utilizar instrumentos con escalas de validez (indicadores de simulación o distorsión de la respuesta) y triangular con múltiples fuentes de información"
+      ],
+      "removedAlternative": {
+        "originalLetter": "B",
+        "text": "Evitar cualquier instrumento psicométrico en contextos forenses"
+      }
+    },
+    {
+      "id": 535,
+      "career": "Psicología",
+      "block": "Investigación",
+      "title": "Evaluación Psicológica y Psicometría · PSI-006",
+      "level": "Por revisar",
+      "specialty": "Evaluación Psicológica y Psicometría",
+      "tags": [
+        "Evaluación Psicológica y Psicometría",
+        "medio-alto"
+      ],
+      "statement": "En la evaluación de la capacidad de resiliencia de un paciente tras un evento adverso,",
+      "question": "¿cuál es el enfoque metodológico más apropiado según la literatura actual?",
+      "options": [
+        "La resiliencia es un rasgo fijo que no puede evaluarse ni desarrollarse",
+        "Evaluar factores protectores y de riesgo mediante instrumentos validados, considerando la resiliencia como un proceso dinámico influenciado por el contexto",
+        "La resiliencia no tiene relevancia clínica en la evaluación psicológica",
+        "Se evalúa exclusivamente a través de pruebas proyectivas"
+      ],
+      "correct": 1,
+      "feedback": "La literatura actual concibe la resiliencia como un proceso dinámico resultante de la interacción entre factores de riesgo y protectores, cuya evaluación combina instrumentos validados con el análisis del contexto del paciente.",
+      "sourceId": "PSI-006",
+      "sourceOrigin": "banco_generado_ia",
+      "sourceVerified": false,
+      "validationStatus": "PENDIENTE_DE_VALIDACION_PROFESIONAL",
+      "originalFiveAlternatives": [
+        "Evaluar factores protectores y de riesgo mediante instrumentos validados, considerando la resiliencia como un proceso dinámico influenciado por el contexto",
+        "Solo puede evaluarse mediante entrevista no estructurada",
+        "La resiliencia no tiene relevancia clínica en la evaluación psicológica",
+        "Se evalúa exclusivamente a través de pruebas proyectivas",
+        "La resiliencia es un rasgo fijo que no puede evaluarse ni desarrollarse"
+      ],
+      "removedAlternative": {
+        "originalLetter": "B",
+        "text": "Solo puede evaluarse mediante entrevista no estructurada"
+      }
+    },
+    {
+      "id": 536,
+      "career": "Psicología",
+      "block": "Investigación",
+      "title": "Evaluación Psicológica y Psicometría · PSI-007",
+      "level": "Por revisar",
+      "specialty": "Evaluación Psicológica y Psicometría",
+      "tags": [
+        "Evaluación Psicológica y Psicometría",
+        "medio-alto"
+      ],
+      "statement": "Un psicólogo debe evaluar el riesgo de reincidencia en consumo de sustancias tras un tratamiento de rehabilitación.",
+      "question": "¿Cuál es un instrumento relevante que evalúa procesos de recaída según el modelo cognitivo-conductual?",
+      "options": [
+        "Escala de Depresión de Hamilton exclusivamente",
+        "WISC-V",
+        "Cuestionario de Procesos de Recaída (RRQ) u otros instrumentos basados en el modelo de Marlatt y Gordon",
+        "Test de Matrices Progresivas de Raven"
+      ],
+      "correct": 2,
+      "feedback": "El Cuestionario de Procesos de Recaída (RRQ), basado en el modelo cognitivo-conductual de prevención de recaídas de Marlatt y Gordon, evalúa específicamente los procesos y situaciones de riesgo asociados a la recaída en el consumo de sustancias.",
+      "sourceId": "PSI-007",
+      "sourceOrigin": "banco_generado_ia",
+      "sourceVerified": false,
+      "validationStatus": "PENDIENTE_DE_VALIDACION_PROFESIONAL",
+      "originalFiveAlternatives": [
+        "WISC-V",
+        "Cuestionario de Procesos de Recaída (RRQ) u otros instrumentos basados en el modelo de Marlatt y Gordon",
+        "Test de Matrices Progresivas de Raven",
+        "Escala de Depresión de Hamilton exclusivamente",
+        "16PF"
+      ],
+      "removedAlternative": {
+        "originalLetter": "E",
+        "text": "16PF"
+      }
+    },
+    {
+      "id": 537,
+      "career": "Psicología",
+      "block": "Investigación",
+      "title": "Evaluación Psicológica y Psicometría · PSI-008",
+      "level": "Por revisar",
+      "specialty": "Evaluación Psicológica y Psicometría",
+      "tags": [
+        "Evaluación Psicológica y Psicometría",
+        "medio-alto"
+      ],
+      "statement": "En la interpretación de un perfil de personalidad con elevación significativa en escalas de rasgos narcisistas y compulsivos,",
+      "question": "¿cuál es la implicancia clínica más relevante para la formulación del caso?",
+      "options": [
+        "Indica automáticamente un diagnóstico de trastorno de personalidad sin evaluación clínica adicional",
+        "Debe ignorarse si el paciente no presenta quejas relacionadas con estos rasgos",
+        "El perfil no tiene ninguna utilidad para la planificación terapéutica",
+        "Sugiere un patrón de personalidad que debe integrarse en la formulación clínica y puede influir en la alianza terapéutica y el abordaje del tratamiento"
+      ],
+      "correct": 3,
+      "feedback": "Un perfil con elevación en rasgos narcisistas y compulsivos debe integrarse en la formulación clínica del caso, ya que estos patrones de personalidad pueden influir significativamente en la alianza terapéutica, la adherencia al tratamiento y el abordaje clínico más apropiado, sin que por sí solo constituya un diagnóstico categórico sin la evaluación clínica correspondiente.",
+      "sourceId": "PSI-008",
+      "sourceOrigin": "banco_generado_ia",
+      "sourceVerified": false,
+      "validationStatus": "PENDIENTE_DE_VALIDACION_PROFESIONAL",
+      "originalFiveAlternatives": [
+        "Solo es relevante en contextos forenses",
+        "El perfil no tiene ninguna utilidad para la planificación terapéutica",
+        "Sugiere un patrón de personalidad que debe integrarse en la formulación clínica y puede influir en la alianza terapéutica y el abordaje del tratamiento",
+        "Indica automáticamente un diagnóstico de trastorno de personalidad sin evaluación clínica adicional",
+        "Debe ignorarse si el paciente no presenta quejas relacionadas con estos rasgos"
+      ],
+      "removedAlternative": {
+        "originalLetter": "A",
+        "text": "Solo es relevante en contextos forenses"
+      }
+    },
+    {
+      "id": 538,
+      "career": "Psicología",
+      "block": "Investigación",
+      "title": "Evaluación Psicológica y Psicometría · PSI-009",
+      "level": "Por revisar",
+      "specialty": "Evaluación Psicológica y Psicometría",
+      "tags": [
+        "Evaluación Psicológica y Psicometría",
+        "medio-alto"
+      ],
+      "statement": "En la evaluación neuropsicológica de un paciente adulto mayor con sospecha de deterioro cognitivo,",
+      "question": "¿cuál es una consideración metodológica importante antes de interpretar los resultados?",
+      "options": [
+        "Se debe considerar la edad, escolaridad y normas poblacionales adecuadas al contexto sociocultural del paciente para una interpretación válida",
+        "No es necesario ningún dato demográfico adicional para la interpretación",
+        "Basta con aplicar un solo instrumento breve sin considerar el contexto clínico",
+        "Los resultados se interpretan igual independientemente de la edad y escolaridad del paciente"
+      ],
+      "correct": 0,
+      "feedback": "La interpretación válida de una evaluación neuropsicológica requiere considerar la edad, escolaridad y normas poblacionales adecuadas al contexto sociocultural del paciente, ya que estos factores influyen significativamente en el desempeño esperado en las pruebas cognitivas.",
+      "sourceId": "PSI-009",
+      "sourceOrigin": "banco_generado_ia",
+      "sourceVerified": false,
+      "validationStatus": "PENDIENTE_DE_VALIDACION_PROFESIONAL",
+      "originalFiveAlternatives": [
+        "Basta con aplicar un solo instrumento breve sin considerar el contexto clínico",
+        "El nivel educativo no influye en el desempeño en pruebas cognitivas",
+        "Los resultados se interpretan igual independientemente de la edad y escolaridad del paciente",
+        "Se debe considerar la edad, escolaridad y normas poblacionales adecuadas al contexto sociocultural del paciente para una interpretación válida",
+        "No es necesario ningún dato demográfico adicional para la interpretación"
+      ],
+      "removedAlternative": {
+        "originalLetter": "B",
+        "text": "El nivel educativo no influye en el desempeño en pruebas cognitivas"
+      }
+    },
+    {
+      "id": 539,
+      "career": "Psicología",
+      "block": "Investigación",
+      "title": "Evaluación Psicológica y Psicometría · PSI-010",
+      "level": "Por revisar",
+      "specialty": "Evaluación Psicológica y Psicometría",
+      "tags": [
+        "Evaluación Psicológica y Psicometría",
+        "medio-alto"
+      ],
+      "statement": "Al redactar un informe psicológico dirigido a otro profesional de salud,",
+      "question": "¿cuál es un principio ético y técnico fundamental que debe cumplir el psicólogo?",
+      "options": [
+        "Incluir únicamente los resultados numéricos de las pruebas sin ninguna interpretación clínica",
+        "Presentar los hallazgos de forma clara, fundamentada en la evidencia recogida, evitando juicios de valor no sustentados y protegiendo la confidencialidad según corresponda",
+        "Redactar el informe utilizando exclusivamente jerga técnica sin adaptarlo al destinatario",
+        "Compartir el informe con cualquier persona que lo solicite sin verificar la autorización correspondiente"
+      ],
+      "correct": 1,
+      "feedback": "Un informe psicológico ético y técnicamente adecuado debe presentar los hallazgos de forma clara y fundamentada en la evidencia recogida, evitando juicios de valor no sustentados, y protegiendo la confidencialidad de la información según la normativa y el destinatario correspondiente.",
+      "sourceId": "PSI-010",
+      "sourceOrigin": "banco_generado_ia",
+      "sourceVerified": false,
+      "validationStatus": "PENDIENTE_DE_VALIDACION_PROFESIONAL",
+      "originalFiveAlternatives": [
+        "Omitir cualquier limitación metodológica de la evaluación",
+        "Redactar el informe utilizando exclusivamente jerga técnica sin adaptarlo al destinatario",
+        "Compartir el informe con cualquier persona que lo solicite sin verificar la autorización correspondiente",
+        "Incluir únicamente los resultados numéricos de las pruebas sin ninguna interpretación clínica",
+        "Presentar los hallazgos de forma clara, fundamentada en la evidencia recogida, evitando juicios de valor no sustentados y protegiendo la confidencialidad según corresponda"
+      ],
+      "removedAlternative": {
+        "originalLetter": "A",
+        "text": "Omitir cualquier limitación metodológica de la evaluación"
+      }
+    },
+    {
+      "id": 540,
+      "career": "Psicología",
+      "block": "Investigación",
+      "title": "Evaluación Psicológica y Psicometría · PSI-011",
+      "level": "Por revisar",
+      "specialty": "Evaluación Psicológica y Psicometría",
+      "tags": [
+        "Evaluación Psicológica y Psicometría",
+        "medio-alto"
+      ],
+      "statement": "En la evaluación de un adolescente derivado por el colegio por problemas de conducta,",
+      "question": "¿cuál es una fuente de información complementaria relevante además de la entrevista con el adolescente?",
+      "options": [
+        "No es necesario ningún consentimiento para recabar información escolar",
+        "Basta con la autoevaluación del adolescente sin ninguna otra fuente",
+        "Recopilar información de padres/tutores y, con el consentimiento correspondiente, del entorno escolar, para una evaluación multi-informante",
+        "Solo se debe considerar la opinión de los padres, ignorando al adolescente"
+      ],
+      "correct": 2,
+      "feedback": "La evaluación de problemas de conducta en adolescentes se beneficia de un enfoque multi-informante, recopilando información de los padres o tutores y, con el consentimiento correspondiente, del entorno escolar, para obtener una visión más completa y contextualizada del funcionamiento del adolescente.",
+      "sourceId": "PSI-011",
+      "sourceOrigin": "banco_generado_ia",
+      "sourceVerified": false,
+      "validationStatus": "PENDIENTE_DE_VALIDACION_PROFESIONAL",
+      "originalFiveAlternatives": [
+        "Recopilar información de padres/tutores y, con el consentimiento correspondiente, del entorno escolar, para una evaluación multi-informante",
+        "Solo se debe considerar la opinión de los padres, ignorando al adolescente",
+        "No es necesario ningún consentimiento para recabar información escolar",
+        "La información escolar no aporta ningún valor clínico",
+        "Basta con la autoevaluación del adolescente sin ninguna otra fuente"
+      ],
+      "removedAlternative": {
+        "originalLetter": "D",
+        "text": "La información escolar no aporta ningún valor clínico"
+      }
+    },
+    {
+      "id": 541,
+      "career": "Psicología",
+      "block": "Investigación",
+      "title": "Evaluación Psicológica y Psicometría · PSI-012",
+      "level": "Por revisar",
+      "specialty": "Evaluación Psicológica y Psicometría",
+      "tags": [
+        "Evaluación Psicológica y Psicometría",
+        "medio-alto"
+      ],
+      "statement": "En la aplicación de una prueba proyectiva como el test de Rorschach,",
+      "question": "¿cuál es una limitación metodológica reconocida que el psicólogo debe considerar?",
+      "options": [
+        "Su interpretación es siempre idéntica independientemente del sistema de codificación utilizado",
+        "No requiere ninguna capacitación específica para su aplicación e interpretación",
+        "No tiene ninguna limitación y es completamente objetivo",
+        "Presenta menor confiabilidad y objetividad psicométrica en comparación con instrumentos estructurados, por lo que su interpretación depende en gran medida de la experiencia del evaluador y debe complementarse con otras fuentes"
+      ],
+      "correct": 3,
+      "feedback": "Las pruebas proyectivas como el Rorschach presentan menor confiabilidad y objetividad psicométrica comparadas con instrumentos estructurados, y su interpretación depende considerablemente de la experiencia y el sistema de codificación del evaluador, por lo que deben complementarse con otras fuentes de información.",
+      "sourceId": "PSI-012",
+      "sourceOrigin": "banco_generado_ia",
+      "sourceVerified": false,
+      "validationStatus": "PENDIENTE_DE_VALIDACION_PROFESIONAL",
+      "originalFiveAlternatives": [
+        "No tiene ninguna limitación y es completamente objetivo",
+        "Presenta menor confiabilidad y objetividad psicométrica en comparación con instrumentos estructurados, por lo que su interpretación depende en gran medida de la experiencia del evaluador y debe complementarse con otras fuentes",
+        "Sustituye completamente a la entrevista clínica",
+        "Su interpretación es siempre idéntica independientemente del sistema de codificación utilizado",
+        "No requiere ninguna capacitación específica para su aplicación e interpretación"
+      ],
+      "removedAlternative": {
+        "originalLetter": "C",
+        "text": "Sustituye completamente a la entrevista clínica"
+      }
+    },
+    {
+      "id": 542,
+      "career": "Psicología",
+      "block": "Investigación",
+      "title": "Evaluación Psicológica y Psicometría · PSI-013",
+      "level": "Por revisar",
+      "specialty": "Evaluación Psicológica y Psicometría",
+      "tags": [
+        "Evaluación Psicológica y Psicometría",
+        "medio-alto"
+      ],
+      "statement": "Un psicólogo debe evaluar el riesgo suicida de un paciente en la consulta de primer nivel.",
+      "question": "¿Cuál es un componente esencial de una evaluación de riesgo suicida estructurada?",
+      "options": [
+        "Explorar directamente ideación, planificación, medios disponibles, intentos previos y factores de riesgo/protección",
+        "Evitar preguntar directamente sobre el tema por temor a inducir la conducta",
+        "Delegar completamente la evaluación a un familiar del paciente",
+        "Preguntar únicamente si el paciente 'se ve triste' sin indagar directamente sobre ideación"
+      ],
+      "correct": 0,
+      "feedback": "Una evaluación de riesgo suicida estructurada debe explorar directamente la presencia de ideación suicida, el grado de planificación, la disponibilidad de medios letales, los intentos previos y los factores de riesgo y protección, ya que preguntar directamente sobre el tema no incrementa el riesgo y es esencial para la seguridad del paciente.",
+      "sourceId": "PSI-013",
+      "sourceOrigin": "banco_generado_ia",
+      "sourceVerified": false,
+      "validationStatus": "PENDIENTE_DE_VALIDACION_PROFESIONAL",
+      "originalFiveAlternatives": [
+        "Delegar completamente la evaluación a un familiar del paciente",
+        "Preguntar únicamente si el paciente 'se ve triste' sin indagar directamente sobre ideación",
+        "Explorar directamente ideación, planificación, medios disponibles, intentos previos y factores de riesgo/protección",
+        "Evitar preguntar directamente sobre el tema por temor a inducir la conducta",
+        "Basarse exclusivamente en la apariencia física del paciente"
+      ],
+      "removedAlternative": {
+        "originalLetter": "E",
+        "text": "Basarse exclusivamente en la apariencia física del paciente"
+      }
+    },
+    {
+      "id": 543,
+      "career": "Psicología",
+      "block": "Investigación",
+      "title": "Evaluación Psicológica y Psicometría · PSI-014",
+      "level": "Por revisar",
+      "specialty": "Evaluación Psicológica y Psicometría",
+      "tags": [
+        "Evaluación Psicológica y Psicometría",
+        "medio-alto"
+      ],
+      "statement": "Al aplicar el AUDIT (Alcohol Use Disorders Identification Test) a un paciente en consulta de primer nivel, este obtiene un puntaje de 9. Según los puntos de corte estándar,",
+      "question": "¿cómo se interpreta este resultado?",
+      "options": [
+        "Consumo de bajo riesgo, sin necesidad de intervención",
+        "Consumo de riesgo, que amerita una intervención breve",
+        "Dependencia severa que requiere hospitalización inmediata",
+        "Resultado no interpretable sin evaluación adicional obligatoria"
+      ],
+      "correct": 1,
+      "feedback": "Un puntaje AUDIT entre 8 y 15 se interpreta habitualmente como consumo de riesgo, que amerita una intervención breve orientada a la reducción del consumo, diferenciándose de puntajes más altos que sugieren posible dependencia.",
+      "sourceId": "PSI-014",
+      "sourceOrigin": "banco_generado_ia",
+      "sourceVerified": false,
+      "validationStatus": "PENDIENTE_DE_VALIDACION_PROFESIONAL",
+      "originalFiveAlternatives": [
+        "Abstinencia total confirmada",
+        "Resultado no interpretable sin evaluación adicional obligatoria",
+        "Consumo de bajo riesgo, sin necesidad de intervención",
+        "Consumo de riesgo, que amerita una intervención breve",
+        "Dependencia severa que requiere hospitalización inmediata"
+      ],
+      "removedAlternative": {
+        "originalLetter": "A",
+        "text": "Abstinencia total confirmada"
+      }
+    },
+    {
+      "id": 544,
+      "career": "Psicología",
+      "block": "Investigación",
+      "title": "Evaluación Psicológica y Psicometría · PSI-015",
+      "level": "Por revisar",
+      "specialty": "Evaluación Psicológica y Psicometría",
+      "tags": [
+        "Evaluación Psicológica y Psicometría",
+        "medio-alto"
+      ],
+      "statement": "En la evaluación de síntomas depresivos mediante un instrumento autoaplicado, un paciente reporta puntuaciones elevadas exclusivamente en ítems somáticos (fatiga, alteraciones del sueño y apetito), con puntuaciones bajas en ítems cognitivo-afectivos.",
+      "question": "¿Qué consideración clínica debe tener el psicólogo?",
+      "options": [
+        "El patrón de respuesta no aporta ninguna información clínica relevante",
+        "Confirmar automáticamente un diagnóstico de depresión mayor sin más evaluación",
+        "Considerar la posibilidad de causas médicas subyacentes u otras condiciones que expliquen los síntomas somáticos, y complementar con entrevista clínica",
+        "Descartar cualquier relevancia clínica del resultado"
+      ],
+      "correct": 2,
+      "feedback": "Un patrón de puntuaciones elevado exclusivamente en ítems somáticos, con bajas puntuaciones cognitivo-afectivas, obliga a considerar causas médicas subyacentes u otras condiciones (por ejemplo, hipotiroidismo, anemia) que puedan explicar los síntomas, complementando el instrumento con una entrevista clínica exhaustiva antes de establecer un diagnóstico.",
+      "sourceId": "PSI-015",
+      "sourceOrigin": "banco_generado_ia",
+      "sourceVerified": false,
+      "validationStatus": "PENDIENTE_DE_VALIDACION_PROFESIONAL",
+      "originalFiveAlternatives": [
+        "Descartar cualquier relevancia clínica del resultado",
+        "Asumir que el paciente está simulando los síntomas",
+        "El patrón de respuesta no aporta ninguna información clínica relevante",
+        "Confirmar automáticamente un diagnóstico de depresión mayor sin más evaluación",
+        "Considerar la posibilidad de causas médicas subyacentes u otras condiciones que expliquen los síntomas somáticos, y complementar con entrevista clínica"
+      ],
+      "removedAlternative": {
+        "originalLetter": "B",
+        "text": "Asumir que el paciente está simulando los síntomas"
+      }
+    },
+    {
+      "id": 545,
+      "career": "Psicología",
+      "block": "Investigación",
+      "title": "Evaluación Psicológica y Psicometría · PSI-016",
+      "level": "Por revisar",
+      "specialty": "Evaluación Psicológica y Psicometría",
+      "tags": [
+        "Evaluación Psicológica y Psicometría",
+        "medio-alto"
+      ],
+      "statement": "Un psicólogo debe seleccionar un instrumento para evaluar la calidad de la alianza terapéutica durante el proceso de tratamiento.",
+      "question": "¿Cuál es un principio metodológico relevante en la selección de este tipo de instrumentos?",
+      "options": [
+        "Solo debe evaluarse al finalizar el tratamiento, nunca durante el proceso",
+        "Debe evaluarse exclusivamente desde la perspectiva del terapeuta, sin considerar la del paciente",
+        "Cualquier instrumento sirve independientemente de su validación empírica",
+        "Seleccionar instrumentos validados que midan dimensiones reconocidas de la alianza (vínculo, acuerdo en objetivos y tareas) y aplicarlos de forma periódica para monitorear el proceso terapéutico"
+      ],
+      "correct": 3,
+      "feedback": "La selección de instrumentos para evaluar la alianza terapéutica debe basarse en su validación empírica y su capacidad para medir las dimensiones reconocidas de la alianza (vínculo, acuerdo en objetivos y tareas), aplicándose de forma periódica para monitorear el proceso terapéutico y ajustar la intervención según sea necesario.",
+      "sourceId": "PSI-016",
+      "sourceOrigin": "banco_generado_ia",
+      "sourceVerified": false,
+      "validationStatus": "PENDIENTE_DE_VALIDACION_PROFESIONAL",
+      "originalFiveAlternatives": [
+        "Seleccionar instrumentos validados que midan dimensiones reconocidas de la alianza (vínculo, acuerdo en objetivos y tareas) y aplicarlos de forma periódica para monitorear el proceso terapéutico",
+        "La alianza terapéutica no puede evaluarse de forma estructurada",
+        "Solo debe evaluarse al finalizar el tratamiento, nunca durante el proceso",
+        "Debe evaluarse exclusivamente desde la perspectiva del terapeuta, sin considerar la del paciente",
+        "Cualquier instrumento sirve independientemente de su validación empírica"
+      ],
+      "removedAlternative": {
+        "originalLetter": "B",
+        "text": "La alianza terapéutica no puede evaluarse de forma estructurada"
+      }
+    },
+    {
+      "id": 546,
+      "career": "Psicología",
+      "block": "Cuidado integral",
+      "title": "Psicopatología · PSI-017",
+      "level": "Por revisar",
+      "specialty": "Psicopatología",
+      "tags": [
+        "Psicopatología",
+        "medio-alto"
+      ],
+      "statement": "Paciente presenta estado de ánimo deprimido, anhedonia, alteraciones del sueño y del apetito, fatiga y dificultad de concentración, persistentes durante 3 semanas, con afectación funcional significativa. Según los criterios diagnósticos actuales,",
+      "question": "¿cuál es el diagnóstico más probable?",
+      "options": [
+        "Episodio depresivo mayor",
+        "Distimia (trastorno depresivo persistente)",
+        "Trastorno bipolar tipo II en fase depresiva sin evaluación adicional",
+        "Trastorno de adaptación con estado de ánimo deprimido"
+      ],
+      "correct": 0,
+      "feedback": "La presencia de al menos cinco síntomas depresivos (incluyendo estado de ánimo deprimido o anhedonia) durante al menos dos semanas, con afectación funcional significativa, cumple los criterios diagnósticos de un episodio depresivo mayor.",
+      "sourceId": "PSI-017",
+      "sourceOrigin": "banco_generado_ia",
+      "sourceVerified": false,
+      "validationStatus": "PENDIENTE_DE_VALIDACION_PROFESIONAL",
+      "originalFiveAlternatives": [
+        "Trastorno de adaptación con estado de ánimo deprimido",
+        "Episodio depresivo mayor",
+        "Distimia (trastorno depresivo persistente)",
+        "Trastorno bipolar tipo II en fase depresiva sin evaluación adicional",
+        "Duelo normal sin relevancia clínica"
+      ],
+      "removedAlternative": {
+        "originalLetter": "E",
+        "text": "Duelo normal sin relevancia clínica"
+      }
+    },
+    {
+      "id": 547,
+      "career": "Psicología",
+      "block": "Cuidado integral",
+      "title": "Psicopatología · PSI-018",
+      "level": "Por revisar",
+      "specialty": "Psicopatología",
+      "tags": [
+        "Psicopatología",
+        "medio-alto"
+      ],
+      "statement": "Paciente presenta episodios de ansiedad intensa súbita, palpitaciones, sudoración, sensación de muerte inminente, que duran aproximadamente 10 minutos y se resuelven espontáneamente, recurrentes, seguidos de preocupación persistente por nuevos episodios.",
+      "question": "¿Cuál es el diagnóstico más probable?",
+      "options": [
+        "Trastorno de ansiedad generalizada",
+        "Trastorno de pánico",
+        "Trastorno de ansiedad social",
+        "Trastorno de estrés agudo"
+      ],
+      "correct": 1,
+      "feedback": "Los episodios súbitos, intensos y autolimitados de síntomas autonómicos con temor a morir, seguidos de preocupación persistente por nuevos episodios, son característicos del trastorno de pánico.",
+      "sourceId": "PSI-018",
+      "sourceOrigin": "banco_generado_ia",
+      "sourceVerified": false,
+      "validationStatus": "PENDIENTE_DE_VALIDACION_PROFESIONAL",
+      "originalFiveAlternatives": [
+        "Trastorno de estrés agudo",
+        "Trastorno de ansiedad generalizada",
+        "Trastorno de pánico",
+        "Fobia específica",
+        "Trastorno de ansiedad social"
+      ],
+      "removedAlternative": {
+        "originalLetter": "D",
+        "text": "Fobia específica"
+      }
+    },
+    {
+      "id": 548,
+      "career": "Psicología",
+      "block": "Cuidado integral",
+      "title": "Psicopatología · PSI-019",
+      "level": "Por revisar",
+      "specialty": "Psicopatología",
+      "tags": [
+        "Psicopatología",
+        "medio-alto"
+      ],
+      "statement": "Paciente varón de 24 años presenta ideas delirantes de persecución, alucinaciones auditivas y aislamiento social progresivo de 5 meses de evolución, con deterioro funcional significativo, sin alteración de la conciencia.",
+      "question": "¿Cuál es el diagnóstico más probable?",
+      "options": [
+        "Trastorno de personalidad esquizoide",
+        "Delirium por causa orgánica",
+        "Esquizofrenia",
+        "Trastorno de ansiedad generalizada"
+      ],
+      "correct": 2,
+      "feedback": "La presencia sostenida de delirios, alucinaciones y deterioro funcional por más de seis meses (o al menos un mes de síntomas activos con signos continuos por más tiempo), sin alteración de conciencia sugestiva de causa orgánica, orienta hacia esquizofrenia.",
+      "sourceId": "PSI-019",
+      "sourceOrigin": "banco_generado_ia",
+      "sourceVerified": false,
+      "validationStatus": "PENDIENTE_DE_VALIDACION_PROFESIONAL",
+      "originalFiveAlternatives": [
+        "Trastorno de personalidad esquizoide",
+        "Delirium por causa orgánica",
+        "Trastorno bipolar tipo I",
+        "Esquizofrenia",
+        "Trastorno de ansiedad generalizada"
+      ],
+      "removedAlternative": {
+        "originalLetter": "C",
+        "text": "Trastorno bipolar tipo I"
+      }
+    },
+    {
+      "id": 549,
+      "career": "Psicología",
+      "block": "Cuidado integral",
+      "title": "Psicopatología · PSI-020",
+      "level": "Por revisar",
+      "specialty": "Psicopatología",
+      "tags": [
+        "Psicopatología",
+        "medio-alto"
+      ],
+      "statement": "Paciente presenta episodio de exaltación del ánimo, disminución de la necesidad de sueño, grandiosidad, fuga de ideas e impulsividad (gasto excesivo de dinero) de una semana de evolución, con compromiso funcional marcado.",
+      "question": "¿Cuál es el diagnóstico más probable?",
+      "options": [
+        "Trastorno de personalidad histriónica",
+        "Trastorno esquizoafectivo tipo depresivo",
+        "Trastorno depresivo mayor con características mixtas",
+        "Trastorno bipolar tipo I, episodio maníaco"
+      ],
+      "correct": 3,
+      "feedback": "Un episodio de al menos una semana con síntomas de exaltación del ánimo, grandiosidad, disminución del sueño e impulsividad, con compromiso funcional marcado, cumple criterios de episodio maníaco, característico del trastorno bipolar tipo I.",
+      "sourceId": "PSI-020",
+      "sourceOrigin": "banco_generado_ia",
+      "sourceVerified": false,
+      "validationStatus": "PENDIENTE_DE_VALIDACION_PROFESIONAL",
+      "originalFiveAlternatives": [
+        "Trastorno de personalidad histriónica",
+        "Trastorno esquizoafectivo tipo depresivo",
+        "Hipomanía sin relevancia clínica",
+        "Trastorno depresivo mayor con características mixtas",
+        "Trastorno bipolar tipo I, episodio maníaco"
+      ],
+      "removedAlternative": {
+        "originalLetter": "C",
+        "text": "Hipomanía sin relevancia clínica"
+      }
+    },
+    {
+      "id": 550,
+      "career": "Psicología",
+      "block": "Cuidado integral",
+      "title": "Psicopatología · PSI-021",
+      "level": "Por revisar",
+      "specialty": "Psicopatología",
+      "tags": [
+        "Psicopatología",
+        "medio-alto"
+      ],
+      "statement": "Paciente con antecedente de trauma (asalto violento) hace 2 meses presenta pesadillas recurrentes, evitación de lugares relacionados con el evento, hipervigilancia y flashbacks, con afectación funcional significativa.",
+      "question": "¿Cuál es el diagnóstico más probable?",
+      "options": [
+        "Trastorno de estrés postraumático",
+        "Trastorno depresivo mayor",
+        "Trastorno disociativo de identidad",
+        "Trastorno de adaptación"
+      ],
+      "correct": 0,
+      "feedback": "La combinación de reexperimentación (flashbacks, pesadillas), evitación e hiperactivación tras un evento traumático, con duración mayor a un mes, es característica del trastorno de estrés postraumático.",
+      "sourceId": "PSI-021",
+      "sourceOrigin": "banco_generado_ia",
+      "sourceVerified": false,
+      "validationStatus": "PENDIENTE_DE_VALIDACION_PROFESIONAL",
+      "originalFiveAlternatives": [
+        "Trastorno de estrés postraumático",
+        "Trastorno de pánico",
+        "Trastorno depresivo mayor",
+        "Trastorno disociativo de identidad",
+        "Trastorno de adaptación"
+      ],
+      "removedAlternative": {
+        "originalLetter": "B",
+        "text": "Trastorno de pánico"
+      }
+    },
+    {
+      "id": 551,
+      "career": "Psicología",
+      "block": "Cuidado integral",
+      "title": "Psicopatología · PSI-022",
+      "level": "Por revisar",
+      "specialty": "Psicopatología",
+      "tags": [
+        "Psicopatología",
+        "medio-alto"
+      ],
+      "statement": "Paciente presenta preocupación excesiva y persistente por múltiples aspectos de su vida diaria (trabajo, salud, familia), de más de 6 meses de evolución, con tensión muscular, irritabilidad y alteración del sueño, que le resulta difícil de controlar.",
+      "question": "¿Cuál es el diagnóstico más probable?",
+      "options": [
+        "Trastorno de pánico",
+        "Trastorno de ansiedad generalizada",
+        "Trastorno obsesivo-compulsivo",
+        "Trastorno de adaptación con ansiedad"
+      ],
+      "correct": 1,
+      "feedback": "La preocupación excesiva, persistente y de difícil control sobre múltiples áreas de la vida, de más de 6 meses de evolución y con síntomas somáticos asociados, es característica del trastorno de ansiedad generalizada.",
+      "sourceId": "PSI-022",
+      "sourceOrigin": "banco_generado_ia",
+      "sourceVerified": false,
+      "validationStatus": "PENDIENTE_DE_VALIDACION_PROFESIONAL",
+      "originalFiveAlternatives": [
+        "Trastorno de pánico",
+        "Trastorno de ansiedad generalizada",
+        "Trastorno obsesivo-compulsivo",
+        "Fobia social",
+        "Trastorno de adaptación con ansiedad"
+      ],
+      "removedAlternative": {
+        "originalLetter": "D",
+        "text": "Fobia social"
+      }
+    },
+    {
+      "id": 552,
+      "career": "Psicología",
+      "block": "Cuidado integral",
+      "title": "Psicopatología · PSI-023",
+      "level": "Por revisar",
+      "specialty": "Psicopatología",
+      "tags": [
+        "Psicopatología",
+        "medio-alto"
+      ],
+      "statement": "Paciente refiere pensamientos intrusivos y repetitivos sobre contaminación, que le generan malestar significativo, y realiza rituales de lavado de manos varias veces al día para reducir la ansiedad asociada, reconociendo que son excesivos.",
+      "question": "¿Cuál es el diagnóstico más probable?",
+      "options": [
+        "Trastorno de acumulación",
+        "Trastorno de ansiedad generalizada",
+        "Trastorno obsesivo-compulsivo",
+        "Fobia específica a la contaminación"
+      ],
+      "correct": 2,
+      "feedback": "La presencia de pensamientos intrusivos egodistónicos (obsesiones) junto con conductas repetitivas realizadas para reducir la ansiedad asociada (compulsiones), con reconocimiento de su carácter excesivo, es característica del trastorno obsesivo-compulsivo.",
+      "sourceId": "PSI-023",
+      "sourceOrigin": "banco_generado_ia",
+      "sourceVerified": false,
+      "validationStatus": "PENDIENTE_DE_VALIDACION_PROFESIONAL",
+      "originalFiveAlternatives": [
+        "Trastorno de acumulación",
+        "Trastorno de ansiedad generalizada",
+        "Trastorno obsesivo-compulsivo",
+        "Fobia específica a la contaminación",
+        "Trastorno delirante"
+      ],
+      "removedAlternative": {
+        "originalLetter": "E",
+        "text": "Trastorno delirante"
+      }
+    },
+    {
+      "id": 553,
+      "career": "Psicología",
+      "block": "Cuidado integral",
+      "title": "Psicopatología · PSI-024",
+      "level": "Por revisar",
+      "specialty": "Psicopatología",
+      "tags": [
+        "Psicopatología",
+        "medio-alto"
+      ],
+      "statement": "Adolescente presenta un patrón persistente de restricción alimentaria, miedo intenso a ganar peso, distorsión de la imagen corporal y un peso corporal significativamente bajo para su edad y talla.",
+      "question": "¿Cuál es el diagnóstico más probable?",
+      "options": [
+        "Trastorno por atracón",
+        "Trastorno dismórfico corporal",
+        "Trastorno de evitación/restricción de la ingesta de alimentos",
+        "Anorexia nerviosa"
+      ],
+      "correct": 3,
+      "feedback": "La restricción alimentaria persistente, el miedo intenso a ganar peso, la distorsión de la imagen corporal y el peso significativamente bajo son los criterios diagnósticos centrales de la anorexia nerviosa.",
+      "sourceId": "PSI-024",
+      "sourceOrigin": "banco_generado_ia",
+      "sourceVerified": false,
+      "validationStatus": "PENDIENTE_DE_VALIDACION_PROFESIONAL",
+      "originalFiveAlternatives": [
+        "Trastorno por atracón",
+        "Trastorno dismórfico corporal",
+        "Trastorno de evitación/restricción de la ingesta de alimentos",
+        "Anorexia nerviosa",
+        "Bulimia nerviosa"
+      ],
+      "removedAlternative": {
+        "originalLetter": "E",
+        "text": "Bulimia nerviosa"
+      }
+    },
+    {
+      "id": 554,
+      "career": "Psicología",
+      "block": "Cuidado integral",
+      "title": "Psicopatología · PSI-025",
+      "level": "Por revisar",
+      "specialty": "Psicopatología",
+      "tags": [
+        "Psicopatología",
+        "medio-alto"
+      ],
+      "statement": "Paciente presenta episodios recurrentes de ingesta compulsiva de grandes cantidades de comida en periodos cortos, con sensación de pérdida de control, seguidos de conductas compensatorias como vómito autoinducido.",
+      "question": "¿Cuál es el diagnóstico más probable?",
+      "options": [
+        "Bulimia nerviosa",
+        "Anorexia nerviosa tipo purgativo exclusivamente",
+        "Trastorno de evitación/restricción de la ingesta",
+        "Trastorno por atracón"
+      ],
+      "correct": 0,
+      "feedback": "La combinación de episodios de atracón con pérdida de control y conductas compensatorias inapropiadas (como el vómito autoinducido) es característica de la bulimia nerviosa, a diferencia del trastorno por atracón, que no presenta conductas compensatorias regulares.",
+      "sourceId": "PSI-025",
+      "sourceOrigin": "banco_generado_ia",
+      "sourceVerified": false,
+      "validationStatus": "PENDIENTE_DE_VALIDACION_PROFESIONAL",
+      "originalFiveAlternatives": [
+        "Anorexia nerviosa tipo purgativo exclusivamente",
+        "Trastorno de evitación/restricción de la ingesta",
+        "Pica",
+        "Trastorno por atracón",
+        "Bulimia nerviosa"
+      ],
+      "removedAlternative": {
+        "originalLetter": "C",
+        "text": "Pica"
+      }
     }
   ],
   "norms": [
