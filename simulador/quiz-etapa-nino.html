@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz: Registro y Codificación Etapa Niño</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-cyan-50 min-h-screen">
+  <div id="app"></div>
+
+  <script>
+    // PREGUNTAS QUIZ - 15 TOTAL
+    const questions = [
+      {
+        id: 1,
+        type: "concepto",
+        category: "Etapas de Vida",
+        question: "¿Cuál es el rango etario para la etapa 'Niño' según MINSA?",
+        options: [
+          { text: "Menor de 5 años", correct: false },
+          { text: "6 años a menores de 12 años", correct: true },
+          { text: "12 años a menores de 18 años", correct: false },
+          { text: "0 a 5 años", correct: false }
+        ],
+        explanation: `✓ CORRECTO: Etapa Niño = 6 años a menores de 12 años.
+
+CLASIFICACIÓN DE ETAPAS DE VIDA MINSA:
+• Gestante: Embarazadas
+• Puérpera: Hasta 42 días postparto
+• Recién Nacido: 0 a 27 días
+• Lactante: 28 días a menores de 2 años
+• Preescolar: 2 años a menores de 6 años
+• NIÑO: 6 años a menores de 12 años ← AQUÍ
+• Adolescente: 12 años a menores de 18 años
+• Adulto: 18 años a menores de 60 años
+• Adulto Mayor: 60 años y más
+
+PROTOCOLO MINSA: Manual Registro y Codificación - Etapas de Vida`
+      },
+
+      {
+        id: 2,
+        type: "concepto",
+        category: "Registro Clínico",
+        question: "¿Cuál es el documento principal para registrar la atención del niño en la primera consulta?",
+        options: [
+          { text: "Carnet de Salud del Niño", correct: true },
+          { text: "Receta médica", correct: false },
+          { text: "Referencia de derivación", correct: false },
+          { text: "Solo en Historia Clínica", correct: false }
+        ],
+        explanation: `✓ CORRECTO: Carnet de Salud del Niño es documento principal.
+
+INSTRUMENTOS DE REGISTRO ETAPA NIÑO:
+• Carnet de Salud del Niño ← Documento de seguimiento continuo
+• Historia Clínica (duplica información)
+• Hoja de atención diaria
+• Registro de controles (vacunas, crecimiento)
+• Exámenes complementarios
+
+PROTOCOLO MINSA:
+- El Carnet es PORTÁTIL (lo lleva el cuidador)
+- Contiene: Datos biométricos + Vacunaciones + Controles
+- Se usa en TODOS los establecimientos
+
+SECCIÓN MANUAL: Registro - Documentos obligatorios`
+      },
+
+      {
+        id: 3,
+        type: "concepto",
+        category: "Diagnósticos CIE-10",
+        question: "¿Cuál es el código CIE-10 para 'Infección respiratoria aguda' en niños?",
+        options: [
+          { text: "J00-J06 (Infecciones agudas vías respiratorias superiores)", correct: true },
+          { text: "J20 (Bronquitis aguda)", correct: false },
+          { text: "A00-B99 (Enfermedades infecciosas)", correct: false },
+          { text: "R05 (Fiebre)", correct: false }
+        ],
+        explanation: `✓ CORRECTO: J00-J06 = Infecciones agudas vías respiratorias superiores.
+
+CÓDIGOS CIE-10 MÁS FRECUENTES EN NIÑOS:
+• J00-J06 = Infecciones agudas vías respiratorias SUPERIORES
+  (Faringitis, otitis media, rinosinusitis)
+• J20 = Bronquitis aguda
+• J21 = Bronquiolitis aguda
+• A15-A19 = Tuberculosis
+• A90-A99 = Arbovirosis (dengue, zika)
+• K00-K14 = Enfermedades boca y dientes
+• F40-F99 = Trastornos mentales (hiperactividad, trastornos conducta)
+• E00-E90 = Enfermedades endócrinas (desnutrición, diabetes)
+
+PROTOCOLO MINSA: Diagnósticos frecuentes pediatría`
+      },
+
+      {
+        id: 4,
+        type: "concepto",
+        category: "Evaluación Antropométrica",
+        question: "¿Cuál es el indicador antropométrico usado PRINCIPALMENTE para detectar desnutrición aguda en niños menores de 5 años?",
+        options: [
+          { text: "Peso para la edad", correct: false },
+          { text: "Talla para la edad", correct: false },
+          { text: "Peso para la talla", correct: true },
+          { text: "Índice de masa corporal (IMC)", correct: false }
+        ],
+        explanation: `✓ CORRECTO: Peso para la talla es indicador de desnutrición AGUDA.
+
+INDICADORES ANTROPOMÉTRICOS PEDIÁTRICOS:
+• PESO PARA LA EDAD:
+  - Detecta: Desnutrición CRÓNICA + AGUDA
+  - No diferencia tipo
+  - Uso: Monitoreo general
+
+• TALLA PARA LA EDAD:
+  - Detecta: Desnutrición CRÓNICA
+  - Refleja: Retardo del crecimiento
+  - Uso: Evaluación a largo plazo
+
+• PESO PARA LA TALLA: ← DESNUTRICIÓN AGUDA
+  - Detecta: Déficit ACTUAL (últimas semanas)
+  - Más sensible: Cambios rápidos
+  - Uso: Identificar urgencias nutricionales
+
+• IMC (Niños >5 años):
+  - Detecta: Sobrepeso/obesidad
+  - No se usa en menores 5 años
+
+PROTOCOLO MINSA: Indicadores antropométricos por edad`
+      },
+
+      {
+        id: 5,
+        type: "concepto",
+        category: "Vigilancia de Desarrollo",
+        question: "¿A qué edad se realiza la evaluación PRINCIPAL de desarrollo psicomotor usando escala EEDP o EDI?",
+        options: [
+          { text: "3 meses", correct: false },
+          { text: "Mensual desde nacimiento", correct: false },
+          { text: "A los 6 y 12 meses, y cada año hasta 5 años", correct: true },
+          { text: "Solo al ingreso a escuela", correct: false }
+        ],
+        explanation: `✓ CORRECTO: Evaluación en hitos claves: 6, 12 meses y anualmente hasta 5 años.
+
+PROTOCOLOS DE VIGILANCIA DEL DESARROLLO:
+• NACIMIENTO-6 meses:
+  Control mensual de crecimiento
+  Evaluación inicial hitos motores (evaluaciones informales)
+
+• 6 MESES:
+  Evaluación formal EEDP (Escala Evaluación Desarrollo Psicomotor) ← HITO 1
+
+• 12 MESES:
+  Reevaluación EEDP ← HITO 2
+  Evaluación psicomotricidad gruesa/fina
+
+• 18-24 MESES:
+  Lenguaje y desarrollo social
+
+• ANUALMENTE HASTA 5 AÑOS:
+  Evaluación EDI o EEDP según disponibilidad ← HITOS ANUALES
+
+INSTRUMENTOS MINSA:
+• EEDP = Escala Evaluación Desarrollo Psicomotor
+• EDI = Escala Desarrollo Infantil
+• Test de Denver (menos frecuente en Perú)
+
+PROTOCOLO MINSA: Vigilancia desarrollo niño`
+      },
+
+      {
+        id: 6,
+        type: "caso-breve",
+        category: "Caso Breve",
+        question: "Niño de 8 años llega con: Fiebre (39°C) × 3 días, faringitis exudativa, adenopatía cervical. ¿Código CIE-10 para faringitis aguda?",
+        options: [
+          { text: "J06 (Infección aguda múltiples localizaciones vías respiratorias superiores)", correct: false },
+          { text: "J02 (Faringitis aguda)", correct: true },
+          { text: "J01 (Sinusitis aguda)", correct: false },
+          { text: "A80 (Poliomielitis)", correct: false }
+        ],
+        explanation: `✓ CORRECTO: J02 = Faringitis aguda.
+
+CÓDIGOS CIE-10 INFECCIONES RESPIRATORIAS AGUDAS:
+• J00 = Rinitis aguda
+• J01 = Sinusitis aguda
+• J02 = Faringitis aguda ← AQUÍ (con signos: fiebre, exudado, adenopatía)
+• J03 = Amigdalitis aguda
+• J04 = Laringitis y traqueítis aguda
+• J05 = Laryngotraqueobronquitis aguda (crup)
+• J06 = Infección aguda de múltiples localizaciones vías respiratorias superiores
+
+REGISTRO MINSA:
+• Diagnóstico primario: J02 (faringitis)
+• Síntomas: Fiebre, odinofagia, exudado
+• Resultado: Tratamiento antibiótico o sintomático según evaluación
+
+PROTOCOLO: Diagnósticos frecuentes pediatría`
+      },
+
+      {
+        id: 7,
+        type: "caso-breve",
+        category: "Caso Breve",
+        question: "Niña de 3 años: Peso actual 12 kg. Talla actual 90 cm. Referencia peso/edad P50 = 14.9 kg. ¿Qué tipo de desnutrición sugieren estos datos?",
+        options: [
+          { text: "Desnutrición crónica (talla baja para edad)", correct: false },
+          { text: "Desnutrición aguda (peso bajo para talla)", correct: true },
+          { text: "Sin desnutrición aparente", correct: false },
+          { text: "Sobrepeso", correct: false }
+        ],
+        explanation: `✓ CORRECTO: Peso bajo para talla = Desnutrición AGUDA.
+
+INTERPRETACIÓN ANTROPOMÉTRICA:
+• Peso actual: 12 kg
+• P50 esperado para edad: 14.9 kg
+• DÉFICIT: 12/14.9 = 80.5% (Déficit 19.5%) ← DESNUTRICIÓN
+
+TIPO:
+✓ Si TALLA es normal para edad + peso bajo → DESNUTRICIÓN AGUDA
+  (Reciente, última semana-meses)
+
+✓ Si TALLA es baja para edad + peso baja → DESNUTRICIÓN CRÓNICA
+  (Prolongada, meses-años)
+
+✓ Si AMBAS → DESNUTRICIÓN CRÓNICA AGUDIZADA (Marasmo)
+
+ACCIÓN REGISTRO MINSA:
+• Código diagnóstico: E44.0 (Desnutrición proteica moderada)
+• Motivo consulta: Control de crecimiento + desnutrición
+• Plan: Referencia a nutrición, educación familia
+• Seguimiento: Pesajes mensuales
+
+PROTOCOLO MINSA: Evaluación antropométrica e interpretación`
+      },
+
+      {
+        id: 8,
+        type: "caso-breve",
+        category: "Caso Breve",
+        question: "Niño de 7 años tiene antecedente de tuberculosis pulmonar hace 2 años, completó tratamiento. Ahora busca evaluación. ¿Cómo se registra en Historia Clínica?",
+        options: [
+          { text: "Antecedente patológico: A15.0 (TB pulmonar curada)", correct: false },
+          { text: "Antecedente patológico: A15.0 (TB pulmonar - estado post-tratamiento)", correct: true },
+          { text: "No se registra (ya pasó)", correct: false },
+          { text: "Como diagnóstico actual: A15.0", correct: false }
+        ],
+        explanation: `✓ CORRECTO: Registrar como antecedente patológico con estado de resolución.
+
+REGISTRO DE ANTECEDENTES EN NIÑOS:
+• ANTECEDENTE PATOLÓGICO = Enfermedad previa resuelta
+• DEBE INCLUIR:
+  - Diagnóstico CIE-10 original
+  - Fecha aproximada
+  - Estado actual (curado, remisión, secuelas)
+  - Medicación recibida
+
+EJEMPLO:
+"Antecedente: Tuberculosis pulmonar (A15.0) diagnosticada hace 2 años.
+Completó esquema de tratamiento. Actualmente asintomático.
+Radiografía de control: Sin infiltrados activos."
+
+DIFERENCIA:
+❌ Diagnóstico ACTUAL = Enfermedad presente ahora
+✓ Antecedente = Enfermedad pasada resuelta
+
+POR QUÉ IMPORTA:
+- Tuberculosis previa = Riesgo de recaída
+- Requiere vigilancia periódica
+- Afecta evaluaciones futuras
+- Documentación legal (reporte a DIRESA si reaparece)
+
+PROTOCOLO MINSA: Registro de antecedentes patológicos`
+      },
+
+      {
+        id: 9,
+        type: "caso-breve",
+        category: "Caso Breve",
+        question: "Niña de 9 años asiste a control. Su Carnet de Salud NO se encuentra. ¿Qué acción toma el personal de salud?",
+        options: [
+          { text: "Rechazar la consulta hasta que lo traiga", correct: false },
+          { text: "Realizar consulta, registrar en Historia Clínica, RECONSTRUIR información del Carnet solicitando datos a cuidador", correct: true },
+          { text: "Solo hacer consulta, sin registros formales", correct: false },
+          { text: "Derivar a otra institución", correct: false }
+        ],
+        explanation: `✓ CORRECTO: Consulta + Reconstrucción de información + Obtener carnet después.
+
+PROTOCOLO MINSA CUANDO FALTA CARNET:
+1. NO NEGAR CONSULTA (derecho a atención)
+2. REALIZAR ATENCIÓN CLÍNICA NORMAL
+3. REGISTRAR EN HISTORIA CLÍNICA (preferente)
+4. RECONSTRUIR INFORMACIÓN DEL CARNET:
+   - Preguntar: Vacunas (dosis, fechas)
+   - Controles previos (peso, talla, desarrollo)
+   - Enfermedades anteriores
+   - Alergias y medicamentos actuales
+5. SOLICITAR: "Traiga el Carnet en próxima cita para completar registro"
+6. CREAR NOTIFICACIÓN: "Carnet perdido/no disponible. Completar en próxima consulta"
+
+IMPORTANCIA:
+• El Carnet es PORTÁTIL pero NO IMPRESCINDIBLE para atender
+• Historia Clínica es RESPALDO oficial
+• Continuar vigilancia sin esperar carnet
+
+PROTOCOLO MINSA: Continuidad de atención sin carnet`
+      },
+
+      {
+        id: 10,
+        type: "caso-breve",
+        category: "Caso Breve",
+        question: "Revisas Carnet de niño de 11 años. Vacunación: BCG (cicatriz +), DPT (3 dosis completadas a los 2 meses, 4, 6 meses), Polio (3 dosis). ¿Está esquema COMPLETO?",
+        options: [
+          { text: "SÍ, está completo. DPT y Polio con 3 dosis es suficiente en niños", correct: false },
+          { text: "NO, faltan dosis de refuerzo. DPT y Polio requieren dosis adicionales a los 18 meses y 4 años", correct: true },
+          { text: "Sí, aunque idealmente tendría más dosis", correct: false },
+          { text: "No, falta pentavalente", correct: false }
+        ],
+        explanation: `✓ CORRECTO: Faltan dosis de refuerzo. Esquema MINSA requiere más dosis.
+
+ESQUEMA DE VACUNACIÓN COMPLETO MINSA (2024):
+RECIÉN NACIDO:
+• BCG (0 meses)
+
+2 MESES:
+• DPT 1a dosis
+• Polio 1a dosis
+• HB 1a dosis
+• Pentavalente 1a dosis
+
+4 MESES:
+• DPT 2a dosis
+• Polio 2a dosis
+• Pentavalente 2a dosis
+
+6 MESES:
+• DPT 3a dosis
+• Polio 3a dosis
+• Pentavalente 3a dosis
+
+18 MESES (REFUERZOS CRÍTICOS): ← FALTAN EN CASO
+• DPT Refuerzo 1
+• Polio Refuerzo
+
+4 AÑOS (REFUERZO ADICIONAL):
+• DPT Refuerzo 2
+
+EVALUACIÓN DEL CASO:
+✓ Primarias completas (3 dosis)
+✗ Refuerzos: 18 meses NO consta
+✗ Refuerzo 4 años: NO consta
+
+ACCIÓN:
+→ Administrar DPT + Polio refuerzo si falta
+→ Registrar en Carnet
+→ Programar próximo refuerzo 4 años
+
+PROTOCOLO MINSA: Esquema Ampliado Inmunizaciones`
+      },
+
+      {
+        id: 11,
+        type: "viñeta",
+        category: "Viñeta Clínica",
+        question: "Revisas el Carnet de crecimiento de niño de 6 años. Gráfico: puntos están POR DEBAJO de la curva P25 en los últimos 6 meses. Está asociado con: Asistencia inconsistente a escuela + palidez + cansancio. ¿Diagnóstico principal?",
+        options: [
+          { text: "Desnutrición crónica leve", correct: false },
+          { text: "Anemia + posible desnutrición. Solicitar hemoglobina + evaluación nutricional", correct: true },
+          { text: "Problema de comportamiento escolar", correct: false },
+          { text: "Trastorno de desarrollo", correct: false }
+        ],
+        explanation: `✓ CORRECTO: La clínica + gráfica sugiere ANEMIA + DESNUTRICIÓN.
+
+EVALUACIÓN CLÍNICA INTEGRADA:
+Signos presentes:
+• Gráfico de peso: Curva descendente (últimos 6 meses)
+• Palidez: Sugiere ANEMIA (Hb baja)
+• Cansancio: Anemia + desnutrición energética
+• Asistencia escolar inconsistente: Puede ser CONSECUENCIA (cansancio)
+
+DIAGNÓSTICO DIFERENCIAL:
+1. ANEMIA (PRIMARIA):
+   - Palidez es signo clásico
+   - Cansancio y debilidad
+   - Requiere: Hemoglobina (Hb), hematocrito
+   
+2. DESNUTRICIÓN (ASOCIADA):
+   - Curva de peso descendente
+   - Bajo peso para edad/talla
+   - Factores: Ingesta deficiente, parasitosis
+   
+3. ANEMIA POR DEFICIENCIA DE HIERRO (MÁS PROBABLE):
+   - Común en niños 5-12 años en zonas rurales/marginales
+   - Causa: Dieta pobre en hierro + parasitosis
+   - Requiere: Hemoglobina + COPRO (parásitos)
+
+PROTOCOLO MINSA:
+→ Diagnóstico: Sospecha anemia + desnutrición
+→ Exámenes: Hemoglobina, hematocrito, COPRO
+→ Tratamiento: Hierro + antiparasitario + educación nutricional
+→ Seguimiento: Hemoglobina a las 4-6 semanas
+
+ENSEÑANZA: Combinación clínica = Buscar comorbilidades`
+      },
+
+      {
+        id: 12,
+        type: "viñeta",
+        category: "Viñeta Clínica",
+        question: "Niño de 7 años con diagnóstico reciente de Diabetes Tipo 1. En el Carnet debería registrarse: (marca la CORRECTA)",
+        options: [
+          { text: "Solo diagnóstico, no necesita seguimiento especial en Carnet", correct: false },
+          { text: "Diagnóstico (E10) + Metas de control glucémico + Medicación (insulina) + Educación + Plan de seguimiento mensual", correct: true },
+          { text: "Diagnóstico sin incluir medicación (eso es privado)", correct: false },
+          { text: "Referencia a endocrinología y cierre de caso en APS", correct: false }
+        ],
+        explanation: `✓ CORRECTO: Registro INTEGRAL con diagnóstico + medicación + seguimiento.
+
+REGISTRO DE DIABETES TIPO 1 EN NIÑO:
+DIAGNÓSTICO MINSA:
+• Código CIE-10: E10 (Diabetes mellitus insulinodependiente)
+• Fecha de diagnóstico
+• Hallazgos iniciales: Glucemia, HbA1c, pH
+
+MEDICACIÓN:
+• Insulina: Tipo, dosis, frecuencia, sitios de inyección
+• Monitoreo: Diario de glucemias capilares (autocontrol)
+• Educación: Técnica de inyección, manipulación
+
+METAS DE CONTROL:
+• Glucemia en ayunas: 100-130 mg/dL
+• Glucemia postprandial: <180 mg/dL
+• HbA1c: <7% (evitar complicaciones)
+• Evitar hipoglucemias severas
+
+PLAN DE SEGUIMIENTO:
+• Mensual: Control de glucemias
+• Trimestral: Evaluación multidisciplinaria (medicina, enfermería, nutrición)
+• Anual: HbA1c, perfil lipídico, función renal
+
+VIGILANCIA:
+• Complicaciones agudas: Hipoglucemia, cetoacidosis
+• Complicaciones crónicas: Nefropatía, retinopatía, neuropatía
+• Adherencia: Adherencia a insulina + dieta
+
+COORDINACIÓN:
+• Atención Primaria (control general)
++ Endocrinología (manejo especializado)
++ Nutrición (dieta personalizada)
++ Psicología (ajuste emocional)
+
+PROTOCOLO MINSA: Manejo de diabetes en niños`
+      },
+
+      {
+        id: 13,
+        type: "viñeta",
+        category: "Viñeta Clínica",
+        question: "Niño de 5 años asiste a control. Cuidador refiere: 'No habla claro, otros niños no lo entienden, está tímido en guardería'. ¿Qué debería hacer el personal?",
+        options: [
+          { text: "Decirle al cuidador que espere, es normal en algunos niños", correct: false },
+          { text: "Realizar evaluación de lenguaje + desarrollo, derivar a fonoaudiología si hay retraso + registrar en Carnet", correct: true },
+          { text: "Derivar automáticamente sin evaluar", correct: false },
+          { text: "Diagnosticar autismo inmediatamente", correct: false }
+        ],
+        explanation: `✓ CORRECTO: Evaluación + Derivación + Registro en Carnet.
+
+PROTOCOLO MINSA PARA RETRASO DE LENGUAJE EN NIÑOS:
+
+EVALUACIÓN EN APS:
+1. ENTREVISTA CUIDADOR:
+   - ¿Desde cuándo no habla claro?
+   - ¿Entiende instrucciones?
+   - ¿Juega interactivamente?
+   - ¿Antecedentes: Otitis, infecciones oído?
+
+2. OBSERVACIÓN DIRECTA:
+   - Vocabulario: Número de palabras (esperado 5 años: 2,000+ palabras)
+   - Pronunciación: Inteligibilidad (5 años debe ser inteligible)
+   - Comprensión: Sigue órdenes de 3 pasos
+   - Interacción: Contacto visual, responde nombre
+
+3. TAMIZAJE DESARROLLO:
+   - Usar EEDP o EDI si disponible
+   - Evaluar otras áreas (motricidad, social)
+
+INDICADORES DE RETRASO:
+✗ <50 palabras a los 2 años
+✗ Frases de 2+ palabras a los 3 años
+✗ Inteligibilidad <50% a los 4 años
+✗ Retraso > 6 meses respecto a edad
+
+ACCIÓN:
+→ Registrar en Carnet: "Retraso de lenguaje: EvalLenguaje"
+→ Derivar a fonoaudiología para evaluación formal
+→ Descartar: Audición (otoscopía, audiometría si necesario)
+→ Descartar: Otras causas (desarrollo global, autismo, hipoacusia)
+→ Seguimiento: Reeval en 3 meses
+
+EDUCACIÓN CUIDADOR:
+• Estimulación en casa: Lectura, conversación, juego
+• Límite pantallas
+• Consistencia en lenguaje simple/claro
+
+PROTOCOLO MINSA: Vigilancia lenguaje en niños`
+      },
+
+      {
+        id: 14,
+        type: "documentacion",
+        category: "Validación Documentación",
+        question: "Revisa este registro en Carnet de Salud del Niño de 7 años. ¿QUÉ ELEMENTO FALTA para que sea VÁLIDO?\n\n'Control peso: 22 kg. Talla: 115 cm. Evaluación: Bien.' Sin fecha, sin firma, sin datos de p50 o desviación estándar. ¿Qué falta?",
+        options: [
+          { text: "Solo falta la firma del profesional", correct: false },
+          { text: "Falta: FECHA + FIRMA + NOMBRE PROFESIONAL + Cálculo p50/DE + Ubicación en gráfica + Observaciones clínicas", correct: true },
+          { text: "Está completo, es válido así", correct: false },
+          { text: "Falta solo cambiar 'bien' por más detalle", correct: false }
+        ],
+        explanation: `✓ CORRECTO: Faltan múltiples elementos administrativos y clínicos.
+
+REGISTRO COMPLETO EN CARNET - CONTROL DE CRECIMIENTO:
+DATOS ADMINISTRATIVOS:
+✓ FECHA (día/mes/año)
+✓ Establecimiento de salud (nombre y código)
+✓ Nombre y firma del profesional
+
+DATOS CLÍNICOS:
+✓ PESO (kg)
+✓ TALLA (cm)
+✓ Perímetro cefálico si <3 años
+✓ Cálculo de PERCENTIL (p50, p25, p75) o DESVIACIÓN ESTÁNDAR (DE)
+
+INTERPRETACIÓN GRÁFICA:
+✓ Ubicación en curva de crecimiento
+✓ Tendencia: "en curva", "ascendente", "descendente"
+✓ Variación desde último control
+
+OBSERVACIONES CLÍNICAS:
+✓ Estado general: "bien", "pálido", "edema"
+✓ Signos de alarma: "desnutrición", "sobrepeso", "retraso"
+✓ Motivación: "Educación: Dieta balanceada"
+✓ Plan: "Próximo control: mensual / trimestral"
+
+EJEMPLO CORRECTO:
+"Fecha: 15/01/2024
+Control de crecimiento - Niño J.M.P. (7 años)
+Peso: 22 kg (P25 para edad)
+Talla: 115 cm (P50 para edad)
+Perímetro cefálico: 51 cm (Normal)
+Evaluación: Crecimiento adecuado. Buen estado nutritivo.
+Estado general: Activo, bien hidratado, mucosas rosadas.
+Observaciones: Ganancia de peso satisfactoria. Evaluación dental recomendada.
+Plan: Control próximo: 3 meses. Si presenta síntomas: consulta inmediata.
+Firma: Dra. María González, DNI 12345678
+Sello establecimiento de salud"
+
+PROTOCOLO MINSA: Registro completo y válido en Carnet`
+      },
+
+      {
+        id: 15,
+        type: "documentacion",
+        category: "Validación Documentación",
+        question: "¿Cuál es la información CRÍTICA que debe estar en la sección 'Antecedentes Patológicos' del Carnet de niño con enfermedades previas?",
+        options: [
+          { text: "Solo nombre de la enfermedad", correct: false },
+          { text: "DIAGNÓSTICO CIE-10 + FECHA (aproximada) + ESTADO ACTUAL (curado/remisión/secuelas) + MEDICACIÓN RECIBIDA", correct: true },
+          { text: "Fecha y nada más", correct: false },
+          { text: "No es necesario registrar antecedentes en Carnet", correct: false }
+        ],
+        explanation: `✓ CORRECTO: Registro INTEGRAL de antecedentes patológicos.
+
+SECCIÓN ANTECEDENTES PATOLÓGICOS - QUÉ INCLUIR:
+
+1. DIAGNÓSTICO CIE-10:
+   No solo "tuberculosis" sino "Tuberculosis pulmonar (A15.0)"
+   Especificidad es clave para:
+   - Vigilancia epidemiológica
+   - Reporte a DIRESA si reaparece
+   - Evaluación de riesgo futuro
+
+2. FECHA APROXIMADA:
+   Ejemplo: "Enero 2022" o "Hace 2 años"
+   Permite:
+   - Calcular tiempo desde curación
+   - Vigilancia según protocolo
+   - Planificar seguimiento
+
+3. ESTADO ACTUAL:
+   ✓ Curado completamente
+   ✓ En remisión (bajo tratamiento)
+   ✓ Con secuelas (especificar cuáles)
+   ✓ Recurrencia (si reaparece)
+   
+   Ejemplo: "Tuberculosis pulmonar curada tras completar tratamiento 2019"
+
+4. MEDICACIÓN RECIBIDA:
+   Importante para:
+   - Calcular dosis acumuladas (ej: rifampicina)
+   - Evaluación de efectos adversos previos
+   - Evitar repetir mismos fármacos si tolerancia baja
+   
+   Ejemplo: "Esquema RIPE: Rifampicina, isoniazida, pirazinamida, etambutol"
+
+5. SEGUIMIENTO POST-TRATAMIENTO:
+   ✓ Última evaluación/control
+   ✓ Resultado de evaluaciones (radiografía, laboratorio)
+   ✓ Recomendaciones futuras
+
+EJEMPLO COMPLETO:
+"ANTECEDENTES PATOLÓGICOS:
+- Tuberculosis pulmonar (A15.0)
+  Diagnóstico: Enero 2022
+  Tratamiento: Esquema RIPE, 6 meses
+  Estado actual: Curado (Dic 2022). Radiografía control: sin infiltrados.
+  Seguimiento: Radiografía anual por 2 años. Próxima evaluación: Enero 2025.
+
+- Otitis media aguda recurrente (H66.9)
+  Antecedente: 2 episodios (2021-2022)
+  Estado actual: Resuelto. Sin secuelas auditivas.
+  Recomendación: Control ORL anual."
+
+PROTOCOLO MINSA: Documentación de antecedentes patológicos`
+      }
+    ];
+
+    // STATE
+    let state = {
+      currentQuestion: 0,
+      answers: {},
+      feedback: null,
+      showResults: false
+    };
+
+    function handleAnswer(optionIndex) {
+      const question = questions[state.currentQuestion];
+      const selectedOption = question.options[optionIndex];
+
+      state.answers[state.currentQuestion] = {
+        selectedOption: selectedOption,
+        correct: selectedOption.correct
+      };
+
+      state.feedback = {
+        isCorrect: selectedOption.correct,
+        explanation: question.explanation
+      };
+
+      render();
+    }
+
+    function handleNextQuestion() {
+      if (state.currentQuestion < questions.length - 1) {
+        state.currentQuestion++;
+        state.feedback = null;
+      } else {
+        state.showResults = true;
+      }
+      render();
+    }
+
+    function calculateScore() {
+      let correct = 0;
+      for (let i = 0; i < questions.length; i++) {
+        if (state.answers[i]?.correct) correct++;
+      }
+      return correct;
+    }
+
+    function handleReset() {
+      state = {
+        currentQuestion: 0,
+        answers: {},
+        feedback: null,
+        showResults: false
+      };
+      render();
+    }
+
+    // RENDER RESULTS
+    function renderResults() {
+      const totalCorrect = calculateScore();
+      const percentage = Math.round((totalCorrect / questions.length) * 100);
+      const passed = totalCorrect >= 12;
+
+      const html = `
+        <div class="max-w-4xl mx-auto p-6 min-h-screen">
+          <div class="bg-white rounded-lg shadow-xl p-8">
+            <h1 class="text-3xl font-bold text-cyan-900 mb-2">REPORTE FINAL</h1>
+            <p class="text-gray-600 mb-8">Quiz: Manual Registro y Codificación - Etapa Niño</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+              <div class="bg-cyan-100 rounded-lg p-6 border-2 border-cyan-400">
+                <p class="text-sm text-cyan-700 font-semibold">PUNTUACIÓN</p>
+                <p class="text-4xl font-bold text-cyan-900">${totalCorrect}/15</p>
+                <p class="text-xs text-cyan-600 mt-1">${percentage}% de aciertos</p>
+              </div>
+              
+              <div class="bg-green-100 rounded-lg p-6 border-2 border-green-400">
+                <p class="text-sm text-green-700 font-semibold">CRITERIO DE PASO</p>
+                <p class="text-2xl font-bold text-green-900">12/15 (80%)</p>
+                <p class="text-xs text-green-600 mt-1">${passed ? '✅ APROBADO' : '❌ REQUIERE REPASO'}</p>
+              </div>
+              
+              <div class="bg-purple-100 rounded-lg p-6 border-2 border-purple-400">
+                <p class="text-sm text-purple-700 font-semibold">COMPETENCIA</p>
+                <p class="text-2xl font-bold text-purple-900">${passed ? '🟢 DEMOSTRADA' : '🔴 EN CONSTRUCCIÓN'}</p>
+              </div>
+            </div>
+
+            <button onclick="window.location.reload()" class="w-full bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-4 rounded-lg transition">
+              🔄 Reiniciar Quiz
+            </button>
+          </div>
+        </div>
+      `;
+      return html;
+    }
+
+    // RENDER FEEDBACK
+    function renderFeedback() {
+      const question = questions[state.currentQuestion];
+      const answer = state.answers[state.currentQuestion];
+
+      const html = `
+        <div class="max-w-4xl mx-auto p-6 min-h-screen">
+          <div class="${answer.correct ? 'bg-green-50 border-2 border-green-500' : 'bg-red-50 border-2 border-red-500'} rounded-lg shadow-xl p-8">
+            
+            <div class="flex items-start gap-4 mb-6">
+              <div class="text-4xl">${answer.correct ? '✓' : '✗'}</div>
+              <div>
+                <h2 class="text-2xl font-bold ${answer.correct ? 'text-green-900' : 'text-red-900'}">
+                  ${answer.correct ? '✓ CORRECTO' : '✗ INCORRECTO'}
+                </h2>
+                <p class="text-sm mt-1 ${answer.correct ? 'text-green-700' : 'text-red-700'}">
+                  Pregunta ${state.currentQuestion + 1}/15
+                </p>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-lg p-6 mb-6 border-l-4 border-gray-400">
+              <p class="whitespace-pre-line text-gray-800 text-sm leading-relaxed font-mono">
+                ${state.feedback.explanation}
+              </p>
+            </div>
+
+            <button onclick="handleNextQuestion()" class="w-full bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-4 rounded-lg transition">
+              ${state.currentQuestion < questions.length - 1 ? 'Siguiente Pregunta' : 'Ver Resultados'} →
+            </button>
+          </div>
+        </div>
+      `;
+      return html;
+    }
+
+    // RENDER QUESTION
+    function renderQuestion() {
+      const question = questions[state.currentQuestion];
+      const progressPercent = ((state.currentQuestion + 1) / questions.length) * 100;
+
+      const html = `
+        <div class="max-w-4xl mx-auto p-6 min-h-screen">
+          <div class="bg-white rounded-lg shadow-lg p-6 mb-6 border-l-4 border-cyan-600">
+            <div class="flex justify-between items-start mb-4">
+              <div>
+                <p class="text-xs font-semibold text-cyan-600 uppercase">Pregunta ${state.currentQuestion + 1}/15</p>
+                <p class="text-sm text-gray-600 mt-1">${question.category}</p>
+              </div>
+            </div>
+            
+            <div class="w-full bg-gray-200 rounded-full h-2">
+              <div class="bg-cyan-600 h-2 rounded-full transition-all" style="width: ${progressPercent}%"></div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+            <h2 class="text-lg font-bold text-gray-900 mb-6 leading-relaxed">${question.question}</h2>
+            
+            <div class="space-y-3">
+              ${question.options.map((option, idx) => `
+                <button onclick="handleAnswer(${idx})" class="w-full text-left bg-gray-50 rounded-lg border-2 border-gray-300 hover:border-cyan-500 hover:bg-cyan-50 p-4 transition-all active:scale-95">
+                  <p class="font-semibold text-gray-900">${String.fromCharCode(65 + idx)}) ${option.text}</p>
+                </button>
+              `).join('')}
+            </div>
+          </div>
+
+          <div class="text-center text-xs text-gray-600">
+            <p>Quiz • Criterio de paso: 12/15 (80%)</p>
+          </div>
+        </div>
+      `;
+      return html;
+    }
+
+    // MAIN RENDER
+    function render() {
+      const app = document.getElementById('app');
+      
+      if (state.showResults) {
+        app.innerHTML = renderResults();
+      } else if (state.feedback) {
+        app.innerHTML = renderFeedback();
+      } else {
+        app.innerHTML = renderQuestion();
+      }
+    }
+
+    // GLOBAL FUNCTIONS
+    window.handleAnswer = handleAnswer;
+    window.handleNextQuestion = handleNextQuestion;
+    window.handleReset = handleReset;
+
+    // INITIAL RENDER
+    render();
+  </script>
+</body>
+</html>
