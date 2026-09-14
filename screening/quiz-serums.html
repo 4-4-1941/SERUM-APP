@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quiz SERUMS</title>
+  <style>
+    :root{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#172033;background:#eef3f8}body{margin:0}.app{max-width:820px;margin:auto;min-height:100vh;background:#fff;padding:22px}.back{color:#1e4a7a;font-weight:700;text-decoration:none}h1{margin:18px 0 6px}.muted{color:#52606d;line-height:1.5}.card{border:1px solid #dbe3ec;border-radius:14px;padding:20px;margin-top:18px}.option{display:block;width:100%;text-align:left;background:#fff;border:1px solid #cbd5e1;border-radius:10px;padding:12px;margin:9px 0;font:inherit;cursor:pointer}.option:hover{border-color:#1e4a7a}.option.correct{background:#dcfce7;border-color:#16a34a}.option.incorrect{background:#fee2e2;border-color:#dc2626}.btn{background:#1e4a7a;color:#fff;border:0;border-radius:999px;padding:11px 17px;font-weight:800;cursor:pointer;margin-top:12px}.hidden{display:none}.result{background:#eef6ff;border-radius:12px;padding:15px;margin-top:15px}.progress{font-weight:700;color:#1e4a7a}
+  </style>
+</head>
+<body><main class="app">
+  <a class="back" href="screening-index.html">← Volver a Screening</a>
+  <h1>Quiz SERUMS</h1>
+  <p class="muted">Práctica con 10 preguntas aleatorias del banco interno. Es una herramienta educativa; no sustituye protocolos, fuentes oficiales ni juicio clínico.</p>
+  <section class="card" id="quiz"></section>
+</main>
+<script src="../data.js"></script>
+<script>
+  const all = Array.isArray(window.SERUMS_DATA?.cases) ? window.SERUMS_DATA.cases : [];
+  const questions = [...all].sort(() => Math.random() - .5).slice(0, Math.min(10, all.length));
+  let index = 0, score = 0, answered = false;
+  const root = document.getElementById('quiz');
+  function render(){
+    if(!questions.length){root.textContent='No hay preguntas disponibles.';return}
+    if(index >= questions.length){root.innerHTML=`<h2>Resultado</h2><div class="result"><strong>${score} de ${questions.length}</strong> respuestas correctas.</div><button class="btn" onclick="location.reload()">Nuevo quiz</button>`;return}
+    const q=questions[index]; answered=false;
+    root.innerHTML=`<div class="progress">Pregunta ${index+1} de ${questions.length}</div><h2>${q.title || 'Caso SERUMS'}</h2><p>${q.statement || ''}</p><p><strong>${q.question || 'Seleccione la alternativa correcta.'}</strong></p><div>${q.options.map((o,i)=>`<button class="option" data-i="${i}">${String.fromCharCode(65+i)}. ${o}</button>`).join('')}</div><div id="feedback"></div>`;
+    root.querySelectorAll('.option').forEach(btn=>btn.addEventListener('click',()=>answer(Number(btn.dataset.i))));
+  }
+  function answer(selected){
+    if(answered)return; answered=true; const q=questions[index]; const buttons=root.querySelectorAll('.option');
+    buttons.forEach((b,i)=>{b.disabled=true;if(i===q.correct)b.classList.add('correct');else if(i===selected)b.classList.add('incorrect')});
+    const ok=selected===q.correct;if(ok)score++;
+    document.getElementById('feedback').innerHTML=`<div class="result"><strong>${ok?'Correcto':'Revisa la respuesta'}</strong><p>${q.feedback || ''}</p><button class="btn" id="next">${index+1===questions.length?'Ver resultado':'Siguiente pregunta'}</button></div>`;
+    document.getElementById('next').addEventListener('click',()=>{index++;render()});
+  }
+  render();
+</script></body></html>
