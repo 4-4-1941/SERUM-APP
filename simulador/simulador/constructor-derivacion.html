@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Constructor: Informe de Derivación MINSA</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body class="bg-gradient-to-br from-green-50 to-emerald-50 min-h-screen">
+  <div id="app"></div>
+
+  <script>
+    // DIAGNÓSTICOS MINSA FRECUENTES
+    const diagnosticos = [
+      { codigo: "F321", descripcion: "Depresión moderada" },
+      { codigo: "F320", descripcion: "Depresión leve" },
+      { codigo: "F200", descripcion: "Esquizofrenia paranoide" },
+      { codigo: "Z60.1", descripcion: "Problemas por violencia de pareja" },
+      { codigo: "F140", descripcion: "Consumo de cocaína" },
+      { codigo: "F110", descripcion: "Consumo de alcohol" },
+      { codigo: "F11.3", descripcion: "Síndrome de abstinencia a opioides" },
+      { codigo: "F40.0", descripcion: "Agorafobia" },
+      { codigo: "F41.1", descripcion: "Trastorno de ansiedad generalizada" },
+      { codigo: "F431", descripcion: "TEPT (Trastorno por estrés postraumático)" },
+      { codigo: "E44.0", descripcion: "Desnutrición proteica moderada" },
+      { codigo: "J02", descripcion: "Faringitis aguda" },
+      { codigo: "A15.0", descripcion: "Tuberculosis pulmonar" }
+    ];
+
+    // DESTINOS
+    const destinos = [
+      { lab: 1, descripcion: "I Nivel (Puesto de Salud)", competencia: "Baja complejidad" },
+      { lab: 2, descripcion: "CSMC (Centro Salud Mental Comunitario)", competencia: "Media complejidad" },
+      { lab: 3, descripcion: "Hogar Protegido (Comunidad Terapéutica)", competencia: "Alta complejidad residencial" },
+      { lab: 4, descripcion: "Unidad Hospitalización Psiquiátrica", competencia: "Urgencia psiquiátrica" },
+      { lab: 5, descripcion: "Otra Institución (ONG, privada)", competencia: "Específica" }
+    ];
+
+    // STATE
+    let state = {
+      step: 1,
+      formData: {
+        fechaDerivacion: new Date().toISOString().split('T')[0],
+        establecimientoDerivador: "",
+        nombrePaciente: "",
+        dniPaciente: "",
+        edadPaciente: "",
+        diagnosticoPrimario: "",
+        diagnosticoSecundario: "",
+        destinoLab: null,
+        motivoDerivacion: "",
+        resultadosEvaluacion: "",
+        medicacionActual: "",
+        nombreProfesional: "",
+        dniProfesional: ""
+      }
+    };
+
+    // FUNCIONES
+    function handleInputChange(field, value) {
+      state.formData[field] = value;
+      render();
+    }
+
+    function handleNextStep() {
+      if (state.step < 5) {
+        state.step++;
+      } else {
+        state.step = 6; // Revisión final
+      }
+      render();
+    }
+
+    function handlePrevStep() {
+      if (state.step > 1) {
+        state.step--;
+      }
+      render();
+    }
+
+    function isStepValid() {
+      switch (state.step) {
+        case 1:
+          return state.formData.fechaDerivacion && state.formData.establecimientoDerivador;
+        case 2:
+          return state.formData.nombrePaciente && state.formData.dniPaciente && state.formData.edadPaciente;
+        case 3:
+          return state.formData.diagnosticoPrimario;
+        case 4:
+          return state.formData.destinoLab;
+        case 5:
+          return state.formData.nombreProfesional && state.formData.dniProfesional;
+        default:
+          return false;
+      }
+    }
+
+    function generatePDF() {
+      const element = document.getElementById('derivacionContent');
+      const opt = {
+        margin: 10,
+        filename: `derivacion_${state.formData.dniPaciente}_${state.formData.fechaDerivacion}.pdf`,
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { orientation: 'portrait', unit: 'mm', format: 'a4' }
+      };
+      html2pdf().set(opt).from(element).save();
+    }
+
+    function handleGenerarFinal() {
+      state.step = 7; // Vista final + descarga
+      render();
+    }
+
+    function getDiagnosticoTexto(codigo) {
+      const diag = diagnosticos.find(d => d.codigo === codigo);
+      return diag ? diag.descripcion : codigo;
+    }
+
+    function getDestinoTexto(lab) {
+      const dest = destinos.find(d => d.lab === lab);
+      return dest ? dest.descripcion : "Desconocido";
+    }
+
+    // RENDER STEPS
+    function renderStep1() {
+      return `
+        <div class="max-w-2xl mx-auto p-6">
+          <div class="bg-white rounded-lg shadow-lg p-6">
+            <div class="mb-6">
+              <h2 class="text-2xl font-bold text-green-900">PASO 1: INFORMACIÓN ADMINISTRATIVA</h2>
+              <p class="text-gray-600 text-sm mt-2">Datos del establecimiento y fecha de derivación</p>
+            </div>
+
+            <div class="space-y-4">
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-2">📅 Fecha de Derivación</label>
+                <input type="date" value="${state.formData.fechaDerivacion}" 
+                  onchange="handleInputChange('fechaDerivacion', this.value)"
+                  class="w-full border-2 border-gray-300 rounded-lg p-3 focus:border-green-500 focus:outline-none">
+              </div>
+
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-2">🏥 Establecimiento Derivador</label>
+                <input type="text" placeholder="Ej: Centro de Salud María Auxiliadora" 
+                  value="${state.formData.establecimientoDerivador}"
+                  onchange="handleInputChange('establecimientoDerivador', this.value)"
+                  class="w-full border-2 border-gray-300 rounded-lg p-3 focus:border-green-500 focus:outline-none">
+              </div>
+            </div>
+
+            <div class="mt-8 flex gap-3">
+              <button onclick="handleNextStep()" class="${isStepValid() ? 'bg-green-600 hover:bg-green-700' : 'bg-gray-400 cursor-not-allowed'} text-white font-bold py-3 px-6 rounded-lg transition flex-1">
+                Siguiente →
+              </button>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderStep2() {
+      return `
+        <div class="max-w-2xl mx-auto p-6">
+          <div class="bg-white rounded-lg shadow-lg p-6">
+            <div class="mb-6">
+              <h2 class="text-2xl font-bold text-green-900">PASO 2: DATOS DEL PACIENTE</h2>
+              <p class="text-gray-600 text-sm mt-2">Información básica del niño/a</p>
+            </div>
+
+            <div class="space-y-4">
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-2">Nombre Completo</label>
+                <input type="text" placeholder="Ej: Juan Carlos Mendoza López"
+                  value="${state.formData.nombrePaciente}"
+                  onchange="handleInputChange('nombrePaciente', this.value)"
+                  class="w-full border-2 border-gray-300 rounded-lg p-3 focus:border-green-500 focus:outline-none">
+              </div>
+
+              <div class="grid grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-sm font-semibold text-gray-700 mb-2">DNI</label>
+                  <input type="text" placeholder="Ej: 72345678"
+                    value="${state.formData.dniPaciente}"
+                    onchange="handleInputChange('dniPaciente', this.value)"
+                    class="w-full border-2 border-gray-300 rounded-lg p-3 focus:border-green-500 focus:outline-none">
+                </div>
+                <div>
+                  <label class="block text-sm font-semibold text-gray-700 mb-2">Edad (años)</label>
+                  <input type="number" placeholder="Ej: 8"
+                    value="${state.formData.edadPaciente}"
+                    onchange="handleInputChange('edadPaciente', this.value)"
+                    class="w-full border-2 border-gray-300 rounded-lg p-3 focus:border-green-500 focus:outline-none">
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-8 flex gap-3">
+              <button onclick="handlePrevStep()" class="bg-gray-600 hover:bg-gray-700 text-white font-bold py-3 px-6 rounded-lg transition flex-1">
+                ← Atrás
+              </button>
+              <button onclick="handleNextStep()" class="${isStepValid() ? 'bg-green-600 hover:bg-green-700' : 'bg-gray-400 cursor-not-allowed'} text-white font-bold py-3 px-6 rounded-lg transition flex-1">
+                Siguiente →
+              </button>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderStep3() {
+      return `
+        <div class="max-w-2xl mx-auto p-6">
+          <div class="bg-white rounded-lg shadow-lg p-6">
+            <div class="mb-6">
+              <h2 class="text-2xl font-bold text-green-900">PASO 3: DIAGNÓSTICO</h2>
+              <p class="text-gray-600 text-sm mt-2">Selecciona diagnóstico primario (CIE-10)</p>
+            </div>
+
+            <div class="space-y-4">
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-2">Diagnóstico Primario (CIE-10)</label>
+                <select onchange="handleInputChange('diagnosticoPrimario', this.value)"
+                  class="w-full border-2 border-gray-300 rounded-lg p-3 focus:border-green-500 focus:outline-none">
+                  <option value="">-- Selecciona diagnóstico --</option>
+                  ${diagnosticos.map(d => `<option value="${d.codigo}">${d.codigo} - ${d.descripcion}</option>`).join('')}
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-2">Diagnóstico Secundario (opcional)</label>
+                <select onchange="handleInputChange('diagnosticoSecundario', this.value)"
+                  class="w-full border-2 border-gray-300 rounded-lg p-3 focus:border-green-500 focus:outline-none">
+                  <option value="">-- Sin diagnóstico secundario --</option>
+                  ${diagnosticos.map(d => `<option value="${d.codigo}">${d.codigo} - ${d.descripcion}</option>`).join('')}
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-2">Motivo de Derivación</label>
+                <textarea placeholder="Ej: Depresión moderada que requiere psicoterapia estructurada. Sin respuesta a consejería en I nivel."
+                  value="${state.formData.motivoDerivacion}"
+                  onchange="handleInputChange('motivoDerivacion', this.value)"
+                  class="w-full border-2 border-gray-300 rounded-lg p-3 focus:border-green-500 focus:outline-none h-24"></textarea>
+              </div>
+
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-2">Resultados de Evaluación (PHQ-9, AUDIT, etc)</label>
+                <textarea placeholder="Ej: PHQ-9 = 19 puntos (depresión moderada). Ideación suicida presente pero sin plan."
+                  value="${state.formData.resultadosEvaluacion}"
+                  onchange="handleInputChange('resultadosEvaluacion', this.value)"
+                  class="w-full border-2 border-gray-300 rounded-lg p-3 focus:border-green-500 focus:outline-none h-20"></textarea>
+              </div>
+            </div>
+
+            <div class="mt-8 flex gap-3">
+              <button onclick="handlePrevStep()" class="bg-gray-600 hover:bg-gray-700 text-white font-bold py-3 px-6 rounded-lg transition flex-1">
+                ← Atrás
+              </button>
+              <button onclick="handleNextStep()" class="${isStepValid() ? 'bg-green-600 hover:bg-green-700' : 'bg-gray-400 cursor-not-allowed'} text-white font-bold py-3 px-6 rounded-lg transition flex-1">
+                Siguiente →
+              </button>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderStep4() {
+      return `
+        <div class="max-w-2xl mx-auto p-6">
+          <div class="bg-white rounded-lg shadow-lg p-6">
+            <div class="mb-6">
+              <h2 class="text-2xl font-bold text-green-900">PASO 4: DESTINO DE DERIVACIÓN</h2>
+              <p class="text-gray-600 text-sm mt-2">¿A dónde derivar? Sistema sugiere opciones válidas</p>
+            </div>
+
+            <div class="grid grid-cols-1 gap-3">
+              ${destinos.map(destino => `
+                <button onclick="handleInputChange('destinoLab', ${destino.lab})"
+                  class="text-left p-4 border-2 rounded-lg transition ${state.formData.destinoLab === destino.lab ? 'border-green-500 bg-green-50' : 'border-gray-300 hover:border-green-300'}">
+                  <p class="font-bold text-gray-900">Lab ${destino.lab} - ${destino.descripcion}</p>
+                  <p class="text-sm text-gray-600 mt-1">${destino.competencia}</p>
+                </button>
+              `).join('')}
+            </div>
+
+            <div class="mt-6 p-4 bg-blue-50 border-l-4 border-blue-500 rounded">
+              <p class="text-sm text-blue-900">
+                <strong>Recomendación MINSA:</strong><br>
+                • Lab 1: TMG leve<br>
+                • Lab 2: TMG moderado, violencia, adicciones<br>
+                • Lab 3: Comunidad terapéutica (falla Lab 2)<br>
+                • Lab 4: Crisis psicótica, urgencia psiquiátrica<br>
+                • Lab 5: Especialidad no disponible en red
+              </p>
+            </div>
+
+            <div class="mt-8 flex gap-3">
+              <button onclick="handlePrevStep()" class="bg-gray-600 hover:bg-gray-700 text-white font-bold py-3 px-6 rounded-lg transition flex-1">
+                ← Atrás
+              </button>
+              <button onclick="handleNextStep()" class="${isStepValid() ? 'bg-green-600 hover:bg-green-700' : 'bg-gray-400 cursor-not-allowed'} text-white font-bold py-3 px-6 rounded-lg transition flex-1">
+                Siguiente →
+              </button>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderStep5() {
+      return `
+        <div class="max-w-2xl mx-auto p-6">
+          <div class="bg-white rounded-lg shadow-lg p-6">
+            <div class="mb-6">
+              <h2 class="text-2xl font-bold text-green-900">PASO 5: DATOS DEL PROFESIONAL</h2>
+              <p class="text-gray-600 text-sm mt-2">Quien firma la derivación</p>
+            </div>
+
+            <div class="space-y-4">
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-2">Nombre y Profesión</label>
+                <input type="text" placeholder="Ej: Dra. María González Rodríguez - Médica"
+                  value="${state.formData.nombreProfesional}"
+                  onchange="handleInputChange('nombreProfesional', this.value)"
+                  class="w-full border-2 border-gray-300 rounded-lg p-3 focus:border-green-500 focus:outline-none">
+              </div>
+
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-2">DNI Profesional</label>
+                <input type="text" placeholder="Ej: 12345678"
+                  value="${state.formData.dniProfesional}"
+                  onchange="handleInputChange('dniProfesional', this.value)"
+                  class="w-full border-2 border-gray-300 rounded-lg p-3 focus:border-green-500 focus:outline-none">
+              </div>
+
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-2">Medicación Actual (si aplica)</label>
+                <textarea placeholder="Ej: Sertralina 50 mg / día. Iniciada hace 2 semanas."
+                  value="${state.formData.medicacionActual}"
+                  onchange="handleInputChange('medicacionActual', this.value)"
+                  class="w-full border-2 border-gray-300 rounded-lg p-3 focus:border-green-500 focus:outline-none h-16"></textarea>
+              </div>
+            </div>
+
+            <div class="mt-8 flex gap-3">
+              <button onclick="handlePrevStep()" class="bg-gray-600 hover:bg-gray-700 text-white font-bold py-3 px-6 rounded-lg transition flex-1">
+                ← Atrás
+              </button>
+              <button onclick="handleGenerarFinal()" class="${isStepValid() ? 'bg-green-600 hover:bg-green-700' : 'bg-gray-400 cursor-not-allowed'} text-white font-bold py-3 px-6 rounded-lg transition flex-1">
+                Revisar y Generar →
+              </button>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderFinal() {
+      return `
+        <div class="max-w-4xl mx-auto p-6">
+          <div class="bg-white rounded-lg shadow-lg p-8">
+            <div class="mb-8" id="derivacionContent">
+              <div class="border-b-4 border-green-600 pb-4 mb-6">
+                <h1 class="text-2xl font-bold text-gray-900">INFORME DE DERIVACIÓN / REFERENCIA</h1>
+                <p class="text-sm text-gray-600 mt-2">Protocolo MINSA 2025 - Sección C.5</p>
+              </div>
+
+              <div class="grid grid-cols-2 gap-6 mb-8">
+                <div>
+                  <p class="text-xs text-gray-500 font-semibold uppercase">Establecimiento Derivador</p>
+                  <p class="font-bold text-gray-900">${state.formData.establecimientoDerivador}</p>
+                </div>
+                <div>
+                  <p class="text-xs text-gray-500 font-semibold uppercase">Fecha</p>
+                  <p class="font-bold text-gray-900">${state.formData.fechaDerivacion}</p>
+                </div>
+              </div>
+
+              <div class="border-l-4 border-blue-500 bg-blue-50 p-4 mb-8 rounded">
+                <p class="text-sm font-semibold text-blue-900 uppercase">Datos del Paciente</p>
+                <p class="text-sm text-gray-800 mt-2"><strong>Nombre:</strong> ${state.formData.nombrePaciente}</p>
+                <p class="text-sm text-gray-800"><strong>DNI:</strong> ${state.formData.dniPaciente}</p>
+                <p class="text-sm text-gray-800"><strong>Edad:</strong> ${state.formData.edadPaciente} años</p>
+              </div>
+
+              <div class="border-l-4 border-red-500 bg-red-50 p-4 mb-8 rounded">
+                <p class="text-sm font-semibold text-red-900 uppercase">Diagnóstico (CIE-10)</p>
+                <p class="text-sm text-gray-800 mt-2"><strong>Primario:</strong> ${state.formData.diagnosticoPrimario} - ${getDiagnosticoTexto(state.formData.diagnosticoPrimario)}</p>
+                ${state.formData.diagnosticoSecundario ? `<p class="text-sm text-gray-800"><strong>Secundario:</strong> ${state.formData.diagnosticoSecundario} - ${getDiagnosticoTexto(state.formData.diagnosticoSecundario)}</p>` : ''}
+              </div>
+
+              <div class="border-l-4 border-yellow-500 bg-yellow-50 p-4 mb-8 rounded">
+                <p class="text-sm font-semibold text-yellow-900 uppercase">Motivo de Derivación</p>
+                <p class="text-sm text-gray-800 mt-2 whitespace-pre-wrap">${state.formData.motivoDerivacion}</p>
+              </div>
+
+              <div class="border-l-4 border-purple-500 bg-purple-50 p-4 mb-8 rounded">
+                <p class="text-sm font-semibold text-purple-900 uppercase">Resultados de Evaluación</p>
+                <p class="text-sm text-gray-800 mt-2 whitespace-pre-wrap">${state.formData.resultadosEvaluacion || 'No especificado'}</p>
+              </div>
+
+              <div class="border-l-4 border-green-600 bg-green-50 p-4 mb-8 rounded">
+                <p class="text-sm font-semibold text-green-900 uppercase">Destino de Derivación</p>
+                <p class="text-lg font-bold text-green-900 mt-2">${getDestinoTexto(state.formData.destinoLab)}</p>
+                <p class="text-sm text-gray-700 mt-1"><strong>Código:</strong> 99700 (Derivación/Referencia)</p>
+                <p class="text-sm text-gray-700"><strong>Valor Lab:</strong> ${state.formData.destinoLab}</p>
+              </div>
+
+              ${state.formData.medicacionActual ? `
+                <div class="border-l-4 border-orange-500 bg-orange-50 p-4 mb-8 rounded">
+                  <p class="text-sm font-semibold text-orange-900 uppercase">Medicación Actual</p>
+                  <p class="text-sm text-gray-800 mt-2 whitespace-pre-wrap">${state.formData.medicacionActual}</p>
+                </div>
+              ` : ''}
+
+              <div class="border-t-2 border-gray-300 pt-6 mt-8">
+                <p class="text-sm font-semibold text-gray-700 uppercase mb-4">Profesional Responsable</p>
+                <p class="text-sm text-gray-800"><strong>${state.formData.nombreProfesional}</strong></p>
+                <p class="text-sm text-gray-800">DNI: ${state.formData.dniProfesional}</p>
+                <p class="text-sm text-gray-600 mt-4">_________________________</p>
+                <p class="text-xs text-gray-600">Firma y Sello</p>
+              </div>
+            </div>
+
+            <div class="mt-8 flex gap-3">
+              <button onclick="handlePrevStep()" class="bg-gray-600 hover:bg-gray-700 text-white font-bold py-3 px-6 rounded-lg transition flex-1">
+                ← Editar
+              </button>
+              <button onclick="generatePDF()" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition flex-1">
+                📥 Descargar PDF
+              </button>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function render() {
+      const app = document.getElementById('app');
+      
+      let html = `
+        <div class="min-h-screen pb-10">
+          <div class="bg-gradient-to-r from-green-600 to-emerald-600 text-white py-6">
+            <div class="max-w-4xl mx-auto px-6">
+              <h1 class="text-3xl font-bold">Constructor: Informe de Derivación MINSA</h1>
+              <p class="text-green-100 mt-2">Protocolo C.5 - Paso a paso</p>
+            </div>
+          </div>
+      `;
+
+      if (state.step < 6) {
+        // Mostrar barra de progreso
+        const progressPercent = (state.step / 5) * 100;
+        html += `
+          <div class="max-w-4xl mx-auto px-6 mt-6">
+            <div class="bg-white rounded-lg shadow p-4">
+              <p class="text-sm font-semibold text-gray-700 mb-2">Progreso: Paso ${state.step}/5</p>
+              <div class="w-full bg-gray-200 rounded-full h-3">
+                <div class="bg-green-600 h-3 rounded-full transition-all" style="width: ${progressPercent}%"></div>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      // Renderizar step correspondiente
+      if (state.step === 1) {
+        html += renderStep1();
+      } else if (state.step === 2) {
+        html += renderStep2();
+      } else if (state.step === 3) {
+        html += renderStep3();
+      } else if (state.step === 4) {
+        html += renderStep4();
+      } else if (state.step === 5) {
+        html += renderStep5();
+      } else if (state.step === 7) {
+        html += renderFinal();
+      }
+
+      html += `</div>`;
+      app.innerHTML = html;
+    }
+
+    // GLOBAL FUNCTIONS
+    window.handleInputChange = handleInputChange;
+    window.handleNextStep = handleNextStep;
+    window.handlePrevStep = handlePrevStep;
+    window.handleGenerarFinal = handleGenerarFinal;
+    window.generatePDF = generatePDF;
+
+    // INITIAL RENDER
+    render();
+  </script>
+</body>
+</html>
