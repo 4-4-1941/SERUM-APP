@@ -300,6 +300,10 @@ function renderDashboard() {
     <section style="margin-bottom:16px">
       <button id="exam-registry-btn" class="toggle">📚 Base de Datos SERUMS — exámenes reales analizados</button>
     </section>
+    <section style="margin-bottom:16px">
+      <a class="toggle" href="https://4-4-1941.github.io/PLAZAS-SERUMS-PERU/">🧭 Adjudicación de plazas SERUMS →</a>
+      <span style="margin-left:10px;color:#5B6E6A;font-size:13px">Explora, compara y organiza tus alternativas antes de la adjudicación oficial.</span>
+    </section>
     <section class="two-col">
       <div class="panel">
         <h3 class="section-title">Progreso por carrera</h3>
