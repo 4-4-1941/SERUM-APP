@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulador de Referencia/Contrarreferencia MINSA</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/umd/lucide.min.js"></script>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-indigo-50 min-h-screen">
+  <div id="app"></div>
+
+  <script>
+    // CASOS CLÍNICOS MINSA
+    const cases = [
+      {
+        id: 'caso1',
+        name: 'Violencia de Pareja + Depresión',
+        patient: 'Mujer, 34 años, Lima urbana',
+        phases: [
+          {
+            phase: 0,
+            title: 'FASE 1: DETECCIÓN EN I NIVEL',
+            month: 'Mes 1',
+            context: `Mujer refiere golpes recurrentes de pareja. Historia de 2 años.
+          
+TAMIZAJE:
+• PHQ-9: 19 puntos (depresión moderada)
+• PHQ-9 ítem 9 (ideación suicida): "Algunas veces"
+• Escala violencia: Alto riesgo
+
+DIAGNÓSTICO PRIMARIO:
+• F321 (Depresión moderada)
+• Z60.1 (Problemas por violencia de pareja)
+
+RECURSOS EN I NIVEL:
+• Enfermera capacitada en violencia
+• Teléfono a CSMC (no servicio íntegro)
+• Sin protocolo de seguimiento psicoterapéutico`,
+            decisions: [
+              {
+                text: 'A) Tratar solo en I nivel con consejería + seguimiento mensual',
+                value: 'A',
+                correct: false,
+                explanation: `❌ INCORRECTO. Depresión moderada + ideación suicida + violencia activa requieren:
+
+1. CAPACIDAD PSICOTERAPÉUTICA: I nivel sin terapia estructurada
+2. RIESGO PSICOSOCIAL: Necesita grupos de autoestima, talleres de violencia
+3. PROTOCOLO MINSA: Casos de violencia + TMG → referencia a CSMC (C.5)
+
+RIESGO: Depresión se profundiza sin intervención activa.
+NORMATIVA: Manual MINSA 2.1.2 establece derivación obligatoria en violencia de pareja.`
+              },
+              {
+                text: 'B) Referir a CSMC (derivación código 99700, destino Lab 2)',
+                value: 'B',
+                correct: true,
+                explanation: `✓ CORRECTO. La derivación a CSMC es clínicamente indicada porque:
+
+1. CAPACIDAD RESOLUTIVA: CSMC ofrece psicoterapia individual + grupal
+2. PROTOCOLO VIOLENCIA: Intervenciones especializadas + coordinación con protección
+3. CONTINUIDAD COMUNITARIA: Mantiene acceso local sin hospitalización
+
+DOCUMENTACIÓN MINSA:
+• Diagnóstico 1º: Z60.1 (tipo: R)
+• Diagnóstico 2º: F321 (tipo: R)
+• Derivación/referencia al establecimiento con capacidad resolutiva (tipo: D, código 99700)
+• Lab: 2 (CSMC)
+
+TIEMPO PROMEDIO EN CSMC: 3-6 meses según evolución.`
+              },
+              {
+                text: 'C) Referir a hogar protegido inmediatamente',
+                value: 'C',
+                correct: false,
+                explanation: `❌ INCORRECTO. Hogar protegido es PREMATURO porque:
+
+1. FALTA EVALUACIÓN COMPLETA: No hay valoración de riesgo formal
+2. NO HAY EGRESO SEGURO: Hogar protegido es para rehabilitación intensiva
+3. DESVINCULAR COMUNIDAD: Rompe lazos familiares/laborales innecesariamente
+
+PROTOCOLO: Hogar protegido (Lab 3) se indica DESPUÉS de fallar 
+intervención comunitaria o si riesgo es inmediato. Aquí: CSMC primero.`
+              }
+            ]
+          },
+          {
+            phase: 1,
+            title: 'FASE 2: EVALUACIÓN EN CSMC (Mes 3)',
+            month: 'Mes 3',
+            context: `Paciente completó evaluación integral en CSMC.
+          
+PROGRESO:
+• Asistencia: 6 consultas individuales
+• PHQ-9 actual: 12 puntos (mejoría leve)
+• Participación: 3 sesiones grupos mujeres (asertividad)
+• Plan de seguridad: Activado, contacto con MIMDES
+
+EVALUACIÓN MULTIDISCIPLINARIA:
+• Psicólogo: Depresión en contexto de trauma crónico
+• Trabajo Social: Acceso a pensión alimenticia + vivienda temporal
+• Psiquiatra (teleconsulta): No indica farmacoterapia aún (TCC prioritaria)
+
+NUEVA INFORMACIÓN:
+• Paciente denunció formalmente (existe mandato de alejamiento)
+• Comenzó programa de capacitación laboral (ONG)
+• Soporte familiar activado`,
+            decisions: [
+              {
+                text: 'A) Mantener en CSMC + derivar a hogar protegido para refuerzo',
+                value: 'A',
+                correct: false,
+                explanation: `❌ INCORRECTO. Paciente NO requiere hogar protegido porque:
+
+1. MEJORÍA CLÍNICA: PHQ-9 disminuyó 7 puntos (respuesta al tratamiento)
+2. ESTABILIZACIÓN PSICOSOCIAL: Plan de seguridad activo + alejamiento legal
+3. ENGANCHE CON COMUNIDAD: Programa laboral en progreso
+
+PROTOCOLIZACIÓN: Hogar protegido está indicado para pacientes con:
+- Riesgo inmediato de suicidio/homicidio
+- Falta de apoyo psicosocial completo
+- Esto NO aplica aquí.`
+              },
+              {
+                text: 'B) Continuar en CSMC. Extender psicoterapia individual + grupal (otro 3 meses)',
+                value: 'B',
+                correct: true,
+                explanation: `✓ CORRECTO. La continuidad en CSMC es clínicamente indicada:
+
+1. RESPUESTA AL TRATAMIENTO: Mejoría medible (PHQ-9: 19→12)
+2. PROTOCOLO MINSA: Continuar mientras haya deterioro sintomático
+3. REFUERZO PSICOSOCIAL: Grupos + capacitación laboral suman eficacia
+4. PREVENCIÓN RECAÍDA: Duración corta (<3 meses) predice recaída en trauma crónico
+
+PRÓXIMA META (Mes 6):
+• PHQ-9 <9 (remisión)
+• Inserción laboral confirmada
+• Red de apoyo consolidada
+
+LUEGO → Evaluación para contrarreferencia.`
+              },
+              {
+                text: 'C) Derivar de inmediato a I nivel para cierre de caso',
+                value: 'C',
+                correct: false,
+                explanation: `❌ INCORRECTO. Contrarreferencia prematura (Mes 3) porque:
+
+1. FASE CRÍTICA: Los primeros 6 meses son fundamentales en trauma
+2. DEPRESIÓN NO REMITIDA: PHQ-9=12 aún indica depresión leve-moderada
+3. INESTABILIDAD PSICOSOCIAL: Denunció hace poco (estrés legal en curso)`
+              }
+            ]
+          },
+          {
+            phase: 2,
+            title: 'FASE 3: REEVALUACIÓN Y DECISIÓN DE EGRESO (Mes 6)',
+            month: 'Mes 6',
+            context: `EVALUACIÓN INTEGRAL A LOS 6 MESES:
+          
+INDICADORES CLÍNICOS:
+• PHQ-9: 7 puntos (remisión clínica)
+• Sueño: Normalizado
+• Funcionalidad: Retornó trabajo (20 hrs/semana)
+• Ideación suicida: 0 (ítem 9 = negativo)
+
+INDICADORES PSICOSOCIALES:
+• Vivienda: Casa de acogida + plan reubicación (3 meses)
+• Red: Familia reactivada + amigos + grupo CSMC
+• Legal: Medida de protección vigente
+• Laboral: Empleada en programa capacitación (ONG)`,
+            decisions: [
+              {
+                text: 'A) Mantener en CSMC indefinidamente (paciente estable)',
+                value: 'A',
+                correct: false,
+                explanation: `❌ INCORRECTO por gestión de recursos y empoderamiento.`
+              },
+              {
+                text: 'B) Alta por recuperación (código 1, sin seguimiento)',
+                value: 'B',
+                correct: false,
+                explanation: `❌ INCORRECTO. Alta sin continuidad es NEGLIGENCIA en violencia.`
+              },
+              {
+                text: 'C) Alta por referencia/contrarreferencia (código 4) a I nivel con seguimiento preventivo mensual',
+                value: 'C',
+                correct: true,
+                explanation: `✓ CORRECTO. Contrarreferencia planificada porque:
+
+INDICADORES DE EGRESO:
+✓ Remisión clínica comprobada (PHQ-9=7)
+✓ Estabilidad psicosocial (vivienda, trabajo, familia)
+✓ Red de apoyo consolidada
+✓ Paciente solicita retorno a comunidad
+
+DOCUMENTACIÓN MINSA:
+• Tipo de alta: Referencia/Contrarreferencia (código 4)
+• Código actividad: 99217
+• Plan: Seguimiento preventivo mensual x 6 meses
+
+PROTOCOLO: I nivel seguimiento preventivo + CSMC puerta abierta si síntomas reaparecen.`
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 'caso2',
+        name: 'Esquizofrenia: Primer Brote Psicótico',
+        patient: 'Varón, 21 años, zona rural',
+        phases: [
+          {
+            phase: 0,
+            title: 'FASE 1: DETECCIÓN - PRIMER BROTE PSICÓTICO',
+            month: 'Mes 1',
+            context: `Familia trae a joven de 21 años a puesto de salud.
+          
+SÍNTOMAS INFORMADOS (últimas 2 semanas):
+• "Habla solo, dice que oye voces"
+• Aislamiento: No salió de casa en 10 días
+• "No quiere comer, está raro"
+• Sin historia de consumo de drogas (verificado familia)
+
+VALORACIÓN EN I NIVEL:
+• Contacto: Pobre, evade preguntas
+• Pensamiento: Desorganizado, idea de referencia
+• Percepción: Refiere voces que lo insultan
+• Riesgo: Conducta de riesgo potencial
+
+DIAGNÓSTICO PRESUNTIVO:
+• F200 (Esquizofrenia paranoide, primer brote)`,
+            decisions: [
+              {
+                text: 'A) Iniciar antipsicóticos en I nivel + seguimiento mensual',
+                value: 'A',
+                correct: false,
+                explanation: `❌ INCORRECTO. Falta diagnóstico diferencial y monitoreo 24h.`
+              },
+              {
+                text: 'B) Referir urgentemente a Unidad Hospitalización Psiquiátrica (Lab 4)',
+                value: 'B',
+                correct: true,
+                explanation: `✓ CORRECTO. Derivación urgente porque:
+
+INDICADORES MINSA DE URGENCIA PSIQUIÁTRICA:
+✓ Primer brote psicótico (F200)
+✓ Síntomas floridos (alucinaciones + delirios)
+✓ Deterioro agudo funcional
+
+JUSTIFICACIÓN:
+1. DIAGNÓSTICO: Psiquiatra confirmará diagnóstico
+2. MANEJO AGUDO: Titulación fármacos bajo monitoreo médico
+3. ESTABILIZACIÓN: 2-4 semanas antes de egreso a comunidad
+
+PROTOCOLO MINSA: Derivación/referencia (99700, Lab 4)`
+              },
+              {
+                text: 'C) Derivar a CSMC (menor intensidad)',
+                value: 'C',
+                correct: false,
+                explanation: `❌ INCORRECTO. CSMC es insuficiente para fase aguda.`
+              }
+            ]
+          },
+          {
+            phase: 1,
+            title: 'FASE 2: ESTABILIZACIÓN EN HOSPITALIZACIÓN (Mes 2)',
+            month: 'Mes 2',
+            context: `EVOLUCIÓN EN UNIDAD HOSPITALIZACIÓN (3 semanas de ingreso):
+          
+MEJORÍA SINTOMÁTICA:
+• Alucinaciones: Disminuidas 80%
+• Delirios: Insight parcial
+• Autocuidado: Retomó higiene personal
+• Sueño: Normalizado con medicación
+
+DIAGNÓSTICO CONFIRMADO:
+Psiquiatra: "Esquizofrenia paranoide, primer episodio. Buena respuesta a antipsicóticos."
+
+TRATAMIENTO ACTUAL:
+• Risperidona 4 mg/día (buena tolerancia)
+• Sin efectos adversos graves
+• Familia: Orientada en manejo de síntomas`,
+            decisions: [
+              {
+                text: 'A) Alta a domicilio sin seguimiento',
+                value: 'A',
+                correct: false,
+                explanation: `❌ INCORRECTO. Tasa recaída 60-70% sin seguimiento.`
+              },
+              {
+                text: 'B) Transferencia a CSMC (Lab 2)',
+                value: 'B',
+                correct: true,
+                explanation: `✓ CORRECTO. Continuidad de cuidados:
+
+CONTINUUM MINSA:
+Hospitalización (Crisis) → CSMC (Estabilización) → I Nivel (Mantenimiento)
+
+RESPONSABILIDADES CSMC:
+1. Mantener medicación
+2. Psicoterapia individual + grupal
+3. Monitoreo efectos adversos
+4. Apoyo reinserción social
+5. Teleconsulta psiquiatra
+
+DURACIÓN: 6-12 meses según evolución`
+              },
+              {
+                text: 'C) Derivar a hogar protegido',
+                value: 'C',
+                correct: false,
+                explanation: `❌ INCORRECTO. Paciente estable, no requiere comunidad terapéutica intensiva.`
+              }
+            ]
+          },
+          {
+            phase: 2,
+            title: 'FASE 3: EVOLUCIÓN EN CSMC (Mes 8)',
+            month: 'Mes 8',
+            context: `SEGUIMIENTO EN CSMC (6 meses después de hospitalización):
+          
+EVALUACIÓN CLÍNICA:
+• Síntomas psicóticos: En remisión sostenida
+• Cumplimiento medicación: 95%
+• Funcionamiento: Retomó estudios secundarios (parcialmente)
+• Familia: Bien informada, reconoce signos de alerta
+
+LOGROS EN CSMC:
+✓ Psicoterapia individual: 20 sesiones
+✓ Grupo psicoeducativo: 8 sesiones
+✓ Monitoreo efectos adversos
+✓ Plan de reinserción: En curso
+
+EVALUACIÓN PSIQUIATRA:
+"Paciente con remisión clínica sostenida. Puede iniciar transición a I nivel."
+
+PACIENTE DICE:
+"Ya estoy bien, no quiero venir cada semana"`,
+            decisions: [
+              {
+                text: 'A) Alta inmediata sin seguimiento',
+                value: 'A',
+                correct: false,
+                explanation: `❌ INCORRECTO. Requiere medicación indefinida + seguimiento permanente.`
+              },
+              {
+                text: 'B) Mantener en CSMC indefinidamente',
+                value: 'B',
+                correct: false,
+                explanation: `❌ PARCIALMENTE INCORRECTO. No es óptimo por gestión de recursos.`
+              },
+              {
+                text: 'C) Contrarreferencia a I nivel con protocolo de monitoreo psiquiátrico continuo',
+                value: 'C',
+                correct: true,
+                explanation: `✓ CORRECTO. Transición a I nivel:
+
+INDICADORES DE ESTABILIDAD:
+✓ Remisión psicótica sostenida >4 meses
+✓ Cumplimiento medicación excelente
+✓ Familia capacitada
+✓ Funcionalidad mejorada
+
+PROTOCOLO CONTRARREFERENCIA:
+• Código: 99217 (Alta salud mental)
+• Tipo de alta: Lab 4 (Ref/Contrarreferencia)
+
+RESPONSABILIDADES I NIVEL:
+1. Seguimiento mensual
+2. Control medicación
+3. TELECONSULTA psiquiátrica mensual
+4. Plan de reconsulta urgente si síntomas retornan
+
+DURACIÓN: INDEFINIDA (esquizofrenia es crónica)
+
+ENSEÑANZA: Contrarreferencia ≠ Cierre. Es transición con supervisión permanente.`
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 'caso3',
+        name: 'Consumo de Heroína + Abstinencia Aguda',
+        patient: 'Varón, 28 años, zona urbana periférica',
+        phases: [
+          {
+            phase: 0,
+            title: 'FASE 1: CRISIS AGUDA - SÍNDROME DE ABSTINENCIA',
+            month: 'Mes 1',
+            context: `Paciente ingresa a I nivel con síntomas agudos.
+          
+PRESENTACIÓN:
+• "Hace 48 horas que no consumo heroína"
+• Dolor corporal intenso, agitación, insomnia
+• Ansiedad severa, sudoración profusa
+• Historia: 5 años consumo heroína diario
+
+DIAGNÓSTICO:
+• F11.3 (Síndrome de abstinencia a opioides)
+• Sin soporte psicosocial activo
+• Familia: En conflicto
+
+VALORACIÓN RIESGO:
+• Riesgo suicida: Bajo
+• Riesgo recaída: ALTO (sin tratamiento)
+
+RECURSOS I NIVEL:
+• Medicación: SÍ (tramadol, clonidina)
+• Desintoxicación: Puede iniciarse
+• Programa rehabilitación: NO`,
+            decisions: [
+              {
+                text: 'A) Iniciar desintoxicación en I nivel + consejería',
+                value: 'A',
+                correct: false,
+                explanation: `❌ INCORRECTO. Abstinencia a heroína requiere programa integral:
+
+1. SÍNDROME GRAVE: Produce sufrimiento extremo
+2. TASA RECAÍDA: 90%+ sin programa estructurado
+3. FALTA CAPACIDAD I NIVEL: Sin protocolo de rehabilitación
+
+RIESGO: Recaída casi segura en 48-72 horas.`
+              },
+              {
+                text: 'B) Derivar a CSMC para programa de rehabilitación integral',
+                value: 'B',
+                correct: true,
+                explanation: `✓ CORRECTO. CSMC o programa especializado:
+
+CAPACIDAD CSMC EN ADICCIONES:
+1. Programa multidisciplinario (médico + psicólogo + trabajo social)
+2. Medicación: Metadona o buprenorfina
+3. Psicoterapia: Manejo de abstinencia + habilidades
+4. Intervención psicosocial: Familia, empleo, red
+5. Seguimiento prolongado (6-12 meses mínimo)
+
+DOCUMENTACIÓN MINSA:
+• Derivación/referencia (99700, Lab 2)
+• Motivo: F11.3 + necesidad rehabilitación
+
+PROTOCOLO CSMC:
+→ Entrada urgente (mismo día)
+→ Valoración médica
+→ Inicio medicación sustitutiva
+→ Contrato terapéutico`
+              },
+              {
+                text: 'C) Internarlo en hogar protegido por la familia',
+                value: 'C',
+                correct: false,
+                explanation: `❌ INCORRECTO. No es indicación apropiada sin consentimiento.`
+              }
+            ]
+          },
+          {
+            phase: 1,
+            title: 'FASE 2: ESTABILIZACIÓN EN CSMC (Mes 4)',
+            month: 'Mes 4',
+            context: `PROGRESIÓN EN PROGRAMA CSMC (3 meses después):
+          
+LOGROS:
+• Medicación: En buprenorfina 16 mg/día (estable)
+• Abstinencia: 12 semanas SIN recaída
+• Pruebas orina: Negativas últimas 4
+• Conducta: Puntual, participativo
+
+TRABAJO PSICOLÓGICO:
+✓ Psicoterapia individual: 12 sesiones
+✓ Grupo de pares: 8 sesiones
+✓ Trabajo social: Familia reintegrada
+
+MEJORÍA FUNCIONAL:
+• Duerme: 6-7 horas (normalizado)
+• Empleo: Inició trabajo temporal
+• Red: Reactivó amigos no usuarios
+• Salud general: Mejoría física notable
+
+PACIENTE:
+"Nunca creí que podía vivir sin heroína. Quisiera empezar a hacer algo más."
+
+EQUIPO:
+"Candidato a transición a seguimiento menos intensivo."`,
+            decisions: [
+              {
+                text: 'A) Mantener indefinidamente en programa intensivo',
+                value: 'A',
+                correct: false,
+                explanation: `❌ INCORRECTO. Sin metas de progresión = Dependencia institucional.`
+              },
+              {
+                text: 'B) Derivar a hogar protegido',
+                value: 'B',
+                correct: false,
+                explanation: `❌ INCORRECTO. Paciente estable, no requiere ambiente controlado 24h.`
+              },
+              {
+                text: 'C) Reducir intensidad CSMC (2x/semana) + plan contrarreferencia a 6 meses',
+                value: 'C',
+                correct: true,
+                explanation: `✓ CORRECTO. Transición graduada:
+
+INDICADORES DE PROGRESIÓN:
+✓ Abstinencia sostenida (12 semanas)
+✓ Adherencia excelente
+✓ Funcionalidad mejorada
+✓ Familia reintegrada
+✓ Sin factores de recaída aguda
+
+FASES MINSA EN ADICCIONES:
+
+MES 4 (ACTUAL): FASE 2 - Estabilización
+• Reducir CSMC: 2 consultas/semana
+• Continuar buprenorfina
+• Intensificar terapia ocupacional
+
+MES 6-9: FASE 3 - Reinserción
+• CSMC: Consulta mensual (monitoreo)
+• Teleconsulta psiquiatra
+• Psicoeducación prevención recaída
+
+MES 10-12: Preparación egreso
+• Identificar puesto de salud I nivel
+• Educar I nivel en manejo de buprenorfina
+
+PROTOCOLO CONTRARREFERENCIA:
+Se realiza cuando: Remisión completa >3 meses
+• Medicación: Buprenorfina continúa en I nivel
+• Seguimiento: Mensual + grupo comunitario
+• Psiquiatría CSMC: Disponible para consultoría
+
+MODELO CORRECTO:
+Crisis → CSMC intensivo → CSMC moderado → I nivel + supervisión CSMC`
+              }
+            ]
+          }
+        ]
+      }
+    ];
+
+    // STATE
+    let state = {
+      currentCase: 0,
+      currentPhase: 0,
+      decisions: {},
+      feedback: null,
+      caseCompleted: false,
+      showReport: false
+    };
+
+    // HELPERS
+    function calculateScore() {
+      return Object.values(state.decisions).reduce((sum, d) => sum + (d?.correct ? 10 : 0), 0);
+    }
+
+    function handleDecision(decision) {
+      const key = `caso${state.currentCase}-fase${state.currentPhase}`;
+      state.decisions[key] = decision;
+      state.feedback = {
+        isCorrect: decision.correct,
+        explanation: decision.explanation
+      };
+      render();
+    }
+
+    function handleNextPhase() {
+      const caseData = cases[state.currentCase];
+      if (state.currentPhase < caseData.phases.length - 1) {
+        state.currentPhase++;
+        state.feedback = null;
+      } else {
+        state.caseCompleted = true;
+      }
+      render();
+    }
+
+    function handleNextCase() {
+      if (state.currentCase < cases.length - 1) {
+        state.currentCase++;
+        state.currentPhase = 0;
+        state.caseCompleted = false;
+        state.feedback = null;
+      } else {
+        state.showReport = true;
+      }
+      render();
+    }
+
+    function handleReset() {
+      state = {
+        currentCase: 0,
+        currentPhase: 0,
+        decisions: {},
+        feedback: null,
+        caseCompleted: false,
+        showReport: false
+      };
+      render();
+    }
+
+    // RENDER
+    function render() {
+      const app = document.getElementById('app');
+
+      if (state.showReport) {
+        const totalScore = calculateScore();
+        const maxScore = cases.reduce((sum, c) => sum + c.phases.length * 10, 0);
+        const percentage = Math.round((totalScore / maxScore) * 100);
+
+        app.innerHTML = `
+          <div class="max-w-4xl mx-auto p-6 min-h-screen">
+            <div class="bg-white rounded-lg shadow-xl p-8">
+              <h1 class="text-3xl font-bold text-indigo-900 mb-2">REPORTE FINAL</h1>
+              <p class="text-gray-600 mb-8">Simulador de Referencia/Contrarreferencia MINSA 2025</p>
+              
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                <div class="bg-indigo-100 rounded-lg p-6 border-2 border-indigo-400">
+                  <p class="text-sm text-indigo-700 font-semibold">PUNTUACIÓN</p>
+                  <p class="text-4xl font-bold text-indigo-900">${totalScore}/${maxScore}</p>
+                  <p class="text-xs text-indigo-600 mt-1">${percentage}% de aciertos</p>
+                </div>
+                
+                <div class="bg-green-100 rounded-lg p-6 border-2 border-green-400">
+                  <p class="text-sm text-green-700 font-semibold">CASOS COMPLETADOS</p>
+                  <p class="text-4xl font-bold text-green-900">${cases.length}/3</p>
+                  <p class="text-xs text-green-600 mt-1">Decisiones validadas</p>
+                </div>
+                
+                <div class="bg-purple-100 rounded-lg p-6 border-2 border-purple-400">
+                  <p class="text-sm text-purple-700 font-semibold">DESEMPEÑO</p>
+                  <p class="text-4xl font-bold text-purple-900">
+                    ${totalScore >= 28 ? '🟢 EXCELENTE' : totalScore >= 21 ? '🟡 BUENO' : '🔴 REVISAR'}
+                  </p>
+                </div>
+              </div>
+
+              <div class="bg-blue-50 rounded-lg p-6 border-l-4 border-blue-500 mb-8">
+                <h3 class="font-semibold text-blue-900 mb-3">📋 RECOMENDACIONES</h3>
+                <p class="text-blue-800">
+                  ${totalScore >= 28 
+                    ? '<strong>Desempeño excelente.</strong> Demuestras comprensión sólida del protocolo MINSA 2025. Puedes avanzar al módulo quiz avanzado.'
+                    : totalScore >= 21
+                    ? '<strong>Buen desempeño.</strong> Captas los conceptos clave. Revisa casos con errores y repite el simulador.'
+                    : '<strong>Revisar conceptos.</strong> Requiere reaprendizaje. Repite el simulador y consulta el manual MINSA secciones C.5-C.6.'}
+                </p>
+              </div>
+
+              <button onclick="window.location.reload()" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-4 rounded-lg transition">
+                🔄 Reiniciar Simulador
+              </button>
+            </div>
+          </div>
+        `;
+        return;
+      }
+
+      if (state.feedback) {
+        const isCorrect = state.feedback.isCorrect;
+        app.innerHTML = `
+          <div class="max-w-4xl mx-auto p-6 min-h-screen">
+            <div class="${isCorrect ? 'bg-green-50 border-2 border-green-500' : 'bg-red-50 border-2 border-red-500'} rounded-lg shadow-xl p-8">
+              
+              <div class="flex items-start gap-4 mb-6">
+                <div>${isCorrect ? '✓' : '✗'}</div>
+                <div>
+                  <h2 class="text-2xl font-bold ${isCorrect ? 'text-green-900' : 'text-red-900'}">
+                    ${isCorrect ? '✓ CORRECTO' : '✗ INCORRECTO'}
+                  </h2>
+                </div>
+              </div>
+
+              <div class="bg-white rounded-lg p-6 mb-6 border-l-4 border-gray-400">
+                <p class="whitespace-pre-line text-gray-800 text-sm leading-relaxed font-mono">
+                  ${state.feedback.explanation}
+                </p>
+              </div>
+
+              <button onclick="handleNextPhase()" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-4 rounded-lg transition">
+                ${state.caseCompleted ? 'Siguiente Caso' : 'Siguiente Fase'} →
+              </button>
+            </div>
+          </div>
+        `;
+        return;
+      }
+
+      // RENDER PHASE
+      const caseData = cases[state.currentCase];
+      const phaseData = caseData.phases[state.currentPhase];
+      const totalPhases = caseData.phases.length * cases.length;
+      const currentPhaseNum = state.currentCase * caseData.phases.length + state.currentPhase + 1;
+      const progressPercent = (currentPhaseNum / totalPhases) * 100;
+
+      app.innerHTML = `
+        <div class="max-w-4xl mx-auto p-6 min-h-screen">
+          <div class="bg-white rounded-lg shadow-lg p-6 mb-6 border-l-4 border-indigo-600">
+            <div class="flex justify-between items-start mb-4">
+              <div>
+                <p class="text-xs font-semibold text-indigo-600 uppercase">CASO ${state.currentCase + 1}/3</p>
+                <h1 class="text-2xl font-bold text-gray-900">${caseData.name}</h1>
+                <p class="text-sm text-gray-600 mt-1">${caseData.patient}</p>
+              </div>
+              <div class="text-right">
+                <p class="text-xs text-gray-500 uppercase">FASE ${state.currentPhase + 1}/${caseData.phases.length}</p>
+                <p class="text-2xl font-bold text-indigo-900">${phaseData.month}</p>
+              </div>
+            </div>
+            
+            <div class="w-full bg-gray-200 rounded-full h-2">
+              <div class="bg-indigo-600 h-2 rounded-full transition-all" style="width: ${progressPercent}%"></div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+            <h2 class="text-xl font-bold text-indigo-900 mb-4">${phaseData.title}</h2>
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
+              <p class="text-gray-800 whitespace-pre-line font-mono text-sm leading-relaxed">
+                ${phaseData.context}
+              </p>
+            </div>
+          </div>
+
+          <div class="space-y-3">
+            <p class="text-sm font-semibold text-gray-700 uppercase">¿Cuál es la decisión clínica correcta?</p>
+            ${phaseData.decisions.map((decision, idx) => `
+              <button onclick="handleDecision(${idx})" class="w-full text-left bg-white rounded-lg shadow-md p-4 border-2 border-gray-300 hover:border-indigo-500 hover:shadow-lg transition-all active:scale-95">
+                <p class="font-semibold text-gray-900">${decision.text}</p>
+              </button>
+            `).join('')}
+          </div>
+
+          <div class="mt-8 text-center text-xs text-gray-600">
+            <p>Simulador de Referencia/Contrarreferencia • Manual MINSA 2025</p>
+          </div>
+        </div>
+      `;
+    }
+
+    // GLOBAL FUNCTIONS
+    window.handleDecision = function(idx) {
+      const phaseData = cases[state.currentCase].phases[state.currentPhase];
+      handleDecision(phaseData.decisions[idx]);
+    };
+
+    window.handleNextPhase = function() {
+      handleNextPhase();
+    };
+
+    window.handleNextCase = function() {
+      handleNextCase();
+    };
+
+    window.handleReset = function() {
+      handleReset();
+    };
+
+    // INITIAL RENDER
+    render();
+  </script>
+</body>
+</html>
