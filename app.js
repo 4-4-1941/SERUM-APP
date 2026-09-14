@@ -6,6 +6,13 @@ const scoreBadge = document.getElementById("score-badge");
 const resolvedBadge = document.getElementById("resolved-badge");
 const data = window.SERUMS_DATA;
 const { loadProgress, saveProgress } = window.SERUMS_STORAGE;
+const {
+  careerLabel,
+  filterCases,
+  shuffle,
+  shuffleOptions: shuffleCaseOptions,
+  sortByReviewPriority
+} = window.SERUMS_CASES;
 
 let score = Number(localStorage.getItem(data.scoreKey) || 0);
 let caseState = loadProgress(data.caseStateKey, {});
@@ -95,26 +102,6 @@ let simulacroDeadline = 0;
 let simulacroPhase = "intro"; // intro | running | finished
 let simulacroHistory = loadProgress("simulacroHistory", []);
 let simulacroCareer = localStorage.getItem("simulacroCareer") || ""; // "" = todas las carreras (modo mixto)
-
-function shuffle(arr) {
-  const a = [...arr];
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
-}
-
-// Devuelve una copia del caso con sus opciones en orden aleatorio y el índice
-// "correct" ya remapeado a esa nueva posición. Se usa tanto en la práctica
-// individual (openCase) como en el Simulacro, para que la respuesta correcta
-// no quede siempre en la misma letra.
-function shuffleCaseOptions(original) {
-  const order = original.options.map((_, i) => i);
-  const shuffledOrder = shuffle(order);
-  const newCorrect = shuffledOrder.indexOf(original.correct);
-  return { ...original, options: shuffledOrder.map(i => original.options[i]), correct: newCorrect };
-}
 
 // Casos ya usados en los últimos 2 intentos de simulacro (para no repetirlos de inmediato
 // en el siguiente intento, salvo que no haya suficientes casos alternativos disponibles).
@@ -238,28 +225,8 @@ function fmtPct(n) {
   return Math.max(0, Math.min(100, n));
 }
 
-function careerLabel(c) {
-  const career = c.career || c.specialty;
-  return career === "Transversal" ? "Todas las profesiones" : career;
-}
-
-// Prioridad de repaso: 0 = nunca intentado (máxima prioridad),
-// 1 = intentado pero con error (ordenado por más antiguo primero),
-// 2 = ya resuelto correctamente (ordenado por más antiguo primero, para refuerzo espaciado).
-function reviewPriority(c) {
-  const st = caseState[c.id];
-  if (!st || !st.attempts) return { tier: 0, date: "" };
-  const lastDate = st.lastAttemptDate || (st.history && st.history.length ? st.history[st.history.length - 1].date : "");
-  return { tier: st.correct ? 2 : 1, date: lastDate };
-}
-
 function sortByPriority(list) {
-  return [...list].sort((a, b) => {
-    const pa = reviewPriority(a);
-    const pb = reviewPriority(b);
-    if (pa.tier !== pb.tier) return pa.tier - pb.tier;
-    return (pa.date || "").localeCompare(pb.date || "");
-  });
+  return sortByReviewPriority(list, caseState);
 }
 
 function goToReview() {
@@ -477,12 +444,11 @@ function renderCases() {
   function draw(filter = "") {
     try {
       const q = filter.toLowerCase();
-      let filtered = data.cases.filter(c => {
-        const text = [c.title, c.block, c.specialty, c.career, c.statement, ...(c.tags || [])].join(" ").toLowerCase();
-        return text.includes(q) &&
-          (!selectedCareer || (c.career || c.specialty) === selectedCareer || c.career === "Transversal") &&
-          (!selectedBlock || c.block === selectedBlock) &&
-          (!selectedLevel || c.level === selectedLevel);
+      let filtered = filterCases(data.cases, {
+        query: q,
+        career: selectedCareer,
+        block: selectedBlock,
+        level: selectedLevel
       });
 
       if (priorityReviewMode) filtered = sortByPriority(filtered);
