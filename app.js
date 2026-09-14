@@ -1395,8 +1395,29 @@ let activeTrainingStepId = null;
 
 function renderTraining() {
   pageTitle.textContent = "Entrenamiento SERUMS";
-  pageSubtitle.textContent = "Escenarios progresivos de campo: cada decisión cambia el curso del caso. No es teoría — es práctica de criterio.";
-  root.innerHTML = `<div id="training-list" class="norm-list"></div>`;
+  pageSubtitle.textContent = "Escenarios, quizzes y simuladores para practicar decisiones clínicas y procesos de referencia.";
+  const modules = [
+    { name: "Quiz avanzado de referencia", badge: "15 preguntas · Referencia", desc: "Practica criterios de referencia y contrarreferencia.", url: "simulador/quiz-avanzado-referencia.html" },
+    { name: "Quiz etapa niño", badge: "Evaluación pediátrica", desc: "Repaso dirigido a la atención integral de niñas y niños.", url: "simulador/quiz-etapa-nino.html" },
+    { name: "Simulador de referencia y contrarreferencia", badge: "Práctica guiada", desc: "Entrena la toma de decisiones y el flujo de derivación.", url: "simulador/simulador-referencia-contrarreferencia.html" },
+    { name: "Simulador de referencia clínica", badge: "Caso clínico", desc: "Ejercita el proceso de referencia en un escenario clínico.", url: "simulador/simulador-referencia.html" }
+  ];
+  root.innerHTML =     `<section class="panel" style="margin-bottom:16px">
+      <h3 class="section-title">Quizzes y simuladores</h3>
+      <div class="norm-list">
+        ${modules.map(m =>           `<article class="norm-card">
+            <span>${m.badge}</span>
+            <h3>${m.name}</h3>
+            <p>${m.desc}</p>
+            <button class="action-btn" data-training-url="${m.url}" style="margin-top:10px">Abrir módulo →</button>
+          </article>`
+        ).join("")}
+      </div>
+    </section>
+    <section>
+      <h3 class="section-title">Escenarios de campo</h3>
+      <div id="training-list" class="norm-list"></div>
+    </section>`;
   const list = document.getElementById("training-list");
   list.innerHTML = data.trainingScenarios.map(sc => {
     const st = trainingState[sc.id];
@@ -1404,17 +1425,18 @@ function renderTraining() {
       ? `<span class="badge">Completado</span>`
       : st ? `<span class="badge" style="background:#FCEBEA;color:#8A2A24">En progreso</span>`
       : `<span class="badge">Nuevo</span>`;
-    return `
-      <article class="norm-card">
+    return       `<article class="norm-card">
         <span>${sc.skillsEvaluated.join(" · ")}</span>
         <h3>${sc.title}</h3>
         <p>${sc.context}</p>
         ${badge}
         <button class="action-btn" data-scenario="${sc.id}" style="margin-top:10px">${st ? "Continuar escenario →" : "Iniciar escenario →"}</button>
-      </article>
-    `;
+      </article>`;
   }).join("");
 
+  root.querySelectorAll("[data-training-url]").forEach(btn => {
+    btn.addEventListener("click", () => window.location.href = btn.dataset.trainingUrl);
+  });
   list.querySelectorAll("[data-scenario]").forEach(btn => {
     btn.addEventListener("click", () => startTrainingScenario(btn.dataset.scenario));
   });
