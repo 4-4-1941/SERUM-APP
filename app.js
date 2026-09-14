@@ -1216,12 +1216,20 @@ function renderAssistant() {
       <div class="panel">
         <h3 class="section-title">Sobre esta sección</h3>
         <p style="line-height:1.6;color:#5B6E6A">Documentos de uso frecuente cuando ya estás trabajando en un establecimiento de salud. No es material de examen — es soporte profesional para tu día a día en la plaza SERUMS.</p>
+        <hr style="border:0;border-top:1px solid #D8D2C4;margin:18px 0">
+        <h3 class="section-title">Formatos interactivos</h3>
+        <p style="line-height:1.6;color:#5B6E6A">Completa una guía, revisa campos obligatorios y guarda el borrador solo en tu navegador. El formato no reemplaza los sistemas ni los procedimientos institucionales.</p>
+        <button class="action-btn" id="open-his-register">Abrir Registro Diario HIS →</button>
       </div>
     </section>
   `;
 
   const list = document.getElementById("assistant-list");
   const search = document.getElementById("assistant-search");
+  document.getElementById("open-his-register").addEventListener("click", () => {
+    window.location.href = "capacitacion/recursos/formatos/registro-diario-his.html";
+  });
+
   const integratedPracticeUrls = {
     "ref-001": "capacitacion/recursos/formatos/referencia.html",
     "ref-002": "capacitacion/recursos/formatos/contrarreferencia.html"
