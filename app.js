@@ -5,14 +5,6 @@ const pageSubtitle = document.getElementById("page-subtitle");
 const scoreBadge = document.getElementById("score-badge");
 const resolvedBadge = document.getElementById("resolved-badge");
 const data = window.SERUMS_DATA;
-const { loadProgress, saveProgress } = window.SERUMS_STORAGE;
-const {
-  careerLabel,
-  filterCases,
-  shuffle,
-  shuffleOptions: shuffleCaseOptions,
-  sortByReviewPriority
-} = window.SERUMS_CASES;
 
 let score = Number(localStorage.getItem(data.scoreKey) || 0);
 let caseState = loadProgress(data.caseStateKey, {});
@@ -23,7 +15,6 @@ let activeCase = null;
 let currentList = [];      // lista filtrada vigente, para "Siguiente caso"
 let selectedOption = null; // opción marcada, aún no confirmada
 let confirmed = false;     // true tras pulsar "Confirmar respuesta"
-let activeCaseAttempts = 0; // intentos del caso abierto; no se heredan de sesiones anteriores
 let priorityReviewMode = false; // true cuando se navega desde "Repasar ahora"
 
 // ---------- Simulacro (100 preguntas, 5 bloques oficiales SERUMS) ----------
@@ -93,15 +84,34 @@ const REAL_EXAM_BLOCK_WEIGHTS = {
 
 let simulacroQueue = [];
 let simulacroIndex = 0;
-let simulacroResults = []; // {questionIndex, caseId, career, block, selected, correctOption, correct}
+let simulacroResults = []; // {caseId, career, block, correct}
 let simulacroSelected = null;
 let simulacroConfirmed = false;
 let simulacroTimerId = null;
 let simulacroTimeLeft = 0;
-let simulacroDeadline = 0;
 let simulacroPhase = "intro"; // intro | running | finished
 let simulacroHistory = loadProgress("simulacroHistory", []);
 let simulacroCareer = localStorage.getItem("simulacroCareer") || ""; // "" = todas las carreras (modo mixto)
+
+function shuffle(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+// Devuelve una copia del caso con sus opciones en orden aleatorio y el índice
+// "correct" ya remapeado a esa nueva posición. Se usa tanto en la práctica
+// individual (openCase) como en el Simulacro, para que la respuesta correcta
+// no quede siempre en la misma letra.
+function shuffleCaseOptions(original) {
+  const order = original.options.map((_, i) => i);
+  const shuffledOrder = shuffle(order);
+  const newCorrect = shuffledOrder.indexOf(original.correct);
+  return { ...original, options: shuffledOrder.map(i => original.options[i]), correct: newCorrect };
+}
 
 // Casos ya usados en los últimos 2 intentos de simulacro (para no repetirlos de inmediato
 // en el siguiente intento, salvo que no haya suficientes casos alternativos disponibles).
@@ -128,12 +138,13 @@ function orderPoolAvoidingRepeats(pool, usedIds) {
 // el simulacro de una carrera no mezcle casos clínicos de otra, igual que el examen real.
 function buildSimulacroQueue(career) {
   const usedIds = recentlyUsedCaseIds();
+  const isClinicalBlock = b => b === "Cuidado integral" || !OFFICIAL_BLOCKS.includes(b);
   const matchesCareer = c => !career || c.career === career || c.career === "Transversal";
 
   const pools = {};
   OFFICIAL_BLOCKS.forEach(b => {
     let cases = data.cases.filter(c => c.block === b);
-    if (career) cases = cases.filter(matchesCareer);
+    if (isClinicalBlock(b)) cases = cases.filter(matchesCareer);
     pools[b] = orderPoolAvoidingRepeats(cases, usedIds);
   });
   // Casos que no caen en un bloque oficial (p. ej. "Psicología" como bloque propio):
@@ -212,6 +223,14 @@ function goToSimulacro() {
   renderView("simulacro");
 }
 
+function loadProgress(key, fallback) {
+  try { return JSON.parse(localStorage.getItem(key)) ?? fallback; } catch { return fallback; }
+}
+
+function saveProgress(key, value) {
+  localStorage.setItem(key, JSON.stringify(value));
+}
+
 function setActive(view) {
   navButtons.forEach(btn => btn.classList.toggle("active", btn.dataset.view === view));
 }
@@ -225,8 +244,23 @@ function fmtPct(n) {
   return Math.max(0, Math.min(100, n));
 }
 
+// Prioridad de repaso: 0 = nunca intentado (máxima prioridad),
+// 1 = intentado pero con error (ordenado por más antiguo primero),
+// 2 = ya resuelto correctamente (ordenado por más antiguo primero, para refuerzo espaciado).
+function reviewPriority(c) {
+  const st = caseState[c.id];
+  if (!st || !st.attempts) return { tier: 0, date: "" };
+  const lastDate = st.lastAttemptDate || (st.history && st.history.length ? st.history[st.history.length - 1].date : "");
+  return { tier: st.correct ? 2 : 1, date: lastDate };
+}
+
 function sortByPriority(list) {
-  return sortByReviewPriority(list, caseState);
+  return [...list].sort((a, b) => {
+    const pa = reviewPriority(a);
+    const pb = reviewPriority(b);
+    if (pa.tier !== pb.tier) return pa.tier - pb.tier;
+    return (pa.date || "").localeCompare(pb.date || "");
+  });
 }
 
 function goToReview() {
@@ -238,12 +272,9 @@ function renderDashboard() {
   pageTitle.textContent = "Tablero SERUMS";
   pageSubtitle.textContent = "Casos, normativa y progreso en una sola vista.";
 
-  const careers = [...new Set(data.cases.map(c => c.career || c.specialty))]
-    .filter(career => career !== "Transversal");
+  const careers = [...new Set(data.cases.map(c => c.career || c.specialty))];
   const byCareer = careers.map(career => {
-    const casesOfCareer = data.cases.filter(c =>
-      (c.career || c.specialty) === career || c.career === "Transversal"
-    );
+    const casesOfCareer = data.cases.filter(c => (c.career || c.specialty) === career);
     const resolved = casesOfCareer.filter(c => (caseState[c.id] || {}).correct).length;
     return { career, total: casesOfCareer.length, resolved };
   });
@@ -370,9 +401,7 @@ function renderCases() {
   }
 
   // Extraer carreras, bloques, niveles ÚNICOS y ORDENADOS
-  const careers = [...new Set(data.cases.map(c => c.career || c.specialty))]
-    .filter(career => career !== "Transversal")
-    .sort();
+  const careers = [...new Set(data.cases.map(c => c.career || c.specialty))].sort();
   const blocks = [...new Set(data.cases.map(c => c.block))].sort();
   const levels = [...new Set(data.cases.map(c => c.level))].sort();
 
@@ -444,11 +473,12 @@ function renderCases() {
   function draw(filter = "") {
     try {
       const q = filter.toLowerCase();
-      let filtered = filterCases(data.cases, {
-        query: q,
-        career: selectedCareer,
-        block: selectedBlock,
-        level: selectedLevel
+      let filtered = data.cases.filter(c => {
+        const text = [c.title, c.block, c.specialty, c.career, c.statement, ...(c.tags || [])].join(" ").toLowerCase();
+        return text.includes(q) &&
+          (!selectedCareer || (c.career || c.specialty) === selectedCareer) &&
+          (!selectedBlock || c.block === selectedBlock) &&
+          (!selectedLevel || c.level === selectedLevel);
       });
 
       if (priorityReviewMode) filtered = sortByPriority(filtered);
@@ -456,16 +486,20 @@ function renderCases() {
       currentList = filtered;
 
       list.innerHTML = filtered.map(c => {
+        const st = caseState[c.id];
+        let statusTag = `<span class="badge">Nuevo</span>`;
+        if (st && st.correct) statusTag = `<span class="badge">Resuelto</span>`;
+        else if (st && st.attempts) statusTag = `<span class="badge" style="background:#FCEBEA;color:#8A2A24">Con error</span>`;
         const unverifiedTag = c.unverified
           ? `<span class="badge" style="background:#FFF3CD;color:#8A6D1D;margin-left:6px">⚠ Clave sin verificar</span>`
           : "";
         const cardStyle = c.unverified ? ' style="background:#FFFBF0;border-left:4px solid #E9B949"' : "";
         return `
           <button class="case-card" data-id="${c.id}"${cardStyle}>
-            <span>${careerLabel(c)} · ${c.block} · ${c.level}</span>
+            <span>${c.career || c.specialty} · ${c.block} · ${c.level}</span>
             <strong>${c.title}</strong>
             <small>${c.statement}</small>
-            ${unverifiedTag}
+            ${statusTag}${unverifiedTag}
           </button>
         `;
       }).join("") || `<p style="color:#5B6E6A">No hay casos con este filtro.</p>`;
@@ -523,7 +557,6 @@ function openCase(id) {
   activeCase = shuffleCaseOptions(original);
   selectedOption = null;
   confirmed = false;
-  activeCaseAttempts = 0;
   timeLeft = 60;
   clearInterval(timerId);
   timerId = setInterval(() => {
@@ -547,13 +580,13 @@ function renderCasePanel() {
   const correct = confirmed && selectedOption === activeCase.correct;
   // Solo se revela la opción correcta y la explicación técnica si acertó,
   // o si ya agotó los intentos permitidos. En un primer error, no se da pista.
-  const reveal = confirmed && (correct || activeCaseAttempts >= MAX_ATTEMPTS_BEFORE_REVEAL);
-  const attemptsLeft = Math.max(MAX_ATTEMPTS_BEFORE_REVEAL - activeCaseAttempts, 0);
+  const reveal = confirmed && (correct || st.attempts >= MAX_ATTEMPTS_BEFORE_REVEAL);
+  const attemptsLeft = Math.max(MAX_ATTEMPTS_BEFORE_REVEAL - st.attempts, 0);
 
   const optionsHtml = activeCase.options.map((o, i) => {
     let cls = "option-btn";
-    if (confirmed && reveal) {
-      if (i === activeCase.correct) cls += " success";
+    if (confirmed) {
+      if (reveal && i === activeCase.correct) cls += " success";
       else if (i === selectedOption) cls += " error";
     } else if (i === selectedOption) {
       cls += " selected";
@@ -567,14 +600,14 @@ function renderCasePanel() {
 
   panel.innerHTML = `
     <button id="back-to-filters-btn" class="toggle" style="margin-bottom:12px;margin-top:0">← Volver a carreras / filtros</button>
-    <div class="badge">${careerLabel(activeCase)} · ${activeCase.block} · ${activeCase.level}</div>
+    <div class="badge">${activeCase.career || activeCase.specialty} · ${activeCase.block} · ${activeCase.level}</div>
     ${activeCase.unverified ? `<div class="card" style="background:#FFF3CD;border-left:4px solid #E9B949;margin:10px 0;padding:8px 12px"><strong style="color:#8A6D1D">⚠ Clave de respuesta sin verificar</strong><p style="margin:4px 0 0;font-size:13px;color:#5B6E6A">Este caso proviene de un examen real subido, pero la respuesta correcta es un criterio técnico propio, no una clave oficial confirmada.</p></div>` : ""}
     <h3 class="section-title">${activeCase.title}</h3>
     <p>${activeCase.statement}</p>
     <p><strong>${activeCase.question}</strong></p>
     <div class="option-list">${optionsHtml}</div>
     <div class="chips" style="margin-top:12px">${(activeCase.tags || []).map(t => `<span class="chip">${t}</span>`).join("")}</div>
-    <p style="margin-top:12px;color:#5B6E6A">Tiempo: ${timeLeft}s · Intentos: ${activeCaseAttempts}/${MAX_ATTEMPTS_BEFORE_REVEAL} · Puntaje: ${score}</p>
+    <p style="margin-top:12px;color:#5B6E6A">Tiempo: ${timeLeft}s · Intentos: ${st.attempts} · Puntaje: ${score}</p>
     <div id="case-feedback" style="margin-top:12px"></div>
     <div id="case-actions" style="margin-top:12px"></div>
   `;
@@ -652,7 +685,6 @@ function confirmAnswer() {
 
   const correct = selectedOption === activeCase.correct;
   const st = caseState[activeCase.id] || { attempts: 0, correct: false, history: [] };
-  activeCaseAttempts += 1;
   st.attempts += 1;
   st.correct = st.correct || correct;
   st.history = st.history || [];
@@ -691,7 +723,18 @@ function nextCase() {
 
 function renderSimulacro() {
   if (simulacroPhase === "running" && simulacroQueue.length) {
-    if (simulacroTimerId === null) startSimulacroTimer();
+    if (!simulacroTimerId) {
+      simulacroTimerId = setInterval(() => {
+        simulacroTimeLeft -= 1;
+        if (simulacroTimeLeft <= 0) {
+          simulacroTimeLeft = 0;
+          clearInterval(simulacroTimerId);
+          finishSimulacro();
+          return;
+        }
+        updateSimulacroTimerDisplay();
+      }, 1000);
+    }
     return renderSimulacroRunning();
   }
   if (simulacroPhase === "finished") return renderSimulacroResults();
@@ -700,7 +743,7 @@ function renderSimulacro() {
 
 function renderSimulacroIntro() {
   pageTitle.textContent = "Simulacro SERUMS";
-  pageSubtitle.textContent = "Cartilla de práctica e instrucciones antes de comenzar.";
+  pageSubtitle.textContent = "100 preguntas, 5 bloques oficiales, cronómetro y puntaje final.";
 
   const totalAvailable = data.cases.length;
   const target = Math.min(SIMULACRO_TARGET, totalAvailable);
@@ -710,8 +753,7 @@ function renderSimulacroIntro() {
   root.innerHTML = `
     <section class="two-col">
       <div class="panel">
-        <div class="simulacro-kicker">CARTILLA DE PRÁCTICA</div>
-        <h3 class="section-title">Instrucciones del simulacro</h3>
+        <h3 class="section-title">Cómo funciona</h3>
         <label style="display:block;margin-bottom:10px;color:#5B6E6A;font-size:13px">
           Carrera del simulacro
           <select id="simulacro-career-select" class="search" style="margin-top:4px">
@@ -719,18 +761,15 @@ function renderSimulacroIntro() {
             ${careers.map(c => `<option value="${c}" ${simulacroCareer === c ? "selected" : ""}>${c}</option>`).join("")}
           </select>
         </label>
-        <div class="simulacro-instructions">
-          <div><strong>Antes de comenzar</strong><span>Selecciona la carrera con la que practicarás. El cronómetro permanecerá detenido mientras lees esta cartilla.</span></div>
-          <div><strong>Estructura</strong><span>Se balotean hasta ${target} preguntas del banco disponible, relacionadas con Salud Pública, Cuidado Integral de Salud, Ética e Interculturalidad, Investigación y Gestión de Servicios de Salud.</span></div>
-          <div><strong>Cómo responder</strong><span>Marca una alternativa A–D en la pregunta. La fila óptica mostrará automáticamente la letra elegida, sin exigir un segundo marcado.</span></div>
-          <div><strong>Tiempo</strong><span>Esta práctica asigna ${SIMULACRO_SECONDS_PER_Q} segundos por pregunta: aproximadamente ${Math.round(target * SIMULACRO_SECONDS_PER_Q / 60)} minutos si se generan ${target} preguntas.</span></div>
-          <div><strong>Navegación y finalización</strong><span>Confirma cada respuesta para avanzar. Puedes finalizar antes; las preguntas restantes aparecerán como no marcadas en el resumen.</span></div>
-          <div><strong>Resultados</strong><span>Al terminar verás aciertos, errores, no marcadas y desempeño por bloque. Estas métricas son pedagógicas y no constituyen un resultado oficial del MINSA.</span></div>
-        </div>
-        <div class="simulacro-blocks" aria-label="Bloques temáticos">
-          <span>Salud Pública</span><span>Cuidado Integral de Salud</span><span>Ética e Interculturalidad</span><span>Investigación</span><span>Gestión de Servicios de Salud</span>
-        </div>
-        <button class="action-btn simulacro-start" id="start-simulacro-btn">Comenzar simulacro →</button>
+        <ul style="margin:0;padding-left:18px;color:#5B6E6A;line-height:1.7">
+          <li>${target} preguntas seleccionadas al azar, repartidas entre los 5 bloques oficiales SERUMS según la proporción real observada en exámenes anteriores (mayor peso en Gestión y Salud Pública).</li>
+          <li>Si eliges una carrera, los casos clínicos propios de otras profesiones no aparecen — igual que el examen real, que es específico por profesión.</li>
+          <li>Se evitan repetir las preguntas de tus últimos 2 intentos, siempre que haya suficientes casos alternativos disponibles.</li>
+          <li>Cronómetro total de ${Math.round(target * SIMULACRO_SECONDS_PER_Q / 60)} minutos (ritmo de referencia de 1 min/pregunta).</li>
+          <li>Una sola oportunidad de respuesta por pregunta, sin reintentos — igual que el examen real.</li>
+          <li>Sin penalización por error: cada acierto suma un punto.</li>
+        </ul>
+        <button class="action-btn" id="start-simulacro-btn">Iniciar simulacro →</button>
       </div>
       <div class="panel">
         <h3 class="section-title">Tus últimos intentos</h3>
@@ -764,29 +803,19 @@ function startSimulacro() {
   simulacroTimeLeft = simulacroQueue.length * SIMULACRO_SECONDS_PER_Q;
   simulacroPhase = "running";
 
-  startSimulacroTimer();
+  clearInterval(simulacroTimerId);
+  simulacroTimerId = setInterval(() => {
+    simulacroTimeLeft -= 1;
+    if (simulacroTimeLeft <= 0) {
+      simulacroTimeLeft = 0;
+      clearInterval(simulacroTimerId);
+      finishSimulacro();
+      return;
+    }
+    updateSimulacroTimerDisplay();
+  }, 1000);
 
   renderSimulacroRunning();
-}
-
-function stopSimulacroTimer() {
-  if (simulacroTimerId !== null) clearInterval(simulacroTimerId);
-  simulacroTimerId = null;
-}
-
-function tickSimulacroTimer() {
-  simulacroTimeLeft = Math.max(0, Math.ceil((simulacroDeadline - Date.now()) / 1000));
-  updateSimulacroTimerDisplay();
-  if (simulacroTimeLeft === 0) {
-    stopSimulacroTimer();
-    finishSimulacro();
-  }
-}
-
-function startSimulacroTimer() {
-  stopSimulacroTimer();
-  simulacroDeadline = Date.now() + simulacroTimeLeft * 1000;
-  simulacroTimerId = setInterval(tickSimulacroTimer, 250);
 }
 
 function updateSimulacroTimerDisplay() {
@@ -806,21 +835,19 @@ function renderSimulacroRunning() {
 
   const optionsHtml = c.options.map((o, i) => {
     let cls = "option-btn";
-    if (i === simulacroSelected) {
+    if (simulacroConfirmed) {
+      if (i === c.correct) cls += " success";
+      else if (i === simulacroSelected) cls += " error";
+    } else if (i === simulacroSelected) {
       cls += " selected";
     }
     return `<button class="${cls}" data-opt="${i}" ${simulacroConfirmed ? "disabled" : ""}>${String.fromCharCode(65 + i)}. ${o}</button>`;
   }).join("");
 
-  const answerBubbles = c.options.map((_, i) => {
-    const letter = String.fromCharCode(65 + i);
-    return `<button type="button" class="answer-bubble${simulacroSelected === i ? " selected" : ""}" data-opt="${i}" aria-pressed="${simulacroSelected === i}" aria-label="Marcar alternativa ${letter}" ${simulacroConfirmed ? "disabled" : ""}><span>${letter}</span></button>`;
-  }).join("");
-
   root.innerHTML = `
     <section class="panel">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
-        <span class="badge">${careerLabel(c)} · ${c.block}</span>
+        <span class="badge">${c.career || c.specialty} · ${c.block}</span>
         <div style="display:flex;gap:8px;align-items:center">
           <span class="badge" id="simulacro-timer" style="background:#F1E9D8;color:#8A6D3B">--:--</span>
           <button class="action-btn secondary" id="finish-early-btn" style="margin:0;padding:6px 10px;font-size:12px">Finalizar ahora</button>
@@ -831,11 +858,6 @@ function renderSimulacroRunning() {
       <p>${c.statement}</p>
       <p><strong>${c.question}</strong></p>
       <div class="option-list">${optionsHtml}</div>
-      <div class="current-answer-sheet" aria-label="Fila óptica de la pregunta actual">
-        <div class="optical-row-number"><span>Pregunta</span><strong>${simulacroIndex + 1}</strong></div>
-        <div class="answer-bubbles">${answerBubbles}</div>
-        <span>${simulacroSelected === null ? "Sin marcar" : `Respuesta reflejada: ${String.fromCharCode(65 + simulacroSelected)}`}</span>
-      </div>
       <div id="simulacro-feedback" style="margin-top:12px"></div>
       <div id="simulacro-actions" style="margin-top:12px"></div>
     </section>
@@ -846,20 +868,12 @@ function renderSimulacroRunning() {
   document.getElementById("finish-early-btn").addEventListener("click", () => {
     const answered = simulacroResults.length;
     if (confirm(`Llevas ${answered} de ${simulacroQueue.length} preguntas respondidas. ¿Finalizar el simulacro ahora con ese avance?`)) {
-      stopSimulacroTimer();
+      clearInterval(simulacroTimerId);
       finishSimulacro();
     }
   });
 
   root.querySelectorAll(".option-btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-      if (simulacroConfirmed) return;
-      simulacroSelected = Number(btn.dataset.opt);
-      renderSimulacroRunning();
-    });
-  });
-
-  root.querySelectorAll(".answer-bubble").forEach(btn => {
     btn.addEventListener("click", () => {
       if (simulacroConfirmed) return;
       simulacroSelected = Number(btn.dataset.opt);
@@ -874,10 +888,11 @@ function renderSimulacroRunning() {
     actions.innerHTML = `<button class="action-btn" id="confirm-sim-btn" ${simulacroSelected === null ? "disabled" : ""}>Confirmar respuesta</button>`;
     document.getElementById("confirm-sim-btn").addEventListener("click", confirmSimulacroAnswer);
   } else {
+    const correct = simulacroSelected === c.correct;
     feedback.innerHTML = `
-      <div class="card">
-        <strong>Respuesta registrada</strong>
-        <p>El resultado de la respuesta se mostrará al finalizar el simulacro.</p>
+      <div class="card ${correct ? "success" : "error"}">
+        <strong>${correct ? "Correcto" : "Incorrecto"}</strong>
+        <p>${c.feedback}</p>
       </div>
     `;
     const isLast = simulacroIndex === simulacroQueue.length - 1;
@@ -891,15 +906,7 @@ function confirmSimulacroAnswer() {
   simulacroConfirmed = true;
   const c = simulacroQueue[simulacroIndex];
   const correct = simulacroSelected === c.correct;
-  simulacroResults.push({
-    questionIndex: simulacroIndex,
-    caseId: c.id,
-    career: c.career || c.specialty,
-    block: c.block,
-    selected: simulacroSelected,
-    correctOption: c.correct,
-    correct
-  });
+  simulacroResults.push({ caseId: c.id, career: c.career || c.specialty, block: c.block, correct });
   renderSimulacroRunning();
 }
 
@@ -910,59 +917,32 @@ function nextSimulacroQuestion() {
     simulacroConfirmed = false;
     renderSimulacroRunning();
   } else {
-    stopSimulacroTimer();
+    clearInterval(simulacroTimerId);
     finishSimulacro();
   }
 }
 
 function finishSimulacro() {
-  if (simulacroPhase === "finished") return;
-  stopSimulacroTimer();
   simulacroPhase = "finished";
-  const total = simulacroQueue.length;
-  const answeredCount = simulacroResults.length;
+  const total = simulacroResults.length; // preguntas efectivamente respondidas (permite cierre anticipado)
   const correctCount = simulacroResults.filter(r => r.correct).length;
   const pct = total ? fmtPct(Math.round((correctCount / total) * 100)) : 0;
 
   const byBlock = {};
-  const resultByIndex = new Map(simulacroResults.map(r => [r.questionIndex, r]));
-  simulacroQueue.forEach((question, index) => {
-    const block = question.block;
-    const result = resultByIndex.get(index);
-    byBlock[block] = byBlock[block] || { correct: 0, incorrect: 0, unanswered: 0, total: 0 };
-    byBlock[block].total += 1;
-    if (!result) byBlock[block].unanswered += 1;
-    else if (result.correct) byBlock[block].correct += 1;
-    else byBlock[block].incorrect += 1;
+  simulacroResults.forEach(r => {
+    byBlock[r.block] = byBlock[r.block] || { correct: 0, total: 0 };
+    byBlock[r.block].total += 1;
+    if (r.correct) byBlock[r.block].correct += 1;
   });
 
   const record = {
     date: new Date().toISOString(),
     total,
-    answeredCount,
     correctCount,
     pct,
     byBlock,
     career: simulacroCareer || null,
-    caseIds: simulacroQueue.map(q => q.id),
-    answers: simulacroQueue.map((q, questionIndex) => {
-      const result = resultByIndex.get(questionIndex);
-      return {
-        questionIndex,
-        caseId: q.id,
-        block: q.block,
-        title: q.title,
-        question: q.question,
-        options: [...q.options],
-        selected: result ? result.selected : null,
-        correctOption: q.correct,
-        selectedLetter: result ? String.fromCharCode(65 + result.selected) : null,
-        correctLetter: String.fromCharCode(65 + q.correct),
-        feedback: q.feedback || "",
-        correct: result ? result.correct : false,
-        unanswered: !result
-      };
-    })
+    caseIds: simulacroResults.map(r => r.caseId)
   };
   simulacroHistory.push(record);
   saveProgress("simulacroHistory", simulacroHistory);
@@ -978,62 +958,12 @@ function renderSimulacroResults() {
   if (!last) { simulacroPhase = "intro"; return renderSimulacroIntro(); }
 
   const savedName = localStorage.getItem("preserum_userName") || "";
-  const answers = Array.isArray(last.answers) && last.answers.length
-    ? last.answers
-    : simulacroQueue.map((q, questionIndex) => {
-        const r = simulacroResults.find(item => item.questionIndex === questionIndex);
-        return { questionIndex, caseId: q.id, block: q.block, title: q.title, question: q.question, options: [...q.options], selected: r?.selected ?? null, correctOption: q.correct, selectedLetter: r ? String.fromCharCode(65 + r.selected) : null, correctLetter: String.fromCharCode(65 + q.correct), feedback: q.feedback || "", correct: Boolean(r?.correct), unanswered: !r };
-      });
-  const answerSheet = answers.map((answer, i) => {
-    const status = answer.unanswered ? "unanswered" : (answer.correct ? "correct" : "incorrect");
-    const label = answer.unanswered ? "No marcada" : (answer.correct ? "Correcta" : "Incorrecta");
-    return `<button type="button" class="final-answer ${status}" data-review-index="${i}" aria-label="Revisar pregunta ${i + 1}: ${label}"><strong>${String(i + 1).padStart(2, "0")}</strong><span>${answer.selectedLetter || "—"}</span><small>${label}</small></button>`;
-  }).join("");
-  const answeredCount = last.answeredCount ?? simulacroResults.length;
-  const unansweredCount = Math.max(0, last.total - answeredCount);
-  const incorrectCount = Math.max(0, answeredCount - last.correctCount);
-  const blockPerformance = Object.entries(last.byBlock).map(([block, value]) => ({ block, pct: value.total ? Math.round((value.correct / value.total) * 100) : 0 }));
-  const strengths = blockPerformance.filter(item => item.pct >= 70);
-  const developing = blockPerformance.filter(item => item.pct >= 60 && item.pct < 70);
-  const weaknesses = blockPerformance.filter(item => item.pct < 60);
-  const statistics = window.SERUMS_SIMULACRO_STATS;
-  if (!statistics) throw new Error("No se cargó core/simulacro-statistics.js");
-  const outcomeChart = statistics.outcomeChart(last.correctCount, incorrectCount, unansweredCount, last.total);
-  const blockChart = statistics.blockChart(last.byBlock);
-  const historyChart = statistics.historyChart(simulacroHistory);
 
   root.innerHTML = `
     <section class="grid metrics">
       <div class="card"><span class="label">Puntaje</span><div class="value">${last.correctCount}/${last.total}</div></div>
       <div class="card"><span class="label">Porcentaje</span><div class="value">${last.pct}%</div></div>
-      <div class="card"><span class="label">Incorrectas</span><div class="value">${incorrectCount}</div></div>
-      <div class="card"><span class="label">No marcadas</span><div class="value">${unansweredCount}</div></div>
       <div class="card"><span class="label">Fecha</span><div class="value" style="font-size:18px">${new Date(last.date).toLocaleDateString("es-PE")}</div></div>
-    </section>
-    <section class="simulacro-charts" aria-label="Estadísticas visuales del simulacro">
-      <article class="panel chart-panel">
-        <h3 class="section-title">Distribución del resultado</h3>
-        <p class="chart-subtitle">Composición de las ${last.total} preguntas generadas.</p>
-        ${outcomeChart}
-      </article>
-      <article class="panel chart-panel">
-        <h3 class="section-title">Rendimiento por eje temático</h3>
-        <p class="chart-subtitle">Porcentaje de aciertos sobre el total de cada eje.</p>
-        <div class="axis-bars">${blockChart}</div>
-      </article>
-      <article class="panel chart-panel chart-panel-wide">
-        <h3 class="section-title">Evolución entre intentos</h3>
-        <p class="chart-subtitle">Comparación de hasta ocho simulacros guardados en este dispositivo.</p>
-        ${historyChart}
-      </article>
-    </section>
-    <section class="panel final-answer-sheet">
-      <div class="simulacro-kicker">RESUMEN FINAL</div>
-      <h3 class="section-title">Hoja de respuestas del simulacro</h3>
-      <p class="simulacro-note">Revisa las respuestas registradas. La clasificación de aciertos y errores se muestra únicamente al finalizar.</p>
-      <div class="final-answer-grid">${answerSheet}</div>
-      <div class="final-answer-legend"><span><i class="correct"></i>Correcta</span><span><i class="incorrect"></i>Incorrecta</span><span><i class="unanswered"></i>No marcada</span></div>
-      <div id="simulacro-review-detail" class="simulacro-review-detail" aria-live="polite">Selecciona una fila para revisar la clave y la explicación.</div>
     </section>
     <section class="two-col">
       <div class="panel">
@@ -1043,19 +973,12 @@ function renderSimulacroResults() {
             const p = v.total ? fmtPct(Math.round((v.correct / v.total) * 100)) : 0;
             return `
               <div>
-                <div class="progress-head"><span>${block}</span><span>${v.correct} correctas · ${v.incorrect || 0} incorrectas · ${v.unanswered || 0} no marcadas · ${p}%</span></div>
+                <div class="progress-head"><span>${block}</span><span>${v.correct}/${v.total} · ${p}%</span></div>
                 <div class="bar"><span style="width:${p}%"></span></div>
               </div>
             `;
           }).join("")}
         </div>
-      </div>
-      <div class="panel learning-summary">
-        <h3 class="section-title">Lectura pedagógica del desempeño</h3>
-        <p><strong>Fortalezas:</strong> ${strengths.length ? strengths.map(item => `${item.block} (${item.pct}%)`).join(", ") : "Aún no hay un bloque por encima del 70%."}</p>
-        <p><strong>En progreso:</strong> ${developing.length ? developing.map(item => `${item.block} (${item.pct}%)`).join(", ") : "Ninguno en el rango intermedio."}</p>
-        <p><strong>Prioriza reforzar:</strong> ${weaknesses.length ? weaknesses.map(item => `${item.block} (${item.pct}%)`).join(", ") : "Ningún bloque por debajo del 60%."}</p>
-        <small>Referencia pedagógica interna: fortaleza ≥70%, en progreso 60–69% y reforzar &lt;60%. No es una clasificación oficial del MINSA.</small>
       </div>
       <div class="panel">
         <h3 class="section-title">Exportar constancia</h3>
@@ -1074,21 +997,6 @@ function renderSimulacroResults() {
     </section>
   `;
 
-  root.querySelectorAll(".final-answer").forEach(button => {
-    button.addEventListener("click", () => {
-      const answer = answers[Number(button.dataset.reviewIndex)];
-      const selectedText = answer.selected === null || answer.selected === undefined ? "No marcada" : `${answer.selectedLetter}. ${answer.options?.[answer.selected] || ""}`;
-      const correctText = `${answer.correctLetter || String.fromCharCode(65 + answer.correctOption)}. ${answer.options?.[answer.correctOption] || ""}`;
-      document.getElementById("simulacro-review-detail").innerHTML = `
-        <strong>Pregunta ${answer.questionIndex + 1}: ${answer.title || "Revisión"}</strong>
-        <p>${answer.question || ""}</p>
-        <p><b>Tu respuesta:</b> ${selectedText}</p>
-        <p><b>Clave:</b> ${correctText}</p>
-        <p><b>Explicación:</b> ${answer.feedback || "Sin explicación registrada."}</p>
-      `;
-    });
-  });
-
   document.getElementById("export-pdf-btn").addEventListener("click", () => {
     const name = document.getElementById("export-name").value.trim();
     localStorage.setItem("preserum_userName", name);
@@ -1105,7 +1013,7 @@ function exportSimulacroPDF(record, name) {
   const printRoot = document.getElementById("print-report");
   const blockRows = Object.entries(record.byBlock).map(([block, v]) => {
     const p = v.total ? Math.round((v.correct / v.total) * 100) : 0;
-    return `<tr><td>${block}</td><td>${v.correct}</td><td>${v.incorrect || 0}</td><td>${v.unanswered || 0}</td><td>${v.total}</td><td>${p}%</td></tr>`;
+    return `<tr><td>${block}</td><td>${v.correct}/${v.total}</td><td>${p}%</td></tr>`;
   }).join("");
 
   printRoot.innerHTML = `
@@ -1119,7 +1027,7 @@ function exportSimulacroPDF(record, name) {
       </div>
       <h3>Desglose por bloque oficial</h3>
       <table class="print-table">
-        <thead><tr><th>Bloque temático</th><th>Aciertos</th><th>Errores</th><th>Omitidas</th><th>Total</th><th>%</th></tr></thead>
+        <thead><tr><th>Bloque temático</th><th>Aciertos</th><th>%</th></tr></thead>
         <tbody>${blockRows}</tbody>
       </table>
       <p class="print-note">Este documento es una autoevaluación generada por la aplicación PRE SERUMS PERÚ con fines de estudio personal. No constituye un resultado oficial del proceso SERUMS ni un documento emitido por el MINSA.</p>
@@ -1684,6 +1592,10 @@ function renderView(view) {
   clearInterval(timerId);
   timerId = null;
   activeCase = null;
+  if (view !== "simulacro") {
+    clearInterval(simulacroTimerId);
+    simulacroTimerId = null;
+  }
   if (view === "dashboard") renderDashboard();
   if (view === "cases") renderCases();
   if (view === "simulacro") renderSimulacro();
@@ -1704,19 +1616,13 @@ function renderView(view) {
 
 function renderScreeningTools() {
   pageTitle.textContent = "Clinical Screening Toolkit";
-  pageSubtitle.textContent = "Instrumentos de tamizaje clínico integrados en SERUM-APP, sin depender de repositorios externos.";
+  pageSubtitle.textContent = "Instrumentos de tamizaje clínico validados, con registro automático del caso para investigación epidemiológica.";
   const tools = [
     {
-      name: "AUDIT",
+      name: "AUDIT / AUDIT-C",
       badge: "10 ítems · OMS 2001",
-      desc: "Cuestionario completo para identificar riesgos relacionados con el consumo de alcohol. Disponible en español y quechua ayacuchano validado.",
-      url: "screening/audit.html"
-    },
-    {
-      name: "AUDIT-C",
-      badge: "3 ítems · MINSA",
-      desc: "Tamizaje breve del consumo de alcohol con puntos de corte MINSA y continuidad hacia el AUDIT completo.",
-      url: "screening/audit-c.html"
+      desc: "Identificación de Trastornos por Consumo de Alcohol. Incluye modo de tamizaje rápido AUDIT-C (3 preguntas, con opción de continuar al AUDIT completo si sale positivo). Disponible en español y quechua ayacuchano validado (Douglas Hospital Research Centre / IPAZ).",
+      url: "capacitacion/index.html"
     },
     {
       name: "GAD-7",
@@ -1783,6 +1689,12 @@ function renderScreeningTools() {
       badge: "15 ítems · Escala de Depresión Geriátrica (Yesavage)",
       desc: "Escala validada para detección de depresión en adultos ≥65 años. Sensible a cambios clínicos. Puntos de corte: 0-4 (sin), 5-8 (leve), 9-15 (moderada-severa).",
       url: "screening/gds15-yesavage.html"
+    },
+    {
+      name: "Quiz SERUMS",
+      badge: "10 preguntas · Banco interno",
+      desc: "Quiz interactivo que usa preguntas del banco interno de la plataforma, con retroalimentación al finalizar.",
+      url: "screening/quiz-serums.html"
     }
   ];
   root.innerHTML = `
@@ -1796,7 +1708,7 @@ function renderScreeningTools() {
         </article>
       `).join("")}
     </div>
-    <p style="margin-top:16px;color:#5B6E6A;font-size:13px">Los instrumentos funcionan localmente y no envían resultados clínicos identificables a repositorios externos.</p>
+    <p style="margin-top:16px;color:#5B6E6A;font-size:13px">Cada aplicación queda registrada con datos demográficos anonimizados (sexo, edad, estado civil, departamento) en la base de datos SERUMS.</p>
   `;
   root.querySelectorAll("[data-url]").forEach(btn => {
     btn.addEventListener("click", () => window.open(btn.dataset.url, "_blank"));
@@ -1807,18 +1719,21 @@ function renderCapacitacionScreening() {
   pageTitle.textContent = "Capacitación · Screening";
   pageSubtitle.textContent = "Módulos de tamizaje clínico validados para formación de SERUMS.";
   const tools = [
-    { name: "AUDIT", badge: "Curso aplicado · OMS", desc: "Administración, interpretación, cribado, intervención breve y continuidad en atención primaria.", url: "capacitacion/cursos/audit/index.html" },
-    { name: "GAD-7", badge: "Curso aplicado", desc: "Ansiedad en atención primaria, funcionalidad y diagnóstico diferencial.", url: "capacitacion/cursos/tamizajes/gad7.html" },
-    { name: "PHQ-9", badge: "Curso aplicado", desc: "Depresión en atención primaria, interpretación clínica y seguridad ante autolesión.", url: "capacitacion/cursos/tamizajes/phq9.html" },
-    { name: "WAST", badge: "Curso aplicado", desc: "Violencia de pareja con prioridad en privacidad, seguridad y respuesta clínica.", url: "capacitacion/cursos/tamizajes/wast.html" },
-    { name: "ASSIST", badge: "Curso aplicado", desc: "Riesgo por sustancia, retroalimentación, intervención breve y referencia.", url: "capacitacion/cursos/tamizajes/assist.html" },
-    { name: "CRAFFT", badge: "Curso aplicado", desc: "Consumo en adolescencia, confidencialidad, seguridad y conducta posterior.", url: "capacitacion/cursos/tamizajes/crafft.html" },
-    { name: "TDAH", badge: "Instrumento local", desc: "ASRS-v1.1, Vanderbilt y SNAP-IV integrados en SERUM-APP.", url: "screening/tdah.html" },
-    { name: "Nutrición", badge: "Herramienta local", desc: "Calculadora clínica integrada en SERUM-APP.", url: "screening/nutricion.html" },
+    { name: "AUDIT / AUDIT-C", badge: "10 ítems · OMS 2001", desc: "Identificación de Trastornos por Consumo de Alcohol. Incluye modo de tamizaje rápido AUDIT-C (3 preguntas, con opción de continuar al AUDIT completo si sale positivo).", url: "capacitacion/index.html" },
+    { name: "GAD-7", badge: "7 ítems · Spitzer et al., 2006", desc: "Escala de Ansiedad Generalizada. Versión en castellano.", url: "screening/gad7.html" },
+    { name: "PHQ-9", badge: "9 ítems · Kroenke, Spitzer & Williams, 2001", desc: "Cuestionario de Salud del Paciente para depresión.", url: "screening/phq9.html" },
+    { name: "WAST", badge: "2 ítems · Brown et al., 1996", desc: "Tamizaje corto de violencia de pareja hacia la mujer.", url: "screening/wast.html" },
+    { name: "ASSIST", badge: "10 sustancias · OMS v3.0", desc: "Tamizaje de consumo de alcohol y drogas por sustancia.", url: "screening/assist.html" },
+    { name: "CRAFFT", badge: "6 ítems · Knight, 1999 · v2.1", desc: "Tamizaje breve de consumo de alcohol y drogas en adolescentes y jóvenes.", url: "screening/crafft.html" },
+    { name: "TDAH", badge: "ASRS-v1.1 · Vanderbilt · SNAP-IV", desc: "Tamizaje de TDAH en adultos, niños y adolescentes.", url: "screening/tdah.html" },
+    { name: "Nutrición", badge: "Calculadora clínica", desc: "IMC, peso ideal estimado y gasto energético.", url: "screening/nutricion.html" },
     { name: "SRQ-18", badge: "18 ítems · Screening de Salud General", desc: "Cuestionario de autorreporte para detección de síntomas ansioso-depresivos en población general. Punto de corte: ≥8 = positivo.", url: "screening/srq18.html" },
     { name: "PSC Pediátrico", badge: "30 ítems · Lista de Síntomas Pediátricos", desc: "Cribado de disfunción psicosocial infantil (4-16 años), completado por padres/cuidadores. Detecta problemas emocionales, conductuales y sociales.", url: "screening/psc-pediatrico.html" },
-    { name: "M-CHAT-R/F", badge: "20 ítems · Detección de Riesgo TEA", desc: "Cribado de riesgo de Trastorno del Espectro Autista en lactantes 16-30 meses. Puntos de corte: 0-2 (bajo), 3-7 (medio), 8+ (alto/derivación urgente).", url: "screening/mchat-rf.html" },
-    { name: "GDS-15", badge: "Curso aplicado", desc: "Depresión en la persona mayor, cognición, funcionalidad y riesgo.", url: "capacitacion/cursos/tamizajes/gds15.html" }
+    { name: "M-CHAT-R/F", badge: "20 ítems · Detección de Riesgo TEA", desc: "Cribado de riesgo de Trastorno del Espectro Autista en lactantes 16-30 meses.", url: "screening/mchat-rf.html" },
+    { name: "GDS-15", badge: "15 ítems · Escala de Depresión Geriátrica (Yesavage)", desc: "Escala validada para detección de depresión en adultos ≥65 años. Sensible a cambios clínicos. Puntos de corte: 0-4 (sin), 5-8 (leve), 9-15 (moderada-severa).", url: "screening/gds15-yesavage.html" },
+    { name: "Quiz SERUMS", badge: "10 preguntas · Banco interno", desc: "Quiz interactivo con preguntas del banco interno de la plataforma.", url: "screening/quiz-serums.html" },
+    { name: "Contrarreferencia", badge: "Formato interactivo", desc: "Formato para registrar alta, tratamiento y plan de seguimiento.", url: "capacitacion/recursos/formatos/contrarreferencia.html" },
+    { name: "Derivación", badge: "Formato interactivo", desc: "Formato para documentar la derivación o referencia.", url: "capacitacion/recursos/formatos/referencia.html" }
   ];
   root.innerHTML = `
     <div class="norm-list">
@@ -1831,7 +1746,7 @@ function renderCapacitacionScreening() {
         </article>
       `).join("")}
     </div>
-    <p style="margin-top:16px;color:#5B6E6A;font-size:13px">La capacitación y los instrumentos enlazados están integrados localmente en SERUM-APP.</p>
+    <p style="margin-top:16px;color:#5B6E6A;font-size:13px">Cada aplicación queda registrada con datos demográficos anonimizados en la base de datos SERUMS.</p>
   `;
   root.querySelectorAll("[data-url]").forEach(btn => {
     btn.addEventListener("click", () => window.open(btn.dataset.url, "_blank"));
