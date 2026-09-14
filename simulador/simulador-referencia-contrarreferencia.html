@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulador: Referencia y Contrarreferencia MINSA</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-cyan-50 min-h-screen">
+  <div id="app"></div>
+
+  <script>
+    // DATOS DE CASOS
+    const casos = [
+      {
+        id: 1,
+        titulo: "CASO 1: Violencia de Pareja + Depresión",
+        descripcion: "Mujer, 34 años, Lima. Presenta síntomas depresivos moderados-severos en contexto de violencia de pareja activa.",
+        paciente: "Rosa María Mejía García",
+        edad: "34 años",
+        sexo: "Mujer",
+        ubicacion: "Lima, Zona 3 (urbana)",
+        
+        fases: [
+          {
+            numero: 1,
+            mes: "Mes 1: Presentación",
+            presentacion: `Rosa María acude a Centro de Salud. Refiere: "He estado muy triste, con llanto fácil, sin ganas de nada. Mi pareja me dice cosas muy fuertes y a veces me agrede." 
+            
+EVALUACIÓN INICIAL:
+• PHQ-9 = 19 puntos (depresión moderada-severa)
+• Ideación suicida: SÍ presente, sin plan específico
+• Violencia física: SÍ (golpes ocasionales)
+• Violencia psicológica: SÍ (insultos, amenazas constantes)
+• Red social: Aislada (pareja la controla)
+• Seguridad: En riesgo
+
+¿QUÉ RECOMIENDAS?`,
+            opciones: [
+              {
+                texto: "Mantener en I Nivel con consejería mensual",
+                correcta: false,
+                explicacion: `✗ INCORRECTO. I Nivel NO es suficiente porque:
+• PHQ-9=19 requiere intervención especializada
+• Violencia activa requiere protección + protocolo específico
+• Ideación suicida requiere monitoreo especializado
+• Requiere equipo multidisciplinario (psicólogo + trabajador social + médico)`
+              },
+              {
+                texto: "Derivar a CSMC (Lab 2) - Especializado en violencia",
+                correcta: true,
+                explicacion: `✓ CORRECTO. CSMC es obligatorio porque:
+• TMG moderada-severa (PHQ-9=19)
+• Violencia de pareja activa + protocolo MINSA
+• Ideación suicida presente
+• Requiere plan seguridad + terapia individual + medicación
+
+PROTOCOLO MINSA:
+Código: 99700 (Derivación)
+Destino: Lab 2 (CSMC)
+Diagnósticos: F321 (depresión) + Z60.1 (violencia pareja)`
+              },
+              {
+                texto: "Derivar a Hospitalización Psiquiátrica (Lab 4)",
+                correcta: false,
+                explicacion: `✗ INCORRECTO. No es urgencia psiquiátrica porque:
+• No hay psicosis
+• Ideación suicida sin plan específico
+• No está en peligro inmediato
+• CSMC es el nivel apropiado de atención`
+              }
+            ]
+          },
+          {
+            numero: 2,
+            mes: "Mes 3: Seguimiento CSMC",
+            presentacion: `Rosa María lleva 3 meses en CSMC. Ha asistido a 10 sesiones psicoterapia individual + grupo de apoyo.
+
+EVOLUCIÓN:
+• PHQ-9 = 12 puntos (mejoría, pero aún depresión leve)
+• Ideación suicida: RESUELTA (negada actualmente)
+• Violencia: REDUCIDA (menos incidentes)
+• Red social: MEJORANDO (retomó contacto familia)
+• Seguridad: MEJORADA (elaboró plan de seguridad)
+• Adherencia: EXCELENTE (90%)
+
+La pareja realizó 1 sesión conjunta + se negoció acuerdos.
+
+¿QUÉ RECOMIENDAS?`,
+            opciones: [
+              {
+                texto: "Contrarreferencia inmediata a I Nivel (alta)",
+                correcta: false,
+                explicacion: `✗ INCORRECTO. Contrarreferencia prematura porque:
+• PHQ-9=12 es mejoría pero NO remisión completa
+• Violencia aún activa (aunque reducida)
+• Requiere continuidad terapéutica
+• Riesgo de recaída sin seguimiento CSMC
+
+PROTOCOLO: Contrarreferencia requiere remisión ≥6 meses + PHQ-9 <9 + estabilidad social`
+              },
+              {
+                texto: "Continuar en CSMC 3 meses más (reevaluar mes 6)",
+                correcta: true,
+                explicacion: `✓ CORRECTO. Continuidad CSMC porque:
+• Mejoría significativa pero NO en remisión
+• PHQ-9=12 aún indica depresión (remisión es <9)
+• Violencia requiere monitoreo prolongado
+• Protocolo MINSA: Mínimo 6 meses en CSMC para violencia
+
+SEGUIMIENTO:
+• Psicoterapia individual: 1x/semana
+• Grupo de apoyo: 1x/semana
+• Talleres: empoderamiento + seguridad
+• Reevaluar mes 6 para contrarreferencia planificada`
+              },
+              {
+                texto: "Aumentar frecuencia a 3 veces/semana (urgencia)",
+                correcta: false,
+                explicacion: `✗ INCORRECTO. Escalada innecesaria porque:
+• Evolución es favorable
+• Ideación suicida resuelta
+• Violencia está en proceso de resolución
+• Aumentar frecuencia puede generar dependencia
+
+La intensidad actual es apropiada para la mejoría`
+              }
+            ]
+          },
+          {
+            numero: 3,
+            mes: "Mes 6: Contrarreferencia Planificada",
+            presentacion: `Rosa María ya lleva 6 meses en CSMC. Reevaluación:
+
+ESTADO ACTUAL:
+• PHQ-9 = 6 puntos (REMISIÓN COMPLETA)
+• Ideación suicida: NEGADA (sin historia reciente)
+• Violencia: CESE (pareja abandonó hogar)
+• Red social: RESTAURADA (con familia y amigos)
+• Funcionalidad: RETORNADA (trabajo + actividades)
+• Adherencia: EXCELENTE (100%)
+
+Plan seguridad: CONSOLIDADO
+Familia: CAPACITADA en apoyo
+
+¿QÓ TIPO DE ALTA RECOMIENDAS?`,
+            opciones: [
+              {
+                texto: "Alta sin seguimiento (recuperada, fin de caso)",
+                correcta: false,
+                explicacion: `✗ INCORRECTO. Alta sin seguimiento porque:
+• Violencia de pareja tiene ALTA recaída (40-60% año 1)
+• Depresión requiere vigilancia preventiva
+• Sin seguimiento hay ruptura de continuidad
+
+PROTOCOLO: Violencia + depresión SIEMPRE requieren seguimiento post-egreso`
+              },
+              {
+                texto: "Contrarreferencia a I Nivel con seguimiento preventivo 12 meses",
+                correcta: true,
+                explicacion: `✓ CORRECTO. Contrarreferencia Tipo 4 porque:
+• PHQ-9 <9 = Remisión completa
+• Funcionalidad restaurada
+• Red social consolidada
+• Familia capacitada
+
+PERO:
+• Seguimiento OBLIGATORIO mínimo 12 meses
+• Frecuencia: Mensual (enfermera I nivel)
+• Indicadores reconsulta: Si PHQ-9 vuelve >12 o ideación suicida
+• Puerta abierta CSMC si recaída
+
+CÓDIGO: 99217 (Alta)
+TIPO: 4 (Ref/Contrarreferencia)
+Medicación: Sertralina continúa (5 años mínimo)`
+              },
+              {
+                texto: "Mantener en CSMC indefinidamente (prevención)",
+                correcta: false,
+                explicacion: `✗ INCORRECTO. Mantener indefinidamente porque:
+• Paciente está en remisión completa
+• Ha alcanzado indicadores de egreso
+• Saturación del CSMC
+• Fomenta dependencia innecesaria
+
+Protocolo: CSMC es para activos/recaídas, no para prevención crónica`
+              }
+            ]
+          }
+        ]
+      },
+
+      {
+        id: 2,
+        titulo: "CASO 2: Esquizofrenia Primer Brote",
+        descripcion: "Varón, 21 años, zona rural. Presenta síntomas psicóticos agudos de instalación rápida.",
+        paciente: "Juan Pablo Morales Roque",
+        edad: "21 años",
+        sexo: "Varón",
+        ubicacion: "Pueblo Joven, rural",
+        
+        fases: [
+          {
+            numero: 1,
+            mes: "Mes 1: Primer Brote Psicótico",
+            presentacion: `Juan Pablo es traído por la familia al Centro de Salud. "Hace 2 semanas empezó raro. Habla solo, dice que hay voces que lo insultan. Se agrede, no duerme."
+
+EVALUACIÓN:
+• Alucinaciones auditivas: SÍ (voces que insultan, dan órdenes)
+• Delirios: SÍ (cree que lo persiguen)
+• Conducta: Desorganizada, agresiva
+• Autocuidado: Deficiente
+• Insight: AUSENTE (no reconoce enfermedad)
+• Familia: Angustiada, sin recursos
+
+Peso: 68 kg, PA 130/85, agitado.
+
+¿QUÉ RECOMIENDAS?`,
+            opciones: [
+              {
+                texto: "Iniciar antipsicóticos en I Nivel y seguimiento mensual",
+                correcta: false,
+                explicacion: `✗ INCORRECTO. I Nivel insuficiente porque:
+• PSICOSIS AGUDA requiere diagnóstico especializado
+• Riesgo de conducta impulsiva/suicidaria sin monitoreo
+• Requiere evaluación diferencial (tóxica, orgánica, etc)
+• Titulación de antipsicóticos requiere especialista
+
+NUNCA iniciar antipsicóticos en I nivel en primer brote`
+              },
+              {
+                texto: "Derivar urgentemente a Hospitalización Psiquiátrica (Lab 4)",
+                correcta: true,
+                explicacion: `✓ CORRECTO. Hospitalización urgente porque:
+• PRIMER BROTE PSICÓTICO = URGENCIA
+• Alucinaciones + delirios + conducta desorganizada
+• Riesgo conductor impulsivo (auto/heteroagresión)
+• Requiere diagnóstico confirmado por psiquiatra
+• Titulación antipsicóticos bajo monitoreo 24h
+
+PROTOCOLO MINSA:
+Código: 99700 (Derivación)
+Destino: Lab 4 (Hospitalización psiquiátrica urgente)
+Duración esperada: 2-4 semanas de estabilización`
+              },
+              {
+                texto: "Derivar a CSMC para manejo ambulatorio",
+                correcta: false,
+                explicacion: `✗ INCORRECTO. CSMC no es apropiado porque:
+• CSMC es para pacientes estables/en remisión
+• Primer brote psicótico requiere urgencia hospitalaria
+• Sin hospitalización inicial = riesgo extremo
+
+Escalada correcta: Hospital (urgencia) → CSMC (mantenimiento)`
+              }
+            ]
+          },
+          {
+            numero: 2,
+            mes: "Mes 2: Egreso de Hospitalización",
+            presentacion: `Juan Pablo lleva 4 semanas hospitalizado. Estado:
+
+EVOLUCIÓN EN HOSPITAL:
+• Antipsicótico iniciado: Risperidona 4 mg/día
+• Alucinaciones: CONTROLADAS (80% mejoría)
+• Delirios: REDUCIDOS (insight parcial retornando)
+• Conducta: ESTABILIZADA
+• Autocuidado: RECUPERADO
+• Familia: Visitante diariamente, capacitada
+
+ESTADO AL EGRESO:
+• F200 Esquizofrenia paranoide confirmada
+• Medicación tolerada bien (sin efectos adversos mayores)
+• Familia: Comprometida, sabe reconocer signos alerta
+
+¿QUÉ ACCIÓN?`,
+            opciones: [
+              {
+                texto: "Alta directa a I Nivel con seguimiento mensual",
+                correcta: false,
+                explicacion: `✗ INCORRECTO. Alta directa porque:
+• Esquizofrenia requiere TRANSICIÓN de cuidados
+• I nivel NO tiene capacidad de monitoreo especializado
+• Alto riesgo de recaída sin seguimiento intenso
+• Requiere continuidad de psiquiatra + equipo
+
+PROTOCOLO: Esquizofrenia SIEMPRE → CSMC post-hospitalización`
+              },
+              {
+                texto: "Contrarreferencia a CSMC (Lab 2) para continuidad de cuidados",
+                correcta: true,
+                explicacion: `✓ CORRECTO. CSMC es transición obligatoria porque:
+• Esquizofrenia requiere seguimiento especializado
+• CSMC mantiene contacto psiquiatra
+• Monitoreo de medicación semanal inicialmente
+• Identificación temprana de recaída
+• Apoyo psicosocial + familia
+
+PROTOCOLO:
+Código: 99217 (Alta)
+TIPO: 4 (Ref/Contrarreferencia a CSMC)
+Frecuencia CSMC: 2x/semana primeras 4 semanas, luego 1x/semana
+Duración CSMC: Mínimo 6-12 meses (según evolución)`
+              },
+              {
+                texto: "Mantener hospitalizado indefinidamente",
+                correcta: false,
+                explicacion: `✗ INCORRECTO. Mantener hospitalizado porque:
+• Paciente está clínicamente estable
+• Puede ser manejado en CSMC
+• Saturación de camas hospitalarias
+• Protocolo: Hospital para urgencia, no para crónico`
+              }
+            ]
+          },
+          {
+            numero: 3,
+            mes: "Mes 8: Evaluación Seguimiento CSMC",
+            presentacion: `Juan Pablo lleva 6 meses en CSMC. Reevaluación:
+
+EVOLUCIÓN EN CSMC:
+• Medicación: Risperidona 4 mg/día (bien tolerada)
+• Síntomas psicóticos: CONTROLADOS (sin alucinaciones/delirios)
+• Funcionalidad: RESTAURADA (estudia, ayuda en casa)
+• Insight: COMPLETO (reconoce enfermedad, adhiere medicación)
+• Familia: ESTABLE (monitorean con responsabilidad)
+• Adherencia: EXCELENTE (100%)
+
+Evaluación neuropsicológica: Cognitivo conservado
+
+¿SIGUIENTE PASO?`,
+            opciones: [
+              {
+                texto: "Contrarreferencia inmediata a I Nivel (alta total)",
+                correcta: false,
+                explicacion: `✗ INCORRECTO. Contrarreferencia prematura porque:
+• Esquizofrenia es CRÓNICA (no se cura)
+• Requiere medicación DE POR VIDA
+• Seguimiento PERMANENTE es obligatorio
+• I nivel NO puede manejar esquizofrenia crónica
+
+PROTOCOLO: Contrarreferencia en esquizofrenia NO existe (es crónica)`
+              },
+              {
+                texto: "Contrarreferencia a I Nivel CON seguimiento indefinido + puerta abierta CSMC",
+                correcta: true,
+                explicacion: `✓ CORRECTO. Contrarreferencia PERMANENTE porque:
+• Remisión clínica sostenida (8 meses sin síntomas)
+• Funcionalidad restaurada (estudia, vida social)
+• Adherencia medicación excelente
+• Familia capacitada y responsable
+
+PERO IMPORTANTE:
+• Medicación: Risperidona continúa INDEFINIDAMENTE
+• Seguimiento I nivel: MENSUAL (control, efectos adversos)
+• Puerta abierta: Reconsulta urgente si recaída
+• Monitoreo: Año 1-2 muy frecuente (risk recaída 60%)
+• NO ES ALTA, es TRANSICIÓN a mantenimiento comunitario
+
+CÓDIGO: 99217 (Alta)
+TIPO: 4 (Ref/Contrarreferencia a I nivel)
+DURACIÓN: INDEFINIDA (esquizofrenia es crónica)`
+              },
+              {
+                texto: "Aumentar medicación y mantener en CSMC 1 año más",
+                correcta: false,
+                explicacion: `✗ INCORRECTO. Aumentar medicación porque:
+• Dosis actual es óptima y bien tolerada
+• Respuesta excelente a dosis presente
+• Aumentar puede generar efectos adversos innecesarios
+• Sobreutilización de recursos CSMC
+
+Paciente está pronto para transición a I nivel`
+              }
+            ]
+          }
+        ]
+      },
+
+      {
+        id: 3,
+        titulo: "CASO 3: Consumo de Heroína + Síndrome de Abstinencia",
+        descripcion: "Varón, 28 años, zona urbana. Presenta dependencia a opioides con sintomatología de abstinencia severa.",
+        paciente: "Carlos Alejandro Díaz Flores",
+        edad: "28 años",
+        sexo: "Varón",
+        ubicacion: "Cono sur, urbano",
+        
+        fases: [
+          {
+            numero: 1,
+            mes: "Mes 1: Crisis de Abstinencia",
+            presentacion: `Carlos Alejandro llega derivado por Hospital. Hace 3 días pausó consumo de heroína. 
+
+SÍNTOMAS ACTUALES:
+• Dolores corporales severos
+• Ansiedad extrema, insomnio
+• Náuseas, vómitos
+• Diarrea, sudoración profusa
+• Agitación, irritabilidad
+• Riesgo: ALTA recaída (90% sin tratamiento)
+
+ANTECEDENTES:
+• 8 años consumiendo heroína diaria
+• 2 intentos previos de rehabilitación (fallidos)
+• Familia rota, sin soporte social
+• Motivación: PRESENTE (quiere dejar)
+
+¿QUÉ RECOMIENDAS?`,
+            opciones: [
+              {
+                texto: "I Nivel: Consejería + medicación sintomática",
+                correcta: false,
+                explicacion: `✗ INCORRECTO. I Nivel insuficiente porque:
+• Abstinencia a heroína = EMERGENCIA médica
+• Requiere sustitución de opioides (buprenorfina/metadona)
+• Requiere equipo multidisciplinario especializado
+• Riesgo recaída 90% sin tratamiento especializado
+
+I nivel puede causar FRACASO y muerte por sobredosis`
+              },
+              {
+                texto: "CSMC Especializado (Lab 2) con programa integral de adicciones",
+                correcta: true,
+                explicacion: `✓ CORRECTO. CSMC es OBLIGATORIO porque:
+• Dependencia a opioides = TMG severo
+• Requiere evaluación médica + psiquiátrica
+• Requiere medicación sustitutiva (buprenorfina 8-16 mg/día)
+• Requiere psicoterapia individual + grupal
+• Requiere seguimiento intenso (2-3x/semana inicialmente)
+
+PROTOCOLO MINSA:
+Código: 99700 (Derivación)
+Destino: Lab 2 (CSMC especializado en adicciones)
+Medicación: Buprenorfina (evita síntomas + evita euforia)
+Duración: Mínimo 6 meses, extensible años`
+              },
+              {
+                texto: "Comunidad Terapéutica (Hogar Protegido - Lab 3)",
+                correcta: false,
+                explicacion: `✗ INCORRECTO. Comunidad Terapéutica directamente porque:
+• Comunidad es para pacientes PARCIALMENTE estables
+• Este paciente requiere ESTABILIZACIÓN MÉDICA primero
+• Requiere médico especialista en adicciones
+• Comunidad es escalada SECUNDARIA, no primaria
+
+Flujo correcto: CSMC (estabilizar) → Comunidad (si falla)`
+              }
+            ]
+          },
+          {
+            numero: 2,
+            mes: "Mes 4: Evaluación en CSMC",
+            presentacion: `Carlos Alejandro lleva 3 meses en programa CSMC. Estado:
+
+EVOLUCIÓN:
+• Medicación: Buprenorfina 12 mg/día (bien tolerada)
+• Síntomas abstinencia: RESUELTOS
+• Craving (deseo consumo): REDUCIDO (escala 3/10)
+• Consumo: CERO (análisis negativo)
+• Psicoterapia: 12 sesiones completadas
+• Grupo de apoyo: Adherencia buena
+• Familia: Retomó contacto
+• Trabajo: Consiguió empleo 4 horas/día
+
+RIESGO ACTUAL: Moderado (primera etapa ganada)
+
+¿QUÉ ACCIÓN?`,
+            opciones: [
+              {
+                texto: "Mantener en CSMC intenso 2 años más (protección máxima)",
+                correcta: false,
+                explicacion: `✗ INCORRECTO. Mantener intenso 2 años porque:
+• Paciente ha alcanzado estabilidad
+• Aumentar duración puede generar dependencia terapéutica
+• Saturación de recursos
+• Desmotivación por falta de progreso visible
+
+PROTOCOLO: Escalada de responsabilidad del paciente`
+              },
+              {
+                texto: "Transición a seguimiento menos intenso + plan contrarreferencia 6 meses",
+                correcta: true,
+                explicacion: `✓ CORRECTO. Transición planificada porque:
+• Abstinencia consolidada (3 meses)
+• Funcionalidad restaurada (trabajo, familia)
+• Adherencia medicación excelente
+• Red psicosocial retornada
+
+PLAN TRANSICIÓN:
+• CSMC reducida a 2 veces/semana (próximos 3 meses)
+• Luego 1x/semana (siguiente 3 meses)
+• Paralelo: I nivel capacitado para transición
+• Buprenorfina continúa (años)
+• Plan egreso mes 6: Contrarreferencia a I nivel
+
+PROTOCOLO:
+Motivar autonomía: "Ya demostraste capacidad, paso a paso"
+Familia: Incluida en plan`
+              },
+              {
+                texto: "Alta total a los 4 meses (recuperado)",
+                correcta: false,
+                explicacion: `✗ INCORRECTO. Alta total porque:
+• Adicción es CRÓNICA, no se cura en 4 meses
+• Buprenorfina debe continuar años (mínimo 2-3)
+• Sin seguimiento = recaída casi segura
+• 90% recaen sin continuidad
+
+PROTOCOLO: Adicción requiere seguimiento PERMANENTE, no alta`
+              }
+            ]
+          },
+          {
+            numero: 3,
+            mes: "Mes 6: Contrarreferencia Planificada",
+            presentacion: `Carlos Alejandro completa 6 meses en programa CSMC.
+
+ESTADO FINAL:
+• Consumo: CERO (6 análisis consecutivos negativos)
+• Buprenorfina: 8 mg/día (dosis óptima)
+• Funcionalidad: RECUPERADA (trabajo 8 horas/día)
+• Familia: RETOMADA (vive con madre, apoyo mutuo)
+• Amigos: Red social retornada
+• Psicología: Insight completo
+• Motivación: EXTREMA ("No quiero volver atrás")
+• Riesgos: Identificados y manejables
+
+Grupo apoyo: Asiste 2x/semana (comprometido)
+
+¿CONTRARREFERENCIA O CONTINUAR?`,
+            opciones: [
+              {
+                texto: "Contrarreferencia a I Nivel inmediata",
+                correcta: false,
+                explicacion: `✗ INCORRECTO. Contrarreferencia inmediata porque:
+• Adicción requiere MÍNIMO 2 años de seguimiento
+• Primer año post-tratamiento = MÁS riesgoso (40-60% recaída)
+• Buprenorfina debe monitorearse especializado
+• I nivel NO tiene expertise en adicciones
+
+Transición LENTA es protección`
+              },
+              {
+                texto: "Contrarreferencia gradual a I Nivel + 2 años seguimiento CSMC paralelo",
+                correcta: true,
+                explicacion: `✓ CORRECTO. Contrarreferencia GRADUAL porque:
+• Abstinencia consolidada (6 meses)
+• Funcionalidad restaurada completamente
+• Familia y red social activas
+• Insight y motivación excelentes
+
+PERO:
+• Adicción es CRÓNICA (medicación años)
+• Riesgo de recaída primer año: 40-60%
+• Requiere supervisión CSMC aún
+
+PLAN:
+Mes 6-12: I Nivel 2x/semana + CSMC 1x/semana (supervisión)
+Año 2: I Nivel 1x/mes + CSMC 1x/mes (vigilancia)
+Buprenorfina: Mínimo 2-3 años (según evolución)
+Grupo apoyo: Continuo
+
+CÓDIGO: 99217 (Alta)
+TIPO: 4 (Ref/Contrarreferencia transicional)
+DURACIÓN: Mínimo 2 años supervisión CSMC`
+              },
+              {
+                texto: "Mantener en CSMC 3 años más (seguridad máxima)",
+                correcta: false,
+                explicacion: `✗ INCORRECTO. Mantener 3 años porque:
+• Paciente ha demostrado responsabilidad
+• CSMC tiene pacientes agudos que necesitan urgencia
+• Dependencia institucional no ayuda
+• Autonomía es parte de la recuperación
+
+Balance: Protección SÍ, pero no sobreprotección`
+              }
+            ]
+          }
+        ]
+      }
+    ];
+
+    // STATE
+    let state = {
+      casoActual: 0,
+      faseActual: 0,
+      respuestas: {},
+      puntuacion: 0,
+      terminado: false
+    };
+
+    function responder(indexOpcion) {
+      const casoData = casos[state.casoActual];
+      const fase = casoData.fases[state.faseActual];
+      const opcion = fase.opciones[indexOpcion];
+
+      state.respuestas[`caso${state.casoActual}_fase${state.faseActual}`] = {
+        correcta: opcion.correcta,
+        explicacion: opcion.explicacion
+      };
+
+      if (opcion.correcta) {
+        state.puntuacion += 10;
+      }
+
+      avanzar();
+    }
+
+    function avanzar() {
+      const casoData = casos[state.casoActual];
+      
+      if (state.faseActual < casoData.fases.length - 1) {
+        state.faseActual++;
+      } else if (state.casoActual < casos.length - 1) {
+        state.casoActual++;
+        state.faseActual = 0;
+      } else {
+        state.terminado = true;
+      }
+
+      render();
+    }
+
+    function interpretarPuntuacion() {
+      if (state.puntuacion >= 28) return { nivel: "🟢 Excelente", color: "text-green-700", recomendacion: "Dominas protocolos de derivación/contrarreferencia MINSA" };
+      if (state.puntuacion >= 21) return { nivel: "🟡 Bueno", color: "text-yellow-700", recomendacion: "Buen desempeño, revisa algunos protocolos" };
+      return { nivel: "🔴 Revisar", color: "text-red-700", recomendacion: "Estudia protocolos antes de atender casos reales" };
+    }
+
+    function renderCaso() {
+      const casoData = casos[state.casoActual];
+      const fase = casoData.fases[state.faseActual];
+      const progreso = ((state.casoActual * 3 + state.faseActual + 1) / 9) * 100;
+
+      return `
+        <div class="max-w-4xl mx-auto p-6">
+          <div class="bg-white rounded-lg shadow-xl p-6 mb-6">
+            <!-- HEADER -->
+            <div class="mb-6">
+              <h1 class="text-2xl font-bold text-blue-900 mb-2">${casoData.titulo}</h1>
+              <p class="text-gray-600">${casoData.descripcion}</p>
+            </div>
+
+            <!-- PROGRESO -->
+            <div class="mb-6">
+              <div class="flex justify-between text-sm mb-2">
+                <span class="font-semibold text-gray-700">Decisión ${state.casoActual * 3 + state.faseActual + 1}/9</span>
+                <span class="font-semibold text-blue-600">Puntuación: ${state.puntuacion}/90</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2">
+                <div class="bg-blue-600 h-2 rounded-full transition-all" style="width: ${progreso}%"></div>
+              </div>
+            </div>
+
+            <!-- DATOS PACIENTE -->
+            <div class="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6 rounded">
+              <p class="text-sm"><strong>Paciente:</strong> ${casoData.paciente} | <strong>Edad:</strong> ${casoData.edad} | <strong>Ubicación:</strong> ${casoData.ubicacion}</p>
+            </div>
+
+            <!-- FASE -->
+            <div class="mb-6">
+              <p class="text-sm font-semibold text-blue-600 mb-2">${fase.mes}</p>
+              <p class="whitespace-pre-line text-gray-800 mb-4">${fase.presentacion}</p>
+            </div>
+
+            <!-- OPCIONES -->
+            <div class="space-y-3">
+              ${fase.opciones.map((opcion, idx) => `
+                <button onclick="responder(${idx})" class="w-full text-left bg-gray-50 hover:bg-blue-50 border-2 border-gray-300 hover:border-blue-500 p-4 rounded-lg transition-all">
+                  <p class="font-semibold text-gray-900">${String.fromCharCode(65 + idx)}) ${opcion.texto}</p>
+                </button>
+              `).join('')}
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderRespuesta() {
+      const casoData = casos[state.casoActual];
+      const fase = casoData.fases[state.faseActual];
+      const respuesta = state.respuestas[`caso${state.casoActual}_fase${state.faseActual}`];
+
+      return `
+        <div class="max-w-4xl mx-auto p-6">
+          <div class="${respuesta.correcta ? 'bg-green-50 border-2 border-green-500' : 'bg-red-50 border-2 border-red-500'} rounded-lg shadow-xl p-8">
+            <div class="mb-6">
+              <h2 class="text-3xl font-bold ${respuesta.correcta ? 'text-green-900' : 'text-red-900'} mb-2">
+                ${respuesta.correcta ? '✓ CORRECTO' : '✗ INCORRECTO'}
+              </h2>
+              <p class="text-sm ${respuesta.correcta ? 'text-green-700' : 'text-red-700'}">
+                Decisión ${state.casoActual * 3 + state.faseActual + 1}/9
+              </p>
+            </div>
+
+            <div class="bg-white rounded-lg p-6 mb-6 border-l-4 ${respuesta.correcta ? 'border-green-500' : 'border-red-500'}">
+              <p class="whitespace-pre-line text-sm leading-relaxed font-mono text-gray-800">
+                ${respuesta.explicacion}
+              </p>
+            </div>
+
+            <button onclick="avanzar()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition">
+              ${state.terminado ? 'Ver Resultados Finales' : 'Siguiente Decisión'} →
+            </button>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderResultados() {
+      const interpretacion = interpretarPuntuacion();
+
+      return `
+        <div class="max-w-4xl mx-auto p-6">
+          <div class="bg-white rounded-lg shadow-xl p-8">
+            <h1 class="text-3xl font-bold text-center mb-8">🎓 RESULTADOS FINALES</h1>
+
+            <div class="grid grid-cols-3 gap-4 mb-8">
+              <div class="bg-blue-100 rounded-lg p-6 border-2 border-blue-600">
+                <p class="text-sm text-blue-700 font-semibold">PUNTUACIÓN</p>
+                <p class="text-4xl font-bold text-blue-900">${state.puntuacion}/90</p>
+              </div>
+              
+              <div class="bg-gray-100 rounded-lg p-6 border-2 border-gray-600">
+                <p class="text-sm text-gray-700 font-semibold">DESEMPEÑO</p>
+                <p class="text-4xl font-bold text-gray-900">${Math.round(state.puntuacion / 90 * 100)}%</p>
+              </div>
+              
+              <div class="bg-purple-100 rounded-lg p-6 border-2 border-purple-600">
+                <p class="text-sm text-purple-700 font-semibold">NIVEL</p>
+                <p class="text-2xl font-bold ${interpretacion.color}">${interpretacion.nivel}</p>
+              </div>
+            </div>
+
+            <div class="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-lg mb-8">
+              <p class="text-lg font-semibold text-blue-900 mb-2">Interpretación</p>
+              <p class="text-gray-800">${interpretacion.recomendacion}</p>
+            </div>
+
+            <div class="bg-gray-50 rounded-lg p-6 mb-8">
+              <h3 class="font-semibold text-gray-900 mb-4">Análisis por Caso</h3>
+              ${casos.map((caso, idxCaso) => {
+                let correctas = 0;
+                for (let i = 0; i < 3; i++) {
+                  if (state.respuestas[`caso${idxCaso}_fase${i}`]?.correcta) correctas++;
+                }
+                return `
+                  <div class="flex justify-between py-2 border-b text-sm">
+                    <span>${caso.titulo}</span>
+                    <span class="font-bold">${correctas}/3 correctas</span>
+                  </div>
+                `;
+              }).join('')}
+            </div>
+
+            <button onclick="location.reload()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition">
+              🔄 Reiniciar Simulador
+            </button>
+          </div>
+        </div>
+      `;
+    }
+
+    function render() {
+      const app = document.getElementById('app');
+      
+      if (state.terminado) {
+        app.innerHTML = renderResultados();
+      } else if (state.respuestas[`caso${state.casoActual}_fase${state.faseActual}`]) {
+        app.innerHTML = renderRespuesta();
+      } else {
+        app.innerHTML = renderCaso();
+      }
+    }
+
+    window.responder = responder;
+    window.avanzar = avanzar;
+    render();
+  </script>
+</body>
+</html>
