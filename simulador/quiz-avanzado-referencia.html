@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Avanzado: Referencia/Contrarreferencia MINSA</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-indigo-50 to-blue-50 min-h-screen">
+  <div id="app"></div>
+
+  <script>
+    // PREGUNTAS QUIZ - 15 TOTAL
+    const questions = [
+      // CONCEPTOS PUNTUALES (5)
+      {
+        id: 1,
+        type: "concepto",
+        category: "Códigos MINSA",
+        question: "¿Cuál es el código de actividad para DERIVACIÓN/REFERENCIA en el formulario HIS?",
+        options: [
+          { text: "99207", correct: false },
+          { text: "99700", correct: true },
+          { text: "99217", correct: false },
+          { text: "99500", correct: false }
+        ],
+        explanation: `✓ CORRECTO: 99700 es el código de actividad para DERIVACIÓN/REFERENCIA.
+
+CÓDIGOS RELACIONADOS:
+• 99700 = Derivación/Referencia (acción inicial)
+• 99217 = Atención de alta salud mental (egreso)
+• 99207 = Consulta ambulatoria salud mental
+• 99500 = Interconsulta
+
+PROTOCOLO MINSA: Sección C.5 - Derivación/Referencia`
+      },
+
+      {
+        id: 2,
+        type: "concepto",
+        category: "Destino Lab",
+        question: "¿Cuál es el valor Lab (destino) para CSMC (Centro de Salud Mental Comunitario)?",
+        options: [
+          { text: "Lab 1 (I nivel no especializado)", correct: false },
+          { text: "Lab 2 (CSMC)", correct: true },
+          { text: "Lab 3 (Hogar protegido)", correct: false },
+          { text: "Lab 4 (Hospitalización psiquiátrica)", correct: false }
+        ],
+        explanation: `✓ CORRECTO: Lab 2 = CSMC.
+
+DESTINOS MINSA (valor Lab):
+• Lab 1 = I nivel no especializado (puestos de salud)
+• Lab 2 = CSMC ← Recomendado para TMG leve-moderado, violencia, adicciones
+• Lab 3 = Hogar protegido (comunidad terapéutica)
+• Lab 4 = Unidad hospitalización psiquiátrica (urgencia)
+• Lab 5 = Otra institución (ONG, privada)
+
+PROTOCOLO: Manual MINSA 2025 - Sección Derivación`
+      },
+
+      {
+        id: 3,
+        type: "concepto",
+        category: "Tipo de Alta",
+        question: "¿Cuál es el código de ALTA POR REFERENCIA/CONTRARREFERENCIA?",
+        options: [
+          { text: "Tipo 1 (Alta por recuperación)", correct: false },
+          { text: "Tipo 2 (Alta voluntaria)", correct: false },
+          { text: "Tipo 4 (Alta por referencia/contrarreferencia)", correct: true },
+          { text: "Tipo 5 (Defunción)", correct: false }
+        ],
+        explanation: `✓ CORRECTO: Tipo 4 = Alta por referencia/contrarreferencia.
+
+TIPOS DE ALTA MINSA:
+• Tipo 1 = Alta por recuperación (remisión completa, sin seguimiento)
+• Tipo 2 = Alta voluntaria (paciente solicita)
+• Tipo 3 = Alta por abandono (no asistencia)
+• Tipo 4 = Alta por REFERENCIA/CONTRARREFERENCIA ← Continuo de cuidados
+• Tipo 5 = Defunción
+
+DIFERENCIA CRÍTICA:
+- Alta por recuperación = FIN del tratamiento
+- Alta por ref/contrarreferencia = TRANSICIÓN a otro nivel + seguimiento
+
+PROTOCOLO: Manual MINSA 2025 - Sección Egreso`
+      },
+
+      {
+        id: 4,
+        type: "concepto",
+        category: "Indicadores",
+        question: "¿Cuál NO es indicador de contrarreferencia a I nivel desde CSMC?",
+        options: [
+          { text: "PHQ-9 <9 (remisión sintomática)", correct: false },
+          { text: "Cumplimiento medicación >90%", correct: false },
+          { text: "Red psicosocial consolidada (familia, empleo)", correct: false },
+          { text: "Síntomas psicóticos presentes pero estables", correct: true }
+        ],
+        explanation: `✓ CORRECTO: Síntomas psicóticos presentes descarta contrarreferencia.
+
+INDICADORES DE CONTRARREFERENCIA (deben cumplirse TODOS):
+✓ Remisión clínica: PHQ-9 <9, ideación suicida 0, sin alucinaciones/delirios
+✓ Adherencia medicación: >90% cumplimiento
+✓ Funcionalidad restaurada: Trabajo/estudios retomados
+✓ Red psicosocial: Familia, amigos, comunidad activados
+✓ Familia capacitada: Reconoce síntomas de alerta
+
+CONTRARREFERENCIA PREMATURA CAUSA:
+- Recaída sintomática (60-70% en primer año)
+- Ruptura de continuidad
+- Pérdida del sistema de apoyo
+
+PROTOCOLO MINSA: Criterios de egreso C.6`
+      },
+
+      {
+        id: 5,
+        type: "concepto",
+        category: "Protocolo Violencia",
+        question: "¿Cuál es el tiempo MÍNIMO de seguimiento recomendado post-contrarreferencia en violencia de pareja?",
+        options: [
+          { text: "3 meses", correct: false },
+          { text: "6 meses", correct: false },
+          { text: "12 meses (1 año)", correct: true },
+          { text: "Sin seguimiento estructurado", correct: false }
+        ],
+        explanation: `✓ CORRECTO: 12 meses es el seguimiento mínimo en violencia de pareja.
+
+PROTOCOLO VIOLENCIA MINSA 2025:
+• Derivación: Violencia de pareja activa + TMG → CSMC obligatorio
+• Duración CSMC: 6-12 meses según evolución
+• Contrarreferencia: Cuando remisión + plan seguridad consolidado
+• Seguimiento POST-egreso: MÍNIMO 12 meses
+
+RAZÓN CLÍNICA:
+- Violencia de pareja = trauma crónico con alta recaída
+- Riesgo de reincidencia: 40-60% en año 1 sin seguimiento
+- Medicación + apoyo + plan seguridad = protección
+
+SECCIÓN MANUAL: C.5 Derivación + Violencia doméstica`
+      },
+
+      // CASOS BREVES (5)
+      {
+        id: 6,
+        type: "caso-breve",
+        category: "Caso Breve",
+        question: "Mujer, 28 años, PHQ-9=22 (depresión moderada-severa), sin ideación suicida, sin violencia activa. Busca tratamiento en I nivel. ¿Dónde derivar?",
+        options: [
+          { text: "Mantener en I nivel, consejería + seguimiento", correct: false },
+          { text: "Derivar a CSMC (Lab 2) para psicoterapia", correct: true },
+          { text: "Referir a hospitalización (Lab 4)", correct: false },
+          { text: "Enviar a hogar protegido (Lab 3)", correct: false }
+        ],
+        explanation: `✓ CORRECTO: Derivar a CSMC (Lab 2).
+
+JUSTIFICACIÓN:
+• PHQ-9=22 = Depresión moderada-severa (requiere intervención activa)
+• I nivel = Solo consejería básica, sin psicoterapia estructurada
+• CSMC = Terapia individual + grupal + seguimiento psiquiátrico
+• Ausencia ideación suicida = No requiere urgencia hospitalaria
+
+PROTOCOLO MINSA:
+- TMG leve-moderado: Pueden mantenerse en I nivel
+- TMG moderado-severo: Requieren CSMC
+- Crisis aguda/psicosis: Hospitalización (Lab 4)
+
+CÓDIGOS:
+• Derivación: 99700
+• Destino: Lab 2
+• Diagnóstico: F321 (depresión moderada)`
+      },
+
+      {
+        id: 7,
+        type: "caso-breve",
+        category: "Caso Breve",
+        question: "Varón, 35 años, consumo de cocaína activo (F140), ansiedad severa, motivado para dejar consumo. Sin antecedentes psiquiátricos. ¿Primer paso?",
+        options: [
+          { text: "Iniciar antidepresivos en I nivel", correct: false },
+          { text: "Derivar a CSMC para programa de rehabilitación integral", correct: true },
+          { text: "Derivar a hospitalización psiquiátrica", correct: false },
+          { text: "Derivar a hogar protegido (comunidad terapéutica)", correct: false }
+        ],
+        explanation: `✓ CORRECTO: Derivar a CSMC para programa integral.
+
+JUSTIFICACIÓN:
+• Consumo activo de cocaína = Requiere programa multidisciplinario
+• CSMC tiene capacidad de:
+  - Evaluación médica + psiquiátrica
+  - Manejo de ansiedad (medicación + psicoterapia)
+  - Intervención psicosocial (familia, red)
+  - Seguimiento intenso primeras semanas
+• Motivación presente = Mejor pronóstico
+• I nivel = INSUFICIENTE (sin protocolos de adicción)
+
+ESCALADA POSTERIOR:
+Si falla programa CSMC → Considerar hogar protegido
+Si crisis aguda → Hospitalización temporal
+
+PROTOCOLO: CSMC con especialidad en adicciones (si disponible)
+Código derivación: 99700, Lab 2`
+      },
+
+      {
+        id: 8,
+        type: "caso-breve",
+        category: "Caso Breve",
+        question: "Paciente con esquizofrenia en remisión (6 meses sin síntomas psicóticos, PHQ-9=5, trabaja 30 hrs/semana, familia capacitada). CSMC propone contrarreferencia a I nivel. ¿Acción?",
+        options: [
+          { text: "Contrarreferencia: Seguimiento mensual en I nivel + teleconsulta psiquiatra", correct: true },
+          { text: "Mantener indefinidamente en CSMC (esquizofrenia requiere CSMC siempre)", correct: false },
+          { text: "Alta sin seguimiento (remisión = fin de tratamiento)", correct: false },
+          { text: "Derivar a hogar protegido para mayor control", correct: false }
+        ],
+        explanation: `✓ CORRECTO: Contrarreferencia con seguimiento permanente en I nivel.
+
+JUSTIFICACIÓN:
+• Indicadores de estabilidad:
+  - Remisión psicótica sostenida (6+ meses)
+  - Funcionalidad restaurada (trabajo, autocuidado)
+  - Familia capacitada
+  - Adherencia medicación excelente
+
+• Transición adecuada:
+  - I nivel = Competente para manejo mantenimiento
+  - CSMC = Puerta abierta si recaída
+  - Teleconsulta psiquiatra = Supervisión sin saturar CSMC
+
+• PERO esquizofrenia es CRÓNICA:
+  - Requiere medicación DE POR VIDA
+  - Seguimiento permanente (no cierre de caso)
+  - Plan de reconsulta urgente si síntomas reaparecen
+
+CÓDIGOS:
+• Tipo alta: 4 (ref/contrarreferencia)
+• Código: 99217
+• Destino: I nivel
+
+DURACIÓN SEGUIMIENTO: INDEFINIDA (esquizofrenia no se "cura")`
+      },
+
+      {
+        id: 9,
+        type: "caso-breve",
+        category: "Caso Breve",
+        question: "CSMC recibe derivación de primer brote psicótico (F200, 21 años, síntomas floridos: alucinaciones + delirios). ¿Acción CSMC?",
+        options: [
+          { text: "Admitir en CSMC y iniciar antipsicóticos", correct: false },
+          { text: "Rederivir urgentemente a hospitalización psiquiátrica (Lab 4)", correct: true },
+          { text: "Mantener en CSMC con monitoreo intensivo", correct: false },
+          { text: "Derivar a I nivel para seguimiento", correct: false }
+        ],
+        explanation: `✓ CORRECTO: Rederivir urgentemente a hospitalización (Lab 4).
+
+JUSTIFICACIÓN:
+• Primer brote psicótico = URGENCIA PSIQUIÁTRICA
+• Síntomas floridos (alucinaciones + delirios) = Crisis aguda
+• CSMC NO tiene capacidad de:
+  - Monitoreo médico 24h
+  - Manejo de conducta impulsiva en fase aguda
+  - Diagnóstico diferencial (psicosis orgánica, tóxica, etc)
+
+• Hospitalización es NECESARIA para:
+  - Diagnóstico confirmado (psiquiatra especialista)
+  - Titulación antipsicóticos bajo monitoreo continuo
+  - Estabilización aguda (2-4 semanas típicas)
+  - Entonces → CSMC transición → I nivel
+
+PROTOCOLO ESCALADA:
+Crisis psicótica aguda → HOSPITALIZACIÓN (Lab 4)
+                ↓ (estable)
+              CSMC (Lab 2)
+                ↓ (remisión + funcionalidad)
+              I Nivel (Lab 1)
+
+CRITERIO: "Si hay alucinaciones/delirios floridos sin diagnóstico confirmado → Hospitalización"
+
+Código: 99700, Rederivación urgente a Lab 4`
+      },
+
+      {
+        id: 10,
+        type: "caso-breve",
+        category: "Caso Breve",
+        question: "Paciente con TAO (trastorno adaptativo con origen identificable, Z631), síntomas depresivos leves (PHQ-9=7), estrés situacional (mudanza, cambio trabajo). I nivel propone derivación a CSMC. ¿Indicado?",
+        options: [
+          { text: "SÍ, todos requieren CSMC", correct: false },
+          { text: "NO, mantener en I nivel con seguimiento + consejería", correct: true },
+          { text: "Derivar a hospitalización por seguridad", correct: false },
+          { text: "Derivar a hogar protegido para contención", correct: false }
+        ],
+        explanation: `✓ CORRECTO: Mantener en I nivel.
+
+JUSTIFICACIÓN:
+• TAO (Z631) = Respuesta normal a estrés identificable
+• Síntomas leves (PHQ-9=7) = No requieren psicoterapia especializada
+• I nivel ES COMPETENTE para:
+  - Consejería de manejo de estrés
+  - Psicoeducación sobre adaptación
+  - Seguimiento y monitoreo
+  - Derivación si empeora
+
+CRITERIO DE DERIVACIÓN MINSA:
+✓ Síntomas persistentes >4 semanas
+✓ Funcionalidad deteriorada significativamente
+✓ I nivel falló intervención tras 4+ semanas
+✓ Comorbilidad (ej: TAO + depresión moderada-severa)
+
+AQUÍ:
+❌ Solo 1 factor de estrés
+❌ Síntomas leves
+❌ TAO es NORMAL, no patología
+
+PROTOCOLO: TAO leve → I nivel. Si empeora → Rederivación CSMC
+
+ENSEÑANZA CLAVE: No todos requieren especialista. I nivel maneja leve.`
+      },
+
+      // VIÑETAS CLÍNICAS (3)
+      {
+        id: 11,
+        type: "viñeta",
+        category: "Viñeta Clínica",
+        question: "Paciente llega a CSMC 2 semanas post-alta de hospitalización psiquiátrica por esquizofrenia. Refiere: 'Las voces volvieron hace 3 días'. ¿Acción CSMC?",
+        options: [
+          { text: "Aumentar dosis antipsicótico en CSMC + observación", correct: false },
+          { text: "Referir urgentemente a hospitalización (Lab 4) + contactar equipo hospitalario", correct: true },
+          { text: "Aumentar frecuencia de consultas a 2 veces/semana", correct: false },
+          { text: "Derivar a I nivel para manejo comunitario", correct: false }
+        ],
+        explanation: `✓ CORRECTO: Rederivir urgentemente a hospitalización.
+
+JUSTIFICACIÓN:
+• Recaída AÚN EN FASE CRÍTICA (2 semanas post-alta)
+• Reaparición de síntomas psicóticos = CRISIS
+• Riesgo de:
+  - Conducta impulsiva/suicidaria
+  - No adherencia a medicación
+  - Descompensación rápida
+  - Necesidad de ajuste farmacológico IV
+
+PROTOCOLO RECAÍDA PSICÓTICA:
+Recaída en hospital ← readmisión inmediata
+Recaída en CSMC (mes 1-3) ← rederivación urgente
+Recaída en I nivel (mes 3+) ← rederivación según gravedad
+
+COMUNICACIÓN:
+• CSMC contacta equipo hospitalario
+• Facilita reinternamiento
+• Pasa informe de medicación + eventos de estrés
+
+ENSEÑANZA: Primera recaída post-hospitalization = Riesgo muy alto. No esperar.
+
+Código: Rederivación urgente Lab 4`
+      },
+
+      {
+        id: 12,
+        type: "viñeta",
+        category: "Viñeta Clínica",
+        question: "I nivel reporta: Paciente derivado a CSMC hace 3 meses por depresión severa. NO ha retornado a I nivel para seguimiento preventivo acordado. ¿Acción I nivel?",
+        options: [
+          { text: "Cerrar el caso (paciente está con CSMC)", correct: false },
+          { text: "Contactar a CSMC para verificar estado y reactivar plan de seguimiento", correct: true },
+          { text: "Esperar a que paciente retorne cuando quiera", correct: false },
+          { text: "Derivar nuevamente a CSMC para que lo vigile", correct: false }
+        ],
+        explanation: `✓ CORRECTO: Contactar CSMC para coordinar.
+
+JUSTIFICACIÓN:
+• DERIVACIÓN ACTIVA = I nivel sigue siendo responsable del paciente
+• Continuidad de cuidados NO significa "abandonar" al derivado
+• Protocolo MINSA: Comunicación bidireccional entre niveles
+
+ACCIONES I NIVEL POST-DERIVACIÓN:
+✓ Seguimiento del derivado (verificar asistencia a CSMC)
+✓ Contacto con CSMC en mes 1 (¿paciente llegó?)
+✓ Coordinación de seguimiento cuando regrese
+✓ Preparar continuidad en I nivel (consultas preventivas)
+
+COMUNICACIÓN:
+"Contactar a CSMC:
+- ¿Paciente asistió?
+- ¿Cómo es evolución?
+- ¿Cuándo contrarreferencia esperada?
+- ¿Podemos coordinar seguimiento?"
+
+ENSEÑANZA CLAVE: Derivación NO es abandono. Seguimiento activo.
+
+PROTOCOLO: C.5 y coordinación entre niveles MINSA`
+      },
+
+      {
+        id: 13,
+        type: "viñeta",
+        category: "Viñeta Clínica",
+        question: "Paciente en remisión post-CSMC solicita egreso porque 'ya estoy bien y ocupado con trabajo'. CSMC propone mantenerlo 6 meses más. Paciente rechaza. ¿Proceder?",
+        options: [
+          { text: "Mantener contra voluntad (por su seguridad)", correct: false },
+          { text: "Facilitar contrarreferencia + educar sobre riesgos + plan de reconsulta", correct: true },
+          { text: "Alta sin seguimiento (respeta autonomía)", correct: false },
+          { text: "Derivar a hogar protegido por incumplimiento", correct: false }
+        ],
+        explanation: `✓ CORRECTO: Facilitar contrarreferencia CON educación + plan de reconsulta.
+
+JUSTIFICACIÓN:
+• Paciente tiene DERECHO a dejar tratamiento
+• Pero CSMC tiene DEBER DE PREVENCIÓN
+
+PROTOCOLO AUTONOMÍA + RESPONSABILIDAD:
+1. EDUCAR: "Riesgo de recaída sin seguimiento. Plan: retornar si síntomas"
+2. DOCUMENTAR: Registrar rechazo informado en Historia Clínica
+3. FACILITAR EGRESO: Contrarreferencia planificada (no castigo)
+4. PLAN DE RECONSULTA: "Si PHQ-9 vuelve >12 o ideación suicida → acude"
+5. PUERTA ABIERTA: "CSMC disponible si necesitas urgencia"
+
+NUNCA:
+❌ Mantener contra voluntad sin criterio legal
+❌ Abandonar sin plan de seguimiento
+❌ Castigar por dejar tratamiento
+
+FRASE CLAVE: "Respeto tu decisión. Aquí el riesgo. Aquí tu plan B."
+
+PROTOCOLO: Consentimiento informado + Contrarreferencia responsable
+
+CÓDIGOS: 99217, tipo alta 4, seguimiento preventivo acordado`
+      },
+
+      // VALIDACIÓN DOCUMENTACIÓN (2)
+      {
+        id: 14,
+        type: "documentacion",
+        category: "Validación Documentación",
+        question: "Revisa este informe de derivación. ¿QUÉ FALTA para que sea VÁLIDO según protocolo MINSA?\n\n'Derivamos a paciente a CSMC. Diagnóstico: Depresión. Motivo: Necesita psicoterapia.' ¿Qué elementos faltan?",
+        options: [
+          { text: "Solo falta firmar", correct: false },
+          { text: "Falta: Diagnóstico CIE-10 + Código derivación (99700) + Valor Lab + Fecha + Firma", correct: true },
+          { text: "Está completo", correct: false },
+          { text: "Falta solo la fecha", correct: false }
+        ],
+        explanation: `✓ CORRECTO: Faltan múltiples elementos administrativos.
+
+INFORME DE DERIVACIÓN COMPLETO MINSA debe incluir:
+
+MÍNIMO ADMINISTRATIVO:
+✓ Número Historia Clínica
+✓ Datos paciente (nombre, DNI, edad, sexo)
+✓ Establecimiento derivador
+✓ Fecha derivación
+✓ Establecimiento destino (nombre completo)
+
+MÍNIMO CLÍNICO:
+✓ Diagnóstico CIE-10 (ej: F321, no solo "depresión")
+✓ Tipo diagnóstico (R = relacionado, D = diagnóstico, P = principal)
+✓ Problema psicosocial (Z code si aplica)
+✓ Motivo derivación (¿por qué necesita especialista?)
+✓ Resultados evaluación (PHQ-9, AUDIT, etc)
+✓ Medicación actual (si aplica)
+
+MÍNIMO ADMINISTRATIVO-CLÍNICO:
+✓ Código de actividad: 99700 (derivación/referencia)
+✓ Tipo de derivación: Urgente / No urgente
+✓ Valor Lab destino (1, 2, 3, 4, 5)
+✓ Plan de seguimiento esperado
+✓ Firma y sello responsable
+
+FIRMA FINAL:
+✓ Nombre, DNI, firma y sello profesional
+
+PROTOCOLO MINSA: Sección C.5 - Formato completo obligatorio
+
+RIESGO SIN DOCUMENTACIÓN:
+- Paciente no sabe adónde ir
+- CSMC rechaza admisión sin informe
+- Se pierde continuidad de cuidados`
+      },
+
+      {
+        id: 15,
+        type: "documentacion",
+        category: "Validación Documentación",
+        question: "Revisas informe de CONTRARREFERENCIA de CSMC a I nivel. ¿Cuál es el elemento CRÍTICO que DEBE incluir?",
+        options: [
+          { text: "Solo diagnóstico y fecha de alta", correct: false },
+          { text: "Diagnóstico + Medicación continuada + PLAN DE SEGUIMIENTO ESPECÍFICO + Fecha de reconsulta", correct: true },
+          { text: "Resumen breve de evolución", correct: false },
+          { text: "Tipo de alta y punto. Fin de caso.", correct: false }
+        ],
+        explanation: `✓ CORRECTO: Plan de seguimiento específico es CRÍTICO.
+
+CONTRARREFERENCIA NO ES ABANDONO.
+Es transición a nivel comunitario CON SUPERVISIÓN.
+
+INFORME DE CONTRARREFERENCIA COMPLETO debe incluir:
+
+ADMINISTRATIVO:
+✓ Código actividad: 99217 (atención de alta salud mental)
+✓ Tipo de alta: 4 (ref/contrarreferencia)
+✓ Establecimiento destino: I nivel específico
+✓ Fecha de alta
+✓ Firma y sello CSMC
+
+CLÍNICO:
+✓ Diagnóstico final (CIE-10)
+✓ Resumen de evolución (¿cómo respondió?)
+✓ Logros alcanzados
+✓ Síntomas residuales (si aplica)
+
+MEDICACIÓN (CRÍTICO):
+✓ Medicación que continúa
+✓ Dosis, frecuencia, duración
+✓ Dónde obtener fármacos
+✓ Indicaciones de parada
+
+SEGUIMIENTO (CRÍTICO):
+✓ PLAN ESPECÍFICO: "Consultas cada 30 días por 6 meses"
+✓ Responsable: "Enfermera/Psicólogo I nivel"
+✓ Indicadores de reconsulta: "Si PHQ-9 >12 o ideación suicida"
+✓ Acceso CSMC: "Puerta abierta si deterioro agudo"
+✓ Teleconsulta psiquiatra: "Mensual o según necesidad"
+
+EDUCACIÓN:
+✓ Psicoeducación familia: "Reconocer signos de alerta"
+✓ Plan de crisis: "Si empeora, acudir a..."
+✓ Recursos de apoyo: Grupos comunitarios, líneas de crisis
+
+ENSEÑANZA CLAVE:
+Contrarreferencia SIN PLAN DE SEGUIMIENTO = NEGLIGENCIA
+Causa recaída 60-70% en primer año
+
+PROTOCOLO MINSA: Sección Egreso/Alta - C.6`
+      }
+    ];
+
+    // STATE
+    let state = {
+      currentQuestion: 0,
+      answers: {},
+      feedback: null,
+      showResults: false
+    };
+
+    function handleAnswer(optionIndex) {
+      const question = questions[state.currentQuestion];
+      const selectedOption = question.options[optionIndex];
+
+      state.answers[state.currentQuestion] = {
+        selectedOption: selectedOption,
+        correct: selectedOption.correct
+      };
+
+      state.feedback = {
+        isCorrect: selectedOption.correct,
+        explanation: question.explanation,
+        pointsEarned: selectedOption.correct ? 1 : 0
+      };
+
+      render();
+    }
+
+    function handleNextQuestion() {
+      if (state.currentQuestion < questions.length - 1) {
+        state.currentQuestion++;
+        state.feedback = null;
+      } else {
+        state.showResults = true;
+      }
+      render();
+    }
+
+    function calculateScore() {
+      let correct = 0;
+      for (let i = 0; i < questions.length; i++) {
+        if (state.answers[i]?.correct) correct++;
+      }
+      return correct;
+    }
+
+    function handleReset() {
+      state = {
+        currentQuestion: 0,
+        answers: {},
+        feedback: null,
+        showResults: false
+      };
+      render();
+    }
+
+    // RENDER RESULTS
+    function renderResults() {
+      const totalCorrect = calculateScore();
+      const percentage = Math.round((totalCorrect / questions.length) * 100);
+      const passed = totalCorrect >= 12; // 80%
+
+      const html = `
+        <div class="max-w-4xl mx-auto p-6 min-h-screen">
+          <div class="bg-white rounded-lg shadow-xl p-8">
+            <h1 class="text-3xl font-bold text-indigo-900 mb-2">REPORTE FINAL</h1>
+            <p class="text-gray-600 mb-8">Quiz Avanzado: Referencia/Contrarreferencia MINSA 2025</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+              <div class="bg-indigo-100 rounded-lg p-6 border-2 border-indigo-400">
+                <p class="text-sm text-indigo-700 font-semibold">PUNTUACIÓN</p>
+                <p class="text-4xl font-bold text-indigo-900">${totalCorrect}/15</p>
+                <p class="text-xs text-indigo-600 mt-1">${percentage}% de aciertos</p>
+              </div>
+              
+              <div class="bg-green-100 rounded-lg p-6 border-2 border-green-400">
+                <p class="text-sm text-green-700 font-semibold">CRITERIO DE PASO</p>
+                <p class="text-2xl font-bold text-green-900">12/15 (80%)</p>
+                <p class="text-xs text-green-600 mt-1">${passed ? '✅ APROBADO' : '❌ REQUIERE REPASO'}</p>
+              </div>
+              
+              <div class="bg-purple-100 rounded-lg p-6 border-2 border-purple-400">
+                <p class="text-sm text-purple-700 font-semibold">COMPETENCIA</p>
+                <p class="text-2xl font-bold text-purple-900">${passed ? '🟢 DEMOSTRADA' : '🔴 EN CONSTRUCCIÓN'}</p>
+              </div>
+            </div>
+
+            <div class="mb-8 bg-gray-50 rounded-lg p-6 border-l-4 border-indigo-500">
+              <h2 class="text-lg font-semibold text-gray-800 mb-4">ANÁLISIS POR CATEGORÍA</h2>
+              <div class="space-y-3">
+                <div class="flex justify-between items-center pb-2 border-b">
+                  <p class="font-semibold text-gray-800">Códigos MINSA (5 pregs)</p>
+                  <p class="font-bold text-indigo-900">${sumCategoryCorrect(0, 4)}/5</p>
+                </div>
+                <div class="flex justify-between items-center pb-2 border-b">
+                  <p class="font-semibold text-gray-800">Casos Breves (5 pregs)</p>
+                  <p class="font-bold text-indigo-900">${sumCategoryCorrect(5, 9)}/5</p>
+                </div>
+                <div class="flex justify-between items-center pb-2 border-b">
+                  <p class="font-semibold text-gray-800">Viñetas Clínicas (3 pregs)</p>
+                  <p class="font-bold text-indigo-900">${sumCategoryCorrect(10, 12)}/3</p>
+                </div>
+                <div class="flex justify-between items-center">
+                  <p class="font-semibold text-gray-800">Validación Documentación (2 pregs)</p>
+                  <p class="font-bold text-indigo-900">${sumCategoryCorrect(13, 14)}/2</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="${passed ? 'bg-green-50' : 'bg-blue-50'} rounded-lg p-6 border-l-4 ${passed ? 'border-green-500' : 'border-blue-500'} mb-8">
+              <h3 class="font-semibold ${passed ? 'text-green-900' : 'text-blue-900'} mb-3">📋 RECOMENDACIONES</h3>
+              <p class="${passed ? 'text-green-800' : 'text-blue-800'}">
+                ${passed 
+                  ? '<strong>¡FELICIDADES!</strong> Demostraste competencia en protocolos de referencia/contrarreferencia MINSA. Estás listo para aplicar estos conocimientos en formación de otros profesionales.'
+                  : '<strong>Sigue practicando.</strong> Revisa las preguntas donde fallaste. El simulador y este quiz son complementarios: juntos construyen maestría. Repite en 1 semana.'}
+              </p>
+            </div>
+
+            <button onclick="window.location.reload()" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-4 rounded-lg transition">
+              🔄 Reiniciar Quiz
+            </button>
+          </div>
+        </div>
+      `;
+      return html;
+    }
+
+    function sumCategoryCorrect(start, end) {
+      let count = 0;
+      for (let i = start; i <= end; i++) {
+        if (state.answers[i]?.correct) count++;
+      }
+      return count;
+    }
+
+    // RENDER FEEDBACK
+    function renderFeedback() {
+      const question = questions[state.currentQuestion];
+      const answer = state.answers[state.currentQuestion];
+
+      const html = `
+        <div class="max-w-4xl mx-auto p-6 min-h-screen">
+          <div class="${answer.correct ? 'bg-green-50 border-2 border-green-500' : 'bg-red-50 border-2 border-red-500'} rounded-lg shadow-xl p-8">
+            
+            <div class="flex items-start gap-4 mb-6">
+              <div class="text-4xl">${answer.correct ? '✓' : '✗'}</div>
+              <div>
+                <h2 class="text-2xl font-bold ${answer.correct ? 'text-green-900' : 'text-red-900'}">
+                  ${answer.correct ? '✓ CORRECTO' : '✗ INCORRECTO'}
+                </h2>
+                <p class="text-sm mt-1 ${answer.correct ? 'text-green-700' : 'text-red-700'}">
+                  Pregunta ${state.currentQuestion + 1}/15
+                </p>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-lg p-6 mb-6 border-l-4 border-gray-400">
+              <p class="whitespace-pre-line text-gray-800 text-sm leading-relaxed font-mono">
+                ${state.feedback.explanation}
+              </p>
+            </div>
+
+            <button onclick="handleNextQuestion()" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-4 rounded-lg transition">
+              ${state.currentQuestion < questions.length - 1 ? 'Siguiente Pregunta' : 'Ver Resultados'} →
+            </button>
+          </div>
+        </div>
+      `;
+      return html;
+    }
+
+    // RENDER QUESTION
+    function renderQuestion() {
+      const question = questions[state.currentQuestion];
+      const progressPercent = ((state.currentQuestion + 1) / questions.length) * 100;
+
+      const html = `
+        <div class="max-w-4xl mx-auto p-6 min-h-screen">
+          <div class="bg-white rounded-lg shadow-lg p-6 mb-6 border-l-4 border-indigo-600">
+            <div class="flex justify-between items-start mb-4">
+              <div>
+                <p class="text-xs font-semibold text-indigo-600 uppercase">Pregunta ${state.currentQuestion + 1}/15</p>
+                <p class="text-sm text-gray-600 mt-1">${question.category}</p>
+              </div>
+              <div class="text-right">
+                <p class="text-xs text-gray-500 uppercase">Tipo</p>
+                <p class="text-lg font-bold text-indigo-900">${question.type.toUpperCase().replace(/-/g, ' ')}</p>
+              </div>
+            </div>
+            
+            <div class="w-full bg-gray-200 rounded-full h-2">
+              <div class="bg-indigo-600 h-2 rounded-full transition-all" style="width: ${progressPercent}%"></div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+            <h2 class="text-lg font-bold text-gray-900 mb-6 leading-relaxed">${question.question}</h2>
+            
+            <div class="space-y-3">
+              ${question.options.map((option, idx) => `
+                <button onclick="handleAnswer(${idx})" class="w-full text-left bg-gray-50 rounded-lg border-2 border-gray-300 hover:border-indigo-500 hover:bg-indigo-50 p-4 transition-all active:scale-95">
+                  <p class="font-semibold text-gray-900">${String.fromCharCode(65 + idx)}) ${option.text}</p>
+                </button>
+              `).join('')}
+            </div>
+          </div>
+
+          <div class="text-center text-xs text-gray-600">
+            <p>Quiz Avanzado • Criterio de paso: 12/15 (80%)</p>
+          </div>
+        </div>
+      `;
+      return html;
+    }
+
+    // MAIN RENDER
+    function render() {
+      const app = document.getElementById('app');
+      
+      if (state.showResults) {
+        app.innerHTML = renderResults();
+      } else if (state.feedback) {
+        app.innerHTML = renderFeedback();
+      } else {
+        app.innerHTML = renderQuestion();
+      }
+    }
+
+    // GLOBAL FUNCTIONS
+    window.handleAnswer = handleAnswer;
+    window.handleNextQuestion = handleNextQuestion;
+    window.handleReset = handleReset;
+
+    // INITIAL RENDER
+    render();
+  </script>
+</body>
+</html>
