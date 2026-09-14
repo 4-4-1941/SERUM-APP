@@ -1,22 +1,7 @@
 /* SERUM-APP · Screening integrado */
 function renderScreeningTools() {
-  pageTitle.textContent = "Screening y Evaluación Clínica";
-  pageSubtitle.textContent = "Instrumentos clínicos organizados por área de aplicación.";
-  root.innerHTML = `
-    <section>
-      <div class="panel" style="max-width:900px">
-        <h3 class="section-title">Herramientas clínicas</h3>
-        <p style="color:#5B6E6A;line-height:1.6">
-          Salud mental · Alcohol y otras sustancias · Infancia y neurodesarrollo · TDAH · Violencia · Nutrición clínica
-        </p>
-        <button id="open-local-screening" class="action-btn" style="margin-top:12px">
-          Ver instrumentos →
-        </button>
-      </div>
-    </section>`;
-  document.getElementById("open-local-screening").addEventListener("click", () => {
-    window.location.href = "screening/screening-index.html";
-  });
+  // Evita una pantalla de espera: abre el catálogo visual de inmediato.
+  window.location.href = "screening/screening-index.html";
 }
 function renderCapacitacionScreening() {
   pageTitle.textContent = "Capacitación Continua";
