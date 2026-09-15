@@ -1,0 +1,345 @@
+{
+  "module_version": 1,
+  "source": "catalogo-maestro-4-alternativas-revision.json",
+  "total_questions": 2211,
+  "total_modules": 21,
+  "policy": "Índice técnico para carga selectiva por profesión. Todas las preguntas siguen en REVIEW_REQUIRED; no es una aprobación de contenido clínico ni oficial.",
+  "modules": [
+    {
+      "profession": "Biología",
+      "file": "biologia.json",
+      "total_questions": 125,
+      "thematic_blocks": {
+        "Cuidado integral": 122,
+        "Ética e interculturalidad": 3
+      },
+      "structural_validation": {
+        "expected_alternatives": 4,
+        "invalid_questions": 0,
+        "status": "PASS"
+      },
+      "publication_status": "REVIEW_REQUIRED"
+    },
+    {
+      "profession": "Enfermería",
+      "file": "enfermeria.json",
+      "total_questions": 179,
+      "thematic_blocks": {
+        "Cuidado integral": 146,
+        "Gestión": 5,
+        "Investigación": 1,
+        "Salud pública": 17,
+        "Ética e interculturalidad": 10
+      },
+      "structural_validation": {
+        "expected_alternatives": 4,
+        "invalid_questions": 0,
+        "status": "PASS"
+      },
+      "publication_status": "REVIEW_REQUIRED"
+    },
+    {
+      "profession": "Farmacia y Bioquímica",
+      "file": "farmacia-y-bioquimica.json",
+      "total_questions": 148,
+      "thematic_blocks": {
+        "Cuidado integral": 108,
+        "Gestión": 18,
+        "Salud pública": 10,
+        "Ética e interculturalidad": 12
+      },
+      "structural_validation": {
+        "expected_alternatives": 4,
+        "invalid_questions": 0,
+        "status": "PASS"
+      },
+      "publication_status": "REVIEW_REQUIRED"
+    },
+    {
+      "profession": "Ingeniería Sanitaria",
+      "file": "ingenieria-sanitaria.json",
+      "total_questions": 121,
+      "thematic_blocks": {
+        "Cuidado integral": 115,
+        "Gestión": 3,
+        "Investigación": 1,
+        "Salud pública": 2
+      },
+      "structural_validation": {
+        "expected_alternatives": 4,
+        "invalid_questions": 0,
+        "status": "PASS"
+      },
+      "publication_status": "REVIEW_REQUIRED"
+    },
+    {
+      "profession": "Laboratorio Clínico",
+      "file": "laboratorio-clinico.json",
+      "total_questions": 125,
+      "thematic_blocks": {
+        "Cuidado integral": 122,
+        "Gestión": 2,
+        "Investigación": 1
+      },
+      "structural_validation": {
+        "expected_alternatives": 4,
+        "invalid_questions": 0,
+        "status": "PASS"
+      },
+      "publication_status": "REVIEW_REQUIRED"
+    },
+    {
+      "profession": "Medicina",
+      "file": "medicina.json",
+      "total_questions": 186,
+      "thematic_blocks": {
+        "Cuidado integral": 156,
+        "Gestión": 6,
+        "Salud pública": 20,
+        "Ética e interculturalidad": 4
+      },
+      "structural_validation": {
+        "expected_alternatives": 4,
+        "invalid_questions": 0,
+        "status": "PASS"
+      },
+      "publication_status": "REVIEW_REQUIRED"
+    },
+    {
+      "profession": "Medicina Veterinaria",
+      "file": "medicina-veterinaria.json",
+      "total_questions": 142,
+      "thematic_blocks": {
+        "Cuidado integral": 140,
+        "Gestión": 1,
+        "Salud pública": 1
+      },
+      "structural_validation": {
+        "expected_alternatives": 4,
+        "invalid_questions": 0,
+        "status": "PASS"
+      },
+      "publication_status": "REVIEW_REQUIRED"
+    },
+    {
+      "profession": "Nutrición",
+      "file": "nutricion.json",
+      "total_questions": 124,
+      "thematic_blocks": {
+        "Cuidado integral": 74,
+        "Gestión": 3,
+        "Investigación": 2,
+        "Salud pública": 25,
+        "Ética e interculturalidad": 20
+      },
+      "structural_validation": {
+        "expected_alternatives": 4,
+        "invalid_questions": 0,
+        "status": "PASS"
+      },
+      "publication_status": "REVIEW_REQUIRED"
+    },
+    {
+      "profession": "Obstetricia",
+      "file": "obstetricia.json",
+      "total_questions": 180,
+      "thematic_blocks": {
+        "Cuidado integral": 151,
+        "Gestión": 3,
+        "Investigación": 1,
+        "Salud pública": 12,
+        "Ética e interculturalidad": 13
+      },
+      "structural_validation": {
+        "expected_alternatives": 4,
+        "invalid_questions": 0,
+        "status": "PASS"
+      },
+      "publication_status": "REVIEW_REQUIRED"
+    },
+    {
+      "profession": "Odontología",
+      "file": "odontologia.json",
+      "total_questions": 172,
+      "thematic_blocks": {
+        "Cuidado integral": 152,
+        "Gestión": 2,
+        "Salud pública": 8,
+        "Ética e interculturalidad": 10
+      },
+      "structural_validation": {
+        "expected_alternatives": 4,
+        "invalid_questions": 0,
+        "status": "PASS"
+      },
+      "publication_status": "REVIEW_REQUIRED"
+    },
+    {
+      "profession": "Oftalmología",
+      "file": "oftalmologia.json",
+      "total_questions": 91,
+      "thematic_blocks": {
+        "Cuidado integral": 89,
+        "Ética e interculturalidad": 2
+      },
+      "structural_validation": {
+        "expected_alternatives": 4,
+        "invalid_questions": 0,
+        "status": "PASS"
+      },
+      "publication_status": "REVIEW_REQUIRED"
+    },
+    {
+      "profession": "Psicología",
+      "file": "psicologia.json",
+      "total_questions": 189,
+      "thematic_blocks": {
+        "Cuidado integral": 129,
+        "Gestión": 10,
+        "Investigación": 20,
+        "Salud pública": 16,
+        "Ética e interculturalidad": 14
+      },
+      "structural_validation": {
+        "expected_alternatives": 4,
+        "invalid_questions": 0,
+        "status": "PASS"
+      },
+      "publication_status": "REVIEW_REQUIRED"
+    },
+    {
+      "profession": "Radiología",
+      "file": "radiologia.json",
+      "total_questions": 77,
+      "thematic_blocks": {
+        "Cuidado integral": 77
+      },
+      "structural_validation": {
+        "expected_alternatives": 4,
+        "invalid_questions": 0,
+        "status": "PASS"
+      },
+      "publication_status": "REVIEW_REQUIRED"
+    },
+    {
+      "profession": "Tecnología Médica",
+      "file": "tecnologia-medica.json",
+      "total_questions": 100,
+      "thematic_blocks": {
+        "Cuidado integral": 95,
+        "Gestión": 5
+      },
+      "structural_validation": {
+        "expected_alternatives": 4,
+        "invalid_questions": 0,
+        "status": "PASS"
+      },
+      "publication_status": "REVIEW_REQUIRED"
+    },
+    {
+      "profession": "Tecnología Médica - Anatomía Patológica",
+      "file": "tecnologia-medica-anatomia-patologica.json",
+      "total_questions": 13,
+      "thematic_blocks": {
+        "Cuidado integral": 13
+      },
+      "structural_validation": {
+        "expected_alternatives": 4,
+        "invalid_questions": 0,
+        "status": "PASS"
+      },
+      "publication_status": "REVIEW_REQUIRED"
+    },
+    {
+      "profession": "Tecnología Médica - Optometría",
+      "file": "tecnologia-medica-optometria.json",
+      "total_questions": 25,
+      "thematic_blocks": {
+        "Cuidado integral": 24,
+        "Ética e interculturalidad": 1
+      },
+      "structural_validation": {
+        "expected_alternatives": 4,
+        "invalid_questions": 0,
+        "status": "PASS"
+      },
+      "publication_status": "REVIEW_REQUIRED"
+    },
+    {
+      "profession": "Tecnología Médica - Terapia del Lenguaje",
+      "file": "tecnologia-medica-terapia-del-lenguaje.json",
+      "total_questions": 13,
+      "thematic_blocks": {
+        "Cuidado integral": 13
+      },
+      "structural_validation": {
+        "expected_alternatives": 4,
+        "invalid_questions": 0,
+        "status": "PASS"
+      },
+      "publication_status": "REVIEW_REQUIRED"
+    },
+    {
+      "profession": "Tecnología Médica - Terapia Física",
+      "file": "tecnologia-medica-terapia-fisica.json",
+      "total_questions": 13,
+      "thematic_blocks": {
+        "Cuidado integral": 13
+      },
+      "structural_validation": {
+        "expected_alternatives": 4,
+        "invalid_questions": 0,
+        "status": "PASS"
+      },
+      "publication_status": "REVIEW_REQUIRED"
+    },
+    {
+      "profession": "Tecnología Médica - Terapia Física y Rehabilitación",
+      "file": "tecnologia-medica-terapia-fisica-y-rehabilitacion.json",
+      "total_questions": 25,
+      "thematic_blocks": {
+        "Cuidado integral": 24,
+        "Salud pública": 1
+      },
+      "structural_validation": {
+        "expected_alternatives": 4,
+        "invalid_questions": 0,
+        "status": "PASS"
+      },
+      "publication_status": "REVIEW_REQUIRED"
+    },
+    {
+      "profession": "Tecnología Médica - Terapia Ocupacional",
+      "file": "tecnologia-medica-terapia-ocupacional.json",
+      "total_questions": 38,
+      "thematic_blocks": {
+        "Cuidado integral": 37,
+        "Salud pública": 1
+      },
+      "structural_validation": {
+        "expected_alternatives": 4,
+        "invalid_questions": 0,
+        "status": "PASS"
+      },
+      "publication_status": "REVIEW_REQUIRED"
+    },
+    {
+      "profession": "Trabajo Social",
+      "file": "trabajo-social.json",
+      "total_questions": 125,
+      "thematic_blocks": {
+        "Cuidado integral": 95,
+        "Gestión": 2,
+        "Investigación": 2,
+        "Salud pública": 16,
+        "Ética e interculturalidad": 10
+      },
+      "structural_validation": {
+        "expected_alternatives": 4,
+        "invalid_questions": 0,
+        "status": "PASS"
+      },
+      "publication_status": "REVIEW_REQUIRED"
+    }
+  ]
+}
