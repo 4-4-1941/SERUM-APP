@@ -1,0 +1,1137 @@
+{
+  "module_version": 1,
+  "profession": "Tecnología Médica - Terapia del Lenguaje",
+  "total_questions": 13,
+  "structural_validation": {
+    "expected_alternatives": 4,
+    "invalid_questions": 0,
+    "status": "PASS"
+  },
+  "publication_status": "REVIEW_REQUIRED",
+  "warning": "Módulo de preparación. No integrar ni mostrar como banco validado hasta confirmar clave, distractores y fuente por revisor profesional.",
+  "thematic_blocks": {
+    "Cuidado integral": 13
+  },
+  "questions": [
+    {
+      "canonical_id": "BQ-06B642C9F6D6",
+      "profession": "Tecnología Médica - Terapia del Lenguaje",
+      "specialty": "Tecnología Médica - Terapia del Lenguaje",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Principal alteración en afasia de Broca?",
+      "alternatives": [
+        "Repetición intacta",
+        "Anomia moderada",
+        "Expresión ↓",
+        "Comprensión ↓"
+      ],
+      "declared_answer": "C",
+      "justification": "Afasia Broca = agramatismo, expresión no fluida. Comprensión relativamente preservada.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-004",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Expresión ↓",
+        "Comprensión ↓",
+        "Repetición intacta",
+        "Anomia moderada",
+        "Ecolalia"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "E",
+        "dropped_alternative": "Ecolalia",
+        "original_answer": "A",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-07E1EE195D9B",
+      "profession": "Tecnología Médica - Terapia del Lenguaje",
+      "specialty": "Tecnología Médica - Terapia del Lenguaje",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Cuál es la edad crítica para adquisición del lenguaje?",
+      "alternatives": [
+        "3-5 años",
+        "0-3 meses",
+        "6-12 meses",
+        "18-24 meses"
+      ],
+      "declared_answer": "A",
+      "justification": "Período crítico lenguaje: 3-5 años. Desarrollo sintaxis/semántica. Después: neuroplasticidad ↓",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-001",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "D"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "0-3 meses",
+        "6-12 meses",
+        "18-24 meses",
+        "3-5 años",
+        ">5 años"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "E",
+        "dropped_alternative": ">5 años",
+        "original_answer": "D",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-094EC669493E",
+      "profession": "Tecnología Médica - Terapia del Lenguaje",
+      "specialty": "Tecnología Médica - Terapia del Lenguaje",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Técnica de expansión en terapia lenguaje?",
+      "alternatives": [
+        "Sobreestimulación",
+        "Ignorar error",
+        "Ampliar enunciado",
+        "Repetir palabra"
+      ],
+      "declared_answer": "C",
+      "justification": "Expansión = terapeuta amplía 1-2 palabras niño en oración gramatical completa (input natural).",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 12,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-007",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-015",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-023",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-031",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-039",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-047",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-055",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-063",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-071",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-079",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-087",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-095",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Ampliar enunciado",
+        "Repetir palabra",
+        "Sobreestimulación",
+        "Corrección",
+        "Ignorar error"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "D",
+        "dropped_alternative": "Corrección",
+        "original_answer": "A",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-1425E88A3554",
+      "profession": "Tecnología Médica - Terapia del Lenguaje",
+      "specialty": "Tecnología Médica - Terapia del Lenguaje",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Fonema más tardío en adquisición español?",
+      "alternatives": [
+        "R simple",
+        "R vibrante",
+        "LL",
+        "Ninguno (todos ~5a)"
+      ],
+      "declared_answer": "B",
+      "justification": "R vibrante (carro) es fonema más tardío (~5-6 años). R simple (~4a).",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 12,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-012",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "B"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-020",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "B"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-028",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "B"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-036",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "B"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-044",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "B"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-052",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "B"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-060",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "B"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-068",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "B"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-076",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "B"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-084",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "B"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-092",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "B"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-100",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "B"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "R simple",
+        "R vibrante",
+        "J",
+        "LL",
+        "Ninguno (todos ~5a)"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "C",
+        "dropped_alternative": "J",
+        "original_answer": "B",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-232627DC03B3",
+      "profession": "Tecnología Médica - Terapia del Lenguaje",
+      "specialty": "Tecnología Médica - Terapia del Lenguaje",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Apraxia del habla vs disartria?",
+      "alternatives": [
+        "Ambas = neuromotoras",
+        "Apraxia = pérdida programa motor",
+        "Disartria = debilidad",
+        "Disartria = motor"
+      ],
+      "declared_answer": "B",
+      "justification": "Apraxia: dificultad organizar programa motor (secuencias). Disartria: ejecución débil/imprecisa.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 12,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-006",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-014",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-022",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-030",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-038",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-046",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-054",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-062",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-070",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-078",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-086",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-094",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "D"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Apraxia = motor",
+        "Disartria = motor",
+        "Ambas = neuromotoras",
+        "Apraxia = pérdida programa motor",
+        "Disartria = debilidad"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "Apraxia = motor",
+        "original_answer": "D",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-340F638B89D4",
+      "profession": "Tecnología Médica - Terapia del Lenguaje",
+      "specialty": "Tecnología Médica - Terapia del Lenguaje",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Edad esperable primeras palabras?",
+      "alternatives": [
+        "18-24 meses",
+        "24+ meses",
+        "9-12 meses",
+        "12-15 meses"
+      ],
+      "declared_answer": "D",
+      "justification": "Primeras palabras: 12-15 meses. Vocabulario explosivo ~18m (50+ palabras).",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 12,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-008",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "C"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-016",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "C"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-024",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "C"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-032",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "C"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-040",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "C"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-048",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "C"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-056",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "C"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-064",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "C"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-072",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "C"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-080",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "C"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-088",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "C"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-096",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "6-9 meses",
+        "9-12 meses",
+        "12-15 meses",
+        "18-24 meses",
+        "24+ meses"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "6-9 meses",
+        "original_answer": "C",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-3BC6A2D57D48",
+      "profession": "Tecnología Médica - Terapia del Lenguaje",
+      "specialty": "Tecnología Médica - Terapia del Lenguaje",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Tratamiento principal tartamudez (disfemia)?",
+      "alternatives": [
+        "Castigo",
+        "Ninguno",
+        "Terapia fluencia",
+        "Medicamentos"
+      ],
+      "declared_answer": "C",
+      "justification": "Tartamudez: terapia fluencia (Lidcombe, técnicas de control velocidad), apoyo psicológico.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 12,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-011",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-019",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-027",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-035",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-043",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-051",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-059",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-067",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-075",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-083",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-091",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-099",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Terapia fluencia",
+        "Medicamentos",
+        "Cirugía",
+        "Castigo",
+        "Ninguno"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "C",
+        "dropped_alternative": "Cirugía",
+        "original_answer": "A",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-67A1858602E7",
+      "profession": "Tecnología Médica - Terapia del Lenguaje",
+      "specialty": "Tecnología Médica - Terapia del Lenguaje",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Dislexia es principalmente?",
+      "alternatives": [
+        "Falta educación",
+        "Trastorno lectoescritura",
+        "Ceguera",
+        "Retraso intelectual"
+      ],
+      "declared_answer": "B",
+      "justification": "Dislexia = dificultad específica lectura (no explained by inteligencia/educación/sensorio).",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 12,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-009",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-017",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-025",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-033",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-041",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-049",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-057",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-065",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-073",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-081",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-089",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-097",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Trastorno lectoescritura",
+        "Sordera",
+        "Ceguera",
+        "Retraso intelectual",
+        "Falta educación"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Sordera",
+        "original_answer": "A",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-790F1D2590C4",
+      "profession": "Tecnología Médica - Terapia del Lenguaje",
+      "specialty": "Tecnología Médica - Terapia del Lenguaje",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Signo de Babinski en evaluación neurolingüística indica?",
+      "alternatives": [
+        "Tono muscular ↑",
+        "Lesión piramidal",
+        "Retraso mental",
+        "Dislexia"
+      ],
+      "declared_answer": "B",
+      "justification": "Babinski = lesión piramidal (especialmente relevante en disartria espástica).",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-003",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "B"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Tono muscular ↑",
+        "Lesión piramidal",
+        "Sordera",
+        "Retraso mental",
+        "Dislexia"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "C",
+        "dropped_alternative": "Sordera",
+        "original_answer": "B",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-BCBDB762C34B",
+      "profession": "Tecnología Médica - Terapia del Lenguaje",
+      "specialty": "Tecnología Médica - Terapia del Lenguaje",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Desarrollo pragmática en niño típico?",
+      "alternatives": [
+        "5 años: narrativas complejas",
+        "12 meses: palabras",
+        "18-24 meses: frases",
+        "3 años: turnos conversacionales"
+      ],
+      "declared_answer": "A",
+      "justification": "Desarrollo pragmático progresivo: turnos (12m) → narrativas (3-4a) → razonamiento metalingüístico (5+a).",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 12,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-010",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "E"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-018",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "E"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-026",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "E"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-034",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "E"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-042",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "E"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-050",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "E"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-058",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "E"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-066",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "E"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-074",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "E"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-082",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "E"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-090",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "E"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-098",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "E"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "0-6 meses: sonidos",
+        "12 meses: palabras",
+        "18-24 meses: frases",
+        "3 años: turnos conversacionales",
+        "5 años: narrativas complejas"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "0-6 meses: sonidos",
+        "original_answer": "E",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-BD1326C331D9",
+      "profession": "Tecnología Médica - Terapia del Lenguaje",
+      "specialty": "Tecnología Médica - Terapia del Lenguaje",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Técnica de atención conjunta en lenguaje infantil?",
+      "alternatives": [
+        "Imitación sonidos",
+        "Juego simbólico",
+        "Señalamiento",
+        "Seguimiento foco atención"
+      ],
+      "declared_answer": "D",
+      "justification": "Atención conjunta = seguimiento mirada/índice compartidos (base pragmática lenguaje).",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-005",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Seguimiento foco atención",
+        "Imitación sonidos",
+        "Juego simbólico",
+        "Señalamiento",
+        "Todas"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "E",
+        "dropped_alternative": "Todas",
+        "original_answer": "A",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-E6610AB52567",
+      "profession": "Tecnología Médica - Terapia del Lenguaje",
+      "specialty": "Tecnología Médica - Terapia del Lenguaje",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Qué es dislalia?",
+      "alternatives": [
+        "Defecto articulación",
+        "Pérdida lenguaje",
+        "Tartamudez",
+        "Voz ronca"
+      ],
+      "declared_answer": "A",
+      "justification": "Dislalia = dificultad pronunciación sin alteración neurológica (vs disartria).",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-002",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Defecto articulación",
+        "Pérdida lenguaje",
+        "Tartamudez",
+        "Voz ronca",
+        "Sordera"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "E",
+        "dropped_alternative": "Sordera",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-FBD4AE56CDB9",
+      "profession": "Tecnología Médica - Terapia del Lenguaje",
+      "specialty": "Tecnología Médica - Terapia del Lenguaje",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Eval audiológica básica en sospecha hipoacusia?",
+      "alternatives": [
+        "Todas",
+        "Solo historia clínica",
+        "Audiometría tonal",
+        "Impedanciometría"
+      ],
+      "declared_answer": "A",
+      "justification": "Evaluación audiológica: audiometría tonal + logoaudiometría + impedanciometría.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 11,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-013",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-021",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-029",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-037",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-045",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-053",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-061",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-069",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-077",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-085",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tl.json",
+          "source_id": "TEC-TL-093",
+          "profession": "Tecnología Médica - Terapia del Lenguaje",
+          "answer": "D"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Audiometría tonal",
+        "Logoaudiometría",
+        "Impedanciometría",
+        "Todas",
+        "Solo historia clínica"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Logoaudiometría",
+        "original_answer": "D",
+        "new_answer": "A"
+      }
+    }
+  ]
+}

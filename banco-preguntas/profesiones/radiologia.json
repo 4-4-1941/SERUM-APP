@@ -1,0 +1,4263 @@
+{
+  "module_version": 1,
+  "profession": "Radiología",
+  "total_questions": 77,
+  "structural_validation": {
+    "expected_alternatives": 4,
+    "invalid_questions": 0,
+    "status": "PASS"
+  },
+  "publication_status": "REVIEW_REQUIRED",
+  "warning": "Módulo de preparación. No integrar ni mostrar como banco validado hasta confirmar clave, distractores y fuente por revisor profesional.",
+  "thematic_blocks": {
+    "Cuidado integral": 77
+  },
+  "questions": [
+    {
+      "canonical_id": "BQ-06ECFB1F73C6",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Tubo lateral 90° plano sagital?",
+      "alternatives": [
+        "Incorrecto 3",
+        "Tubo lateral 90° plano sagital",
+        "Incorrecto 5",
+        "Incorrecto 2"
+      ],
+      "declared_answer": "B",
+      "justification": "Tubo lateral 90° plano sagital. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "alternativas_distintas",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 2,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiologia/preguntas.json",
+          "source_id": "1311",
+          "profession": "Radiología",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiología/preguntas.json",
+          "source_id": "1311",
+          "profession": "Radiología",
+          "answer": "D"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Incorrecto 1",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Tubo lateral 90° plano sagital",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "Incorrecto 1",
+        "original_answer": "D",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-1269E83CED4C",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Termografía infrarrojo?",
+      "alternatives": [
+        "Incorrecto 5",
+        "Termografía infrarrojo",
+        "Incorrecto 3",
+        "Incorrecto 4"
+      ],
+      "declared_answer": "B",
+      "justification": "Termografía infrarrojo. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiologia/preguntas.json",
+          "source_id": "1340",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Termografía infrarrojo",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-12A758C28C3D",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Doppler flujo vascular?",
+      "alternatives": [
+        "Doppler flujo vascular",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "declared_answer": "A",
+      "justification": "Doppler flujo vascular. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiologia/preguntas.json",
+          "source_id": "1346",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Doppler flujo vascular",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-1319559B18F9",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿VPP valor predictivo positivo?",
+      "alternatives": [
+        "VPP valor predictivo positivo",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "declared_answer": "A",
+      "justification": "VPP valor predictivo positivo. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "alternativas_distintas",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 2,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiologia/preguntas.json",
+          "source_id": "1323",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiología/preguntas.json",
+          "source_id": "1323",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "VPP valor predictivo positivo",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-1682F9012185",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Iodo Z=53 contraste?",
+      "alternatives": [
+        "Incorrecto 5",
+        "Incorrecto 2",
+        "Iodo Z=53 contraste",
+        "Incorrecto 4"
+      ],
+      "declared_answer": "C",
+      "justification": "Iodo Z=53 contraste. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "alternativas_distintas",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 2,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiologia/preguntas.json",
+          "source_id": "1303",
+          "profession": "Radiología",
+          "answer": "C"
+        },
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiología/preguntas.json",
+          "source_id": "1303",
+          "profession": "Radiología",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Incorrecto 1",
+        "Incorrecto 2",
+        "Iodo Z=53 contraste",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "Incorrecto 1",
+        "original_answer": "C",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-17C4034CA054",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Digital menor dosis 10-100×?",
+      "alternatives": [
+        "Digital menor dosis 10-100×",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "declared_answer": "A",
+      "justification": "Digital menor dosis 10-100×. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "alternativas_distintas",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 2,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiologia/preguntas.json",
+          "source_id": "1302",
+          "profession": "Radiología",
+          "answer": "B"
+        },
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiología/preguntas.json",
+          "source_id": "1302",
+          "profession": "Radiología",
+          "answer": "B"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Incorrecto 1",
+        "Digital menor dosis 10-100×",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "Incorrecto 1",
+        "original_answer": "B",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-19ECFBEB974C",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Ecografía transductores?",
+      "alternatives": [
+        "Incorrecto 5",
+        "Ecografía transductores",
+        "Incorrecto 3",
+        "Incorrecto 4"
+      ],
+      "declared_answer": "B",
+      "justification": "Ecografía transductores. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiologia/preguntas.json",
+          "source_id": "1339",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Ecografía transductores",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-1A7ED5D6D0B7",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Arteriografía arteriales?",
+      "alternatives": [
+        "Arteriografía arteriales",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "declared_answer": "A",
+      "justification": "Arteriografía arteriales. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiologia/preguntas.json",
+          "source_id": "1348",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Arteriografía arteriales",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-1BDC022C5C93",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿SPECT cámara gamma?",
+      "alternatives": [
+        "Incorrecto 4",
+        "Incorrecto 5",
+        "SPECT cámara gamma",
+        "Incorrecto 3"
+      ],
+      "declared_answer": "C",
+      "justification": "SPECT cámara gamma. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiologia/preguntas.json",
+          "source_id": "1342",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "SPECT cámara gamma",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-1C4FE74D0E31",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Focal spot 1.0-1.5 mm?",
+      "alternatives": [
+        "Incorrecto 5",
+        "Incorrecto 2",
+        "Focal spot 1.0-1.5 mm",
+        "Incorrecto 4"
+      ],
+      "declared_answer": "C",
+      "justification": "Focal spot 1.0-1.5 mm. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "alternativas_distintas",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 2,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiologia/preguntas.json",
+          "source_id": "1305",
+          "profession": "Radiología",
+          "answer": "C"
+        },
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiología/preguntas.json",
+          "source_id": "1305",
+          "profession": "Radiología",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Incorrecto 1",
+        "Incorrecto 2",
+        "Focal spot 1.0-1.5 mm",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "Incorrecto 1",
+        "original_answer": "C",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-20E6CAF7D0ED",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Dosis ocupacional 20 mSv/año?",
+      "alternatives": [
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5",
+        "Dosis ocupacional 20 mSv/año"
+      ],
+      "declared_answer": "D",
+      "justification": "Dosis ocupacional 20 mSv/año. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "alternativas_distintas",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 2,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiologia/preguntas.json",
+          "source_id": "1301",
+          "profession": "Radiología",
+          "answer": "B"
+        },
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiología/preguntas.json",
+          "source_id": "1301",
+          "profession": "Radiología",
+          "answer": "B"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Incorrecto 1",
+        "Dosis ocupacional 20 mSv/año",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "Incorrecto 1",
+        "original_answer": "B",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-21A6F851C20E",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿PET/TC positrones?",
+      "alternatives": [
+        "Incorrecto 4",
+        "Incorrecto 5",
+        "PET/TC positrones",
+        "Incorrecto 3"
+      ],
+      "declared_answer": "C",
+      "justification": "PET/TC positrones. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiologia/preguntas.json",
+          "source_id": "1341",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "PET/TC positrones",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-21AC581975A8",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Endoscopia visualización?",
+      "alternatives": [
+        "Endoscopia visualización",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "declared_answer": "A",
+      "justification": "Endoscopia visualización. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiologia/preguntas.json",
+          "source_id": "1338",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Endoscopia visualización",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-254474DC9FBE",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿DEXA osteoporosis densidad?",
+      "alternatives": [
+        "Incorrecto 4",
+        "Incorrecto 5",
+        "DEXA osteoporosis densidad",
+        "Incorrecto 3"
+      ],
+      "declared_answer": "C",
+      "justification": "DEXA osteoporosis densidad. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiologia/preguntas.json",
+          "source_id": "1335",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "DEXA osteoporosis densidad",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-2F372B0EBEB3",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Contraste diferenciación tisular?",
+      "alternatives": [
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5",
+        "Contraste diferenciación tisular"
+      ],
+      "declared_answer": "D",
+      "justification": "Contraste diferenciación tisular. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "alternativas_distintas",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 2,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiologia/preguntas.json",
+          "source_id": "1319",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiología/preguntas.json",
+          "source_id": "1319",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Contraste diferenciación tisular",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-2F8DA20EA5A3",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿TC pulmón baja dosis?",
+      "alternatives": [
+        "TC pulmón baja dosis",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "declared_answer": "A",
+      "justification": "TC pulmón baja dosis. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "alternativas_distintas",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 2,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiologia/preguntas.json",
+          "source_id": "1333",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiología/preguntas.json",
+          "source_id": "1333",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "TC pulmón baja dosis",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-313B0393D98D",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Scatter dispersión radiación?",
+      "alternatives": [
+        "Incorrecto 4",
+        "Incorrecto 5",
+        "Scatter dispersión radiación",
+        "Incorrecto 3"
+      ],
+      "declared_answer": "C",
+      "justification": "Scatter dispersión radiación. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiologia/preguntas.json",
+          "source_id": "1317",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Scatter dispersión radiación",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-35F9D95C9B9F",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Variabilidad aleatoria repetición?",
+      "alternatives": [
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5",
+        "Variabilidad aleatoria repetición ✓"
+      ],
+      "declared_answer": "D",
+      "justification": "Variabilidad aleatoria repetición. Tema: Precisión. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiología/preguntas.json",
+          "source_id": "1330",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Variabilidad aleatoria repetición ✓",
+        "Opción falsa 2",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Opción falsa 2",
+        "original_answer": "A",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-40CB106AD3A9",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Validez acercamiento verdad?",
+      "alternatives": [
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5",
+        "Validez acercamiento verdad"
+      ],
+      "declared_answer": "D",
+      "justification": "Validez acercamiento verdad. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "alternativas_distintas",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 2,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiologia/preguntas.json",
+          "source_id": "1332",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiología/preguntas.json",
+          "source_id": "1332",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Validez acercamiento verdad",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-56CFDBD21E4C",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Arteriografía vasos arteriales?",
+      "alternatives": [
+        "Opción falsa 4",
+        "Opción falsa 5",
+        "Arteriografía vasos arteriales ✓",
+        "Opción falsa 3"
+      ],
+      "declared_answer": "C",
+      "justification": "Arteriografía vasos arteriales. Tema: Angiografía. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiología/preguntas.json",
+          "source_id": "1348",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Arteriografía vasos arteriales ✓",
+        "Opción falsa 2",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Opción falsa 2",
+        "original_answer": "A",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-59271831C67A",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿MTF transferencia modulación?",
+      "alternatives": [
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5",
+        "MTF transferencia modulación"
+      ],
+      "declared_answer": "D",
+      "justification": "MTF transferencia modulación. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "alternativas_distintas",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 2,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiologia/preguntas.json",
+          "source_id": "1320",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiología/preguntas.json",
+          "source_id": "1320",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "MTF transferencia modulación",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-5D03D72A0C83",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿TC DLP dosis?",
+      "alternatives": [
+        "TC DLP dosis",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "declared_answer": "A",
+      "justification": "TC DLP dosis. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "alternativas_distintas",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 2,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiologia/preguntas.json",
+          "source_id": "1304",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiología/preguntas.json",
+          "source_id": "1304",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "TC DLP dosis",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-61B6398DEE60",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿SPECT cámara gamma rotación?",
+      "alternatives": [
+        "Opción falsa 5",
+        "SPECT cámara gamma rotación ✓",
+        "Opción falsa 3",
+        "Opción falsa 4"
+      ],
+      "declared_answer": "B",
+      "justification": "SPECT cámara gamma rotación. Tema: Nuclear. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiología/preguntas.json",
+          "source_id": "1342",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "SPECT cámara gamma rotación ✓",
+        "Opción falsa 2",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Opción falsa 2",
+        "original_answer": "A",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-6FAB490DE29E",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Scatter dispersión?",
+      "alternatives": [
+        "Opción falsa 5",
+        "Scatter dispersión ✓",
+        "Opción falsa 3",
+        "Opción falsa 4"
+      ],
+      "declared_answer": "B",
+      "justification": "Scatter dispersión. Tema: Interacción. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiología/preguntas.json",
+          "source_id": "1317",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Scatter dispersión ✓",
+        "Opción falsa 2",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Opción falsa 2",
+        "original_answer": "A",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-741E03FA98FA",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Resolución espacial detalles?",
+      "alternatives": [
+        "Incorrecto 4",
+        "Incorrecto 5",
+        "Resolución espacial detalles",
+        "Incorrecto 3"
+      ],
+      "declared_answer": "C",
+      "justification": "Resolución espacial detalles. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "alternativas_distintas",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 2,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiologia/preguntas.json",
+          "source_id": "1318",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiología/preguntas.json",
+          "source_id": "1318",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Resolución espacial detalles",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-7A839617FDE1",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Elastografía rigidez tisular?",
+      "alternatives": [
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5",
+        "Elastografía rigidez tisular ✓"
+      ],
+      "declared_answer": "D",
+      "justification": "Elastografía rigidez tisular. Tema: Evaluación. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiología/preguntas.json",
+          "source_id": "1347",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Elastografía rigidez tisular ✓",
+        "Opción falsa 2",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Opción falsa 2",
+        "original_answer": "A",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-7C7DB12DBE62",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Termografía infrarrojo temperatura?",
+      "alternatives": [
+        "Termografía infrarrojo temperatura ✓",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "declared_answer": "A",
+      "justification": "Termografía infrarrojo temperatura. Tema: Especialidad. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiología/preguntas.json",
+          "source_id": "1340",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Termografía infrarrojo temperatura ✓",
+        "Opción falsa 2",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Opción falsa 2",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-7F5E16DF76CC",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Sesgo sistemático error?",
+      "alternatives": [
+        "Sesgo sistemático error ✓",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "declared_answer": "A",
+      "justification": "Sesgo sistemático error. Tema: Precisión. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiología/preguntas.json",
+          "source_id": "1329",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Sesgo sistemático error ✓",
+        "Opción falsa 2",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Opción falsa 2",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-856CE6C53049",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Venografía vasos venosos?",
+      "alternatives": [
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5",
+        "Venografía vasos venosos ✓"
+      ],
+      "declared_answer": "D",
+      "justification": "Venografía vasos venosos. Tema: Angiografía. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiología/preguntas.json",
+          "source_id": "1349",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Venografía vasos venosos ✓",
+        "Opción falsa 2",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Opción falsa 2",
+        "original_answer": "A",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-88167ABC8BA6",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿DEXA osteoporosis densidad ósea?",
+      "alternatives": [
+        "DEXA osteoporosis densidad ósea ✓",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "declared_answer": "A",
+      "justification": "DEXA osteoporosis densidad ósea. Tema: Especialidad. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiología/preguntas.json",
+          "source_id": "1335",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "DEXA osteoporosis densidad ósea ✓",
+        "Opción falsa 2",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Opción falsa 2",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-897742731D34",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Linfografía vasos linfáticos?",
+      "alternatives": [
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5",
+        "Linfografía vasos linfáticos ✓"
+      ],
+      "declared_answer": "D",
+      "justification": "Linfografía vasos linfáticos. Tema: Angiografía. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiología/preguntas.json",
+          "source_id": "1350",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Linfografía vasos linfáticos ✓",
+        "Opción falsa 2",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Opción falsa 2",
+        "original_answer": "A",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-8DAE3A8F9455",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Sesgo error sistemático?",
+      "alternatives": [
+        "Incorrecto 5",
+        "Sesgo error sistemático",
+        "Incorrecto 3",
+        "Incorrecto 4"
+      ],
+      "declared_answer": "B",
+      "justification": "Sesgo error sistemático. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiologia/preguntas.json",
+          "source_id": "1329",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Sesgo error sistemático",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-94C3F4B84D3B",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Ruido cuántico fotones?",
+      "alternatives": [
+        "Ruido cuántico fotones",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "declared_answer": "A",
+      "justification": "Ruido cuántico fotones. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "alternativas_distintas",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 2,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiologia/preguntas.json",
+          "source_id": "1315",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiología/preguntas.json",
+          "source_id": "1315",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Ruido cuántico fotones",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-9A4FAE9EB372",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿PET tomografía emisión positrones?",
+      "alternatives": [
+        "Opción falsa 5",
+        "PET tomografía emisión positrones ✓",
+        "Opción falsa 3",
+        "Opción falsa 4"
+      ],
+      "declared_answer": "B",
+      "justification": "PET tomografía emisión positrones. Tema: Nuclear. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiología/preguntas.json",
+          "source_id": "1345",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "PET tomografía emisión positrones ✓",
+        "Opción falsa 2",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Opción falsa 2",
+        "original_answer": "A",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-9AEEAF351888",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Densitometría absorciometría ósea?",
+      "alternatives": [
+        "Opción falsa 4",
+        "Opción falsa 5",
+        "Densitometría absorciometría ósea ✓",
+        "Opción falsa 3"
+      ],
+      "declared_answer": "C",
+      "justification": "Densitometría absorciometría ósea. Tema: Medida. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiología/preguntas.json",
+          "source_id": "1336",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Densitometría absorciometría ósea ✓",
+        "Opción falsa 2",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Opción falsa 2",
+        "original_answer": "A",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-A2FBAD7C787A",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Blur movimiento borroso?",
+      "alternatives": [
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5",
+        "Blur movimiento borroso"
+      ],
+      "declared_answer": "D",
+      "justification": "Blur movimiento borroso. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "alternativas_distintas",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 2,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiologia/preguntas.json",
+          "source_id": "1316",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiología/preguntas.json",
+          "source_id": "1316",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Blur movimiento borroso",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-A37580188A0B",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Plomo 1 mm atenúa 90%?",
+      "alternatives": [
+        "Incorrecto 2",
+        "Plomo 1 mm atenúa 90%",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "declared_answer": "B",
+      "justification": "Plomo 1 mm atenúa 90%. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "alternativas_distintas",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 2,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiologia/preguntas.json",
+          "source_id": "1306",
+          "profession": "Radiología",
+          "answer": "C"
+        },
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiología/preguntas.json",
+          "source_id": "1306",
+          "profession": "Radiología",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Incorrecto 1",
+        "Incorrecto 2",
+        "Plomo 1 mm atenúa 90%",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "Incorrecto 1",
+        "original_answer": "C",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-AB745E4FE1CB",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Aliasing frecuencia espacial?",
+      "alternatives": [
+        "Incorrecto 5",
+        "Aliasing frecuencia espacial",
+        "Incorrecto 3",
+        "Incorrecto 4"
+      ],
+      "declared_answer": "B",
+      "justification": "Aliasing frecuencia espacial. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "alternativas_distintas",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 2,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiologia/preguntas.json",
+          "source_id": "1314",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiología/preguntas.json",
+          "source_id": "1314",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Aliasing frecuencia espacial",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-B4FA0E33F250",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Retrolavado filtro 1-1.5 m?",
+      "alternatives": [
+        "Retrolavado filtro 1-1.5 m",
+        "Incorrecto 4",
+        "Incorrecto 5",
+        "Incorrecto 2"
+      ],
+      "declared_answer": "A",
+      "justification": "Retrolavado filtro 1-1.5 m. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "alternativas_distintas",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 2,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiologia/preguntas.json",
+          "source_id": "1312",
+          "profession": "Radiología",
+          "answer": "C"
+        },
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiología/preguntas.json",
+          "source_id": "1312",
+          "profession": "Radiología",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Incorrecto 1",
+        "Incorrecto 2",
+        "Retrolavado filtro 1-1.5 m",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "Incorrecto 1",
+        "original_answer": "C",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-B8D55EC7D520",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Linfografía linfáticos?",
+      "alternatives": [
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5",
+        "Linfografía linfáticos"
+      ],
+      "declared_answer": "D",
+      "justification": "Linfografía linfáticos. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiologia/preguntas.json",
+          "source_id": "1350",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Linfografía linfáticos",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-BE963D818884",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Fotones 10⁴-10⁵/mm²?",
+      "alternatives": [
+        "Incorrecto 3",
+        "Fotones 10⁴-10⁵/mm²",
+        "Incorrecto 5",
+        "Incorrecto 2"
+      ],
+      "declared_answer": "B",
+      "justification": "Fotones 10⁴-10⁵/mm². Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "alternativas_distintas",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 2,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiologia/preguntas.json",
+          "source_id": "1307",
+          "profession": "Radiología",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiología/preguntas.json",
+          "source_id": "1307",
+          "profession": "Radiología",
+          "answer": "D"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Incorrecto 1",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Fotones 10⁴-10⁵/mm²",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "Incorrecto 1",
+        "original_answer": "D",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-C555339DF8F2",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Ecografía transductores ultrasonido?",
+      "alternatives": [
+        "Opción falsa 4",
+        "Opción falsa 5",
+        "Ecografía transductores ultrasonido ✓",
+        "Opción falsa 3"
+      ],
+      "declared_answer": "C",
+      "justification": "Ecografía transductores ultrasonido. Tema: Equipamiento. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiología/preguntas.json",
+          "source_id": "1339",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Ecografía transductores ultrasonido ✓",
+        "Opción falsa 2",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Opción falsa 2",
+        "original_answer": "A",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-C75F1430D59B",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿VPN valor predictivo negativo?",
+      "alternatives": [
+        "Incorrecto 4",
+        "Incorrecto 5",
+        "VPN valor predictivo negativo",
+        "Incorrecto 3"
+      ],
+      "declared_answer": "C",
+      "justification": "VPN valor predictivo negativo. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "alternativas_distintas",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 2,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiologia/preguntas.json",
+          "source_id": "1324",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiología/preguntas.json",
+          "source_id": "1324",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "VPN valor predictivo negativo",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-C9A1EBBF57CC",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Venografía venosos?",
+      "alternatives": [
+        "Venografía venosos",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "declared_answer": "A",
+      "justification": "Venografía venosos. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiologia/preguntas.json",
+          "source_id": "1349",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Venografía venosos",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-CA69316DF20A",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Magnificación 2× dosis 4×?",
+      "alternatives": [
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Magnificación 2× dosis 4×"
+      ],
+      "declared_answer": "D",
+      "justification": "Magnificación 2× dosis 4×. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "alternativas_distintas",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 2,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiologia/preguntas.json",
+          "source_id": "1309",
+          "profession": "Radiología",
+          "answer": "E"
+        },
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiología/preguntas.json",
+          "source_id": "1309",
+          "profession": "Radiología",
+          "answer": "E"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Incorrecto 1",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Magnificación 2× dosis 4×"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "Incorrecto 1",
+        "original_answer": "E",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-CB0DE3264142",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Centellografía radiactivo?",
+      "alternatives": [
+        "Incorrecto 4",
+        "Incorrecto 5",
+        "Centellografía radiactivo",
+        "Incorrecto 3"
+      ],
+      "declared_answer": "C",
+      "justification": "Centellografía radiactivo. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiologia/preguntas.json",
+          "source_id": "1344",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Centellografía radiactivo",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-D0795FA83BB6",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿RMN contraindicación metal?",
+      "alternatives": [
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5",
+        "RMN contraindicación metal"
+      ],
+      "declared_answer": "D",
+      "justification": "RMN contraindicación metal. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "alternativas_distintas",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 2,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiologia/preguntas.json",
+          "source_id": "1334",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiología/preguntas.json",
+          "source_id": "1334",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "RMN contraindicación metal",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-D0FA9AA4A333",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Centellografía centelleo radiactivo?",
+      "alternatives": [
+        "Opción falsa 5",
+        "Centellografía centelleo radiactivo ✓",
+        "Opción falsa 3",
+        "Opción falsa 4"
+      ],
+      "declared_answer": "B",
+      "justification": "Centellografía centelleo radiactivo. Tema: Nuclear. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiología/preguntas.json",
+          "source_id": "1344",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Centellografía centelleo radiactivo ✓",
+        "Opción falsa 2",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Opción falsa 2",
+        "original_answer": "A",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-D786A7638304",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿PET emisión positrones?",
+      "alternatives": [
+        "Incorrecto 4",
+        "Incorrecto 5",
+        "PET emisión positrones",
+        "Incorrecto 3"
+      ],
+      "declared_answer": "C",
+      "justification": "PET emisión positrones. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiologia/preguntas.json",
+          "source_id": "1345",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "PET emisión positrones",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-D863F2C586A8",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Angiografía cateterismo vascular?",
+      "alternatives": [
+        "Incorrecto 5",
+        "Angiografía cateterismo vascular",
+        "Incorrecto 3",
+        "Incorrecto 4"
+      ],
+      "declared_answer": "B",
+      "justification": "Angiografía cateterismo vascular. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "alternativas_distintas",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 2,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiologia/preguntas.json",
+          "source_id": "1337",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiología/preguntas.json",
+          "source_id": "1337",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Angiografía cateterismo vascular",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-D910F617B6A4",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Sensibilidad detectabilidad?",
+      "alternatives": [
+        "Sensibilidad detectabilidad",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "declared_answer": "A",
+      "justification": "Sensibilidad detectabilidad. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "alternativas_distintas",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 2,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiologia/preguntas.json",
+          "source_id": "1321",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiología/preguntas.json",
+          "source_id": "1321",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Sensibilidad detectabilidad",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-DCF0CD0EA6CE",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Molibdeno 17.5 keV?",
+      "alternatives": [
+        "Opción falsa 4",
+        "Opción falsa 5",
+        "Molibdeno 17.5 keV ✓",
+        "Opción falsa 3"
+      ],
+      "declared_answer": "C",
+      "justification": "Molibdeno 17.5 keV. Tema: Mamografía. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiología/preguntas.json",
+          "source_id": "1308",
+          "profession": "Radiología",
+          "answer": "B"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Opción falsa 1",
+        "Molibdeno 17.5 keV ✓",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "Opción falsa 1",
+        "original_answer": "B",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-DF2DE40327A8",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Molibdeno 17.5 keV mamografía?",
+      "alternatives": [
+        "Incorrecto 5",
+        "Molibdeno 17.5 keV mamografía",
+        "Incorrecto 3",
+        "Incorrecto 4"
+      ],
+      "declared_answer": "B",
+      "justification": "Molibdeno 17.5 keV mamografía. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiologia/preguntas.json",
+          "source_id": "1308",
+          "profession": "Radiología",
+          "answer": "B"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Incorrecto 1",
+        "Molibdeno 17.5 keV mamografía",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "Incorrecto 1",
+        "original_answer": "B",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-E45CE773D54C",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Endoscopia visualización tubo?",
+      "alternatives": [
+        "Endoscopia visualización tubo ✓",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "declared_answer": "A",
+      "justification": "Endoscopia visualización tubo. Tema: Directo. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiología/preguntas.json",
+          "source_id": "1338",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Endoscopia visualización tubo ✓",
+        "Opción falsa 2",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Opción falsa 2",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-E4A565176BCA",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Gammagrafía radiofármaco distribución?",
+      "alternatives": [
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5",
+        "Gammagrafía radiofármaco distribución ✓"
+      ],
+      "declared_answer": "D",
+      "justification": "Gammagrafía radiofármaco distribución. Tema: Nuclear. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiología/preguntas.json",
+          "source_id": "1343",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Gammagrafía radiofármaco distribución ✓",
+        "Opción falsa 2",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Opción falsa 2",
+        "original_answer": "A",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-E8FCCA97A262",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿PET/TC positrones tomografía?",
+      "alternatives": [
+        "Opción falsa 5",
+        "PET/TC positrones tomografía ✓",
+        "Opción falsa 3",
+        "Opción falsa 4"
+      ],
+      "declared_answer": "B",
+      "justification": "PET/TC positrones tomografía. Tema: Híbrida. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiología/preguntas.json",
+          "source_id": "1341",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "PET/TC positrones tomografía ✓",
+        "Opción falsa 2",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Opción falsa 2",
+        "original_answer": "A",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-EBA4B6AE64AA",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Densitometría ósea?",
+      "alternatives": [
+        "Densitometría ósea",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "declared_answer": "A",
+      "justification": "Densitometría ósea. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiologia/preguntas.json",
+          "source_id": "1336",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Densitometría ósea",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-EED8AA0F9BF1",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Confiabilidad acuerdo observadores?",
+      "alternatives": [
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5",
+        "Confiabilidad acuerdo observadores"
+      ],
+      "declared_answer": "D",
+      "justification": "Confiabilidad acuerdo observadores. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "alternativas_distintas",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 2,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiologia/preguntas.json",
+          "source_id": "1331",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiología/preguntas.json",
+          "source_id": "1331",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Confiabilidad acuerdo observadores",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-F07A65CBE17D",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Variabilidad aleatoria?",
+      "alternatives": [
+        "Incorrecto 4",
+        "Incorrecto 5",
+        "Variabilidad aleatoria",
+        "Incorrecto 3"
+      ],
+      "declared_answer": "C",
+      "justification": "Variabilidad aleatoria. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiologia/preguntas.json",
+          "source_id": "1330",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Variabilidad aleatoria",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-F0B88DAA9076",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿DAP tórax 5 mGy·cm²?",
+      "alternatives": [
+        "Incorrecto 4",
+        "Incorrecto 5",
+        "Incorrecto 2",
+        "DAP tórax 5 mGy·cm²"
+      ],
+      "declared_answer": "D",
+      "justification": "DAP tórax 5 mGy·cm². Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "alternativas_distintas",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 2,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiologia/preguntas.json",
+          "source_id": "1310",
+          "profession": "Radiología",
+          "answer": "C"
+        },
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiología/preguntas.json",
+          "source_id": "1310",
+          "profession": "Radiología",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Incorrecto 1",
+        "Incorrecto 2",
+        "DAP tórax 5 mGy·cm²",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "Incorrecto 1",
+        "original_answer": "C",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-F26DD44BEFC0",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Ultrasound doppler flujo vascular?",
+      "alternatives": [
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5",
+        "Ultrasound doppler flujo vascular ✓"
+      ],
+      "declared_answer": "D",
+      "justification": "Ultrasound doppler flujo vascular. Tema: Técnica. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiología/preguntas.json",
+          "source_id": "1346",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Ultrasound doppler flujo vascular ✓",
+        "Opción falsa 2",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Opción falsa 2",
+        "original_answer": "A",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-F8D80FC89DAB",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Pixelado artefacto movimiento?",
+      "alternatives": [
+        "Incorrecto 4",
+        "Incorrecto 5",
+        "Pixelado artefacto movimiento",
+        "Incorrecto 3"
+      ],
+      "declared_answer": "C",
+      "justification": "Pixelado artefacto movimiento. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "alternativas_distintas",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 2,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiologia/preguntas.json",
+          "source_id": "1313",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiología/preguntas.json",
+          "source_id": "1313",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Pixelado artefacto movimiento",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-FAB6AC95D4BA",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Elastografía rigidez?",
+      "alternatives": [
+        "Elastografía rigidez",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "declared_answer": "A",
+      "justification": "Elastografía rigidez. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiologia/preguntas.json",
+          "source_id": "1347",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Elastografía rigidez",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-FD33D6F20E4E",
+      "profession": "Radiología",
+      "specialty": "Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Gammagrafía radiofármaco?",
+      "alternatives": [
+        "Gammagrafía radiofármaco",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "declared_answer": "A",
+      "justification": "Gammagrafía radiofármaco. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/radiologia/preguntas.json",
+          "source_id": "1343",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Gammagrafía radiofármaco",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-06953B92C5AC",
+      "profession": "Radiología",
+      "specialty": "Tecnología Médica - Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Contraste de elección para artro-RM?",
+      "alternatives": [
+        "Iodado",
+        "Ninguno",
+        "Gadolinio IV",
+        "Gadolinio intra-articular"
+      ],
+      "declared_answer": "D",
+      "justification": "Gadolinio intra-articular (dilución 1:250) mejora delineación cartílago/ligamentos.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 12,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-009",
+          "profession": "Radiología",
+          "answer": "B"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-017",
+          "profession": "Radiología",
+          "answer": "B"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-025",
+          "profession": "Radiología",
+          "answer": "B"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-033",
+          "profession": "Radiología",
+          "answer": "B"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-041",
+          "profession": "Radiología",
+          "answer": "B"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-049",
+          "profession": "Radiología",
+          "answer": "B"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-057",
+          "profession": "Radiología",
+          "answer": "B"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-065",
+          "profession": "Radiología",
+          "answer": "B"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-073",
+          "profession": "Radiología",
+          "answer": "B"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-081",
+          "profession": "Radiología",
+          "answer": "B"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-089",
+          "profession": "Radiología",
+          "answer": "B"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-097",
+          "profession": "Radiología",
+          "answer": "B"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Gadolinio IV",
+        "Gadolinio intra-articular",
+        "Bario",
+        "Iodado",
+        "Ninguno"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "C",
+        "dropped_alternative": "Bario",
+        "original_answer": "B",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-19D71510B63F",
+      "profession": "Radiología",
+      "specialty": "Tecnología Médica - Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Cuál es dosis típica de radiación en radiografía de tórax?",
+      "alternatives": [
+        ">10 mSv",
+        "<0.1 mSv",
+        "0.5 mSv",
+        "5 mSv"
+      ],
+      "declared_answer": "B",
+      "justification": "Radiografía tórax PA: 0.01-0.05 mSv (baja dosis). TC tórax: 1-2 mSv.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-003",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "<0.1 mSv",
+        "0.5 mSv",
+        "2 mSv",
+        "5 mSv",
+        ">10 mSv"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "C",
+        "dropped_alternative": "2 mSv",
+        "original_answer": "A",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-31B2CDCBCDCA",
+      "profession": "Radiología",
+      "specialty": "Tecnología Médica - Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Ventaja principal ultrasonografía?",
+      "alternatives": [
+        "Seguridad (sin radiación)",
+        "Mayor resolución que TC",
+        "Penetración ósea",
+        "Velocidad diagnóstica"
+      ],
+      "declared_answer": "A",
+      "justification": "Ultrasonografía: sin radiación, tiempo real, bajo costo, accesibilidad.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 12,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-011",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-019",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-027",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-035",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-043",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-051",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-059",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-067",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-075",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-083",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-091",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-099",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Seguridad (sin radiación)",
+        "Mayor resolución que TC",
+        "Penetración ósea",
+        "Estudio 3D",
+        "Velocidad diagnóstica"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "D",
+        "dropped_alternative": "Estudio 3D",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-3CAA6F581ED6",
+      "profession": "Radiología",
+      "specialty": "Tecnología Médica - Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Artefacto de endurecimiento de haz en TC?",
+      "alternatives": [
+        "Ruido sinograma",
+        "Falta de fotones",
+        "Movimiento paciente",
+        "Falsas bajas atenuaciones"
+      ],
+      "declared_answer": "D",
+      "justification": "Beam hardening = artefacto por absorción selectiva fotones bajos. Afecta metal, hueso denso.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 12,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-008",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-016",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-024",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-032",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-040",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-048",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-056",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-064",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-072",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-080",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-088",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-096",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Falsas bajas atenuaciones",
+        "Ruido sinograma",
+        "Falta de fotones",
+        "Movimiento paciente",
+        "Dispersión"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "E",
+        "dropped_alternative": "Dispersión",
+        "original_answer": "A",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-5C0E5CCFA894",
+      "profession": "Radiología",
+      "specialty": "Tecnología Médica - Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Qué es artefacto de movimiento en RM?",
+      "alternatives": [
+        "Ruido de fondo",
+        "Distorsión geométrica",
+        "Falta de protones",
+        "Señal fantasma periódica"
+      ],
+      "declared_answer": "D",
+      "justification": "Artefacto movimiento en RM causa señales fantasma. Se reduce con secuencias rápidas.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-005",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Señal fantasma periódica",
+        "Ruido de fondo",
+        "Distorsión geométrica",
+        "Aliasing",
+        "Falta de protones"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "D",
+        "dropped_alternative": "Aliasing",
+        "original_answer": "A",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-7202D2F5C8B5",
+      "profession": "Radiología",
+      "specialty": "Tecnología Médica - Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Clasificación Bosniak para quistes renales?",
+      "alternatives": [
+        "A-E",
+        "1-4",
+        "I-IV",
+        "Simple-complejo"
+      ],
+      "declared_answer": "C",
+      "justification": "Bosniak I-IV: I simple, IV maligno probable. III/IV requieren seguimiento/intervención.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 12,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-012",
+          "profession": "Radiología",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-020",
+          "profession": "Radiología",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-028",
+          "profession": "Radiología",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-036",
+          "profession": "Radiología",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-044",
+          "profession": "Radiología",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-052",
+          "profession": "Radiología",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-060",
+          "profession": "Radiología",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-068",
+          "profession": "Radiología",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-076",
+          "profession": "Radiología",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-084",
+          "profession": "Radiología",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-092",
+          "profession": "Radiología",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-100",
+          "profession": "Radiología",
+          "answer": "D"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "I-V",
+        "A-E",
+        "1-4",
+        "I-IV",
+        "Simple-complejo"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "I-V",
+        "original_answer": "D",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-889DBD38030C",
+      "profession": "Radiología",
+      "specialty": "Tecnología Médica - Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Cuál es la principal indicación de radiografía de tórax PA?",
+      "alternatives": [
+        "Valoración artritis",
+        "Visualizar abdomen",
+        "Evaluación pulmones/corazón",
+        "Diagnóstico fractura femoral"
+      ],
+      "declared_answer": "C",
+      "justification": "Radiografía PA tórax es estándar: neumonía, efusión, cardiomegalia, tuberculosis.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-001",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Evaluación pulmones/corazón",
+        "Diagnóstico fractura femoral",
+        "Valoración artritis",
+        "Visualizar abdomen",
+        "Estudio espinal"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "E",
+        "dropped_alternative": "Estudio espinal",
+        "original_answer": "A",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-A1574EDE0056",
+      "profession": "Radiología",
+      "specialty": "Tecnología Médica - Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Qué es ventana de Hounsfield en TC?",
+      "alternatives": [
+        "Filtro antialiasing",
+        "Algoritmo reconstrucción",
+        "Rango de grises mostrado",
+        "Tipo de contraste"
+      ],
+      "declared_answer": "C",
+      "justification": "Ventana de Hounsfield ajusta rango UH visualizados (ej: ventana pulmón, ósea, abdominal).",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-002",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Rango de grises mostrado",
+        "Tipo de contraste",
+        "Filtro antialiasing",
+        "Algoritmo reconstrucción",
+        "Marca comercial"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "E",
+        "dropped_alternative": "Marca comercial",
+        "original_answer": "A",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-ABF911413FB5",
+      "profession": "Radiología",
+      "specialty": "Tecnología Médica - Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Principal aplicación de fusión PET-TC?",
+      "alternatives": [
+        "Gastroenterología",
+        "Oncología (estadiaje)",
+        "Cardiopatía",
+        "Neuroimagen"
+      ],
+      "declared_answer": "B",
+      "justification": "PET-TC fusiona metabolismo (PET-FDG) + anatomía (TC). Gold standard en cáncer.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 12,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-007",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-015",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-023",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-031",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-039",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-047",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-055",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-063",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-071",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-079",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-087",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-095",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Oncología (estadiaje)",
+        "Cardiopatía",
+        "Neuroimagen",
+        "Gastroenterología",
+        "Urgencias"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "E",
+        "dropped_alternative": "Urgencias",
+        "original_answer": "A",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-BA11A264F591",
+      "profession": "Radiología",
+      "specialty": "Tecnología Médica - Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Cuál es principal indicación de angiografía coronaria?",
+      "alternatives": [
+        "Screening poblacional",
+        "Medición presión pulmonar",
+        "Valoración miocarditis",
+        "Diagnóstico cardiopatía isquémica"
+      ],
+      "declared_answer": "D",
+      "justification": "Angiografía coronaria es gold standard diagnóstico: estenosis, trombosis, anatomía.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-004",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Diagnóstico cardiopatía isquémica",
+        "Evaluación valvular",
+        "Screening poblacional",
+        "Medición presión pulmonar",
+        "Valoración miocarditis"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Evaluación valvular",
+        "original_answer": "A",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-E487DB7E93F0",
+      "profession": "Radiología",
+      "specialty": "Tecnología Médica - Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Hallazgo radiológico de neumonía lobar?",
+      "alternatives": [
+        "Pleuresía",
+        "Pulmón blanco",
+        "Infiltrado parenquimatoso",
+        "Atelectasia"
+      ],
+      "declared_answer": "C",
+      "justification": "Neumonía lobar: infiltrado parenquimatoso con broncograma aéreo, consolidación.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 12,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-010",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-018",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-026",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-034",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-042",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-050",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-058",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-066",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-074",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-082",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-090",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-098",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Infiltrado parenquimatoso",
+        "Atelectasia",
+        "Pleuresía",
+        "Enfisema",
+        "Pulmón blanco"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "D",
+        "dropped_alternative": "Enfisema",
+        "original_answer": "A",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-E6ED0CD7B46F",
+      "profession": "Radiología",
+      "specialty": "Tecnología Médica - Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Indicación densitometría ósea (DEXA)?",
+      "alternatives": [
+        "Screening osteoporosis",
+        "Evaluación fractura",
+        "Diagnóstico artritis",
+        "Valoración tumor óseo"
+      ],
+      "declared_answer": "A",
+      "justification": "DEXA estándar para diagnóstico/seguimiento osteoporosis. T-score <-2.5 = osteoporosis.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 12,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-006",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-014",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-022",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-030",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-038",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-046",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-054",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-062",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-070",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-078",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-086",
+          "profession": "Radiología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-094",
+          "profession": "Radiología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Screening osteoporosis",
+        "Evaluación fractura",
+        "Diagnóstico artritis",
+        "Valoración tumor óseo",
+        "Medición talla"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "E",
+        "dropped_alternative": "Medición talla",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-FEAAC16D8228",
+      "profession": "Radiología",
+      "specialty": "Tecnología Médica - Radiología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Señal de anillo en RM de cadera?",
+      "alternatives": [
+        "Labrum íntegro",
+        "Osteoartrosis",
+        "Fractura acetabular",
+        "Ruptura ligamento redondo"
+      ],
+      "declared_answer": "A",
+      "justification": "Señal anillo en RM cadera = labrum íntegro (cartílago fibrocartilaginoso).",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 11,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-013",
+          "profession": "Radiología",
+          "answer": "B"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-021",
+          "profession": "Radiología",
+          "answer": "B"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-029",
+          "profession": "Radiología",
+          "answer": "B"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-037",
+          "profession": "Radiología",
+          "answer": "B"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-045",
+          "profession": "Radiología",
+          "answer": "B"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-053",
+          "profession": "Radiología",
+          "answer": "B"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-061",
+          "profession": "Radiología",
+          "answer": "B"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-069",
+          "profession": "Radiología",
+          "answer": "B"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-077",
+          "profession": "Radiología",
+          "answer": "B"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-085",
+          "profession": "Radiología",
+          "answer": "B"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_rad.json",
+          "source_id": "TEC-RAD-093",
+          "profession": "Radiología",
+          "answer": "B"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Ruptura ligamento redondo",
+        "Labrum íntegro",
+        "Osteoartrosis",
+        "Fractura acetabular",
+        "Luxación"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "E",
+        "dropped_alternative": "Luxación",
+        "original_answer": "B",
+        "new_answer": "A"
+      }
+    }
+  ]
+}

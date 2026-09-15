@@ -1,0 +1,4824 @@
+{
+  "module_version": 1,
+  "profession": "Oftalmología",
+  "total_questions": 91,
+  "structural_validation": {
+    "expected_alternatives": 4,
+    "invalid_questions": 0,
+    "status": "PASS"
+  },
+  "publication_status": "REVIEW_REQUIRED",
+  "warning": "Módulo de preparación. No integrar ni mostrar como banco validado hasta confirmar clave, distractores y fuente por revisor profesional.",
+  "thematic_blocks": {
+    "Cuidado integral": 89,
+    "Ética e interculturalidad": 2
+  },
+  "questions": [
+    {
+      "canonical_id": "BQ-0010ECAF3D6C",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Orzuelo infección?",
+      "alternatives": [
+        "Orzuelo infección",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "declared_answer": "A",
+      "justification": "Orzuelo infección. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmologia/preguntas.json",
+          "source_id": "1729",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Orzuelo infección",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-0043414BAC1B",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Uveítis úvea?",
+      "alternatives": [
+        "Incorrecto 4",
+        "Incorrecto 5",
+        "Uveítis úvea",
+        "Incorrecto 3"
+      ],
+      "declared_answer": "C",
+      "justification": "Uveítis úvea. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmologia/preguntas.json",
+          "source_id": "1723",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Uveítis úvea",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-0146D45D96AA",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Ética e interculturalidad",
+      "difficulty": "Por revisar",
+      "statement": "¿Retinopatía diabética?",
+      "alternatives": [
+        "Incorrecto 4",
+        "Incorrecto 5",
+        "Retinopatía diabética",
+        "Incorrecto 3"
+      ],
+      "declared_answer": "C",
+      "justification": "Retinopatía diabética. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmologia/preguntas.json",
+          "source_id": "1717",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Retinopatía diabética",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-04C4B3B6EDF1",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Fotofobia sensibilidad luz?",
+      "alternatives": [
+        "Opción falsa 4",
+        "Opción falsa 5",
+        "Fotofobia sensibilidad luz ✓",
+        "Opción falsa 3"
+      ],
+      "declared_answer": "C",
+      "justification": "Fotofobia sensibilidad luz. Tema: Síntoma. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmología/preguntas.json",
+          "source_id": "1738",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Fotofobia sensibilidad luz ✓",
+        "Opción falsa 2",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Opción falsa 2",
+        "original_answer": "A",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-05161986A714",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Uveítis inflamación úvea?",
+      "alternatives": [
+        "Uveítis inflamación úvea ✓",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "declared_answer": "A",
+      "justification": "Uveítis inflamación úvea. Tema: Patología. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmología/preguntas.json",
+          "source_id": "1723",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Uveítis inflamación úvea ✓",
+        "Opción falsa 2",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Opción falsa 2",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-0BCB471C5A28",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Retinitis pigmentosa?",
+      "alternatives": [
+        "Incorrecto 4",
+        "Incorrecto 5",
+        "Retinitis pigmentosa",
+        "Incorrecto 3"
+      ],
+      "declared_answer": "C",
+      "justification": "Retinitis pigmentosa. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmologia/preguntas.json",
+          "source_id": "1716",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Retinitis pigmentosa",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-10011C5CE104",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Queratitis inflamación córnea?",
+      "alternatives": [
+        "Queratitis inflamación córnea",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "declared_answer": "A",
+      "justification": "Queratitis inflamación córnea. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "alternativas_distintas",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 2,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmologia/preguntas.json",
+          "source_id": "1721",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmología/preguntas.json",
+          "source_id": "1721",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Queratitis inflamación córnea",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-108B12AAFCBD",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Fotofobia sensibilidad?",
+      "alternatives": [
+        "Incorrecto 4",
+        "Incorrecto 5",
+        "Fotofobia sensibilidad",
+        "Incorrecto 3"
+      ],
+      "declared_answer": "C",
+      "justification": "Fotofobia sensibilidad. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmologia/preguntas.json",
+          "source_id": "1738",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Fotofobia sensibilidad",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-112E59724A40",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Facoemulsificación?",
+      "alternatives": [
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5",
+        "Facoemulsificación"
+      ],
+      "declared_answer": "D",
+      "justification": "Facoemulsificación. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmologia/preguntas.json",
+          "source_id": "1745",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Facoemulsificación",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-170BEA2218BC",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Amplitud acomodación 16 dioptrías?",
+      "alternatives": [
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Amplitud acomodación 16 dioptrías ✓",
+        "Opción falsa 2"
+      ],
+      "declared_answer": "C",
+      "justification": "Amplitud acomodación 16 dioptrías. Tema: Edad 25 años. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmología/preguntas.json",
+          "source_id": "1704",
+          "profession": "Oftalmología",
+          "answer": "E"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Opción falsa 1",
+        "Opción falsa 2",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Amplitud acomodación 16 dioptrías ✓"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "Opción falsa 1",
+        "original_answer": "E",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-17587F5D1AB2",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Hipermetropía foco posterior?",
+      "alternatives": [
+        "Incorrecto 5",
+        "Hipermetropía foco posterior",
+        "Incorrecto 3",
+        "Incorrecto 4"
+      ],
+      "declared_answer": "B",
+      "justification": "Hipermetropía foco posterior. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmologia/preguntas.json",
+          "source_id": "1709",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Hipermetropía foco posterior",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-1B23C4E13E61",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Ptosis caída párpado?",
+      "alternatives": [
+        "Ptosis caída párpado",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "declared_answer": "A",
+      "justification": "Ptosis caída párpado. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "alternativas_distintas",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 2,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmologia/preguntas.json",
+          "source_id": "1731",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmología/preguntas.json",
+          "source_id": "1731",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Ptosis caída párpado",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-238171256F87",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Refracción hipermetropía foco posterior?",
+      "alternatives": [
+        "Opción falsa 5",
+        "Refracción hipermetropía foco posterior ✓",
+        "Opción falsa 3",
+        "Opción falsa 4"
+      ],
+      "declared_answer": "B",
+      "justification": "Refracción hipermetropía foco posterior. Tema: Defecto. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmología/preguntas.json",
+          "source_id": "1709",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Refracción hipermetropía foco posterior ✓",
+        "Opción falsa 2",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Opción falsa 2",
+        "original_answer": "A",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-24A7F770ECD4",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Tucción tendón fortalecimiento?",
+      "alternatives": [
+        "Tucción tendón fortalecimiento ✓",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "declared_answer": "A",
+      "justification": "Tucción tendón fortalecimiento. Tema: Cirugía. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmología/preguntas.json",
+          "source_id": "1742",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Tucción tendón fortalecimiento ✓",
+        "Opción falsa 2",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Opción falsa 2",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-30CCE6BC56E2",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Dacriocistitis saco?",
+      "alternatives": [
+        "Incorrecto 4",
+        "Incorrecto 5",
+        "Dacriocistitis saco",
+        "Incorrecto 3"
+      ],
+      "declared_answer": "C",
+      "justification": "Dacriocistitis saco. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmologia/preguntas.json",
+          "source_id": "1727",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Dacriocistitis saco",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-34827685DF27",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cataratas opacidad?",
+      "alternatives": [
+        "Cataratas opacidad",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "declared_answer": "A",
+      "justification": "Cataratas opacidad. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmologia/preguntas.json",
+          "source_id": "1714",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Cataratas opacidad",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-3AC81C2EBBC2",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Estrabismo desviación ocular?",
+      "alternatives": [
+        "Opción falsa 5",
+        "Estrabismo desviación ocular ✓",
+        "Opción falsa 3",
+        "Opción falsa 4"
+      ],
+      "declared_answer": "B",
+      "justification": "Estrabismo desviación ocular. Tema: Patología. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmología/preguntas.json",
+          "source_id": "1732",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Estrabismo desviación ocular ✓",
+        "Opción falsa 2",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Opción falsa 2",
+        "original_answer": "A",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-3D87C2D356B7",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Oclusión vascular isquemia?",
+      "alternatives": [
+        "Opción falsa 5",
+        "Oclusión vascular isquemia ✓",
+        "Opción falsa 3",
+        "Opción falsa 4"
+      ],
+      "declared_answer": "B",
+      "justification": "Oclusión vascular isquemia. Tema: Patología. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmología/preguntas.json",
+          "source_id": "1720",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Oclusión vascular isquemia ✓",
+        "Opción falsa 2",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Opción falsa 2",
+        "original_answer": "A",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-415A9BF9B360",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Resección tendón?",
+      "alternatives": [
+        "Incorrecto 5",
+        "Resección tendón",
+        "Incorrecto 3",
+        "Incorrecto 4"
+      ],
+      "declared_answer": "B",
+      "justification": "Resección tendón. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmologia/preguntas.json",
+          "source_id": "1741",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Resección tendón",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-41B523615683",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Agudeza visual 20/20 5 min arco?",
+      "alternatives": [
+        "Opción falsa 5",
+        "Opción falsa 2",
+        "Agudeza visual 20/20 5 min arco ✓",
+        "Opción falsa 4"
+      ],
+      "declared_answer": "C",
+      "justification": "Agudeza visual 20/20 5 min arco. Tema: Resolución. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmología/preguntas.json",
+          "source_id": "1703",
+          "profession": "Oftalmología",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Opción falsa 1",
+        "Opción falsa 2",
+        "Agudeza visual 20/20 5 min arco ✓",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "Opción falsa 1",
+        "original_answer": "C",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-4AE11601110F",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿PIO 15-20 mmHg?",
+      "alternatives": [
+        "Incorrecto 4",
+        "Incorrecto 5",
+        "Incorrecto 2",
+        "PIO 15-20 mmHg"
+      ],
+      "declared_answer": "D",
+      "justification": "PIO 15-20 mmHg. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmologia/preguntas.json",
+          "source_id": "1702",
+          "profession": "Oftalmología",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Incorrecto 1",
+        "Incorrecto 2",
+        "PIO 15-20 mmHg",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "Incorrecto 1",
+        "original_answer": "C",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-4D14F8D6B6A6",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Degeneración macular?",
+      "alternatives": [
+        "Degeneración macular",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "declared_answer": "A",
+      "justification": "Degeneración macular. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmologia/preguntas.json",
+          "source_id": "1718",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Degeneración macular",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-4E20F7C6C5AE",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Chalazión obstrucción?",
+      "alternatives": [
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5",
+        "Chalazión obstrucción"
+      ],
+      "declared_answer": "D",
+      "justification": "Chalazión obstrucción. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmologia/preguntas.json",
+          "source_id": "1730",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Chalazión obstrucción",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-5077AE234071",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Presbicia acomodación envejecimiento?",
+      "alternatives": [
+        "Opción falsa 5",
+        "Presbicia acomodación envejecimiento ✓",
+        "Opción falsa 3",
+        "Opción falsa 4"
+      ],
+      "declared_answer": "B",
+      "justification": "Presbicia acomodación envejecimiento. Tema: Edad. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmología/preguntas.json",
+          "source_id": "1711",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Presbicia acomodación envejecimiento ✓",
+        "Opción falsa 2",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Opción falsa 2",
+        "original_answer": "A",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-5211B6919010",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿PRK queratectomía refractiva?",
+      "alternatives": [
+        "Opción falsa 5",
+        "PRK queratectomía refractiva ✓",
+        "Opción falsa 3",
+        "Opción falsa 4"
+      ],
+      "declared_answer": "B",
+      "justification": "PRK queratectomía refractiva. Tema: Corrección. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmología/preguntas.json",
+          "source_id": "1744",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "PRK queratectomía refractiva ✓",
+        "Opción falsa 2",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Opción falsa 2",
+        "original_answer": "A",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-562FB60BD7F8",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Campo visual 140-160°?",
+      "alternatives": [
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Campo visual 140-160°"
+      ],
+      "declared_answer": "D",
+      "justification": "Campo visual 140-160°. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmologia/preguntas.json",
+          "source_id": "1705",
+          "profession": "Oftalmología",
+          "answer": "E"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Incorrecto 1",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Campo visual 140-160°"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "Incorrecto 1",
+        "original_answer": "E",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-5BA1B0209A43",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Desprendimiento retina?",
+      "alternatives": [
+        "Desprendimiento retina",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "declared_answer": "A",
+      "justification": "Desprendimiento retina. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmologia/preguntas.json",
+          "source_id": "1719",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Desprendimiento retina",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-5C356235F36D",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Refracción miopía foco anterior?",
+      "alternatives": [
+        "Refracción miopía foco anterior ✓",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "declared_answer": "A",
+      "justification": "Refracción miopía foco anterior. Tema: Defecto. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmología/preguntas.json",
+          "source_id": "1708",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Refracción miopía foco anterior ✓",
+        "Opción falsa 2",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Opción falsa 2",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-5D08B9D12D58",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Ambliopía ojo perezoso?",
+      "alternatives": [
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5",
+        "Ambliopía ojo perezoso"
+      ],
+      "declared_answer": "D",
+      "justification": "Ambliopía ojo perezoso. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "alternativas_distintas",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 2,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmologia/preguntas.json",
+          "source_id": "1733",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmología/preguntas.json",
+          "source_id": "1733",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Ambliopía ojo perezoso",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-5E80291390DD",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Moscas volantes?",
+      "alternatives": [
+        "Incorrecto 4",
+        "Incorrecto 5",
+        "Moscas volantes",
+        "Incorrecto 3"
+      ],
+      "declared_answer": "C",
+      "justification": "Moscas volantes. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmologia/preguntas.json",
+          "source_id": "1735",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Moscas volantes",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-605BE861C7DF",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Presbicia acomodación?",
+      "alternatives": [
+        "Presbicia acomodación",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "declared_answer": "A",
+      "justification": "Presbicia acomodación. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmologia/preguntas.json",
+          "source_id": "1711",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Presbicia acomodación",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-617FE4D5A690",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Ética e interculturalidad",
+      "difficulty": "Por revisar",
+      "statement": "¿Retinopatía diabética vasos retina?",
+      "alternatives": [
+        "Opción falsa 5",
+        "Retinopatía diabética vasos retina ✓",
+        "Opción falsa 3",
+        "Opción falsa 4"
+      ],
+      "declared_answer": "B",
+      "justification": "Retinopatía diabética vasos retina. Tema: Patología. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmología/preguntas.json",
+          "source_id": "1717",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Retinopatía diabética vasos retina ✓",
+        "Opción falsa 2",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Opción falsa 2",
+        "original_answer": "A",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-632E9FE238C2",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Fosfenos destellos luz?",
+      "alternatives": [
+        "Fosfenos destellos luz",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "declared_answer": "A",
+      "justification": "Fosfenos destellos luz. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "alternativas_distintas",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 2,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmologia/preguntas.json",
+          "source_id": "1736",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmología/preguntas.json",
+          "source_id": "1736",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Fosfenos destellos luz",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-6339A81D4B51",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Diplopía visión doble?",
+      "alternatives": [
+        "Incorrecto 5",
+        "Diplopía visión doble",
+        "Incorrecto 3",
+        "Incorrecto 4"
+      ],
+      "declared_answer": "B",
+      "justification": "Diplopía visión doble. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "alternativas_distintas",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 2,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmologia/preguntas.json",
+          "source_id": "1734",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmología/preguntas.json",
+          "source_id": "1734",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Diplopía visión doble",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-644A02335F5B",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Iritis iris?",
+      "alternatives": [
+        "Incorrecto 4",
+        "Incorrecto 5",
+        "Iritis iris",
+        "Incorrecto 3"
+      ],
+      "declared_answer": "C",
+      "justification": "Iritis iris. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmologia/preguntas.json",
+          "source_id": "1724",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Iritis iris",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-65F4E9F0DB13",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Pseudofaquia cristalino artificial?",
+      "alternatives": [
+        "Incorrecto 5",
+        "Pseudofaquia cristalino artificial",
+        "Incorrecto 3",
+        "Incorrecto 4"
+      ],
+      "declared_answer": "B",
+      "justification": "Pseudofaquia cristalino artificial. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "alternativas_distintas",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 2,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmologia/preguntas.json",
+          "source_id": "1713",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmología/preguntas.json",
+          "source_id": "1713",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Pseudofaquia cristalino artificial",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-6935E83F76FF",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cataratas opacidad cristalino?",
+      "alternatives": [
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5",
+        "Cataratas opacidad cristalino ✓"
+      ],
+      "declared_answer": "D",
+      "justification": "Cataratas opacidad cristalino. Tema: Patología. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmología/preguntas.json",
+          "source_id": "1714",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Cataratas opacidad cristalino ✓",
+        "Opción falsa 2",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Opción falsa 2",
+        "original_answer": "A",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-754DDB0C406A",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Facoemulsificación cataratas?",
+      "alternatives": [
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5",
+        "Facoemulsificación cataratas ✓"
+      ],
+      "declared_answer": "D",
+      "justification": "Facoemulsificación cataratas. Tema: Cirugía. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmología/preguntas.json",
+          "source_id": "1745",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Facoemulsificación cataratas ✓",
+        "Opción falsa 2",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Opción falsa 2",
+        "original_answer": "A",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-75D73FFB7293",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Estrabismo desviación?",
+      "alternatives": [
+        "Incorrecto 4",
+        "Incorrecto 5",
+        "Estrabismo desviación",
+        "Incorrecto 3"
+      ],
+      "declared_answer": "C",
+      "justification": "Estrabismo desviación. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmologia/preguntas.json",
+          "source_id": "1732",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Estrabismo desviación",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-77F424E5FCAD",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Glaucoma PIO elevada?",
+      "alternatives": [
+        "Glaucoma PIO elevada",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "declared_answer": "A",
+      "justification": "Glaucoma PIO elevada. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmologia/preguntas.json",
+          "source_id": "1715",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Glaucoma PIO elevada",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-7D98DEB3F1DB",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Nistagmo movimiento?",
+      "alternatives": [
+        "Incorrecto 5",
+        "Nistagmo movimiento",
+        "Incorrecto 3",
+        "Incorrecto 4"
+      ],
+      "declared_answer": "B",
+      "justification": "Nistagmo movimiento. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmologia/preguntas.json",
+          "source_id": "1739",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Nistagmo movimiento",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-808075CB6798",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Conjuntivitis inflamación conjuntiva?",
+      "alternatives": [
+        "Opción falsa 5",
+        "Conjuntivitis inflamación conjuntiva ✓",
+        "Opción falsa 3",
+        "Opción falsa 4"
+      ],
+      "declared_answer": "B",
+      "justification": "Conjuntivitis inflamación conjuntiva. Tema: Patología. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmología/preguntas.json",
+          "source_id": "1722",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Conjuntivitis inflamación conjuntiva ✓",
+        "Opción falsa 2",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Opción falsa 2",
+        "original_answer": "A",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-83443BDACB9D",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿PRK queratectomía?",
+      "alternatives": [
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5",
+        "PRK queratectomía"
+      ],
+      "declared_answer": "D",
+      "justification": "PRK queratectomía. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmologia/preguntas.json",
+          "source_id": "1744",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "PRK queratectomía",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-89C179B17E19",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Resección tendón debilitamiento?",
+      "alternatives": [
+        "Resección tendón debilitamiento ✓",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "declared_answer": "A",
+      "justification": "Resección tendón debilitamiento. Tema: Cirugía. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmología/preguntas.json",
+          "source_id": "1741",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Resección tendón debilitamiento ✓",
+        "Opción falsa 2",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Opción falsa 2",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-8A9CB88D050C",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Astigmatismo dos focos?",
+      "alternatives": [
+        "Incorrecto 5",
+        "Astigmatismo dos focos",
+        "Incorrecto 3",
+        "Incorrecto 4"
+      ],
+      "declared_answer": "B",
+      "justification": "Astigmatismo dos focos. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "alternativas_distintas",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 2,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmologia/preguntas.json",
+          "source_id": "1710",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmología/preguntas.json",
+          "source_id": "1710",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Astigmatismo dos focos",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-8B995B8EDBB6",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Longitud axial 24 mm ojo?",
+      "alternatives": [
+        "Opción falsa 5",
+        "Longitud axial 24 mm ojo ✓",
+        "Opción falsa 3",
+        "Opción falsa 4"
+      ],
+      "declared_answer": "B",
+      "justification": "Longitud axial 24 mm ojo. Tema: Biometría. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmología/preguntas.json",
+          "source_id": "1706",
+          "profession": "Oftalmología",
+          "answer": "B"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Opción falsa 1",
+        "Longitud axial 24 mm ojo ✓",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "Opción falsa 1",
+        "original_answer": "B",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-8CFD4B906414",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Poder refracción +50 dioptrías?",
+      "alternatives": [
+        "Incorrecto 4",
+        "Incorrecto 5",
+        "Incorrecto 2",
+        "Poder refracción +50 dioptrías"
+      ],
+      "declared_answer": "D",
+      "justification": "Poder refracción +50 dioptrías. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "alternativas_distintas",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 2,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmologia/preguntas.json",
+          "source_id": "1701",
+          "profession": "Oftalmología",
+          "answer": "C"
+        },
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmología/preguntas.json",
+          "source_id": "1701",
+          "profession": "Oftalmología",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Incorrecto 1",
+        "Incorrecto 2",
+        "Poder refracción +50 dioptrías",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "Incorrecto 1",
+        "original_answer": "C",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-932861402301",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿LASIK cirugía refractiva?",
+      "alternatives": [
+        "Incorrecto 5",
+        "LASIK cirugía refractiva",
+        "Incorrecto 3",
+        "Incorrecto 4"
+      ],
+      "declared_answer": "B",
+      "justification": "LASIK cirugía refractiva. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "alternativas_distintas",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 2,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmologia/preguntas.json",
+          "source_id": "1743",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmología/preguntas.json",
+          "source_id": "1743",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "LASIK cirugía refractiva",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-99CB4622EEFB",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Campo visual 140-160° horizontal?",
+      "alternatives": [
+        "Opción falsa 4",
+        "Campo visual 140-160° horizontal ✓",
+        "Opción falsa 2",
+        "Opción falsa 3"
+      ],
+      "declared_answer": "B",
+      "justification": "Campo visual 140-160° horizontal. Tema: Extensión. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmología/preguntas.json",
+          "source_id": "1705",
+          "profession": "Oftalmología",
+          "answer": "E"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Opción falsa 1",
+        "Opción falsa 2",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Campo visual 140-160° horizontal ✓"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "Opción falsa 1",
+        "original_answer": "E",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-9C1ABB127918",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿PD 63-66 mm interpupilar?",
+      "alternatives": [
+        "Incorrecto 2",
+        "PD 63-66 mm interpupilar",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "declared_answer": "B",
+      "justification": "PD 63-66 mm interpupilar. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "alternativas_distintas",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 2,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmologia/preguntas.json",
+          "source_id": "1707",
+          "profession": "Oftalmología",
+          "answer": "C"
+        },
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmología/preguntas.json",
+          "source_id": "1707",
+          "profession": "Oftalmología",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Incorrecto 1",
+        "Incorrecto 2",
+        "PD 63-66 mm interpupilar",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "Incorrecto 1",
+        "original_answer": "C",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-A3B30C3BF342",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Blefaritis inflamación párpado?",
+      "alternatives": [
+        "Blefaritis inflamación párpado ✓",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "declared_answer": "A",
+      "justification": "Blefaritis inflamación párpado. Tema: Patología. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmología/preguntas.json",
+          "source_id": "1728",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Blefaritis inflamación párpado ✓",
+        "Opción falsa 2",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Opción falsa 2",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-A3C77A936AF8",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Tucción tendón?",
+      "alternatives": [
+        "Tucción tendón",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "declared_answer": "A",
+      "justification": "Tucción tendón. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmologia/preguntas.json",
+          "source_id": "1742",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Tucción tendón",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-A47E2645698C",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Chalazión obstrucción meibomio?",
+      "alternatives": [
+        "Chalazión obstrucción meibomio ✓",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "declared_answer": "A",
+      "justification": "Chalazión obstrucción meibomio. Tema: Patología. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmología/preguntas.json",
+          "source_id": "1730",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Chalazión obstrucción meibomio ✓",
+        "Opción falsa 2",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Opción falsa 2",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-A71855E73577",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Conjuntivitis conjuntiva?",
+      "alternatives": [
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5",
+        "Conjuntivitis conjuntiva"
+      ],
+      "declared_answer": "D",
+      "justification": "Conjuntivitis conjuntiva. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmologia/preguntas.json",
+          "source_id": "1722",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Conjuntivitis conjuntiva",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-A7D1C2B72F41",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Episcleritis inflamación episclera?",
+      "alternatives": [
+        "Opción falsa 4",
+        "Opción falsa 5",
+        "Episcleritis inflamación episclera ✓",
+        "Opción falsa 3"
+      ],
+      "declared_answer": "C",
+      "justification": "Episcleritis inflamación episclera. Tema: Patología. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmología/preguntas.json",
+          "source_id": "1725",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Episcleritis inflamación episclera ✓",
+        "Opción falsa 2",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Opción falsa 2",
+        "original_answer": "A",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-A85680D512D1",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Escleritis esclera?",
+      "alternatives": [
+        "Escleritis esclera",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "declared_answer": "A",
+      "justification": "Escleritis esclera. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmologia/preguntas.json",
+          "source_id": "1726",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Escleritis esclera",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-AB451AF8FBA8",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Longitud axial 24 mm?",
+      "alternatives": [
+        "Incorrecto 5",
+        "Longitud axial 24 mm",
+        "Incorrecto 3",
+        "Incorrecto 4"
+      ],
+      "declared_answer": "B",
+      "justification": "Longitud axial 24 mm. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmologia/preguntas.json",
+          "source_id": "1706",
+          "profession": "Oftalmología",
+          "answer": "B"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Incorrecto 1",
+        "Longitud axial 24 mm",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "Incorrecto 1",
+        "original_answer": "B",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-AF3E66A3729F",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Desprendimiento retina separación?",
+      "alternatives": [
+        "Opción falsa 5",
+        "Desprendimiento retina separación ✓",
+        "Opción falsa 3",
+        "Opción falsa 4"
+      ],
+      "declared_answer": "B",
+      "justification": "Desprendimiento retina separación. Tema: Urgencia. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmología/preguntas.json",
+          "source_id": "1719",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Desprendimiento retina separación ✓",
+        "Opción falsa 2",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Opción falsa 2",
+        "original_answer": "A",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-AFD7A5E4A659",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Iritis inflamación iris?",
+      "alternatives": [
+        "Opción falsa 5",
+        "Iritis inflamación iris ✓",
+        "Opción falsa 3",
+        "Opción falsa 4"
+      ],
+      "declared_answer": "B",
+      "justification": "Iritis inflamación iris. Tema: Patología. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmología/preguntas.json",
+          "source_id": "1724",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Iritis inflamación iris ✓",
+        "Opción falsa 2",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Opción falsa 2",
+        "original_answer": "A",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-B38F4258144A",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Blefaritis párpado?",
+      "alternatives": [
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5",
+        "Blefaritis párpado"
+      ],
+      "declared_answer": "D",
+      "justification": "Blefaritis párpado. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmologia/preguntas.json",
+          "source_id": "1728",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Blefaritis párpado",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-B721A727F394",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Escleritis inflamación esclera?",
+      "alternatives": [
+        "Opción falsa 5",
+        "Escleritis inflamación esclera ✓",
+        "Opción falsa 3",
+        "Opción falsa 4"
+      ],
+      "declared_answer": "B",
+      "justification": "Escleritis inflamación esclera. Tema: Patología. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmología/preguntas.json",
+          "source_id": "1726",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Escleritis inflamación esclera ✓",
+        "Opción falsa 2",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Opción falsa 2",
+        "original_answer": "A",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-BD648E3E562C",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Moscas volantes miodesopsia?",
+      "alternatives": [
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5",
+        "Moscas volantes miodesopsia ✓"
+      ],
+      "declared_answer": "D",
+      "justification": "Moscas volantes miodesopsia. Tema: Síntoma. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmología/preguntas.json",
+          "source_id": "1735",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Moscas volantes miodesopsia ✓",
+        "Opción falsa 2",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Opción falsa 2",
+        "original_answer": "A",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-BFC45FD56863",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Nistagmo movimiento ocular?",
+      "alternatives": [
+        "Nistagmo movimiento ocular ✓",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "declared_answer": "A",
+      "justification": "Nistagmo movimiento ocular. Tema: Patología. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmología/preguntas.json",
+          "source_id": "1739",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Nistagmo movimiento ocular ✓",
+        "Opción falsa 2",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Opción falsa 2",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-C815896D6EC5",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿PIO 15-20 mmHg normal?",
+      "alternatives": [
+        "PIO 15-20 mmHg normal ✓",
+        "Opción falsa 4",
+        "Opción falsa 5",
+        "Opción falsa 2"
+      ],
+      "declared_answer": "A",
+      "justification": "PIO 15-20 mmHg normal. Tema: Presión. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmología/preguntas.json",
+          "source_id": "1702",
+          "profession": "Oftalmología",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Opción falsa 1",
+        "Opción falsa 2",
+        "PIO 15-20 mmHg normal ✓",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "Opción falsa 1",
+        "original_answer": "C",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-CBA6B0624FCB",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Trabeculoplastia glaucoma?",
+      "alternatives": [
+        "Trabeculoplastia glaucoma",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "declared_answer": "A",
+      "justification": "Trabeculoplastia glaucoma. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "alternativas_distintas",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 2,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmologia/preguntas.json",
+          "source_id": "1746",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmología/preguntas.json",
+          "source_id": "1746",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Trabeculoplastia glaucoma",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-D1111E82451E",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Glaucoma PIO elevada nervio?",
+      "alternatives": [
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5",
+        "Glaucoma PIO elevada nervio ✓"
+      ],
+      "declared_answer": "D",
+      "justification": "Glaucoma PIO elevada nervio. Tema: Patología. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmología/preguntas.json",
+          "source_id": "1715",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Glaucoma PIO elevada nervio ✓",
+        "Opción falsa 2",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Opción falsa 2",
+        "original_answer": "A",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-D39765625B01",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Escotoma campo oscuro?",
+      "alternatives": [
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5",
+        "Escotoma campo oscuro"
+      ],
+      "declared_answer": "D",
+      "justification": "Escotoma campo oscuro. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "alternativas_distintas",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 2,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmologia/preguntas.json",
+          "source_id": "1737",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmología/preguntas.json",
+          "source_id": "1737",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Escotoma campo oscuro",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-DD7968E12732",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Amplitud acomodación 16?",
+      "alternatives": [
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Amplitud acomodación 16"
+      ],
+      "declared_answer": "D",
+      "justification": "Amplitud acomodación 16. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmologia/preguntas.json",
+          "source_id": "1704",
+          "profession": "Oftalmología",
+          "answer": "E"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Incorrecto 1",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Amplitud acomodación 16"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "Incorrecto 1",
+        "original_answer": "E",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-DF68396DB863",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Agudeza visual 20/20?",
+      "alternatives": [
+        "Agudeza visual 20/20",
+        "Incorrecto 4",
+        "Incorrecto 5",
+        "Incorrecto 2"
+      ],
+      "declared_answer": "A",
+      "justification": "Agudeza visual 20/20. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmologia/preguntas.json",
+          "source_id": "1703",
+          "profession": "Oftalmología",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Incorrecto 1",
+        "Incorrecto 2",
+        "Agudeza visual 20/20",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "Incorrecto 1",
+        "original_answer": "C",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-E8769D1CDD9E",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Orzuelo infección glándula?",
+      "alternatives": [
+        "Opción falsa 5",
+        "Orzuelo infección glándula ✓",
+        "Opción falsa 3",
+        "Opción falsa 4"
+      ],
+      "declared_answer": "B",
+      "justification": "Orzuelo infección glándula. Tema: Patología. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmología/preguntas.json",
+          "source_id": "1729",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Orzuelo infección glándula ✓",
+        "Opción falsa 2",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Opción falsa 2",
+        "original_answer": "A",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-EAD8BC0A14B3",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Oclusión vascular?",
+      "alternatives": [
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5",
+        "Oclusión vascular"
+      ],
+      "declared_answer": "D",
+      "justification": "Oclusión vascular. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmologia/preguntas.json",
+          "source_id": "1720",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Oclusión vascular",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-F21F483D1C17",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Degeneración macular central visión?",
+      "alternatives": [
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5",
+        "Degeneración macular central visión ✓"
+      ],
+      "declared_answer": "D",
+      "justification": "Degeneración macular central visión. Tema: Patología. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmología/preguntas.json",
+          "source_id": "1718",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Degeneración macular central visión ✓",
+        "Opción falsa 2",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Opción falsa 2",
+        "original_answer": "A",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-F7DAAA1FF392",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Retinitis pigmentosa degeneración?",
+      "alternatives": [
+        "Opción falsa 4",
+        "Opción falsa 5",
+        "Retinitis pigmentosa degeneración ✓",
+        "Opción falsa 3"
+      ],
+      "declared_answer": "C",
+      "justification": "Retinitis pigmentosa degeneración. Tema: Patología. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmología/preguntas.json",
+          "source_id": "1716",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Retinitis pigmentosa degeneración ✓",
+        "Opción falsa 2",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Opción falsa 2",
+        "original_answer": "A",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-FA700FE1AFC5",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Tremor párpado fasciculación?",
+      "alternatives": [
+        "Tremor párpado fasciculación",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "declared_answer": "A",
+      "justification": "Tremor párpado fasciculación. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "alternativas_distintas",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 2,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmologia/preguntas.json",
+          "source_id": "1740",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmología/preguntas.json",
+          "source_id": "1740",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Tremor párpado fasciculación",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-FAD942B8F6E3",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Miopía foco anterior?",
+      "alternatives": [
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5",
+        "Miopía foco anterior"
+      ],
+      "declared_answer": "D",
+      "justification": "Miopía foco anterior. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmologia/preguntas.json",
+          "source_id": "1708",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Miopía foco anterior",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-FE90E1141A29",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Afaquia ausencia cristalino?",
+      "alternatives": [
+        "Afaquia ausencia cristalino",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "declared_answer": "A",
+      "justification": "Afaquia ausencia cristalino. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "alternativas_distintas",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 2,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmologia/preguntas.json",
+          "source_id": "1712",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmología/preguntas.json",
+          "source_id": "1712",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Afaquia ausencia cristalino",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-FF1B9A685B43",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Episcleritis episclera?",
+      "alternatives": [
+        "Episcleritis episclera",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "declared_answer": "A",
+      "justification": "Episcleritis episclera. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmologia/preguntas.json",
+          "source_id": "1725",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Episcleritis episclera",
+        "Incorrecto 2",
+        "Incorrecto 3",
+        "Incorrecto 4",
+        "Incorrecto 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Incorrecto 2",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-FF2A37EDB3CF",
+      "profession": "Oftalmología",
+      "specialty": "Oftalmología",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Dacriocistitis inflamación saco?",
+      "alternatives": [
+        "Opción falsa 5",
+        "Dacriocistitis inflamación saco ✓",
+        "Opción falsa 3",
+        "Opción falsa 4"
+      ],
+      "declared_answer": "B",
+      "justification": "Dacriocistitis inflamación saco. Tema: Patología. Referencia clínica estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/mnt/user-data/outputs/oftalmología/preguntas.json",
+          "source_id": "1727",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Dacriocistitis inflamación saco ✓",
+        "Opción falsa 2",
+        "Opción falsa 3",
+        "Opción falsa 4",
+        "Opción falsa 5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Opción falsa 2",
+        "original_answer": "A",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-2D87010E8B85",
+      "profession": "Oftalmología",
+      "specialty": "Tecnología Médica - Optometría",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Tonometría: método más usado?",
+      "alternatives": [
+        "Aire comprimido",
+        "Indentación",
+        "Contorno dinámico",
+        "Aplanación (Goldmann)"
+      ],
+      "declared_answer": "D",
+      "justification": "Tonometría Goldmann (aplanación) gold standard. Aire comprimido es screening rápido.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 12,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-012",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-020",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-028",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-036",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-044",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-052",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-060",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-068",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-076",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-084",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-092",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-100",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Aplanación (Goldmann)",
+        "Aire comprimido",
+        "Rebote",
+        "Indentación",
+        "Contorno dinámico"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "C",
+        "dropped_alternative": "Rebote",
+        "original_answer": "A",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-413353C21C92",
+      "profession": "Oftalmología",
+      "specialty": "Tecnología Médica - Optometría",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Queratocono: progresión?",
+      "alternatives": [
+        "Toda la vida",
+        "Regresa solo",
+        "Impredecible",
+        "Hasta ~40 años"
+      ],
+      "declared_answer": "D",
+      "justification": "Queratocono: progresión hasta ~40 años. Requiere lentes rígidas/cross-linking/trasplante.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 12,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-007",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-015",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-023",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-031",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-039",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-047",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-055",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-063",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-071",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-079",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-087",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-095",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Hasta ~40 años",
+        "Toda la vida",
+        "Regresa solo",
+        "No progresa",
+        "Impredecible"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "D",
+        "dropped_alternative": "No progresa",
+        "original_answer": "A",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-58EEEE51D070",
+      "profession": "Oftalmología",
+      "specialty": "Tecnología Médica - Optometría",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Degeneración macular: edad de riesgo?",
+      "alternatives": [
+        "50-70 años",
+        ">70 años",
+        "Cualquier edad",
+        "30-50 años"
+      ],
+      "declared_answer": "B",
+      "justification": "Degeneración macular relacionada edad (DMAE) >70 años. Forma exudativa requiere urgencia.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 12,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-011",
+          "profession": "Oftalmología",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-019",
+          "profession": "Oftalmología",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-027",
+          "profession": "Oftalmología",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-035",
+          "profession": "Oftalmología",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-043",
+          "profession": "Oftalmología",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-051",
+          "profession": "Oftalmología",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-059",
+          "profession": "Oftalmología",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-067",
+          "profession": "Oftalmología",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-075",
+          "profession": "Oftalmología",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-083",
+          "profession": "Oftalmología",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-091",
+          "profession": "Oftalmología",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-099",
+          "profession": "Oftalmología",
+          "answer": "D"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "<30 años",
+        "30-50 años",
+        "50-70 años",
+        ">70 años",
+        "Cualquier edad"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "<30 años",
+        "original_answer": "D",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-5D9C7D126984",
+      "profession": "Oftalmología",
+      "specialty": "Tecnología Médica - Optometría",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Presión intraocular (PIO) normal?",
+      "alternatives": [
+        ">40 mmHg",
+        "10-21 mmHg",
+        "21-30 mmHg",
+        "30-40 mmHg"
+      ],
+      "declared_answer": "B",
+      "justification": "PIO normal: 10-21 mmHg. >21 riesgo glaucoma. Fluctúa diurnamente (mañana más alta).",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-003",
+          "profession": "Oftalmología",
+          "answer": "B"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "<10 mmHg",
+        "10-21 mmHg",
+        "21-30 mmHg",
+        "30-40 mmHg",
+        ">40 mmHg"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "<10 mmHg",
+        "original_answer": "B",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-855B8F5F247B",
+      "profession": "Oftalmología",
+      "specialty": "Tecnología Médica - Optometría",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Astigmatismo: defecto óptico?",
+      "alternatives": [
+        "Lente descentrada",
+        "Aberración esférica",
+        "Curvatura corneal irregular",
+        "Esfera desigual"
+      ],
+      "declared_answer": "C",
+      "justification": "Astigmatismo = curvatura corneal/lente irregular (2 meridianos diferentes). Requiere lente tórica.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 12,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-006",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-014",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-022",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-030",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-038",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-046",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-054",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-062",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-070",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-078",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-086",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-094",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Curvatura corneal irregular",
+        "Esfera desigual",
+        "Lente descentrada",
+        "Aberración esférica",
+        "Opacidad"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "E",
+        "dropped_alternative": "Opacidad",
+        "original_answer": "A",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-88C6C90E6692",
+      "profession": "Oftalmología",
+      "specialty": "Tecnología Médica - Optometría",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Fórmula para agudeza visual Snellen?",
+      "alternatives": [
+        "No existe fórmula",
+        "20/número pizarra",
+        "Distancia/línea legible",
+        "Inverso potencia óptica"
+      ],
+      "declared_answer": "C",
+      "justification": "AV Snellen = distancia prueba / distancia donde se lee línea (ej: 20/20).",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-002",
+          "profession": "Oftalmología",
+          "answer": "B"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "20/número pizarra",
+        "Distancia/línea legible",
+        "Inverso potencia óptica",
+        "Métrica decimal",
+        "No existe fórmula"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "D",
+        "dropped_alternative": "Métrica decimal",
+        "original_answer": "B",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-9EE5240657A8",
+      "profession": "Oftalmología",
+      "specialty": "Tecnología Médica - Optometría",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Catarata: causa principal ceguera reversible?",
+      "alternatives": [
+        "Opacificación cristalino",
+        "Queratocono",
+        "Desprendimiento retina",
+        "Miopía severa"
+      ],
+      "declared_answer": "A",
+      "justification": "Catarata es causa reversible ceguera más frecuente mundialmente. Cirugía de excelencia.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 12,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-010",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-018",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-026",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-034",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-042",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-050",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-058",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-066",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-074",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-082",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-090",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-098",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Opacificación cristalino",
+        "Glaucoma",
+        "Queratocono",
+        "Desprendimiento retina",
+        "Miopía severa"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Glaucoma",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-AC2EC61FDEA6",
+      "profession": "Oftalmología",
+      "specialty": "Tecnología Médica - Optometría",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Cicloplegia necesaria para?",
+      "alternatives": [
+        "Medición PIO",
+        "Exploración fondo",
+        "Prueba visual",
+        "Refracción pediátrica"
+      ],
+      "declared_answer": "D",
+      "justification": "Cicloplegia (atropina/ciclopentolato) en niños para refracción fiable (paraliza acomodación).",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 11,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-013",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-021",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-029",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-037",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-045",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-053",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-061",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-069",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-077",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-085",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-093",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Refracción pediátrica",
+        "Medición PIO",
+        "Exploración fondo",
+        "Gonioscopia",
+        "Prueba visual"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "D",
+        "dropped_alternative": "Gonioscopia",
+        "original_answer": "A",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-BA38F6CE3715",
+      "profession": "Oftalmología",
+      "specialty": "Tecnología Médica - Optometría",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Test de Amsler para?",
+      "alternatives": [
+        "Refracción",
+        "Daltonismo",
+        "Detectar DMAE",
+        "Agudeza central"
+      ],
+      "declared_answer": "C",
+      "justification": "Grid Amsler: paciente detecta distorsión líneas (DMAE exudativa). Autocuidado crítico.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 12,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-008",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-016",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-024",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-032",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-040",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-048",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-056",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-064",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-072",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-080",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-088",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-096",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Detectar DMAE",
+        "Medir PIO",
+        "Agudeza central",
+        "Refracción",
+        "Daltonismo"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Medir PIO",
+        "original_answer": "A",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-BF4EFE073F19",
+      "profession": "Oftalmología",
+      "specialty": "Tecnología Médica - Optometría",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Glaucoma de ángulo abierto: síntomas iniciales?",
+      "alternatives": [
+        "Asintomático",
+        "Dolor severo",
+        "Pupila dilatada",
+        "Queratopatía"
+      ],
+      "declared_answer": "A",
+      "justification": "Glaucoma ángulo abierto: progresivo, asintomático inicialmente. Pérdida campo gradual.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 12,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-009",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-017",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-025",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-033",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-041",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-049",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-057",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-065",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-073",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-081",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-089",
+          "profession": "Oftalmología",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-097",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Asintomático",
+        "Dolor severo",
+        "Visión roja",
+        "Pupila dilatada",
+        "Queratopatía"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "C",
+        "dropped_alternative": "Visión roja",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-C37C2C48F5D1",
+      "profession": "Oftalmología",
+      "specialty": "Tecnología Médica - Optometría",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Principal síntoma miopía?",
+      "alternatives": [
+        "Visión borrosa lejano",
+        "Visión borrosa cercano",
+        "Fotofobia",
+        "Dolor ocular"
+      ],
+      "declared_answer": "A",
+      "justification": "Miopía = dificultad visión lejana. Hipermetropía = dificultad cercano.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-004",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Visión borrosa lejano",
+        "Visión borrosa cercano",
+        "Fotofobia",
+        "Dolor ocular",
+        "Diplopía"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "E",
+        "dropped_alternative": "Diplopía",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-C5808051C9DD",
+      "profession": "Oftalmología",
+      "specialty": "Tecnología Médica - Optometría",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Cuál es principal error refractivo?",
+      "alternatives": [
+        "Hipermetropía",
+        "Astigmatismo",
+        "Presbicia",
+        "Todas igualmente frecuentes"
+      ],
+      "declared_answer": "B",
+      "justification": "Astigmatismo es error refractivo más prevalente (>80% población). Miopía en aumento global.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-001",
+          "profession": "Oftalmología",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Miopía",
+        "Hipermetropía",
+        "Astigmatismo",
+        "Presbicia",
+        "Todas igualmente frecuentes"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "Miopía",
+        "original_answer": "C",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-ED9695C4FB89",
+      "profession": "Oftalmología",
+      "specialty": "Tecnología Médica - Optometría",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Lente de contacto esférica para?",
+      "alternatives": [
+        "Miopía/hipermetropía",
+        "Astigmatismo",
+        "Presbicia",
+        "Queratocono"
+      ],
+      "declared_answer": "A",
+      "justification": "Lente contacto esférica: miopía/hipermetropía. Tórica: astigmatismo.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_opt.json",
+          "source_id": "TEC-OPT-005",
+          "profession": "Oftalmología",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Miopía/hipermetropía",
+        "Astigmatismo",
+        "Presbicia",
+        "Queratocono",
+        "Todas"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "E",
+        "dropped_alternative": "Todas",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    }
+  ]
+}

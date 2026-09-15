@@ -1,0 +1,3338 @@
+{
+  "module_version": 1,
+  "profession": "Tecnología Médica - Terapia Ocupacional",
+  "total_questions": 38,
+  "structural_validation": {
+    "expected_alternatives": 4,
+    "invalid_questions": 0,
+    "status": "PASS"
+  },
+  "publication_status": "REVIEW_REQUIRED",
+  "warning": "Módulo de preparación. No integrar ni mostrar como banco validado hasta confirmar clave, distractores y fuente por revisor profesional.",
+  "thematic_blocks": {
+    "Cuidado integral": 37,
+    "Salud pública": 1
+  },
+  "questions": [
+    {
+      "canonical_id": "BQ-0426387922FB",
+      "profession": "Tecnología Médica - Terapia Ocupacional",
+      "specialty": "Tecnología Médica - Terapia Ocupacional",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Evaluación sensoperceptual en AVC?",
+      "alternatives": [
+        "Todas",
+        "Discriminación tacto-temperatura",
+        "Propriocepción",
+        "Estereoagnosia"
+      ],
+      "declared_answer": "A",
+      "justification": "Evaluación sensoperceptual: sensibilidad + propiocepción + estereoagnosia + praxis.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 12,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-012",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-020",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-028",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-036",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-044",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-052",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-060",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-068",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-076",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-084",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-092",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "D"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-100",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "D"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Discriminación tacto-temperatura",
+        "Propriocepción",
+        "Estereoagnosia",
+        "Todas",
+        "Solo visión"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "E",
+        "dropped_alternative": "Solo visión",
+        "original_answer": "D",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-0FCB0C6BB327",
+      "profession": "Tecnología Médica - Terapia Ocupacional",
+      "specialty": "Tecnología Médica - Terapia Ocupacional",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Actividad terapéutica vs recreativa?",
+      "alternatives": [
+        "Recreativa: ocio puro",
+        "Terapéutica: divertida",
+        "No hay diferencia",
+        "Terapéutica: objetivo funcional"
+      ],
+      "declared_answer": "D",
+      "justification": "Actividad terapéutica tiene propósito funcional. Recreativa: entretenimiento (puede ser terapéutica si contextualizada).",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 12,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-008",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-016",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-024",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-032",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-040",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-048",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-056",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-064",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-072",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-080",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-088",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-096",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Terapéutica: objetivo funcional",
+        "Recreativa: ocio puro",
+        "Terapéutica: divertida",
+        "Iguales",
+        "No hay diferencia"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "D",
+        "dropped_alternative": "Iguales",
+        "original_answer": "A",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-2C0016A8DF55",
+      "profession": "Tecnología Médica - Terapia Ocupacional",
+      "specialty": "Tecnología Médica - Terapia Ocupacional",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Motricidad fina vs gruesa en rehabilitación?",
+      "alternatives": [
+        "Fina: manos, gruesa: extremidades",
+        "Igual concepto",
+        "Fina: saltar, gruesa: escribir",
+        "Fina: caminar, gruesa: pinza"
+      ],
+      "declared_answer": "A",
+      "justification": "Motricidad fina: coordinación dedos/manos. Gruesa: miembros/tronco.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 12,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-009",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-017",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-025",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-033",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-041",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-049",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-057",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-065",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-073",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-081",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-089",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-097",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Fina: manos, gruesa: extremidades",
+        "Igual concepto",
+        "Fina: saltar, gruesa: escribir",
+        "Fina: caminar, gruesa: pinza",
+        "Opuesto"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "E",
+        "dropped_alternative": "Opuesto",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-37A938B685D6",
+      "profession": "Tecnología Médica - Terapia Ocupacional",
+      "specialty": "Tecnología Médica - Terapia Ocupacional",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Actividades de vida diaria (AVD) incluyen?",
+      "alternatives": [
+        "Higiene, vestuario, alimentación",
+        "Movilidad, traslado",
+        "Todas",
+        "Solo autocuidado"
+      ],
+      "declared_answer": "C",
+      "justification": "AVD = autocuidado + movilidad + ocio + roles sociales/laborales.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-002",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "D"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Higiene, vestuario, alimentación",
+        "Ocio, trabajo",
+        "Movilidad, traslado",
+        "Todas",
+        "Solo autocuidado"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Ocio, trabajo",
+        "original_answer": "D",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-58EDB5EB6CF0",
+      "profession": "Tecnología Médica - Terapia Ocupacional",
+      "specialty": "Tecnología Médica - Terapia Ocupacional",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Ergonomía en puesto trabajo?",
+      "alternatives": [
+        "Altura escritorio",
+        "Posición monitor",
+        "Silla ajustable",
+        "Todas"
+      ],
+      "declared_answer": "D",
+      "justification": "Ergonomía laboral: postura neutral, monitor a nivel ojos, descansos frecuentes.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 12,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-007",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "E"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-015",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "E"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-023",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "E"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-031",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "E"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-039",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "E"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-047",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "E"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-055",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "E"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-063",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "E"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-071",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "E"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-079",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "E"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-087",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "E"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-095",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "E"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Altura escritorio",
+        "Posición monitor",
+        "Silla ajustable",
+        "Descansos",
+        "Todas"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "D",
+        "dropped_alternative": "Descansos",
+        "original_answer": "E",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-8F99EE4C18D1",
+      "profession": "Tecnología Médica - Terapia Ocupacional",
+      "specialty": "Tecnología Médica - Terapia Ocupacional",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Cuál es principal objetivo de Terapia Ocupacional?",
+      "alternatives": [
+        "Solo entrenar ejercicio",
+        "Diagnosticar enfermedad",
+        "Prescribir medicamentos",
+        "Maximizar independencia funcional"
+      ],
+      "declared_answer": "D",
+      "justification": "Terapia Ocupacional: rehabilitación actividades vida diaria (AVD), independencia funcional.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-001",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Maximizar independencia funcional",
+        "Solo entrenar ejercicio",
+        "Diagnosticar enfermedad",
+        "Prescribir medicamentos",
+        "Evaluación cognitiva"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "E",
+        "dropped_alternative": "Evaluación cognitiva",
+        "original_answer": "A",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-925A8E9E7965",
+      "profession": "Tecnología Médica - Terapia Ocupacional",
+      "specialty": "Tecnología Médica - Terapia Ocupacional",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Adaptación ambiental en hogar geriátrico?",
+      "alternatives": [
+        "Todas",
+        "Barras de seguridad",
+        "Iluminación",
+        "Eliminación alfombras"
+      ],
+      "declared_answer": "A",
+      "justification": "Adaptación hogar: seguridad (barras, iluminación), accesibilidad (rampas), comodidad.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-004",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "E"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Barras de seguridad",
+        "Iluminación",
+        "Eliminación alfombras",
+        "Acceso WC",
+        "Todas"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "D",
+        "dropped_alternative": "Acceso WC",
+        "original_answer": "E",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-951F205068E5",
+      "profession": "Tecnología Médica - Terapia Ocupacional",
+      "specialty": "Tecnología Médica - Terapia Ocupacional",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Principales roles ocupacionales?",
+      "alternatives": [
+        "Autocuidado, trabajo, ocio, familia",
+        "Solo trabajo",
+        "Solo juego",
+        "Solo descanso"
+      ],
+      "declared_answer": "A",
+      "justification": "Roles ocupacionales: autocuidado, trabajo, familia, ocio, comunidad.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 12,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-011",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-019",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-027",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-035",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-043",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-051",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-059",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-067",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-075",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-083",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-091",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-099",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Autocuidado, trabajo, ocio, familia",
+        "Solo trabajo",
+        "Solo juego",
+        "Solo descanso",
+        "Aleatorio"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "E",
+        "dropped_alternative": "Aleatorio",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-AA0FA1C032DA",
+      "profession": "Tecnología Médica - Terapia Ocupacional",
+      "specialty": "Tecnología Médica - Terapia Ocupacional",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Equilibrio estático vs dinámico?",
+      "alternatives": [
+        "Estático: sin movimiento, dinámico: movilidad",
+        "Contrario",
+        "Solo dinámico importante",
+        "Innato siempre"
+      ],
+      "declared_answer": "A",
+      "justification": "Equilibrio estático (sedente) vs dinámico (caminata). Ambos críticos en rehabilitación.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 12,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-006",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-014",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-022",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-030",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-038",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-046",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-054",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-062",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-070",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-078",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-086",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-094",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Estático: sin movimiento, dinámico: movilidad",
+        "Igual",
+        "Contrario",
+        "Solo dinámico importante",
+        "Innato siempre"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Igual",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-B3F2E4654E2C",
+      "profession": "Tecnología Médica - Terapia Ocupacional",
+      "specialty": "Tecnología Médica - Terapia Ocupacional",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Evaluación Katz mide qué?",
+      "alternatives": [
+        "Depresión",
+        "Equilibrio",
+        "Dependencia AVD básicas",
+        "Cognición"
+      ],
+      "declared_answer": "C",
+      "justification": "Índice Katz evalúa dependencia: baño, vestirse, usar WC, continencia, alimentarse, transferencia.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-003",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Dependencia AVD básicas",
+        "Cognición",
+        "Depresión",
+        "Equilibrio",
+        "Dolor"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "E",
+        "dropped_alternative": "Dolor",
+        "original_answer": "A",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-B9DA34D3C6A6",
+      "profession": "Tecnología Médica - Terapia Ocupacional",
+      "specialty": "Tecnología Médica - Terapia Ocupacional",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Splint (órtesis) estático en mano?",
+      "alternatives": [
+        "Inmoviliza articulación",
+        "Moviliza pasivamente",
+        "Estira tendones",
+        "Aumenta fuerza"
+      ],
+      "declared_answer": "A",
+      "justification": "Splint estático: inmoviliza articulación (ej: después cirugía). Dinámico: asiste movimiento.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 12,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-010",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-018",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-026",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-034",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-042",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-050",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-058",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-066",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-074",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-082",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-090",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-098",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Inmoviliza articulación",
+        "Moviliza pasivamente",
+        "Estira tendones",
+        "Aumenta fuerza",
+        "Analgésico"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "E",
+        "dropped_alternative": "Analgésico",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-CC233398D221",
+      "profession": "Tecnología Médica - Terapia Ocupacional",
+      "specialty": "Tecnología Médica - Terapia Ocupacional",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Teoría MOHO (Model of Human Occupation)?",
+      "alternatives": [
+        "Modelo ocupación-salud",
+        "Neurodesarrollo",
+        "Sensitización",
+        "Conductismo"
+      ],
+      "declared_answer": "A",
+      "justification": "MOHO: ocupación es proceso central salud. Volición + habitualización + desempeño.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-005",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Modelo ocupación-salud",
+        "Neurodesarrollo",
+        "Sensitización",
+        "Biomecánica",
+        "Conductismo"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "D",
+        "dropped_alternative": "Biomecánica",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-FED95E4EA117",
+      "profession": "Tecnología Médica - Terapia Ocupacional",
+      "specialty": "Tecnología Médica - Terapia Ocupacional",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Técnica de endurecimiento en prótesis?",
+      "alternatives": [
+        "Exposición gradual texturas",
+        "Estimulación táctil",
+        "Ambas",
+        "Desensibilización"
+      ],
+      "declared_answer": "C",
+      "justification": "Endurecimiento de muñón: progresión texturas (suave → áspero) + desensibilización.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 11,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-013",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "C"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-021",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "C"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-029",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "C"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-037",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "C"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-045",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "C"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-053",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "C"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-061",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "C"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-069",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "C"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-077",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "C"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-085",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "C"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_to.json",
+          "source_id": "TEC-TO-093",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Exposición gradual texturas",
+        "Estimulación táctil",
+        "Ambas",
+        "Desensibilización",
+        "Masaje"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "E",
+        "dropped_alternative": "Masaje",
+        "original_answer": "C",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-03533D2D0FC6",
+      "profession": "Tecnología Médica - Terapia Ocupacional",
+      "specialty": "Tecnología Médica - Terapia Ocupacional",
+      "thematic_block": "Salud pública",
+      "difficulty": "baja",
+      "statement": "En relación con prevención de caídas en hogar, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "No se necesita observar la tarea real",
+        "Retirar obstáculos, mejorar iluminación y revisar transferencias puede reducir riesgo de caídas",
+        "Añadir alfombras sueltas mejora seguridad",
+        "Las barras de apoyo siempre estorban"
+      ],
+      "declared_answer": "B",
+      "justification": "La evaluación domiciliaria identifica barreras modificables y necesidades de apoyo.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "terapia-ocupacional/preguntas.json",
+          "source_id": "TO-085",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "E"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-03533D2D0FC6",
+          "statement": "En relación con prevención de caídas en hogar, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "E",
+          "difficulty": "baja",
+          "source_ids": [
+            "TO-085"
+          ]
+        },
+        {
+          "canonical_id": "BQ-22B94BEE2451",
+          "statement": "En un establecimiento de salud, se revisa el tema de prevención de caídas en hogar. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "D",
+          "difficulty": "media",
+          "source_ids": [
+            "TO-086"
+          ]
+        },
+        {
+          "canonical_id": "BQ-4614D38B16FE",
+          "statement": "Para una evaluación SERUMS sobre prevención de caídas en hogar, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "C",
+          "difficulty": "media",
+          "source_ids": [
+            "TO-087"
+          ]
+        },
+        {
+          "canonical_id": "BQ-69FA6A8C6DA5",
+          "statement": "Un profesional debe aplicar conocimientos de prevención de caídas en hogar. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "B",
+          "difficulty": "alta",
+          "source_ids": [
+            "TO-088"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "Añadir alfombras sueltas mejora seguridad",
+        "La iluminación nocturna no importa",
+        "Las barras de apoyo siempre estorban",
+        "No se necesita observar la tarea real",
+        "Retirar obstáculos, mejorar iluminación y revisar transferencias puede reducir riesgo de caídas"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "La iluminación nocturna no importa",
+        "original_answer": "E",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-03E43487628F",
+      "profession": "Tecnología Médica - Terapia Ocupacional",
+      "specialty": "Tecnología Médica - Terapia Ocupacional",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con AVD instrumentales, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "Mantener tono postural",
+        "Dormir únicamente",
+        "Reflejos osteotendinosos",
+        "Preparar alimentos, compras y manejo de dinero son actividades instrumentales de la vida diaria"
+      ],
+      "declared_answer": "D",
+      "justification": "Las AIVD requieren mayor interacción con entorno y organización para vida independiente.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "terapia-ocupacional/preguntas.json",
+          "source_id": "TO-009",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "D"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-03E43487628F",
+          "statement": "En relación con AVD instrumentales, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "D",
+          "difficulty": "baja",
+          "source_ids": [
+            "TO-009"
+          ]
+        },
+        {
+          "canonical_id": "BQ-59274FAB34DD",
+          "statement": "Un profesional debe aplicar conocimientos de AVD instrumentales. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "A",
+          "difficulty": "alta",
+          "source_ids": [
+            "TO-012"
+          ]
+        },
+        {
+          "canonical_id": "BQ-DDA9CE66ACA7",
+          "statement": "En un establecimiento de salud, se revisa el tema de AVD instrumentales. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "C",
+          "difficulty": "media",
+          "source_ids": [
+            "TO-010"
+          ]
+        },
+        {
+          "canonical_id": "BQ-EEEC5996E404",
+          "statement": "Para una evaluación SERUMS sobre AVD instrumentales, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "B",
+          "difficulty": "media",
+          "source_ids": [
+            "TO-011"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "Mantener tono postural",
+        "Dormir únicamente",
+        "Reflejos osteotendinosos",
+        "Preparar alimentos, compras y manejo de dinero son actividades instrumentales de la vida diaria",
+        "Respirar"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "E",
+        "dropped_alternative": "Respirar",
+        "original_answer": "D",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-112D290F39FA",
+      "profession": "Tecnología Médica - Terapia Ocupacional",
+      "specialty": "Tecnología Médica - Terapia Ocupacional",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con AVD básicas, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "Vestido, alimentación, higiene y baño son ejemplos de actividades básicas de la vida diaria",
+        "Usar transporte público",
+        "Gestionar medicación compleja",
+        "Organizar compras semanales"
+      ],
+      "declared_answer": "A",
+      "justification": "Las AVD básicas se relacionan con autocuidado; tareas más complejas suelen clasificarse como instrumentales.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "terapia-ocupacional/preguntas.json",
+          "source_id": "TO-005",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "E"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-112D290F39FA",
+          "statement": "En relación con AVD básicas, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "E",
+          "difficulty": "baja",
+          "source_ids": [
+            "TO-005"
+          ]
+        },
+        {
+          "canonical_id": "BQ-C8143358B5EC",
+          "statement": "Para una evaluación SERUMS sobre AVD básicas, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "C",
+          "difficulty": "media",
+          "source_ids": [
+            "TO-007"
+          ]
+        },
+        {
+          "canonical_id": "BQ-F7C1528DBA11",
+          "statement": "Un profesional debe aplicar conocimientos de AVD básicas. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "B",
+          "difficulty": "alta",
+          "source_ids": [
+            "TO-008"
+          ]
+        },
+        {
+          "canonical_id": "BQ-F9E30C3A4654",
+          "statement": "En un establecimiento de salud, se revisa el tema de AVD básicas. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "D",
+          "difficulty": "media",
+          "source_ids": [
+            "TO-006"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "Administrar finanzas",
+        "Usar transporte público",
+        "Gestionar medicación compleja",
+        "Organizar compras semanales",
+        "Vestido, alimentación, higiene y baño son ejemplos de actividades básicas de la vida diaria"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "Administrar finanzas",
+        "original_answer": "E",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-23334A7D1F4F",
+      "profession": "Tecnología Médica - Terapia Ocupacional",
+      "specialty": "Tecnología Médica - Terapia Ocupacional",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con rutinas, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "Las rutinas predecibles pueden facilitar organización y desempeño en personas con dificultades cognitivas",
+        "Deben ser rígidas sin excepción",
+        "No se apoyan con señales visuales",
+        "Son irrelevantes para sueño"
+      ],
+      "declared_answer": "A",
+      "justification": "Las rutinas pueden disminuir demanda ejecutiva y deben adaptarse a preferencias y contexto.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "terapia-ocupacional/preguntas.json",
+          "source_id": "TO-073",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "C"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-23334A7D1F4F",
+          "statement": "En relación con rutinas, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "C",
+          "difficulty": "baja",
+          "source_ids": [
+            "TO-073"
+          ]
+        },
+        {
+          "canonical_id": "BQ-2A6F70147A3D",
+          "statement": "Un profesional debe aplicar conocimientos de rutinas. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "E",
+          "difficulty": "alta",
+          "source_ids": [
+            "TO-076"
+          ]
+        },
+        {
+          "canonical_id": "BQ-59C85477A506",
+          "statement": "Para una evaluación SERUMS sobre rutinas, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "A",
+          "difficulty": "media",
+          "source_ids": [
+            "TO-075"
+          ]
+        },
+        {
+          "canonical_id": "BQ-7D96D72E8292",
+          "statement": "En un establecimiento de salud, se revisa el tema de rutinas. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "B",
+          "difficulty": "media",
+          "source_ids": [
+            "TO-074"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "No se apoyan con señales visuales",
+        "Son irrelevantes para sueño",
+        "Las rutinas predecibles pueden facilitar organización y desempeño en personas con dificultades cognitivas",
+        "Siempre reducen autonomía",
+        "Deben ser rígidas sin excepción"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "D",
+        "dropped_alternative": "Siempre reducen autonomía",
+        "original_answer": "C",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-48086E57C969",
+      "profession": "Tecnología Médica - Terapia Ocupacional",
+      "specialty": "Tecnología Médica - Terapia Ocupacional",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con participación social, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "Es un objetivo ajeno a rehabilitación",
+        "No depende de accesibilidad",
+        "No tiene relación con roles",
+        "La participación social forma parte del desempeño ocupacional y del bienestar"
+      ],
+      "declared_answer": "D",
+      "justification": "Los vínculos y roles comunitarios son ocupaciones relevantes y pueden verse limitados por barreras personales o ambientales.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "terapia-ocupacional/preguntas.json",
+          "source_id": "TO-093",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "C"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-107D5071EB28",
+          "statement": "Un profesional debe aplicar conocimientos de participación social. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "E",
+          "difficulty": "alta",
+          "source_ids": [
+            "TO-096"
+          ]
+        },
+        {
+          "canonical_id": "BQ-48086E57C969",
+          "statement": "En relación con participación social, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "C",
+          "difficulty": "baja",
+          "source_ids": [
+            "TO-093"
+          ]
+        },
+        {
+          "canonical_id": "BQ-B6735B55B82E",
+          "statement": "Para una evaluación SERUMS sobre participación social, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "A",
+          "difficulty": "media",
+          "source_ids": [
+            "TO-095"
+          ]
+        },
+        {
+          "canonical_id": "BQ-C900C7096CBD",
+          "statement": "En un establecimiento de salud, se revisa el tema de participación social. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "B",
+          "difficulty": "media",
+          "source_ids": [
+            "TO-094"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "No depende de accesibilidad",
+        "No tiene relación con roles",
+        "La participación social forma parte del desempeño ocupacional y del bienestar",
+        "Es un objetivo ajeno a rehabilitación",
+        "Solo se evalúa en niños"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "E",
+        "dropped_alternative": "Solo se evalúa en niños",
+        "original_answer": "C",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-4EA4EF25DCD6",
+      "profession": "Tecnología Médica - Terapia Ocupacional",
+      "specialty": "Tecnología Médica - Terapia Ocupacional",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con salud mental, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "Se limita a entretenimiento",
+        "La productividad es el único objetivo",
+        "No considera ambiente social",
+        "En salud mental, la terapia ocupacional puede estructurar rutinas, roles y participación significativa"
+      ],
+      "declared_answer": "D",
+      "justification": "Las ocupaciones pueden apoyar regulación, identidad, recuperación e inclusión comunitaria.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "terapia-ocupacional/preguntas.json",
+          "source_id": "TO-069",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "D"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-4EA4EF25DCD6",
+          "statement": "En relación con salud mental, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "D",
+          "difficulty": "baja",
+          "source_ids": [
+            "TO-069"
+          ]
+        },
+        {
+          "canonical_id": "BQ-8E3BB8D220FF",
+          "statement": "Un profesional debe aplicar conocimientos de salud mental. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "A",
+          "difficulty": "alta",
+          "source_ids": [
+            "TO-072"
+          ]
+        },
+        {
+          "canonical_id": "BQ-E92541D7E632",
+          "statement": "En un establecimiento de salud, se revisa el tema de salud mental. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "C",
+          "difficulty": "media",
+          "source_ids": [
+            "TO-070"
+          ]
+        },
+        {
+          "canonical_id": "BQ-EAF1FB048635",
+          "statement": "Para una evaluación SERUMS sobre salud mental, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "B",
+          "difficulty": "media",
+          "source_ids": [
+            "TO-071"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "No aborda hábitos",
+        "La productividad es el único objetivo",
+        "No considera ambiente social",
+        "En salud mental, la terapia ocupacional puede estructurar rutinas, roles y participación significativa",
+        "Se limita a entretenimiento"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "No aborda hábitos",
+        "original_answer": "D",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-5136A652B6BB",
+      "profession": "Tecnología Médica - Terapia Ocupacional",
+      "specialty": "Tecnología Médica - Terapia Ocupacional",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con metas centradas en la persona, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "Las metas deben construirse con la persona y relacionarse con ocupaciones que valora",
+        "Las metas deben describir solo déficits",
+        "No importa la prioridad del usuario",
+        "Deben evitarse resultados funcionales"
+      ],
+      "declared_answer": "A",
+      "justification": "La práctica centrada en la persona mejora pertinencia y compromiso con la intervención.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "terapia-ocupacional/preguntas.json",
+          "source_id": "TO-097",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "B"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-240DF3D10D21",
+          "statement": "Un profesional debe aplicar conocimientos de metas centradas en la persona. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "D",
+          "difficulty": "alta",
+          "source_ids": [
+            "TO-100"
+          ]
+        },
+        {
+          "canonical_id": "BQ-5136A652B6BB",
+          "statement": "En relación con metas centradas en la persona, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "B",
+          "difficulty": "baja",
+          "source_ids": [
+            "TO-097"
+          ]
+        },
+        {
+          "canonical_id": "BQ-5E726260F4B5",
+          "statement": "Para una evaluación SERUMS sobre metas centradas en la persona, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "E",
+          "difficulty": "media",
+          "source_ids": [
+            "TO-099"
+          ]
+        },
+        {
+          "canonical_id": "BQ-79C16396AE9D",
+          "statement": "En un establecimiento de salud, se revisa el tema de metas centradas en la persona. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "A",
+          "difficulty": "media",
+          "source_ids": [
+            "TO-098"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "Deben evitarse resultados funcionales",
+        "Las metas deben construirse con la persona y relacionarse con ocupaciones que valora",
+        "El terapeuta decide sin consultar",
+        "Las metas deben describir solo déficits",
+        "No importa la prioridad del usuario"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "C",
+        "dropped_alternative": "El terapeuta decide sin consultar",
+        "original_answer": "B",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-6E8C48242BBC",
+      "profession": "Tecnología Médica - Terapia Ocupacional",
+      "specialty": "Tecnología Médica - Terapia Ocupacional",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con motricidad fina, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "Solo depende de fuerza de piernas",
+        "Es idéntica al equilibrio estático",
+        "No puede entrenarse con tareas funcionales",
+        "La motricidad fina implica movimientos precisos de manos y dedos para manipular objetos"
+      ],
+      "declared_answer": "D",
+      "justification": "Destreza, coordinación y sensibilidad contribuyen a tareas como abotonar, escribir o usar utensilios.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "terapia-ocupacional/preguntas.json",
+          "source_id": "TO-045",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "E"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-6E8C48242BBC",
+          "statement": "En relación con motricidad fina, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "E",
+          "difficulty": "baja",
+          "source_ids": [
+            "TO-045"
+          ]
+        },
+        {
+          "canonical_id": "BQ-83C27B2713D5",
+          "statement": "Un profesional debe aplicar conocimientos de motricidad fina. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "B",
+          "difficulty": "alta",
+          "source_ids": [
+            "TO-048"
+          ]
+        },
+        {
+          "canonical_id": "BQ-E0C1B1FD2A1C",
+          "statement": "En un establecimiento de salud, se revisa el tema de motricidad fina. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "D",
+          "difficulty": "media",
+          "source_ids": [
+            "TO-046"
+          ]
+        },
+        {
+          "canonical_id": "BQ-F611AC376ECF",
+          "statement": "Para una evaluación SERUMS sobre motricidad fina, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "C",
+          "difficulty": "media",
+          "source_ids": [
+            "TO-047"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "Solo depende de fuerza de piernas",
+        "No influye en escritura",
+        "Es idéntica al equilibrio estático",
+        "No puede entrenarse con tareas funcionales",
+        "La motricidad fina implica movimientos precisos de manos y dedos para manipular objetos"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "No influye en escritura",
+        "original_answer": "E",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-73C929A36DDD",
+      "profession": "Tecnología Médica - Terapia Ocupacional",
+      "specialty": "Tecnología Médica - Terapia Ocupacional",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con graduación de actividad, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "Usar solo tareas pasivas",
+        "Graduar una actividad significa modificar su dificultad para ajustarla a capacidades y objetivos",
+        "Eliminar toda participación",
+        "Mantener siempre el mismo desafío"
+      ],
+      "declared_answer": "B",
+      "justification": "La graduación puede variar pasos, peso, tiempo, ayudas, complejidad o contexto.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "terapia-ocupacional/preguntas.json",
+          "source_id": "TO-017",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "B"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-4E92AA4D5EBC",
+          "statement": "Un profesional debe aplicar conocimientos de graduación de actividad. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "D",
+          "difficulty": "alta",
+          "source_ids": [
+            "TO-020"
+          ]
+        },
+        {
+          "canonical_id": "BQ-64D172088762",
+          "statement": "Para una evaluación SERUMS sobre graduación de actividad, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "E",
+          "difficulty": "media",
+          "source_ids": [
+            "TO-019"
+          ]
+        },
+        {
+          "canonical_id": "BQ-73C929A36DDD",
+          "statement": "En relación con graduación de actividad, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "B",
+          "difficulty": "baja",
+          "source_ids": [
+            "TO-017"
+          ]
+        },
+        {
+          "canonical_id": "BQ-906B7A94609C",
+          "statement": "En un establecimiento de salud, se revisa el tema de graduación de actividad. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "A",
+          "difficulty": "media",
+          "source_ids": [
+            "TO-018"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "Usar solo tareas pasivas",
+        "Graduar una actividad significa modificar su dificultad para ajustarla a capacidades y objetivos",
+        "Cambiar el diagnóstico",
+        "Eliminar toda participación",
+        "Mantener siempre el mismo desafío"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "C",
+        "dropped_alternative": "Cambiar el diagnóstico",
+        "original_answer": "B",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-7996E87E57D9",
+      "profession": "Tecnología Médica - Terapia Ocupacional",
+      "specialty": "Tecnología Médica - Terapia Ocupacional",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con demencia, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "Toda actividad debe suspenderse",
+        "En demencia, simplificar tareas y adaptar el entorno puede mantener participación segura por más tiempo",
+        "Se debe confrontar cada error de memoria",
+        "La complejidad debe aumentarse sin apoyo"
+      ],
+      "declared_answer": "B",
+      "justification": "Las adaptaciones compensatorias y actividades significativas pueden sostener función y reducir riesgo.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "terapia-ocupacional/preguntas.json",
+          "source_id": "TO-081",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-0FF55737F3E0",
+          "statement": "Para una evaluación SERUMS sobre demencia, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "D",
+          "difficulty": "media",
+          "source_ids": [
+            "TO-083"
+          ]
+        },
+        {
+          "canonical_id": "BQ-7996E87E57D9",
+          "statement": "En relación con demencia, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "A",
+          "difficulty": "baja",
+          "source_ids": [
+            "TO-081"
+          ]
+        },
+        {
+          "canonical_id": "BQ-8003514A89A0",
+          "statement": "Un profesional debe aplicar conocimientos de demencia. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "C",
+          "difficulty": "alta",
+          "source_ids": [
+            "TO-084"
+          ]
+        },
+        {
+          "canonical_id": "BQ-9E55C149BFBE",
+          "statement": "En un establecimiento de salud, se revisa el tema de demencia. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "E",
+          "difficulty": "media",
+          "source_ids": [
+            "TO-082"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "En demencia, simplificar tareas y adaptar el entorno puede mantener participación segura por más tiempo",
+        "Se debe confrontar cada error de memoria",
+        "La complejidad debe aumentarse sin apoyo",
+        "El entorno no influye",
+        "Toda actividad debe suspenderse"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "D",
+        "dropped_alternative": "El entorno no influye",
+        "original_answer": "A",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-7AF46C6D848A",
+      "profession": "Tecnología Médica - Terapia Ocupacional",
+      "specialty": "Tecnología Médica - Terapia Ocupacional",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con memoria funcional, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "Solo sirven en demencia avanzada",
+        "No requieren entrenamiento",
+        "Las ayudas externas como agendas o alarmas pueden compensar dificultades de memoria",
+        "Siempre empeoran autonomía"
+      ],
+      "declared_answer": "C",
+      "justification": "Las estrategias compensatorias pueden apoyar desempeño cuando se integran a rutinas reales.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "terapia-ocupacional/preguntas.json",
+          "source_id": "TO-057",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "B"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-29700472B9FE",
+          "statement": "Para una evaluación SERUMS sobre memoria funcional, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "E",
+          "difficulty": "media",
+          "source_ids": [
+            "TO-059"
+          ]
+        },
+        {
+          "canonical_id": "BQ-7AF46C6D848A",
+          "statement": "En relación con memoria funcional, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "B",
+          "difficulty": "baja",
+          "source_ids": [
+            "TO-057"
+          ]
+        },
+        {
+          "canonical_id": "BQ-8AEDFB95B622",
+          "statement": "En un establecimiento de salud, se revisa el tema de memoria funcional. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "A",
+          "difficulty": "media",
+          "source_ids": [
+            "TO-058"
+          ]
+        },
+        {
+          "canonical_id": "BQ-B61F8CA5D403",
+          "statement": "Un profesional debe aplicar conocimientos de memoria funcional. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "D",
+          "difficulty": "alta",
+          "source_ids": [
+            "TO-060"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "Deben ocultarse al usuario",
+        "Las ayudas externas como agendas o alarmas pueden compensar dificultades de memoria",
+        "Siempre empeoran autonomía",
+        "Solo sirven en demencia avanzada",
+        "No requieren entrenamiento"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "Deben ocultarse al usuario",
+        "original_answer": "B",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-7C6C32794F42",
+      "profession": "Tecnología Médica - Terapia Ocupacional",
+      "specialty": "Tecnología Médica - Terapia Ocupacional",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con férulas, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "Las férulas pueden utilizarse para posicionamiento, protección o función según indicación",
+        "Siempre deben inmovilizar permanentemente",
+        "Pueden ajustarse sin considerar edema",
+        "Son equivalentes para cualquier diagnóstico"
+      ],
+      "declared_answer": "A",
+      "justification": "El diseño debe responder a objetivo clínico y vigilar comodidad, alineación y piel.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "terapia-ocupacional/preguntas.json",
+          "source_id": "TO-029",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "D"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-77191C79F920",
+          "statement": "Un profesional debe aplicar conocimientos de férulas. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "A",
+          "difficulty": "alta",
+          "source_ids": [
+            "TO-032"
+          ]
+        },
+        {
+          "canonical_id": "BQ-7C6C32794F42",
+          "statement": "En relación con férulas, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "D",
+          "difficulty": "baja",
+          "source_ids": [
+            "TO-029"
+          ]
+        },
+        {
+          "canonical_id": "BQ-92349585978A",
+          "statement": "En un establecimiento de salud, se revisa el tema de férulas. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "C",
+          "difficulty": "media",
+          "source_ids": [
+            "TO-030"
+          ]
+        },
+        {
+          "canonical_id": "BQ-D3703BB32920",
+          "statement": "Para una evaluación SERUMS sobre férulas, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "B",
+          "difficulty": "media",
+          "source_ids": [
+            "TO-031"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "No requieren vigilancia de piel",
+        "Pueden ajustarse sin considerar edema",
+        "Son equivalentes para cualquier diagnóstico",
+        "Las férulas pueden utilizarse para posicionamiento, protección o función según indicación",
+        "Siempre deben inmovilizar permanentemente"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "No requieren vigilancia de piel",
+        "original_answer": "D",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-866607F2C3F8",
+      "profession": "Tecnología Médica - Terapia Ocupacional",
+      "specialty": "Tecnología Médica - Terapia Ocupacional",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con adaptación ambiental, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "La intervención debe centrarse solo en cambiar a la persona",
+        "Las barreras físicas son irrelevantes",
+        "Las adaptaciones reducen siempre autonomía",
+        "Modificar el entorno puede aumentar independencia y seguridad"
+      ],
+      "declared_answer": "D",
+      "justification": "La adaptación persona-entorno-ocupación es una estrategia central para facilitar desempeño.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "terapia-ocupacional/preguntas.json",
+          "source_id": "TO-021",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-3291BEBE0A3C",
+          "statement": "Un profesional debe aplicar conocimientos de adaptación ambiental. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "C",
+          "difficulty": "alta",
+          "source_ids": [
+            "TO-024"
+          ]
+        },
+        {
+          "canonical_id": "BQ-3DE77A4A5E86",
+          "statement": "Para una evaluación SERUMS sobre adaptación ambiental, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "D",
+          "difficulty": "media",
+          "source_ids": [
+            "TO-023"
+          ]
+        },
+        {
+          "canonical_id": "BQ-866607F2C3F8",
+          "statement": "En relación con adaptación ambiental, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "A",
+          "difficulty": "baja",
+          "source_ids": [
+            "TO-021"
+          ]
+        },
+        {
+          "canonical_id": "BQ-ECDC71E4680A",
+          "statement": "En un establecimiento de salud, se revisa el tema de adaptación ambiental. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "E",
+          "difficulty": "media",
+          "source_ids": [
+            "TO-022"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "Modificar el entorno puede aumentar independencia y seguridad",
+        "La intervención debe centrarse solo en cambiar a la persona",
+        "Las barreras físicas son irrelevantes",
+        "Las adaptaciones reducen siempre autonomía",
+        "No deben probarse con el usuario"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "E",
+        "dropped_alternative": "No deben probarse con el usuario",
+        "original_answer": "A",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-94F8A82B0268",
+      "profession": "Tecnología Médica - Terapia Ocupacional",
+      "specialty": "Tecnología Médica - Terapia Ocupacional",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con coordinación bilateral, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "La coordinación bilateral permite usar ambos lados del cuerpo de manera organizada",
+        "Impide tareas bimanuales",
+        "No se relaciona con vestido",
+        "Es exclusivamente visual"
+      ],
+      "declared_answer": "A",
+      "justification": "Muchas ocupaciones requieren estabilizar con una mano mientras la otra manipula.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "terapia-ocupacional/preguntas.json",
+          "source_id": "TO-049",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "D"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-8038ACE76060",
+          "statement": "Para una evaluación SERUMS sobre coordinación bilateral, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "B",
+          "difficulty": "media",
+          "source_ids": [
+            "TO-051"
+          ]
+        },
+        {
+          "canonical_id": "BQ-94F8A82B0268",
+          "statement": "En relación con coordinación bilateral, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "D",
+          "difficulty": "baja",
+          "source_ids": [
+            "TO-049"
+          ]
+        },
+        {
+          "canonical_id": "BQ-BAA727AEE4EF",
+          "statement": "En un establecimiento de salud, se revisa el tema de coordinación bilateral. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "C",
+          "difficulty": "media",
+          "source_ids": [
+            "TO-050"
+          ]
+        },
+        {
+          "canonical_id": "BQ-E0BF5A90F47D",
+          "statement": "Un profesional debe aplicar conocimientos de coordinación bilateral. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "A",
+          "difficulty": "alta",
+          "source_ids": [
+            "TO-052"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "Solo se usa al caminar",
+        "No se relaciona con vestido",
+        "Es exclusivamente visual",
+        "La coordinación bilateral permite usar ambos lados del cuerpo de manera organizada",
+        "Impide tareas bimanuales"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "Solo se usa al caminar",
+        "original_answer": "D",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-9EA422158A7D",
+      "profession": "Tecnología Médica - Terapia Ocupacional",
+      "specialty": "Tecnología Médica - Terapia Ocupacional",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con análisis de actividad, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "No cambia la intervención",
+        "El análisis de actividad identifica demandas motoras, cognitivas, sensoriales y contextuales de una tarea",
+        "Solo cuenta el tiempo de ejecución",
+        "Se limita a medir fuerza"
+      ],
+      "declared_answer": "B",
+      "justification": "Comprender demandas de la actividad permite graduar tareas y adaptar contexto.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "terapia-ocupacional/preguntas.json",
+          "source_id": "TO-013",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "C"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-05177ACB773F",
+          "statement": "En un establecimiento de salud, se revisa el tema de análisis de actividad. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "B",
+          "difficulty": "media",
+          "source_ids": [
+            "TO-014"
+          ]
+        },
+        {
+          "canonical_id": "BQ-9EA422158A7D",
+          "statement": "En relación con análisis de actividad, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "C",
+          "difficulty": "baja",
+          "source_ids": [
+            "TO-013"
+          ]
+        },
+        {
+          "canonical_id": "BQ-C4140AA7620B",
+          "statement": "Para una evaluación SERUMS sobre análisis de actividad, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "A",
+          "difficulty": "media",
+          "source_ids": [
+            "TO-015"
+          ]
+        },
+        {
+          "canonical_id": "BQ-E73595E56846",
+          "statement": "Un profesional debe aplicar conocimientos de análisis de actividad. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "E",
+          "difficulty": "alta",
+          "source_ids": [
+            "TO-016"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "Se limita a medir fuerza",
+        "No cambia la intervención",
+        "El análisis de actividad identifica demandas motoras, cognitivas, sensoriales y contextuales de una tarea",
+        "Solo cuenta el tiempo de ejecución",
+        "No considera el entorno"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "E",
+        "dropped_alternative": "No considera el entorno",
+        "original_answer": "C",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-9FE9583BE94E",
+      "profession": "Tecnología Médica - Terapia Ocupacional",
+      "specialty": "Tecnología Médica - Terapia Ocupacional",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con autismo, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "Toda conducta diferente debe eliminarse",
+        "Se usan metas idénticas para todos",
+        "La comunicación alternativa debe evitarse",
+        "Las intervenciones deben centrarse en necesidades funcionales, comunicación, participación y perfil sensorial individual"
+      ],
+      "declared_answer": "D",
+      "justification": "La intervención debe ser individualizada, respetuosa y orientada a participación.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "terapia-ocupacional/preguntas.json",
+          "source_id": "TO-077",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "B"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-050A25BFF95F",
+          "statement": "Para una evaluación SERUMS sobre autismo, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "E",
+          "difficulty": "media",
+          "source_ids": [
+            "TO-079"
+          ]
+        },
+        {
+          "canonical_id": "BQ-58010EC770E3",
+          "statement": "Un profesional debe aplicar conocimientos de autismo. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "D",
+          "difficulty": "alta",
+          "source_ids": [
+            "TO-080"
+          ]
+        },
+        {
+          "canonical_id": "BQ-9FE9583BE94E",
+          "statement": "En relación con autismo, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "B",
+          "difficulty": "baja",
+          "source_ids": [
+            "TO-077"
+          ]
+        },
+        {
+          "canonical_id": "BQ-C366B4D4650C",
+          "statement": "En un establecimiento de salud, se revisa el tema de autismo. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "A",
+          "difficulty": "media",
+          "source_ids": [
+            "TO-078"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "La comunicación alternativa debe evitarse",
+        "Las intervenciones deben centrarse en necesidades funcionales, comunicación, participación y perfil sensorial individual",
+        "Toda conducta diferente debe eliminarse",
+        "Se usan metas idénticas para todos",
+        "No se considera a la familia"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "E",
+        "dropped_alternative": "No se considera a la familia",
+        "original_answer": "B",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-A631D42D6EA0",
+      "profession": "Tecnología Médica - Terapia Ocupacional",
+      "specialty": "Tecnología Médica - Terapia Ocupacional",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con ACV y miembro superior, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "Solo se trabaja fuerza aislada",
+        "La compensación siempre debe prohibirse",
+        "La práctica repetitiva y orientada a tareas puede favorecer uso funcional del miembro superior post-ACV",
+        "Debe evitarse el miembro afectado"
+      ],
+      "declared_answer": "C",
+      "justification": "El entrenamiento funcional busca recuperar y/o compensar desempeño según potencial y metas.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "terapia-ocupacional/preguntas.json",
+          "source_id": "TO-061",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-17C75A77FC11",
+          "statement": "En un establecimiento de salud, se revisa el tema de ACV y miembro superior. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "E",
+          "difficulty": "media",
+          "source_ids": [
+            "TO-062"
+          ]
+        },
+        {
+          "canonical_id": "BQ-1B86F90FA8AF",
+          "statement": "Un profesional debe aplicar conocimientos de ACV y miembro superior. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "C",
+          "difficulty": "alta",
+          "source_ids": [
+            "TO-064"
+          ]
+        },
+        {
+          "canonical_id": "BQ-4DC4FA688D51",
+          "statement": "Para una evaluación SERUMS sobre ACV y miembro superior, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "D",
+          "difficulty": "media",
+          "source_ids": [
+            "TO-063"
+          ]
+        },
+        {
+          "canonical_id": "BQ-A631D42D6EA0",
+          "statement": "En relación con ACV y miembro superior, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "A",
+          "difficulty": "baja",
+          "source_ids": [
+            "TO-061"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "La práctica repetitiva y orientada a tareas puede favorecer uso funcional del miembro superior post-ACV",
+        "Debe evitarse el miembro afectado",
+        "Solo se trabaja fuerza aislada",
+        "La tarea no importa",
+        "La compensación siempre debe prohibirse"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "D",
+        "dropped_alternative": "La tarea no importa",
+        "original_answer": "A",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-AF9EB07DFBD1",
+      "profession": "Tecnología Médica - Terapia Ocupacional",
+      "specialty": "Tecnología Médica - Terapia Ocupacional",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con protección articular, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "Aumenta agarres sostenidos fuertes",
+        "Evita todo movimiento",
+        "Solo aplica a deportistas",
+        "La protección articular busca reducir estrés innecesario usando articulaciones grandes, herramientas y técnicas adecuadas"
+      ],
+      "declared_answer": "D",
+      "justification": "Estas estrategias pueden reducir carga y facilitar desempeño en enfermedades articulares.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "terapia-ocupacional/preguntas.json",
+          "source_id": "TO-037",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "B"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-4E61DA21FBF5",
+          "statement": "Para una evaluación SERUMS sobre protección articular, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "E",
+          "difficulty": "media",
+          "source_ids": [
+            "TO-039"
+          ]
+        },
+        {
+          "canonical_id": "BQ-AF9EB07DFBD1",
+          "statement": "En relación con protección articular, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "B",
+          "difficulty": "baja",
+          "source_ids": [
+            "TO-037"
+          ]
+        },
+        {
+          "canonical_id": "BQ-F99D6730AB95",
+          "statement": "Un profesional debe aplicar conocimientos de protección articular. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "D",
+          "difficulty": "alta",
+          "source_ids": [
+            "TO-040"
+          ]
+        },
+        {
+          "canonical_id": "BQ-FEC4E2713B22",
+          "statement": "En un establecimiento de salud, se revisa el tema de protección articular. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "A",
+          "difficulty": "media",
+          "source_ids": [
+            "TO-038"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "No considera dolor",
+        "La protección articular busca reducir estrés innecesario usando articulaciones grandes, herramientas y técnicas adecuadas",
+        "Aumenta agarres sostenidos fuertes",
+        "Evita todo movimiento",
+        "Solo aplica a deportistas"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "No considera dolor",
+        "original_answer": "B",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-B14AE533CB63",
+      "profession": "Tecnología Médica - Terapia Ocupacional",
+      "specialty": "Tecnología Médica - Terapia Ocupacional",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con tecnología de apoyo, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "Sustituye toda rehabilitación",
+        "Debe imponerse aunque el usuario no lo acepte",
+        "Las ayudas técnicas deben seleccionarse según necesidad, contexto y entrenamiento del usuario",
+        "El dispositivo más caro es siempre mejor"
+      ],
+      "declared_answer": "C",
+      "justification": "La efectividad depende de ajuste, aceptabilidad, entrenamiento y mantenimiento.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "terapia-ocupacional/preguntas.json",
+          "source_id": "TO-025",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "E"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-1E72DF02387C",
+          "statement": "En un establecimiento de salud, se revisa el tema de tecnología de apoyo. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "D",
+          "difficulty": "media",
+          "source_ids": [
+            "TO-026"
+          ]
+        },
+        {
+          "canonical_id": "BQ-28C72418E093",
+          "statement": "Un profesional debe aplicar conocimientos de tecnología de apoyo. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "B",
+          "difficulty": "alta",
+          "source_ids": [
+            "TO-028"
+          ]
+        },
+        {
+          "canonical_id": "BQ-9C79B390CB27",
+          "statement": "Para una evaluación SERUMS sobre tecnología de apoyo, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "C",
+          "difficulty": "media",
+          "source_ids": [
+            "TO-027"
+          ]
+        },
+        {
+          "canonical_id": "BQ-B14AE533CB63",
+          "statement": "En relación con tecnología de apoyo, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "E",
+          "difficulty": "baja",
+          "source_ids": [
+            "TO-025"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "El dispositivo más caro es siempre mejor",
+        "No requiere prueba",
+        "Sustituye toda rehabilitación",
+        "Debe imponerse aunque el usuario no lo acepte",
+        "Las ayudas técnicas deben seleccionarse según necesidad, contexto y entrenamiento del usuario"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "No requiere prueba",
+        "original_answer": "E",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-B95732383966",
+      "profession": "Tecnología Médica - Terapia Ocupacional",
+      "specialty": "Tecnología Médica - Terapia Ocupacional",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con ocupación significativa, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "Solo trabaja productividad laboral",
+        "Evita actividades de la vida diaria",
+        "La terapia ocupacional utiliza ocupaciones significativas como medio y fin para favorecer participación",
+        "Se limita a ejercicios aislados sin contexto"
+      ],
+      "declared_answer": "C",
+      "justification": "La ocupación significativa vincula capacidades, roles, contexto y metas de la persona.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "terapia-ocupacional/preguntas.json",
+          "source_id": "TO-001",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-19DF251C031B",
+          "statement": "Para una evaluación SERUMS sobre ocupación significativa, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "D",
+          "difficulty": "media",
+          "source_ids": [
+            "TO-003"
+          ]
+        },
+        {
+          "canonical_id": "BQ-68779FB616DB",
+          "statement": "Un profesional debe aplicar conocimientos de ocupación significativa. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "C",
+          "difficulty": "alta",
+          "source_ids": [
+            "TO-004"
+          ]
+        },
+        {
+          "canonical_id": "BQ-9E2AC781E8DD",
+          "statement": "En un establecimiento de salud, se revisa el tema de ocupación significativa. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "E",
+          "difficulty": "media",
+          "source_ids": [
+            "TO-002"
+          ]
+        },
+        {
+          "canonical_id": "BQ-B95732383966",
+          "statement": "En relación con ocupación significativa, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "A",
+          "difficulty": "baja",
+          "source_ids": [
+            "TO-001"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "La terapia ocupacional utiliza ocupaciones significativas como medio y fin para favorecer participación",
+        "Se limita a ejercicios aislados sin contexto",
+        "Solo trabaja productividad laboral",
+        "No considera intereses personales",
+        "Evita actividades de la vida diaria"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "D",
+        "dropped_alternative": "No considera intereses personales",
+        "original_answer": "A",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-C06B4B13E80B",
+      "profession": "Tecnología Médica - Terapia Ocupacional",
+      "specialty": "Tecnología Médica - Terapia Ocupacional",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con retorno laboral, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "Debe ser inmediato a jornada completa",
+        "Las demandas cognitivas no importan",
+        "El retorno al trabajo puede requerir análisis del puesto, adaptación y progresión de demandas",
+        "Solo depende del diagnóstico"
+      ],
+      "declared_answer": "C",
+      "justification": "La reinserción laboral debe considerar capacidades, tareas, entorno y acuerdos con actores pertinentes.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "terapia-ocupacional/preguntas.json",
+          "source_id": "TO-089",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "D"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-4C1EFC4B4507",
+          "statement": "En un establecimiento de salud, se revisa el tema de retorno laboral. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "C",
+          "difficulty": "media",
+          "source_ids": [
+            "TO-090"
+          ]
+        },
+        {
+          "canonical_id": "BQ-4E01FE51E860",
+          "statement": "Un profesional debe aplicar conocimientos de retorno laboral. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "A",
+          "difficulty": "alta",
+          "source_ids": [
+            "TO-092"
+          ]
+        },
+        {
+          "canonical_id": "BQ-79C9529EBA5C",
+          "statement": "Para una evaluación SERUMS sobre retorno laboral, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "B",
+          "difficulty": "media",
+          "source_ids": [
+            "TO-091"
+          ]
+        },
+        {
+          "canonical_id": "BQ-C06B4B13E80B",
+          "statement": "En relación con retorno laboral, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "D",
+          "difficulty": "baja",
+          "source_ids": [
+            "TO-089"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "No necesita coordinación",
+        "Debe ser inmediato a jornada completa",
+        "Las demandas cognitivas no importan",
+        "El retorno al trabajo puede requerir análisis del puesto, adaptación y progresión de demandas",
+        "Solo depende del diagnóstico"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "No necesita coordinación",
+        "original_answer": "D",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-DF90EA2B6DFA",
+      "profession": "Tecnología Médica - Terapia Ocupacional",
+      "specialty": "Tecnología Médica - Terapia Ocupacional",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con integración sensorial, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "Se evalúa sin contexto",
+        "Toda sensibilidad implica trastorno",
+        "El procesamiento sensorial describe cómo el sistema nervioso organiza información sensorial para responder",
+        "Es solo capacidad visual"
+      ],
+      "declared_answer": "C",
+      "justification": "Las respuestas sensoriales deben interpretarse funcionalmente y dentro del contexto de desarrollo y ocupación.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "terapia-ocupacional/preguntas.json",
+          "source_id": "TO-041",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "A"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-1D99B43ADF31",
+          "statement": "Un profesional debe aplicar conocimientos de integración sensorial. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "C",
+          "difficulty": "alta",
+          "source_ids": [
+            "TO-044"
+          ]
+        },
+        {
+          "canonical_id": "BQ-2BA04A2BA569",
+          "statement": "En un establecimiento de salud, se revisa el tema de integración sensorial. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "E",
+          "difficulty": "media",
+          "source_ids": [
+            "TO-042"
+          ]
+        },
+        {
+          "canonical_id": "BQ-904D7AF97CC0",
+          "statement": "Para una evaluación SERUMS sobre integración sensorial, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "D",
+          "difficulty": "media",
+          "source_ids": [
+            "TO-043"
+          ]
+        },
+        {
+          "canonical_id": "BQ-DF90EA2B6DFA",
+          "statement": "En relación con integración sensorial, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "A",
+          "difficulty": "baja",
+          "source_ids": [
+            "TO-041"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "El procesamiento sensorial describe cómo el sistema nervioso organiza información sensorial para responder",
+        "Es solo capacidad visual",
+        "No influye en conducta",
+        "Se evalúa sin contexto",
+        "Toda sensibilidad implica trastorno"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "C",
+        "dropped_alternative": "No influye en conducta",
+        "original_answer": "A",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-E15BDFC7BE4B",
+      "profession": "Tecnología Médica - Terapia Ocupacional",
+      "specialty": "Tecnología Médica - Terapia Ocupacional",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con función ejecutiva, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "No cambian tras lesión cerebral",
+        "Planificación, inhibición y flexibilidad cognitiva son componentes de función ejecutiva",
+        "Son reflejos espinales",
+        "Solo se evalúan con fuerza"
+      ],
+      "declared_answer": "B",
+      "justification": "Las funciones ejecutivas son esenciales para organizar tareas complejas y resolver problemas cotidianos.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "terapia-ocupacional/preguntas.json",
+          "source_id": "TO-053",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "C"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-33C5F57AA93F",
+          "statement": "Un profesional debe aplicar conocimientos de función ejecutiva. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "E",
+          "difficulty": "alta",
+          "source_ids": [
+            "TO-056"
+          ]
+        },
+        {
+          "canonical_id": "BQ-52AB06E4622B",
+          "statement": "Para una evaluación SERUMS sobre función ejecutiva, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "A",
+          "difficulty": "media",
+          "source_ids": [
+            "TO-055"
+          ]
+        },
+        {
+          "canonical_id": "BQ-E15BDFC7BE4B",
+          "statement": "En relación con función ejecutiva, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "C",
+          "difficulty": "baja",
+          "source_ids": [
+            "TO-053"
+          ]
+        },
+        {
+          "canonical_id": "BQ-EC788015408D",
+          "statement": "En un establecimiento de salud, se revisa el tema de función ejecutiva. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "B",
+          "difficulty": "media",
+          "source_ids": [
+            "TO-054"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "Solo se evalúan con fuerza",
+        "No cambian tras lesión cerebral",
+        "Planificación, inhibición y flexibilidad cognitiva son componentes de función ejecutiva",
+        "Son reflejos espinales",
+        "No influyen en AIVD"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "E",
+        "dropped_alternative": "No influyen en AIVD",
+        "original_answer": "C",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-EE99D3608906",
+      "profession": "Tecnología Médica - Terapia Ocupacional",
+      "specialty": "Tecnología Médica - Terapia Ocupacional",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con lesión de mano, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "La rehabilitación de mano debe considerar cicatrización, edema, movilidad, sensibilidad y función",
+        "La función no importa si aumenta rango",
+        "Toda movilización debe ser máxima",
+        "No se coordinan restricciones quirúrgicas"
+      ],
+      "declared_answer": "A",
+      "justification": "La intervención debe proteger tejidos mientras recupera movilidad y desempeño.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "terapia-ocupacional/preguntas.json",
+          "source_id": "TO-065",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "E"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-2E7F58807EE2",
+          "statement": "Para una evaluación SERUMS sobre lesión de mano, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "C",
+          "difficulty": "media",
+          "source_ids": [
+            "TO-067"
+          ]
+        },
+        {
+          "canonical_id": "BQ-3F5088E8ED07",
+          "statement": "Un profesional debe aplicar conocimientos de lesión de mano. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "B",
+          "difficulty": "alta",
+          "source_ids": [
+            "TO-068"
+          ]
+        },
+        {
+          "canonical_id": "BQ-92A6C0FD6B6E",
+          "statement": "En un establecimiento de salud, se revisa el tema de lesión de mano. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "D",
+          "difficulty": "media",
+          "source_ids": [
+            "TO-066"
+          ]
+        },
+        {
+          "canonical_id": "BQ-EE99D3608906",
+          "statement": "En relación con lesión de mano, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "E",
+          "difficulty": "baja",
+          "source_ids": [
+            "TO-065"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "La función no importa si aumenta rango",
+        "La cicatriz nunca se trata",
+        "Toda movilización debe ser máxima",
+        "No se coordinan restricciones quirúrgicas",
+        "La rehabilitación de mano debe considerar cicatrización, edema, movilidad, sensibilidad y función"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "La cicatriz nunca se trata",
+        "original_answer": "E",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-F790F6E7C988",
+      "profession": "Tecnología Médica - Terapia Ocupacional",
+      "specialty": "Tecnología Médica - Terapia Ocupacional",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con conservación de energía, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "Planificar, priorizar, alternar actividad y descanso ayuda a conservar energía en personas con fatiga",
+        "Se recomienda hacer todas las tareas seguidas",
+        "Descansar solo al agotarse",
+        "Aumentar movimientos innecesarios"
+      ],
+      "declared_answer": "A",
+      "justification": "La conservación de energía distribuye demanda para sostener participación y reducir fatiga excesiva.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "terapia-ocupacional/preguntas.json",
+          "source_id": "TO-033",
+          "profession": "Tecnología Médica - Terapia Ocupacional",
+          "answer": "C"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-0B5D94451866",
+          "statement": "Para una evaluación SERUMS sobre conservación de energía, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "A",
+          "difficulty": "media",
+          "source_ids": [
+            "TO-035"
+          ]
+        },
+        {
+          "canonical_id": "BQ-175CA132AD20",
+          "statement": "Un profesional debe aplicar conocimientos de conservación de energía. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "E",
+          "difficulty": "alta",
+          "source_ids": [
+            "TO-036"
+          ]
+        },
+        {
+          "canonical_id": "BQ-B0034D86EB6D",
+          "statement": "En un establecimiento de salud, se revisa el tema de conservación de energía. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "B",
+          "difficulty": "media",
+          "source_ids": [
+            "TO-034"
+          ]
+        },
+        {
+          "canonical_id": "BQ-F790F6E7C988",
+          "statement": "En relación con conservación de energía, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "C",
+          "difficulty": "baja",
+          "source_ids": [
+            "TO-033"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "Aumentar movimientos innecesarios",
+        "Ignorar el ritmo personal",
+        "Planificar, priorizar, alternar actividad y descanso ayuda a conservar energía en personas con fatiga",
+        "Se recomienda hacer todas las tareas seguidas",
+        "Descansar solo al agotarse"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Ignorar el ritmo personal",
+        "original_answer": "C",
+        "new_answer": "A"
+      }
+    }
+  ]
+}

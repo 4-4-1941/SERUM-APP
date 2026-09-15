@@ -1,0 +1,4618 @@
+{
+  "module_version": 1,
+  "profession": "Tecnología Médica",
+  "total_questions": 100,
+  "structural_validation": {
+    "expected_alternatives": 4,
+    "invalid_questions": 0,
+    "status": "PASS"
+  },
+  "publication_status": "REVIEW_REQUIRED",
+  "warning": "Módulo de preparación. No integrar ni mostrar como banco validado hasta confirmar clave, distractores y fuente por revisor profesional.",
+  "thematic_blocks": {
+    "Cuidado integral": 95,
+    "Gestión": 5
+  },
+  "questions": [
+    {
+      "canonical_id": "BQ-077080B7F39F",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el tamaño del focal spot estándar en diagnóstico?",
+      "alternatives": [
+        "0.3-0.5 mm",
+        "0.5-1.0 mm",
+        "1.0-1.5 mm",
+        "1.5-2.0 mm"
+      ],
+      "declared_answer": "C",
+      "justification": "Focal spot estándar: ~1.0-1.5 mm. Fino: 0.3-0.6 mm (mejor resolución).",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2094",
+          "profession": "Tecnología Médica",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "0.3-0.5 mm",
+        "0.5-1.0 mm",
+        "1.0-1.5 mm",
+        "1.5-2.0 mm",
+        "> 2.0 mm"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "E",
+        "dropped_alternative": "> 2.0 mm",
+        "original_answer": "C",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-08C32C19A9BC",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es la presión intraocular normal en mmHg?",
+      "alternatives": [
+        "20-25 mmHg",
+        "25-30 mmHg",
+        "10-15 mmHg",
+        "15-20 mmHg"
+      ],
+      "declared_answer": "D",
+      "justification": "Presión intraocular: 15-20 mmHg (tonometría de Goldmann estándar). Presión > 21 mmHg sospechosa glaucoma.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2007",
+          "profession": "Tecnología Médica",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "5-10 mmHg",
+        "10-15 mmHg",
+        "15-20 mmHg",
+        "20-25 mmHg",
+        "25-30 mmHg"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "5-10 mmHg",
+        "original_answer": "C",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-0940D768200E",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el valor de hemoglobina glicosilada diagnóstico de diabetes?",
+      "alternatives": [
+        "HbA1c ≥ 6.5%",
+        "HbA1c ≥ 7.0%",
+        "HbA1c ≥ 8.0%",
+        "HbA1c ≥ 6.0%"
+      ],
+      "declared_answer": "A",
+      "justification": "Diagnóstico diabetes: HbA1c ≥ 6.5% (48 mmol/mol). Prediabetes: 5.7-6.4%.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2051",
+          "profession": "Tecnología Médica",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "HbA1c ≥ 5.7%",
+        "HbA1c ≥ 6.0%",
+        "HbA1c ≥ 6.5%",
+        "HbA1c ≥ 7.0%",
+        "HbA1c ≥ 8.0%"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "HbA1c ≥ 5.7%",
+        "original_answer": "C",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-0B194598A774",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el máximo período para reportar hemograma desde recolección?",
+      "alternatives": [
+        "8 horas",
+        "12 horas",
+        "24 horas",
+        "4 horas"
+      ],
+      "declared_answer": "D",
+      "justification": "Hemograma: máximo 4 horas a temperatura ambiente para resultados confiables.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2071",
+          "profession": "Tecnología Médica",
+          "answer": "B"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "1 hora",
+        "4 horas",
+        "8 horas",
+        "12 horas",
+        "24 horas"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "1 hora",
+        "original_answer": "B",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-0B2B38D97056",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es la temperatura óptima de almacenamiento de suero para pruebas de inmunología?",
+      "alternatives": [
+        "–20°C (congelador)",
+        "–80°C (ultracongelador)",
+        "Depende del analito",
+        "Temperatura ambiente (20-25°C)"
+      ],
+      "declared_answer": "A",
+      "justification": "Suero inmunología: –20°C mínimo (–80°C preferible). Estabilidad depende analito.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2023",
+          "profession": "Tecnología Médica",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Temperatura ambiente (20-25°C)",
+        "4°C (refrigerador)",
+        "–20°C (congelador)",
+        "–80°C (ultracongelador)",
+        "Depende del analito"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "4°C (refrigerador)",
+        "original_answer": "C",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-0CC7E2BB3C20",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Gestión",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el método de referencia para determinación de sodio sérico?",
+      "alternatives": [
+        "Cromatografía líquida de alta resolución",
+        "Espectrometría de masas",
+        "Electrodo ión selectivo directo (ISE directo)",
+        "Electrodo ión selectivo (ISE indirecto)"
+      ],
+      "declared_answer": "C",
+      "justification": "Sodio: ISE directo es referencia. ISE indirecto requiere dilución. Rango normal: 135-145 mEq/L.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2005",
+          "profession": "Tecnología Médica",
+          "answer": "E"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Fotometría de llama",
+        "Electrodo ión selectivo (ISE indirecto)",
+        "Cromatografía líquida de alta resolución",
+        "Espectrometría de masas",
+        "Electrodo ión selectivo directo (ISE directo)"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "Fotometría de llama",
+        "original_answer": "E",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-0DE3F4533790",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es la proporción de compresión:ventilación en RCP adulto?",
+      "alternatives": [
+        "100:2",
+        "40:4",
+        "50:5",
+        "30:2"
+      ],
+      "declared_answer": "D",
+      "justification": "RCP adulto: 30 compresiones:2 ventilaciones. Frecuencia: 100-120/min. Profundidad: 5-6 cm.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2036",
+          "profession": "Tecnología Médica",
+          "answer": "B"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "15:2",
+        "30:2",
+        "100:2",
+        "40:4",
+        "50:5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "15:2",
+        "original_answer": "B",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-0E8176898A4C",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el tubo de recolección correcto para prueba de función hepática?",
+      "alternatives": [
+        "Tubo heparina (verde)",
+        "Tubo de sangre total",
+        "Tubo citrato (azul)",
+        "Tubo SST gel separador (rojo/amarillo)"
+      ],
+      "declared_answer": "D",
+      "justification": "Química clínica: SST (serum separator tube) es estándar. EDTA para hematología; citrato para coagulación. Tiempo coagulación: 30-60 min antes centrifugación.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2001",
+          "profession": "Tecnología Médica",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Tubo EDTA (morado)",
+        "Tubo citrato (azul)",
+        "Tubo SST gel separador (rojo/amarillo)",
+        "Tubo heparina (verde)",
+        "Tubo de sangre total"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "Tubo EDTA (morado)",
+        "original_answer": "C",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-0F04C6079D77",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el factor de conversión de pH a [H+]?",
+      "alternatives": [
+        "Opción b y c son equivalentes",
+        "pH = -log[H+]",
+        "[H+] = 10^-pH",
+        "[H+] = log(pH)"
+      ],
+      "declared_answer": "A",
+      "justification": "pH = -log[H+], por tanto [H+] = 10^(-pH). pH < 7 ácido, > 7 básico.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2065",
+          "profession": "Tecnología Médica",
+          "answer": "E"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "pH = pOH",
+        "pH = -log[H+]",
+        "[H+] = 10^-pH",
+        "[H+] = log(pH)",
+        "Opción b y c son equivalentes"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "pH = pOH",
+        "original_answer": "E",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-15A6E7550AF1",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el factor de conversión de dosis efectiva para TC abdomen?",
+      "alternatives": [
+        "k = 0.100 mSv/mGy·cm",
+        "k = 0.014 mSv/mGy·cm",
+        "k = 0.035 mSv/mGy·cm",
+        "k = 0.050 mSv/mGy·cm"
+      ],
+      "declared_answer": "B",
+      "justification": "TC abdomen: k ≈ 0.014-0.015 mSv/mGy·cm. Tórax: k ≈ 0.035.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2100",
+          "profession": "Tecnología Médica",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "k = 0.014 mSv/mGy·cm",
+        "k = 0.025 mSv/mGy·cm",
+        "k = 0.035 mSv/mGy·cm",
+        "k = 0.050 mSv/mGy·cm",
+        "k = 0.100 mSv/mGy·cm"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "k = 0.025 mSv/mGy·cm",
+        "original_answer": "A",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-1A374E4F1A55",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el calibre máximo de catéter venoso periférico usado clínicamente?",
+      "alternatives": [
+        "16 G",
+        "14 G",
+        "12 G",
+        "18 G"
+      ],
+      "declared_answer": "B",
+      "justification": "14G es máximo periférico (flujo rápido). 16-18G típica. Duración máxima: 72-96 horas.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2078",
+          "profession": "Tecnología Médica",
+          "answer": "D"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "20 G",
+        "18 G",
+        "16 G",
+        "14 G",
+        "12 G"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "20 G",
+        "original_answer": "D",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-1E14C97D8D40",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es la dosis de atropina en organofosforados?",
+      "alternatives": [
+        "10-20 mg IV",
+        "0.5-1 mg IV",
+        "2-5 mg IV",
+        "5-10 mg IV"
+      ],
+      "declared_answer": "C",
+      "justification": "Organofosforados: atropina 2-5 mg IV. Dosis se repite c/5-15 min hasta sequedad.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2057",
+          "profession": "Tecnología Médica",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "0.5-1 mg IV",
+        "1-2 mg IV",
+        "2-5 mg IV",
+        "5-10 mg IV",
+        "10-20 mg IV"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "1-2 mg IV",
+        "original_answer": "C",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-1FAEA0872246",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es la dosis de atropina como antídoto para envenenamiento por organofosforados?",
+      "alternatives": [
+        "10-20 mg IV",
+        "0.5-1 mg IV",
+        "2-5 mg IV",
+        "5-10 mg IV"
+      ],
+      "declared_answer": "C",
+      "justification": "Organofosforados: atropina 2-5 mg IV (bloquea efectos muscarínicos). Dosis se repite c/5-15 min.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2030",
+          "profession": "Tecnología Médica",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "0.5-1 mg IV",
+        "1-2 mg IV",
+        "2-5 mg IV",
+        "5-10 mg IV",
+        "10-20 mg IV"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "1-2 mg IV",
+        "original_answer": "C",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-1FB4A536EA26",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es la vía principal de eliminación de medicamentos?",
+      "alternatives": [
+        "Metabolismo hepático (fase I/II)",
+        "Metabolismo pulmonar",
+        "Eliminación GI directa",
+        "Eliminación renal sin metabolismo"
+      ],
+      "declared_answer": "A",
+      "justification": "Hígado: principal órgano metabolismo (~80% fármacos). Fase I/II.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2058",
+          "profession": "Tecnología Médica",
+          "answer": "B"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Eliminación renal sin metabolismo",
+        "Metabolismo hepático (fase I/II)",
+        "Eliminación biliar",
+        "Metabolismo pulmonar",
+        "Eliminación GI directa"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "C",
+        "dropped_alternative": "Eliminación biliar",
+        "original_answer": "B",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-2005C33CC59F",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es la dosis máxima permitida de radiación ionizante para trabajadores ocupacionalmente expuestos por año?",
+      "alternatives": [
+        "20 mSv",
+        "50 mSv",
+        "100 mSv",
+        "200 mSv"
+      ],
+      "declared_answer": "A",
+      "justification": "Límite ocupacional 20 mSv/año (OMS, OIEA). Público: 1 mSv/año. Monitoreo dosimétrico obligatorio.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2008",
+          "profession": "Tecnología Médica",
+          "answer": "B"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "10 mSv",
+        "20 mSv",
+        "50 mSv",
+        "100 mSv",
+        "200 mSv"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "10 mSv",
+        "original_answer": "B",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-2694B039CCCA",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es la escala de Glasgow para paciente con respuesta verbal confusa, apertura ocular espontánea y flexión anormal?",
+      "alternatives": [
+        "10",
+        "12",
+        "14",
+        "15"
+      ],
+      "declared_answer": "B",
+      "justification": "Glasgow: O=4 (espontánea), V=4 (confusa), M=4 (flexión anormal) = 12. Coma: < 8.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2014",
+          "profession": "Tecnología Médica",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "8",
+        "10",
+        "12",
+        "14",
+        "15"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "8",
+        "original_answer": "C",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-26E5EBEA6074",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el intervalo terapéutico de warfarina?",
+      "alternatives": [
+        "4-10 μg/mL",
+        "10-20 μg/mL",
+        "INR 2-3 (preferentemente)",
+        "2-4 μg/mL"
+      ],
+      "declared_answer": "C",
+      "justification": "Warfarina: monitoreo por INR (no concentración plasmática). INR terapéutico 2.0-3.0 típicamente.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2013",
+          "profession": "Tecnología Médica",
+          "answer": "E"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "1-2 μg/mL",
+        "2-4 μg/mL",
+        "4-10 μg/mL",
+        "10-20 μg/mL",
+        "INR 2-3 (preferentemente)"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "1-2 μg/mL",
+        "original_answer": "E",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-2F3ACBC61205",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es la concentración de hemoglobina glicosilada diagnóstico de diabetes?",
+      "alternatives": [
+        "HbA1c ≥ 8.0%",
+        "HbA1c ≥ 6.0%",
+        "HbA1c ≥ 6.5%",
+        "HbA1c ≥ 7.0%"
+      ],
+      "declared_answer": "C",
+      "justification": "Diagnóstico diabetes: HbA1c ≥ 6.5% (48 mmol/mol). Prediabetes: 5.7-6.4%.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2020",
+          "profession": "Tecnología Médica",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "HbA1c ≥ 5.7%",
+        "HbA1c ≥ 6.0%",
+        "HbA1c ≥ 6.5%",
+        "HbA1c ≥ 7.0%",
+        "HbA1c ≥ 8.0%"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "HbA1c ≥ 5.7%",
+        "original_answer": "C",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-30B7341CE39B",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es la dimensión vertical oclusal promedio en adulto?",
+      "alternatives": [
+        "30-35 mm",
+        "35-40 mm",
+        "20-25 mm",
+        "25-30 mm"
+      ],
+      "declared_answer": "A",
+      "justification": "DVO (altura vertical oclusal): ~30-35 mm. Pérdida dental causa colapso vertical.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2087",
+          "profession": "Tecnología Médica",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "20-25 mm",
+        "25-30 mm",
+        "30-35 mm",
+        "35-40 mm",
+        "> 40 mm"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "E",
+        "dropped_alternative": "> 40 mm",
+        "original_answer": "C",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-38F5DF9951FE",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el tiempo de fraguado químico inicial de cemento de ionómero de vidrio?",
+      "alternatives": [
+        "5-10 minutos",
+        "10-15 minutos",
+        "2-3 minutos",
+        "3-5 minutos"
+      ],
+      "declared_answer": "D",
+      "justification": "Ionómero de vidrio: fraguado inicial 3-5 minutos. Fraguado final: 24 horas.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2043",
+          "profession": "Tecnología Médica",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "1-2 minutos",
+        "2-3 minutos",
+        "3-5 minutos",
+        "5-10 minutos",
+        "10-15 minutos"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "1-2 minutos",
+        "original_answer": "C",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-3FFB6EDC2611",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Gestión",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el valor de referencia superior de LDL colesterol?",
+      "alternatives": [
+        "< 200 mg/dL",
+        "< 100 mg/dL",
+        "< 130 mg/dL",
+        "< 160 mg/dL"
+      ],
+      "declared_answer": "B",
+      "justification": "LDL óptimo: < 100 mg/dL. Borderline: 100-129. Alto: 130-159.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2027",
+          "profession": "Tecnología Médica",
+          "answer": "B"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "< 50 mg/dL",
+        "< 100 mg/dL",
+        "< 130 mg/dL",
+        "< 160 mg/dL",
+        "< 200 mg/dL"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "< 50 mg/dL",
+        "original_answer": "B",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-4C8F9B02E9C4",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el anticoagulante para prueba de VSG?",
+      "alternatives": [
+        "Citrato sodio (azul)",
+        "Heparina (verde)",
+        "Sin anticoagulante (rojo)",
+        "Fluoruro/oxalato (gris)"
+      ],
+      "declared_answer": "A",
+      "justification": "VSG: tubo citrato sodio (relación 1:9 sangre:citrato). EDTA causa agregación falsa.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2050",
+          "profession": "Tecnología Médica",
+          "answer": "B"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "EDTA (morado)",
+        "Citrato sodio (azul)",
+        "Heparina (verde)",
+        "Sin anticoagulante (rojo)",
+        "Fluoruro/oxalato (gris)"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "EDTA (morado)",
+        "original_answer": "B",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-50495D29644B",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el intervalo terapéutico de teofilina?",
+      "alternatives": [
+        "30-40 μg/mL",
+        "5-10 μg/mL",
+        "10-20 μg/mL",
+        "20-30 μg/mL"
+      ],
+      "declared_answer": "C",
+      "justification": "Teofilina: rango 10-20 μg/mL. Margen terapéutico estrecho (~2:1).",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2059",
+          "profession": "Tecnología Médica",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "2-5 μg/mL",
+        "5-10 μg/mL",
+        "10-20 μg/mL",
+        "20-30 μg/mL",
+        "30-40 μg/mL"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "2-5 μg/mL",
+        "original_answer": "C",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-53880B137969",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el máximo nivel de coliformes fecales en agua para riego agrícola?",
+      "alternatives": [
+        "100 UFC/100 mL",
+        "1000 UFC/100 mL",
+        "10000 UFC/100 mL",
+        "0 UFC/100 mL"
+      ],
+      "declared_answer": "B",
+      "justification": "Riego agrícola (OMS): coliformes fecales < 1000 UFC/100 mL (depende cultivo).",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2028",
+          "profession": "Tecnología Médica",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "0 UFC/100 mL",
+        "100 UFC/100 mL",
+        "1000 UFC/100 mL",
+        "10000 UFC/100 mL",
+        "Sin límite"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "E",
+        "dropped_alternative": "Sin límite",
+        "original_answer": "C",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-57C88C1A6BFD",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el objetivo de presión arterial sistólica en hipertensión?",
+      "alternatives": [
+        "< 130 mmHg",
+        "< 140 mmHg",
+        "< 150 mmHg",
+        "< 120 mmHg"
+      ],
+      "declared_answer": "A",
+      "justification": "Hipertensión: objetivo < 130/80 (ACC 2017). Refractaria: evaluar cumplimiento, causas secundarias.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2063",
+          "profession": "Tecnología Médica",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "< 100 mmHg",
+        "< 120 mmHg",
+        "< 130 mmHg",
+        "< 140 mmHg",
+        "< 150 mmHg"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "< 100 mmHg",
+        "original_answer": "C",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-582006B9B193",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es la concentración de flúor recomendada en pasta dental para niños < 6 años?",
+      "alternatives": [
+        "1450 ppm",
+        "5000 ppm",
+        "10000 ppm",
+        "500 ppm"
+      ],
+      "declared_answer": "D",
+      "justification": "Niños < 6 años: 500 ppm F (riesgo fluorosis). Adultos/niños > 6: 1450 ppm.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2042",
+          "profession": "Tecnología Médica",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "500 ppm",
+        "1000 ppm",
+        "1450 ppm",
+        "5000 ppm",
+        "10000 ppm"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "1000 ppm",
+        "original_answer": "A",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-58FE48B6E915",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el pH del biofilm dental acidogénico después de exposición a carbohidratos?",
+      "alternatives": [
+        "pH 7-8",
+        "pH 4-5",
+        "pH 5-6",
+        "pH 6-7"
+      ],
+      "declared_answer": "B",
+      "justification": "Biofilm ácido: pH 4-5 después exposición a carbohidratos. pH crítico caries: 5.5 esmalte, 6.5 dentina.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2041",
+          "profession": "Tecnología Médica",
+          "answer": "B"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "pH 3-4",
+        "pH 4-5",
+        "pH 5-6",
+        "pH 6-7",
+        "pH 7-8"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "pH 3-4",
+        "original_answer": "B",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-5A34D051050D",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es la máxima concentración de nitratos en agua potable?",
+      "alternatives": [
+        "50 mg/L como NO3",
+        "75 mg/L como NO3",
+        "100 mg/L como NO3",
+        "25 mg/L como NO3"
+      ],
+      "declared_answer": "A",
+      "justification": "Límite nitrato: 50 mg/L (como NO3). Exceso causa metahemoglobinemia.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2069",
+          "profession": "Tecnología Médica",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "10 mg/L como NO3",
+        "25 mg/L como NO3",
+        "50 mg/L como NO3",
+        "75 mg/L como NO3",
+        "100 mg/L como NO3"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "10 mg/L como NO3",
+        "original_answer": "C",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-5B8E3BB6513B",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es la ventaja principal de radiografía digital vs. convencional?",
+      "alternatives": [
+        "No requiere calibración",
+        "Sin artefactos de movimiento",
+        "Mayor resolución espacial",
+        "Menor dosis de radiación (10-100×)"
+      ],
+      "declared_answer": "D",
+      "justification": "Digital: dosis 10-100× menor (detectores más eficientes). Almacenamiento/transmisión ventajosos.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2009",
+          "profession": "Tecnología Médica",
+          "answer": "B"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Mayor resolución espacial",
+        "Menor dosis de radiación (10-100×)",
+        "No requiere calibración",
+        "Menor costo inicial",
+        "Sin artefactos de movimiento"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "D",
+        "dropped_alternative": "Menor costo inicial",
+        "original_answer": "B",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-60565D4A3F64",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es la capacidad DAP máxima recomendada en radiografía de tórax?",
+      "alternatives": [
+        "5 mGy·cm²",
+        "10 mGy·cm²",
+        "20 mGy·cm²",
+        "0.5 mGy·cm²"
+      ],
+      "declared_answer": "A",
+      "justification": "Tórax PA: DAP ~5 mGy·cm² (típico 3-10). Fluoroscopia cardíaca: 1000+ mGy·cm².",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2049",
+          "profession": "Tecnología Médica",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "0.5 mGy·cm²",
+        "1 mGy·cm²",
+        "5 mGy·cm²",
+        "10 mGy·cm²",
+        "20 mGy·cm²"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "1 mGy·cm²",
+        "original_answer": "C",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-624E7CF51F30",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el número atómico del contraste radiológico iodado?",
+      "alternatives": [
+        "Z = 74 (Tungsteno)",
+        "Z = 92 (Uranio)",
+        "Z = 26 (Hierro)",
+        "Z = 53 (Iodo)"
+      ],
+      "declared_answer": "D",
+      "justification": "Iodo (Z=53): alto número atómico, coeficiente de atenuación elevado. Contraste iodado iónico/no-iónico es estándar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2010",
+          "profession": "Tecnología Médica",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Z = 26 (Hierro)",
+        "Z = 35 (Bromo)",
+        "Z = 53 (Iodo)",
+        "Z = 74 (Tungsteno)",
+        "Z = 92 (Uranio)"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Z = 35 (Bromo)",
+        "original_answer": "C",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-63E302F18C47",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el máximo nivel de coliformes en agua potable?",
+      "alternatives": [
+        "50 UFC/100 mL",
+        "0 UFC/100 mL",
+        "5 UFC/100 mL",
+        "10 UFC/100 mL"
+      ],
+      "declared_answer": "B",
+      "justification": "Coliformes: 0 UFC/100 mL (ausencia total). E. coli también debe ser 0.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2068",
+          "profession": "Tecnología Médica",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "0 UFC/100 mL",
+        "1 UFC/100 mL",
+        "5 UFC/100 mL",
+        "10 UFC/100 mL",
+        "50 UFC/100 mL"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "1 UFC/100 mL",
+        "original_answer": "A",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-65181E5CC691",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es la edad del pico de masa ósea?",
+      "alternatives": [
+        "35-40 años",
+        "40-45 años",
+        "25-30 años",
+        "30-35 años"
+      ],
+      "declared_answer": "C",
+      "justification": "Pico masa ósea: 25-30 años. Luego declina ~0.3-0.5%/año.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2083",
+          "profession": "Tecnología Médica",
+          "answer": "B"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "20-25 años",
+        "25-30 años",
+        "30-35 años",
+        "35-40 años",
+        "40-45 años"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "20-25 años",
+        "original_answer": "B",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-682534C87B46",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el número de fotones primarios en radiografía digital típica?",
+      "alternatives": [
+        "10⁶ fotones/mm²",
+        "10³ fotones/mm²",
+        "10⁴ fotones/mm²",
+        "10⁵ fotones/mm²"
+      ],
+      "declared_answer": "D",
+      "justification": "Radiografía digital: ~10⁴-10⁵ fotones/mm² (dosis moderada). Ruido cuántico es factor limitante.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2046",
+          "profession": "Tecnología Médica",
+          "answer": "D"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "10² fotones/mm²",
+        "10³ fotones/mm²",
+        "10⁴ fotones/mm²",
+        "10⁵ fotones/mm²",
+        "10⁶ fotones/mm²"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "10² fotones/mm²",
+        "original_answer": "D",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-682EE58BB95B",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el método de desinfección primario en plantas de agua potable?",
+      "alternatives": [
+        "Cloro gas o hipoclorito",
+        "Ultravioleta",
+        "Filtración",
+        "Destilación térmica"
+      ],
+      "declared_answer": "A",
+      "justification": "Cloro es desinfectante primario (más económico, residual persiste en red).",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2070",
+          "profession": "Tecnología Médica",
+          "answer": "B"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Ozono",
+        "Cloro gas o hipoclorito",
+        "Ultravioleta",
+        "Filtración",
+        "Destilación térmica"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "Ozono",
+        "original_answer": "B",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-6A66F69D7827",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el espesor mínimo de plomo (Pb) para atenuar rayos X de 100 keV en 90%?",
+      "alternatives": [
+        "0.5 mm",
+        "1 mm",
+        "5 mm",
+        "0.1 mm"
+      ],
+      "declared_answer": "B",
+      "justification": "Pb a 100 keV: ~1 mm atenúa 90%. Coeficiente atenuación Pb es alto.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2045",
+          "profession": "Tecnología Médica",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "0.1 mm",
+        "0.5 mm",
+        "1 mm",
+        "3 mm",
+        "5 mm"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "D",
+        "dropped_alternative": "3 mm",
+        "original_answer": "C",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-6F2CB4CFA335",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el porcentaje normal de neutrófilos en diferencial de leucocitos?",
+      "alternatives": [
+        "40-50%",
+        "50-70%",
+        "70-85%",
+        "85-95%"
+      ],
+      "declared_answer": "B",
+      "justification": "Neutrófilos: 50-70% (valor absoluto 2000-7500/μL). Linfocitos: 20-40%.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2039",
+          "profession": "Tecnología Médica",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "20-30%",
+        "40-50%",
+        "50-70%",
+        "70-85%",
+        "85-95%"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "20-30%",
+        "original_answer": "C",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-75473429EAE6",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el factor de corrección de la escala de Glasgow?",
+      "alternatives": [
+        "Suma de O + V + M = score total",
+        "Multiplicar por 2",
+        "Dividir entre 2",
+        "No hay factor, solo suma"
+      ],
+      "declared_answer": "A",
+      "justification": "Glasgow: suma directa O + V + M. Score máximo 15 (alerta), mínimo 3 (coma profundo).",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2080",
+          "profession": "Tecnología Médica",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Suma de O + V + M = score total",
+        "Multiplicar por 2",
+        "Dividir entre 2",
+        "Restar 8",
+        "No hay factor, solo suma"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "D",
+        "dropped_alternative": "Restar 8",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-76823298187B",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el rango normal de magnesio sérico?",
+      "alternatives": [
+        "2.4-2.9 mg/dL",
+        "2.9-3.5 mg/dL",
+        "3.5-4.5 mg/dL",
+        "1.8-2.4 mg/dL"
+      ],
+      "declared_answer": "A",
+      "justification": "Magnesio: 2.4-2.9 mg/dL (0.9-1.2 mmol/L). Bajo: arritmias, debilidad. Alto: hipotensión.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2093",
+          "profession": "Tecnología Médica",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "1.2-1.8 mg/dL",
+        "1.8-2.4 mg/dL",
+        "2.4-2.9 mg/dL",
+        "2.9-3.5 mg/dL",
+        "3.5-4.5 mg/dL"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "1.2-1.8 mg/dL",
+        "original_answer": "C",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-76B13766FD55",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es la presión de cuff endotraqueal recomendada?",
+      "alternatives": [
+        "10-15 cmH2O",
+        "15-25 cmH2O",
+        "25-35 cmH2O",
+        "35-50 cmH2O"
+      ],
+      "declared_answer": "B",
+      "justification": "Cuff tubo endotraqueal: 15-25 cmH2O (20 cmH2O óptimo). Presión insuficiente: fugas; excesiva: daño traqueal.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2015",
+          "profession": "Tecnología Médica",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "5-10 cmH2O",
+        "10-15 cmH2O",
+        "15-25 cmH2O",
+        "25-35 cmH2O",
+        "35-50 cmH2O"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "5-10 cmH2O",
+        "original_answer": "C",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-77C1F707DA65",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el rango terapéutico de vancomicina en sangre?",
+      "alternatives": [
+        "10-20 μg/mL",
+        "20-40 μg/mL",
+        "40-60 μg/mL",
+        "60-80 μg/mL"
+      ],
+      "declared_answer": "B",
+      "justification": "Vancomicina: rango 20-40 μg/mL (tóxica > 40). Monitoreo sérico obligatorio.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2099",
+          "profession": "Tecnología Médica",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "5-10 μg/mL",
+        "10-20 μg/mL",
+        "20-40 μg/mL",
+        "40-60 μg/mL",
+        "60-80 μg/mL"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "5-10 μg/mL",
+        "original_answer": "C",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-7F221AF2BC91",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el rango normal de ácido úrico en suero?",
+      "alternatives": [
+        "2.6-6.0 mg/dL (mujeres)",
+        "7.5-10.0 mg/dL",
+        "1.5-3.0 mg/dL",
+        "3.5-7.2 mg/dL (hombres)"
+      ],
+      "declared_answer": "D",
+      "justification": "Ácido úrico: hombres 3.5-7.2 mg/dL, mujeres 2.6-6.0 mg/dL. Elevado: gota, nefrolitiasis.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2081",
+          "profession": "Tecnología Médica",
+          "answer": "B"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "1.5-3.0 mg/dL",
+        "3.5-7.2 mg/dL (hombres)",
+        "2.6-6.0 mg/dL (mujeres)",
+        "7.5-10.0 mg/dL",
+        "> 10.0 mg/dL"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "E",
+        "dropped_alternative": "> 10.0 mg/dL",
+        "original_answer": "B",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-8301264467A4",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el flujo de oxígeno máximo recomendado en naricera?",
+      "alternatives": [
+        "10 L/min",
+        "4 L/min",
+        "6 L/min",
+        "8 L/min"
+      ],
+      "declared_answer": "C",
+      "justification": "Naricera (cánula nasal): máximo 6 L/min (flujo mayor reseca mucosa). FiO2 24-44%.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2016",
+          "profession": "Tecnología Médica",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "2 L/min",
+        "4 L/min",
+        "6 L/min",
+        "8 L/min",
+        "10 L/min"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "2 L/min",
+        "original_answer": "C",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-87B416AB1884",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Gestión",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el método de referencia para B12?",
+      "alternatives": [
+        "Cromatografía HPLC",
+        "Espectrometría de masas LC-MS/MS",
+        "Electroforesis",
+        "Fluorescencia"
+      ],
+      "declared_answer": "B",
+      "justification": "B12: LC-MS/MS es referencia. Rango normal: 200-900 pg/mL.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2084",
+          "profession": "Tecnología Médica",
+          "answer": "D"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Fluorescencia",
+        "Cromatografía HPLC",
+        "Inmunoensayo",
+        "Espectrometría de masas LC-MS/MS",
+        "Electroforesis"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "C",
+        "dropped_alternative": "Inmunoensayo",
+        "original_answer": "D",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-87D2DB21F554",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el principal mecanismo de acción de los inhibidores de la bomba de protones?",
+      "alternatives": [
+        "Bloqueo receptores H2 en célula parietal",
+        "Inhibición irreversible de H+/K+ ATPasa",
+        "Neutralización de ácido gástrico",
+        "Reducción de gastrina sérica"
+      ],
+      "declared_answer": "B",
+      "justification": "IBP (omeprazol, lansoprazol): inhibición irreversible H+/K+ ATPasa. Reducción ácido 80-90%.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2012",
+          "profession": "Tecnología Médica",
+          "answer": "B"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Bloqueo receptores H2 en célula parietal",
+        "Inhibición irreversible de H+/K+ ATPasa",
+        "Neutralización de ácido gástrico",
+        "Aumento de mucosa protectora",
+        "Reducción de gastrina sérica"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "D",
+        "dropped_alternative": "Aumento de mucosa protectora",
+        "original_answer": "B",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-8D325E4C824D",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el mecanismo de IECA (inhibidor convertidor angiotensina)?",
+      "alternatives": [
+        "Bloqueo directo receptor AT1",
+        "Inhibición ACE → ↓ angiotensina II",
+        "Bloqueo de canales de calcio",
+        "Bloqueadores beta adrenérgicos"
+      ],
+      "declared_answer": "B",
+      "justification": "IECA: inhibición enzima convertidora → bloquea conversión AI a AII. Vasodilatación, cardioprotección.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2073",
+          "profession": "Tecnología Médica",
+          "answer": "B"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Bloqueo directo receptor AT1",
+        "Inhibición ACE → ↓ angiotensina II",
+        "Bloqueo de canales de calcio",
+        "Inhibición de renina",
+        "Bloqueadores beta adrenérgicos"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "D",
+        "dropped_alternative": "Inhibición de renina",
+        "original_answer": "B",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-8DDEA7997C81",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el rango normal de tensión ocular por tonometría Goldmann?",
+      "alternatives": [
+        "12-15 mmHg",
+        "15-20 mmHg",
+        "20-25 mmHg",
+        "25-30 mmHg"
+      ],
+      "declared_answer": "B",
+      "justification": "PIO: 15-20 mmHg normal. > 20 elevada. Varía ~3-5 mmHg diurnamente.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2064",
+          "profession": "Tecnología Médica",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "10-12 mmHg",
+        "12-15 mmHg",
+        "15-20 mmHg",
+        "20-25 mmHg",
+        "25-30 mmHg"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "10-12 mmHg",
+        "original_answer": "C",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-8FFFD4CBFF41",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es la dosis máxima recomendada de paracetamol por día en adultos?",
+      "alternatives": [
+        "3 gramos",
+        "4 gramos",
+        "6 gramos",
+        "8 gramos"
+      ],
+      "declared_answer": "B",
+      "justification": "Paracetamol: dosis máxima 4 g/día en 4-6 dosis (1 g c/4-6h). Exceso causa hepatotoxicidad.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2011",
+          "profession": "Tecnología Médica",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "2 gramos",
+        "3 gramos",
+        "4 gramos",
+        "6 gramos",
+        "8 gramos"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "2 gramos",
+        "original_answer": "C",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-911761D6B28B",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el rango normal de plaquetas en sangre?",
+      "alternatives": [
+        "100-150 × 10³/μL",
+        "150-400 × 10³/μL",
+        "400-600 × 10³/μL",
+        "50-100 × 10³/μL"
+      ],
+      "declared_answer": "B",
+      "justification": "Plaquetas: 150-400 × 10³/μL. Bajo: trombocitopenia (sangrado). Alto: trombocitosis.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2097",
+          "profession": "Tecnología Médica",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "50-100 × 10³/μL",
+        "100-150 × 10³/μL",
+        "150-400 × 10³/μL",
+        "400-600 × 10³/μL",
+        "> 600 × 10³/μL"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "E",
+        "dropped_alternative": "> 600 × 10³/μL",
+        "original_answer": "C",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-96FA2CD0409C",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es la angulación del tubo para proyección lateral de tórax?",
+      "alternatives": [
+        "45° oblicua anterior",
+        "90° perpendicular al plano sagital",
+        "Depende del paciente",
+        "20-30° craneocaudal"
+      ],
+      "declared_answer": "B",
+      "justification": "Tórax lateral: tubo perpendicular al plano sagital (90°). Visualiza mediastino sin rotación.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2088",
+          "profession": "Tecnología Médica",
+          "answer": "D"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "0° (perpendicular)",
+        "20-30° craneocaudal",
+        "45° oblicua anterior",
+        "90° perpendicular al plano sagital",
+        "Depende del paciente"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "0° (perpendicular)",
+        "original_answer": "D",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-99395F97CF1C",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el método de desinfección de piel para punción venosa central?",
+      "alternatives": [
+        "Povidona yodada 10%",
+        "Clorhexidina 0.5-4% (preferentemente 2%)",
+        "Alcohol con aloe vera",
+        "Alcohol al 70% únicamente"
+      ],
+      "declared_answer": "B",
+      "justification": "CVP: clorhexidina 0.5-4% (preferentemente 2%) > povidona yodada > alcohol. Efecto residual >24h.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2035",
+          "profession": "Tecnología Médica",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Alcohol al 70% únicamente",
+        "Povidona yodada 10%",
+        "Clorhexidina 0.5-4% (preferentemente 2%)",
+        "Agua con jabón",
+        "Alcohol con aloe vera"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "D",
+        "dropped_alternative": "Agua con jabón",
+        "original_answer": "C",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-9DBCC6467EAB",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es la dosis de entrada de piel típica en radiografía de abdomen?",
+      "alternatives": [
+        "0.1-0.5 mGy",
+        "0.5-2 mGy",
+        "2-5 mGy",
+        "> 10 mGy"
+      ],
+      "declared_answer": "C",
+      "justification": "Abdomen: DEP típica 2-5 mGy. Tórax: 0.1-0.3 mGy. Pelvis: 5-10 mGy.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2075",
+          "profession": "Tecnología Médica",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "0.1-0.5 mGy",
+        "0.5-2 mGy",
+        "2-5 mGy",
+        "5-10 mGy",
+        "> 10 mGy"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "D",
+        "dropped_alternative": "5-10 mGy",
+        "original_answer": "C",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-9F77469475FA",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es la refracción normal del ojo (emetropía) en reposo?",
+      "alternatives": [
+        "Poder de refracción +40 dioptrías",
+        "Poder de refracción +60 dioptrías",
+        "Poder de refracción +45 dioptrías",
+        "Poder de refracción +50 dioptrías"
+      ],
+      "declared_answer": "D",
+      "justification": "Ojo normal (emetropía): poder refracción +50 dioptrías aproximadamente. Córnea: ~43. Cristalino: ~18. Miopía: foco anterior retina; hipermetropía: foco posterior.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2006",
+          "profession": "Tecnología Médica",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Poder de refracción +60 dioptrías",
+        "Poder de refracción +45 dioptrías",
+        "Poder de refracción +50 dioptrías",
+        "Poder de refracción +40 dioptrías",
+        "Poder de refracción 0 dioptrías"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "E",
+        "dropped_alternative": "Poder de refracción 0 dioptrías",
+        "original_answer": "C",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-A90FEDF34946",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el máximo período de conservación de lodo en EDTA?",
+      "alternatives": [
+        "8 horas",
+        "24 horas",
+        "48 horas",
+        "4 horas"
+      ],
+      "declared_answer": "D",
+      "justification": "Lodo en EDTA: máximo 4 horas antes de procesamiento para evitar aglutinación falsa.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2095",
+          "profession": "Tecnología Médica",
+          "answer": "B"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "2 horas",
+        "4 horas",
+        "8 horas",
+        "24 horas",
+        "48 horas"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "2 horas",
+        "original_answer": "B",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-AE1B086B3836",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es la resistencia a compresión del zinc óxido eugenol?",
+      "alternatives": [
+        "5-10 MPa",
+        "10-20 MPa",
+        "20-30 MPa",
+        "> 30 MPa"
+      ],
+      "declared_answer": "A",
+      "justification": "ZOE: resistencia 5-10 MPa (débil, temporal). Composite: 200-900 MPa.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2066",
+          "profession": "Tecnología Médica",
+          "answer": "B"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "< 5 MPa",
+        "5-10 MPa",
+        "10-20 MPa",
+        "20-30 MPa",
+        "> 30 MPa"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "< 5 MPa",
+        "original_answer": "B",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-B06416404D22",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el rango normal de aspartato aminotransferasa (AST)?",
+      "alternatives": [
+        "100-200 U/L",
+        "15-30 U/L",
+        "30-40 U/L",
+        "40-100 U/L"
+      ],
+      "declared_answer": "C",
+      "justification": "AST normal: 10-40 U/L (depende laboratorio). Elevación: hepatitis, infarto miocárdico, hemólisis.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2025",
+          "profession": "Tecnología Médica",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "5-15 U/L",
+        "15-30 U/L",
+        "30-40 U/L",
+        "40-100 U/L",
+        "100-200 U/L"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "5-15 U/L",
+        "original_answer": "C",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-B13811052CA9",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el método de esterilización para instrumental metálico?",
+      "alternatives": [
+        "Autoclave (vapor 121°C, 15 min)",
+        "Peróxido de hidrógeno gaseoso",
+        "Óxido de etileno",
+        "Calor seco > 160°C"
+      ],
+      "declared_answer": "A",
+      "justification": "Autoclave: vapor 121°C, 15-20 minutos. Estándar para metal/vidrio en clínica.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2098",
+          "profession": "Tecnología Médica",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Luz ultravioleta",
+        "Calor seco > 160°C",
+        "Autoclave (vapor 121°C, 15 min)",
+        "Peróxido de hidrógeno gaseoso",
+        "Óxido de etileno"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "Luz ultravioleta",
+        "original_answer": "C",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-B1866A34E9F0",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el rango normal de INR en paciente no anticoagulado?",
+      "alternatives": [
+        "3.0-4.0",
+        "1.0-1.5",
+        "1.5-2.0",
+        "2.0-3.0"
+      ],
+      "declared_answer": "B",
+      "justification": "INR normal: 0.8-1.1 (o aproximadamente 1.0). Anticoagulación terapéutica: 2.0-3.0.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2021",
+          "profession": "Tecnología Médica",
+          "answer": "B"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "0.5-1.0",
+        "1.0-1.5",
+        "1.5-2.0",
+        "2.0-3.0",
+        "3.0-4.0"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "0.5-1.0",
+        "original_answer": "B",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-B20206C460D8",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es la profundidad de penetración de una resina compuesta fotopolimerizable?",
+      "alternatives": [
+        "5-10 mm",
+        "1-2 mm",
+        "2-3 mm",
+        "3-5 mm"
+      ],
+      "declared_answer": "B",
+      "justification": "Resina compuesta: penetración luz LED ~2 mm. Necesita incrementos múltiples.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2044",
+          "profession": "Tecnología Médica",
+          "answer": "B"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "0.5 mm",
+        "1-2 mm",
+        "2-3 mm",
+        "3-5 mm",
+        "5-10 mm"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "0.5 mm",
+        "original_answer": "B",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-B77CF28CB855",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el rango normal de triglicéridos en ayunas?",
+      "alternatives": [
+        "< 100 mg/dL",
+        "< 150 mg/dL",
+        "< 200 mg/dL",
+        "< 250 mg/dL"
+      ],
+      "declared_answer": "B",
+      "justification": "Triglicéridos normal: < 150 mg/dL (ayunas). Borderline: 150-199. Alto: 200-499.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2026",
+          "profession": "Tecnología Médica",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "< 50 mg/dL",
+        "< 100 mg/dL",
+        "< 150 mg/dL",
+        "< 200 mg/dL",
+        "< 250 mg/dL"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "< 50 mg/dL",
+        "original_answer": "C",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-BA6050B7B086",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el tiempo máximo para reporte de cultivo bacteriano negativo?",
+      "alternatives": [
+        "12 horas",
+        "24 horas",
+        "48 horas",
+        "7 días"
+      ],
+      "declared_answer": "C",
+      "justification": "Cultivo bacteriano: lectura 24h (principal), relectura 48h si negativo para confirmar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2089",
+          "profession": "Tecnología Médica",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "12 horas",
+        "24 horas",
+        "48 horas",
+        "5 días",
+        "7 días"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "D",
+        "dropped_alternative": "5 días",
+        "original_answer": "C",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-BA6A28A525DA",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el método de desinfección en fluoroscopia intervencional?",
+      "alternatives": [
+        "Depende del procedimiento",
+        "Soluciones antisépticas tópicas",
+        "Povidona iodada con técnica estéril",
+        "Todas las anteriores"
+      ],
+      "declared_answer": "D",
+      "justification": "Desinfección intervencional: múltiples métodos según región, esterilidad requerida.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2090",
+          "profession": "Tecnología Médica",
+          "answer": "D"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Soluciones antisépticas tópicas",
+        "Clorhexidina 0.5-2%",
+        "Povidona iodada con técnica estéril",
+        "Todas las anteriores",
+        "Depende del procedimiento"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Clorhexidina 0.5-2%",
+        "original_answer": "D",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-BABB0333A084",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es la concentración plasmática terapéutica de fenitoína?",
+      "alternatives": [
+        "10-20 μg/mL",
+        "20-30 μg/mL",
+        "30-40 μg/mL",
+        "5-10 μg/mL"
+      ],
+      "declared_answer": "A",
+      "justification": "Fenitoína: rango 10-20 μg/mL (tóxica > 20). Margen estrecho (~2:1).",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2077",
+          "profession": "Tecnología Médica",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "2-5 μg/mL",
+        "5-10 μg/mL",
+        "10-20 μg/mL",
+        "20-30 μg/mL",
+        "30-40 μg/mL"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "2-5 μg/mL",
+        "original_answer": "C",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-BB1B7667E2FC",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el parámetro hematológico que indica volumen corpuscular medio?",
+      "alternatives": [
+        "MPV",
+        "VCM",
+        "HCM",
+        "CHCM"
+      ],
+      "declared_answer": "B",
+      "justification": "VCM: volumen corpuscular medio (fL). Normal: 80-100 fL. Bajo: microcitosis. Alto: macrocitosis.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2054",
+          "profession": "Tecnología Médica",
+          "answer": "B"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "RDW",
+        "VCM",
+        "HCM",
+        "CHCM",
+        "MPV"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "RDW",
+        "original_answer": "B",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-BBB406BDB862",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el rango normal de calcio sérico?",
+      "alternatives": [
+        "6-8 mg/dL",
+        "8-10 mg/dL",
+        "10-12 mg/dL",
+        "12-14 mg/dL"
+      ],
+      "declared_answer": "B",
+      "justification": "Calcio total: 8-10 mg/dL (2.0-2.5 mmol/L). Corrección si albúmina baja.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2062",
+          "profession": "Tecnología Médica",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "4-6 mg/dL",
+        "6-8 mg/dL",
+        "8-10 mg/dL",
+        "10-12 mg/dL",
+        "12-14 mg/dL"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "4-6 mg/dL",
+        "original_answer": "C",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-BF9FE457BA85",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es la vida media de eliminación de digoxina?",
+      "alternatives": [
+        "24-36 horas",
+        "48-72 horas",
+        "7-10 días",
+        "6-8 horas"
+      ],
+      "declared_answer": "A",
+      "justification": "Digoxina: t½ 24-36 horas. Rango terapéutico: 0.5-2 ng/mL. Margen terapéutico estrecho.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2055",
+          "profession": "Tecnología Médica",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "2-4 horas",
+        "6-8 horas",
+        "24-36 horas",
+        "48-72 horas",
+        "7-10 días"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "2-4 horas",
+        "original_answer": "C",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-C27C1C2ADFEA",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el tiempo mínimo de incubación para cultivo bacteriano estándar?",
+      "alternatives": [
+        "12 horas",
+        "24 horas",
+        "48 horas",
+        "72 horas"
+      ],
+      "declared_answer": "B",
+      "justification": "Cultivo bacteriano estándar: 24 horas a 35-37°C (CO2 5%). Lectura principal 24h. Relectura 48h si negativo.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2022",
+          "profession": "Tecnología Médica",
+          "answer": "B"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "12 horas",
+        "24 horas",
+        "48 horas",
+        "72 horas",
+        "5 días"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "E",
+        "dropped_alternative": "5 días",
+        "original_answer": "B",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-C34FD472BB54",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es la presión de perfusión cerebral (PPC) mínima para evitar isquemia?",
+      "alternatives": [
+        "50 mmHg",
+        "60-70 mmHg",
+        "80-90 mmHg",
+        "100-120 mmHg"
+      ],
+      "declared_answer": "B",
+      "justification": "PPC = PAM – PIC. Mínimo 60-70 mmHg para perfusión cerebral adecuada.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2018",
+          "profession": "Tecnología Médica",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "30 mmHg",
+        "50 mmHg",
+        "60-70 mmHg",
+        "80-90 mmHg",
+        "100-120 mmHg"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "30 mmHg",
+        "original_answer": "C",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-C8A11876BB3F",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el rango normal de fosfato inorgánico sérico?",
+      "alternatives": [
+        "4.5-6.5 mg/dL",
+        "6.5-8.5 mg/dL",
+        "1.5-2.5 mg/dL",
+        "2.5-4.5 mg/dL"
+      ],
+      "declared_answer": "D",
+      "justification": "Fosfato inorgánico: 2.5-4.5 mg/dL. Bajo: hipofosfatemia (debilidad). Alto: hiperfosfatemia (insuficiencia renal).",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2091",
+          "profession": "Tecnología Médica",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "0.5-1.0 mg/dL",
+        "1.5-2.5 mg/dL",
+        "2.5-4.5 mg/dL",
+        "4.5-6.5 mg/dL",
+        "6.5-8.5 mg/dL"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "0.5-1.0 mg/dL",
+        "original_answer": "C",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-CB1E3179A8B9",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es la temperatura máxima de agua para baño con esponja en caso de fiebre?",
+      "alternatives": [
+        "25-30°C",
+        "30-35°C",
+        "35-40°C",
+        "40-45°C"
+      ],
+      "declared_answer": "A",
+      "justification": "Baño esponja: agua tibia 25-30°C. Duración: 15-20 min. Evaporación enfría piel.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2037",
+          "profession": "Tecnología Médica",
+          "answer": "B"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "20-25°C",
+        "25-30°C",
+        "30-35°C",
+        "35-40°C",
+        "40-45°C"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "20-25°C",
+        "original_answer": "B",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-CC8545A8EB6D",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Gestión",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el método de referencia para dosaje de creatinina?",
+      "alternatives": [
+        "Enzimático (creatininasa)",
+        "Espectrometría de masas isotópica",
+        "Electroforesis capilar",
+        "Método de Jaffé (reacción alcalina)"
+      ],
+      "declared_answer": "B",
+      "justification": "Creatinina: LC-MS/MS es referencia (trazabilidad IDMS). Enzimático es clínica.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2038",
+          "profession": "Tecnología Médica",
+          "answer": "D"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Método de Jaffé (reacción alcalina)",
+        "HPLC (cromatografía)",
+        "Enzimático (creatininasa)",
+        "Espectrometría de masas isotópica",
+        "Electroforesis capilar"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "HPLC (cromatografía)",
+        "original_answer": "D",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-CD9CB8777D28",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el volumen máximo de solución a inyectar por vía intramuscular en glúteo?",
+      "alternatives": [
+        "10-15 mL",
+        "2-3 mL",
+        "3-5 mL",
+        "5-10 mL"
+      ],
+      "declared_answer": "C",
+      "justification": "IM glúteo: máximo 3-5 mL. Deltoides: máximo 1 mL. Muslo: máximo 5 mL.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2017",
+          "profession": "Tecnología Médica",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "1 mL",
+        "2-3 mL",
+        "3-5 mL",
+        "5-10 mL",
+        "10-15 mL"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "1 mL",
+        "original_answer": "C",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-CF39A1ABA4CC",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el tiempo de reacción normal en prueba de protrombina (PT)?",
+      "alternatives": [
+        "15-20 segundos",
+        "20-30 segundos",
+        "8-12 segundos",
+        "12-15 segundos"
+      ],
+      "declared_answer": "C",
+      "justification": "Protrombina (PT): 8-12 segundos (depende reactivo/laboratorio). INR es expresión normalizada. TTPK: 25-40 segundos. Control de calidad diario obligatorio.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2003",
+          "profession": "Tecnología Médica",
+          "answer": "B"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "5-8 segundos",
+        "8-12 segundos",
+        "12-15 segundos",
+        "15-20 segundos",
+        "20-30 segundos"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "5-8 segundos",
+        "original_answer": "B",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-CF980C081179",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es la dosis máxima de ibuprofeno diaria OTC?",
+      "alternatives": [
+        "3200 mg/día",
+        "600 mg/día",
+        "1200 mg/día",
+        "2400 mg/día"
+      ],
+      "declared_answer": "C",
+      "justification": "Ibuprofeno OTC: máximo 1200 mg/día. Prescripción: hasta 3200 mg/día.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2082",
+          "profession": "Tecnología Médica",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "400 mg/día",
+        "600 mg/día",
+        "1200 mg/día",
+        "2400 mg/día",
+        "3200 mg/día"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "400 mg/día",
+        "original_answer": "C",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-D1840745B870",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es la principal vía de eliminación de la mayoría de medicamentos?",
+      "alternatives": [
+        "Eliminación GI directa",
+        "Eliminación renal sin metabolismo",
+        "Metabolismo hepático (fase I/II)",
+        "Metabolismo pulmonar"
+      ],
+      "declared_answer": "C",
+      "justification": "Hígado es principal órgano metabolismo (~80% fármacos). Fase I (oxidación); Fase II (conjugación).",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2031",
+          "profession": "Tecnología Médica",
+          "answer": "B"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Eliminación renal sin metabolismo",
+        "Metabolismo hepático (fase I/II)",
+        "Eliminación biliar",
+        "Metabolismo pulmonar",
+        "Eliminación GI directa"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "C",
+        "dropped_alternative": "Eliminación biliar",
+        "original_answer": "B",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-D1CA831AA8FD",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el intervalo terapéutico de teofilina en sangre?",
+      "alternatives": [
+        "10-20 μg/mL",
+        "20-30 μg/mL",
+        "30-40 μg/mL",
+        "5-10 μg/mL"
+      ],
+      "declared_answer": "A",
+      "justification": "Teofilina: rango 10-20 μg/mL (tóxica > 20). Margen terapéutico estrecho (~2:1).",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2032",
+          "profession": "Tecnología Médica",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "2-5 μg/mL",
+        "5-10 μg/mL",
+        "10-20 μg/mL",
+        "20-30 μg/mL",
+        "30-40 μg/mL"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "2-5 μg/mL",
+        "original_answer": "C",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-D72328262971",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el volumen máximo en técnica aspirativa para biopsias?",
+      "alternatives": [
+        "1-2 mL",
+        "5-10 mL",
+        "10-20 mL",
+        "> 20 mL"
+      ],
+      "declared_answer": "A",
+      "justification": "PAAF (punción aspiración aguja fina): 1-2 mL máximo. Mayor volumen dilúe muestra.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2092",
+          "profession": "Tecnología Médica",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "1-2 mL",
+        "2-5 mL",
+        "5-10 mL",
+        "10-20 mL",
+        "> 20 mL"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "2-5 mL",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-D93EC82A6768",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es la energía de rayos X característicos de molibdeno en mamografía?",
+      "alternatives": [
+        "35-50 keV",
+        "50-100 keV",
+        "15-25 keV",
+        "25-35 keV"
+      ],
+      "declared_answer": "C",
+      "justification": "Mo (ánodo mamografía): rayos X característicos Kα 17.5 keV, Kβ 19.6 keV.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2047",
+          "profession": "Tecnología Médica",
+          "answer": "B"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "10-15 keV",
+        "15-25 keV",
+        "25-35 keV",
+        "35-50 keV",
+        "50-100 keV"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "10-15 keV",
+        "original_answer": "B",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-DBA0D3EAA701",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es la posición recomendada para paciente con riesgo de aspiración?",
+      "alternatives": [
+        "Semi-Fowler o Fowler (30-45°)",
+        "Trendelenburg (cabeza baja)",
+        "Posición de recuperación lateral",
+        "Decúbito ventral (prono)"
+      ],
+      "declared_answer": "A",
+      "justification": "Riesgo aspiración: Semi-Fowler 30-45° o Fowler 45-60° (cabeza elevada). Drena secreciones.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2034",
+          "profession": "Tecnología Médica",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Decúbito dorsal (flat)",
+        "Decúbito ventral (prono)",
+        "Semi-Fowler o Fowler (30-45°)",
+        "Trendelenburg (cabeza baja)",
+        "Posición de recuperación lateral"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "Decúbito dorsal (flat)",
+        "original_answer": "C",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-DC5051852F40",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Gestión",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el parámetro de calidad que evalúa reproducibilidad?",
+      "alternatives": [
+        "Precisión",
+        "Valor predictivo",
+        "Sensibilidad",
+        "Especificidad"
+      ],
+      "declared_answer": "A",
+      "justification": "Precisión: reproducibilidad de resultados. Exactitud: acercamiento al valor verdadero.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2085",
+          "profession": "Tecnología Médica",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Sensibilidad",
+        "Especificidad",
+        "Precisión",
+        "Exactitud",
+        "Valor predictivo"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "D",
+        "dropped_alternative": "Exactitud",
+        "original_answer": "C",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-DD13B1E38594",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el principal efecto secundario de anticonvulsivantes?",
+      "alternatives": [
+        "Hepatotoxicidad",
+        "Nefrotoxicidad",
+        "Teratogenicidad (especialmente T1/T2)",
+        "Cardiotoxicidad"
+      ],
+      "declared_answer": "C",
+      "justification": "Anticonvulsivantes: teratógenos conocidos (especialmente fenitoína, valproato). Contraindicados embarazo.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2096",
+          "profession": "Tecnología Médica",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Hepatotoxicidad",
+        "Nefrotoxicidad",
+        "Teratogenicidad (especialmente T1/T2)",
+        "Cardiotoxicidad",
+        "Ototoxicidad"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "E",
+        "dropped_alternative": "Ototoxicidad",
+        "original_answer": "C",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-E00E87EB4146",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el rango normal de albúmina sérica?",
+      "alternatives": [
+        "3.5-5.5 g/dL",
+        "5.5-7.5 g/dL",
+        "7.5-9.0 g/dL",
+        "2-3 g/dL"
+      ],
+      "declared_answer": "A",
+      "justification": "Albúmina: 3.5-5.5 g/dL (35-55 g/L). Síntesis hepática. Bajo: malnutrición, hepatopatía.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2076",
+          "profession": "Tecnología Médica",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "1-2 g/dL",
+        "2-3 g/dL",
+        "3.5-5.5 g/dL",
+        "5.5-7.5 g/dL",
+        "7.5-9.0 g/dL"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "1-2 g/dL",
+        "original_answer": "C",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-E03C2E8C9462",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el método de higiene bucal recomendado para paciente inconsciente?",
+      "alternatives": [
+        "Dejar secar la cavidad bucal",
+        "Aplicación de vaselina en labios",
+        "Cepillado dental convencional",
+        "Gasa/torunda humedecida sin presión, irrigación gentil"
+      ],
+      "declared_answer": "D",
+      "justification": "Paciente sedado/intubado: higiene sin aspiración. Torunda gentil; aspiración cuidadosa. Evitar cepillo.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2033",
+          "profession": "Tecnología Médica",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Cepillado dental convencional",
+        "Enjuague con agua destilada",
+        "Gasa/torunda humedecida sin presión, irrigación gentil",
+        "Dejar secar la cavidad bucal",
+        "Aplicación de vaselina en labios"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Enjuague con agua destilada",
+        "original_answer": "C",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-E3EDFDEC053A",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el factor de reducción de dosis por magnificación en fluoroscopia?",
+      "alternatives": [
+        "No hay reducción (igual dosis)",
+        "Reduce dosis 75%",
+        "Aumento de dosis 2×",
+        "Aumento de dosis 4×"
+      ],
+      "declared_answer": "D",
+      "justification": "Magnificación fluoroscopia (2×): aumenta dosis ~4× (para mantener SNR).",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2048",
+          "profession": "Tecnología Médica",
+          "answer": "E"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "No hay reducción (igual dosis)",
+        "Reduce dosis 50%",
+        "Reduce dosis 75%",
+        "Aumento de dosis 2×",
+        "Aumento de dosis 4×"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Reduce dosis 50%",
+        "original_answer": "E",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-E6DF00B8CE41",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es la clasificación BCS para fármaco con alta solubilidad y baja permeabilidad?",
+      "alternatives": [
+        "Clase III",
+        "Clase IV",
+        "Sin clasificación",
+        "Clase II"
+      ],
+      "declared_answer": "A",
+      "justification": "BCS Clase III: alta solubilidad, baja permeabilidad (ej: gentamicina). Absorción limitada por permeabilidad intestinal.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2024",
+          "profession": "Tecnología Médica",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Clase I",
+        "Clase II",
+        "Clase III",
+        "Clase IV",
+        "Sin clasificación"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "Clase I",
+        "original_answer": "C",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-E76D87FA12E2",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el rango normal de proteína C reactiva (PCR)?",
+      "alternatives": [
+        "< 20 mg/L",
+        "< 0.5 mg/L",
+        "< 3 mg/L",
+        "< 10 mg/L"
+      ],
+      "declared_answer": "C",
+      "justification": "PCR normal: < 3 mg/L (elevada sensibilidad para inflamación). Vida media: 19 horas.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2053",
+          "profession": "Tecnología Médica",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "< 0.5 mg/L",
+        "< 1 mg/L",
+        "< 3 mg/L",
+        "< 10 mg/L",
+        "< 20 mg/L"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "< 1 mg/L",
+        "original_answer": "C",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-E9BCD8D303C5",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el principal mecanismo de acción de los agonistas beta-2 adrenérgicos en asma?",
+      "alternatives": [
+        "Aumento de AMPc → relajación muscular lisa",
+        "Bloqueo de receptores muscarínicos",
+        "Inhibición de leucotrienos",
+        "Activación de receptores H1"
+      ],
+      "declared_answer": "A",
+      "justification": "Beta-2 agonistas (salbutamol): ↑ AMPc → relajación muscular liso bronquial → broncodilatación.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2029",
+          "profession": "Tecnología Médica",
+          "answer": "B"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Inhibición de mastocitos",
+        "Aumento de AMPc → relajación muscular lisa",
+        "Bloqueo de receptores muscarínicos",
+        "Inhibición de leucotrienos",
+        "Activación de receptores H1"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "Inhibición de mastocitos",
+        "original_answer": "B",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-EA2427452ACE",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el tubo correcto para prueba de coagulación (TTPK)?",
+      "alternatives": [
+        "Citrato sodio 3.2% (1:9)",
+        "Heparina",
+        "Sin anticoagulante",
+        "Citrato sodio 3.8% (1:4)"
+      ],
+      "declared_answer": "A",
+      "justification": "TTPK: citrato sodio 3.2% (1:9). Tubo azul específico. Tiempo contacto: máximo 2 horas.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2072",
+          "profession": "Tecnología Médica",
+          "answer": "B"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "EDTA",
+        "Citrato sodio 3.2% (1:9)",
+        "Heparina",
+        "Sin anticoagulante",
+        "Citrato sodio 3.8% (1:4)"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "EDTA",
+        "original_answer": "B",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-EB029A72493D",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es la escala de Braden para úlceras por presión?",
+      "alternatives": [
+        "Score 0-23 (bajo riesgo ≥ 18)",
+        "Score 1-5 (bajo riesgo > 4)",
+        "Score 0-10 (bajo riesgo > 20)",
+        "Score 1-4 (bajo riesgo ≥ 18)"
+      ],
+      "declared_answer": "A",
+      "justification": "Braden: score 6-23 (bajo riesgo ≥ 18, alto riesgo ≤ 12). Validado internacionalmente.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2061",
+          "profession": "Tecnología Médica",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Score 0-10 (bajo riesgo > 20)",
+        "Score 1-4 (bajo riesgo ≥ 18)",
+        "Score 0-23 (bajo riesgo ≥ 18)",
+        "Score 1-5 (bajo riesgo > 4)",
+        "Score -5 a +5"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "E",
+        "dropped_alternative": "Score -5 a +5",
+        "original_answer": "C",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-EB15CE51C82C",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el rango normal de fosfatasa alcalina en adultos?",
+      "alternatives": [
+        "> 200 U/L",
+        "15-30 U/L",
+        "30-120 U/L",
+        "120-200 U/L"
+      ],
+      "declared_answer": "C",
+      "justification": "Fosfatasa alcalina: 30-120 U/L adultos (depende laboratorio).",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2060",
+          "profession": "Tecnología Médica",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "5-15 U/L",
+        "15-30 U/L",
+        "30-120 U/L",
+        "120-200 U/L",
+        "> 200 U/L"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "5-15 U/L",
+        "original_answer": "C",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-ED3377DB8898",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el efecto secundario principal de estatinas en hígado?",
+      "alternatives": [
+        "Colelitiasis",
+        "Hepatitis autoinmune",
+        "Hígado graso",
+        "Elevación enzimas ALT/AST > 3× normal"
+      ],
+      "declared_answer": "D",
+      "justification": "Estatinas: elevación ALT/AST > 3× normal en 1-2%. Reversible al discontinuar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2086",
+          "profession": "Tecnología Médica",
+          "answer": "B"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Cirrosis",
+        "Elevación enzimas ALT/AST > 3× normal",
+        "Colelitiasis",
+        "Hepatitis autoinmune",
+        "Hígado graso"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "Cirrosis",
+        "original_answer": "B",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-EDD8081A1DFD",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el tiempo máximo de conservación de sangre EDTA para hemograma?",
+      "alternatives": [
+        "48 horas",
+        "4 horas",
+        "8 horas",
+        "24 horas"
+      ],
+      "declared_answer": "B",
+      "justification": "EDTA (hemograma): estabilidad 4 horas a temperatura ambiente. Refrigeración 24 horas aceptable.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2052",
+          "profession": "Tecnología Médica",
+          "answer": "B"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "1 hora",
+        "4 horas",
+        "8 horas",
+        "24 horas",
+        "48 horas"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "1 hora",
+        "original_answer": "B",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-EEB1986ECC6D",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el volumen correcto de orina para análisis de rutina?",
+      "alternatives": [
+        "20-30 mL",
+        "30-50 mL",
+        "50-100 mL",
+        "100-150 mL"
+      ],
+      "declared_answer": "B",
+      "justification": "Orina para análisis: 30-50 mL (recipiente estéril). Tiempo máximo 2 horas.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2074",
+          "profession": "Tecnología Médica",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "10-20 mL",
+        "20-30 mL",
+        "30-50 mL",
+        "50-100 mL",
+        "100-150 mL"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "10-20 mL",
+        "original_answer": "C",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-EF1785ECA02F",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el método principal de determinación de potasio en laboratorio?",
+      "alternatives": [
+        "Espectrometría de absorción atómica",
+        "Electrodo ión selectivo (ISE)",
+        "Cromatografía de iones",
+        "Fotometría de llama"
+      ],
+      "declared_answer": "B",
+      "justification": "Potasio: ISE es estándar clínico. Rango normal: 3.5-5.0 mEq/L.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2079",
+          "profession": "Tecnología Médica",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Fotometría de llama",
+        "Espectrometría de absorción atómica",
+        "Electrodo ión selectivo (ISE)",
+        "Fotocolorimetría",
+        "Cromatografía de iones"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "D",
+        "dropped_alternative": "Fotocolorimetría",
+        "original_answer": "C",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-F0696E919D6F",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el rango normal de hemoglobina en hombres adultos?",
+      "alternatives": [
+        "17.5-20 g/dL",
+        "20-25 g/dL",
+        "12-14 g/dL",
+        "13.5-17.5 g/dL"
+      ],
+      "declared_answer": "D",
+      "justification": "Hemoglobina: hombres 13.5-17.5 g/dL (mujeres 12-15.5 g/dL). Método cianmetahemoglobina es estándar. Valores bajos: anemia. Valores altos: policitemia, deshidratación.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2002",
+          "profession": "Tecnología Médica",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "10-12 g/dL",
+        "12-14 g/dL",
+        "13.5-17.5 g/dL",
+        "17.5-20 g/dL",
+        "20-25 g/dL"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "10-12 g/dL",
+        "original_answer": "C",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-F0AD6D719E5A",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es la dureza en escala Mohs de la apatita en esmalte dental?",
+      "alternatives": [
+        "8",
+        "5",
+        "6",
+        "7"
+      ],
+      "declared_answer": "B",
+      "justification": "Hidroxiapatita (esmalte): dureza Mohs 5. Dentina: dureza ~3-4.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2040",
+          "profession": "Tecnología Médica",
+          "answer": "B"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "4",
+        "original_answer": "B",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-F1AF19FA8D76",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es la dosis equivalente para síndrome de irradiación aguda?",
+      "alternatives": [
+        "0.1-0.5 Sv",
+        "0.5-1 Sv",
+        "2-6 Sv",
+        "> 6 Sv"
+      ],
+      "declared_answer": "C",
+      "justification": "Síndrome irradiación aguda: 2-6 Sv causa síntomas. 6+ Sv es letal.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2067",
+          "profession": "Tecnología Médica",
+          "answer": "D"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "0.1-0.5 Sv",
+        "0.5-1 Sv",
+        "1-2 Sv",
+        "2-6 Sv",
+        "> 6 Sv"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "C",
+        "dropped_alternative": "1-2 Sv",
+        "original_answer": "D",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-F9B53B965341",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el factor de corrección de leucocitosis en recuento manual de eritrocitos?",
+      "alternatives": [
+        "Depende del tipo de leucocito",
+        "Se descuentan 1 leucocito por cada 100 RBC",
+        "Se descuentan 1 leucocito por cada 1000 RBC",
+        "Se multiplican RBC por factor de corrección"
+      ],
+      "declared_answer": "B",
+      "justification": "Leucocitosis interfiere recuento RBC. Corrección: restar 1 RBC por cada 100 leucocitos.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2019",
+          "profession": "Tecnología Médica",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Se descuentan 1 leucocito por cada 100 RBC",
+        "Se descuentan 1 leucocito por cada 1000 RBC",
+        "No hay corrección necesaria",
+        "Se multiplican RBC por factor de corrección",
+        "Depende del tipo de leucocito"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "C",
+        "dropped_alternative": "No hay corrección necesaria",
+        "original_answer": "A",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-FA0743F051D3",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el rango normal de glucosa en ayunas en plasma venoso?",
+      "alternatives": [
+        "100-120 mg/dL",
+        "120-140 mg/dL",
+        "140-160 mg/dL",
+        "70-100 mg/dL"
+      ],
+      "declared_answer": "D",
+      "justification": "Glucosa ayunas normal: 70-100 mg/dL (4-5.5 mmol/L). Prediabetes: 100-125. Diabetes: ≥126. Sangre capilar ~10-15 mg/dL superior a venosa.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2004",
+          "profession": "Tecnología Médica",
+          "answer": "B"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "60-80 mg/dL",
+        "70-100 mg/dL",
+        "100-120 mg/dL",
+        "120-140 mg/dL",
+        "140-160 mg/dL"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "60-80 mg/dL",
+        "original_answer": "B",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-FF6D9C52AB50",
+      "profession": "Tecnología Médica",
+      "specialty": "Tecnología Médica",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "Por revisar",
+      "statement": "¿Cuál es el mecanismo de acción de agonistas beta-2 en asma?",
+      "alternatives": [
+        "Aumento de AMPc → relajación muscular lisa",
+        "Bloqueo de receptores muscarínicos",
+        "Inhibición de leucotrienos",
+        "Activación de receptores H1"
+      ],
+      "declared_answer": "A",
+      "justification": "Beta-2 agonistas: ↑ AMPc → relajación muscular liso bronquial → broncodilatación.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/BPSERUMS/preguntas.json",
+          "source_id": "2056",
+          "profession": "Tecnología Médica",
+          "answer": "B"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Inhibición de mastocitos",
+        "Aumento de AMPc → relajación muscular lisa",
+        "Bloqueo de receptores muscarínicos",
+        "Inhibición de leucotrienos",
+        "Activación de receptores H1"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "Inhibición de mastocitos",
+        "original_answer": "B",
+        "new_answer": "A"
+      }
+    }
+  ]
+}

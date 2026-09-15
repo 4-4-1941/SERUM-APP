@@ -1,0 +1,1137 @@
+{
+  "module_version": 1,
+  "profession": "Tecnología Médica - Terapia Física",
+  "total_questions": 13,
+  "structural_validation": {
+    "expected_alternatives": 4,
+    "invalid_questions": 0,
+    "status": "PASS"
+  },
+  "publication_status": "REVIEW_REQUIRED",
+  "warning": "Módulo de preparación. No integrar ni mostrar como banco validado hasta confirmar clave, distractores y fuente por revisor profesional.",
+  "thematic_blocks": {
+    "Cuidado integral": 13
+  },
+  "questions": [
+    {
+      "canonical_id": "BQ-063AE352293A",
+      "profession": "Tecnología Médica - Terapia Física",
+      "specialty": "Tecnología Médica - Terapia Física",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Dosis típica radioterapia en cáncer?",
+      "alternatives": [
+        "5-7 Gy",
+        "60-80 Gy",
+        "100+ Gy",
+        "0.1 Gy"
+      ],
+      "declared_answer": "B",
+      "justification": "Radioterapia típica 60-80 Gy fraccionada (2 Gy/sesión) para tumores sólidos.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 12,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-009",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "C"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-017",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "C"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-025",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "C"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-033",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "C"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-041",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "C"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-049",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "C"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-057",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "C"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-065",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "C"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-073",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "C"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-081",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "C"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-089",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "C"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-097",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "1-2 Gy",
+        "5-7 Gy",
+        "60-80 Gy",
+        "100+ Gy",
+        "0.1 Gy"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "1-2 Gy",
+        "original_answer": "C",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-34380895869F",
+      "profession": "Tecnología Médica - Terapia Física",
+      "specialty": "Tecnología Médica - Terapia Física",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Tratamiento en epicondilitis lateral?",
+      "alternatives": [
+        "Inyección cortisona repetida",
+        "Reposo, AINE, EFR",
+        "Cirugía inmediata",
+        "Inmobilización permanente"
+      ],
+      "declared_answer": "B",
+      "justification": "Epicondilitis: reposo, AINE, estiramiento, fortalecimiento excéntrico, infiltración si refractario.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 12,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-012",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-020",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-028",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-036",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-044",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-052",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-060",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-068",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-076",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-084",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-092",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-100",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Reposo, AINE, EFR",
+        "Cirugía inmediata",
+        "Inmobilización permanente",
+        "Masaje agresivo",
+        "Inyección cortisona repetida"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "D",
+        "dropped_alternative": "Masaje agresivo",
+        "original_answer": "A",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-4EE723B4B3BD",
+      "profession": "Tecnología Médica - Terapia Física",
+      "specialty": "Tecnología Médica - Terapia Física",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Corrección postural en cifosis dorsal?",
+      "alternatives": [
+        "Ejercicios dorso",
+        "Todas",
+        "Fortalecimiento extensores",
+        "Estirar pectorales"
+      ],
+      "declared_answer": "B",
+      "justification": "Cifosis: estiramiento pectorales + fortalecimiento dorsal + educación postural.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 12,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-006",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "E"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-014",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "E"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-022",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "E"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-030",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "E"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-038",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "E"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-046",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "E"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-054",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "E"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-062",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "E"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-070",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "E"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-078",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "E"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-086",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "E"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-094",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "E"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Fortalecimiento extensores",
+        "Estirar pectorales",
+        "Ejercicios dorso",
+        "Educación",
+        "Todas"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "D",
+        "dropped_alternative": "Educación",
+        "original_answer": "E",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-4F876F0557AD",
+      "profession": "Tecnología Médica - Terapia Física",
+      "specialty": "Tecnología Médica - Terapia Física",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Principio FNP (Facilitación Neuromuscular)?",
+      "alternatives": [
+        "Vibración",
+        "Estimulación propioceptiva",
+        "Bloqueo motor",
+        "Contracción concéntrica"
+      ],
+      "declared_answer": "B",
+      "justification": "FNP = técnicas propioceptivas (espiral/diagonal) para facilitar patrón motor.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 12,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-010",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-018",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-026",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-034",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-042",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-050",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-058",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-066",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-074",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-082",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-090",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-098",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Estimulación propioceptiva",
+        "Bloqueo motor",
+        "Contracción concéntrica",
+        "Isquemia",
+        "Vibración"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "D",
+        "dropped_alternative": "Isquemia",
+        "original_answer": "A",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-5645DCDF6B26",
+      "profession": "Tecnología Médica - Terapia Física",
+      "specialty": "Tecnología Médica - Terapia Física",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Indicación principal de masaje terapéutico?",
+      "alternatives": [
+        "Reducir tensión muscular",
+        "Diagnóstico muscular",
+        "Reemplazo ejercicio",
+        "Tratamiento fractura"
+      ],
+      "declared_answer": "A",
+      "justification": "Masaje terapéutico: reduce espasmo, mejora circulación, preparación ejercicio.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-003",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Reducir tensión muscular",
+        "Diagnóstico muscular",
+        "Reemplazo ejercicio",
+        "Tratamiento fractura",
+        "Curación heridas"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "E",
+        "dropped_alternative": "Curación heridas",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-571B192B138D",
+      "profession": "Tecnología Médica - Terapia Física",
+      "specialty": "Tecnología Médica - Terapia Física",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Genu valgum: intervención principal?",
+      "alternatives": [
+        "Cirugía",
+        "Fortalecimiento abductores cadera",
+        "Estirar aductores",
+        "Usar órtesis"
+      ],
+      "declared_answer": "B",
+      "justification": "Genu valgum: fortalecer glúteo medio/máximo para control pélvico + abductores.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 12,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-007",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-015",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-023",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-031",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-039",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-047",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-055",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-063",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-071",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-079",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-087",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-095",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Fortalecimiento abductores cadera",
+        "Estirar aductores",
+        "Usar órtesis",
+        "Cirugía",
+        "Reposo"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "E",
+        "dropped_alternative": "Reposo",
+        "original_answer": "A",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-6677E0A1BD53",
+      "profession": "Tecnología Médica - Terapia Física",
+      "specialty": "Tecnología Médica - Terapia Física",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Banda elástica: cuando resistencia es máxima?",
+      "alternatives": [
+        "Inicio movimiento",
+        "Mitad recorrido",
+        "Final recorrido",
+        "Siempre igual"
+      ],
+      "declared_answer": "C",
+      "justification": "Banda elástica: resistencia aumenta progresivamente (aceleración muscular).",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 12,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-011",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "C"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-019",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "C"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-027",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "C"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-035",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "C"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-043",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "C"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-051",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "C"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-059",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "C"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-067",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "C"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-075",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "C"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-083",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "C"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-091",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "C"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-099",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "C"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Inicio movimiento",
+        "Mitad recorrido",
+        "Final recorrido",
+        "Siempre igual",
+        "Fluctúa"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "E",
+        "dropped_alternative": "Fluctúa",
+        "original_answer": "C",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-7EAC547550AB",
+      "profession": "Tecnología Médica - Terapia Física",
+      "specialty": "Tecnología Médica - Terapia Física",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿TENS (transcutaneous electrical nerve stimulation) actúa por?",
+      "alternatives": [
+        "Teoría puerta de control",
+        "Bloqueo nervio",
+        "Estimulación motriz",
+        "Calor profundo"
+      ],
+      "declared_answer": "A",
+      "justification": "TENS: estimulación eléctrica superficial. Gate control = bloquea transmisión dolor.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-005",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Teoría puerta de control",
+        "Bloqueo nervio",
+        "Estimulación motriz",
+        "Calor profundo",
+        "Relajación"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "E",
+        "dropped_alternative": "Relajación",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-88B63C349CCD",
+      "profession": "Tecnología Médica - Terapia Física",
+      "specialty": "Tecnología Médica - Terapia Física",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Cuál es principal objetivo de rehabilitación postAVC?",
+      "alternatives": [
+        "Recuperar funcionalidad motora",
+        "Diagnosticar secuelas",
+        "Prescribir medicamentos",
+        "Prevenir recurrencia"
+      ],
+      "declared_answer": "A",
+      "justification": "Rehabilitación post-AVC: recuperación funcional, readaptación, prevención contracturas.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-001",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Recuperar funcionalidad motora",
+        "Diagnosticar secuelas",
+        "Prescribir medicamentos",
+        "Valorar discapacidad",
+        "Prevenir recurrencia"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "D",
+        "dropped_alternative": "Valorar discapacidad",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-A5CFB3819B41",
+      "profession": "Tecnología Médica - Terapia Física",
+      "specialty": "Tecnología Médica - Terapia Física",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Reeducación respiratoria en EPOC?",
+      "alternatives": [
+        "Diafragmática + pursed lips",
+        "Hiper-ventilación",
+        "Hipoxia controlada",
+        "Sin técnica"
+      ],
+      "declared_answer": "A",
+      "justification": "EPOC: respiración diafragmática + pursed lips breathing (espiración lenta contra resistencia).",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 12,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-008",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-016",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-024",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-032",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-040",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-048",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-056",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-064",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-072",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-080",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-088",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "A"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-096",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Diafragmática + pursed lips",
+        "Hiper-ventilación",
+        "Hipoxia controlada",
+        "Apnea",
+        "Sin técnica"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "D",
+        "dropped_alternative": "Apnea",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-BC5AA2856FF8",
+      "profession": "Tecnología Médica - Terapia Física",
+      "specialty": "Tecnología Médica - Terapia Física",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Método más efectivo para edema post-quirúrgico?",
+      "alternatives": [
+        "Compresión",
+        "Elevación",
+        "Todos combinados",
+        "Drenaje linfático"
+      ],
+      "declared_answer": "C",
+      "justification": "Edema post-op: combinación drenaje linfático + compresión + elevación + crioterpia.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 11,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-013",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "E"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-021",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "E"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-029",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "E"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-037",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "E"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-045",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "E"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-053",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "E"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-061",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "E"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-069",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "E"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-077",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "E"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-085",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "E"
+        },
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-093",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "E"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Drenaje linfático",
+        "Compresión",
+        "Elevación",
+        "Frío",
+        "Todos combinados"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "D",
+        "dropped_alternative": "Frío",
+        "original_answer": "E",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-C4CBDA774611",
+      "profession": "Tecnología Médica - Terapia Física",
+      "specialty": "Tecnología Médica - Terapia Física",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Ejercicio Codman en hombro frozen es de qué tipo?",
+      "alternatives": [
+        "Isométrico",
+        "Pliométrico",
+        "Anaeróbico",
+        "Pendular"
+      ],
+      "declared_answer": "D",
+      "justification": "Codman = ejercicio pendular pasivo-activo para mobilidad glenohumeral.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-002",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Pendular",
+        "Isométrico",
+        "Isotónico",
+        "Pliométrico",
+        "Anaeróbico"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "C",
+        "dropped_alternative": "Isotónico",
+        "original_answer": "A",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-DA7734354CF8",
+      "profession": "Tecnología Médica - Terapia Física",
+      "specialty": "Tecnología Médica - Terapia Física",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "media",
+      "statement": "¿Escala de Ashworth evalúa qué?",
+      "alternatives": [
+        "Fuerza muscular",
+        "Rango movimiento",
+        "Equilibrio",
+        "Tono muscular/espasticidad"
+      ],
+      "declared_answer": "D",
+      "justification": "Escala Ashworth (modificada) cuantifica espasticidad (0-4+). Gold standard.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 1,
+      "provenance": [
+        {
+          "file": "zip-internos-extraidos/cuestionarios3/banco_tec_tf.json",
+          "source_id": "TEC-TF-004",
+          "profession": "Tecnología Médica - Terapia Física",
+          "answer": "A"
+        }
+      ],
+      "catalog_source": "banco_maestro_previo",
+      "original_five_alternatives": [
+        "Tono muscular/espasticidad",
+        "Fuerza muscular",
+        "Rango movimiento",
+        "Dolor",
+        "Equilibrio"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "D",
+        "dropped_alternative": "Dolor",
+        "original_answer": "A",
+        "new_answer": "D"
+      }
+    }
+  ]
+}

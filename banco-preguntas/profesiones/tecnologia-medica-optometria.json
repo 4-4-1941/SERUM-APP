@@ -1,0 +1,2218 @@
+{
+  "module_version": 1,
+  "profession": "Tecnología Médica - Optometría",
+  "total_questions": 25,
+  "structural_validation": {
+    "expected_alternatives": 4,
+    "invalid_questions": 0,
+    "status": "PASS"
+  },
+  "publication_status": "REVIEW_REQUIRED",
+  "warning": "Módulo de preparación. No integrar ni mostrar como banco validado hasta confirmar clave, distractores y fuente por revisor profesional.",
+  "thematic_blocks": {
+    "Cuidado integral": 24,
+    "Ética e interculturalidad": 1
+  },
+  "questions": [
+    {
+      "canonical_id": "BQ-2114D3312D14",
+      "profession": "Tecnología Médica - Optometría",
+      "specialty": "Tecnología Médica - Optometría",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con tamizaje visual infantil, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "La ambliopía siempre produce síntomas claros",
+        "Debe posponerse hasta adolescencia",
+        "El tamizaje visual infantil busca detectar tempranamente errores refractivos, estrabismo y riesgo de ambliopía",
+        "Solo se realiza si el niño se queja"
+      ],
+      "declared_answer": "C",
+      "justification": "La detección temprana permite intervenir durante periodos sensibles del desarrollo visual.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "optometria/preguntas.json",
+          "source_id": "OPT-093",
+          "profession": "Tecnología Médica - Optometría",
+          "answer": "C"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-04D3E3965A49",
+          "statement": "Para una evaluación SERUMS sobre tamizaje visual infantil, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "A",
+          "difficulty": "media",
+          "source_ids": [
+            "OPT-095"
+          ]
+        },
+        {
+          "canonical_id": "BQ-0E1CA1D5DC5C",
+          "statement": "Un profesional debe aplicar conocimientos de tamizaje visual infantil. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "E",
+          "difficulty": "alta",
+          "source_ids": [
+            "OPT-096"
+          ]
+        },
+        {
+          "canonical_id": "BQ-2114D3312D14",
+          "statement": "En relación con tamizaje visual infantil, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "C",
+          "difficulty": "baja",
+          "source_ids": [
+            "OPT-093"
+          ]
+        },
+        {
+          "canonical_id": "BQ-8FEC36E18A94",
+          "statement": "En un establecimiento de salud, se revisa el tema de tamizaje visual infantil. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "B",
+          "difficulty": "media",
+          "source_ids": [
+            "OPT-094"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "La alineación ocular no importa",
+        "Debe posponerse hasta adolescencia",
+        "El tamizaje visual infantil busca detectar tempranamente errores refractivos, estrabismo y riesgo de ambliopía",
+        "Solo se realiza si el niño se queja",
+        "La ambliopía siempre produce síntomas claros"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "La alineación ocular no importa",
+        "original_answer": "C",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-26DAB9ADDB3C",
+      "profession": "Tecnología Médica - Optometría",
+      "specialty": "Tecnología Médica - Optometría",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con refracción, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "No usa lentes de prueba",
+        "La refracción clínica busca determinar el poder óptico necesario para enfocar imágenes sobre la retina",
+        "Mide presión arterial",
+        "Solo detecta catarata"
+      ],
+      "declared_answer": "B",
+      "justification": "La refracción objetiva y subjetiva orienta la corrección de ametropías.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "optometria/preguntas.json",
+          "source_id": "OPT-005",
+          "profession": "Tecnología Médica - Optometría",
+          "answer": "E"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-13FD163F43C1",
+          "statement": "En un establecimiento de salud, se revisa el tema de refracción. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "D",
+          "difficulty": "media",
+          "source_ids": [
+            "OPT-006"
+          ]
+        },
+        {
+          "canonical_id": "BQ-26DAB9ADDB3C",
+          "statement": "En relación con refracción, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "E",
+          "difficulty": "baja",
+          "source_ids": [
+            "OPT-005"
+          ]
+        },
+        {
+          "canonical_id": "BQ-81CC6E2CF3C7",
+          "statement": "Para una evaluación SERUMS sobre refracción, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "C",
+          "difficulty": "media",
+          "source_ids": [
+            "OPT-007"
+          ]
+        },
+        {
+          "canonical_id": "BQ-C021BF22AED6",
+          "statement": "Un profesional debe aplicar conocimientos de refracción. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "B",
+          "difficulty": "alta",
+          "source_ids": [
+            "OPT-008"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "Mide presión arterial",
+        "Evalúa audición",
+        "Solo detecta catarata",
+        "No usa lentes de prueba",
+        "La refracción clínica busca determinar el poder óptico necesario para enfocar imágenes sobre la retina"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Evalúa audición",
+        "original_answer": "E",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-283B63C2E91B",
+      "profession": "Tecnología Médica - Optometría",
+      "specialty": "Tecnología Médica - Optometría",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con hipermetropía, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "No depende de potencia ocular",
+        "Se corrige con lentes negativas",
+        "En la hipermetropía, el sistema óptico tiende a enfocar detrás de la retina cuando la acomodación no compensa",
+        "En el cristalino exclusivamente"
+      ],
+      "declared_answer": "C",
+      "justification": "La hipermetropía suele corregirse con lentes convergentes de potencia positiva.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "optometria/preguntas.json",
+          "source_id": "OPT-013",
+          "profession": "Tecnología Médica - Optometría",
+          "answer": "C"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-283B63C2E91B",
+          "statement": "En relación con hipermetropía, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "C",
+          "difficulty": "baja",
+          "source_ids": [
+            "OPT-013"
+          ]
+        },
+        {
+          "canonical_id": "BQ-28D8C859FD26",
+          "statement": "Para una evaluación SERUMS sobre hipermetropía, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "A",
+          "difficulty": "media",
+          "source_ids": [
+            "OPT-015"
+          ]
+        },
+        {
+          "canonical_id": "BQ-6813FFB7FA64",
+          "statement": "Un profesional debe aplicar conocimientos de hipermetropía. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "E",
+          "difficulty": "alta",
+          "source_ids": [
+            "OPT-016"
+          ]
+        },
+        {
+          "canonical_id": "BQ-EDFA585A722B",
+          "statement": "En un establecimiento de salud, se revisa el tema de hipermetropía. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "B",
+          "difficulty": "media",
+          "source_ids": [
+            "OPT-014"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "No depende de potencia ocular",
+        "Se corrige con lentes negativas",
+        "En la hipermetropía, el sistema óptico tiende a enfocar detrás de la retina cuando la acomodación no compensa",
+        "Delante de la retina siempre",
+        "En el cristalino exclusivamente"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "D",
+        "dropped_alternative": "Delante de la retina siempre",
+        "original_answer": "C",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-3AC1463A0700",
+      "profession": "Tecnología Médica - Optometría",
+      "specialty": "Tecnología Médica - Optometría",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con baja visión, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "No considera metas del paciente",
+        "La rehabilitación de baja visión utiliza ayudas ópticas, no ópticas y estrategias para maximizar función residual",
+        "Busca curar toda enfermedad retinal",
+        "Se limita a aumentar graduación indefinidamente"
+      ],
+      "declared_answer": "B",
+      "justification": "El manejo de baja visión es funcional y centrado en tareas, entorno y objetivos de la persona.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "optometria/preguntas.json",
+          "source_id": "OPT-097",
+          "profession": "Tecnología Médica - Optometría",
+          "answer": "B"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-1D5BA0BD37AE",
+          "statement": "Un profesional debe aplicar conocimientos de baja visión. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "D",
+          "difficulty": "alta",
+          "source_ids": [
+            "OPT-100"
+          ]
+        },
+        {
+          "canonical_id": "BQ-3AC1463A0700",
+          "statement": "En relación con baja visión, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "B",
+          "difficulty": "baja",
+          "source_ids": [
+            "OPT-097"
+          ]
+        },
+        {
+          "canonical_id": "BQ-8D7285A39AA7",
+          "statement": "Para una evaluación SERUMS sobre baja visión, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "E",
+          "difficulty": "media",
+          "source_ids": [
+            "OPT-099"
+          ]
+        },
+        {
+          "canonical_id": "BQ-AC613BA721D3",
+          "statement": "En un establecimiento de salud, se revisa el tema de baja visión. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "A",
+          "difficulty": "media",
+          "source_ids": [
+            "OPT-098"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "Excluye iluminación y contraste",
+        "La rehabilitación de baja visión utiliza ayudas ópticas, no ópticas y estrategias para maximizar función residual",
+        "Busca curar toda enfermedad retinal",
+        "Se limita a aumentar graduación indefinidamente",
+        "No considera metas del paciente"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "Excluye iluminación y contraste",
+        "original_answer": "B",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-49E13034E105",
+      "profession": "Tecnología Médica - Optometría",
+      "specialty": "Tecnología Médica - Optometría",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con lentes de contacto, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "Dormir con cualquier lente es siempre seguro",
+        "El agua de grifo es ideal para limpieza",
+        "La higiene de manos es opcional",
+        "La adaptación de lentes de contacto requiere evaluar córnea, película lagrimal, ajuste e higiene"
+      ],
+      "declared_answer": "D",
+      "justification": "La seguridad depende del tipo de lente, régimen de uso, cuidado y vigilancia de signos de complicación.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "optometria/preguntas.json",
+          "source_id": "OPT-081",
+          "profession": "Tecnología Médica - Optometría",
+          "answer": "A"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-49E13034E105",
+          "statement": "En relación con lentes de contacto, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "A",
+          "difficulty": "baja",
+          "source_ids": [
+            "OPT-081"
+          ]
+        },
+        {
+          "canonical_id": "BQ-857AD4055860",
+          "statement": "En un establecimiento de salud, se revisa el tema de lentes de contacto. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "E",
+          "difficulty": "media",
+          "source_ids": [
+            "OPT-082"
+          ]
+        },
+        {
+          "canonical_id": "BQ-C63BA9B94BDD",
+          "statement": "Un profesional debe aplicar conocimientos de lentes de contacto. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "C",
+          "difficulty": "alta",
+          "source_ids": [
+            "OPT-084"
+          ]
+        },
+        {
+          "canonical_id": "BQ-DADD848CFE43",
+          "statement": "Para una evaluación SERUMS sobre lentes de contacto, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "D",
+          "difficulty": "media",
+          "source_ids": [
+            "OPT-083"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "La adaptación de lentes de contacto requiere evaluar córnea, película lagrimal, ajuste e higiene",
+        "No requiere seguimiento",
+        "Dormir con cualquier lente es siempre seguro",
+        "El agua de grifo es ideal para limpieza",
+        "La higiene de manos es opcional"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "No requiere seguimiento",
+        "original_answer": "A",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-5B05C5A205C4",
+      "profession": "Tecnología Médica - Optometría",
+      "specialty": "Tecnología Médica - Optometría",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con estereopsis, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "La estereopsis utiliza disparidad binocular para percibir profundidad",
+        "Es una medida de presión intraocular",
+        "Es igual a agudeza cromática",
+        "No requiere visión binocular"
+      ],
+      "declared_answer": "A",
+      "justification": "Las pequeñas diferencias entre imágenes retinianas de ambos ojos contribuyen a percepción tridimensional.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "optometria/preguntas.json",
+          "source_id": "OPT-037",
+          "profession": "Tecnología Médica - Optometría",
+          "answer": "B"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-34736D988899",
+          "statement": "Para una evaluación SERUMS sobre estereopsis, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "E",
+          "difficulty": "media",
+          "source_ids": [
+            "OPT-039"
+          ]
+        },
+        {
+          "canonical_id": "BQ-5A4842759773",
+          "statement": "Un profesional debe aplicar conocimientos de estereopsis. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "D",
+          "difficulty": "alta",
+          "source_ids": [
+            "OPT-040"
+          ]
+        },
+        {
+          "canonical_id": "BQ-5B05C5A205C4",
+          "statement": "En relación con estereopsis, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "B",
+          "difficulty": "baja",
+          "source_ids": [
+            "OPT-037"
+          ]
+        },
+        {
+          "canonical_id": "BQ-D21D33331D29",
+          "statement": "En un establecimiento de salud, se revisa el tema de estereopsis. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "A",
+          "difficulty": "media",
+          "source_ids": [
+            "OPT-038"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "No requiere visión binocular",
+        "La estereopsis utiliza disparidad binocular para percibir profundidad",
+        "Es una medida de presión intraocular",
+        "Depende solo de un ojo",
+        "Es igual a agudeza cromática"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "D",
+        "dropped_alternative": "Depende solo de un ojo",
+        "original_answer": "B",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-5EB0B022A259",
+      "profession": "Tecnología Médica - Optometría",
+      "specialty": "Tecnología Médica - Optometría",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con queratometría, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "Mide acomodación de forma directa",
+        "La queratometría estima la curvatura de la córnea anterior",
+        "Mide longitud axial directamente",
+        "Evalúa retina periférica"
+      ],
+      "declared_answer": "B",
+      "justification": "La curvatura corneal es relevante para astigmatismo, lentes de contacto y otros cálculos ópticos.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "optometria/preguntas.json",
+          "source_id": "OPT-053",
+          "profession": "Tecnología Médica - Optometría",
+          "answer": "C"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-5EB0B022A259",
+          "statement": "En relación con queratometría, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "C",
+          "difficulty": "baja",
+          "source_ids": [
+            "OPT-053"
+          ]
+        },
+        {
+          "canonical_id": "BQ-B176A3D0A2E1",
+          "statement": "Un profesional debe aplicar conocimientos de queratometría. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "E",
+          "difficulty": "alta",
+          "source_ids": [
+            "OPT-056"
+          ]
+        },
+        {
+          "canonical_id": "BQ-B666401CCAE0",
+          "statement": "En un establecimiento de salud, se revisa el tema de queratometría. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "B",
+          "difficulty": "media",
+          "source_ids": [
+            "OPT-054"
+          ]
+        },
+        {
+          "canonical_id": "BQ-EE8477084558",
+          "statement": "Para una evaluación SERUMS sobre queratometría, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "A",
+          "difficulty": "media",
+          "source_ids": [
+            "OPT-055"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "Evalúa retina periférica",
+        "Mide acomodación de forma directa",
+        "La queratometría estima la curvatura de la córnea anterior",
+        "Mide longitud axial directamente",
+        "Mide presión arterial"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "E",
+        "dropped_alternative": "Mide presión arterial",
+        "original_answer": "C",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-68C9D30BB3A5",
+      "profession": "Tecnología Médica - Optometría",
+      "specialty": "Tecnología Médica - Optometría",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con cover test, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "El cover test ayuda a detectar y diferenciar desviaciones oculares manifiestas y latentes",
+        "Mide espesor corneal",
+        "Diagnostica glaucoma por sí solo",
+        "Mide refracción ciclopléjica"
+      ],
+      "declared_answer": "A",
+      "justification": "La observación de movimientos de refijación al cubrir y descubrir permite valorar alineación.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "optometria/preguntas.json",
+          "source_id": "OPT-041",
+          "profession": "Tecnología Médica - Optometría",
+          "answer": "A"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-2AA43800A80C",
+          "statement": "Para una evaluación SERUMS sobre cover test, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "D",
+          "difficulty": "media",
+          "source_ids": [
+            "OPT-043"
+          ]
+        },
+        {
+          "canonical_id": "BQ-68C9D30BB3A5",
+          "statement": "En relación con cover test, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "A",
+          "difficulty": "baja",
+          "source_ids": [
+            "OPT-041"
+          ]
+        },
+        {
+          "canonical_id": "BQ-D638D6D029E6",
+          "statement": "En un establecimiento de salud, se revisa el tema de cover test. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "E",
+          "difficulty": "media",
+          "source_ids": [
+            "OPT-042"
+          ]
+        },
+        {
+          "canonical_id": "BQ-D9ECF7010A17",
+          "statement": "Un profesional debe aplicar conocimientos de cover test. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "C",
+          "difficulty": "alta",
+          "source_ids": [
+            "OPT-044"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "El cover test ayuda a detectar y diferenciar desviaciones oculares manifiestas y latentes",
+        "Mide espesor corneal",
+        "Evalúa fondo de ojo",
+        "Diagnostica glaucoma por sí solo",
+        "Mide refracción ciclopléjica"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "C",
+        "dropped_alternative": "Evalúa fondo de ojo",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-6B415D46E7FC",
+      "profession": "Tecnología Médica - Optometría",
+      "specialty": "Tecnología Médica - Optometría",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con ojo rojo, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "Todo ojo rojo es conjuntivitis simple",
+        "La pérdida visual no cambia conducta",
+        "El dolor intenso se trata solo con lubricante sin evaluación",
+        "Dolor intenso, fotofobia, disminución visual o trauma son signos de alarma en un ojo rojo"
+      ],
+      "declared_answer": "D",
+      "justification": "Los signos de alarma pueden indicar queratitis, uveítis, glaucoma agudo u otras condiciones que requieren evaluación pronta.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "optometria/preguntas.json",
+          "source_id": "OPT-085",
+          "profession": "Tecnología Médica - Optometría",
+          "answer": "E"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-1CD250CF5F57",
+          "statement": "Para una evaluación SERUMS sobre ojo rojo, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "C",
+          "difficulty": "media",
+          "source_ids": [
+            "OPT-087"
+          ]
+        },
+        {
+          "canonical_id": "BQ-6B415D46E7FC",
+          "statement": "En relación con ojo rojo, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "E",
+          "difficulty": "baja",
+          "source_ids": [
+            "OPT-085"
+          ]
+        },
+        {
+          "canonical_id": "BQ-81F6C80728AD",
+          "statement": "Un profesional debe aplicar conocimientos de ojo rojo. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "B",
+          "difficulty": "alta",
+          "source_ids": [
+            "OPT-088"
+          ]
+        },
+        {
+          "canonical_id": "BQ-A6A53291B518",
+          "statement": "En un establecimiento de salud, se revisa el tema de ojo rojo. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "D",
+          "difficulty": "media",
+          "source_ids": [
+            "OPT-086"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "Todo ojo rojo es conjuntivitis simple",
+        "La pérdida visual no cambia conducta",
+        "El dolor intenso se trata solo con lubricante sin evaluación",
+        "Nunca requiere derivación urgente",
+        "Dolor intenso, fotofobia, disminución visual o trauma son signos de alarma en un ojo rojo"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "D",
+        "dropped_alternative": "Nunca requiere derivación urgente",
+        "original_answer": "E",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-7B06201FD5EB",
+      "profession": "Tecnología Médica - Optometría",
+      "specialty": "Tecnología Médica - Optometría",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con acomodación, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "No involucra músculo ciliar",
+        "Es idéntica a convergencia",
+        "La acomodación modifica el poder del cristalino para enfocar objetos cercanos",
+        "Depende únicamente de pupila"
+      ],
+      "declared_answer": "C",
+      "justification": "El sistema acomodativo cambia la curvatura del cristalino mediante acción ciliar.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "optometria/preguntas.json",
+          "source_id": "OPT-025",
+          "profession": "Tecnología Médica - Optometría",
+          "answer": "E"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-53FE77A704F0",
+          "statement": "En un establecimiento de salud, se revisa el tema de acomodación. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "D",
+          "difficulty": "media",
+          "source_ids": [
+            "OPT-026"
+          ]
+        },
+        {
+          "canonical_id": "BQ-7A51BC3CFF81",
+          "statement": "Un profesional debe aplicar conocimientos de acomodación. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "B",
+          "difficulty": "alta",
+          "source_ids": [
+            "OPT-028"
+          ]
+        },
+        {
+          "canonical_id": "BQ-7B06201FD5EB",
+          "statement": "En relación con acomodación, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "E",
+          "difficulty": "baja",
+          "source_ids": [
+            "OPT-025"
+          ]
+        },
+        {
+          "canonical_id": "BQ-FE8868723332",
+          "statement": "Para una evaluación SERUMS sobre acomodación, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "C",
+          "difficulty": "media",
+          "source_ids": [
+            "OPT-027"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "Depende únicamente de pupila",
+        "No involucra músculo ciliar",
+        "Solo ocurre durante sueño",
+        "Es idéntica a convergencia",
+        "La acomodación modifica el poder del cristalino para enfocar objetos cercanos"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "C",
+        "dropped_alternative": "Solo ocurre durante sueño",
+        "original_answer": "E",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-7EFD58A3DD19",
+      "profession": "Tecnología Médica - Optometría",
+      "specialty": "Tecnología Médica - Optometría",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con protección ocular, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "La protección no depende del riesgo",
+        "Los niños no necesitan protección deportiva",
+        "La protección ocular adecuada reduce lesiones en actividades con riesgo de partículas o químicos",
+        "Los lentes cosméticos sustituyen protección industrial"
+      ],
+      "declared_answer": "C",
+      "justification": "La selección de protección debe corresponder al tipo de exposición y cumplir estándares aplicables.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "optometria/preguntas.json",
+          "source_id": "OPT-089",
+          "profession": "Tecnología Médica - Optometría",
+          "answer": "D"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-19BE3DDA849C",
+          "statement": "Un profesional debe aplicar conocimientos de protección ocular. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "A",
+          "difficulty": "alta",
+          "source_ids": [
+            "OPT-092"
+          ]
+        },
+        {
+          "canonical_id": "BQ-215742535D86",
+          "statement": "En un establecimiento de salud, se revisa el tema de protección ocular. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "C",
+          "difficulty": "media",
+          "source_ids": [
+            "OPT-090"
+          ]
+        },
+        {
+          "canonical_id": "BQ-7EFD58A3DD19",
+          "statement": "En relación con protección ocular, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "D",
+          "difficulty": "baja",
+          "source_ids": [
+            "OPT-089"
+          ]
+        },
+        {
+          "canonical_id": "BQ-F4C31B112420",
+          "statement": "Para una evaluación SERUMS sobre protección ocular, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "B",
+          "difficulty": "media",
+          "source_ids": [
+            "OPT-091"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "La protección no depende del riesgo",
+        "Solo es necesaria tras una lesión",
+        "Los niños no necesitan protección deportiva",
+        "La protección ocular adecuada reduce lesiones en actividades con riesgo de partículas o químicos",
+        "Los lentes cosméticos sustituyen protección industrial"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Solo es necesaria tras una lesión",
+        "original_answer": "D",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-84EC60059832",
+      "profession": "Tecnología Médica - Optometría",
+      "specialty": "Tecnología Médica - Optometría",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con miopía, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "Exactamente sobre el nervio óptico",
+        "En la córnea posterior exclusivamente",
+        "No forman foco alguno",
+        "En la miopía, sin corrección, los rayos paralelos tienden a enfocarse delante de la retina"
+      ],
+      "declared_answer": "D",
+      "justification": "La miopía suele corregirse con lentes divergentes de potencia negativa.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "optometria/preguntas.json",
+          "source_id": "OPT-009",
+          "profession": "Tecnología Médica - Optometría",
+          "answer": "D"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-4701350A8E94",
+          "statement": "Para una evaluación SERUMS sobre miopía, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "B",
+          "difficulty": "media",
+          "source_ids": [
+            "OPT-011"
+          ]
+        },
+        {
+          "canonical_id": "BQ-4752A1E84585",
+          "statement": "Un profesional debe aplicar conocimientos de miopía. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "A",
+          "difficulty": "alta",
+          "source_ids": [
+            "OPT-012"
+          ]
+        },
+        {
+          "canonical_id": "BQ-84EC60059832",
+          "statement": "En relación con miopía, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "D",
+          "difficulty": "baja",
+          "source_ids": [
+            "OPT-009"
+          ]
+        },
+        {
+          "canonical_id": "BQ-ECD6B5DEAC34",
+          "statement": "En un establecimiento de salud, se revisa el tema de miopía. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "C",
+          "difficulty": "media",
+          "source_ids": [
+            "OPT-010"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "Exactamente sobre el nervio óptico",
+        "En la córnea posterior exclusivamente",
+        "No forman foco alguno",
+        "En la miopía, sin corrección, los rayos paralelos tienden a enfocarse delante de la retina",
+        "Detrás de la retina"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "E",
+        "dropped_alternative": "Detrás de la retina",
+        "original_answer": "D",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-99C21F1C9267",
+      "profession": "Tecnología Médica - Optometría",
+      "specialty": "Tecnología Médica - Optometría",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con catarata, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "Solo aparece en niños",
+        "La catarata es una opacificación del cristalino que puede reducir visión",
+        "Es inflamación de retina",
+        "Siempre mejora con lentes"
+      ],
+      "declared_answer": "B",
+      "justification": "La opacidad del cristalino puede producir visión borrosa, deslumbramiento y disminución de contraste.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "optometria/preguntas.json",
+          "source_id": "OPT-065",
+          "profession": "Tecnología Médica - Optometría",
+          "answer": "E"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-27A696DD2896",
+          "statement": "Para una evaluación SERUMS sobre catarata, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "C",
+          "difficulty": "media",
+          "source_ids": [
+            "OPT-067"
+          ]
+        },
+        {
+          "canonical_id": "BQ-5128F87AC890",
+          "statement": "Un profesional debe aplicar conocimientos de catarata. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "B",
+          "difficulty": "alta",
+          "source_ids": [
+            "OPT-068"
+          ]
+        },
+        {
+          "canonical_id": "BQ-99C21F1C9267",
+          "statement": "En relación con catarata, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "E",
+          "difficulty": "baja",
+          "source_ids": [
+            "OPT-065"
+          ]
+        },
+        {
+          "canonical_id": "BQ-A54EAFDD1DCB",
+          "statement": "En un establecimiento de salud, se revisa el tema de catarata. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "D",
+          "difficulty": "media",
+          "source_ids": [
+            "OPT-066"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "Es inflamación de retina",
+        "Siempre mejora con lentes",
+        "No afecta contraste",
+        "Solo aparece en niños",
+        "La catarata es una opacificación del cristalino que puede reducir visión"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "C",
+        "dropped_alternative": "No afecta contraste",
+        "original_answer": "E",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-9DD2FB11071D",
+      "profession": "Tecnología Médica - Optometría",
+      "specialty": "Tecnología Médica - Optometría",
+      "thematic_block": "Ética e interculturalidad",
+      "difficulty": "baja",
+      "statement": "En relación con retinopatía diabética, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "Las personas con diabetes requieren evaluación ocular periódica para detectar retinopatía",
+        "La retinopatía nunca es asintomática",
+        "La agudeza visual normal descarta lesiones iniciales",
+        "No se relaciona con duración de diabetes"
+      ],
+      "declared_answer": "A",
+      "justification": "La retinopatía puede avanzar sin síntomas iniciales; el tamizaje facilita detección y tratamiento oportunos.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "optometria/preguntas.json",
+          "source_id": "OPT-069",
+          "profession": "Tecnología Médica - Optometría",
+          "answer": "D"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-1723843D2A9E",
+          "statement": "En un establecimiento de salud, se revisa el tema de retinopatía diabética. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "C",
+          "difficulty": "media",
+          "source_ids": [
+            "OPT-070"
+          ]
+        },
+        {
+          "canonical_id": "BQ-9DD2FB11071D",
+          "statement": "En relación con retinopatía diabética, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "D",
+          "difficulty": "baja",
+          "source_ids": [
+            "OPT-069"
+          ]
+        },
+        {
+          "canonical_id": "BQ-B59AF73E6BEB",
+          "statement": "Un profesional debe aplicar conocimientos de retinopatía diabética. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "A",
+          "difficulty": "alta",
+          "source_ids": [
+            "OPT-072"
+          ]
+        },
+        {
+          "canonical_id": "BQ-C6117F48729C",
+          "statement": "Para una evaluación SERUMS sobre retinopatía diabética, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "B",
+          "difficulty": "media",
+          "source_ids": [
+            "OPT-071"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "Solo aparece en diabetes tipo 1",
+        "La agudeza visual normal descarta lesiones iniciales",
+        "No se relaciona con duración de diabetes",
+        "Las personas con diabetes requieren evaluación ocular periódica para detectar retinopatía",
+        "La retinopatía nunca es asintomática"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "Solo aparece en diabetes tipo 1",
+        "original_answer": "D",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-C0F6E4C7D355",
+      "profession": "Tecnología Médica - Optometría",
+      "specialty": "Tecnología Médica - Optometría",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con presbicia, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "Mejora indefinidamente con edad",
+        "La presbicia se relaciona con disminución de la capacidad acomodativa con la edad",
+        "Es causada por infección corneal",
+        "Aparece solo en miopes jóvenes"
+      ],
+      "declared_answer": "B",
+      "justification": "La pérdida progresiva de acomodación dificulta tareas próximas y puede requerir adición positiva.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "optometria/preguntas.json",
+          "source_id": "OPT-021",
+          "profession": "Tecnología Médica - Optometría",
+          "answer": "A"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-788FE80E942A",
+          "statement": "Un profesional debe aplicar conocimientos de presbicia. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "C",
+          "difficulty": "alta",
+          "source_ids": [
+            "OPT-024"
+          ]
+        },
+        {
+          "canonical_id": "BQ-8C664A5C0409",
+          "statement": "En un establecimiento de salud, se revisa el tema de presbicia. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "E",
+          "difficulty": "media",
+          "source_ids": [
+            "OPT-022"
+          ]
+        },
+        {
+          "canonical_id": "BQ-94C7C7DA48F3",
+          "statement": "Para una evaluación SERUMS sobre presbicia, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "D",
+          "difficulty": "media",
+          "source_ids": [
+            "OPT-023"
+          ]
+        },
+        {
+          "canonical_id": "BQ-C0F6E4C7D355",
+          "statement": "En relación con presbicia, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "A",
+          "difficulty": "baja",
+          "source_ids": [
+            "OPT-021"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "La presbicia se relaciona con disminución de la capacidad acomodativa con la edad",
+        "Es causada por infección corneal",
+        "Aparece solo en miopes jóvenes",
+        "Mejora indefinidamente con edad",
+        "No afecta visión cercana"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "E",
+        "dropped_alternative": "No afecta visión cercana",
+        "original_answer": "A",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-C340B4AF9144",
+      "profession": "Tecnología Médica - Optometría",
+      "specialty": "Tecnología Médica - Optometría",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con ambliopía, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "No se relaciona con estrabismo o anisometropía",
+        "No requiere detección temprana",
+        "La ambliopía es una reducción del desarrollo visual que no se explica únicamente por una lesión estructural ocular evidente",
+        "Solo aparece después de los 60 años"
+      ],
+      "declared_answer": "C",
+      "justification": "La ambliopía puede asociarse a estrabismo, anisometropía o privación y responde mejor a tratamiento temprano.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "optometria/preguntas.json",
+          "source_id": "OPT-045",
+          "profession": "Tecnología Médica - Optometría",
+          "answer": "E"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-75FD617AA9EA",
+          "statement": "Un profesional debe aplicar conocimientos de ambliopía. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "B",
+          "difficulty": "alta",
+          "source_ids": [
+            "OPT-048"
+          ]
+        },
+        {
+          "canonical_id": "BQ-9A7ED0EBAACE",
+          "statement": "Para una evaluación SERUMS sobre ambliopía, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "C",
+          "difficulty": "media",
+          "source_ids": [
+            "OPT-047"
+          ]
+        },
+        {
+          "canonical_id": "BQ-C340B4AF9144",
+          "statement": "En relación con ambliopía, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "E",
+          "difficulty": "baja",
+          "source_ids": [
+            "OPT-045"
+          ]
+        },
+        {
+          "canonical_id": "BQ-ECD0FFFBC002",
+          "statement": "En un establecimiento de salud, se revisa el tema de ambliopía. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "D",
+          "difficulty": "media",
+          "source_ids": [
+            "OPT-046"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "Es siempre una catarata",
+        "Solo aparece después de los 60 años",
+        "No se relaciona con estrabismo o anisometropía",
+        "No requiere detección temprana",
+        "La ambliopía es una reducción del desarrollo visual que no se explica únicamente por una lesión estructural ocular evidente"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "Es siempre una catarata",
+        "original_answer": "E",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-C73E6D11437F",
+      "profession": "Tecnología Médica - Optometría",
+      "specialty": "Tecnología Médica - Optometría",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con visión de color, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "No requieren iluminación adecuada",
+        "Toda alteración cromática es igual",
+        "Las pruebas de visión de color pueden detectar alteraciones congénitas o adquiridas",
+        "Miden únicamente agudeza de lejos"
+      ],
+      "declared_answer": "C",
+      "justification": "La evaluación cromática debe considerar tipo de prueba, iluminación y contexto clínico.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "optometria/preguntas.json",
+          "source_id": "OPT-077",
+          "profession": "Tecnología Médica - Optometría",
+          "answer": "B"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-41AA69F1C748",
+          "statement": "Un profesional debe aplicar conocimientos de visión de color. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "D",
+          "difficulty": "alta",
+          "source_ids": [
+            "OPT-080"
+          ]
+        },
+        {
+          "canonical_id": "BQ-861C1109683A",
+          "statement": "En un establecimiento de salud, se revisa el tema de visión de color. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "A",
+          "difficulty": "media",
+          "source_ids": [
+            "OPT-078"
+          ]
+        },
+        {
+          "canonical_id": "BQ-A990DB5C1A6B",
+          "statement": "Para una evaluación SERUMS sobre visión de color, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "E",
+          "difficulty": "media",
+          "source_ids": [
+            "OPT-079"
+          ]
+        },
+        {
+          "canonical_id": "BQ-C73E6D11437F",
+          "statement": "En relación con visión de color, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "B",
+          "difficulty": "baja",
+          "source_ids": [
+            "OPT-077"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "Toda alteración cromática es igual",
+        "Las pruebas de visión de color pueden detectar alteraciones congénitas o adquiridas",
+        "Miden únicamente agudeza de lejos",
+        "Sustituyen examen de retina",
+        "No requieren iluminación adecuada"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "D",
+        "dropped_alternative": "Sustituyen examen de retina",
+        "original_answer": "B",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-C7B5C298DBFB",
+      "profession": "Tecnología Médica - Optometría",
+      "specialty": "Tecnología Médica - Optometría",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con degeneración macular, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "No participa en visión central",
+        "Su daño siempre afecta primero visión periférica extrema",
+        "La mácula es responsable de visión central fina y su daño puede afectar lectura y reconocimiento facial",
+        "Controla principalmente equilibrio"
+      ],
+      "declared_answer": "C",
+      "justification": "La enfermedad macular compromete tareas que dependen de alta resolución central.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "optometria/preguntas.json",
+          "source_id": "OPT-073",
+          "profession": "Tecnología Médica - Optometría",
+          "answer": "C"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-27A1976C02B5",
+          "statement": "En un establecimiento de salud, se revisa el tema de degeneración macular. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "B",
+          "difficulty": "media",
+          "source_ids": [
+            "OPT-074"
+          ]
+        },
+        {
+          "canonical_id": "BQ-28D6807A0CC7",
+          "statement": "Para una evaluación SERUMS sobre degeneración macular, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "A",
+          "difficulty": "media",
+          "source_ids": [
+            "OPT-075"
+          ]
+        },
+        {
+          "canonical_id": "BQ-C7B5C298DBFB",
+          "statement": "En relación con degeneración macular, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "C",
+          "difficulty": "baja",
+          "source_ids": [
+            "OPT-073"
+          ]
+        },
+        {
+          "canonical_id": "BQ-E2AFB11155D4",
+          "statement": "Un profesional debe aplicar conocimientos de degeneración macular. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "E",
+          "difficulty": "alta",
+          "source_ids": [
+            "OPT-076"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "No participa en visión central",
+        "Su daño siempre afecta primero visión periférica extrema",
+        "La mácula es responsable de visión central fina y su daño puede afectar lectura y reconocimiento facial",
+        "Controla principalmente equilibrio",
+        "Se ubica en cristalino"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "E",
+        "dropped_alternative": "Se ubica en cristalino",
+        "original_answer": "C",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-C7BC65FF517C",
+      "profession": "Tecnología Médica - Optometría",
+      "specialty": "Tecnología Médica - Optometría",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con visión binocular, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "Solo existe en visión periférica",
+        "La visión binocular integra información de ambos ojos para una percepción unificada",
+        "Requiere ocluir permanentemente un ojo",
+        "Es independiente de alineación ocular"
+      ],
+      "declared_answer": "B",
+      "justification": "La alineación y correspondencia sensorial permiten fusión y estereopsis.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "optometria/preguntas.json",
+          "source_id": "OPT-033",
+          "profession": "Tecnología Médica - Optometría",
+          "answer": "C"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-1053D69EDF2E",
+          "statement": "Un profesional debe aplicar conocimientos de visión binocular. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "E",
+          "difficulty": "alta",
+          "source_ids": [
+            "OPT-036"
+          ]
+        },
+        {
+          "canonical_id": "BQ-93C323FB45BF",
+          "statement": "Para una evaluación SERUMS sobre visión binocular, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "A",
+          "difficulty": "media",
+          "source_ids": [
+            "OPT-035"
+          ]
+        },
+        {
+          "canonical_id": "BQ-B9ACC1817AF5",
+          "statement": "En un establecimiento de salud, se revisa el tema de visión binocular. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "B",
+          "difficulty": "media",
+          "source_ids": [
+            "OPT-034"
+          ]
+        },
+        {
+          "canonical_id": "BQ-C7BC65FF517C",
+          "statement": "En relación con visión binocular, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "C",
+          "difficulty": "baja",
+          "source_ids": [
+            "OPT-033"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "Es independiente de alineación ocular",
+        "Solo existe en visión periférica",
+        "La visión binocular integra información de ambos ojos para una percepción unificada",
+        "Requiere ocluir permanentemente un ojo",
+        "No participa en estereopsis"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "E",
+        "dropped_alternative": "No participa en estereopsis",
+        "original_answer": "C",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-D7B6382BEE90",
+      "profession": "Tecnología Médica - Optometría",
+      "specialty": "Tecnología Médica - Optometría",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con agudeza visual, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "Es equivalente a presión intraocular",
+        "No cambia con corrección óptica",
+        "La agudeza visual evalúa la capacidad de resolver detalles espaciales a determinada distancia",
+        "Mide exclusivamente visión cromática"
+      ],
+      "declared_answer": "C",
+      "justification": "Las cartillas de optotipos permiten estimar agudeza visual bajo condiciones estandarizadas.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "optometria/preguntas.json",
+          "source_id": "OPT-001",
+          "profession": "Tecnología Médica - Optometría",
+          "answer": "A"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-438F7FF217DC",
+          "statement": "Un profesional debe aplicar conocimientos de agudeza visual. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "C",
+          "difficulty": "alta",
+          "source_ids": [
+            "OPT-004"
+          ]
+        },
+        {
+          "canonical_id": "BQ-600792EF9321",
+          "statement": "Para una evaluación SERUMS sobre agudeza visual, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "D",
+          "difficulty": "media",
+          "source_ids": [
+            "OPT-003"
+          ]
+        },
+        {
+          "canonical_id": "BQ-D7B6382BEE90",
+          "statement": "En relación con agudeza visual, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "A",
+          "difficulty": "baja",
+          "source_ids": [
+            "OPT-001"
+          ]
+        },
+        {
+          "canonical_id": "BQ-E20840AB8363",
+          "statement": "En un establecimiento de salud, se revisa el tema de agudeza visual. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "E",
+          "difficulty": "media",
+          "source_ids": [
+            "OPT-002"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "La agudeza visual evalúa la capacidad de resolver detalles espaciales a determinada distancia",
+        "Mide exclusivamente visión cromática",
+        "Es equivalente a presión intraocular",
+        "No cambia con corrección óptica",
+        "Solo puede medirse de cerca"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "E",
+        "dropped_alternative": "Solo puede medirse de cerca",
+        "original_answer": "A",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-D9CF0F03AC5E",
+      "profession": "Tecnología Médica - Optometría",
+      "specialty": "Tecnología Médica - Optometría",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con astigmatismo, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "El astigmatismo se produce cuando el poder refractivo difiere entre meridianos principales",
+        "Siempre es idéntico a presbicia",
+        "Solo afecta visión cromática",
+        "No puede corregirse ópticamente"
+      ],
+      "declared_answer": "A",
+      "justification": "La corrección suele requerir componente cilíndrico con eje específico.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "optometria/preguntas.json",
+          "source_id": "OPT-017",
+          "profession": "Tecnología Médica - Optometría",
+          "answer": "B"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-018AA77A939C",
+          "statement": "Un profesional debe aplicar conocimientos de astigmatismo. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "D",
+          "difficulty": "alta",
+          "source_ids": [
+            "OPT-020"
+          ]
+        },
+        {
+          "canonical_id": "BQ-5620BA2EBABD",
+          "statement": "En un establecimiento de salud, se revisa el tema de astigmatismo. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "A",
+          "difficulty": "media",
+          "source_ids": [
+            "OPT-018"
+          ]
+        },
+        {
+          "canonical_id": "BQ-B17A576E82BC",
+          "statement": "Para una evaluación SERUMS sobre astigmatismo, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "E",
+          "difficulty": "media",
+          "source_ids": [
+            "OPT-019"
+          ]
+        },
+        {
+          "canonical_id": "BQ-D9CF0F03AC5E",
+          "statement": "En relación con astigmatismo, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "B",
+          "difficulty": "baja",
+          "source_ids": [
+            "OPT-017"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "No puede corregirse ópticamente",
+        "El astigmatismo se produce cuando el poder refractivo difiere entre meridianos principales",
+        "Es una infección retinal",
+        "Siempre es idéntico a presbicia",
+        "Solo afecta visión cromática"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "C",
+        "dropped_alternative": "Es una infección retinal",
+        "original_answer": "B",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-E407302A3C85",
+      "profession": "Tecnología Médica - Optometría",
+      "specialty": "Tecnología Médica - Optometría",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con glaucoma, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "Es únicamente presión intraocular elevada",
+        "Se descarta con agudeza visual normal",
+        "No requiere evaluar nervio óptico",
+        "El glaucoma es una neuropatía óptica progresiva que puede asociarse a pérdida de campo visual"
+      ],
+      "declared_answer": "D",
+      "justification": "El diagnóstico integra nervio óptico, campo visual, presión intraocular y otros factores.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "optometria/preguntas.json",
+          "source_id": "OPT-061",
+          "profession": "Tecnología Médica - Optometría",
+          "answer": "A"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-25B6E6E94B15",
+          "statement": "Un profesional debe aplicar conocimientos de glaucoma. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "C",
+          "difficulty": "alta",
+          "source_ids": [
+            "OPT-064"
+          ]
+        },
+        {
+          "canonical_id": "BQ-C6B47F28D407",
+          "statement": "Para una evaluación SERUMS sobre glaucoma, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "D",
+          "difficulty": "media",
+          "source_ids": [
+            "OPT-063"
+          ]
+        },
+        {
+          "canonical_id": "BQ-D5098A940A62",
+          "statement": "En un establecimiento de salud, se revisa el tema de glaucoma. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "E",
+          "difficulty": "media",
+          "source_ids": [
+            "OPT-062"
+          ]
+        },
+        {
+          "canonical_id": "BQ-E407302A3C85",
+          "statement": "En relación con glaucoma, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "A",
+          "difficulty": "baja",
+          "source_ids": [
+            "OPT-061"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "El glaucoma es una neuropatía óptica progresiva que puede asociarse a pérdida de campo visual",
+        "Es únicamente presión intraocular elevada",
+        "Siempre causa dolor intenso",
+        "Se descarta con agudeza visual normal",
+        "No requiere evaluar nervio óptico"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "C",
+        "dropped_alternative": "Siempre causa dolor intenso",
+        "original_answer": "A",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-E94BA1715ED2",
+      "profession": "Tecnología Médica - Optometría",
+      "specialty": "Tecnología Médica - Optometría",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con anisometropía, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "Es una infección vírica",
+        "No afecta riesgo de ambliopía",
+        "La anisometropía es una diferencia significativa de error refractivo entre ambos ojos",
+        "Es ausencia de cristalino bilateral"
+      ],
+      "declared_answer": "C",
+      "justification": "Diferencias refractivas importantes pueden generar imágenes retinianas desiguales y favorecer ambliopía.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "optometria/preguntas.json",
+          "source_id": "OPT-049",
+          "profession": "Tecnología Médica - Optometría",
+          "answer": "D"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-078CD86350EC",
+          "statement": "Un profesional debe aplicar conocimientos de anisometropía. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "A",
+          "difficulty": "alta",
+          "source_ids": [
+            "OPT-052"
+          ]
+        },
+        {
+          "canonical_id": "BQ-873B159C4C49",
+          "statement": "En un establecimiento de salud, se revisa el tema de anisometropía. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "C",
+          "difficulty": "media",
+          "source_ids": [
+            "OPT-050"
+          ]
+        },
+        {
+          "canonical_id": "BQ-A2852CDB4F1F",
+          "statement": "Para una evaluación SERUMS sobre anisometropía, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "B",
+          "difficulty": "media",
+          "source_ids": [
+            "OPT-051"
+          ]
+        },
+        {
+          "canonical_id": "BQ-E94BA1715ED2",
+          "statement": "En relación con anisometropía, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "D",
+          "difficulty": "baja",
+          "source_ids": [
+            "OPT-049"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "Es igual a daltonismo",
+        "Es una infección vírica",
+        "No afecta riesgo de ambliopía",
+        "La anisometropía es una diferencia significativa de error refractivo entre ambos ojos",
+        "Es ausencia de cristalino bilateral"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "Es igual a daltonismo",
+        "original_answer": "D",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-EB7BEDFCD1C6",
+      "profession": "Tecnología Médica - Optometría",
+      "specialty": "Tecnología Médica - Optometría",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con tonometría, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "La tonometría estima la presión intraocular",
+        "Determina refracción",
+        "Evalúa visión de color",
+        "Mide longitud del nervio óptico"
+      ],
+      "declared_answer": "A",
+      "justification": "La presión intraocular es un factor relevante en evaluación de glaucoma, aunque no lo diagnostica por sí sola.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "optometria/preguntas.json",
+          "source_id": "OPT-057",
+          "profession": "Tecnología Médica - Optometría",
+          "answer": "B"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-5E690CA18348",
+          "statement": "Un profesional debe aplicar conocimientos de tonometría. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "D",
+          "difficulty": "alta",
+          "source_ids": [
+            "OPT-060"
+          ]
+        },
+        {
+          "canonical_id": "BQ-86A973BAE78A",
+          "statement": "Para una evaluación SERUMS sobre tonometría, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "E",
+          "difficulty": "media",
+          "source_ids": [
+            "OPT-059"
+          ]
+        },
+        {
+          "canonical_id": "BQ-EB7BEDFCD1C6",
+          "statement": "En relación con tonometría, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "B",
+          "difficulty": "baja",
+          "source_ids": [
+            "OPT-057"
+          ]
+        },
+        {
+          "canonical_id": "BQ-F592A45A9E60",
+          "statement": "En un establecimiento de salud, se revisa el tema de tonometría. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "A",
+          "difficulty": "media",
+          "source_ids": [
+            "OPT-058"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "Mide longitud del nervio óptico",
+        "La tonometría estima la presión intraocular",
+        "Mide agudeza visual",
+        "Determina refracción",
+        "Evalúa visión de color"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "C",
+        "dropped_alternative": "Mide agudeza visual",
+        "original_answer": "B",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-EECE9EB3C750",
+      "profession": "Tecnología Médica - Optometría",
+      "specialty": "Tecnología Médica - Optometría",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con convergencia, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "Separa los ejes visuales para visión próxima",
+        "Es exclusivamente monocular",
+        "No participa en visión binocular",
+        "La convergencia alinea ambos ojos hacia un objeto cercano"
+      ],
+      "declared_answer": "D",
+      "justification": "La visión cercana combina acomodación, convergencia y miosis como respuestas relacionadas.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "optometria/preguntas.json",
+          "source_id": "OPT-029",
+          "profession": "Tecnología Médica - Optometría",
+          "answer": "D"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-6B264A598B19",
+          "statement": "Un profesional debe aplicar conocimientos de convergencia. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "A",
+          "difficulty": "alta",
+          "source_ids": [
+            "OPT-032"
+          ]
+        },
+        {
+          "canonical_id": "BQ-8FF8D5DC1F2F",
+          "statement": "En un establecimiento de salud, se revisa el tema de convergencia. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "C",
+          "difficulty": "media",
+          "source_ids": [
+            "OPT-030"
+          ]
+        },
+        {
+          "canonical_id": "BQ-EECE9EB3C750",
+          "statement": "En relación con convergencia, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "D",
+          "difficulty": "baja",
+          "source_ids": [
+            "OPT-029"
+          ]
+        },
+        {
+          "canonical_id": "BQ-F30942E13B3E",
+          "statement": "Para una evaluación SERUMS sobre convergencia, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "B",
+          "difficulty": "media",
+          "source_ids": [
+            "OPT-031"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "Es exclusivamente monocular",
+        "No participa en visión binocular",
+        "Es igual a acomodación",
+        "La convergencia alinea ambos ojos hacia un objeto cercano",
+        "Separa los ejes visuales para visión próxima"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "C",
+        "dropped_alternative": "Es igual a acomodación",
+        "original_answer": "D",
+        "new_answer": "D"
+      }
+    }
+  ]
+}

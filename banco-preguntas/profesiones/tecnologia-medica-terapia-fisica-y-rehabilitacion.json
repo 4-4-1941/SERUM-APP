@@ -1,0 +1,2218 @@
+{
+  "module_version": 1,
+  "profession": "Tecnología Médica - Terapia Física y Rehabilitación",
+  "total_questions": 25,
+  "structural_validation": {
+    "expected_alternatives": 4,
+    "invalid_questions": 0,
+    "status": "PASS"
+  },
+  "publication_status": "REVIEW_REQUIRED",
+  "warning": "Módulo de preparación. No integrar ni mostrar como banco validado hasta confirmar clave, distractores y fuente por revisor profesional.",
+  "thematic_blocks": {
+    "Cuidado integral": 24,
+    "Salud pública": 1
+  },
+  "questions": [
+    {
+      "canonical_id": "BQ-01AB5674C13C",
+      "profession": "Tecnología Médica - Terapia Física y Rehabilitación",
+      "specialty": "Tecnología Médica - Terapia Física y Rehabilitación",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con movilización temprana, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "Siempre requiere ejercicio máximo",
+        "No necesita valoración hemodinámica",
+        "La movilización temprana hospitalaria, cuando es segura, ayuda a reducir desacondicionamiento",
+        "Debe evitarse en toda hospitalización"
+      ],
+      "declared_answer": "C",
+      "justification": "La movilización progresiva puede preservar función y reducir efectos de inmovilidad, considerando estabilidad clínica.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "terapia-fisica-rehabilitacion/preguntas.json",
+          "source_id": "TFR-013",
+          "profession": "Tecnología Médica - Terapia Física y Rehabilitación",
+          "answer": "C"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-01AB5674C13C",
+          "statement": "En relación con movilización temprana, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "C",
+          "difficulty": "baja",
+          "source_ids": [
+            "TFR-013"
+          ]
+        },
+        {
+          "canonical_id": "BQ-5A3D63277CE3",
+          "statement": "En un establecimiento de salud, se revisa el tema de movilización temprana. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "B",
+          "difficulty": "media",
+          "source_ids": [
+            "TFR-014"
+          ]
+        },
+        {
+          "canonical_id": "BQ-82E87B62B1AD",
+          "statement": "Un profesional debe aplicar conocimientos de movilización temprana. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "E",
+          "difficulty": "alta",
+          "source_ids": [
+            "TFR-016"
+          ]
+        },
+        {
+          "canonical_id": "BQ-F1A449CE22EC",
+          "statement": "Para una evaluación SERUMS sobre movilización temprana, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "A",
+          "difficulty": "media",
+          "source_ids": [
+            "TFR-015"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "Sustituye profilaxis trombótica",
+        "No necesita valoración hemodinámica",
+        "La movilización temprana hospitalaria, cuando es segura, ayuda a reducir desacondicionamiento",
+        "Debe evitarse en toda hospitalización",
+        "Siempre requiere ejercicio máximo"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "Sustituye profilaxis trombótica",
+        "original_answer": "C",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-152274494ADF",
+      "profession": "Tecnología Médica - Terapia Física y Rehabilitación",
+      "specialty": "Tecnología Médica - Terapia Física y Rehabilitación",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con ayudas técnicas, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "No requiere entrenamiento",
+        "Un bastón debe ajustarse en altura y utilizarse según el patrón funcional indicado",
+        "Siempre se usa del mismo lado de la lesión sin evaluación",
+        "Debe obligar a flexión extrema del tronco"
+      ],
+      "declared_answer": "B",
+      "justification": "El ajuste y entrenamiento adecuados mejoran seguridad y eficiencia de la marcha.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "terapia-fisica-rehabilitacion/preguntas.json",
+          "source_id": "TFR-089",
+          "profession": "Tecnología Médica - Terapia Física y Rehabilitación",
+          "answer": "D"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-152274494ADF",
+          "statement": "En relación con ayudas técnicas, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "D",
+          "difficulty": "baja",
+          "source_ids": [
+            "TFR-089"
+          ]
+        },
+        {
+          "canonical_id": "BQ-4751037F9ABC",
+          "statement": "Para una evaluación SERUMS sobre ayudas técnicas, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "B",
+          "difficulty": "media",
+          "source_ids": [
+            "TFR-091"
+          ]
+        },
+        {
+          "canonical_id": "BQ-6E238B7EF3E5",
+          "statement": "Un profesional debe aplicar conocimientos de ayudas técnicas. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "A",
+          "difficulty": "alta",
+          "source_ids": [
+            "TFR-092"
+          ]
+        },
+        {
+          "canonical_id": "BQ-BFDDFB555610",
+          "statement": "En un establecimiento de salud, se revisa el tema de ayudas técnicas. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "C",
+          "difficulty": "media",
+          "source_ids": [
+            "TFR-090"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "Siempre se usa del mismo lado de la lesión sin evaluación",
+        "Debe obligar a flexión extrema del tronco",
+        "No requiere entrenamiento",
+        "Un bastón debe ajustarse en altura y utilizarse según el patrón funcional indicado",
+        "La altura es indiferente"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "E",
+        "dropped_alternative": "La altura es indiferente",
+        "original_answer": "D",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-1C1CA2809735",
+      "profession": "Tecnología Médica - Terapia Física y Rehabilitación",
+      "specialty": "Tecnología Médica - Terapia Física y Rehabilitación",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con accidente cerebrovascular, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "La rehabilitación post-ACV busca recuperar función y compensar déficits mediante práctica orientada a tareas",
+        "Debe esperar meses antes de movilizar",
+        "No se beneficia de repetición",
+        "La plasticidad no participa en recuperación"
+      ],
+      "declared_answer": "A",
+      "justification": "La práctica específica, repetitiva y significativa favorece aprendizaje motor y neuroplasticidad.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "terapia-fisica-rehabilitacion/preguntas.json",
+          "source_id": "TFR-053",
+          "profession": "Tecnología Médica - Terapia Física y Rehabilitación",
+          "answer": "C"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-1C1CA2809735",
+          "statement": "En relación con accidente cerebrovascular, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "C",
+          "difficulty": "baja",
+          "source_ids": [
+            "TFR-053"
+          ]
+        },
+        {
+          "canonical_id": "BQ-6134C498D6D9",
+          "statement": "En un establecimiento de salud, se revisa el tema de accidente cerebrovascular. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "B",
+          "difficulty": "media",
+          "source_ids": [
+            "TFR-054"
+          ]
+        },
+        {
+          "canonical_id": "BQ-AE00BE7509D6",
+          "statement": "Para una evaluación SERUMS sobre accidente cerebrovascular, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "A",
+          "difficulty": "media",
+          "source_ids": [
+            "TFR-055"
+          ]
+        },
+        {
+          "canonical_id": "BQ-FFC92A9F2987",
+          "statement": "Un profesional debe aplicar conocimientos de accidente cerebrovascular. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "E",
+          "difficulty": "alta",
+          "source_ids": [
+            "TFR-056"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "Solo trabaja el miembro sano",
+        "La plasticidad no participa en recuperación",
+        "La rehabilitación post-ACV busca recuperar función y compensar déficits mediante práctica orientada a tareas",
+        "Debe esperar meses antes de movilizar",
+        "No se beneficia de repetición"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "Solo trabaja el miembro sano",
+        "original_answer": "C",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-2B77CE6A1E27",
+      "profession": "Tecnología Médica - Terapia Física y Rehabilitación",
+      "specialty": "Tecnología Médica - Terapia Física y Rehabilitación",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con dolor lumbar, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "En dolor lumbar inespecífico se favorece mantener actividad y retorno progresivo según tolerancia, salvo banderas rojas",
+        "Reposo absoluto por semanas es estándar",
+        "Toda lumbalgia requiere imagen inmediata",
+        "El ejercicio está siempre contraindicado"
+      ],
+      "declared_answer": "A",
+      "justification": "La mayoría de lumbalgias inespecíficas se benefician de actividad y educación; banderas rojas requieren evaluación específica.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "terapia-fisica-rehabilitacion/preguntas.json",
+          "source_id": "TFR-069",
+          "profession": "Tecnología Médica - Terapia Física y Rehabilitación",
+          "answer": "D"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-232735968D14",
+          "statement": "Un profesional debe aplicar conocimientos de dolor lumbar. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "A",
+          "difficulty": "alta",
+          "source_ids": [
+            "TFR-072"
+          ]
+        },
+        {
+          "canonical_id": "BQ-2B77CE6A1E27",
+          "statement": "En relación con dolor lumbar, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "D",
+          "difficulty": "baja",
+          "source_ids": [
+            "TFR-069"
+          ]
+        },
+        {
+          "canonical_id": "BQ-A7EADEA69997",
+          "statement": "Para una evaluación SERUMS sobre dolor lumbar, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "B",
+          "difficulty": "media",
+          "source_ids": [
+            "TFR-071"
+          ]
+        },
+        {
+          "canonical_id": "BQ-EAED63D165F6",
+          "statement": "En un establecimiento de salud, se revisa el tema de dolor lumbar. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "C",
+          "difficulty": "media",
+          "source_ids": [
+            "TFR-070"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "Toda lumbalgia requiere imagen inmediata",
+        "El ejercicio está siempre contraindicado",
+        "No deben evaluarse signos neurológicos",
+        "En dolor lumbar inespecífico se favorece mantener actividad y retorno progresivo según tolerancia, salvo banderas rojas",
+        "Reposo absoluto por semanas es estándar"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "C",
+        "dropped_alternative": "No deben evaluarse signos neurológicos",
+        "original_answer": "D",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-3B407E9ACB8C",
+      "profession": "Tecnología Médica - Terapia Física y Rehabilitación",
+      "specialty": "Tecnología Médica - Terapia Física y Rehabilitación",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con dolor, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "La intensidad no debe preguntarse al paciente",
+        "El dolor es siempre proporcional al daño tisular",
+        "La intensidad del dolor puede cuantificarse con escalas como numérica o visual análoga",
+        "El dolor solo puede medirse con radiografía"
+      ],
+      "declared_answer": "C",
+      "justification": "Las escalas aportan una medida subjetiva reproducible, pero el dolor requiere evaluación multidimensional.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "terapia-fisica-rehabilitacion/preguntas.json",
+          "source_id": "TFR-009",
+          "profession": "Tecnología Médica - Terapia Física y Rehabilitación",
+          "answer": "D"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-3B407E9ACB8C",
+          "statement": "En relación con dolor, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "D",
+          "difficulty": "baja",
+          "source_ids": [
+            "TFR-009"
+          ]
+        },
+        {
+          "canonical_id": "BQ-9EA0CF6443B7",
+          "statement": "Un profesional debe aplicar conocimientos de dolor. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "A",
+          "difficulty": "alta",
+          "source_ids": [
+            "TFR-012"
+          ]
+        },
+        {
+          "canonical_id": "BQ-AF3DB3AC20F5",
+          "statement": "Para una evaluación SERUMS sobre dolor, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "B",
+          "difficulty": "media",
+          "source_ids": [
+            "TFR-011"
+          ]
+        },
+        {
+          "canonical_id": "BQ-EC4B4B4F1799",
+          "statement": "En un establecimiento de salud, se revisa el tema de dolor. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "C",
+          "difficulty": "media",
+          "source_ids": [
+            "TFR-010"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "La intensidad no debe preguntarse al paciente",
+        "Una escala sustituye el examen clínico",
+        "El dolor es siempre proporcional al daño tisular",
+        "La intensidad del dolor puede cuantificarse con escalas como numérica o visual análoga",
+        "El dolor solo puede medirse con radiografía"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Una escala sustituye el examen clínico",
+        "original_answer": "D",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-3D9F63F8989A",
+      "profession": "Tecnología Médica - Terapia Física y Rehabilitación",
+      "specialty": "Tecnología Médica - Terapia Física y Rehabilitación",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con fortalecimiento progresivo, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "El fortalecimiento utiliza sobrecarga progresiva adaptada a capacidad y objetivo funcional",
+        "La carga debe ser máxima desde la primera sesión",
+        "No produce adaptaciones neuromusculares",
+        "Está prohibido en adultos mayores sanos"
+      ],
+      "declared_answer": "A",
+      "justification": "La progresión apropiada estimula adaptaciones de fuerza y función minimizando riesgo.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "terapia-fisica-rehabilitacion/preguntas.json",
+          "source_id": "TFR-037",
+          "profession": "Tecnología Médica - Terapia Física y Rehabilitación",
+          "answer": "B"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-3D9F63F8989A",
+          "statement": "En relación con fortalecimiento progresivo, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "B",
+          "difficulty": "baja",
+          "source_ids": [
+            "TFR-037"
+          ]
+        },
+        {
+          "canonical_id": "BQ-78AC022126E2",
+          "statement": "Un profesional debe aplicar conocimientos de fortalecimiento progresivo. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "D",
+          "difficulty": "alta",
+          "source_ids": [
+            "TFR-040"
+          ]
+        },
+        {
+          "canonical_id": "BQ-C730B48CA898",
+          "statement": "En un establecimiento de salud, se revisa el tema de fortalecimiento progresivo. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "A",
+          "difficulty": "media",
+          "source_ids": [
+            "TFR-038"
+          ]
+        },
+        {
+          "canonical_id": "BQ-DC4A5474D25E",
+          "statement": "Para una evaluación SERUMS sobre fortalecimiento progresivo, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "E",
+          "difficulty": "media",
+          "source_ids": [
+            "TFR-039"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "Está prohibido en adultos mayores sanos",
+        "El fortalecimiento utiliza sobrecarga progresiva adaptada a capacidad y objetivo funcional",
+        "La carga debe ser máxima desde la primera sesión",
+        "Nunca se modifica según tolerancia",
+        "No produce adaptaciones neuromusculares"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "D",
+        "dropped_alternative": "Nunca se modifica según tolerancia",
+        "original_answer": "B",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-4031A767E5DA",
+      "profession": "Tecnología Médica - Terapia Física y Rehabilitación",
+      "specialty": "Tecnología Médica - Terapia Física y Rehabilitación",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con artrosis, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "En artrosis, ejercicio terapéutico y educación son componentes centrales del manejo no farmacológico",
+        "El reposo absoluto prolongado es primera elección",
+        "La fuerza muscular no influye",
+        "La educación no cambia resultados"
+      ],
+      "declared_answer": "A",
+      "justification": "El ejercicio adaptado mejora dolor y función y debe dosificarse según tolerancia.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "terapia-fisica-rehabilitacion/preguntas.json",
+          "source_id": "TFR-065",
+          "profession": "Tecnología Médica - Terapia Física y Rehabilitación",
+          "answer": "E"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-06A05C7CCC29",
+          "statement": "Para una evaluación SERUMS sobre artrosis, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "C",
+          "difficulty": "media",
+          "source_ids": [
+            "TFR-067"
+          ]
+        },
+        {
+          "canonical_id": "BQ-4031A767E5DA",
+          "statement": "En relación con artrosis, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "E",
+          "difficulty": "baja",
+          "source_ids": [
+            "TFR-065"
+          ]
+        },
+        {
+          "canonical_id": "BQ-534B1884609D",
+          "statement": "Un profesional debe aplicar conocimientos de artrosis. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "B",
+          "difficulty": "alta",
+          "source_ids": [
+            "TFR-068"
+          ]
+        },
+        {
+          "canonical_id": "BQ-5A40CBF243F0",
+          "statement": "En un establecimiento de salud, se revisa el tema de artrosis. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "D",
+          "difficulty": "media",
+          "source_ids": [
+            "TFR-066"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "El reposo absoluto prolongado es primera elección",
+        "Debe evitarse toda carga",
+        "La fuerza muscular no influye",
+        "La educación no cambia resultados",
+        "En artrosis, ejercicio terapéutico y educación son componentes centrales del manejo no farmacológico"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Debe evitarse toda carga",
+        "original_answer": "E",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-46162A63F788",
+      "profession": "Tecnología Médica - Terapia Física y Rehabilitación",
+      "specialty": "Tecnología Médica - Terapia Física y Rehabilitación",
+      "thematic_block": "Salud pública",
+      "difficulty": "baja",
+      "statement": "En relación con prevención de caídas, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "No es necesario revisar medicamentos o visión",
+        "El riesgo de caídas se reduce con evaluación de equilibrio, fuerza, entorno y ayudas técnicas cuando corresponda",
+        "Las ayudas técnicas siempre aumentan riesgo",
+        "La iluminación no influye"
+      ],
+      "declared_answer": "B",
+      "justification": "La prevención de caídas es multifactorial y puede incluir entrenamiento, adaptación ambiental y revisión de factores de riesgo.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "terapia-fisica-rehabilitacion/preguntas.json",
+          "source_id": "TFR-017",
+          "profession": "Tecnología Médica - Terapia Física y Rehabilitación",
+          "answer": "B"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-0A2A1A6F1ECA",
+          "statement": "Un profesional debe aplicar conocimientos de prevención de caídas. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "D",
+          "difficulty": "alta",
+          "source_ids": [
+            "TFR-020"
+          ]
+        },
+        {
+          "canonical_id": "BQ-46162A63F788",
+          "statement": "En relación con prevención de caídas, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "B",
+          "difficulty": "baja",
+          "source_ids": [
+            "TFR-017"
+          ]
+        },
+        {
+          "canonical_id": "BQ-DC8029BA90F1",
+          "statement": "Para una evaluación SERUMS sobre prevención de caídas, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "E",
+          "difficulty": "media",
+          "source_ids": [
+            "TFR-019"
+          ]
+        },
+        {
+          "canonical_id": "BQ-E861A293DAC2",
+          "statement": "En un establecimiento de salud, se revisa el tema de prevención de caídas. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "A",
+          "difficulty": "media",
+          "source_ids": [
+            "TFR-018"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "No es necesario revisar medicamentos o visión",
+        "El riesgo de caídas se reduce con evaluación de equilibrio, fuerza, entorno y ayudas técnicas cuando corresponda",
+        "Solo depende de edad",
+        "Las ayudas técnicas siempre aumentan riesgo",
+        "La iluminación no influye"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "C",
+        "dropped_alternative": "Solo depende de edad",
+        "original_answer": "B",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-46204B065CEC",
+      "profession": "Tecnología Médica - Terapia Física y Rehabilitación",
+      "specialty": "Tecnología Médica - Terapia Física y Rehabilitación",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con rango articular, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "Mide exclusivamente fuerza muscular",
+        "Sustituye la evaluación neurológica",
+        "Cuantifica hemoglobina",
+        "La goniometría se utiliza para medir rangos de movimiento articular"
+      ],
+      "declared_answer": "D",
+      "justification": "El goniómetro permite cuantificar ángulos articulares y seguir cambios en movilidad.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "terapia-fisica-rehabilitacion/preguntas.json",
+          "source_id": "TFR-001",
+          "profession": "Tecnología Médica - Terapia Física y Rehabilitación",
+          "answer": "A"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-28BAD8215A80",
+          "statement": "Un profesional debe aplicar conocimientos de rango articular. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "C",
+          "difficulty": "alta",
+          "source_ids": [
+            "TFR-004"
+          ]
+        },
+        {
+          "canonical_id": "BQ-46204B065CEC",
+          "statement": "En relación con rango articular, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "A",
+          "difficulty": "baja",
+          "source_ids": [
+            "TFR-001"
+          ]
+        },
+        {
+          "canonical_id": "BQ-52EAE9D52EA9",
+          "statement": "En un establecimiento de salud, se revisa el tema de rango articular. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "E",
+          "difficulty": "media",
+          "source_ids": [
+            "TFR-002"
+          ]
+        },
+        {
+          "canonical_id": "BQ-73FD12E2F38C",
+          "statement": "Para una evaluación SERUMS sobre rango articular, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "D",
+          "difficulty": "media",
+          "source_ids": [
+            "TFR-003"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "La goniometría se utiliza para medir rangos de movimiento articular",
+        "Mide exclusivamente fuerza muscular",
+        "Sustituye la evaluación neurológica",
+        "Cuantifica hemoglobina",
+        "Evalúa agudeza visual"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "E",
+        "dropped_alternative": "Evalúa agudeza visual",
+        "original_answer": "A",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-46F705588595",
+      "profession": "Tecnología Médica - Terapia Física y Rehabilitación",
+      "specialty": "Tecnología Médica - Terapia Física y Rehabilitación",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con banderas rojas, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "La anestesia en silla de montar es normal",
+        "Déficit neurológico progresivo, alteración de esfínteres o síntomas sistémicos pueden requerir derivación urgente en dolor de columna",
+        "Solo importa la intensidad del dolor",
+        "La fiebre nunca modifica conducta"
+      ],
+      "declared_answer": "B",
+      "justification": "Las banderas rojas alertan sobre posibles causas graves que necesitan valoración médica oportuna.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "terapia-fisica-rehabilitacion/preguntas.json",
+          "source_id": "TFR-073",
+          "profession": "Tecnología Médica - Terapia Física y Rehabilitación",
+          "answer": "C"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-31C091E0F655",
+          "statement": "Para una evaluación SERUMS sobre banderas rojas, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "A",
+          "difficulty": "media",
+          "source_ids": [
+            "TFR-075"
+          ]
+        },
+        {
+          "canonical_id": "BQ-46F705588595",
+          "statement": "En relación con banderas rojas, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "C",
+          "difficulty": "baja",
+          "source_ids": [
+            "TFR-073"
+          ]
+        },
+        {
+          "canonical_id": "BQ-A67A50B8C925",
+          "statement": "Un profesional debe aplicar conocimientos de banderas rojas. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "E",
+          "difficulty": "alta",
+          "source_ids": [
+            "TFR-076"
+          ]
+        },
+        {
+          "canonical_id": "BQ-F2AF4A98F683",
+          "statement": "En un establecimiento de salud, se revisa el tema de banderas rojas. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "B",
+          "difficulty": "media",
+          "source_ids": [
+            "TFR-074"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "La fiebre nunca modifica conducta",
+        "La anestesia en silla de montar es normal",
+        "Déficit neurológico progresivo, alteración de esfínteres o síntomas sistémicos pueden requerir derivación urgente en dolor de columna",
+        "Son hallazgos irrelevantes",
+        "Solo importa la intensidad del dolor"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "D",
+        "dropped_alternative": "Son hallazgos irrelevantes",
+        "original_answer": "C",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-49DFA310BA12",
+      "profession": "Tecnología Médica - Terapia Física y Rehabilitación",
+      "specialty": "Tecnología Médica - Terapia Física y Rehabilitación",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con disnea, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "No requiere detener o ajustar actividad en ningún caso",
+        "La disnea durante ejercicio debe monitorizarse junto con signos vitales y tolerancia",
+        "Debe ignorarse si el paciente desea continuar",
+        "Siempre indica ansiedad y nada más"
+      ],
+      "declared_answer": "B",
+      "justification": "La respuesta respiratoria orienta intensidad y seguridad; escalas de disnea pueden complementar la monitorización.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "terapia-fisica-rehabilitacion/preguntas.json",
+          "source_id": "TFR-045",
+          "profession": "Tecnología Médica - Terapia Física y Rehabilitación",
+          "answer": "E"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-49DFA310BA12",
+          "statement": "En relación con disnea, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "E",
+          "difficulty": "baja",
+          "source_ids": [
+            "TFR-045"
+          ]
+        },
+        {
+          "canonical_id": "BQ-90DA99112F91",
+          "statement": "Para una evaluación SERUMS sobre disnea, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "C",
+          "difficulty": "media",
+          "source_ids": [
+            "TFR-047"
+          ]
+        },
+        {
+          "canonical_id": "BQ-92AA805AD8FF",
+          "statement": "En un establecimiento de salud, se revisa el tema de disnea. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "D",
+          "difficulty": "media",
+          "source_ids": [
+            "TFR-046"
+          ]
+        },
+        {
+          "canonical_id": "BQ-9F705A1358E2",
+          "statement": "Un profesional debe aplicar conocimientos de disnea. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "B",
+          "difficulty": "alta",
+          "source_ids": [
+            "TFR-048"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "Debe ignorarse si el paciente desea continuar",
+        "Siempre indica ansiedad y nada más",
+        "No puede medirse subjetivamente",
+        "No requiere detener o ajustar actividad en ningún caso",
+        "La disnea durante ejercicio debe monitorizarse junto con signos vitales y tolerancia"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "C",
+        "dropped_alternative": "No puede medirse subjetivamente",
+        "original_answer": "E",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-58232C0BE5C9",
+      "profession": "Tecnología Médica - Terapia Física y Rehabilitación",
+      "specialty": "Tecnología Médica - Terapia Física y Rehabilitación",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con transferencias, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "Las superficies no importan",
+        "El entrenamiento de transferencias busca seguridad y máxima independencia posible",
+        "Debe realizarse siempre levantando al paciente manualmente",
+        "No se evalúa fuerza de miembros inferiores"
+      ],
+      "declared_answer": "B",
+      "justification": "Las técnicas dependen de capacidad del paciente, entorno y necesidad de dispositivos o asistencia.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "terapia-fisica-rehabilitacion/preguntas.json",
+          "source_id": "TFR-093",
+          "profession": "Tecnología Médica - Terapia Física y Rehabilitación",
+          "answer": "C"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-58232C0BE5C9",
+          "statement": "En relación con transferencias, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "C",
+          "difficulty": "baja",
+          "source_ids": [
+            "TFR-093"
+          ]
+        },
+        {
+          "canonical_id": "BQ-A45E656B8873",
+          "statement": "En un establecimiento de salud, se revisa el tema de transferencias. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "B",
+          "difficulty": "media",
+          "source_ids": [
+            "TFR-094"
+          ]
+        },
+        {
+          "canonical_id": "BQ-C1429E00FE02",
+          "statement": "Para una evaluación SERUMS sobre transferencias, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "A",
+          "difficulty": "media",
+          "source_ids": [
+            "TFR-095"
+          ]
+        },
+        {
+          "canonical_id": "BQ-EFFE6386CB5D",
+          "statement": "Un profesional debe aplicar conocimientos de transferencias. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "E",
+          "difficulty": "alta",
+          "source_ids": [
+            "TFR-096"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "Las superficies no importan",
+        "No se enseña a cuidadores",
+        "El entrenamiento de transferencias busca seguridad y máxima independencia posible",
+        "Debe realizarse siempre levantando al paciente manualmente",
+        "No se evalúa fuerza de miembros inferiores"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "No se enseña a cuidadores",
+        "original_answer": "C",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-5DFD4958EDB1",
+      "profession": "Tecnología Médica - Terapia Física y Rehabilitación",
+      "specialty": "Tecnología Médica - Terapia Física y Rehabilitación",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con ejercicio aeróbico, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "Siempre debe realizarse al máximo esfuerzo",
+        "Es igual al ejercicio isométrico",
+        "El ejercicio aeróbico mejora capacidad cardiorrespiratoria cuando se prescribe con intensidad, duración y frecuencia adecuadas",
+        "Solo mejora flexibilidad"
+      ],
+      "declared_answer": "C",
+      "justification": "La prescripción se individualiza según condición clínica, capacidad y objetivos.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "terapia-fisica-rehabilitacion/preguntas.json",
+          "source_id": "TFR-041",
+          "profession": "Tecnología Médica - Terapia Física y Rehabilitación",
+          "answer": "A"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-5227E44014BA",
+          "statement": "En un establecimiento de salud, se revisa el tema de ejercicio aeróbico. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "E",
+          "difficulty": "media",
+          "source_ids": [
+            "TFR-042"
+          ]
+        },
+        {
+          "canonical_id": "BQ-5DFD4958EDB1",
+          "statement": "En relación con ejercicio aeróbico, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "A",
+          "difficulty": "baja",
+          "source_ids": [
+            "TFR-041"
+          ]
+        },
+        {
+          "canonical_id": "BQ-60BFA4D792B1",
+          "statement": "Un profesional debe aplicar conocimientos de ejercicio aeróbico. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "C",
+          "difficulty": "alta",
+          "source_ids": [
+            "TFR-044"
+          ]
+        },
+        {
+          "canonical_id": "BQ-93004901B066",
+          "statement": "Para una evaluación SERUMS sobre ejercicio aeróbico, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "D",
+          "difficulty": "media",
+          "source_ids": [
+            "TFR-043"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "El ejercicio aeróbico mejora capacidad cardiorrespiratoria cuando se prescribe con intensidad, duración y frecuencia adecuadas",
+        "Solo mejora flexibilidad",
+        "No requiere progresión",
+        "Siempre debe realizarse al máximo esfuerzo",
+        "Es igual al ejercicio isométrico"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "C",
+        "dropped_alternative": "No requiere progresión",
+        "original_answer": "A",
+        "new_answer": "C"
+      }
+    },
+    {
+      "canonical_id": "BQ-60D002B082C2",
+      "profession": "Tecnología Médica - Terapia Física y Rehabilitación",
+      "specialty": "Tecnología Médica - Terapia Física y Rehabilitación",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con postoperatorio, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "La rehabilitación postoperatoria debe respetar restricciones quirúrgicas y progresar según cicatrización y función",
+        "Se ignoran indicaciones del cirujano",
+        "El dolor no debe monitorizarse",
+        "Todos los protocolos son idénticos"
+      ],
+      "declared_answer": "A",
+      "justification": "La progresión depende de procedimiento, tejido reparado, fase de cicatrización y respuesta del paciente.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "terapia-fisica-rehabilitacion/preguntas.json",
+          "source_id": "TFR-081",
+          "profession": "Tecnología Médica - Terapia Física y Rehabilitación",
+          "answer": "A"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-60D002B082C2",
+          "statement": "En relación con postoperatorio, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "A",
+          "difficulty": "baja",
+          "source_ids": [
+            "TFR-081"
+          ]
+        },
+        {
+          "canonical_id": "BQ-896353E44CD3",
+          "statement": "Un profesional debe aplicar conocimientos de postoperatorio. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "C",
+          "difficulty": "alta",
+          "source_ids": [
+            "TFR-084"
+          ]
+        },
+        {
+          "canonical_id": "BQ-D44D8D78416B",
+          "statement": "En un establecimiento de salud, se revisa el tema de postoperatorio. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "E",
+          "difficulty": "media",
+          "source_ids": [
+            "TFR-082"
+          ]
+        },
+        {
+          "canonical_id": "BQ-F525AA392BCE",
+          "statement": "Para una evaluación SERUMS sobre postoperatorio, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "D",
+          "difficulty": "media",
+          "source_ids": [
+            "TFR-083"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "La rehabilitación postoperatoria debe respetar restricciones quirúrgicas y progresar según cicatrización y función",
+        "Se ignoran indicaciones del cirujano",
+        "Toda carga es inmediata",
+        "El dolor no debe monitorizarse",
+        "Todos los protocolos son idénticos"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "C",
+        "dropped_alternative": "Toda carga es inmediata",
+        "original_answer": "A",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-83AF9B12EC7A",
+      "profession": "Tecnología Médica - Terapia Física y Rehabilitación",
+      "specialty": "Tecnología Médica - Terapia Física y Rehabilitación",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con ergonomía, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "Busca aumentar posturas forzadas",
+        "No considera repetición",
+        "No requiere participación del trabajador",
+        "La ergonomía adapta tareas y entorno para reducir carga física innecesaria y favorecer desempeño"
+      ],
+      "declared_answer": "D",
+      "justification": "La adaptación del puesto puede reducir exposición a posturas sostenidas, fuerzas y movimientos repetitivos.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "terapia-fisica-rehabilitacion/preguntas.json",
+          "source_id": "TFR-085",
+          "profession": "Tecnología Médica - Terapia Física y Rehabilitación",
+          "answer": "E"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-4F45B5F72BE7",
+          "statement": "Para una evaluación SERUMS sobre ergonomía, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "C",
+          "difficulty": "media",
+          "source_ids": [
+            "TFR-087"
+          ]
+        },
+        {
+          "canonical_id": "BQ-5916AEF04819",
+          "statement": "Un profesional debe aplicar conocimientos de ergonomía. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "B",
+          "difficulty": "alta",
+          "source_ids": [
+            "TFR-088"
+          ]
+        },
+        {
+          "canonical_id": "BQ-6BE00A9A7FA7",
+          "statement": "En un establecimiento de salud, se revisa el tema de ergonomía. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "D",
+          "difficulty": "media",
+          "source_ids": [
+            "TFR-086"
+          ]
+        },
+        {
+          "canonical_id": "BQ-83AF9B12EC7A",
+          "statement": "En relación con ergonomía, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "E",
+          "difficulty": "baja",
+          "source_ids": [
+            "TFR-085"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "Busca aumentar posturas forzadas",
+        "Solo aplica a oficinas",
+        "No considera repetición",
+        "No requiere participación del trabajador",
+        "La ergonomía adapta tareas y entorno para reducir carga física innecesaria y favorecer desempeño"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "B",
+        "dropped_alternative": "Solo aplica a oficinas",
+        "original_answer": "E",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-934EE300A6F8",
+      "profession": "Tecnología Médica - Terapia Física y Rehabilitación",
+      "specialty": "Tecnología Médica - Terapia Física y Rehabilitación",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con lesión medular, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "Las ayudas técnicas deben evitarse",
+        "La rehabilitación de lesión medular incluye prevención de complicaciones, movilidad, entrenamiento funcional y educación",
+        "Solo se centra en fuerza de brazos",
+        "La autonomía no es objetivo"
+      ],
+      "declared_answer": "B",
+      "justification": "El abordaje es interdisciplinario y orientado a función, participación y prevención de úlceras, contracturas y otras complicaciones.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "terapia-fisica-rehabilitacion/preguntas.json",
+          "source_id": "TFR-057",
+          "profession": "Tecnología Médica - Terapia Física y Rehabilitación",
+          "answer": "B"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-7C68FB982FEE",
+          "statement": "Un profesional debe aplicar conocimientos de lesión medular. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "D",
+          "difficulty": "alta",
+          "source_ids": [
+            "TFR-060"
+          ]
+        },
+        {
+          "canonical_id": "BQ-934EE300A6F8",
+          "statement": "En relación con lesión medular, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "B",
+          "difficulty": "baja",
+          "source_ids": [
+            "TFR-057"
+          ]
+        },
+        {
+          "canonical_id": "BQ-978E0BABECF6",
+          "statement": "En un establecimiento de salud, se revisa el tema de lesión medular. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "A",
+          "difficulty": "media",
+          "source_ids": [
+            "TFR-058"
+          ]
+        },
+        {
+          "canonical_id": "BQ-C3528EE48A30",
+          "statement": "Para una evaluación SERUMS sobre lesión medular, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "E",
+          "difficulty": "media",
+          "source_ids": [
+            "TFR-059"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "Las ayudas técnicas deben evitarse",
+        "La rehabilitación de lesión medular incluye prevención de complicaciones, movilidad, entrenamiento funcional y educación",
+        "Solo se centra en fuerza de brazos",
+        "No requiere cuidado de piel",
+        "La autonomía no es objetivo"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "D",
+        "dropped_alternative": "No requiere cuidado de piel",
+        "original_answer": "B",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-A595448BED3D",
+      "profession": "Tecnología Médica - Terapia Física y Rehabilitación",
+      "specialty": "Tecnología Médica - Terapia Física y Rehabilitación",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con fuerza muscular, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "La prueba muscular manual gradúa la capacidad de un músculo o grupo muscular para generar movimiento y vencer gravedad o resistencia",
+        "Mide capacidad pulmonar exclusivamente",
+        "Determina densidad ósea",
+        "Evalúa visión periférica"
+      ],
+      "declared_answer": "A",
+      "justification": "La valoración manual de fuerza suele usar escalas ordinales y debe interpretarse junto con otras medidas funcionales.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "terapia-fisica-rehabilitacion/preguntas.json",
+          "source_id": "TFR-005",
+          "profession": "Tecnología Médica - Terapia Física y Rehabilitación",
+          "answer": "E"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-A595448BED3D",
+          "statement": "En relación con fuerza muscular, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "E",
+          "difficulty": "baja",
+          "source_ids": [
+            "TFR-005"
+          ]
+        },
+        {
+          "canonical_id": "BQ-A93C1492F33D",
+          "statement": "En un establecimiento de salud, se revisa el tema de fuerza muscular. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "D",
+          "difficulty": "media",
+          "source_ids": [
+            "TFR-006"
+          ]
+        },
+        {
+          "canonical_id": "BQ-CFAE9C9A0F01",
+          "statement": "Un profesional debe aplicar conocimientos de fuerza muscular. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "B",
+          "difficulty": "alta",
+          "source_ids": [
+            "TFR-008"
+          ]
+        },
+        {
+          "canonical_id": "BQ-D36094F52A11",
+          "statement": "Para una evaluación SERUMS sobre fuerza muscular, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "C",
+          "difficulty": "media",
+          "source_ids": [
+            "TFR-007"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "Mide capacidad pulmonar exclusivamente",
+        "Determina densidad ósea",
+        "Evalúa visión periférica",
+        "Mide glucosa sanguínea",
+        "La prueba muscular manual gradúa la capacidad de un músculo o grupo muscular para generar movimiento y vencer gravedad o resistencia"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "D",
+        "dropped_alternative": "Mide glucosa sanguínea",
+        "original_answer": "E",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-A8F7F84C4FF1",
+      "profession": "Tecnología Médica - Terapia Física y Rehabilitación",
+      "specialty": "Tecnología Médica - Terapia Física y Rehabilitación",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con objetivos SMART, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "Deben ser vagos para permitir flexibilidad",
+        "Solo describen técnicas del terapeuta",
+        "No requieren relación con función",
+        "Los objetivos de rehabilitación deben ser específicos, medibles, alcanzables, relevantes y delimitados en el tiempo"
+      ],
+      "declared_answer": "D",
+      "justification": "Objetivos claros facilitan planificación, seguimiento y toma de decisiones compartida.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "terapia-fisica-rehabilitacion/preguntas.json",
+          "source_id": "TFR-097",
+          "profession": "Tecnología Médica - Terapia Física y Rehabilitación",
+          "answer": "B"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-0977C91A26F3",
+          "statement": "Un profesional debe aplicar conocimientos de objetivos SMART. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "D",
+          "difficulty": "alta",
+          "source_ids": [
+            "TFR-100"
+          ]
+        },
+        {
+          "canonical_id": "BQ-55C6C9220AE3",
+          "statement": "Para una evaluación SERUMS sobre objetivos SMART, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "E",
+          "difficulty": "media",
+          "source_ids": [
+            "TFR-099"
+          ]
+        },
+        {
+          "canonical_id": "BQ-A8F7F84C4FF1",
+          "statement": "En relación con objetivos SMART, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "B",
+          "difficulty": "baja",
+          "source_ids": [
+            "TFR-097"
+          ]
+        },
+        {
+          "canonical_id": "BQ-EF0D39A55DC6",
+          "statement": "En un establecimiento de salud, se revisa el tema de objetivos SMART. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "A",
+          "difficulty": "media",
+          "source_ids": [
+            "TFR-098"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "No requieren relación con función",
+        "Los objetivos de rehabilitación deben ser específicos, medibles, alcanzables, relevantes y delimitados en el tiempo",
+        "Deben ser vagos para permitir flexibilidad",
+        "No necesitan fecha",
+        "Solo describen técnicas del terapeuta"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "D",
+        "dropped_alternative": "No necesitan fecha",
+        "original_answer": "B",
+        "new_answer": "D"
+      }
+    },
+    {
+      "canonical_id": "BQ-B7314CC1395D",
+      "profession": "Tecnología Médica - Terapia Física y Rehabilitación",
+      "specialty": "Tecnología Médica - Terapia Física y Rehabilitación",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con marcha, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "No tiene relación con función",
+        "El análisis de marcha observa parámetros temporoespaciales y patrones de apoyo y balanceo",
+        "Solo mide presión arterial",
+        "No permite detectar asimetrías"
+      ],
+      "declared_answer": "B",
+      "justification": "La marcha refleja interacción de fuerza, movilidad, equilibrio y control neurológico.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "terapia-fisica-rehabilitacion/preguntas.json",
+          "source_id": "TFR-021",
+          "profession": "Tecnología Médica - Terapia Física y Rehabilitación",
+          "answer": "A"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-17F23065C80A",
+          "statement": "Para una evaluación SERUMS sobre marcha, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "D",
+          "difficulty": "media",
+          "source_ids": [
+            "TFR-023"
+          ]
+        },
+        {
+          "canonical_id": "BQ-6FFA3DA69879",
+          "statement": "En un establecimiento de salud, se revisa el tema de marcha. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "E",
+          "difficulty": "media",
+          "source_ids": [
+            "TFR-022"
+          ]
+        },
+        {
+          "canonical_id": "BQ-AD12DC048A9B",
+          "statement": "Un profesional debe aplicar conocimientos de marcha. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "C",
+          "difficulty": "alta",
+          "source_ids": [
+            "TFR-024"
+          ]
+        },
+        {
+          "canonical_id": "BQ-B7314CC1395D",
+          "statement": "En relación con marcha, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "A",
+          "difficulty": "baja",
+          "source_ids": [
+            "TFR-021"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "El análisis de marcha observa parámetros temporoespaciales y patrones de apoyo y balanceo",
+        "Solo mide presión arterial",
+        "No permite detectar asimetrías",
+        "Se limita a medir talla",
+        "No tiene relación con función"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "D",
+        "dropped_alternative": "Se limita a medir talla",
+        "original_answer": "A",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-B734670BC7B5",
+      "profession": "Tecnología Médica - Terapia Física y Rehabilitación",
+      "specialty": "Tecnología Médica - Terapia Física y Rehabilitación",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con estiramiento, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "No requiere considerar lesión aguda",
+        "El estiramiento puede utilizarse para mantener o mejorar extensibilidad de tejidos cuando está indicado",
+        "Debe provocar dolor intenso para ser efectivo",
+        "Sustituye fortalecimiento en todo paciente"
+      ],
+      "declared_answer": "B",
+      "justification": "La dosificación debe ajustarse a objetivo, tejido, irritabilidad y seguridad.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "terapia-fisica-rehabilitacion/preguntas.json",
+          "source_id": "TFR-033",
+          "profession": "Tecnología Médica - Terapia Física y Rehabilitación",
+          "answer": "C"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-805EBBFCC725",
+          "statement": "Para una evaluación SERUMS sobre estiramiento, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "A",
+          "difficulty": "media",
+          "source_ids": [
+            "TFR-035"
+          ]
+        },
+        {
+          "canonical_id": "BQ-B734670BC7B5",
+          "statement": "En relación con estiramiento, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "C",
+          "difficulty": "baja",
+          "source_ids": [
+            "TFR-033"
+          ]
+        },
+        {
+          "canonical_id": "BQ-B7B66EDB9D4C",
+          "statement": "En un establecimiento de salud, se revisa el tema de estiramiento. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "B",
+          "difficulty": "media",
+          "source_ids": [
+            "TFR-034"
+          ]
+        },
+        {
+          "canonical_id": "BQ-E8A053E746E9",
+          "statement": "Un profesional debe aplicar conocimientos de estiramiento. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "E",
+          "difficulty": "alta",
+          "source_ids": [
+            "TFR-036"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "Es contraindicado en toda rigidez",
+        "No requiere considerar lesión aguda",
+        "El estiramiento puede utilizarse para mantener o mejorar extensibilidad de tejidos cuando está indicado",
+        "Debe provocar dolor intenso para ser efectivo",
+        "Sustituye fortalecimiento en todo paciente"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "Es contraindicado en toda rigidez",
+        "original_answer": "C",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-BCD29D0B55D4",
+      "profession": "Tecnología Médica - Terapia Física y Rehabilitación",
+      "specialty": "Tecnología Médica - Terapia Física y Rehabilitación",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con higiene bronquial, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "Las técnicas de higiene bronquial buscan favorecer movilización y eliminación de secreciones cuando están indicadas",
+        "Se usan en toda persona sin secreciones",
+        "No dependen de diagnóstico",
+        "Siempre requieren percusión intensa"
+      ],
+      "declared_answer": "A",
+      "justification": "La selección depende de volumen de secreciones, capacidad de tos y condición clínica.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "terapia-fisica-rehabilitacion/preguntas.json",
+          "source_id": "TFR-049",
+          "profession": "Tecnología Médica - Terapia Física y Rehabilitación",
+          "answer": "D"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-2A478B762AFE",
+          "statement": "Un profesional debe aplicar conocimientos de higiene bronquial. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "A",
+          "difficulty": "alta",
+          "source_ids": [
+            "TFR-052"
+          ]
+        },
+        {
+          "canonical_id": "BQ-6ACFEBF62217",
+          "statement": "Para una evaluación SERUMS sobre higiene bronquial, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "B",
+          "difficulty": "media",
+          "source_ids": [
+            "TFR-051"
+          ]
+        },
+        {
+          "canonical_id": "BQ-A59A07547F4E",
+          "statement": "En un establecimiento de salud, se revisa el tema de higiene bronquial. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "C",
+          "difficulty": "media",
+          "source_ids": [
+            "TFR-050"
+          ]
+        },
+        {
+          "canonical_id": "BQ-BCD29D0B55D4",
+          "statement": "En relación con higiene bronquial, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "D",
+          "difficulty": "baja",
+          "source_ids": [
+            "TFR-049"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "Sustituyen antibióticos",
+        "No dependen de diagnóstico",
+        "Siempre requieren percusión intensa",
+        "Las técnicas de higiene bronquial buscan favorecer movilización y eliminación de secreciones cuando están indicadas",
+        "Se usan en toda persona sin secreciones"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "Sustituyen antibióticos",
+        "original_answer": "D",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-CDC60EA84DCC",
+      "profession": "Tecnología Médica - Terapia Física y Rehabilitación",
+      "specialty": "Tecnología Médica - Terapia Física y Rehabilitación",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con propiocepción, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "La propiocepción aporta información sobre posición y movimiento de segmentos corporales",
+        "Es una modalidad exclusivamente visual",
+        "No participa en control motor",
+        "Se origina solo en piel superficial"
+      ],
+      "declared_answer": "A",
+      "justification": "Receptores musculares, tendinosos y articulares contribuyen a percepción y control de posición.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "terapia-fisica-rehabilitacion/preguntas.json",
+          "source_id": "TFR-029",
+          "profession": "Tecnología Médica - Terapia Física y Rehabilitación",
+          "answer": "D"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-493BB28CB025",
+          "statement": "En un establecimiento de salud, se revisa el tema de propiocepción. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "C",
+          "difficulty": "media",
+          "source_ids": [
+            "TFR-030"
+          ]
+        },
+        {
+          "canonical_id": "BQ-53D2BEB94894",
+          "statement": "Un profesional debe aplicar conocimientos de propiocepción. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "A",
+          "difficulty": "alta",
+          "source_ids": [
+            "TFR-032"
+          ]
+        },
+        {
+          "canonical_id": "BQ-C124B1D765FF",
+          "statement": "Para una evaluación SERUMS sobre propiocepción, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "B",
+          "difficulty": "media",
+          "source_ids": [
+            "TFR-031"
+          ]
+        },
+        {
+          "canonical_id": "BQ-CDC60EA84DCC",
+          "statement": "En relación con propiocepción, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "D",
+          "difficulty": "baja",
+          "source_ids": [
+            "TFR-029"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "No participa en control motor",
+        "Se origina solo en piel superficial",
+        "Es igual a nocicepción",
+        "La propiocepción aporta información sobre posición y movimiento de segmentos corporales",
+        "Es una modalidad exclusivamente visual"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "C",
+        "dropped_alternative": "Es igual a nocicepción",
+        "original_answer": "D",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-D209261AA7F5",
+      "profession": "Tecnología Médica - Terapia Física y Rehabilitación",
+      "specialty": "Tecnología Médica - Terapia Física y Rehabilitación",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con parálisis cerebral, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "La terapia debe ser idéntica en todos los casos",
+        "En parálisis cerebral la intervención se orienta a función, participación, manejo postural y objetivos familiares",
+        "La meta es normalizar todo movimiento a cualquier costo",
+        "No deben considerarse preferencias familiares"
+      ],
+      "declared_answer": "B",
+      "justification": "Los objetivos funcionales individualizados guían intervención en el contexto de desarrollo y participación.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "terapia-fisica-rehabilitacion/preguntas.json",
+          "source_id": "TFR-061",
+          "profession": "Tecnología Médica - Terapia Física y Rehabilitación",
+          "answer": "A"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-6702C25EFCEA",
+          "statement": "En un establecimiento de salud, se revisa el tema de parálisis cerebral. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "E",
+          "difficulty": "media",
+          "source_ids": [
+            "TFR-062"
+          ]
+        },
+        {
+          "canonical_id": "BQ-78BBFA64BC59",
+          "statement": "Para una evaluación SERUMS sobre parálisis cerebral, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "D",
+          "difficulty": "media",
+          "source_ids": [
+            "TFR-063"
+          ]
+        },
+        {
+          "canonical_id": "BQ-B784321AEE4E",
+          "statement": "Un profesional debe aplicar conocimientos de parálisis cerebral. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "C",
+          "difficulty": "alta",
+          "source_ids": [
+            "TFR-064"
+          ]
+        },
+        {
+          "canonical_id": "BQ-D209261AA7F5",
+          "statement": "En relación con parálisis cerebral, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "A",
+          "difficulty": "baja",
+          "source_ids": [
+            "TFR-061"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "En parálisis cerebral la intervención se orienta a función, participación, manejo postural y objetivos familiares",
+        "La meta es normalizar todo movimiento a cualquier costo",
+        "No deben considerarse preferencias familiares",
+        "La espasticidad es el único problema",
+        "La terapia debe ser idéntica en todos los casos"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "D",
+        "dropped_alternative": "La espasticidad es el único problema",
+        "original_answer": "A",
+        "new_answer": "B"
+      }
+    },
+    {
+      "canonical_id": "BQ-E985E4062582",
+      "profession": "Tecnología Médica - Terapia Física y Rehabilitación",
+      "specialty": "Tecnología Médica - Terapia Física y Rehabilitación",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con esguince de tobillo, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "Tras un esguince no complicado se favorece protección y carga progresiva según tolerancia, junto con ejercicio de movilidad y control",
+        "La inmovilización rígida prolongada siempre es mejor",
+        "Nunca debe entrenarse equilibrio",
+        "Todo esguince requiere cirugía"
+      ],
+      "declared_answer": "A",
+      "justification": "La rehabilitación funcional progresiva favorece recuperación de movilidad, fuerza y propiocepción.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "terapia-fisica-rehabilitacion/preguntas.json",
+          "source_id": "TFR-077",
+          "profession": "Tecnología Médica - Terapia Física y Rehabilitación",
+          "answer": "B"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-123669FFDE96",
+          "statement": "En un establecimiento de salud, se revisa el tema de esguince de tobillo. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "A",
+          "difficulty": "media",
+          "source_ids": [
+            "TFR-078"
+          ]
+        },
+        {
+          "canonical_id": "BQ-3C15A1E439DC",
+          "statement": "Para una evaluación SERUMS sobre esguince de tobillo, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "E",
+          "difficulty": "media",
+          "source_ids": [
+            "TFR-079"
+          ]
+        },
+        {
+          "canonical_id": "BQ-BF5F0F847FE3",
+          "statement": "Un profesional debe aplicar conocimientos de esguince de tobillo. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "D",
+          "difficulty": "alta",
+          "source_ids": [
+            "TFR-080"
+          ]
+        },
+        {
+          "canonical_id": "BQ-E985E4062582",
+          "statement": "En relación con esguince de tobillo, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "B",
+          "difficulty": "baja",
+          "source_ids": [
+            "TFR-077"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "Todo esguince requiere cirugía",
+        "Tras un esguince no complicado se favorece protección y carga progresiva según tolerancia, junto con ejercicio de movilidad y control",
+        "La inmovilización rígida prolongada siempre es mejor",
+        "Nunca debe entrenarse equilibrio",
+        "El edema se ignora"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "E",
+        "dropped_alternative": "El edema se ignora",
+        "original_answer": "B",
+        "new_answer": "A"
+      }
+    },
+    {
+      "canonical_id": "BQ-F902AAF01E21",
+      "profession": "Tecnología Médica - Terapia Física y Rehabilitación",
+      "specialty": "Tecnología Médica - Terapia Física y Rehabilitación",
+      "thematic_block": "Cuidado integral",
+      "difficulty": "baja",
+      "statement": "En relación con equilibrio, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "Solo puede evaluarse sentado",
+        "El equilibrio depende de integración vestibular, visual y somatosensorial",
+        "Es independiente del sistema nervioso",
+        "No cambia con superficie de apoyo"
+      ],
+      "declared_answer": "B",
+      "justification": "El control postural integra múltiples sistemas sensoriales y respuestas motoras.",
+      "origin": "Sin origen declarado",
+      "status": "REVIEW_REQUIRED",
+      "in_app_before_import": false,
+      "review_issues": [
+        "variantes_generadas_misma_base",
+        "sin_fuente_declarada",
+        "cinco_alternativas_requiere_adaptacion_app",
+        "reduccion_automatica_de_cinco_a_cuatro"
+      ],
+      "source_record_count": 4,
+      "provenance": [
+        {
+          "file": "terapia-fisica-rehabilitacion/preguntas.json",
+          "source_id": "TFR-025",
+          "profession": "Tecnología Médica - Terapia Física y Rehabilitación",
+          "answer": "E"
+        }
+      ],
+      "generated_variant_count": 4,
+      "variant_questions": [
+        {
+          "canonical_id": "BQ-58B12E9F1948",
+          "statement": "Un profesional debe aplicar conocimientos de equilibrio. ¿Cuál es la mejor afirmación para orientar su decisión?",
+          "declared_answer": "B",
+          "difficulty": "alta",
+          "source_ids": [
+            "TFR-028"
+          ]
+        },
+        {
+          "canonical_id": "BQ-691FFD9524A7",
+          "statement": "Para una evaluación SERUMS sobre equilibrio, seleccione la alternativa técnicamente correcta.",
+          "declared_answer": "C",
+          "difficulty": "media",
+          "source_ids": [
+            "TFR-027"
+          ]
+        },
+        {
+          "canonical_id": "BQ-C54A331605E4",
+          "statement": "En un establecimiento de salud, se revisa el tema de equilibrio. ¿Qué opción representa la conducta o concepto más adecuado?",
+          "declared_answer": "D",
+          "difficulty": "media",
+          "source_ids": [
+            "TFR-026"
+          ]
+        },
+        {
+          "canonical_id": "BQ-F902AAF01E21",
+          "statement": "En relación con equilibrio, ¿cuál de las siguientes afirmaciones es correcta?",
+          "declared_answer": "E",
+          "difficulty": "baja",
+          "source_ids": [
+            "TFR-025"
+          ]
+        }
+      ],
+      "catalog_source": "SERUMS_CARRERAS_FALTANTES_100.zip",
+      "original_five_alternatives": [
+        "Depende solo de audición",
+        "Es independiente del sistema nervioso",
+        "No cambia con superficie de apoyo",
+        "Solo puede evaluarse sentado",
+        "El equilibrio depende de integración vestibular, visual y somatosensorial"
+      ],
+      "automatic_reduction": {
+        "method": "Se conservó la clave y se retiró el distractor no correcto más corto; se rotaron las opciones para equilibrar A–D.",
+        "dropped_original_letter": "A",
+        "dropped_alternative": "Depende solo de audición",
+        "original_answer": "E",
+        "new_answer": "B"
+      }
+    }
+  ]
+}
