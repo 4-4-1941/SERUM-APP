@@ -53,7 +53,10 @@
   }
 
   async function loadProfession(profession, options = {}) {
-    const { includeReviewRequired = false } = options;
+    // El banco se mantiene disponible por profesión. El estado de revisión se
+    // conserva en cada caso para que la interfaz pueda advertirlo sin ocultar
+    // el material formativo ni descargar módulos ajenos.
+    const { includeReviewRequired = true } = options;
     const modules = await listProfessions();
     const module = modules.find((item) => item.profession === profession);
     if (!module) throw new Error(`No existe un módulo para la profesión: ${profession}.`);
