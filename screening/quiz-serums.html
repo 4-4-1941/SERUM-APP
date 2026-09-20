@@ -14,17 +14,33 @@
   <p class="muted">Práctica con 10 preguntas aleatorias del banco interno. Es una herramienta educativa; no sustituye protocolos, fuentes oficiales ni juicio clínico.</p>
   <section class="card" id="quiz"></section>
 </main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="../data.js"></script>
+<script src="../core/banco-loader.js"></script>
 <script>
-  const all = Array.isArray(window.SERUMS_DATA?.cases) ? window.SERUMS_DATA.cases : [];
-  const questions = [...all].sort(() => Math.random() - .5).slice(0, Math.min(10, all.length));
+  let questions = [];
   let index = 0, score = 0, answered = false, attempts = 0, direction = "next";
   const root = document.getElementById('quiz');
+  async function loadQuestions(){
+    const local = Array.isArray(window.SERUMS_DATA?.cases) ? window.SERUMS_DATA.cases : [];
+    root.textContent = 'Cargando preguntas…';
+    try {
+      const professions = await window.SERUMS_BANK.listRemoteProfessions();
+      const selected = professions[Math.floor(Math.random() * professions.length)];
+      const remote = await window.SERUMS_BANK.loadRemoteProfession(selected.profession);
+      questions = [...remote].sort(() => Math.random() - .5).slice(0, Math.min(10, remote.length));
+      document.querySelector('.muted').textContent = `Práctica con 10 preguntas de ${selected.profession}. Herramienta educativa: no sustituye protocolos, fuentes oficiales ni juicio clínico.`;
+    } catch (error) {
+      console.error('No se pudo cargar el banco remoto', error);
+      questions = [...local].sort(() => Math.random() - .5).slice(0, Math.min(10, local.length));
+    }
+    render();
+  }
   function render(){root.classList.remove("slide-next","slide-prev");void root.offsetWidth;root.classList.add(direction==="prev"?"slide-prev":"slide-next");
     if(!questions.length){root.textContent='No hay preguntas disponibles.';return}
     if(index >= questions.length){root.innerHTML=`<h2>Resultado</h2><div class="result"><strong>${score} de ${questions.length}</strong> respuestas correctas.</div><button class="btn" onclick="location.reload()">Nuevo quiz</button>`;return}
     const q=questions[index]; answered=false;attempts=0;
-    root.innerHTML=`<div class="progress">Pregunta ${index+1} de ${questions.length}</div><h2>${q.title || 'Caso SERUMS'}</h2><p>${q.statement || ''}</p><p><strong>${q.question || 'Seleccione la alternativa correcta.'}</strong></p><div>${q.options.map((o,i)=>`<button class="option" data-i="${i}">${String.fromCharCode(65+i)}. ${o}</button>`).join('')}</div><div id="feedback"></div><div class="quiz-nav"><button class="btn secondary" id="previous" ${index===0?"disabled":""}>← Anterior</button><button class="btn" id="next-nav" disabled>Selecciona una respuesta</button></div><div class="quiz-exit"><a class="back" href="screening-index.html">← Volver a Screening</a><a class="back" href="../index.html">Volver al Tablero</a></div>`;
+    root.innerHTML=`<div class="progress">Pregunta ${index+1} de ${questions.length}</div><h2>${q.title || 'Caso SERUMS'}</h2><p>${q.statement || ''}</p><p><strong>${q.question || 'Seleccione la alternativa correcta.'}</strong></p>${q.unverified ? '<p class="muted">Clave pendiente de revisión profesional.</p>' : ''}<div>${q.options.map((o,i)=>`<button class="option" data-i="${i}">${String.fromCharCode(65+i)}. ${o}</button>`).join('')}</div><div id="feedback"></div><div class="quiz-nav"><button class="btn secondary" id="previous" ${index===0?"disabled":""}>← Anterior</button><button class="btn" id="next-nav" disabled>Selecciona una respuesta</button></div><div class="quiz-exit"><a class="back" href="screening-index.html">← Volver a Screening</a><a class="back" href="../index.html">Volver al Tablero</a></div>`;
     root.querySelectorAll('.option').forEach(btn=>btn.addEventListener('click',()=>answer(Number(btn.dataset.i))));const previous=document.getElementById('previous');if(previous)previous.addEventListener('click',()=>{if(index>0){index--;direction='prev';render();window.scrollTo({top:0,behavior:'smooth'})}});document.getElementById('next-nav').addEventListener('click',()=>{if(answered){index++;direction='next';render();window.scrollTo({top:0,behavior:'smooth'})}});
   }
   function answer(selected){
@@ -33,5 +49,5 @@
     else{attempts++;buttons[selected].disabled=true;buttons[selected].classList.add("incorrect");if(attempts===1){document.getElementById("feedback").innerHTML=`<div class="result"><strong>Aún no.</strong><p>Tienes una segunda oportunidad. Revisa las alternativas restantes.</p></div>`;return}answered=true;buttons.forEach((b,i)=>{b.disabled=true;if(i===q.correct)b.classList.add("correct")});document.getElementById("feedback").innerHTML=`<div class="result"><strong>Respuesta correcta: ${String.fromCharCode(65+q.correct)}</strong><p>${q.feedback || ""}</p></div>`}
     const next=document.getElementById("next-nav");next.disabled=false;next.textContent=index+1===questions.length?"Ver resultado":"Siguiente pregunta →";
   }
-  render();
+  loadQuestions();
 </script></body></html>
