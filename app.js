@@ -351,6 +351,7 @@ function renderCases() {
         <input id="case-search" class="search" placeholder="Buscar caso, bloque o carrera..." />
 
         <button id="priority-toggle" class="toggle">${priorityReviewMode ? "✓ Repaso priorizado activo — click para desactivar" : "Activar orden de repaso priorizado"}</button>
+        <p id="bank-load-status" style="margin:10px 0;color:#5B6E6A;font-size:13px">Banco ampliado: cargando catálogo por profesión…</p>
 
         <details class="filter-box" id="filter-career" open>
           <summary>Carrera</summary>
@@ -389,6 +390,7 @@ function renderCases() {
   const careerList = document.getElementById("career-list");
   const blockList = document.getElementById("block-list");
   const levelList = document.getElementById("level-list");
+  const bankLoadStatus = document.getElementById("bank-load-status");
 
   // DEBUG: Log en consola (visible en Chrome móvil)
   console.log("🔍 renderCases() ejecutado");
@@ -405,9 +407,10 @@ function renderCases() {
   }
 
   // Extraer carreras, bloques, niveles ÚNICOS y ORDENADOS
-  const careers = [...new Set(data.cases.map(c => c.career || c.specialty))].sort();
-  const blocks = [...new Set(data.cases.map(c => c.block))].sort();
-  const levels = [...new Set(data.cases.map(c => c.level))].sort();
+  let careers = [...new Set(data.cases.map(c => c.career || c.specialty))].sort();
+  let blocks = [...new Set(data.cases.map(c => c.block))].sort();
+  let levels = [...new Set(data.cases.map(c => c.level))].sort();
+  let remoteCareers = new Set();
 
   let selectedCareer = "";
   let selectedBlock = "";
@@ -445,8 +448,21 @@ function renderCases() {
 
     // LISTENERS PARA CARRERAS
     careerList.querySelectorAll(".option-btn").forEach(btn => {
-      btn.addEventListener("click", () => {
+      btn.addEventListener("click", async () => {
         selectedCareer = selectedCareer === btn.dataset.career ? "" : btn.dataset.career;
+        if (selectedCareer && remoteCareers.has(selectedCareer) && !window.SERUMS_BANK.isRemoteProfessionLoaded(selectedCareer)) {
+          if (bankLoadStatus) bankLoadStatus.textContent = `Cargando preguntas de ${selectedCareer}…`;
+          try {
+            const result = await window.SERUMS_BANK.mergeRemoteProfession(selectedCareer, { target: data.cases });
+            blocks = [...new Set(data.cases.map(c => c.block))].sort();
+            levels = [...new Set(data.cases.map(c => c.level))].sort();
+            renderFilters();
+            if (bankLoadStatus) bankLoadStatus.textContent = `${result.added} preguntas de ${selectedCareer} disponibles. Las claves permanecen pendientes de revisión.`;
+          } catch (error) {
+            console.error("No se pudo cargar el banco remoto", error);
+            if (bankLoadStatus) bankLoadStatus.textContent = "No se pudo cargar el banco ampliado. Se mantiene el material local.";
+          }
+        }
         draw(search.value);
         document.getElementById("filter-career").open = false;
         scrollToCaseList();
@@ -510,7 +526,7 @@ function renderCases() {
 
       list.querySelectorAll(".case-card").forEach(btn => {
         btn.addEventListener("click", () => {
-          openCase(Number(btn.dataset.id));
+          openCase(btn.dataset.id);
           const panel = document.getElementById("case-panel");
           if (panel) setTimeout(() => panel.scrollIntoView({ behavior: "smooth", block: "start" }), 60);
         });
@@ -553,11 +569,27 @@ function renderCases() {
   // RENDERIZAR FILTROS Y DIBUJAR CASOS
   renderFilters();
   draw();
+  if (window.SERUMS_BANK && typeof window.SERUMS_BANK.listRemoteProfessions === "function") {
+    window.SERUMS_BANK.listRemoteProfessions()
+      .then((remote) => {
+        remoteCareers = new Set(remote.map(item => item.profession));
+        careers = [...new Set([...careers, ...remoteCareers])].sort((first, second) => first.localeCompare(second, "es"));
+        renderFilters();
+        if (bankLoadStatus) bankLoadStatus.textContent = `Banco ampliado disponible: ${remote.reduce((total, item) => total + item.count, 0)} preguntas en ${remote.length} profesiones. Selecciona una carrera para cargarla.`;
+      })
+      .catch((error) => {
+        console.error("No se pudo consultar el catálogo remoto", error);
+        if (bankLoadStatus) bankLoadStatus.textContent = "Banco ampliado no disponible. La aplicación continúa con el material local.";
+      });
+  } else if (bankLoadStatus) {
+    bankLoadStatus.textContent = "Banco ampliado no disponible. La aplicación continúa con el material local.";
+  }
   console.log("✅ renderCases() completado");
 }
 
 function openCase(id) {
-  const original = data.cases.find(c => c.id === id);
+  const original = data.cases.find(c => String(c.id) === String(id));
+  if (!original) return;
   activeCase = shuffleCaseOptions(original);
   selectedOption = null;
   confirmed = false;
@@ -752,7 +784,7 @@ function renderSimulacroIntro() {
   const totalAvailable = data.cases.length;
   const target = Math.min(SIMULACRO_TARGET, totalAvailable);
   const lastAttempts = simulacroHistory.slice(-5).reverse();
-  const careers = [...new Set(data.cases.map(c => c.career || c.specialty))].filter(c => c !== "Transversal").sort();
+  let careers = [...new Set(data.cases.map(c => c.career || c.specialty))].filter(c => c !== "Transversal").sort();
 
   root.innerHTML = `
     <section class="two-col">
@@ -795,10 +827,31 @@ function renderSimulacroIntro() {
     simulacroCareer = e.target.value;
     localStorage.setItem("simulacroCareer", simulacroCareer);
   });
+  if (window.SERUMS_BANK && typeof window.SERUMS_BANK.listRemoteProfessions === "function") {
+    window.SERUMS_BANK.listRemoteProfessions().then((remote) => {
+      careers = [...new Set([...careers, ...remote.map(item => item.profession)])].sort((first, second) => first.localeCompare(second, "es"));
+      const select = document.getElementById("simulacro-career-select");
+      if (select) select.innerHTML = `<option value="">Todas las carreras (modo mixto)</option>${careers.map(c => `<option value="${c}" ${simulacroCareer === c ? "selected" : ""}>${c}</option>`).join("")}`;
+    }).catch((error) => console.error("No se pudo consultar el catálogo del simulacro", error));
+  }
   document.getElementById("start-simulacro-btn").addEventListener("click", startSimulacro);
 }
 
-function startSimulacro() {
+async function startSimulacro() {
+  const startButton = document.getElementById("start-simulacro-btn");
+  if (simulacroCareer && window.SERUMS_BANK && typeof window.SERUMS_BANK.listRemoteProfessions === "function") {
+    try {
+      const remote = await window.SERUMS_BANK.listRemoteProfessions();
+      if (remote.some(item => item.profession === simulacroCareer) && !window.SERUMS_BANK.isRemoteProfessionLoaded(simulacroCareer)) {
+        if (startButton) { startButton.disabled = true; startButton.textContent = `Cargando ${simulacroCareer}…`; }
+        await window.SERUMS_BANK.mergeRemoteProfession(simulacroCareer, { target: data.cases });
+      }
+    } catch (error) {
+      console.error("No se pudo cargar la profesión para el simulacro", error);
+    } finally {
+      if (startButton) { startButton.disabled = false; startButton.textContent = "Iniciar simulacro →"; }
+    }
+  }
   simulacroQueue = buildSimulacroQueue(simulacroCareer);
   simulacroIndex = 0;
   simulacroResults = [];
