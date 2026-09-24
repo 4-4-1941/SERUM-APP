@@ -209,7 +209,48 @@
     return { profession, loaded: incoming.length, added: added.length, skipped: incoming.length - added.length };
   }
 
+
+  // Incorporar los lotes nuevos al banco operativo inicial, conservando IDs locales.
+  async function syncImportedCases() {
+    const target = window.SERUMS_DATA && window.SERUMS_DATA.cases;
+    if (!Array.isArray(target)) return;
+    const client = remoteClient();
+    const incoming = [];
+    for (let from = 0; ; from += 500) {
+      const { data: rows, error } = await client.from(REMOTE_CONFIG.table)
+        .select("*").contains("tags", [REMOTE_CONFIG.sourceTag, "status:REVIEW_REQUIRED"])
+        .order("id", { ascending: true }).range(from, from + 499);
+      if (error) throw new Error(error.message);
+      for (const row of rows || []) {
+        const tags = parseJson(row.tags, []);
+        if (!Array.isArray(tags) || !tags.some(tag => String(tag).startsWith("import:TM600:"))) continue;
+        if (!Number.isInteger(row.correct) || row.correct < 0 || row.correct > 3) continue;
+        const item = normalizeRemote(row);
+        if (item.options.length === 4) incoming.push(item);
+      }
+      if (!rows || rows.length < 500) break;
+    }
+    const ids = new Set(target.map(item => String(item.id)));
+    for (const item of incoming) {
+      if (!ids.has(item.id)) { target.push(item); ids.add(item.id); }
+    }
+    if (typeof renderDashboard === "function" &&
+        document.getElementById("page-title")?.textContent === "Tablero SERUMS") {
+      renderDashboard();
+    }
+    return incoming.length;
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    syncImportedCases().catch(error => {
+      console.error("Sincronización del lote importado:", error);
+      const subtitle = document.getElementById("page-subtitle");
+      if (subtitle) subtitle.textContent += " No se pudo sincronizar el lote nuevo; recarga para reintentar.";
+    });
+  });
+
   window.SERUMS_BANK = Object.freeze({
+    syncImportedCases,
     listProfessions,
     loadProfession,
     mergeProfession,
@@ -220,3 +261,4 @@
     isRemoteProfessionLoaded
   });
 })();
+
