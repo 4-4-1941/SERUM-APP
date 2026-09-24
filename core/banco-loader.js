@@ -104,7 +104,7 @@
           const { data, error } = await client
             .from(REMOTE_CONFIG.table)
             .select("career")
-            .contains("tags", [REMOTE_CONFIG.sourceTag])
+            .contains("tags", JSON.stringify([REMOTE_CONFIG.sourceTag]))
             .range(from, from + pageSize - 1);
           if (error) throw new Error(`No se pudo leer el banco remoto: ${error.message}`);
           careers.push(...(data || []).map((row) => row.career).filter(Boolean));
@@ -137,7 +137,7 @@
             .from(REMOTE_CONFIG.table)
             .select("*")
             .eq("career", profession)
-            .contains("tags", [REMOTE_CONFIG.sourceTag])
+            .contains("tags", JSON.stringify([REMOTE_CONFIG.sourceTag]))
             .order("id", { ascending: true })
             .range(from, from + pageSize - 1);
           if (error) throw new Error(`No se pudo cargar ${profession}: ${error.message}`);
@@ -218,7 +218,7 @@
     const incoming = [];
     for (let from = 0; ; from += 500) {
       const { data: rows, error } = await client.from(REMOTE_CONFIG.table)
-        .select("*").contains("tags", [REMOTE_CONFIG.sourceTag, "status:REVIEW_REQUIRED"])
+        .select("*").contains("tags", JSON.stringify([REMOTE_CONFIG.sourceTag, "status:REVIEW_REQUIRED"]))
         .order("id", { ascending: true }).range(from, from + 499);
       if (error) throw new Error(error.message);
       for (const row of rows || []) {
@@ -235,7 +235,7 @@
       if (!ids.has(item.id)) { target.push(item); ids.add(item.id); }
     }
     if (typeof renderDashboard === "function" &&
-        document.getElementById("page-title")?.textContent === "Tablero SERUMS") {
+        document.querySelector("#view-root .grid.metrics")) {
       renderDashboard();
     }
     return incoming.length;
@@ -261,4 +261,5 @@
     isRemoteProfessionLoaded
   });
 })();
+
 
