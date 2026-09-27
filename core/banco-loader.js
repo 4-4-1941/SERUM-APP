@@ -36,7 +36,7 @@
 
   function normalize(item) {
     const alternatives = Array.isArray(item.alternatives) ? item.alternatives : item.options;
-    const answer = item.declared_answer || item.correct || item.answer;
+    const answer = item.declared_answer ?? item.correct ?? item.answer;
     return {
       id: item.canonical_id || item.id,
       career: item.profession || item.career || item.specialty,
@@ -89,82 +89,90 @@
       feedback: row.feedback || "",
       tags: Array.isArray(tags) ? tags : [],
       unverified: row.unverified !== false,
-      status: "REVIEW_REQUIRED",
+      status: row.estado || "REVIEW_REQUIRED",
+      requiere_validacion_humana: row.requiere_validacion_humana !== false,
       source: "supabase:SERUM-APP"
     };
   }
 
+  const CACHE_MS = 60000;
+  let snapshot = null;
+  let snapshotAt = 0;
+  let snapshotPromise = null;
+  const loadedProfessions = new Set();
+
+  function isUsable(row) {
+    const options = parseJson(row.options, []);
+    if (!Array.isArray(options) || ![4, 5].includes(options.length)) return false;
+    if (!Number.isInteger(row.correct) || row.correct < 0 || row.correct >= options.length) return false;
+    if (!row.statement || !row.question || !row.feedback) return false;
+    if (["placeholder", "requiere_contexto", "rechazado", "archivado"].includes(row.estado)) return false;
+    if (options.some(option => typeof option !== "string" || !option.trim())) return false;
+    if (new Set(options.map(option => option.trim().toLocaleLowerCase("es"))).size !== options.length) return false;
+    return !options.some(option => /opci[oó]n falsa|incorrecto\s*\d+|placeholder|opci[oó]n correcta|[✓✔☑]/i.test(option));
+  }
+
+  async function remoteRows(force = false) {
+    if (snapshotPromise) return snapshotPromise;
+    if (!force && snapshot && Date.now() - snapshotAt < CACHE_MS) return snapshot;
+    snapshotPromise = (async () => {
+      const client = remoteClient();
+      const result = [];
+      // Continue until an empty page, including servers configured below 500 rows.
+      for (let from = 0; ; ) {
+        const { data, error } = await client.from(REMOTE_CONFIG.table)
+          .select("*").contains("tags", JSON.stringify([REMOTE_CONFIG.sourceTag]))
+          .order("id", { ascending: true }).range(from, from + 499);
+        if (error) throw new Error(`No se pudo sincronizar el banco: ${error.message}`);
+        if (!Array.isArray(data)) throw new Error("Respuesta inválida del banco remoto.");
+        if (!data.length) break;
+        result.push(...data);
+        from += data.length;
+      }
+      const unique = new Map(result.filter(isUsable).map(row => [String(row.id), row]));
+      snapshot = [...unique.values()];
+      snapshotAt = Date.now();
+      return snapshot;
+    })();
+    try { return await snapshotPromise; }
+    finally { snapshotPromise = null; }
+  }
+
   async function listRemoteProfessions() {
-    if (!remoteProfessionPromise) {
-      remoteProfessionPromise = (async () => {
-        const client = remoteClient();
-        const careers = [];
-        const pageSize = 1000;
-        for (let from = 0; ; from += pageSize) {
-          const { data, error } = await client
-            .from(REMOTE_CONFIG.table)
-            .select("career")
-            .contains("tags", JSON.stringify([REMOTE_CONFIG.sourceTag]))
-            .range(from, from + pageSize - 1);
-          if (error) throw new Error(`No se pudo leer el banco remoto: ${error.message}`);
-          careers.push(...(data || []).map((row) => row.career).filter(Boolean));
-          if (!data || data.length < pageSize) break;
-        }
-        const counts = careers.reduce((result, career) => {
-          result.set(career, (result.get(career) || 0) + 1);
-          return result;
-        }, new Map());
-        return [...counts.entries()]
-          .map(([profession, count]) => ({ profession, count }))
-          .sort((first, second) => first.profession.localeCompare(second.profession, "es"));
-      })().catch((error) => {
-        remoteProfessionPromise = null;
-        throw error;
-      });
-    }
-    return remoteProfessionPromise;
+    const counts = new Map();
+    for (const row of await remoteRows()) counts.set(row.career, (counts.get(row.career) || 0) + 1);
+    return [...counts].map(([profession, count]) => ({ profession, count }))
+      .sort((a, b) => a.profession.localeCompare(b.profession, "es"));
   }
 
   async function loadRemoteProfession(profession) {
     if (!profession) throw new Error("Debes indicar una profesión.");
-    if (!remoteModuleCache.has(profession)) {
-      remoteModuleCache.set(profession, (async () => {
-        const client = remoteClient();
-        const rows = [];
-        const pageSize = 500;
-        for (let from = 0; ; from += pageSize) {
-          const { data, error } = await client
-            .from(REMOTE_CONFIG.table)
-            .select("*")
-            .eq("career", profession)
-            .contains("tags", JSON.stringify([REMOTE_CONFIG.sourceTag]))
-            .order("id", { ascending: true })
-            .range(from, from + pageSize - 1);
-          if (error) throw new Error(`No se pudo cargar ${profession}: ${error.message}`);
-          rows.push(...(data || []));
-          if (!data || data.length < pageSize) break;
-        }
-        return rows.map(normalizeRemote).filter((item) => item.options.length === 4 && item.correct >= 0 && item.correct <= 3);
-      })().catch((error) => {
-        remoteModuleCache.delete(profession);
-        throw error;
-      }));
+    return (await remoteRows()).filter(row => row.career === profession).map(normalizeRemote);
+  }
+
+  function reconcile(target, incoming, profession) {
+    const previous = new Set(target.map(item => String(item.id)));
+    const keep = target.filter(item => !(item.source === "supabase:SERUM-APP" &&
+      (!profession || item.career === profession)));
+    const ids = new Set(keep.map(item => String(item.id)));
+    for (const item of incoming) {
+      if (!ids.has(String(item.id))) { keep.push(item); ids.add(String(item.id)); }
     }
-    return (await remoteModuleCache.get(profession)).slice();
+    target.splice(0, target.length, ...keep);
+    return incoming.filter(item => !previous.has(String(item.id))).length;
   }
 
   async function mergeRemoteProfession(profession, options = {}) {
     const target = options.target || (window.SERUMS_DATA && window.SERUMS_DATA.cases);
     if (!Array.isArray(target)) throw new Error("No hay colección de casos operativa para integrar.");
     const incoming = await loadRemoteProfession(profession);
-    const existingIds = new Set(target.map((item) => String(item.id)));
-    const added = incoming.filter((item) => !existingIds.has(String(item.id)));
-    target.push(...added);
-    return { profession, loaded: incoming.length, added: added.length, skipped: incoming.length - added.length };
+    const added = reconcile(target, incoming, profession);
+    loadedProfessions.add(profession);
+    return { profession, loaded: incoming.length, added, skipped: incoming.length - added };
   }
 
   function isRemoteProfessionLoaded(profession) {
-    return remoteModuleCache.has(profession);
+    return Date.now() - snapshotAt < CACHE_MS && loadedProfessions.has(profession);
   }
 
   async function listProfessions() {
@@ -210,47 +218,37 @@
   }
 
 
-  // Incorporar los lotes nuevos al banco operativo inicial, conservando IDs locales.
-  async function syncImportedCases() {
+  // Refresh every complete eligible source record, not a hardcoded import batch.
+  async function syncImportedCases(options = {}) {
     const target = window.SERUMS_DATA && window.SERUMS_DATA.cases;
-    if (!Array.isArray(target)) return;
-    const client = remoteClient();
-    const incoming = [];
-    for (let from = 0; ; from += 500) {
-      const { data: rows, error } = await client.from(REMOTE_CONFIG.table)
-        .select("*").contains("tags", JSON.stringify([REMOTE_CONFIG.sourceTag, "status:REVIEW_REQUIRED"]))
-        .order("id", { ascending: true }).range(from, from + 499);
-      if (error) throw new Error(error.message);
-      for (const row of rows || []) {
-        const tags = parseJson(row.tags, []);
-        if (!Array.isArray(tags) || !tags.some(tag => String(tag).startsWith("import:TM600:"))) continue;
-        if (!Number.isInteger(row.correct) || row.correct < 0 || row.correct > 3) continue;
-        const item = normalizeRemote(row);
-        if (item.options.length === 4) incoming.push(item);
-      }
-      if (!rows || rows.length < 500) break;
-    }
-    const ids = new Set(target.map(item => String(item.id)));
-    for (const item of incoming) {
-      if (!ids.has(item.id)) { target.push(item); ids.add(item.id); }
-    }
-    if (typeof renderDashboard === "function" &&
-        document.querySelector("#view-root .grid.metrics")) {
-      renderDashboard();
-    }
+    if (!Array.isArray(target)) throw new Error("El banco local aún no está disponible.");
+    const incoming = (await remoteRows(options.force === true)).map(normalizeRemote);
+    reconcile(target, incoming);
+    loadedProfessions.clear();
+    for (const item of incoming) loadedProfessions.add(item.career);
+    if (typeof renderDashboard === "function" && document.querySelector("#view-root .grid.metrics")) renderDashboard();
+    window.dispatchEvent(new CustomEvent("serums:bank-updated", { detail: { loaded: incoming.length } }));
     return incoming.length;
   }
 
-  document.addEventListener("DOMContentLoaded", () => {
-    syncImportedCases().catch(error => {
-      console.error("Sincronización del lote importado:", error);
+  function refreshBank() {
+    return syncImportedCases().catch(error => {
+      console.error("Sincronización del banco:", error);
+      window.dispatchEvent(new CustomEvent("serums:bank-error", { detail: { message: error.message } }));
       const subtitle = document.getElementById("page-subtitle");
-      if (subtitle) subtitle.textContent += " No se pudo sincronizar el lote nuevo; recarga para reintentar.";
+      if (subtitle && !subtitle.textContent.includes("No se pudo sincronizar"))
+        subtitle.textContent += " No se pudo sincronizar el banco; se conserva la última carga.";
     });
-  });
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", refreshBank, { once: true });
+  else refreshBank();
+  window.addEventListener("focus", refreshBank);
+  window.addEventListener("online", refreshBank);
+  setInterval(() => { if (document.visibilityState === "visible") refreshBank(); }, CACHE_MS);
 
   window.SERUMS_BANK = Object.freeze({
     syncImportedCases,
+    isUsable,
     listProfessions,
     loadProfession,
     mergeProfession,
@@ -261,5 +259,6 @@
     isRemoteProfessionLoaded
   });
 })();
+
 
 
