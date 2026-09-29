@@ -3,534 +3,94 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>SIP SERUMS PERÚ · Flashcards</title>
+<title>SIP SERUMS PERÚ · 51 Flashcards visuales</title>
 <style>
-:root{--ink:#15324a;--blue:#176b87;--green:#287a67;--line:#d7e4e8;--muted:#667b84}
+:root{--ink:#15324a;--blue:#176b87;--green:#2f8f72;--line:#d8e5e8}
 *{box-sizing:border-box}
 body{margin:0;background:#edf3f4;color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
-header{background:#fff;border-bottom:1px solid var(--line);padding:14px 16px}
-.wrap{max-width:1080px;margin:auto}
-h1{font-size:20px;margin:0 0 4px} .sub{font-size:13px;color:var(--muted)}
-.controls{position:sticky;top:0;z-index:5;background:#edf3f4ee;backdrop-filter:blur(8px);padding:12px 0}
-.filters{display:grid;grid-template-columns:2fr 1fr 1fr;gap:8px}
-input,select{width:100%;min-height:44px;border:1px solid #c8d9de;border-radius:12px;background:#fff;padding:9px 11px;font:inherit;color:var(--ink)}
-.status{margin:8px 2px 0;font-size:13px;color:var(--muted)}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:16px;padding:2px 0 28px}
-.card{background:#fff;border:1px solid var(--line);border-radius:17px;overflow:hidden;box-shadow:0 5px 16px #173b4d12}
-.head{padding:12px 13px 9px}
-.num{font-weight:800;color:var(--blue);font-size:13px}
-.title{font-weight:800;font-size:18px;margin-top:2px}
-.tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:7px}
-.tag{font-size:11px;border-radius:999px;background:#eaf4f2;color:#245f53;padding:4px 8px}
-.card img{display:block;width:100%;height:auto;background:#f7f9fa}
-.foot{padding:9px 13px 12px;font-size:12px;color:var(--muted)}
-.empty{display:none;background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px;text-align:center}
-@media(max-width:700px){.wrap{padding:0 9px}.filters{grid-template-columns:1fr}.grid{grid-template-columns:1fr;gap:11px}}
+header{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid var(--line);padding:12px 16px}
+header strong{display:block;font-size:18px} header span{font-size:12px;color:#607782}
+main{max-width:1050px;margin:auto;padding:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 6px 18px #173b4d12}
+.card img{display:block;width:100%;height:auto;background:#f6f8f9}
+.meta{padding:10px 12px 13px}.meta b{color:var(--blue)}.meta small{display:block;color:#607782;margin-top:3px;overflow-wrap:anywhere}
+.notice{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px;margin-bottom:14px;font-size:14px}
+@media(max-width:600px){main{padding:8px}.grid{grid-template-columns:1fr;gap:10px}.card{border-radius:12px}}
 </style>
 </head>
 <body>
-<header><div class="wrap"><h1>SIP SERUMS PERÚ · Flashcards visuales</h1><div class="sub">51 tarjetas · búsqueda por título, eje y tema</div></div></header>
-<main class="wrap">
-<section class="controls" aria-label="Filtros de flashcards">
-<div class="filters">
-<input id="q" type="search" placeholder="Buscar: CRED, cobertura, PICO, ética..." autocomplete="off">
-<select id="eje"><option value="">Todos los ejes</option></select>
-<select id="tema"><option value="">Todos los temas</option></select>
-</div>
-<div id="status" class="status">Identificando y ordenando tarjetas…</div>
-</section>
+<header><strong>SIP SERUMS PERÚ · Flashcards visuales</strong><span id="count">Cargando…</span></header>
+<main>
+<div class="notice">Visor enlazado a las imágenes PNG reales de <b>flashcards/</b>. No requiere renombrar imágenes.</div>
 <div id="grid" class="grid"></div>
-<div id="empty" class="empty">No se encontraron flashcards con esos filtros.</div>
 </main>
 <script>
-const physicalFiles=[
-  "ChatGPT Image 28 sept 2026, 01_17_11 p.m..png",
-  "file_000000000340820e8695df365de381b6.png",
-  "file_000000000f4c820e818410f863b6a786.png",
-  "file_000000001cb4820e99bae7a2ef992644.png",
-  "file_000000001ed8820e9b312a3cd653924f.png",
-  "file_000000002014820e8dc6a688ba7c933e.png",
-  "file_000000002154820eaeff3ec0d5b414a6.png",
-  "file_00000000287c820e8b318f05f22440a0.png",
-  "file_000000002a00820e950f1ea761cf4fe9.png",
-  "file_000000003678820e9ea131be3a420d4b.png",
-  "file_0000000037cc820e8063c11b1f171abf.png",
-  "file_000000003894820ea9b668b049419500.png",
-  "file_000000003c54820e9fdae06468fe9acc.png",
-  "file_000000003ff8820e8e6aaafae0f12eb2.png",
-  "file_000000004280820ea004afec48182a86.png",
-  "file_00000000485c820eba35ac2ebcfeaaec.png",
-  "file_000000004b20820e94e353ab317b5cd0.png",
-  "file_000000004d30820e94fd3202e0ceb8d0.png",
-  "file_00000000640c820eb1c4fe235c3b4537.png",
-  "file_0000000065f8820ebd2367fe05990802.png",
-  "file_000000006778820ebfd541e6a10444fb.png",
-  "file_0000000069f8820e8587a12dfc8e687b.png",
-  "file_000000006e84820eb1496ecb81163157.png",
-  "file_000000007230820eb1a86a7556948009.png",
-  "file_000000007e18820e8216e5968dab9f9b.png",
-  "file_0000000088d4820e80323844a637c1a6.png",
-  "file_00000000892c820eade90a85eee2fa58.png",
-  "file_000000008e0c820ebb88adea5bd6ddb7.png",
-  "file_000000008eb0820e9df5611533abd8dd.png",
-  "file_000000008f20820e8543e00a91a33e20.png",
-  "file_000000009838820e9b320f89233b630f.png",
-  "file_00000000ab10820e9fbaa365647595f8.png",
-  "file_00000000b0a0820eafa62dfd01318821.png",
-  "file_00000000b594820e8623ad3e238b4754.png",
-  "file_00000000b744820e8fad08223b30dcac.png",
-  "file_00000000bbe4820eb7e80ed1ff667124.png",
-  "file_00000000c438820e9ece57f88169c196.png",
-  "file_00000000d180820eba9b9119eda7a46f.png",
-  "file_00000000d520820eae7f11d3d96bcd9d.png",
-  "file_00000000da18820eadb6a3646b953a70.png",
-  "file_00000000dd6c820eaaee660fb16188e6.png",
-  "file_00000000dd80820e9daa57929c067105.png",
-  "file_00000000dda0820eb056cf1963647edd.png",
-  "file_00000000dfd0820e85b114d30af3baf8.png",
-  "file_00000000e98c820e8b13a7c7872b1f20.png",
-  "file_00000000eb1c820eba7f2739f5b57bba.png",
-  "file_00000000ed20820e9bbe294128d6a75f.png",
-  "file_00000000f38c820e9b6a820508f801cc.png",
-  "file_00000000f4c8820eaaad0f3ba714b520.png",
-  "file_00000000f660820e858c6023559bf004.png",
-  "file_00000000fe8c820e8ac9581c8c069272.png"
+const flashcards = [
+  'ChatGPT Image 28 sept 2026, 01_17_11 p.m..png',
+  'file_000000000340820e8695df365de381b6.png',
+  'file_000000000f4c820e818410f863b6a786.png',
+  'file_000000001cb4820e99bae7a2ef992644.png',
+  'file_000000001ed8820e9b312a3cd653924f.png',
+  'file_000000002014820e8dc6a688ba7c933e.png',
+  'file_000000002154820eaeff3ec0d5b414a6.png',
+  'file_00000000287c820e8b318f05f22440a0.png',
+  'file_000000002a00820e950f1ea761cf4fe9.png',
+  'file_000000003678820e9ea131be3a420d4b.png',
+  'file_0000000037cc820e8063c11b1f171abf.png',
+  'file_000000003894820ea9b668b049419500.png',
+  'file_000000003c54820e9fdae06468fe9acc.png',
+  'file_000000003ff8820e8e6aaafae0f12eb2.png',
+  'file_000000004280820ea004afec48182a86.png',
+  'file_00000000485c820eba35ac2ebcfeaaec.png',
+  'file_000000004b20820e94e353ab317b5cd0.png',
+  'file_000000004d30820e94fd3202e0ceb8d0.png',
+  'file_00000000640c820eb1c4fe235c3b4537.png',
+  'file_0000000065f8820ebd2367fe05990802.png',
+  'file_000000006778820ebfd541e6a10444fb.png',
+  'file_0000000069f8820e8587a12dfc8e687b.png',
+  'file_000000006e84820eb1496ecb81163157.png',
+  'file_000000007230820eb1a86a7556948009.png',
+  'file_000000007e18820e8216e5968dab9f9b.png',
+  'file_0000000088d4820e80323844a637c1a6.png',
+  'file_00000000892c820eade90a85eee2fa58.png',
+  'file_000000008e0c820ebb88adea5bd6ddb7.png',
+  'file_000000008eb0820e9df5611533abd8dd.png',
+  'file_000000008f20820e8543e00a91a33e20.png',
+  'file_000000009838820e9b320f89233b630f.png',
+  'file_00000000ab10820e9fbaa365647595f8.png',
+  'file_00000000b0a0820eafa62dfd01318821.png',
+  'file_00000000b594820e8623ad3e238b4754.png',
+  'file_00000000b744820e8fad08223b30dcac.png',
+  'file_00000000bbe4820eb7e80ed1ff667124.png',
+  'file_00000000c438820e9ece57f88169c196.png',
+  'file_00000000d180820eba9b9119eda7a46f.png',
+  'file_00000000d520820eae7f11d3d96bcd9d.png',
+  'file_00000000da18820eadb6a3646b953a70.png',
+  'file_00000000dd6c820eaaee660fb16188e6.png',
+  'file_00000000dd80820e9daa57929c067105.png',
+  'file_00000000dda0820eb056cf1963647edd.png',
+  'file_00000000dfd0820e85b114d30af3baf8.png',
+  'file_00000000e98c820e8b13a7c7872b1f20.png',
+  'file_00000000eb1c820eba7f2739f5b57bba.png',
+  'file_00000000ed20820e9bbe294128d6a75f.png',
+  'file_00000000f38c820e9b6a820508f801cc.png',
+  'file_00000000f4c8820eaaad0f3ba714b520.png',
+  'file_00000000f660820e858c6023559bf004.png',
+  'file_00000000fe8c820e8ac9581c8c069272.png'
 ];
-const catalog=[
-  {
-    "n": 1,
-    "title": "¿Por qué enfermamos?",
-    "eje": "Salud Pública",
-    "topic": "salud publica por que enfermamos",
-    "hash": "319b58fac4bc99aeb883aecd3623f5c675c8a333390a520151bf63a4ebd8fa81"
-  },
-  {
-    "n": 2,
-    "title": "Atención Primaria",
-    "eje": "Cuidado Integral",
-    "topic": "cuidado integral de salud atencion primaria",
-    "hash": "6948f3aef073894ed94ff9fc5ce08841eb791489cd78874607117966209fe681"
-  },
-  {
-    "n": 3,
-    "title": "Cuatro principios",
-    "eje": "Ética e Interculturalidad",
-    "topic": "etica e interculturalidad cuatro principios",
-    "hash": "22751003c215b84da1f2686d7e1d8699f7b8a347f72b5abf3978104be1613357"
-  },
-  {
-    "n": 4,
-    "title": "Ciclo de gestión",
-    "eje": "Gestión",
-    "topic": "gestion de servicios de salud ciclo de gestion",
-    "hash": "4a9526c582d4b803956535db21e4a2957b025515492b79cb12562db7ee68301c"
-  },
-  {
-    "n": 5,
-    "title": "Pregunta PICO",
-    "eje": "Investigación",
-    "topic": "investigacion pregunta pico",
-    "hash": "2ccdb3bccbf42cabf340949582376f570f22983cc0ab9ddc71daa6a3df54b5de"
-  },
-  {
-    "n": 6,
-    "title": "Casos nuevos vs existentes",
-    "eje": "Salud Pública",
-    "topic": "salud publica casos nuevos vs existentes",
-    "hash": "e99ca26eb6f35d73921033dde43a9459c695dfc5aa76641f205f6930f7bd222c"
-  },
-  {
-    "n": 7,
-    "title": "Cuidado longitudinal",
-    "eje": "Cuidado Integral",
-    "topic": "cuidado integral de salud cuidado longitudinal",
-    "hash": "cef28be85d26f2ae6a9dec1eeb21a4415c56063b9ee7be2dc524c0c8b3b635b1"
-  },
-  {
-    "n": 8,
-    "title": "Decidir informado",
-    "eje": "Ética e Interculturalidad",
-    "topic": "etica e interculturalidad decidir informado",
-    "hash": "74a76a654f7c32b959dcd33101151fa22a330e2be697352d81eeb258210baf69"
-  },
-  {
-    "n": 9,
-    "title": "Cobertura",
-    "eje": "Gestión",
-    "topic": "gestion de servicios de salud cobertura",
-    "hash": "22f30bd0198de231275c66b6730257e4f80968f01733a6842fccf06a2362bc29"
-  },
-  {
-    "n": 10,
-    "title": "¿Es investigable?",
-    "eje": "Investigación",
-    "topic": "investigacion es investigable",
-    "hash": "f6a56aa4b750b904ed8ef26271989c14f09a74ccbbb3d7725209c294c8a1c1a3"
-  },
-  {
-    "n": 11,
-    "title": "Vigilancia es acción",
-    "eje": "Salud Pública",
-    "topic": "salud publica vigilancia es accion",
-    "hash": "bd10ec34924bc94c788338b4fd784772bc31bfb3c7c7b6219c0aade89977f2c1"
-  },
-  {
-    "n": 12,
-    "title": "CRED",
-    "eje": "Cuidado Integral",
-    "topic": "cuidado integral de salud cred",
-    "hash": "3f160fc2861acaf5648efa9f22e3130059f8ea7b6d92bb2e092a095fd3aea997"
-  },
-  {
-    "n": 13,
-    "title": "Información protegida",
-    "eje": "Ética e Interculturalidad",
-    "topic": "etica e interculturalidad informacion protegida",
-    "hash": "67f324ffd8a9b54ff84fb6dd48b7305450f2b466d77cd22ace60f2d42f58d9a5"
-  },
-  {
-    "n": 14,
-    "title": "Calidad asistencial",
-    "eje": "Gestión",
-    "topic": "gestion de servicios de salud calidad asistencial",
-    "hash": "10798a7f726b9e61d3e91f331c514f47f785fc6265bb895109ba98f5f4a1fd56"
-  },
-  {
-    "n": 15,
-    "title": "Describir antes de explicar",
-    "eje": "Investigación",
-    "topic": "investigacion describir antes de explicar",
-    "hash": "451f6f2f70464194135f46b2e7c20167c40a40fa3c04bccf4b7f9f65384cbc00"
-  },
-  {
-    "n": 16,
-    "title": "Romper la cadena",
-    "eje": "Salud Pública",
-    "topic": "salud publica romper la cadena",
-    "hash": "c81d61acb7f18f960fdd5c55ab679ae2774483c9445a7e41bcfd7f7db9721f84"
-  },
-  {
-    "n": 17,
-    "title": "Alarma materna",
-    "eje": "Cuidado Integral",
-    "topic": "cuidado integral de salud alarma materna",
-    "hash": "df8050c51ca5d11f5abef4077c2fda920aae44e099be1e3287c4fcc9d8bbc656"
-  },
-  {
-    "n": 18,
-    "title": "Comprender antes de indicar",
-    "eje": "Ética e Interculturalidad",
-    "topic": "etica e interculturalidad comprender antes de indicar",
-    "hash": "3c230752fa846f065773024012f3cab3472e4a30e440137941341f92681e298c"
-  },
-  {
-    "n": 19,
-    "title": "Del plan a la acción",
-    "eje": "Gestión",
-    "topic": "gestion de servicios de salud del plan a la accion",
-    "hash": "64913b5fa113318afd5047a6cfbee358082b7ea0a872c8ee804d72c17040dfa9"
-  },
-  {
-    "n": 20,
-    "title": "Comparar grupos",
-    "eje": "Investigación",
-    "topic": "investigacion comparar grupos",
-    "hash": "c3d032eee6aae9e485f8bd2afc9eed101ec8a82ec033957da5bf599f3d24ad82"
-  },
-  {
-    "n": 21,
-    "title": "Promover ≠ prevenir",
-    "eje": "Salud Pública",
-    "topic": "salud publica promover prevenir",
-    "hash": "490277ed0ad33f16f6de0a570fef88c3897f4f7e10fed80c77d7639bdafae73e"
-  },
-  {
-    "n": 22,
-    "title": "Elección informada",
-    "eje": "Cuidado Integral",
-    "topic": "cuidado integral de salud eleccion informada",
-    "hash": "466645df24c81a40d7da48bd462d84615d78a9af0cf0a99fa7d6272af4030c50"
-  },
-  {
-    "n": 23,
-    "title": "Equidad no es igualdad",
-    "eje": "Ética e Interculturalidad",
-    "topic": "etica e interculturalidad equidad no es igualdad",
-    "hash": "ca095914cf04b2ecde2dca0f4768a631ca6f0e6be723620615891d00f8c77cea"
-  },
-  {
-    "n": 24,
-    "title": "Disponibilidad segura",
-    "eje": "Gestión",
-    "topic": "gestion de servicios de salud disponibilidad segura",
-    "hash": "b9980b6e023b14c23bc48c7aad15fce8f54d7d2845c4ed037fa5339a0c6e46bb"
-  },
-  {
-    "n": 25,
-    "title": "Intervenir y comparar",
-    "eje": "Investigación",
-    "topic": "investigacion intervenir y comparar",
-    "hash": "ba66e7a2229e8adc5ac9182ff05b7a9cfe5bdb2a351bc166a59090c7a7118570"
-  },
-  {
-    "n": 26,
-    "title": "Cobertura vacunal",
-    "eje": "Salud Pública",
-    "topic": "salud publica cobertura vacunal",
-    "hash": "f53068c2c2ee24e24bc497857922ca5ee7e7f74e1a3073857ff309accc3e6d38"
-  },
-  {
-    "n": 27,
-    "title": "Riesgo cardiovascular",
-    "eje": "Cuidado Integral",
-    "topic": "cuidado integral de salud riesgo cardiovascular",
-    "hash": "bc1e54d237a4a04a26d1ddf303d0c516228e32756c185f4f9dcf9726bc21ecdc"
-  },
-  {
-    "n": 28,
-    "title": "Evitar daño",
-    "eje": "Ética e Interculturalidad",
-    "topic": "etica e interculturalidad evitar dano",
-    "hash": "d415b7bbf255a44de7593dd9965a63017d088b52b8099dcf843acf9840b7a0ce"
-  },
-  {
-    "n": 29,
-    "title": "Dato útil",
-    "eje": "Gestión",
-    "topic": "gestion de servicios de salud dato util",
-    "hash": "594add1894f7bfaecf9d6ff97e3ad674550171a08120e104e3ee8cd71c3a8737"
-  },
-  {
-    "n": 30,
-    "title": "Del universo a la muestra",
-    "eje": "Investigación",
-    "topic": "investigacion del universo a la muestra",
-    "hash": "87a094a8dcfed757db795ec36c77c0ac70dc192bd90cf9fad91226af2fac754b"
-  },
-  {
-    "n": 31,
-    "title": "Más casos de lo esperado",
-    "eje": "Salud Pública",
-    "topic": "salud publica mas casos de lo esperado",
-    "hash": "7cadac8ecc7e3f8b9921bea007e292b538b918b81bdee3080efaf96e2381420c"
-  },
-  {
-    "n": 32,
-    "title": "Detectar y conectar",
-    "eje": "Cuidado Integral",
-    "topic": "cuidado integral de salud detectar y conectar",
-    "hash": "8f01eb7d5ff98eb0e16b0630671e2dc1d9fe4205524687d6fa6dc312dc63ace5"
-  },
-  {
-    "n": 33,
-    "title": "Barreras invisibles",
-    "eje": "Ética e Interculturalidad",
-    "topic": "etica e interculturalidad barreras invisibles",
-    "hash": "fd21f42d0c7befe9cb2c7f6d038dbfda68d3f3a287adb9e603456e16126dc5b9"
-  },
-  {
-    "n": 34,
-    "title": "Aprender del riesgo",
-    "eje": "Gestión",
-    "topic": "gestion de servicios de salud aprender del riesgo",
-    "hash": "e0823b4f3b042a3393238a0e9841b805dcc57cdc3fea47416a59b8b06ec7a779"
-  },
-  {
-    "n": 35,
-    "title": "Seleccionar participantes",
-    "eje": "Investigación",
-    "topic": "investigacion seleccionar participantes",
-    "hash": "3fabc1125c9103166d924ef7fe0648ea8a9968bd52369e4c73d4d96564529528"
-  },
-  {
-    "n": 36,
-    "title": "Ambiente y salud",
-    "eje": "Salud Pública",
-    "topic": "salud publica ambiente y salud",
-    "hash": "e0731ba0b8a22aa4bc834cf09ba8a3480b8173b00c5dc69b5cedb6d8816d73cb"
-  },
-  {
-    "n": 37,
-    "title": "Referir con criterio",
-    "eje": "Cuidado Integral",
-    "topic": "cuidado integral de salud referir con criterio",
-    "hash": "c17b737cb02fec9b9e3dc6e5bb2a42533f65de92bcb0a863bb31fc54e59fa595"
-  },
-  {
-    "n": 38,
-    "title": "Decisión del usuario",
-    "eje": "Ética e Interculturalidad",
-    "topic": "etica e interculturalidad decision del usuario",
-    "hash": "3f324a9c5824b4c69ea7d5296aa2e859857709f17b688befc2ab0b838dc5a374"
-  },
-  {
-    "n": 39,
-    "title": "Equipo adecuado",
-    "eje": "Gestión",
-    "topic": "gestion de servicios de salud equipo adecuado",
-    "hash": "7913833829074d354866345d9acacb678155ab06b1a81beea13fbd7a4c8c0ca5"
-  },
-  {
-    "n": 40,
-    "title": "Lo que medimos",
-    "eje": "Investigación",
-    "topic": "investigacion lo que medimos",
-    "hash": "bacab88a0b5537b5cbeec02d8245a2e1c70350b1cdb86633f2f9df9cfa538f69"
-  },
-  {
-    "n": 41,
-    "title": "Brechas sanitarias",
-    "eje": "Salud Pública",
-    "topic": "salud publica brechas sanitarias",
-    "hash": "5099630ed553b639a37c362d64d99855e3d339c37ca0e063d3ab01de3b41f8d4"
-  },
-  {
-    "n": 42,
-    "title": "Primero lo vital",
-    "eje": "Cuidado Integral",
-    "topic": "cuidado integral de salud primero lo vital",
-    "hash": "557b9fbc15a55ac79e63d404cadd58a553c8cccbb82d5fdc74616b8a0a0e6368"
-  },
-  {
-    "n": 43,
-    "title": "Cuidado culturalmente pertinente",
-    "eje": "Ética e Interculturalidad",
-    "topic": "etica e interculturalidad cuidado culturalmente pertinente",
-    "hash": "9e29a9ac445caa67600f9fb23803cae56d135ea7f2721d7eaccbe6c4fdfe0a0c"
-  },
-  {
-    "n": 44,
-    "title": "Red, no islas",
-    "eje": "Gestión",
-    "topic": "gestion de servicios de salud red no islas",
-    "hash": "ff43510e8607d3c387092093683d1dcd9b351809ad0dde34a5593a14b92ce0a2"
-  },
-  {
-    "n": 45,
-    "title": "Nominal u ordinal",
-    "eje": "Investigación",
-    "topic": "investigacion nominal u ordinal",
-    "hash": "9302eaccf10dd1391059d9acb41e6b250a3dfcca1a4ff3ffa28c77aee5e972f3"
-  },
-  {
-    "n": 46,
-    "title": "Control basado en transmisión",
-    "eje": "Salud Pública",
-    "topic": "salud publica control basado en transmision",
-    "hash": "f918cfefd5ae0682b8c9b0f4532bb1ba940de35336e8e4b838efbcca1dd8adec"
-  },
-  {
-    "n": 47,
-    "title": "Volver con información",
-    "eje": "Cuidado Integral",
-    "topic": "cuidado integral de salud volver con informacion",
-    "hash": "e10109a568344176289a1588f3797c15d3a7c0ec70612cf73b3cf93b6c001d4e"
-  },
-  {
-    "n": 48,
-    "title": "Ciencia con protección",
-    "eje": "Ética e Interculturalidad",
-    "topic": "etica e interculturalidad ciencia con proteccion",
-    "hash": "7aa10d06c8198b3b3cdd089a807dd55b233b77621a4cc21fadd21fb415ec359d"
-  },
-  {
-    "n": 49,
-    "title": "Recursos y resultados",
-    "eje": "Gestión",
-    "topic": "gestion de servicios de salud recursos y resultados",
-    "hash": "1195b632c1b62bb330e2b9a28da208f69344b6985553c8de1c368dd7f64e6537"
-  },
-  {
-    "n": 50,
-    "title": "De evidencia a decisión",
-    "eje": "Investigación",
-    "topic": "investigacion de evidencia a decision",
-    "hash": "edbf84f623977403feb49cc288cfb8eb4eecfe3131f9c9d39c2619af19298f76"
-  },
-  {
-    "n": 51,
-    "title": "Salud Pública y Gestión de Salud",
-    "eje": "Salud Pública",
-    "topic": "diferencias entre salud pública y gestión de salud",
-    "hash": null
-  }
-];
-
-const normalize=s=>(s||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
-async function sha256(url){
-  const r=await fetch(url);
-  if(!r.ok) throw new Error("No se pudo cargar "+url);
-  const b=await r.arrayBuffer();
-  const h=await crypto.subtle.digest("SHA-256",b);
-  return [...new Uint8Array(h)].map(x=>x.toString(16).padStart(2,"0")).join("");
-}
-async function build(){
-  const byHash=new Map(catalog.filter(x=>x.hash).map(x=>[x.hash,x]));
-  const found=[], unmatched=[];
-  for(const file of physicalFiles){
-    try{
-      const url="flashcards/"+encodeURIComponent(file);
-      const hash=await sha256(url);
-      const m=byHash.get(hash);
-      if(m) found.push({...m,file});
-      else unmatched.push(file);
-    }catch(e){ unmatched.push(file); }
-  }
-  // La única tarjeta fuera del ZIP maestro de 50 corresponde a la ficha 51.
-  if(unmatched.length===1){
-    const m=catalog.find(x=>x.n===51);
-    found.push({...m,file:unmatched[0]});
-  }
-  found.sort((a,b)=>a.n-b.n);
-  window.cards=found;
-  setupFilters(found);
-  render();
-  const missing=51-found.length;
-  document.getElementById("status").textContent=missing
-    ? `${found.length} identificadas · ${missing} pendiente(s) de asociación`
-    : "51 tarjetas identificadas y ordenadas";
-}
-function setupFilters(cards){
-  const eje=document.getElementById("eje"), tema=document.getElementById("tema");
-  [...new Set(cards.map(x=>x.eje))].sort().forEach(v=>eje.add(new Option(v,v)));
-  function refill(){
-    const selected=eje.value;
-    const current=tema.value;
-    tema.innerHTML='<option value="">Todos los temas</option>';
-    cards.filter(x=>!selected||x.eje===selected).sort((a,b)=>a.n-b.n)
-      .forEach(x=>tema.add(new Option(`${String(x.n).padStart(2,"0")} · ${x.title}`,String(x.n))));
-    if([...tema.options].some(o=>o.value===current)) tema.value=current;
-  }
-  eje.addEventListener("change",()=>{refill();render();});
-  tema.addEventListener("change",render);
-  document.getElementById("q").addEventListener("input",render);
-  refill();
-}
-function render(){
-  const cards=window.cards||[];
-  const q=normalize(document.getElementById("q").value);
-  const eje=document.getElementById("eje").value;
-  const tema=document.getElementById("tema").value;
-  const list=cards.filter(x=>{
-    const hay=normalize(`${x.n} ${x.title} ${x.eje} ${x.topic}`);
-    return (!q||hay.includes(q))&&(!eje||x.eje===eje)&&(!tema||String(x.n)===tema);
-  });
-  const grid=document.getElementById("grid"); grid.replaceChildren();
-  list.forEach(x=>{
-    const article=document.createElement("article"); article.className="card";
-    const head=document.createElement("div"); head.className="head";
-    const num=document.createElement("div"); num.className="num"; num.textContent=`${String(x.n).padStart(2,"0")} · ${x.eje}`;
-    const title=document.createElement("div"); title.className="title"; title.textContent=x.title;
-    const tags=document.createElement("div"); tags.className="tags";
-    const tag=document.createElement("span"); tag.className="tag"; tag.textContent=x.eje; tags.append(tag);
-    head.append(num,title,tags);
-    const img=document.createElement("img"); img.src="flashcards/"+encodeURIComponent(x.file); img.alt=`${x.n}. ${x.title}`; img.loading="lazy"; img.decoding="async";
-    const foot=document.createElement("div"); foot.className="foot"; foot.textContent="Fundamento oficial: vínculo documental pendiente de incorporación verificada.";
-    article.append(head,img,foot); grid.append(article);
-  });
-  document.getElementById("empty").style.display=list.length?"none":"block";
-}
-build().catch(e=>{document.getElementById("status").textContent="Error al identificar las tarjetas: "+e.message;});
+const grid = document.getElementById('grid');
+document.getElementById('count').textContent = `${flashcards.length} fichas disponibles`;
+flashcards.forEach((name,index)=>{
+  const card=document.createElement('article'); card.className='card';
+  const img=document.createElement('img');
+  img.src='flashcards/'+encodeURIComponent(name).replace(/%2F/g,'/');
+  img.alt=`Flashcard ${index+1}`; img.loading='lazy'; img.decoding='async';
+  const meta=document.createElement('div'); meta.className='meta';
+  const b=document.createElement('b'); b.textContent=`Ficha ${String(index+1).padStart(2,'0')}`;
+  const small=document.createElement('small'); small.textContent=name;
+  meta.append(b,small); card.append(img,meta); grid.append(card);
+});
 </script>
 </body>
 </html>
