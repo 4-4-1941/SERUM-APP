@@ -14,221 +14,83 @@ main{max-width:1050px;margin:auto;padding:14px}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
 .card{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 6px 18px #173b4d12}
 .card img{display:block;width:100%;height:auto;background:#f6f8f9}
-.meta{padding:10px 12px 13px}.meta b{color:var(--blue)}.meta small{display:block;color:#607782;margin-top:3px}
+.meta{padding:10px 12px 13px}.meta b{color:var(--blue)}.meta small{display:block;color:#607782;margin-top:3px;overflow-wrap:anywhere}
 .notice{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px;margin-bottom:14px;font-size:14px}
 @media(max-width:600px){main{padding:8px}.grid{grid-template-columns:1fr;gap:10px}.card{border-radius:12px}}
 </style>
 </head>
 <body>
-<header><strong>SIP SERUMS PERÚ</strong><span>51 flashcards visuales · material de apoyo</span></header>
+<header><strong>SIP SERUMS PERÚ · Flashcards visuales</strong><span id="count">Cargando…</span></header>
 <main>
-<div class="notice">Las imágenes se cargan desde la carpeta <b>flashcards</b>. No modifica app.js, data.js ni core.</div>
-<div class="grid">
-<article class="card" id="flashcard-001">
-<img src="flashcards/01-salud-publica-por-que-enfermamos.png" alt="Flashcard 1: Salud Publica Por Que Enfermamos" loading="lazy">
-<div class="meta"><b>01. Salud Publica Por Que Enfermamos</b><small>SIP SERUMS PERÚ</small></div>
-</article>
-<article class="card" id="flashcard-002">
-<img src="flashcards/02-cuidado-integral-de-salud-atencion-primaria.png" alt="Flashcard 2: Cuidado Integral De Salud Atencion Primaria" loading="lazy">
-<div class="meta"><b>02. Cuidado Integral De Salud Atencion Primaria</b><small>SIP SERUMS PERÚ</small></div>
-</article>
-<article class="card" id="flashcard-003">
-<img src="flashcards/03-etica-e-interculturalidad-cuatro-principios.png" alt="Flashcard 3: Etica E Interculturalidad Cuatro Principios" loading="lazy">
-<div class="meta"><b>03. Etica E Interculturalidad Cuatro Principios</b><small>SIP SERUMS PERÚ</small></div>
-</article>
-<article class="card" id="flashcard-004">
-<img src="flashcards/04-gestion-de-servicios-de-salud-ciclo-de-gestion.png" alt="Flashcard 4: Gestion De Servicios De Salud Ciclo De Gestion" loading="lazy">
-<div class="meta"><b>04. Gestion De Servicios De Salud Ciclo De Gestion</b><small>SIP SERUMS PERÚ</small></div>
-</article>
-<article class="card" id="flashcard-005">
-<img src="flashcards/05-investigacion-pregunta-pico.png" alt="Flashcard 5: Investigacion Pregunta Pico" loading="lazy">
-<div class="meta"><b>05. Investigacion Pregunta Pico</b><small>SIP SERUMS PERÚ</small></div>
-</article>
-<article class="card" id="flashcard-006">
-<img src="flashcards/06-salud-publica-casos-nuevos-vs-existentes.png" alt="Flashcard 6: Salud Publica Casos Nuevos Vs Existentes" loading="lazy">
-<div class="meta"><b>06. Salud Publica Casos Nuevos Vs Existentes</b><small>SIP SERUMS PERÚ</small></div>
-</article>
-<article class="card" id="flashcard-007">
-<img src="flashcards/07-cuidado-integral-de-salud-cuidado-longitudinal.png" alt="Flashcard 7: Cuidado Integral De Salud Cuidado Longitudinal" loading="lazy">
-<div class="meta"><b>07. Cuidado Integral De Salud Cuidado Longitudinal</b><small>SIP SERUMS PERÚ</small></div>
-</article>
-<article class="card" id="flashcard-008">
-<img src="flashcards/08-etica-e-interculturalidad-decidir-informado.png" alt="Flashcard 8: Etica E Interculturalidad Decidir Informado" loading="lazy">
-<div class="meta"><b>08. Etica E Interculturalidad Decidir Informado</b><small>SIP SERUMS PERÚ</small></div>
-</article>
-<article class="card" id="flashcard-009">
-<img src="flashcards/09-gestion-de-servicios-de-salud-cobertura.png" alt="Flashcard 9: Gestion De Servicios De Salud Cobertura" loading="lazy">
-<div class="meta"><b>09. Gestion De Servicios De Salud Cobertura</b><small>SIP SERUMS PERÚ</small></div>
-</article>
-<article class="card" id="flashcard-010">
-<img src="flashcards/10-investigacion-es-investigable.png" alt="Flashcard 10: Investigacion Es Investigable" loading="lazy">
-<div class="meta"><b>10. Investigacion Es Investigable</b><small>SIP SERUMS PERÚ</small></div>
-</article>
-<article class="card" id="flashcard-011">
-<img src="flashcards/11-salud-publica-vigilancia-es-accion.png" alt="Flashcard 11: Salud Publica Vigilancia Es Accion" loading="lazy">
-<div class="meta"><b>11. Salud Publica Vigilancia Es Accion</b><small>SIP SERUMS PERÚ</small></div>
-</article>
-<article class="card" id="flashcard-012">
-<img src="flashcards/12-cuidado-integral-de-salud-cred.png" alt="Flashcard 12: Cuidado Integral De Salud Cred" loading="lazy">
-<div class="meta"><b>12. Cuidado Integral De Salud Cred</b><small>SIP SERUMS PERÚ</small></div>
-</article>
-<article class="card" id="flashcard-013">
-<img src="flashcards/13-etica-e-interculturalidad-informacion-protegida.png" alt="Flashcard 13: Etica E Interculturalidad Informacion Protegida" loading="lazy">
-<div class="meta"><b>13. Etica E Interculturalidad Informacion Protegida</b><small>SIP SERUMS PERÚ</small></div>
-</article>
-<article class="card" id="flashcard-014">
-<img src="flashcards/14-gestion-de-servicios-de-salud-calidad-asistencial.png" alt="Flashcard 14: Gestion De Servicios De Salud Calidad Asistencial" loading="lazy">
-<div class="meta"><b>14. Gestion De Servicios De Salud Calidad Asistencial</b><small>SIP SERUMS PERÚ</small></div>
-</article>
-<article class="card" id="flashcard-015">
-<img src="flashcards/15-investigacion-describir-antes-de-explicar.png" alt="Flashcard 15: Investigacion Describir Antes De Explicar" loading="lazy">
-<div class="meta"><b>15. Investigacion Describir Antes De Explicar</b><small>SIP SERUMS PERÚ</small></div>
-</article>
-<article class="card" id="flashcard-016">
-<img src="flashcards/16-salud-publica-romper-la-cadena.png" alt="Flashcard 16: Salud Publica Romper La Cadena" loading="lazy">
-<div class="meta"><b>16. Salud Publica Romper La Cadena</b><small>SIP SERUMS PERÚ</small></div>
-</article>
-<article class="card" id="flashcard-017">
-<img src="flashcards/17-cuidado-integral-de-salud-alarma-materna.png" alt="Flashcard 17: Cuidado Integral De Salud Alarma Materna" loading="lazy">
-<div class="meta"><b>17. Cuidado Integral De Salud Alarma Materna</b><small>SIP SERUMS PERÚ</small></div>
-</article>
-<article class="card" id="flashcard-018">
-<img src="flashcards/18-etica-e-interculturalidad-comprender-antes-de-indicar.png" alt="Flashcard 18: Etica E Interculturalidad Comprender Antes De Indicar" loading="lazy">
-<div class="meta"><b>18. Etica E Interculturalidad Comprender Antes De Indicar</b><small>SIP SERUMS PERÚ</small></div>
-</article>
-<article class="card" id="flashcard-019">
-<img src="flashcards/19-gestion-de-servicios-de-salud-del-plan-a-la-accion.png" alt="Flashcard 19: Gestion De Servicios De Salud Del Plan A La Accion" loading="lazy">
-<div class="meta"><b>19. Gestion De Servicios De Salud Del Plan A La Accion</b><small>SIP SERUMS PERÚ</small></div>
-</article>
-<article class="card" id="flashcard-020">
-<img src="flashcards/20-investigacion-comparar-grupos.png" alt="Flashcard 20: Investigacion Comparar Grupos" loading="lazy">
-<div class="meta"><b>20. Investigacion Comparar Grupos</b><small>SIP SERUMS PERÚ</small></div>
-</article>
-<article class="card" id="flashcard-021">
-<img src="flashcards/21-salud-publica-promover-prevenir.png" alt="Flashcard 21: Salud Publica Promover Prevenir" loading="lazy">
-<div class="meta"><b>21. Salud Publica Promover Prevenir</b><small>SIP SERUMS PERÚ</small></div>
-</article>
-<article class="card" id="flashcard-022">
-<img src="flashcards/22-cuidado-integral-de-salud-eleccion-informada.png" alt="Flashcard 22: Cuidado Integral De Salud Eleccion Informada" loading="lazy">
-<div class="meta"><b>22. Cuidado Integral De Salud Eleccion Informada</b><small>SIP SERUMS PERÚ</small></div>
-</article>
-<article class="card" id="flashcard-023">
-<img src="flashcards/23-etica-e-interculturalidad-equidad-no-es-igualdad.png" alt="Flashcard 23: Etica E Interculturalidad Equidad No Es Igualdad" loading="lazy">
-<div class="meta"><b>23. Etica E Interculturalidad Equidad No Es Igualdad</b><small>SIP SERUMS PERÚ</small></div>
-</article>
-<article class="card" id="flashcard-024">
-<img src="flashcards/24-gestion-de-servicios-de-salud-disponibilidad-segura.png" alt="Flashcard 24: Gestion De Servicios De Salud Disponibilidad Segura" loading="lazy">
-<div class="meta"><b>24. Gestion De Servicios De Salud Disponibilidad Segura</b><small>SIP SERUMS PERÚ</small></div>
-</article>
-<article class="card" id="flashcard-025">
-<img src="flashcards/25-investigacion-intervenir-y-comparar.png" alt="Flashcard 25: Investigacion Intervenir Y Comparar" loading="lazy">
-<div class="meta"><b>25. Investigacion Intervenir Y Comparar</b><small>SIP SERUMS PERÚ</small></div>
-</article>
-<article class="card" id="flashcard-026">
-<img src="flashcards/26-salud-publica-cobertura-vacunal.png" alt="Flashcard 26: Salud Publica Cobertura Vacunal" loading="lazy">
-<div class="meta"><b>26. Salud Publica Cobertura Vacunal</b><small>SIP SERUMS PERÚ</small></div>
-</article>
-<article class="card" id="flashcard-027">
-<img src="flashcards/27-cuidado-integral-de-salud-riesgo-cardiovascular.png" alt="Flashcard 27: Cuidado Integral De Salud Riesgo Cardiovascular" loading="lazy">
-<div class="meta"><b>27. Cuidado Integral De Salud Riesgo Cardiovascular</b><small>SIP SERUMS PERÚ</small></div>
-</article>
-<article class="card" id="flashcard-028">
-<img src="flashcards/28-etica-e-interculturalidad-evitar-dano.png" alt="Flashcard 28: Etica E Interculturalidad Evitar Dano" loading="lazy">
-<div class="meta"><b>28. Etica E Interculturalidad Evitar Dano</b><small>SIP SERUMS PERÚ</small></div>
-</article>
-<article class="card" id="flashcard-029">
-<img src="flashcards/29-gestion-de-servicios-de-salud-dato-util.png" alt="Flashcard 29: Gestion De Servicios De Salud Dato Util" loading="lazy">
-<div class="meta"><b>29. Gestion De Servicios De Salud Dato Util</b><small>SIP SERUMS PERÚ</small></div>
-</article>
-<article class="card" id="flashcard-030">
-<img src="flashcards/30-investigacion-del-universo-a-la-muestra.png" alt="Flashcard 30: Investigacion Del Universo A La Muestra" loading="lazy">
-<div class="meta"><b>30. Investigacion Del Universo A La Muestra</b><small>SIP SERUMS PERÚ</small></div>
-</article>
-<article class="card" id="flashcard-031">
-<img src="flashcards/31-salud-publica-mas-casos-de-lo-esperado.png" alt="Flashcard 31: Salud Publica Mas Casos De Lo Esperado" loading="lazy">
-<div class="meta"><b>31. Salud Publica Mas Casos De Lo Esperado</b><small>SIP SERUMS PERÚ</small></div>
-</article>
-<article class="card" id="flashcard-032">
-<img src="flashcards/32-cuidado-integral-de-salud-detectar-y-conectar.png" alt="Flashcard 32: Cuidado Integral De Salud Detectar Y Conectar" loading="lazy">
-<div class="meta"><b>32. Cuidado Integral De Salud Detectar Y Conectar</b><small>SIP SERUMS PERÚ</small></div>
-</article>
-<article class="card" id="flashcard-033">
-<img src="flashcards/33-etica-e-interculturalidad-barreras-invisibles.png" alt="Flashcard 33: Etica E Interculturalidad Barreras Invisibles" loading="lazy">
-<div class="meta"><b>33. Etica E Interculturalidad Barreras Invisibles</b><small>SIP SERUMS PERÚ</small></div>
-</article>
-<article class="card" id="flashcard-034">
-<img src="flashcards/34-gestion-de-servicios-de-salud-aprender-del-riesgo.png" alt="Flashcard 34: Gestion De Servicios De Salud Aprender Del Riesgo" loading="lazy">
-<div class="meta"><b>34. Gestion De Servicios De Salud Aprender Del Riesgo</b><small>SIP SERUMS PERÚ</small></div>
-</article>
-<article class="card" id="flashcard-035">
-<img src="flashcards/35-investigacion-seleccionar-participantes.png" alt="Flashcard 35: Investigacion Seleccionar Participantes" loading="lazy">
-<div class="meta"><b>35. Investigacion Seleccionar Participantes</b><small>SIP SERUMS PERÚ</small></div>
-</article>
-<article class="card" id="flashcard-036">
-<img src="flashcards/36-salud-publica-ambiente-y-salud.png" alt="Flashcard 36: Salud Publica Ambiente Y Salud" loading="lazy">
-<div class="meta"><b>36. Salud Publica Ambiente Y Salud</b><small>SIP SERUMS PERÚ</small></div>
-</article>
-<article class="card" id="flashcard-037">
-<img src="flashcards/37-cuidado-integral-de-salud-referir-con-criterio.png" alt="Flashcard 37: Cuidado Integral De Salud Referir Con Criterio" loading="lazy">
-<div class="meta"><b>37. Cuidado Integral De Salud Referir Con Criterio</b><small>SIP SERUMS PERÚ</small></div>
-</article>
-<article class="card" id="flashcard-038">
-<img src="flashcards/38-etica-e-interculturalidad-decision-del-usuario.png" alt="Flashcard 38: Etica E Interculturalidad Decision Del Usuario" loading="lazy">
-<div class="meta"><b>38. Etica E Interculturalidad Decision Del Usuario</b><small>SIP SERUMS PERÚ</small></div>
-</article>
-<article class="card" id="flashcard-039">
-<img src="flashcards/39-gestion-de-servicios-de-salud-equipo-adecuado.png" alt="Flashcard 39: Gestion De Servicios De Salud Equipo Adecuado" loading="lazy">
-<div class="meta"><b>39. Gestion De Servicios De Salud Equipo Adecuado</b><small>SIP SERUMS PERÚ</small></div>
-</article>
-<article class="card" id="flashcard-040">
-<img src="flashcards/40-investigacion-lo-que-medimos.png" alt="Flashcard 40: Investigacion Lo Que Medimos" loading="lazy">
-<div class="meta"><b>40. Investigacion Lo Que Medimos</b><small>SIP SERUMS PERÚ</small></div>
-</article>
-<article class="card" id="flashcard-041">
-<img src="flashcards/41-salud-publica-brechas-sanitarias.png" alt="Flashcard 41: Salud Publica Brechas Sanitarias" loading="lazy">
-<div class="meta"><b>41. Salud Publica Brechas Sanitarias</b><small>SIP SERUMS PERÚ</small></div>
-</article>
-<article class="card" id="flashcard-042">
-<img src="flashcards/42-cuidado-integral-de-salud-primero-lo-vital.png" alt="Flashcard 42: Cuidado Integral De Salud Primero Lo Vital" loading="lazy">
-<div class="meta"><b>42. Cuidado Integral De Salud Primero Lo Vital</b><small>SIP SERUMS PERÚ</small></div>
-</article>
-<article class="card" id="flashcard-043">
-<img src="flashcards/43-etica-e-interculturalidad-cuidado-culturalmente-pertinente.png" alt="Flashcard 43: Etica E Interculturalidad Cuidado Culturalmente Pertinente" loading="lazy">
-<div class="meta"><b>43. Etica E Interculturalidad Cuidado Culturalmente Pertinente</b><small>SIP SERUMS PERÚ</small></div>
-</article>
-<article class="card" id="flashcard-044">
-<img src="flashcards/44-gestion-de-servicios-de-salud-red-no-islas.png" alt="Flashcard 44: Gestion De Servicios De Salud Red No Islas" loading="lazy">
-<div class="meta"><b>44. Gestion De Servicios De Salud Red No Islas</b><small>SIP SERUMS PERÚ</small></div>
-</article>
-<article class="card" id="flashcard-045">
-<img src="flashcards/45-investigacion-nominal-u-ordinal.png" alt="Flashcard 45: Investigacion Nominal U Ordinal" loading="lazy">
-<div class="meta"><b>45. Investigacion Nominal U Ordinal</b><small>SIP SERUMS PERÚ</small></div>
-</article>
-<article class="card" id="flashcard-046">
-<img src="flashcards/46-salud-publica-control-basado-en-transmision.png" alt="Flashcard 46: Salud Publica Control Basado En Transmision" loading="lazy">
-<div class="meta"><b>46. Salud Publica Control Basado En Transmision</b><small>SIP SERUMS PERÚ</small></div>
-</article>
-<article class="card" id="flashcard-047">
-<img src="flashcards/47-cuidado-integral-de-salud-volver-con-informacion.png" alt="Flashcard 47: Cuidado Integral De Salud Volver Con Informacion" loading="lazy">
-<div class="meta"><b>47. Cuidado Integral De Salud Volver Con Informacion</b><small>SIP SERUMS PERÚ</small></div>
-</article>
-<article class="card" id="flashcard-048">
-<img src="flashcards/48-etica-e-interculturalidad-ciencia-con-proteccion.png" alt="Flashcard 48: Etica E Interculturalidad Ciencia Con Proteccion" loading="lazy">
-<div class="meta"><b>48. Etica E Interculturalidad Ciencia Con Proteccion</b><small>SIP SERUMS PERÚ</small></div>
-</article>
-<article class="card" id="flashcard-049">
-<img src="flashcards/49-gestion-de-servicios-de-salud-recursos-y-resultados.png" alt="Flashcard 49: Gestion De Servicios De Salud Recursos Y Resultados" loading="lazy">
-<div class="meta"><b>49. Gestion De Servicios De Salud Recursos Y Resultados</b><small>SIP SERUMS PERÚ</small></div>
-</article>
-<article class="card" id="flashcard-050">
-<img src="flashcards/50-investigacion-de-evidencia-a-decision.png" alt="Flashcard 50: Investigacion De Evidencia A Decision" loading="lazy">
-<div class="meta"><b>50. Investigacion De Evidencia A Decision</b><small>SIP SERUMS PERÚ</small></div>
-</article>
-<article class="card" id="flashcard-051">
-<img src="flashcards/51-salud-publica-gestion-de-salud.png" alt="Flashcard 51: Salud Publica Gestion De Salud" loading="lazy">
-<div class="meta"><b>51. Salud Publica Gestion De Salud</b><small>SIP SERUMS PERÚ</small></div>
-</article>
-</div>
+<div class="notice">Visor enlazado a las imágenes PNG reales de <b>flashcards/</b>. No requiere renombrar imágenes.</div>
+<div id="grid" class="grid"></div>
 </main>
+<script>
+const flashcards = [
+  'ChatGPT Image 28 sept 2026, 01_17_11 p.m..png',
+  'file_000000000340820e8695df365de381b6.png',
+  'file_000000000f4c820e818410f863b6a786.png',
+  'file_000000001cb4820e99bae7a2ef992644.png',
+  'file_000000001ed8820e9b312a3cd653924f.png',
+  'file_000000002014820e8dc6a688ba7c933e.png',
+  'file_000000002154820eaeff3ec0d5b414a6.png',
+  'file_00000000287c820e8b318f05f22440a0.png',
+  'file_000000002a00820e950f1ea761cf4fe9.png',
+  'file_000000003678820e9ea131be3a420d4b.png',
+  'file_0000000037cc820e8063c11b1f171abf.png',
+  'file_000000003894820ea9b668b049419500.png',
+  'file_000000003c54820e9fdae06468fe9acc.png',
+  'file_000000003ff8820e8e6aaafae0f12eb2.png',
+  'file_000000004280820ea004afec48182a86.png',
+  'file_00000000485c820eba35ac2ebcfeaaec.png',
+  'file_000000004b20820e94e353ab317b5cd0.png',
+  'file_000000004d30820e94fd3202e0ceb8d0.png',
+  'file_00000000640c820eb1c4fe235c3b4537.png',
+  'file_0000000065f8820ebd2367fe05990802.png',
+  'file_000000006778820ebfd541e6a10444fb.png',
+  'file_0000000069f8820e8587a12dfc8e687b.png',
+  'file_000000006e84820eb1496ecb81163157.png',
+  'file_000000007230820eb1a86a7556948009.png',
+  'file_000000007e18820e8216e5968dab9f9b.png',
+  'file_0000000088d4820e80323844a637c1a6.png',
+  'file_00000000892c820eade90a85eee2fa58.png',
+  'file_000000008e0c820ebb88adea5bd6ddb7.png',
+  'file_000000008eb0820e9df5611533abd8dd.png',
+  'file_000000008f20820e8543e00a91a33e20.png',
+  'file_000000009838820e9b320f89233b630f.png',
+  'file_00000000ab10820e9fbaa365647595f8.png',
+  'file_00000000b0a0820eafa62dfd01318821.png',
+  'file_00000000b594820e8623ad3e238b4754.png',
+  'file_00000000b744820e8fad08223b30dcac.png',
+  'file_00000000bbe4820eb7e80ed1ff667124.png',
+  'file_00000000c438820e9ece57f88169c196.png',
+  'file_00000000d180820eba9b9119eda7a46f.png',
+  'file_00000000d520820eae7f11d3d96bcd9d.png',
+  'file_00000000da18820eadb6a3646b953a70.png',
+  'file_00000000dd6c820eaaee660fb16188e6.png',
+  'file_00000000dd80820e9daa57929c067105.png',
+  'file_00000000dda0820eb056cf1963647edd.png',
+  'file_00000000dfd0820e85b114d30af3baf8.png',
+  'file_00000000e98c820e8b13a7c7872b1f20.png',
+  'file_00000000eb1c820eba7f2739f5b57bba.png',
+  'file_00000000ed20820e9bbe294128d6a75f.png',
+  'file_00000000f38c820e9b6a820508f801cc.png',
+  'file_00000000f4c8820eaaad0f3ba714b520.png',
+  'file_00000000f660820e858c6023559bf004.png',
+  'file_00000000fe8c820e8ac9581c8c069272.png'
+];
+const grid = document.getElementById('grid');
+document.getElementById('count').textContent = `${flashcards.length} fichas disponibles`;
+flashcards.forEach((name,index)=>{
+  const card=document.createElement('article'); card.className='card';
+  const img=document.createElement('img');
+  img.src='flashcards/'+encodeURIComponent(name).replace(/%2F/g,'/');
+  img.alt=`Flashcard ${index+1}`; img.loading='lazy'; img.decoding='async';
+  const meta=document.createElement('div'); meta.className='meta';
+  const b=document.createElement('b'); b.textContent=`Ficha ${String(index+1).padStart(2,'0')}`;
+  const small=document.createElement('small'); small.textContent=name;
+  meta.append(b,small); card.append(img,meta); grid.append(card);
+});
+</script>
 </body>
 </html>
