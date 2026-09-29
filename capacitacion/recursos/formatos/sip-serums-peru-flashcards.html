@@ -10,87 +10,587 @@
 body{margin:0;background:#edf3f4;color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
 header{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid var(--line);padding:12px 16px}
 header strong{display:block;font-size:18px} header span{font-size:12px;color:#607782}
+.nav{display:flex;flex-wrap:wrap;gap:6px 16px;margin-bottom:8px;font-size:14px}
+.nav a{color:var(--blue);font-weight:600;text-decoration:none}
 main{max-width:1050px;margin:auto;padding:14px}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
 .card{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 6px 18px #173b4d12}
-.card img{display:block;width:100%;height:auto;background:#f6f8f9}
-.meta{padding:10px 12px 13px}.meta b{color:var(--blue)}.meta small{display:block;color:#607782;margin-top:3px;overflow-wrap:anywhere}
+.card .open{all:unset;display:block;width:100%;cursor:pointer}
+.card img{display:block;width:100%;height:auto;background:#f6f8f9;min-height:120px}
+.meta{padding:10px 12px 6px}.meta b{color:var(--blue)}.meta .t{display:block;font-weight:700;margin-top:2px}
+.meta small{display:block;color:#607782;margin-top:3px;overflow-wrap:anywhere}
+.rev{display:inline-block;margin-top:4px;font-size:11px;background:#fff3cd;color:#7a5b00;border-radius:8px;padding:2px 8px}
+.acts{display:flex;gap:8px;padding:6px 12px 12px}
+.btn{flex:1;text-align:center;border:0;border-radius:10px;padding:11px;font-size:14px;font-weight:600;cursor:pointer;background:var(--blue);color:#fff}
+.btn.alt{background:#e3f0f3;color:var(--blue)}
 .notice{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px;margin-bottom:14px;font-size:14px}
+#lb{position:fixed;inset:0;z-index:20;background:#0b1a24;display:none;flex-direction:column}
+#lb.on{display:flex}
+#lb .bar{display:flex;gap:8px;align-items:center;padding:10px 12px;color:#fff;flex-wrap:wrap}
+#lb .ttl{flex:1 1 100%;font-size:14px}#lb .ttl small{display:block;opacity:.75}
+#lb .bar button{border:0;border-radius:10px;padding:10px 14px;font-size:14px;font-weight:600;cursor:pointer;background:#fff;color:var(--ink)}
+#lb .bar .pdf{background:var(--green);color:#fff}
+#lb .stage{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;padding:6px}
+#lb .stage img{max-width:100%;max-height:100%;object-fit:contain;border-radius:10px}
+#lb .nv{display:flex;justify-content:space-between;padding:8px 12px}
+#lb .nv button{border:0;border-radius:10px;padding:11px 20px;font-size:15px;font-weight:700;background:#ffffff26;color:#fff;cursor:pointer}
+#toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);background:#15324a;color:#fff;padding:10px 16px;border-radius:10px;font-size:14px;z-index:30;display:none;max-width:90%}
 @media(max-width:600px){main{padding:8px}.grid{grid-template-columns:1fr;gap:10px}.card{border-radius:12px}}
 </style>
 </head>
 <body>
-<header><strong>SIP SERUMS PERÚ · Flashcards visuales</strong><span id="count">Cargando…</span></header>
+<header>
+<nav class="nav" aria-label="Navegación"><a href="../../index.html">← Capacitación Continua</a><a href="../../../index.html">← Tablero SERUMS</a></nav>
+<strong>SIP SERUMS PERÚ · Flashcards visuales</strong><span id="count">Cargando…</span>
+</header>
 <main>
-<div class="notice">Visor enlazado a las imágenes PNG reales de <b>flashcards/</b>. 
+<div class="notice">Visor enlazado a las imágenes PNG reales de <b>flashcards/</b>. Toque una ficha para abrirla; use ⬇ PDF o ⬇ PNG para descargarla. Material pedagógico: no sustituye la norma oficial vigente.</div>
 <div id="grid" class="grid"></div>
 </main>
+
+<div id="lb" role="dialog" aria-modal="true" aria-label="Ficha ampliada">
+<div class="bar">
+<div class="ttl"><span id="lbT"></span><small id="lbS"></small></div>
+<button id="lbX" type="button">← Volver a las fichas</button>
+<button class="pdf" id="lbPdf" type="button">⬇ PDF</button>
+<button id="lbPng" type="button">⬇ PNG</button>
+</div>
+<div class="stage"><img id="lbImg" alt=""></div>
+<div class="nv"><button id="lbP" type="button">‹ Anterior</button><button id="lbN" type="button">Siguiente ›</button></div>
+</div>
+<div id="toast"></div>
+
 <script>
+/* Asociación verificada visualmente: PNG real → código impreso → título → tema → eje.
+   Nombres de PNG sin cambios, mismo orden que el HTML original.
+   estado=REVISAR: no se asume el eje; requiere revisión manual.
+   Pendiente: vincular cada ficha con su normativa oficial. */
 const flashcards = [
-  'ChatGPT Image 28 sept 2026, 01_17_11 p.m..png',
-  'file_000000000340820e8695df365de381b6.png',
-  'file_000000000f4c820e818410f863b6a786.png',
-  'file_000000001cb4820e99bae7a2ef992644.png',
-  'file_000000001ed8820e9b312a3cd653924f.png',
-  'file_000000002014820e8dc6a688ba7c933e.png',
-  'file_000000002154820eaeff3ec0d5b414a6.png',
-  'file_00000000287c820e8b318f05f22440a0.png',
-  'file_000000002a00820e950f1ea761cf4fe9.png',
-  'file_000000003678820e9ea131be3a420d4b.png',
-  'file_0000000037cc820e8063c11b1f171abf.png',
-  'file_000000003894820ea9b668b049419500.png',
-  'file_000000003c54820e9fdae06468fe9acc.png',
-  'file_000000003ff8820e8e6aaafae0f12eb2.png',
-  'file_000000004280820ea004afec48182a86.png',
-  'file_00000000485c820eba35ac2ebcfeaaec.png',
-  'file_000000004b20820e94e353ab317b5cd0.png',
-  'file_000000004d30820e94fd3202e0ceb8d0.png',
-  'file_00000000640c820eb1c4fe235c3b4537.png',
-  'file_0000000065f8820ebd2367fe05990802.png',
-  'file_000000006778820ebfd541e6a10444fb.png',
-  'file_0000000069f8820e8587a12dfc8e687b.png',
-  'file_000000006e84820eb1496ecb81163157.png',
-  'file_000000007230820eb1a86a7556948009.png',
-  'file_000000007e18820e8216e5968dab9f9b.png',
-  'file_0000000088d4820e80323844a637c1a6.png',
-  'file_00000000892c820eade90a85eee2fa58.png',
-  'file_000000008e0c820ebb88adea5bd6ddb7.png',
-  'file_000000008eb0820e9df5611533abd8dd.png',
-  'file_000000008f20820e8543e00a91a33e20.png',
-  'file_000000009838820e9b320f89233b630f.png',
-  'file_00000000ab10820e9fbaa365647595f8.png',
-  'file_00000000b0a0820eafa62dfd01318821.png',
-  'file_00000000b594820e8623ad3e238b4754.png',
-  'file_00000000b744820e8fad08223b30dcac.png',
-  'file_00000000bbe4820eb7e80ed1ff667124.png',
-  'file_00000000c438820e9ece57f88169c196.png',
-  'file_00000000d180820eba9b9119eda7a46f.png',
-  'file_00000000d520820eae7f11d3d96bcd9d.png',
-  'file_00000000da18820eadb6a3646b953a70.png',
-  'file_00000000dd6c820eaaee660fb16188e6.png',
-  'file_00000000dd80820e9daa57929c067105.png',
-  'file_00000000dda0820eb056cf1963647edd.png',
-  'file_00000000dfd0820e85b114d30af3baf8.png',
-  'file_00000000e98c820e8b13a7c7872b1f20.png',
-  'file_00000000eb1c820eba7f2739f5b57bba.png',
-  'file_00000000ed20820e9bbe294128d6a75f.png',
-  'file_00000000f38c820e9b6a820508f801cc.png',
-  'file_00000000f4c8820eaaad0f3ba714b520.png',
-  'file_00000000f660820e858c6023559bf004.png',
-  'file_00000000fe8c820e8ac9581c8c069272.png'
+ {
+  "archivo": "ChatGPT Image 28 sept 2026, 01_17_11 p.m..png",
+  "codigo": "29",
+  "titulo": "Dato útil",
+  "tema": "Sistemas de información",
+  "eje": "Gestión de servicios de salud",
+  "estado": "CONFIRMADO"
+ },
+ {
+  "archivo": "file_000000000340820e8695df365de381b6.png",
+  "codigo": "18",
+  "titulo": "Comprender antes de indicar",
+  "tema": "Comunicación intercultural",
+  "eje": "Ética e interculturalidad",
+  "estado": "CONFIRMADO"
+ },
+ {
+  "archivo": "file_000000000f4c820e818410f863b6a786.png",
+  "codigo": "09",
+  "titulo": "Cobertura",
+  "tema": "Indicadores",
+  "eje": "Gestión de servicios de salud",
+  "estado": "CONFIRMADO"
+ },
+ {
+  "archivo": "file_000000001cb4820e99bae7a2ef992644.png",
+  "codigo": "01",
+  "titulo": "¿Por qué enfermamos?",
+  "tema": "Determinantes sociales",
+  "eje": "Salud pública",
+  "estado": "CONFIRMADO"
+ },
+ {
+  "archivo": "file_000000001ed8820e9b312a3cd653924f.png",
+  "codigo": "27",
+  "titulo": "Riesgo cardiovascular",
+  "tema": "Enfermedades crónicas",
+  "eje": "Cuidado integral de salud",
+  "estado": "CONFIRMADO"
+ },
+ {
+  "archivo": "file_000000002014820e8dc6a688ba7c933e.png",
+  "codigo": "23",
+  "titulo": "Equidad no es igualdad",
+  "tema": "Justicia",
+  "eje": "Ética e interculturalidad",
+  "estado": "CONFIRMADO"
+ },
+ {
+  "archivo": "file_000000002154820eaeff3ec0d5b414a6.png",
+  "codigo": "51",
+  "titulo": "Salud pública ≠ Gestión de salud",
+  "tema": "Conceptos complementarios",
+  "eje": null,
+  "estado": "REVISAR",
+  "nota": "Rótulo del eje ilegible en la imagen; requiere revisión manual."
+ },
+ {
+  "archivo": "file_00000000287c820e8b318f05f22440a0.png",
+  "codigo": "43",
+  "titulo": "Cuidado culturalmente pertinente",
+  "tema": "Pertinencia cultural",
+  "eje": "Ética e interculturalidad",
+  "estado": "CONFIRMADO"
+ },
+ {
+  "archivo": "file_000000002a00820e950f1ea761cf4fe9.png",
+  "codigo": "34",
+  "titulo": "Aprender del riesgo",
+  "tema": "Seguridad del paciente",
+  "eje": "Gestión de servicios de salud",
+  "estado": "CONFIRMADO"
+ },
+ {
+  "archivo": "file_000000003678820e9ea131be3a420d4b.png",
+  "codigo": "49",
+  "titulo": "Recursos y resultados",
+  "tema": "Eficiencia",
+  "eje": "Gestión de servicios de salud",
+  "estado": "CONFIRMADO"
+ },
+ {
+  "archivo": "file_0000000037cc820e8063c11b1f171abf.png",
+  "codigo": "05",
+  "titulo": "Pregunta PICO",
+  "tema": "PICO",
+  "eje": "Investigación",
+  "estado": "CONFIRMADO"
+ },
+ {
+  "archivo": "file_000000003894820ea9b668b049419500.png",
+  "codigo": "16",
+  "titulo": "Romper la cadena",
+  "tema": "Cadena epidemiológica",
+  "eje": "Salud pública",
+  "estado": "CONFIRMADO"
+ },
+ {
+  "archivo": "file_000000003c54820e9fdae06468fe9acc.png",
+  "codigo": "32",
+  "titulo": "Detectar y conectar",
+  "tema": "Salud mental comunitaria",
+  "eje": "Cuidado integral de salud",
+  "estado": "CONFIRMADO"
+ },
+ {
+  "archivo": "file_000000003ff8820e8e6aaafae0f12eb2.png",
+  "codigo": "37",
+  "titulo": "Referir con criterio",
+  "tema": "Referencia",
+  "eje": "Cuidado integral de salud",
+  "estado": "CONFIRMADO"
+ },
+ {
+  "archivo": "file_000000004280820ea004afec48182a86.png",
+  "codigo": "04",
+  "titulo": "Ciclo de gestión",
+  "tema": "Gestión sanitaria",
+  "eje": "Gestión de servicios de salud",
+  "estado": "CONFIRMADO"
+ },
+ {
+  "archivo": "file_00000000485c820eba35ac2ebcfeaaec.png",
+  "codigo": "06",
+  "titulo": "Casos nuevos vs existentes",
+  "tema": "Incidencia y prevalencia",
+  "eje": "Salud pública",
+  "estado": "CONFIRMADO"
+ },
+ {
+  "archivo": "file_000000004b20820e94e353ab317b5cd0.png",
+  "codigo": "08",
+  "titulo": "Decidir informado",
+  "tema": "Consentimiento informado",
+  "eje": "Ética e interculturalidad",
+  "estado": "CONFIRMADO"
+ },
+ {
+  "archivo": "file_000000004d30820e94fd3202e0ceb8d0.png",
+  "codigo": "39",
+  "titulo": "Equipo adecuado",
+  "tema": "Recursos humanos",
+  "eje": "Gestión de servicios de salud",
+  "estado": "CONFIRMADO"
+ },
+ {
+  "archivo": "file_00000000640c820eb1c4fe235c3b4537.png",
+  "codigo": "19",
+  "titulo": "Del plan a la acción",
+  "tema": "POI",
+  "eje": "Gestión de servicios de salud",
+  "estado": "CONFIRMADO"
+ },
+ {
+  "archivo": "file_0000000065f8820ebd2367fe05990802.png",
+  "codigo": "45",
+  "titulo": "Nominal u ordinal",
+  "tema": "Escalas de medición",
+  "eje": "Investigación",
+  "estado": "CONFIRMADO"
+ },
+ {
+  "archivo": "file_000000006778820ebfd541e6a10444fb.png",
+  "codigo": "33",
+  "titulo": "Barreras invisibles",
+  "tema": "Discriminación",
+  "eje": "Ética e interculturalidad",
+  "estado": "CONFIRMADO"
+ },
+ {
+  "archivo": "file_0000000069f8820e8587a12dfc8e687b.png",
+  "codigo": "35",
+  "titulo": "Seleccionar participantes",
+  "tema": "Muestreo",
+  "eje": "Investigación",
+  "estado": "CONFIRMADO"
+ },
+ {
+  "archivo": "file_000000006e84820eb1496ecb81163157.png",
+  "codigo": "14",
+  "titulo": "Calidad asistencial",
+  "tema": "Calidad",
+  "eje": "Gestión de servicios de salud",
+  "estado": "CONFIRMADO"
+ },
+ {
+  "archivo": "file_000000007230820eb1a86a7556948009.png",
+  "codigo": "36",
+  "titulo": "Ambiente y salud",
+  "tema": "Salud ambiental",
+  "eje": "Salud pública",
+  "estado": "CONFIRMADO"
+ },
+ {
+  "archivo": "file_000000007e18820e8216e5968dab9f9b.png",
+  "codigo": "41",
+  "titulo": "Brechas sanitarias",
+  "tema": "Poblaciones vulnerables",
+  "eje": "Salud pública",
+  "estado": "CONFIRMADO"
+ },
+ {
+  "archivo": "file_0000000088d4820e80323844a637c1a6.png",
+  "codigo": "50",
+  "titulo": "De evidencia a decisión",
+  "tema": "Evidencia y decisiones",
+  "eje": "Investigación",
+  "estado": "CONFIRMADO"
+ },
+ {
+  "archivo": "file_00000000892c820eade90a85eee2fa58.png",
+  "codigo": "17",
+  "titulo": "Alarma materna",
+  "tema": "Atención prenatal",
+  "eje": "Cuidado integral de salud",
+  "estado": "CONFIRMADO"
+ },
+ {
+  "archivo": "file_000000008e0c820ebb88adea5bd6ddb7.png",
+  "codigo": "26",
+  "titulo": "Cobertura vacunal",
+  "tema": "Vacunación",
+  "eje": "Salud pública",
+  "estado": "CONFIRMADO"
+ },
+ {
+  "archivo": "file_000000008eb0820e9df5611533abd8dd.png",
+  "codigo": "13",
+  "titulo": "Información protegida",
+  "tema": "Confidencialidad",
+  "eje": "Ética e interculturalidad",
+  "estado": "CONFIRMADO"
+ },
+ {
+  "archivo": "file_000000008f20820e8543e00a91a33e20.png",
+  "codigo": "21",
+  "titulo": "Promover ≠ prevenir",
+  "tema": "Promoción y prevención",
+  "eje": "Salud pública",
+  "estado": "CONFIRMADO"
+ },
+ {
+  "archivo": "file_000000009838820e9b320f89233b630f.png",
+  "codigo": "03",
+  "titulo": "Cuatro principios",
+  "tema": "Principios bioéticos",
+  "eje": "Ética e interculturalidad",
+  "estado": "CONFIRMADO"
+ },
+ {
+  "archivo": "file_00000000ab10820e9fbaa365647595f8.png",
+  "codigo": "02",
+  "titulo": "Atención Primaria",
+  "tema": "Atención primaria de salud",
+  "eje": "Cuidado integral de salud",
+  "estado": "CONFIRMADO"
+ },
+ {
+  "archivo": "file_00000000b0a0820eafa62dfd01318821.png",
+  "codigo": "46",
+  "titulo": "Control basado en transmisión",
+  "tema": "Medidas de control",
+  "eje": "Salud pública",
+  "estado": "CONFIRMADO"
+ },
+ {
+  "archivo": "file_00000000b594820e8623ad3e238b4754.png",
+  "codigo": "40",
+  "titulo": "Lo que medimos",
+  "tema": "Variables",
+  "eje": "Investigación",
+  "estado": "CONFIRMADO"
+ },
+ {
+  "archivo": "file_00000000b744820e8fad08223b30dcac.png",
+  "codigo": "25",
+  "titulo": "Intervenir y comparar",
+  "tema": "Experimental",
+  "eje": "Investigación",
+  "estado": "CONFIRMADO"
+ },
+ {
+  "archivo": "file_00000000bbe4820eb7e80ed1ff667124.png",
+  "codigo": "44",
+  "titulo": "Red, no islas",
+  "tema": "RISS",
+  "eje": "Gestión de servicios de salud",
+  "estado": "CONFIRMADO"
+ },
+ {
+  "archivo": "file_00000000c438820e9ece57f88169c196.png",
+  "codigo": "12",
+  "titulo": "CRED",
+  "tema": "Control de Crecimiento y Desarrollo",
+  "eje": "Cuidado integral de salud",
+  "estado": "CONFIRMADO"
+ },
+ {
+  "archivo": "file_00000000d180820eba9b9119eda7a46f.png",
+  "codigo": "38",
+  "titulo": "Decisión del usuario",
+  "tema": "Autonomía",
+  "eje": "Ética e interculturalidad",
+  "estado": "CONFIRMADO"
+ },
+ {
+  "archivo": "file_00000000d520820eae7f11d3d96bcd9d.png",
+  "codigo": "24",
+  "titulo": "Disponibilidad segura",
+  "tema": "Medicamentos",
+  "eje": "Gestión de servicios de salud",
+  "estado": "CONFIRMADO"
+ },
+ {
+  "archivo": "file_00000000da18820eadb6a3646b953a70.png",
+  "codigo": "28",
+  "titulo": "Evitar daño",
+  "tema": "No maleficencia",
+  "eje": "Ética e interculturalidad",
+  "estado": "CONFIRMADO"
+ },
+ {
+  "archivo": "file_00000000dd6c820eaaee660fb16188e6.png",
+  "codigo": "22",
+  "titulo": "Elección informada",
+  "tema": "Planificación familiar",
+  "eje": "Cuidado integral de salud",
+  "estado": "CONFIRMADO"
+ },
+ {
+  "archivo": "file_00000000dd80820e9daa57929c067105.png",
+  "codigo": "10",
+  "titulo": "¿Es investigable?",
+  "tema": "FINER",
+  "eje": "Investigación",
+  "estado": "CONFIRMADO"
+ },
+ {
+  "archivo": "file_00000000dda0820eb056cf1963647edd.png",
+  "codigo": "30",
+  "titulo": "Del universo a la muestra",
+  "tema": "Población y muestra",
+  "eje": "Investigación",
+  "estado": "CONFIRMADO"
+ },
+ {
+  "archivo": "file_00000000dfd0820e85b114d30af3baf8.png",
+  "codigo": "15",
+  "titulo": "Describir antes de explicar",
+  "tema": "Estudios descriptivos",
+  "eje": "Investigación",
+  "estado": "CONFIRMADO"
+ },
+ {
+  "archivo": "file_00000000e98c820e8b13a7c7872b1f20.png",
+  "codigo": "20",
+  "titulo": "Comparar grupos",
+  "tema": "Estudio analítico",
+  "eje": "Investigación",
+  "estado": "CONFIRMADO"
+ },
+ {
+  "archivo": "file_00000000eb1c820eba7f2739f5b57bba.png",
+  "codigo": "11",
+  "titulo": "Vigilancia es acción",
+  "tema": "Vigilancia epidemiológica",
+  "eje": "Salud pública",
+  "estado": "CONFIRMADO"
+ },
+ {
+  "archivo": "file_00000000ed20820e9bbe294128d6a75f.png",
+  "codigo": "48",
+  "titulo": "Ciencia con protección",
+  "tema": "Investigación con seres humanos",
+  "eje": "Ética e interculturalidad",
+  "estado": "CONFIRMADO"
+ },
+ {
+  "archivo": "file_00000000f38c820e9b6a820508f801cc.png",
+  "codigo": "47",
+  "titulo": "Volver con información",
+  "tema": "Contrarreferencia",
+  "eje": "Cuidado integral de salud",
+  "estado": "CONFIRMADO"
+ },
+ {
+  "archivo": "file_00000000f4c8820eaaad0f3ba714b520.png",
+  "codigo": "31",
+  "titulo": "Más casos de lo esperado",
+  "tema": "Brotes",
+  "eje": "Salud pública",
+  "estado": "CONFIRMADO"
+ },
+ {
+  "archivo": "file_00000000f660820e858c6023559bf004.png",
+  "codigo": "07",
+  "titulo": "Cuidado longitudinal",
+  "tema": "Curso de vida",
+  "eje": "Cuidado integral de salud",
+  "estado": "CONFIRMADO"
+ },
+ {
+  "archivo": "file_00000000fe8c820e8ac9581c8c069272.png",
+  "codigo": "42",
+  "titulo": "Primero lo vital",
+  "tema": "Emergencias",
+  "eje": "Cuidado integral de salud",
+  "estado": "CONFIRMADO"
+ }
 ];
-const grid = document.getElementById('grid');
-document.getElementById('count').textContent = `${flashcards.length} fichas disponibles`;
-flashcards.forEach((name,index)=>{
-  const card=document.createElement('article'); card.className='card';
-  const img=document.createElement('img');
-  img.src='flashcards/'+encodeURIComponent(name).replace(/%2F/g,'/');
-  img.alt=`Flashcard ${index+1}`; img.loading='lazy'; img.decoding='async';
-  const meta=document.createElement('div'); meta.className='meta';
-  const b=document.createElement('b'); b.textContent=`Ficha ${String(index+1).padStart(2,'0')}`;
-  const small=document.createElement('small'); small.textContent=name;
-  meta.append(b,small); card.append(img,meta); grid.append(card);
+window.SIP_FLASHCARDS = flashcards;
+
+const REPO_RAW = 'https://raw.githubusercontent.com/4-4-1941/SERUM-APP/main/capacitacion/recursos/formatos/flashcards/';
+const PDF_HEADER = '\u00AESIP SYSTEM INTELLIGENCE PLATFORM - SERUMS APP PER\u00DA';
+const NOTA = 'Material pedag\u00F3gico. No sustituye la norma oficial vigente.';
+const $ = id => document.getElementById(id);
+const rel = f => 'flashcards/' + encodeURIComponent(f.archivo);
+const raw = f => REPO_RAW + encodeURIComponent(f.archivo);
+const ejeTxt = f => f.eje || 'Eje por revisar';
+let idx = 0;
+
+function toast(m,ms){const t=$('toast');t.textContent=m;t.style.display='block';clearTimeout(toast.h);if(ms)toast.h=setTimeout(()=>t.style.display='none',ms);}
+
+/* imagen visible: ruta relativa; si no existe (vista previa), copia del repositorio */
+function ponerImg(img,f){
+  img.onerror=()=>{ if(img.dataset.fb) return; img.dataset.fb='1'; img.src=raw(f); };
+  delete img.dataset.fb; img.src=rel(f);
+}
+async function obtenerBlob(f){
+  for(const u of [rel(f),raw(f)]){
+    try{ const r=await fetch(u); if(r.ok) return await r.blob(); }catch(e){}
+  }
+  throw new Error('No se pudo leer la imagen');
+}
+function guardar(blob,nombre){
+  const u=URL.createObjectURL(blob), a=document.createElement('a');
+  a.href=u; a.download=nombre; document.body.append(a); a.click(); a.remove();
+  setTimeout(()=>URL.revokeObjectURL(u),4000);
+}
+
+/*PDFSTART*/
+const _enc = s => Uint8Array.from(Array.from(s.replace(/\u2260/g,'vs')).map(c=>{const k=c.charCodeAt(0);return k<256?k:63;}));
+const _esc = s => s.replace(/[\\()]/g,'\\$&');
+function buildPdf(jpg,w,h,cab,der,pie1,pie2){
+  const land=w>=h, W=land?842:595, H=land?595:842, BAR=34, M=20, FOOT=40;
+  const k=Math.min((W-2*M)/w,(H-BAR-12-FOOT-12)/h), dw=w*k, dh=h*k;
+  const x=(W-dw)/2, y=FOOT+((H-BAR-12-FOOT-12)-dh)/2;
+  const f2=n=>n.toFixed(2);
+  const cont=
+   '0.082 0.196 0.29 rg 0 '+f2(H-BAR)+' '+W+' '+BAR+' re f\n'+
+   'BT /F1 12 Tf 1 1 1 rg 20 '+f2(H-22)+' Td ('+_esc(cab)+') Tj ET\n'+
+   'BT /F1 10 Tf 1 1 1 rg '+f2(W-80)+' '+f2(H-22)+' Td ('+_esc(der)+') Tj ET\n'+
+   'q '+f2(dw)+' 0 0 '+f2(dh)+' '+f2(x)+' '+f2(y)+' cm /Im0 Do Q\n'+
+   'BT /F1 9 Tf 0.24 0.27 0.31 rg 20 24 Td ('+_esc(pie1)+') Tj ET\n'+
+   'BT /F1 8 Tf 0.24 0.27 0.31 rg 20 12 Td ('+_esc(pie2)+') Tj ET\n';
+  const contB=_enc(cont), parts=[], offs=[]; let len=0;
+  const put=b=>{const u=typeof b==='string'?_enc(b):b; parts.push(u); len+=u.length;};
+  const obj=(n,body)=>{offs[n]=len; put(n+' 0 obj\n'); body.forEach(put); put('\nendobj\n');};
+  put('%PDF-1.4\n');
+  obj(1,['<< /Type /Catalog /Pages 2 0 R >>']);
+  obj(2,['<< /Type /Pages /Kids [3 0 R] /Count 1 >>']);
+  obj(3,['<< /Type /Page /Parent 2 0 R /MediaBox [0 0 '+W+' '+H+'] /Resources << /Font << /F1 6 0 R >> /XObject << /Im0 5 0 R >> >> /Contents 4 0 R >>']);
+  obj(4,['<< /Length '+contB.length+' >>\nstream\n',contB,'\nendstream']);
+  obj(5,['<< /Type /XObject /Subtype /Image /Width '+w+' /Height '+h+' /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length '+jpg.length+' >>\nstream\n',jpg,'\nendstream']);
+  obj(6,['<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>']);
+  const xr=len; put('xref\n0 7\n0000000000 65535 f \n');
+  for(let i=1;i<=6;i++) put(String(offs[i]).padStart(10,'0')+' 00000 n \n');
+  put('trailer\n<< /Size 7 /Root 1 0 R >>\nstartxref\n'+xr+'\n%%EOF');
+  const out=new Uint8Array(len); let p=0; parts.forEach(u=>{out.set(u,p);p+=u.length;});
+  return out;
+}
+/*PDFEND*/
+
+async function pdf(f){
+  toast('Generando PDF\u2026');
+  try{
+    const blob=await obtenerBlob(f), url=URL.createObjectURL(blob);
+    const im=await new Promise((ok,ko)=>{const i=new Image();i.onload=()=>ok(i);i.onerror=()=>ko(new Error('img'));i.src=url;});
+    const w=im.naturalWidth,h=im.naturalHeight, cv=document.createElement('canvas'); cv.width=w; cv.height=h;
+    const cx=cv.getContext('2d'); cx.fillStyle='#fff'; cx.fillRect(0,0,w,h); cx.drawImage(im,0,0); URL.revokeObjectURL(url);
+    const b64=cv.toDataURL('image/jpeg',0.92).split(',')[1], bin=atob(b64), jpg=new Uint8Array(bin.length);
+    for(let i=0;i<bin.length;i++) jpg[i]=bin.charCodeAt(i);
+    const out=buildPdf(jpg,w,h,PDF_HEADER,'Ficha '+f.codigo,ejeTxt(f)+' - '+f.titulo,NOTA);
+    guardar(new Blob([out],{type:'application/pdf'}),'SIP-SERUMS-ficha-'+f.codigo+'.pdf');
+    toast('PDF listo',2500);
+  }catch(e){ toast('No se pudo generar el PDF. Verifique su conexi\u00F3n e intente de nuevo.',4500); }
+}
+async function png(f){
+  try{ guardar(await obtenerBlob(f),'SIP-SERUMS-ficha-'+f.codigo+'.png'); }
+  catch(e){ toast('No se pudo descargar la imagen.',3500); }
+}
+
+/* rejilla */
+const grid=$('grid');
+$('count').textContent=`${flashcards.length} fichas disponibles`;
+flashcards.forEach((f,i)=>{
+  const c=document.createElement('article'); c.className='card';
+  const op=document.createElement('button'); op.type='button'; op.className='open'; op.setAttribute('aria-label','Abrir ficha '+f.codigo+': '+f.titulo);
+  const im=document.createElement('img'); im.alt='Ficha '+f.codigo+': '+f.titulo; im.loading='lazy'; im.decoding='async'; ponerImg(im,f);
+  op.append(im); op.onclick=()=>abrir(i);
+  const m=document.createElement('div'); m.className='meta';
+  const b=document.createElement('b'); b.textContent='Ficha '+f.codigo;
+  const t=document.createElement('span'); t.className='t'; t.textContent=f.titulo;
+  const s=document.createElement('small'); s.textContent=ejeTxt(f)+' \u00B7 '+f.tema;
+  m.append(b,t,s);
+  if(f.estado==='REVISAR'){const r=document.createElement('span'); r.className='rev'; r.textContent='Eje pendiente de revisi\u00F3n manual'; m.append(r);}
+  const a=document.createElement('div'); a.className='acts';
+  const bo=document.createElement('button'); bo.type='button'; bo.className='btn alt'; bo.textContent='Abrir'; bo.onclick=()=>abrir(i);
+  const bp=document.createElement('button'); bp.type='button'; bp.className='btn'; bp.textContent='\u2B07 PDF'; bp.onclick=()=>pdf(f);
+  a.append(bo,bp); c.append(op,m,a); grid.append(c);
 });
+
+/* visor individual */
+function mostrar(){
+  const f=flashcards[idx];
+  ponerImg($('lbImg'),f); $('lbImg').alt='Ficha '+f.codigo+': '+f.titulo;
+  $('lbT').textContent='Ficha '+f.codigo+' \u00B7 '+f.titulo;
+  $('lbS').textContent=ejeTxt(f)+' \u00B7 '+f.tema;
+}
+function abrir(i){idx=i;mostrar();$('lb').classList.add('on');document.body.style.overflow='hidden';}
+function cerrar(){$('lb').classList.remove('on');document.body.style.overflow='';}
+function mover(d){idx=(idx+d+flashcards.length)%flashcards.length;mostrar();}
+$('lbX').onclick=cerrar; $('lbP').onclick=()=>mover(-1); $('lbN').onclick=()=>mover(1);
+$('lbPdf').onclick=()=>pdf(flashcards[idx]); $('lbPng').onclick=()=>png(flashcards[idx]);
+document.addEventListener('keydown',e=>{if(!$('lb').classList.contains('on'))return;if(e.key==='Escape')cerrar();if(e.key==='ArrowLeft')mover(-1);if(e.key==='ArrowRight')mover(1);});
 </script>
 </body>
 </html>
