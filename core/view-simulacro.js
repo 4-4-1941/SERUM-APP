@@ -115,27 +115,27 @@ function renderSimulacro() {
 
 function renderSimulacroIntro() {
   pageTitle.textContent = "Simulacro SERUMS";
-  pageSubtitle.textContent = "100 preguntas, 5 bloques oficiales, cronómetro y puntaje final.";
+  pageSubtitle.textContent = "Examen transversal: 100 preguntas de todas las carreras y los 5 bloques temáticos oficiales, con cronómetro y puntaje final.";
 
   const totalAvailable = data.cases.length;
   const target = Math.min(SIMULACRO_TARGET, totalAvailable);
   const lastAttempts = simulacroHistory.slice(-5).reverse();
   let careers = [...new Set(data.cases.map(c => c.career || c.specialty))].filter(c => c !== "Transversal").sort();
+  const careerOptions = () => `<option value="">Examen transversal: todas las carreras, todos los bloques</option>${careers.map(c => `<option value="${c}" ${simulacroCareer === c ? "selected" : ""}>Práctica por carrera: ${c}</option>`).join("")}`;
 
   root.innerHTML = `
     <section class="two-col">
       <div class="panel">
         <h3 class="section-title">Cómo funciona</h3>
         <label style="display:block;margin-bottom:10px;color:#5B6E6A;font-size:13px">
-          Carrera del simulacro
+          Modalidad del simulacro
           <select id="simulacro-career-select" class="search" style="margin-top:4px">
-            <option value="">Todas las carreras (modo mixto)</option>
-            ${careers.map(c => `<option value="${c}" ${simulacroCareer === c ? "selected" : ""}>${c}</option>`).join("")}
+            ${careerOptions()}
           </select>
         </label>
         <ul style="margin:0;padding-left:18px;color:#5B6E6A;line-height:1.7">
           <li>${target} preguntas seleccionadas al azar, repartidas entre los 5 bloques oficiales SERUMS según la proporción real observada en exámenes anteriores (mayor peso en Gestión y Salud Pública).</li>
-          <li>Si eliges una carrera, los casos clínicos propios de otras profesiones no aparecen — igual que el examen real, que es específico por profesión.</li>
+          <li>El examen real es transversal: reúne preguntas de todas las carreras y de todos los bloques. Esa es la modalidad predeterminada. Si prefieres practicar por tu carrera, elígela en la lista: se omiten los casos clínicos propios de otras profesiones y los demás bloques siguen siendo transversales.</li>
           <li>Se evitan repetir las preguntas de tus últimos 2 intentos, siempre que haya suficientes casos alternativos disponibles.</li>
           <li>Cronómetro total de ${Math.round(target * SIMULACRO_SECONDS_PER_Q / 60)} minutos (ritmo de referencia de 1 min/pregunta).</li>
           <li>Una sola oportunidad de respuesta por pregunta, sin reintentos — igual que el examen real.</li>
@@ -149,7 +149,7 @@ function renderSimulacroIntro() {
           <div class="progress-list">
             ${lastAttempts.map(a => `
               <div>
-                <div class="progress-head"><span>${new Date(a.date).toLocaleDateString("es-PE")}${a.career ? " · " + a.career : ""}</span><span>${a.correctCount}/${a.total} · ${a.pct}%</span></div>
+                <div class="progress-head"><span>${new Date(a.date).toLocaleDateString("es-PE")}${a.career ? " · Práctica: " + a.career : " · Transversal"}</span><span>${a.correctCount}/${a.total} · ${a.pct}%</span></div>
                 <div class="bar"><span style="width:${a.pct}%"></span></div>
               </div>
             `).join("")}
@@ -167,7 +167,7 @@ function renderSimulacroIntro() {
     window.SERUMS_BANK.listRemoteProfessions().then((remote) => {
       careers = [...new Set([...careers, ...remote.map(item => item.profession)])].sort((first, second) => first.localeCompare(second, "es"));
       const select = document.getElementById("simulacro-career-select");
-      if (select) select.innerHTML = `<option value="">Todas las carreras (modo mixto)</option>${careers.map(c => `<option value="${c}" ${simulacroCareer === c ? "selected" : ""}>${c}</option>`).join("")}`;
+      if (select) select.innerHTML = careerOptions();
     }).catch((error) => console.error("No se pudo consultar el catálogo del simulacro", error));
   }
   document.getElementById("start-simulacro-btn").addEventListener("click", startSimulacro);
