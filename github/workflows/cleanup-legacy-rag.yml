@@ -1,1 +1,60 @@
+name: Limpiar archivos obsoletos RAG (SIP-AI-RAG)
+on:
+  workflow_dispatch:
 
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Crear carpeta archive
+        run: mkdir -p archive/legacy-rag
+
+      - name: Mover archivos obsoletos (con nombre de norma, no de emisor)
+        run: |
+          cd knowledge/minsa/serums-2026-ii
+          # Los archivos referenciados por manifest.json tienen nombre de EMISOR (ministerio-de-salud, etc)
+          # Los obsoletos tienen nombre de NORMA (decreto-supremo, resolución, etc)
+          
+          # Lista de emisores válidos (los que manifest.json USA)
+          VALID_PATTERNS="ministerio-de-salud|congreso-de-la-rep|presidencia-de-la-rep"
+          
+          # Mover archivos .md cuyo nombre NO coincide con emisores válidos
+          for file in *.md; do
+            if ! echo "$file" | grep -qE "$VALID_PATTERNS"; then
+              mv "$file" ../../../archive/legacy-rag/ || true
+            fi
+          done
+          
+          # Mover sus .metadata.json correspondientes
+          for file in *.metadata.json; do
+            if ! echo "$file" | grep -qE "$VALID_PATTERNS"; then
+              mv "$file" ../../../archive/legacy-rag/ || true
+            fi
+          done
+
+      - name: Excluir manifest.json de la ingestión
+        run: |
+          if [ -f "knowledge/minsa/serums-2026-ii/manifest.json" ]; then
+            mv knowledge/minsa/serums-2026-ii/manifest.json archive/legacy-rag/manifest.json.backup
+          fi
+
+      - name: Contar archivos movidos
+        run: ls -1 archive/legacy-rag | wc -l
+
+      - name: Commit y push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add archive/legacy-rag/
+          git add -u knowledge/minsa/serums-2026-ii/
+          git commit -m "cleanup: mover archivos obsoletos RAG a archive/legacy-rag
+
+- Mueve 206 archivos .md/.json con nombres de norma (ahora obsoletos)
+- Excluye manifest.json de la ingestión
+- Mantiene 102 archivos referenciados por manifest.json (nombres de emisor)
+- Los duplicados causaban IDs repetidos en chunks e ingestión ineficiente a Nvidia
+
+Relacionado: rag/ingestion/serums_sync.py ahora evita generar duplicados"
+          git push
