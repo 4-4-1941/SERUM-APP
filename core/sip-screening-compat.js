@@ -75,6 +75,12 @@ function renderScreeningTools() {
       url: "screening/gds15-yesavage.html"
     },
     {
+      name: "PCL-5",
+      badge: "20 ítems · Weathers et al., 2013 · DSM-5",
+      desc: "Tamizaje de síntomas de TEPT en el último mes. Puntaje 0-80, corte operativo ≥33 y mínimos por clúster (B, C, D, E). No sustituye la evaluación clínica.",
+      url: "screening/pcl5.html"
+    },
+    {
       name: "Quiz SERUMS",
       badge: "10 preguntas · Banco interno",
       desc: "Quiz interactivo que usa preguntas del banco interno de la plataforma, con retroalimentación al finalizar.",
@@ -115,6 +121,7 @@ function renderCapacitacionScreening() {
     { name: "PSC Pediátrico", badge: "30 ítems · Lista de Síntomas Pediátricos", desc: "Cribado de disfunción psicosocial infantil (4-16 años), completado por padres/cuidadores. Detecta problemas emocionales, conductuales y sociales.", url: "screening/psc-pediatrico.html" },
     { name: "M-CHAT-R/F", badge: "20 ítems · Detección de Riesgo TEA", desc: "Cribado de riesgo de Trastorno del Espectro Autista en lactantes 16-30 meses.", url: "screening/mchat-rf.html" },
     { name: "GDS-15", badge: "15 ítems · Escala de Depresión Geriátrica (Yesavage)", desc: "Escala validada para detección de depresión en adultos ≥65 años. Sensible a cambios clínicos. Puntos de corte: 0-4 (sin), 5-8 (leve), 9-15 (moderada-severa).", url: "screening/gds15-yesavage.html" },
+    { name: "PCL-5", badge: "20 ítems · Weathers et al., 2013 · DSM-5", desc: "Tamizaje de síntomas de TEPT en el último mes. Corte operativo ≥33.", url: "screening/pcl5.html" },
     { name: "Quiz SERUMS", badge: "10 preguntas · Banco interno", desc: "Quiz interactivo con preguntas del banco interno de la plataforma.", url: "screening/quiz-serums.html" },
     { name: "Contrarreferencia", badge: "Formato interactivo", desc: "Formato para registrar alta, tratamiento y plan de seguimiento.", url: "capacitacion/recursos/formatos/contrarreferencia.html" },
     { name: "Derivación", badge: "Formato interactivo", desc: "Formato para documentar la derivación o referencia.", url: "capacitacion/recursos/formatos/referencia.html" }
