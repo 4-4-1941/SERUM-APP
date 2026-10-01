@@ -1,0 +1,57 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PCL-5 · SIP SYSTEM</title><style>
+*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:#e8edf5;color:#1e293b}
+.app{max-width:640px;margin:auto;min-height:100vh;background:#fff}.head{background:linear-gradient(135deg,#0a2e44,#1a5a7a);color:#fff;padding:18px}
+.head a{color:#fff;text-decoration:none;font-weight:700}.head h1{margin:12px 0 2px}.body{padding:14px;background:#f8faff;min-height:80vh}
+.note{background:#fef9e7;border-left:4px solid #d97706;padding:10px;border-radius:7px;font-size:.82rem;line-height:1.4;margin-bottom:12px}
+.progress{display:flex;gap:10px;align-items:center;margin:10px 0}.track{height:7px;background:#e2e8f0;flex:1;border-radius:8px;overflow:hidden}.bar{height:100%;background:#2563eb;width:5%}
+.card{background:#fff;border:2px solid #e9edf2;border-radius:14px;padding:16px;box-shadow:0 2px 8px #00000008}.tag{font-size:.75rem;font-weight:800;color:#1e4a7a}
+.q{font-size:1.08rem;font-weight:700;line-height:1.45;margin:10px 0 14px}.opts{display:grid;gap:7px}
+.opt{border:1px solid #dbe3ec;border-radius:10px;padding:10px;cursor:pointer;background:#fafcff}.opt input{margin-right:8px;accent-color:#2563eb}
+.result{background:#fff;border:1px solid #dbe3ec;border-radius:14px;padding:16px}.score{font-size:2rem;font-weight:900;text-align:center;color:#0b3b5c}.status{text-align:center;font-weight:900;font-size:1.35rem;padding:10px;border-radius:10px;margin-bottom:8px}
+.pos{color:#b91c1c}.neg{color:#047857}table{width:100%;border-collapse:collapse;margin-top:12px}td,th{padding:7px;border-bottom:1px solid #e2e8f0;text-align:left;font-size:.84rem}
+.btn{display:block;width:100%;text-align:center;text-decoration:none;border:0;border-radius:999px;padding:11px;background:#1e4a7a;color:#fff;font-weight:800;margin-top:12px}
+.serum-nav{display:flex;gap:10px;flex-wrap:wrap}.serum-nav a{display:inline-block;padding:8px 12px;border-radius:999px;background:#eef6ff;color:#123f68;font-weight:700;text-decoration:none;font-size:.85rem}.serum-nav a:last-child{background:#0f2b44;color:#fff}
+.btn.alt{background:#0f2b44}
+</style></head><body><div class="app"><header class="head"><nav class="serum-nav" aria-label="Navegación SERUM-APP"><a href="screening-index.html">← Screening</a><a href="../index.html">Tablero SERUMS</a></nav><h1>PCL-5</h1><div>Tamizaje de síntomas de TEPT · 20 ítems</div></header><main class="body">
+<div class="note"><b>Instrucción:</b> piense en la experiencia estresante que más le afecta y responda cuánto le molestó cada problema <b>durante el último mes</b>.<br><b>Calificación:</b> 0 Nada · 1 Un poco · 2 Moderadamente · 3 Bastante · 4 Extremadamente. Total 0–80. Tamizaje positivo ≥33. Síntoma presente ≥2; B≥1, C≥1, D≥2, E≥2.</div>
+<div id="test"><div class="progress"><b id="num">1/20</b><div class="track"><div class="bar" id="bar"></div></div></div><div class="card"><div class="tag" id="tag"></div><div class="q" id="q"></div><div class="opts" id="opts"></div></div></div>
+<div id="result" style="display:none"></div></main></div>
+<script>
+var ITEMS=[
+{c:"B",t:'Recuerdos repetidos, perturbadores y no deseados de la experiencia estresante.'},
+{c:"B",t:'Sueños repetidos y perturbadores relacionados con la experiencia estresante.'},
+{c:"B",t:'Sentir o actuar de repente como si la experiencia estresante estuviera ocurriendo nuevamente.'},
+{c:"B",t:'Sentirse muy alterado cuando algo le recuerda la experiencia estresante.'},
+{c:"B",t:'Reacciones físicas intensas cuando algo le recuerda la experiencia estresante.'},
+{c:"C",t:'Evitar recuerdos, pensamientos o sentimientos relacionados con la experiencia estresante.'},
+{c:"C",t:'Evitar recordatorios externos de la experiencia estresante.'},
+{c:"D",t:'Dificultad para recordar partes importantes de la experiencia estresante.'},
+{c:"D",t:'Creencias negativas intensas sobre usted mismo, otras personas o el mundo.'},
+{c:"D",t:'Culparse a sí mismo o a otra persona por la experiencia estresante o sus consecuencias.'},
+{c:"D",t:'Sentimientos negativos intensos como miedo, horror, ira, culpa o vergüenza.'},
+{c:"D",t:'Pérdida de interés en actividades que antes disfrutaba.'},
+{c:"D",t:'Sentirse distante o desconectado de otras personas.'},
+{c:"D",t:'Dificultad para experimentar sentimientos positivos.'},
+{c:"E",t:'Conducta irritable, estallidos de ira o comportamiento agresivo.'},
+{c:"E",t:'Asumir riesgos o hacer cosas que podrían causarle daño.'},
+{c:"E",t:'Estar excesivamente alerta, vigilante o en guardia.'},
+{c:"E",t:'Sentirse sobresaltado o asustarse con facilidad.'},
+{c:"E",t:'Dificultad para concentrarse.'},
+{c:"E",t:'Dificultad para conciliar o mantener el sueño.'}
+];
+var LABELS=["Nada","Un poco","Moderadamente","Bastante","Extremadamente"], answers=[], index=0, busy=false;
+var q=document.getElementById("q"),opts=document.getElementById("opts"),num=document.getElementById("num"),bar=document.getElementById("bar"),tag=document.getElementById("tag");
+function draw(){
+ var it=ITEMS[index]; num.textContent=(index+1)+"/20";bar.style.width=((index+1)*5)+"%";tag.textContent="Clúster "+it.c;q.textContent=(index+1)+". "+it.t;opts.innerHTML="";
+ for(var v=0;v<5;v++){var l=document.createElement("label");l.className="opt";var r=document.createElement("input");r.type="radio";r.name="respuesta";r.value=v;l.appendChild(r);l.appendChild(document.createTextNode(v+" · "+LABELS[v]));(function(value){r.onchange=function(){if(busy)return;busy=true;answers[index]=value;setTimeout(function(){busy=false;if(index<19){index++;draw()}else{finish()}},250)}})(v);opts.appendChild(l)}
+}
+function finish(){
+ var total=0,i;for(i=0;i<20;i++){total+=Number(answers[i]||0);}
+ var ranges={B:[0,5,1,"Intrusión"],C:[5,7,1,"Evitación"],D:[7,14,2,"Cognición/Ánimo"],E:[14,20,2,"Hiperactivación"]}, rows="",all=true;
+ ["B","C","D","E"].forEach(function(k){var r=ranges[k],n=0,j;for(j=r[0];j<r[1];j++){if(answers[j]>=2)n++}var ok=n>=r[2];if(!ok)all=false;rows+="<tr><td>"+k+" · "+r[3]+"</td><td>"+n+"</td><td>"+r[2]+"</td><td>"+(ok?"Cumple":"No cumple")+"</td></tr>"});
+ var pos=total>=33;document.getElementById("test").style.display="none";var out=document.getElementById("result");out.style.display="block";out.className="result";
+ out.innerHTML='<div class="status '+(pos?'pos':'neg')+'">'+(pos?'TAMIZAJE POSITIVO':'TAMIZAJE NEGATIVO')+'</div><p style="text-align:center;font-size:1.1rem"><b>Puntuación total:</b> '+total+' de 80</p><p style="text-align:center">'+(pos?'El puntaje alcanza el criterio operativo ≥33 para TEPT probable.':'El puntaje está por debajo del criterio operativo ≥33.')+'</p><table><tr><th>Clúster</th><th>Presentes</th><th>Requeridos</th><th>Criterio</th></tr>'+rows+'</table><p><b>Patrón B/C/D/E:</b> '+(all?'Cumple los mínimos sintomáticos.':'No cumple todos los mínimos sintomáticos.')+'</p><p>Resultado de tamizaje; no sustituye la evaluación clínica diagnóstica.</p><a class="btn" href="screening-index.html">Volver a Screening</a><a class="btn alt" href="../index.html">Tablero SERUMS</a><button class="btn" onclick="location.reload()">Reiniciar PCL-5</button>';
+}
+draw();
+</script></body></html>
