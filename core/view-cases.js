@@ -67,7 +67,15 @@ function renderCases() {
   // Extraer carreras, bloques, niveles ÚNICOS y ORDENADOS
   let careers = [...new Set(data.cases.map(c => c.career || c.specialty))].sort();
   let blocks = [...new Set(data.cases.map(c => c.block))].sort();
-  let levels = [...new Set(data.cases.map(c => c.level))].sort();
+  // Categorías oficiales del primer nivel (RM 546-2011/MINSA, NTS 021-MINSA/DGSP-V.03).
+  // Lista fija: no se deriva de los datos (evita valores ajenos como dificultad o "Por revisar").
+  const LEVEL_LABELS = {
+    "I-1": "I-1 · Puesto/posta sin médico",
+    "I-2": "I-2 · Puesto/posta con médico",
+    "I-3": "I-3 · Centro de salud con laboratorio",
+    "I-4": "I-4 · Centro de salud con internamiento"
+  };
+  const levels = Object.keys(LEVEL_LABELS);
   let remoteCareers = new Set();
 
   let selectedCareer = "";
@@ -101,7 +109,7 @@ function renderCases() {
     `).join("");
 
     levelList.innerHTML = levels.map(l => `
-      <button class="option-btn" data-level="${l}">${l}</button>
+      <button class="option-btn" data-level="${l}">${LEVEL_LABELS[l]}</button>
     `).join("");
 
     // LISTENERS PARA CARRERAS
@@ -113,7 +121,6 @@ function renderCases() {
           try {
             const result = await window.SERUMS_BANK.mergeRemoteProfession(selectedCareer, { target: data.cases });
             blocks = [...new Set(data.cases.map(c => c.block))].sort();
-            levels = [...new Set(data.cases.map(c => c.level))].sort();
             renderFilters();
             if (bankLoadStatus) bankLoadStatus.textContent = `${result.added} preguntas de ${selectedCareer} disponibles. Las claves permanecen pendientes de revisión.`;
           } catch (error) {
