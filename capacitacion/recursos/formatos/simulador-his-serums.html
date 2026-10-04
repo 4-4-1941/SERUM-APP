@@ -89,26 +89,6 @@ footer{font-size:.78rem;color:#475467;margin:18px 0}
 <section class="card notice no-print"><strong>Privacidad:</strong> no ingreses datos reales de pacientes. Usa códigos de práctica (por ejemplo CASO-001).</section>
 <section id="offline-banner" class="card offline"><strong>Modo offline:</strong> no hay conexión con Supabase. Se usa el catálogo guardado en este equipo o el catálogo mínimo incluido.</section>
 
-<!-- ===== CUENTA (Supabase Auth) ===== -->
-<section class="card no-print" id="auth-card">
-  <h2>Mi cuenta</h2>
-  <div id="auth-out">
-    <div class="grid">
-      <label>Correo<input id="auth-email" type="email" autocomplete="email" placeholder="correo@ejemplo.com"></label>
-      <label>Contraseña (mínimo 6)<input id="auth-pass" type="password" autocomplete="current-password"></label>
-    </div>
-    <div class="actions">
-      <button id="auth-login" class="btn">Entrar</button>
-      <button id="auth-signup" class="btn secondary">Crear cuenta</button>
-    </div>
-  </div>
-  <div id="auth-in" class="hidden">
-    <p>Sesión iniciada: <strong id="auth-user"></strong></p>
-    <div class="actions"><button id="auth-logout" class="btn secondary">Salir</button></div>
-  </div>
-  <p id="auth-msg" class="msg"></p>
-</section>
-
 <!-- ===== HERRAMIENTAS HIS ===== -->
 <section class="card no-print">
   <h2>Herramientas HIS</h2>
@@ -178,8 +158,6 @@ footer{font-size:.78rem;color:#475467;margin:18px 0}
     <div class="actions no-print">
       <button id="review" class="btn">Revisar campos</button>
       <button id="save" class="btn secondary">Guardar localmente</button>
-      <button id="cloud-save" class="btn secondary">Guardar en mi cuenta</button>
-      <button id="cloud-load" class="btn secondary">Cargar de mi cuenta</button>
       <button id="export" class="btn secondary">Exportar JSON</button>
       <button id="print" class="btn secondary">Imprimir / PDF</button>
       <button id="clear" class="btn danger">Limpiar datos locales</button>
@@ -194,13 +172,13 @@ footer{font-size:.78rem;color:#475467;margin:18px 0}
 <script>
 /* =====================================================================
    SIMULADOR HIS · SERUMS
-   Secciones: 0 Config · 1 Utilidades · 2 Catálogo · 3 Auth · 4 Consulta
+   Secciones: 0 Config · 1 Utilidades · 2 Catálogo · 4 Consulta
               5 Registro · 6 Validaciones · 7 Práctica · 8 Datos
    ===================================================================== */
 
 /* ---------- 0. CONFIGURACIÓN (pega aquí tus datos de Supabase) ---------- */
-const SUPABASE_URL = 'TU_URL_AQUI';
-const SUPABASE_ANON_KEY = 'TU_ANON_KEY_AQUI';
+const SUPABASE_URL = 'https://xcfdhwqjudzngvlssyeg.supabase.co';
+const SUPABASE_ANON_KEY = 'sb_publishable_SMfnQmaqkzsFXn23qDriEQ_tG-Xb_Jd';
 
 const CAT_KEY = 'sim-his-catalogo-v1';          // caché del catálogo
 const CAT_TTL = 24 * 60 * 60 * 1000;            // 24 horas
@@ -264,34 +242,6 @@ async function loadCatalog() {
     setOffline(false);
   } catch (e) { setOffline(true); }
   fillCodeList();
-}
-
-/* ---------- 3. AUTH (Supabase Auth) ---------- */
-let user = null;
-const authMsg = t => { $('auth-msg').textContent = t; };
-function setUser(u) {
-  user = u;
-  $('auth-out').classList.toggle('hidden', !!u);
-  $('auth-in').classList.toggle('hidden', !u);
-  $('auth-user').textContent = u ? u.email : '';
-}
-async function initAuth() {
-  if (!sb) { authMsg('Sin conexión a Supabase: completa SUPABASE_URL y SUPABASE_ANON_KEY en el archivo.'); return; }
-  try {
-    const { data } = await sb.auth.getSession();
-    setUser(data.session ? data.session.user : null);
-    sb.auth.onAuthStateChange((_e, s) => setUser(s ? s.user : null));
-  } catch (e) { authMsg('No se pudo leer la sesión.'); }
-}
-async function doAuth(kind) {
-  if (!sb) return authMsg('Configura Supabase primero.');
-  const email = $('auth-email').value.trim(), password = $('auth-pass').value;
-  if (!email || password.length < 6) return authMsg('Escribe tu correo y una contraseña de mínimo 6 caracteres.');
-  authMsg('Procesando…');
-  const { data, error } = kind === 'login' ? await sb.auth.signInWithPassword({ email, password }) : await sb.auth.signUp({ email, password });
-  if (error) return authMsg('Error: ' + error.message);
-  if (kind === 'signup' && !data.session) return authMsg('Cuenta creada. Revisa tu correo para confirmarla y luego pulsa Entrar.');
-  authMsg('');
 }
 
 /* ---------- 4. CONSULTA OPERATIVA HIS ---------- */
@@ -478,7 +428,7 @@ async function loadCases() {
   return casePool;
 }
 function setLock(locked) {
-  ['save', 'export', 'print', 'clear', 'cloud-save', 'cloud-load'].forEach(id => {
+  ['save', 'export', 'print', 'clear'].forEach(id => {
     const b = $(id); b.disabled = locked; b.title = locked ? 'Bloqueado durante el modo práctica.' : '';
   });
 }
@@ -538,34 +488,6 @@ function reviewClick() {
 }
 
 /* ---------- 8. GESTIÓN DE DATOS ---------- */
-function tableMissing(e) { return e && (e.code === '42P01' || e.code === 'PGRST205' || /does not exist|schema cache/i.test(e.message || '')); }
-async function cloudSave() {
-  if (!sb || !user) { $('feedback').innerHTML = '<div class="missing">Inicia sesión para guardar en tu cuenta.</div>'; return; }
-  readData();
-  try {
-    const row = { meta: data.meta, filas: data.rows, updated_at: new Date().toISOString() };
-    const { data: ex, error: e1 } = await sb.from('registros_serums').select('id').eq('user_id', user.id).order('updated_at', { ascending: false }).limit(1);
-    if (e1) throw e1;
-    const res = ex && ex.length ? await sb.from('registros_serums').update(row).eq('id', ex[0].id) : await sb.from('registros_serums').insert({ ...row, user_id: user.id });
-    if (res.error) throw res.error;
-    $('feedback').innerHTML = '<div class="ok">Borrador guardado en tu cuenta.</div>';
-  } catch (e) {
-    $('feedback').innerHTML = `<div class="error">${tableMissing(e) ? 'La tabla registros_serums aún no existe en Supabase.' : 'No se pudo guardar: ' + esc(e.message)}</div>`;
-  }
-}
-async function cloudLoad() {
-  if (!sb || !user) { $('feedback').innerHTML = '<div class="missing">Inicia sesión para cargar tu borrador.</div>'; return; }
-  try {
-    const { data: ex, error } = await sb.from('registros_serums').select('meta,filas').eq('user_id', user.id).order('updated_at', { ascending: false }).limit(1);
-    if (error) throw error;
-    if (!ex || !ex.length) { $('feedback').innerHTML = '<div class="missing">Aún no tienes un borrador guardado.</div>'; return; }
-    data = { meta: ex[0].meta || {}, rows: Array.isArray(ex[0].filas) && ex[0].filas.length ? ex[0].filas : blankData().rows };
-    drawRows();
-    $('feedback').innerHTML = '<div class="ok">Borrador cargado desde tu cuenta.</div>';
-  } catch (e) {
-    $('feedback').innerHTML = `<div class="error">${tableMissing(e) ? 'La tabla registros_serums aún no existe en Supabase.' : 'No se pudo cargar: ' + esc(e.message)}</div>`;
-  }
-}
 function saveLocal() { readData(); localStorage.setItem(DRAFT_KEY, JSON.stringify(data)); $('feedback').innerHTML = '<div class="ok">Guardado solo en este navegador.</div>'; }
 function exportJSON() {
   readData();
@@ -580,9 +502,6 @@ function clearLocal() {
 }
 
 /* ---------- ARRANQUE: conectar eventos ---------- */
-$('auth-login').onclick = () => doAuth('login');
-$('auth-signup').onclick = () => doAuth('signup');
-$('auth-logout').onclick = async () => { if (sb) await sb.auth.signOut(); };
 $('show-consult').onclick = () => showView('consult');
 $('show-register').onclick = () => showView('register');
 $('his-q').addEventListener('input', debounce(runSearch, 300));
@@ -599,8 +518,6 @@ $('save').onclick = saveLocal;
 $('export').onclick = exportJSON;
 $('print').onclick = () => { if (reviewNormal()) window.print(); };
 $('clear').onclick = clearLocal;
-$('cloud-save').onclick = cloudSave;
-$('cloud-load').onclick = cloudLoad;
 $('own-mode').onclick = ownMode;
 $('practice-mode').onclick = chooseCase;
 $('another-case').onclick = chooseCase;
@@ -608,7 +525,6 @@ $('another-case').onclick = chooseCase;
 try { const saved = JSON.parse(localStorage.getItem(DRAFT_KEY) || 'null'); if (saved && saved.meta && Array.isArray(saved.rows)) data = saved; } catch (e) {}
 drawRows();
 loadCatalog();
-initAuth();
 </script>
 </body>
 </html>
