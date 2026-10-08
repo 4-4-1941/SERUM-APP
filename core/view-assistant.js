@@ -22,7 +22,7 @@ function renderAssistant() {
   const list = document.getElementById("assistant-list");
   const search = document.getElementById("assistant-search");
   document.getElementById("open-his-register").addEventListener("click", () => {
-    window.location.href = "capacitacion/recursos/formatos/registro-diario-his.html";
+    window.location.href = "capacitacion/recursos/formatos/simulador-his-integral-v0.1.html";
   });
 
   const integratedPracticeUrls = {
