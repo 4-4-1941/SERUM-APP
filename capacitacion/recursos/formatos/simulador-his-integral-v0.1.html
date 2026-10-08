@@ -44,6 +44,7 @@ button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid 
 </head>
 <body>
 <header>
+<p style="margin:10px 0 0"><a href="../../../index.html">← Volver a Asistente Profesional</a></p>
 <h1>Simulador HIS integral · v0.1</h1>
 <p class="nota">Uso pedagógico. El HIS real se entrega por escrito con lapicero azul. Revisa solo las actividades que ya tienen ficha verificada (HIS-FICHAS-MOTOR.md v0.3); el resto no se valida.</p>
 <div class="bar">
@@ -65,6 +66,7 @@ button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid 
 <button id="add">Añadir registro</button>
 <button id="rev" class="main">Revisar hoja</button>
 <button id="clr">Limpiar</button>
+<span id="cnt" role="status" style="align-self:center;font-size:.9rem"></span>
 </div>
 </header>
 <main>
@@ -166,11 +168,14 @@ function reg(d={}){
   <div><span class="h">Tipo</span><div class="tp" data-t="${x.t||""}">${["P","D","R"].map(v=>`<button type="button" aria-pressed="${x.t===v}" data-v="${v}">${v}</button>`).join("")}</div></div>
   <div><span class="h">LAB 1</span><input data-k="a" value="${esc(x.a)}"></div><div><span class="h">LAB 2</span><input data-k="b" value="${esc(x.b)}"></div>
   <div><span class="h">Código</span><input data-k="c" value="${esc(x.c)}"></div></div>`}
- e.innerHTML=h;sheet.appendChild(e);
+ e.innerHTML=h;sheet.appendChild(e);upd();
 }
+function upd(){const c=$("#cnt");if(c)c.textContent=sheet.children.length+" de 22 registros"}
 function limpiar(){sheet.innerHTML="";n=0;$("#rep").innerHTML="";const k=matchMedia("(min-width:900px)").matches?22:3;for(let i=0;i<k;i++)reg()}
 sheet.addEventListener("click",e=>{const b=e.target.closest(".tp button");if(!b)return;const w=b.parentNode;const on=b.getAttribute("aria-pressed")==="true";w.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed","false"));if(!on){b.setAttribute("aria-pressed","true");w.dataset.t=b.dataset.v}else w.dataset.t=""});
-$("#add").onclick=()=>{reg();sheet.lastChild.scrollIntoView({behavior:"smooth",block:"center"})};
+$("#add").onclick=()=>{
+ if(sheet.children.length>=22){$("#rep").innerHTML='<div class="it a">La hoja doble cara del HIS tiene 22 registros. Para más atenciones se usa otra hoja.</div>';$("#rep").scrollIntoView({behavior:"smooth",block:"center"});return}
+ reg();const u=sheet.lastChild;u.scrollIntoView({behavior:"smooth",block:"center"});const i=u.querySelector("input");if(i)i.focus({preventScroll:true})};
 $("#clr").onclick=limpiar;
 $("#caso").onchange=function(){if(this.value==="")return;const c=CASOS[+this.value];sheet.innerHTML="";n=0;$("#rep").innerHTML="";reg(c);reg();reg();this.value=""};
 function leer(e){const g=(r,k)=>(r.querySelector(`[data-k="${k}"]`)?.value||"").trim();
