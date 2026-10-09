@@ -35,6 +35,12 @@ main{max-width:1050px;margin:auto;padding:14px}
 #lb .nv{display:flex;justify-content:space-between;padding:8px 12px}
 #lb .nv button{border:0;border-radius:10px;padding:11px 20px;font-size:15px;font-weight:700;background:#ffffff26;color:#fff;cursor:pointer}
 #toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);background:#15324a;color:#fff;padding:10px 16px;border-radius:10px;font-size:14px;z-index:30;display:none;max-width:90%}
+.filtros{display:flex;gap:8px;overflow-x:auto;padding:8px 0 2px;-webkit-overflow-scrolling:touch}
+.fl{flex:0 0 auto;border:2px solid var(--c,#176b87);background:#fff;color:var(--c,#176b87);border-radius:999px;padding:8px 14px;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap}
+.fl.on{background:var(--c,#176b87);color:#fff}
+.fl small{opacity:.85;font-weight:600;margin-left:4px}
+.card{border-top:6px solid var(--c,#d8e5e8)}
+.meta .eje{color:var(--c,#607782);font-weight:700}
 @media(max-width:600px){main{padding:8px}.grid{grid-template-columns:1fr;gap:10px}.card{border-radius:12px}}
 </style>
 </head>
@@ -42,6 +48,7 @@ main{max-width:1050px;margin:auto;padding:14px}
 <header>
 <nav class="nav" aria-label="Navegación"><a href="../../index.html">← Capacitación Continua</a><a href="../../../index.html">← Tablero SERUMS</a></nav>
 <strong>SIP SERUMS PERÚ · Flashcards visuales</strong><span id="count">Cargando…</span>
+<div class="filtros" id="filtros" role="group" aria-label="Filtrar por eje temático"></div>
 </header>
 <main>
 <div class="notice">Visor enlazado a las imágenes PNG reales de <b>flashcards/</b>. Toque una ficha para abrirla; use ⬇ PDF o ⬇ PNG para descargarla. Material pedagógico: no sustituye la norma oficial vigente.</div>
@@ -646,7 +653,16 @@ const $ = id => document.getElementById(id);
 const rel = f => 'flashcards/' + encodeURIComponent(f.archivo);
 const raw = f => REPO_RAW + encodeURIComponent(f.archivo);
 const ejeTxt = f => f.eje || 'Eje por revisar';
-let idx = 0;
+const EJES=[
+ {n:'Salud pública',c:'#2f8f72'},
+ {n:'Cuidado integral de salud',c:'#176b87'},
+ {n:'Ética e interculturalidad',c:'#7b4fa3'},
+ {n:'Gestión de servicios de salud',c:'#b8651a'},
+ {n:'Investigación',c:'#c0392b'}
+];
+const colorEje=e=>(EJES.find(x=>x.n===e)||{c:'#8a99a3'}).c;
+const ordenadas=[...flashcards].sort((a,b)=>parseInt(a.codigo,10)-parseInt(b.codigo,10));
+let lista=ordenadas, filtro=null, idx = 0;
 
 function toast(m,ms){const t=$('toast');t.textContent=m;t.style.display='block';clearTimeout(toast.h);if(ms)toast.h=setTimeout(()=>t.style.display='none',ms);}
 
@@ -721,16 +737,18 @@ async function png(f){
 
 /* rejilla */
 const grid=$('grid');
-$('count').textContent=`${flashcards.length} fichas disponibles`;
-flashcards.forEach((f,i)=>{
-  const c=document.createElement('article'); c.className='card';
+function pintar(){
+$('count').textContent=filtro?`${lista.length} fichas · ${filtro}`:`${lista.length} fichas disponibles`;
+grid.innerHTML='';
+lista.forEach((f,i)=>{
+  const c=document.createElement('article'); c.className='card'; c.style.setProperty('--c',colorEje(f.eje));
   const op=document.createElement('button'); op.type='button'; op.className='open'; op.setAttribute('aria-label','Abrir ficha '+f.codigo+': '+f.titulo);
   const im=document.createElement('img'); im.alt='Ficha '+f.codigo+': '+f.titulo; im.loading='lazy'; im.decoding='async'; ponerImg(im,f);
   op.append(im); op.onclick=()=>abrir(i);
   const m=document.createElement('div'); m.className='meta';
   const b=document.createElement('b'); b.textContent='Ficha '+f.codigo;
   const t=document.createElement('span'); t.className='t'; t.textContent=f.titulo;
-  const s=document.createElement('small'); s.textContent=ejeTxt(f)+' \u00B7 '+f.tema;
+  const s=document.createElement('small'); const se=document.createElement('span'); se.className='eje'; se.textContent=ejeTxt(f); s.append(se,' \u00B7 '+f.tema);
   m.append(b,t,s);
   if(f.estado==='REVISAR'){const r=document.createElement('span'); r.className='rev'; r.textContent='Eje pendiente de revisi\u00F3n manual'; m.append(r);}
   const a=document.createElement('div'); a.className='acts';
@@ -738,19 +756,36 @@ flashcards.forEach((f,i)=>{
   const bp=document.createElement('button'); bp.type='button'; bp.className='btn'; bp.textContent='\u2B07 PDF'; bp.onclick=()=>pdf(f);
   a.append(bo,bp); c.append(op,m,a); grid.append(c);
 });
+}
+
+/* botones de color por eje */
+const fil=$('filtros');
+function botones(){
+  fil.innerHTML='';
+  const mk=(txt,n,col,val)=>{
+    const b=document.createElement('button'); b.type='button'; b.className='fl'+(filtro===val?' on':'');
+    b.style.setProperty('--c',col); b.setAttribute('aria-pressed',filtro===val);
+    b.append(txt); const sm=document.createElement('small'); sm.textContent=n; b.append(sm);
+    b.onclick=()=>{ filtro=val; lista=val?ordenadas.filter(f=>f.eje===val):ordenadas; botones(); pintar(); window.scrollTo(0,0); };
+    fil.append(b);
+  };
+  mk('Todas',ordenadas.length,'#15324a',null);
+  EJES.forEach(e=>mk(e.n,ordenadas.filter(f=>f.eje===e.n).length,e.c,e.n));
+}
+botones(); pintar();
 
 /* visor individual */
 function mostrar(){
-  const f=flashcards[idx];
+  const f=lista[idx];
   ponerImg($('lbImg'),f); $('lbImg').alt='Ficha '+f.codigo+': '+f.titulo;
   $('lbT').textContent='Ficha '+f.codigo+' \u00B7 '+f.titulo;
   $('lbS').textContent=ejeTxt(f)+' \u00B7 '+f.tema;
 }
 function abrir(i){idx=i;mostrar();$('lb').classList.add('on');document.body.style.overflow='hidden';}
 function cerrar(){$('lb').classList.remove('on');document.body.style.overflow='';}
-function mover(d){idx=(idx+d+flashcards.length)%flashcards.length;mostrar();}
+function mover(d){idx=(idx+d+lista.length)%lista.length;mostrar();}
 $('lbX').onclick=cerrar; $('lbP').onclick=()=>mover(-1); $('lbN').onclick=()=>mover(1);
-$('lbPdf').onclick=()=>pdf(flashcards[idx]); $('lbPng').onclick=()=>png(flashcards[idx]);
+$('lbPdf').onclick=()=>pdf(lista[idx]); $('lbPng').onclick=()=>png(lista[idx]);
 document.addEventListener('keydown',e=>{if(!$('lb').classList.contains('on'))return;if(e.key==='Escape')cerrar();if(e.key==='ArrowLeft')mover(-1);if(e.key==='ArrowRight')mover(1);});
 </script>
 </body>
