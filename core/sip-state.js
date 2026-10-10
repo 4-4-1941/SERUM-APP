@@ -1,5 +1,5 @@
 const CORE_MODULE_BASE = new URL("./", document.currentScript.src);
-const CORE_VIEWS = Object.freeze({cases:"view-cases",simulacro:"view-simulacro",glossary:"view-reference",norms:"view-reference",priorityNorms:"view-reference",decrees:"view-reference",resources:"view-reference",examRegistry:"view-reference",assistant:"view-assistant",hisCodesChild:"view-assistant",training:"view-training"});
+const CORE_VIEWS = Object.freeze({cases:"view-cases",simulacro:"view-simulacro",glossary:"view-reference",norms:"view-reference",priorityNorms:"view-reference",decrees:"view-reference",resources:"view-reference",examRegistry:"view-reference",assistant:"view-assistant",oficios:"view-assistant",hisCodesChild:"view-assistant",training:"view-training"});
 const corePending = new Map();
 const coreLoaded = new Set();
 let coreNavigationRequest = 0;

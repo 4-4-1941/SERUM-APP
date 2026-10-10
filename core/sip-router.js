@@ -4,7 +4,7 @@ function loadCoreScript(name) {
   if (coreScripts.has(name)) return coreScripts.get(name);
   const pending = new Promise((resolve, reject) => {
     const script = document.createElement('script');
-    script.src = new URL(name + '.js?v=20260929-core-final', CORE_MODULE_BASE).href;
+    script.src = new URL(name + '.js?v=20261010-oficios', CORE_MODULE_BASE).href;
     script.onload = resolve;
     script.onerror = () => { script.remove(); coreScripts.delete(name); reject(new Error('Carga fallida: ' + name)); };
     document.head.appendChild(script);
@@ -63,7 +63,8 @@ async function renderView(view) {
   if (view === "glossary") renderGlossary();
   if (view === "norms") renderNorms();
   if (view === "priorityNorms") renderPriorityNorms();
-  if (view === "assistant") renderAssistant();
+  if (view === "assistant") renderAssistant("formatos");
+  if (view === "oficios") renderAssistant("oficios");
   if (view === "hisCodesChild") renderHisCodesChild();
   if (view === "training") renderTraining();
   if (view === "decrees") renderDecrees();

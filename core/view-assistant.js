@@ -1,27 +1,34 @@
-function renderAssistant() {
-  pageTitle.textContent = "Asistente Profesional";
-  pageSubtitle.textContent = "Formatos, oficios e informes frecuentes en el ejercicio SERUMS: procedimiento, campos obligatorios, ejemplo y errores comunes.";
-  const categories = [...new Set(data.assistantDocs.map(d => d.category))];
+let assistantMode = "formatos";
+const OFICIO_CATEGORIES = ["Documentos administrativos"];
+function renderAssistant(mode) {
+  assistantMode = mode === "oficios" ? "oficios" : "formatos";
+  const isOficios = assistantMode === "oficios";
+  const docs = data.assistantDocs.filter(d => OFICIO_CATEGORIES.includes(d.category) === isOficios);
+  pageTitle.textContent = isOficios ? "Oficios" : "Formatos";
+  pageSubtitle.textContent = isOficios
+    ? "Oficios y documentos administrativos frecuentes en el ejercicio SERUMS: procedimiento, campos obligatorios, ejemplo y errores comunes."
+    : "Formatos e informes frecuentes en el ejercicio SERUMS: procedimiento, campos obligatorios, ejemplo y errores comunes.";
+  const categories = [...new Set(docs.map(d => d.category))];
   root.innerHTML = `
     <section class="two-col">
       <div class="panel">
-        <input id="assistant-search" class="search" placeholder="Buscar formato, oficio, informe..." />
+        <input id="assistant-search" class="search" placeholder="${isOficios ? "Buscar oficio, solicitud..." : "Buscar formato, informe..."}" />
         <div id="assistant-list"></div>
       </div>
       <div class="panel">
         <h3 class="section-title">Sobre esta sección</h3>
         <p style="line-height:1.6;color:#5B6E6A">Documentos de uso frecuente cuando ya estás trabajando en un establecimiento de salud. No es material de examen — es soporte profesional para tu día a día en la plaza SERUMS.</p>
-        <hr style="border:0;border-top:1px solid #D8D2C4;margin:18px 0">
+        ${isOficios ? "" : `<hr style="border:0;border-top:1px solid #D8D2C4;margin:18px 0">
         <h3 class="section-title">Formatos interactivos</h3>
         <p style="line-height:1.6;color:#5B6E6A">Completa una guía, revisa campos obligatorios y guarda el borrador solo en tu navegador. El formato no reemplaza los sistemas ni los procedimientos institucionales.</p>
-        <button class="action-btn" id="open-his-register">Abrir Registro Diario HIS →</button>
+        <button class="action-btn" id="open-his-register">Abrir Registro Diario HIS →</button>`}
       </div>
     </section>
   `;
 
   const list = document.getElementById("assistant-list");
   const search = document.getElementById("assistant-search");
-  document.getElementById("open-his-register").addEventListener("click", () => {
+  document.getElementById("open-his-register")?.addEventListener("click", () => {
     window.location.href = "capacitacion/recursos/formatos/simulador-his-integral-v0.1.html";
   });
 
@@ -32,7 +39,7 @@ function renderAssistant() {
 
   function draw(filter = "") {
     const q = filter.toLowerCase();
-    const filtered = data.assistantDocs.filter(d => {
+    const filtered = docs.filter(d => {
       const text = [d.title, d.category, d.purpose].join(" ").toLowerCase();
       return text.includes(q);
     });
@@ -98,7 +105,7 @@ function renderAssistantPractice(docId) {
   const st = assistantPracticeState[docId] || { attempts: 0, draft: "", revealed: false };
 
   root.innerHTML = `
-    <button id="back-to-assistant-btn" class="toggle" style="margin-bottom:12px;margin-top:0">← Volver a Asistente Profesional</button>
+    <button id="back-to-assistant-btn" class="toggle" style="margin-bottom:12px;margin-top:0">← Volver a ${assistantMode === "oficios" ? "Oficios" : "Formatos"}</button>
     <section class="two-col">
       <div class="panel">
         <div class="badge">${doc.category}</div>
@@ -130,7 +137,7 @@ function renderAssistantPractice(docId) {
     </section>
   `;
 
-  document.getElementById("back-to-assistant-btn").addEventListener("click", renderAssistant);
+  document.getElementById("back-to-assistant-btn").addEventListener("click", () => renderAssistant(assistantMode));
 
   const draft = document.getElementById("practice-draft");
   document.getElementById("compare-btn").addEventListener("click", () => {
