@@ -143,21 +143,32 @@ textarea#notes,textarea.input,select,input[type="text"],input:not([type]){width:
 .axis-bars{display:grid;gap:13px}.axis-bar-label{display:flex;justify-content:space-between;gap:12px;font-size:11px}.axis-bar-label span{font-weight:700}.axis-bar-track{height:13px;margin:5px 0;border-radius:999px;background:#e6ecea;overflow:hidden}.axis-bar-track span{display:block;height:100%;border-radius:inherit;background:#255a91}.axis-bar-row small{display:block;color:var(--muted);font-size:9px;line-height:1.35}
 .history-chart{display:block;width:100%;height:auto;min-height:190px;overflow:visible}.history-chart text{font:10px system-ui,sans-serif;fill:var(--muted)}.history-chart .trend-guide{stroke:#dce4e1;stroke-width:1}.history-chart polyline{fill:none;stroke:#255a91;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}.history-chart circle{fill:#fff;stroke:#255a91;stroke-width:3}.history-chart .trend-value{font-weight:800;fill:var(--ink)}.chart-caption{margin:4px 0 0;color:var(--muted);font-size:10px;text-align:center}
 
+.nav-toggle{display:none}
+
 /* ===== MÓVIL (< 861px): columna verde pasa arriba ===== */
 @media (max-width:1024px){
-  .app{grid-template-columns:1fr;grid-template-rows:auto 1fr}
+  .app{grid-template-columns:1fr;grid-template-rows:auto}
   html,body{overflow-x:hidden;-webkit-text-size-adjust:100%}
-  .sidebar{position:static;height:auto;width:100%;padding:16px 14px;gap:10px}
-  .brand{flex-direction:row;text-align:left;align-items:center;gap:12px;border-bottom:1px solid rgba(234,243,240,.16);padding-bottom:10px;width:100%}
-  .brand .brand-logo{width:56px;height:56px;margin-bottom:0;flex-shrink:0}
-  .brand .institucion{font-size:10px;letter-spacing:.08em}
-  .brand .app-title{font-size:20px}
+  /* Barra superior fija con el logo institucional; el menú se abre con ☰ */
+  .sidebar{position:fixed;top:0;left:0;right:0;z-index:100;width:auto;height:auto;max-height:100dvh;padding:0;gap:0;overflow:hidden}
+  .sidebar.open{height:100vh;height:100dvh;overflow-y:auto;overscroll-behavior:contain}
+  .brand{display:grid;grid-template-columns:44px 1fr;grid-template-rows:auto auto;column-gap:10px;align-content:center;text-align:left;height:64px;box-sizing:border-box;padding:0 64px 0 14px;margin:0;width:100%;border-bottom:1px solid rgba(234,243,240,.16)}
+  .brand .brand-logo{width:44px;height:44px;margin-bottom:0;grid-column:1;grid-row:1 / span 2;align-self:center}
+  .brand .institucion{grid-column:2;grid-row:1;align-self:end;font-size:9px;letter-spacing:.06em;line-height:1.2}
+  .brand .app-title{grid-column:2;grid-row:2;align-self:start;font-size:18px;line-height:1.2}
   /* Menú móvil: VERTICAL apilado de ancho completo — cada etiqueta cabe en su recuadro */
-  .nav{flex-direction:column;flex-wrap:nowrap;gap:10px;padding-bottom:2px}
+  .nav{display:none;flex-direction:column;flex-wrap:nowrap;gap:10px;padding:10px 14px 2px}
+  .sidebar.open .nav{display:flex}
+  .nav-toggle{display:flex;position:absolute;top:10px;right:10px;width:44px;height:44px;align-items:center;justify-content:center;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);border-radius:10px;color:#fff;cursor:pointer}
+  .nav-toggle:focus-visible{outline:2px solid #fff;outline-offset:2px}
+  .nav-toggle .ico-close{display:none}
+  .sidebar.open .nav-toggle .ico-open{display:none}
+  .sidebar.open .nav-toggle .ico-close{display:block}
   .nav-section-label{flex:none;width:100%;margin:14px 4px 2px;border-bottom:none;font-size:11px}
   .nav-btn{width:100%;flex:none;min-width:0;max-width:100%;min-height:46px;display:flex;align-items:center;padding:11px 16px;font-size:14px;line-height:1.35;white-space:normal;text-align:left}
-  .side-foot{flex-direction:row;justify-content:flex-end;align-items:center;width:100%}
-  main.main{padding:20px 14px 60px;width:100%}
+  .side-foot{display:none;flex-direction:row;justify-content:flex-end;align-items:center;width:100%;box-sizing:border-box;margin-top:0;padding:12px 14px 24px}
+  .sidebar.open .side-foot{display:flex}
+  main.main{padding:84px 14px 60px;width:100%}
   #page-title{font-size:24px}
   .two-col{grid-template-columns:1fr}
   .metrics{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}

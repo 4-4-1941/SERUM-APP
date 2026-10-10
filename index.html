@@ -5,8 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SERUMS SIP · Plataforma Unificada</title>
 <link rel="manifest" href="manifest.json">
-<link rel="stylesheet" href="styles.css?v=20260817-aireado">
-<meta name="theme-color" content="#1e3c72">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="styles.css?v=20261010-movil">
+<meta name="theme-color" content="#0C3B34">
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
@@ -21,7 +24,8 @@
 <span class="institucion">SIP SYSTEM INTELLIGENCE PLATFORM</span>
 <span class="app-title">SERUMS SIP V2</span>
 </div>
-<nav class="nav">
+<button id="nav-toggle" class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav"><svg class="ico-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="ico-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+<nav class="nav" id="main-nav">
 <button class="nav-btn active" data-view="dashboard" type="button">Tablero</button>
 <button class="nav-btn" data-view="cases" type="button">Entrenamiento por casos</button>
 <button class="nav-btn" data-view="simulacro" type="button">Simulacro (100)</button>
@@ -74,5 +78,16 @@
 <script src="core/sip-auth-ui.js?v=20260929-core-final"></script>
 <script src="core/sip-start.js?v=20260929-core-final"></script>
 <script src="screening-integracion.js?v=20260914-acceso-directo"></script>
+<script>
+(function(){
+var s=document.querySelector('.sidebar'),b=document.getElementById('nav-toggle'),n=document.getElementById('main-nav');
+if(!s||!b||!n)return;
+function set(o){s.classList.toggle('open',o);b.setAttribute('aria-expanded',String(o));b.setAttribute('aria-label',o?'Cerrar menú':'Abrir menú');document.body.style.overflow=o?'hidden':'';}
+b.addEventListener('click',function(){set(!s.classList.contains('open'));});
+n.addEventListener('click',function(e){if(e.target.closest('.nav-btn'))set(false);},true);
+document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false);});
+window.addEventListener('resize',function(){if(window.innerWidth>1024)set(false);});
+})();
+</script>
 </body></html>
 
