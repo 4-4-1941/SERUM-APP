@@ -290,27 +290,16 @@ function renderSimulacroRunning() {
   });
 
   const actions = document.getElementById("simulacro-actions");
-  const feedback = document.getElementById("simulacro-feedback");
 
-  if (!simulacroConfirmed) {
-    actions.innerHTML = `<button class="action-btn" id="confirm-sim-btn" ${simulacroSelected === null ? "disabled" : ""}>Confirmar respuesta</button>`;
-    document.getElementById("confirm-sim-btn").addEventListener("click", confirmSimulacroAnswer);
-  } else {
-    feedback.innerHTML = `
-      <div class="card">
-        <strong>Respuesta registrada</strong>
-        <p>El resultado de la respuesta se mostrará al finalizar el simulacro.</p>
-      </div>
-    `;
-    const isLast = simulacroIndex === simulacroQueue.length - 1;
-    actions.innerHTML = `<button class="action-btn" id="next-sim-btn">${isLast ? "Ver resultados →" : "Siguiente pregunta →"}</button>`;
-    document.getElementById("next-sim-btn").addEventListener("click", nextSimulacroQuestion);
-  }
+  // Un solo botón: registra la respuesta y pasa a la siguiente pregunta.
+  const isLast = simulacroIndex === simulacroQueue.length - 1;
+  actions.innerHTML = `<button class="action-btn" id="confirm-sim-btn" ${simulacroSelected === null ? "disabled" : ""}>${isLast ? "Confirmar y ver resultados →" : "Confirmar y siguiente →"}</button>
+    <p style="color:#5B6E6A;font-size:12px;margin-top:8px">Puedes cambiar la alternativa hasta que toques este botón. El resultado se muestra al finalizar.</p>`;
+  document.getElementById("confirm-sim-btn").addEventListener("click", confirmSimulacroAnswer);
 }
 
 function confirmSimulacroAnswer() {
   if (simulacroSelected === null || simulacroConfirmed) return;
-  simulacroConfirmed = true;
   const c = simulacroQueue[simulacroIndex];
   const correct = simulacroSelected === c.correct;
   simulacroResults.push({
@@ -322,7 +311,7 @@ function confirmSimulacroAnswer() {
     correctOption: c.correct,
     correct
   });
-  renderSimulacroRunning();
+  nextSimulacroQuestion();
 }
 
 function nextSimulacroQuestion() {
