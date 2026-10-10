@@ -171,7 +171,13 @@ textarea#notes,textarea.input,select,input[type="text"],input:not([type]){width:
   main.main{padding:84px 14px 60px;width:100%}
   #page-title{font-size:24px}
   .two-col{grid-template-columns:1fr}
-  .metrics{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+  /* Tablero en celular: 2 columnas parejas y última tarjeta a ancho completo */
+  .metrics{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .metrics .card:last-child:nth-child(odd){grid-column:1 / -1}
+  .metrics .label{font-size:10.5px;letter-spacing:.05em;line-height:1.3;min-height:2.6em}
+  .metrics .card:last-child:nth-child(odd) .label{min-height:0}
+  .metrics ~ section .action-btn,.metrics ~ section .toggle{display:block;box-sizing:border-box;width:100%;min-height:46px}
+  .metrics ~ section > span{display:block;margin:8px 0 0 !important}
   .card,.panel{padding:16px}
   .value{font-size:26px}
   .section-title{font-size:19px}
