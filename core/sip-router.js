@@ -73,4 +73,14 @@ async function renderView(view) {
   if (view === "screening") renderCapacitacionScreening();
   setActive(view);
   updateBadges();
+  if (window.__sipBooted) scrollToViewTop();
+}
+
+// En celular el menú ocupa la parte de arriba: baja al contenido de la sección.
+function scrollToViewTop() {
+  if (!window.matchMedia("(max-width: 1024px)").matches) return;
+  requestAnimationFrame(() => requestAnimationFrame(() => {
+    const top = document.getElementById("view-root");
+    if (top) top.scrollIntoView({ behavior: "smooth", block: "start" });
+  }));
 }

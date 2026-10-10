@@ -1,5 +1,5 @@
 function renderCases() {
-  pageTitle.textContent = priorityReviewMode ? "Repaso priorizado" : "Casos interactivos";
+  pageTitle.textContent = priorityReviewMode ? "Repaso priorizado" : "Entrenamiento por casos";
   pageSubtitle.textContent = priorityReviewMode
     ? "Orden sugerido: nunca intentados primero, luego con error, luego resueltos hace más tiempo."
     : "Elige carrera, bloque o nivel para ver sus casos.";
@@ -91,12 +91,17 @@ function renderCases() {
       });
     }
 
-    requestAnimationFrame(() => {
+    // Espera a que el filtro se cierre y el diseño se acomode; luego baja a la lista.
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      if (isMobile) {
+        list.scrollIntoView({ behavior: "smooth", block: "start" });
+        return;
+      }
       const listTop = list.getBoundingClientRect().top;
       if (listTop < 0 || listTop >= window.innerHeight) {
         list.scrollIntoView({ behavior: "smooth", block: "start" });
       }
-    });
+    }));
   }
 
   function renderFilters() {

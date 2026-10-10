@@ -2,4 +2,4 @@ navButtons.forEach(btn => btn.addEventListener("click", () => {
   priorityReviewMode = false;
   renderView(btn.dataset.view);
 }));
-renderView("dashboard");
+renderView("dashboard").then(() => { window.__sipBooted = true; });
