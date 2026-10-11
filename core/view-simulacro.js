@@ -11,7 +11,145 @@ function orderPoolAvoidingRepeats(pool, usedIds) {
   return fresh.concat(repeated);
 }
 
+// ===== Blueprint por carrera (A4) =====
+// Cada carrera tiene su propio blueprint. Solo Psicología está activo; las demás
+// carreras NO tienen blueprint (sin porcentajes inventados) y su simulacro queda bloqueado.
+// Los pesos de Psicología vienen de un análisis propio del examen, NO de un documento oficial.
+const SIP_BLUEPRINTS = {
+  "Psicología": {
+    activo: true,
+    ejes: {
+      "Cuidado integral": 37,
+      "Salud pública": 25,
+      "Gestión": 21,
+      "Ética e interculturalidad": 15,
+      "Investigación": 2
+    },
+    tipo: { definicion_conceptual: 55, caso_aplicado: 45 },
+    fuente: "Análisis propio del examen SERUMS Psicología (no es documento oficial)",
+    actualizado: "2026-10-02"
+  }
+};
+const SIMULACRO_SIZES = [25, 50, 100];
+const SIMULACRO_NO_BLUEPRINT_MSG = "El simulacro para esta carrera aún no está configurado. Puedes usar el modo Entrenamiento con filtros.";
+let simulacroSize = (() => {
+  const saved = Number(localStorage.getItem("simulacroSize"));
+  return SIMULACRO_SIZES.includes(saved) ? saved : 100;
+})();
+let simulacroPlan = null;
+
+function sumValues(obj) { return Object.values(obj).reduce((a, b) => a + b, 0); }
+
+// Blueprint activo y válido (ejes = 100 y tipo = 100) o null
+function getActiveBlueprint(career) {
+  const bp = career ? SIP_BLUEPRINTS[career] : null;
+  if (!bp || !bp.activo) return null;
+  if (Math.abs(sumValues(bp.ejes) - 100) > 1e-9 || Math.abs(sumValues(bp.tipo) - 100) > 1e-9) return null;
+  return bp;
+}
+
+// Mayores restos: total exacto; en empate se prioriza el de mayor peso.
+function largestRemainder(weights, total) {
+  const keys = Object.keys(weights);
+  const sumW = sumValues(weights);
+  const raw = keys.map((k, i) => {
+    const exact = weights[k] * total / sumW;
+    return { k, i, base: Math.floor(exact + 1e-9), rem: exact - Math.floor(exact + 1e-9), w: weights[k] };
+  });
+  let left = total - raw.reduce((a, r) => a + r.base, 0);
+  const order = [...raw].sort((a, b) => (b.rem - a.rem) || (b.w - a.w) || (a.i - b.i));
+  const out = {};
+  raw.forEach(r => { out[r.k] = r.base; });
+  for (let n = 0; left > 0 && n < order.length; n++, left--) out[order[n].k] += 1;
+  return out;
+}
+
+// Evita rachas de más de 2 preguntas seguidas del mismo eje: en cada paso toma del eje
+// que más preguntas tiene pendientes (sin romper la regla de racha).
+function spreadByBlock(items) {
+  const groups = {};
+  shuffle(items).forEach(c => { (groups[c.block] = groups[c.block] || []).push(c); });
+  const out = [];
+  while (out.length < items.length) {
+    const n = out.length;
+    const lastTwoSame = n >= 2 && out[n - 1].block === out[n - 2].block ? out[n - 1].block : null;
+    let keys = Object.keys(groups).filter(k => groups[k].length && k !== lastTwoSame);
+    if (!keys.length) keys = Object.keys(groups).filter(k => groups[k].length);
+    const maxLen = Math.max(...keys.map(k => groups[k].length));
+    const top = keys.filter(k => groups[k].length >= maxLen - 1);
+    const pick = top[Math.floor(Math.random() * top.length)];
+    out.push(groups[pick].pop());
+  }
+  return out;
+}
+
+function logMissingBlueprint(career) {
+  try {
+    const key = "sipBlueprintFaltantes";
+    const log = JSON.parse(localStorage.getItem(key) || "{}");
+    const today = new Date().toISOString().slice(0, 10);
+    const entry = log[career] || { intentos: 0 };
+    entry.intentos += 1;
+    entry.ultimo = today;
+    log[career] = entry;
+    localStorage.setItem(key, JSON.stringify(log));
+  } catch (e) { /* sin almacenamiento: se ignora */ }
+}
+
+function buildBlueprintQueue(career, bp, size) {
+  const usedIds = recentlyUsedCaseIds();
+  const axes = Object.keys(bp.ejes);
+  // Solo preguntas de ESA carrera + las comunes (Transversal). Nunca de otras carreras.
+  const pools = {};
+  axes.forEach(b => {
+    pools[b] = orderPoolAvoidingRepeats(
+      data.cases.filter(c => c.block === b && (c.career === career || c.career === "Transversal")),
+      usedIds
+    );
+  });
+  const totalAvailable = axes.reduce((a, b) => a + pools[b].length, 0);
+  const target = Math.min(size, totalAvailable);
+  const planned = largestRemainder(bp.ejes, size);
+  const quotas = largestRemainder(bp.ejes, target);
+  const taken = {};
+  let shortfall = 0;
+  axes.forEach(b => {
+    taken[b] = Math.min(quotas[b], pools[b].length);
+    shortfall += quotas[b] - taken[b];
+  });
+  // Faltante por banco insuficiente: se reparte a los ejes con casos libres, de mayor a menor peso
+  const byWeight = [...axes].sort((a, b) => bp.ejes[b] - bp.ejes[a]);
+  let progress = true;
+  while (shortfall > 0 && progress) {
+    progress = false;
+    for (const b of byWeight) {
+      if (shortfall <= 0) break;
+      if (taken[b] < pools[b].length) { taken[b] += 1; shortfall -= 1; progress = true; }
+    }
+  }
+  let queue = [];
+  axes.forEach(b => { queue = queue.concat(pools[b].slice(0, taken[b])); });
+  const missing = {};
+  axes.forEach(b => { if (taken[b] < planned[b]) missing[b] = planned[b] - taken[b]; });
+  simulacroPlan = {
+    carrera: career,
+    fuente: bp.fuente,
+    solicitadas: size,
+    generadas: queue.length,
+    planificado: planned,
+    real: { ...taken },
+    faltantes: missing,
+    tipoPlanificado: largestRemainder(bp.tipo, queue.length),
+    tipoAplicado: false,
+    tipoNota: "El banco aún no tiene etiqueta de tipo de pregunta: el reparto 55/45 no se aplicó."
+  };
+  return spreadByBlock(shuffle(queue)).map(shuffleCaseOptions);
+}
+
 function buildSimulacroQueue(career) {
+  simulacroPlan = null;
+  const _bp = getActiveBlueprint(career);
+  if (career && _bp) return buildBlueprintQueue(career, _bp, simulacroSize);
   const usedIds = recentlyUsedCaseIds();
   const isClinicalBlock = b => b === "Cuidado integral" || !OFFICIAL_BLOCKS.includes(b);
   const matchesCareer = c => !career || c.career === career || c.career === "Transversal";
@@ -30,12 +168,12 @@ function buildSimulacroQueue(career) {
   );
 
   const totalAvailable = OFFICIAL_BLOCKS.reduce((sum, b) => sum + pools[b].length, 0) + extraPool.length;
-  const target = Math.min(SIMULACRO_TARGET, totalAvailable);
+  const target = Math.min(simulacroSize, totalAvailable);
 
   // Cupo base por bloque según el peso real observado (en vez de un reparto uniforme)
   const weights = REAL_EXAM_BLOCK_WEIGHTS;
   const baseQuotas = {};
-  OFFICIAL_BLOCKS.forEach(b => { baseQuotas[b] = Math.round(target * (weights[b] || (1 / OFFICIAL_BLOCKS.length))); });
+  Object.assign(baseQuotas, largestRemainder(Object.fromEntries(OFFICIAL_BLOCKS.map(b => [b, weights[b] || (1 / OFFICIAL_BLOCKS.length)])), target));
   const capPerBlock = {};
   OFFICIAL_BLOCKS.forEach(b => { capPerBlock[b] = Math.ceil(baseQuotas[b] * 1.5); });
 
@@ -115,18 +253,27 @@ function renderSimulacro() {
 
 function renderSimulacroIntro() {
   pageTitle.textContent = "Simulacro SERUMS";
-  pageSubtitle.textContent = "Examen transversal: 100 preguntas de todas las carreras y los 5 bloques temáticos oficiales, con cronómetro y puntaje final.";
+  pageSubtitle.textContent = "Simulacro de 25, 50 o 100 preguntas con cronómetro y puntaje final. Para tu carrera usa su blueprint; sin blueprint activo se bloquea.";
 
   const totalAvailable = data.cases.length;
-  const target = Math.min(SIMULACRO_TARGET, totalAvailable);
+  const target = Math.min(simulacroSize, totalAvailable);
   const lastAttempts = simulacroHistory.slice(-5).reverse();
   let careers = [...new Set(data.cases.map(c => c.career || c.specialty))].filter(c => c !== "Transversal").sort();
   const careerOptions = () => `<option value="">Examen transversal: todas las carreras, todos los bloques</option>${careers.map(c => `<option value="${c}" ${simulacroCareer === c ? "selected" : ""}>Práctica por carrera: ${c}</option>`).join("")}`;
 
+  const bpActive = getActiveBlueprint(simulacroCareer);
+  const blocked = Boolean(simulacroCareer) && !bpActive;
+  const bpPool = bpActive ? data.cases.filter(c => Object.prototype.hasOwnProperty.call(bpActive.ejes, c.block) && (c.career === simulacroCareer || c.career === "Transversal")).length : 0;
   root.innerHTML = `
     <section class="two-col">
       <div class="panel">
         <h3 class="section-title">Cómo funciona</h3>
+        <label style="display:block;margin-bottom:10px;color:#5B6E6A;font-size:13px">
+          Número de preguntas
+          <select id="simulacro-size-select" class="search" style="margin-top:4px">
+            ${SIMULACRO_SIZES.map(n => `<option value="${n}" ${simulacroSize === n ? "selected" : ""}>${n} preguntas</option>`).join("")}
+          </select>
+        </label>
         <label style="display:block;margin-bottom:10px;color:#5B6E6A;font-size:13px">
           Modalidad del simulacro
           <select id="simulacro-career-select" class="search" style="margin-top:4px">
@@ -134,14 +281,15 @@ function renderSimulacroIntro() {
           </select>
         </label>
         <ul style="margin:0;padding-left:18px;color:#5B6E6A;line-height:1.7">
-          <li>${target} preguntas seleccionadas al azar, repartidas entre los 5 bloques oficiales SERUMS según la proporción real observada en exámenes anteriores (mayor peso en Gestión y Salud Pública).</li>
+          <li>${target} preguntas seleccionadas al azar, repartidas entre los 5 ejes. ${bpActive ? `Blueprint de ${simulacroCareer}: ${Object.values(bpActive.ejes).join("/")} (Cuidado integral / Salud pública / Gestión / Ética / Investigación). Fuente: ${bpActive.fuente}.${bpPool < simulacroSize ? ` ⚠️ Banco insuficiente: solo hay ${bpPool} preguntas disponibles; se generarán esas.` : ""}` : "Modo transversal: reparto provisional, pendiente de análisis por carrera."}</li>
           <li>El examen real es transversal: reúne preguntas de todas las carreras y de todos los bloques. Esa es la modalidad predeterminada. Si prefieres practicar por tu carrera, elígela en la lista: se omiten los casos clínicos propios de otras profesiones y los demás bloques siguen siendo transversales.</li>
           <li>Se evitan repetir las preguntas de tus últimos 2 intentos, siempre que haya suficientes casos alternativos disponibles.</li>
           <li>Cronómetro total de ${Math.round(target * SIMULACRO_SECONDS_PER_Q / 60)} minutos (ritmo de referencia de 1 min/pregunta).</li>
           <li>Una sola oportunidad de respuesta por pregunta, sin reintentos — igual que el examen real.</li>
           <li>Sin penalización por error: cada acierto suma un punto.</li>
         </ul>
-        <button class="action-btn" id="start-simulacro-btn">Iniciar simulacro →</button>
+        ${blocked ? `<div class="card" style="border-left:4px solid #B7791F;margin:12px 0"><strong>${SIMULACRO_NO_BLUEPRINT_MSG}</strong></div>
+        <button class="action-btn" id="go-training-btn">Ir a Entrenamiento por casos →</button>` : `<button class="action-btn" id="start-simulacro-btn">Iniciar simulacro →</button>`}
       </div>
       <div class="panel">
         <h3 class="section-title">Tus últimos intentos</h3>
@@ -162,7 +310,16 @@ function renderSimulacroIntro() {
   document.getElementById("simulacro-career-select").addEventListener("change", e => {
     simulacroCareer = e.target.value;
     localStorage.setItem("simulacroCareer", simulacroCareer);
+    if (simulacroCareer && !getActiveBlueprint(simulacroCareer)) logMissingBlueprint(simulacroCareer);
+    renderSimulacroIntro();
   });
+  document.getElementById("simulacro-size-select").addEventListener("change", e => {
+    simulacroSize = Number(e.target.value);
+    localStorage.setItem("simulacroSize", String(simulacroSize));
+    renderSimulacroIntro();
+  });
+  const goTraining = document.getElementById("go-training-btn");
+  if (goTraining) goTraining.addEventListener("click", () => renderView("cases"));
   if (window.SERUMS_BANK && typeof window.SERUMS_BANK.listRemoteProfessions === "function") {
     window.SERUMS_BANK.listRemoteProfessions().then((remote) => {
       careers = [...new Set([...careers, ...remote.map(item => item.profession)])].sort((first, second) => first.localeCompare(second, "es"));
@@ -170,10 +327,16 @@ function renderSimulacroIntro() {
       if (select) select.innerHTML = careerOptions();
     }).catch((error) => console.error("No se pudo consultar el catálogo del simulacro", error));
   }
-  document.getElementById("start-simulacro-btn").addEventListener("click", startSimulacro);
+  const startBtn = document.getElementById("start-simulacro-btn");
+  if (startBtn) startBtn.addEventListener("click", startSimulacro);
 }
 
 async function startSimulacro() {
+  if (simulacroCareer && !getActiveBlueprint(simulacroCareer)) {
+    logMissingBlueprint(simulacroCareer);
+    renderSimulacroIntro();
+    return;
+  }
   const startButton = document.getElementById("start-simulacro-btn");
   if (simulacroCareer && window.SERUMS_BANK && typeof window.SERUMS_BANK.listRemoteProfessions === "function") {
     try {
@@ -355,6 +518,8 @@ function finishSimulacro() {
     pct,
     byBlock,
     career: simulacroCareer || null,
+    size: simulacroSize,
+    blueprint: simulacroPlan,
     caseIds: simulacroQueue.map(q => q.id),
     answers: simulacroQueue.map((q, questionIndex) => {
       const result = resultByIndex.get(questionIndex);
