@@ -67,6 +67,7 @@ async function renderView(view) {
   if (view === "oficios") renderAssistant("oficios");
   if (view === "hisCodesChild") renderHisCodesChild();
   if (view === "training") renderTraining();
+  if (view === "review") renderReview();
   if (view === "decrees") renderDecrees();
   if (view === "resources") renderResources();
   if (view === "examRegistry") renderExamRegistry();
