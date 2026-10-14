@@ -45,3 +45,26 @@ let assistantPracticeState = loadProgress("assistantPracticeState", {});
 let trainingState = loadProgress("trainingState", {});
 let activeTrainingScenario = null;
 let activeTrainingStepId = null;
+
+// Registro único de preguntas ya practicadas (Entrenamiento por casos + Simulacro + Repasar hoy).
+// Devuelve Map(id como texto -> fecha del último intento en ms; 0 si no se conoce).
+function seenQuestionMap() {
+  const m = new Map();
+  const mark = (id, t) => {
+    if (id == null) return;
+    const k = String(id);
+    const v = Number.isNaN(t) ? 0 : t;
+    if (!m.has(k) || m.get(k) < v) m.set(k, v);
+  };
+  Object.entries(caseState || {}).forEach(([id, st]) => {
+    if (!st) return;
+    const h = st.history || [];
+    h.forEach(x => mark(id, Date.parse(x.date)));
+    if (!h.length && st.attempts > 0) mark(id, Date.parse(st.lastAttemptDate));
+  });
+  (simulacroHistory || []).forEach(r => {
+    const t = Date.parse(r && r.date);
+    ((r && r.answers) || []).forEach(a => { if (a && !a.unanswered && a.selected != null) mark(a.caseId, t); });
+  });
+  return m;
+}

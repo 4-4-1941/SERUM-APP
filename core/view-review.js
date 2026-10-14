@@ -3,6 +3,9 @@
 // Formato de respaldo versionado: {app, version, exportadoEn, datos}. Si cambia la estructura, sube RV_FORMAT.version.
 const RV_INTERVALS = [1, 3, 7, 14, 30]; // días hasta el próximo repaso según aciertos seguidos desde el último fallo
 const RV_SESSION_MAX = 15;
+const RV_PRACTICE_N = 20;
+const RV_KIND_LABEL = { repaso: "Repaso", nueva: "Práctica nueva", eje: "Práctica por eje" };
+let rvAxis = "";
 const RV_FORMAT = { app: "SERUM-APP", version: 1 };
 let rvSession = null;
 
@@ -114,6 +117,16 @@ function renderReview() {
       ? `<div class="rv-warn">Tu último respaldo fue hace ${daysSince} días (${rvFmtDate(Date.parse(lastExport))}). Conviene guardar uno nuevo.</div>`
       : `<div class="rv-ok">Último respaldo: ${rvFmtDate(Date.parse(lastExport))}.</div>`;
 
+  const careers = rvCareers();
+  const career = rvCurrentCareer(careers);
+  const pool = rvCareerPool(career);
+  const split = rvSplitSeen(pool);
+  const blocks = rvBlocksOf(pool);
+  if (!blocks.includes(rvAxis)) rvAxis = blocks[0] || "";
+  const axisFresh = rvSplitSeen(pool.filter(c => c.block === rvAxis)).fresh.length;
+  const careerOpts = careers.map(c => `<option value="${rvEsc(c)}" ${c === career ? "selected" : ""}>${rvEsc(c)}</option>`).join("");
+  const axisOpts = blocks.map(b => `<option value="${rvEsc(b)}" ${b === rvAxis ? "selected" : ""}>${rvEsc(b)} (${rvSplitSeen(pool.filter(c => c.block === b)).fresh.length} nuevas)</option>`).join("");
+
   root.innerHTML = `
     <section class="rv-stats">
       <div class="rv-stat ${sch.due.length ? "hot" : ""}"><b>${sch.due.length}</b><span>Para repasar hoy</span></div>
@@ -133,6 +146,21 @@ function renderReview() {
       ${sch.missing ? `<p class="rv-note">${sch.missing} pregunta${sch.missing === 1 ? "" : "s"} del historial no se encontraron en el banco cargado y no se incluyen.</p>` : ""}
     </section>
     <section class="panel" style="margin-top:14px">
+      <h3 class="section-title">Practicar más</h3>
+      <p class="rv-note">Preguntas que nunca has visto, para estudiar todo lo que quieras en el día. Lo que falles entra solo al calendario de repasos.</p>
+      ${careers.length > 1 ? `<select id="rv-career" class="input" style="margin-top:8px">${careerOpts}</select>` : ""}
+      <p class="rv-note">Nunca vistas de ${rvEsc(career || "tu carrera")}: <b>${split.fresh.length}</b> de ${pool.length}.</p>
+      <div class="rv-btns">
+        <button id="rv-new" class="action-btn" type="button" ${pool.length ? "" : "disabled"}>Práctica nueva (${Math.min(RV_PRACTICE_N, pool.length)})</button>
+      </div>
+      <p class="rv-note">Mezcla los ejes y da más peso a donde más fallas.${split.fresh.length < RV_PRACTICE_N && pool.length ? " Quedan pocas nuevas: se completará con las más antiguas." : ""}</p>
+      <h4 style="margin:16px 0 0;font-size:14px;color:var(--ink)">Práctica por eje</h4>
+      <select id="rv-axis" class="input" style="margin-top:8px">${axisOpts}</select>
+      <div class="rv-btns">
+        <button id="rv-axis-go" class="action-btn" type="button" ${axisFresh || pool.length ? "" : "disabled"}>Practicar este eje</button>
+      </div>
+    </section>
+    <section class="panel" style="margin-top:14px">
       <h3 class="section-title">Guardar y llevar tu progreso</h3>
       <p class="rv-note">Tu progreso se guarda solo en este aparato y navegador. Para llevarlo a otro celular o a la PC, o como copia de seguridad, expórtalo a un archivo e impórtalo donde lo necesites. Al importar, se combina con lo que ya tengas: no se borra nada.</p>
       ${backupMsg}
@@ -146,6 +174,11 @@ function renderReview() {
 
   const start = document.getElementById("rv-start");
   if (start) start.addEventListener("click", () => rvStart(sch.due.slice(0, RV_SESSION_MAX)));
+  document.getElementById("rv-new").addEventListener("click", () => rvStartNew(career));
+  document.getElementById("rv-axis-go").addEventListener("click", () => rvStartAxis(career, rvAxis));
+  document.getElementById("rv-axis").addEventListener("change", e => { rvAxis = e.target.value; renderReview(); });
+  const careerSel = document.getElementById("rv-career");
+  if (careerSel) careerSel.addEventListener("change", e => { localStorage.setItem("rvCareer", e.target.value); renderReview(); });
   document.getElementById("rv-export").addEventListener("click", rvExport);
   const file = document.getElementById("rv-file");
   document.getElementById("rv-import").addEventListener("click", () => file.click());
@@ -159,8 +192,10 @@ function rvShuffled(q) {
   return { ...q, options: idx.map(i => q.options[i]), correct: idx.indexOf(q.correct) };
 }
 
-function rvStart(due) {
-  rvSession = { queue: due.map(i => rvShuffled(i.q)), i: 0, selected: null, confirmed: false, right: 0, wrong: [] };
+function rvStart(due) { rvStartQueue(due.map(i => i.q), "repaso"); }
+
+function rvStartQueue(questions, kind, again) {
+  rvSession = { queue: questions.map(rvShuffled), kind, again: again || null, i: 0, selected: null, confirmed: false, right: 0, wrong: [] };
   rvRenderQuestion();
 }
 
@@ -177,7 +212,7 @@ function rvRenderQuestion() {
   const ok = s.confirmed && s.selected === q.correct;
   root.innerHTML = `
     <section class="panel">
-      <div class="rv-meta">Repaso ${s.i + 1} de ${s.queue.length} · ${rvEsc(q.block || "")}</div>
+      <div class="rv-meta">${RV_KIND_LABEL[s.kind]} ${s.i + 1} de ${s.queue.length} · ${rvEsc(q.block || "")}</div>
       <div class="rv-bar"><i style="width:${Math.round((s.i / s.queue.length) * 100)}%"></i></div>
       <h3 class="section-title" style="font-size:17px">${rvEsc(q.title || "")}</h3>
       <p style="line-height:1.55">${rvEsc(q.statement || "")}</p>
@@ -233,20 +268,103 @@ function rvRenderEnd() {
   const s = rvSession;
   const total = s.queue.length;
   const pct = Math.round((s.right / total) * 100);
+  const note = s.kind === "repaso"
+    ? "Las que acertaste se repetirán más adelante (3, 7, 14 y 30 días). Las que fallaste vuelven a empezar el ciclo mañana."
+    : "Todo lo que practicaste queda registrado como visto y no se repite en el Simulacro ni en otras prácticas mientras haya preguntas nuevas. Las que fallaste entran al calendario de repasos desde mañana.";
   root.innerHTML = `
     <section class="panel">
-      <h3 class="section-title">Repaso terminado</h3>
+      <h3 class="section-title">${RV_KIND_LABEL[s.kind]} terminado</h3>
       <div class="rv-stats">
         <div class="rv-stat"><b>${s.right}/${total}</b><span>Aciertos</span></div>
         <div class="rv-stat"><b>${pct}%</b><span>Porcentaje</span></div>
         <div class="rv-stat ${s.wrong.length ? "hot" : ""}"><b>${s.wrong.length}</b><span>Vuelven mañana</span></div>
       </div>
-      <p class="rv-note">Las que acertaste se repetirán más adelante (3, 7, 14 y 30 días). Las que fallaste vuelven a empezar el ciclo mañana.</p>
+      <p class="rv-note">${note}</p>
       ${s.wrong.length ? `<ul class="rv-rows">${s.wrong.map(q => `<li><span>${rvEsc(q.title || "")}</span><b>${rvEsc(q.block || "")}</b></li>`).join("")}</ul>` : ""}
-      <button id="rv-back" class="action-btn" type="button">Volver a Repasar hoy</button>
+      <div class="rv-btns">
+        ${s.again ? `<button id="rv-again" class="action-btn" type="button">Otra tanda</button>` : ""}
+        <button id="rv-back" class="action-btn ${s.again ? "secondary" : ""}" type="button">Volver a Repasar hoy</button>
+      </div>
     </section>`;
   document.getElementById("rv-back").addEventListener("click", renderReview);
+  const again = document.getElementById("rv-again");
+  if (again) again.addEventListener("click", s.again);
   rvSession = null;
+}
+
+// ---------- Práctica nueva y por eje (usa el registro único de preguntas vistas) ----------
+function rvCareers() {
+  return [...new Set((data.cases || []).map(c => c.career || c.specialty).filter(c => c && c !== "Transversal"))].sort((a, b) => a.localeCompare(b, "es"));
+}
+function rvCurrentCareer(careers) {
+  const saved = localStorage.getItem("rvCareer") || simulacroCareer || "";
+  return careers.includes(saved) ? saved : (careers.includes("Psicología") ? "Psicología" : (careers[0] || ""));
+}
+function rvCareerPool(career) {
+  return (data.cases || []).filter(c => !career || c.career === career || c.career === "Transversal");
+}
+function rvBlocksOf(pool) {
+  const found = [...new Set(pool.map(c => c.block).filter(Boolean))];
+  const official = OFFICIAL_BLOCKS.filter(b => found.includes(b));
+  return official.concat(found.filter(b => !official.includes(b)).sort());
+}
+// Peso por eje según tu rendimiento: más fallos => más preguntas de ese eje. Sin datos, peso 1 (no usa porcentajes del examen).
+function rvAxisWeights(pool) {
+  const blockOf = new Map(pool.map(c => [String(c.id), c.block]));
+  const tot = {}, bad = {};
+  rvCollectEvents().forEach((list, id) => {
+    const b = blockOf.get(id);
+    if (!b) return;
+    list.forEach(e => { tot[b] = (tot[b] || 0) + 1; if (!e.ok) bad[b] = (bad[b] || 0) + 1; });
+  });
+  const w = {};
+  rvBlocksOf(pool).forEach(b => { w[b] = 1 + (tot[b] >= 3 ? 3 * ((bad[b] || 0) / tot[b]) : 0); });
+  return w;
+}
+function rvSplitSeen(pool) {
+  const seen = seenQuestionMap();
+  const fresh = pool.filter(c => !seen.has(String(c.id)));
+  const old = pool.filter(c => seen.has(String(c.id))).sort((a, b) => seen.get(String(a.id)) - seen.get(String(b.id)));
+  return { fresh, old };
+}
+function rvBuildNew(career) {
+  const pool = rvCareerPool(career);
+  const { fresh, old } = rvSplitSeen(pool);
+  const w = rvAxisWeights(pool);
+  const byBlock = {};
+  shuffle(fresh).forEach(c => (byBlock[c.block] = byBlock[c.block] || []).push(c));
+  const out = [];
+  while (out.length < RV_PRACTICE_N) {
+    const open = Object.keys(byBlock).filter(b => byBlock[b].length);
+    if (!open.length) break;
+    let r = Math.random() * open.reduce((a, b) => a + (w[b] || 1), 0);
+    let pick = open[open.length - 1];
+    for (const b of open) { r -= (w[b] || 1); if (r <= 0) { pick = b; break; } }
+    out.push(byBlock[pick].pop());
+  }
+  const filled = out.length;
+  for (let i = 0; out.length < RV_PRACTICE_N && i < old.length; i++) out.push(old[i]);
+  return { queue: out, fresh: filled, filledWithOld: out.length - filled };
+}
+function rvBuildAxis(career, block) {
+  const { fresh, old } = rvSplitSeen(rvCareerPool(career).filter(c => c.block === block));
+  const out = shuffle(fresh).slice(0, RV_PRACTICE_N);
+  const filled = out.length;
+  for (let i = 0; out.length < RV_PRACTICE_N && i < old.length; i++) out.push(old[i]);
+  return { queue: out, fresh: filled, filledWithOld: out.length - filled };
+}
+function rvPracticeNote(r) {
+  return r.filledWithOld ? "Solo quedaban " + r.fresh + " preguntas nuevas; el resto son las más antiguas que ya viste." : "";
+}
+function rvStartNew(career) {
+  const r = rvBuildNew(career);
+  if (!r.queue.length) return;
+  rvStartQueue(r.queue, "nueva", () => rvStartNew(career));
+}
+function rvStartAxis(career, block) {
+  const r = rvBuildAxis(career, block);
+  if (!r.queue.length) return;
+  rvStartQueue(r.queue, "eje", () => rvStartAxis(career, block));
 }
 
 // ---------- Exportar / Importar ----------

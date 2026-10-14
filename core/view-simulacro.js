@@ -1,13 +1,16 @@
 function recentlyUsedCaseIds() {
-  const recent = simulacroHistory.slice(-2);
-  const ids = new Set();
-  recent.forEach(r => (r.caseIds || []).forEach(id => ids.add(id)));
+  // Preguntas ya practicadas en cualquier parte (registro único) + las de los 2 últimos simulacros.
+  const ids = new Set(seenQuestionMap().keys());
+  simulacroHistory.slice(-2).forEach(r => (r.caseIds || []).forEach(id => ids.add(String(id))));
   return ids;
 }
 
 function orderPoolAvoidingRepeats(pool, usedIds) {
-  const fresh = shuffle(pool.filter(c => !usedIds.has(c.id)));
-  const repeated = shuffle(pool.filter(c => usedIds.has(c.id)));
+  // Primero las nunca vistas (al azar); luego las ya vistas, de la más antigua a la más reciente.
+  const seen = seenQuestionMap();
+  const fresh = shuffle(pool.filter(c => !usedIds.has(String(c.id))));
+  const repeated = shuffle(pool.filter(c => usedIds.has(String(c.id))))
+    .sort((a, b) => (seen.get(String(a.id)) || 0) - (seen.get(String(b.id)) || 0));
   return fresh.concat(repeated);
 }
 
