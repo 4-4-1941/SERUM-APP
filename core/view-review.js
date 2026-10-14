@@ -6,6 +6,7 @@ const RV_SESSION_MAX = 15;
 const RV_PRACTICE_N = 20;
 const RV_KIND_LABEL = { repaso: "Repaso", nueva: "Práctica nueva", eje: "Práctica por eje" };
 let rvAxis = "";
+const rvLoadedCareers = new Set();
 const RV_FORMAT = { app: "SERUM-APP", version: 1 };
 let rvSession = null;
 
@@ -88,6 +89,24 @@ function rvBuildSchedule() {
   return { items, due, missing, today };
 }
 
+// Carga el banco ampliado de la carrera (mismo método que usa el Simulacro). Devuelve true si se agregaron preguntas.
+async function rvEnsureLoaded(career) {
+  if (!career || rvLoadedCareers.has(career)) return false;
+  rvLoadedCareers.add(career);
+  const bank = window.SERUMS_BANK;
+  if (!bank || typeof bank.listRemoteProfessions !== "function") return false;
+  try {
+    const remote = await bank.listRemoteProfessions();
+    if (remote.some(i => i.profession === career) && !bank.isRemoteProfessionLoaded(career)) {
+      const el = document.getElementById("rv-loading");
+      if (el) el.textContent = "Cargando el banco ampliado de " + career + "…";
+      await bank.mergeRemoteProfession(career, { target: data.cases });
+      return true;
+    }
+  } catch (e) { console.error("No se pudo cargar el banco ampliado", e); }
+  return false;
+}
+
 // ---------- Vista principal ----------
 function renderReview() {
   rvInjectStyle();
@@ -149,7 +168,8 @@ function renderReview() {
       <h3 class="section-title">Practicar más</h3>
       <p class="rv-note">Preguntas que nunca has visto, para estudiar todo lo que quieras en el día. Lo que falles entra solo al calendario de repasos.</p>
       ${careers.length > 1 ? `<select id="rv-career" class="input" style="margin-top:8px">${careerOpts}</select>` : ""}
-      <p class="rv-note">Nunca vistas de ${rvEsc(career || "tu carrera")}: <b>${split.fresh.length}</b> de ${pool.length}.</p>
+      <p class="rv-note">Nunca vistas de ${rvEsc(career || "tu carrera")} (incluye las transversales): <b>${split.fresh.length}</b> de ${pool.length}.</p>
+      <p id="rv-loading" class="rv-note" aria-live="polite"></p>
       <div class="rv-btns">
         <button id="rv-new" class="action-btn" type="button" ${pool.length ? "" : "disabled"}>Práctica nueva (${Math.min(RV_PRACTICE_N, pool.length)})</button>
       </div>
@@ -179,6 +199,7 @@ function renderReview() {
   document.getElementById("rv-axis").addEventListener("change", e => { rvAxis = e.target.value; renderReview(); });
   const careerSel = document.getElementById("rv-career");
   if (careerSel) careerSel.addEventListener("change", e => { localStorage.setItem("rvCareer", e.target.value); renderReview(); });
+  rvEnsureLoaded(career).then(changed => { if (changed && !rvSession && document.getElementById("rv-new")) renderReview(); });
   document.getElementById("rv-export").addEventListener("click", rvExport);
   const file = document.getElementById("rv-file");
   document.getElementById("rv-import").addEventListener("click", () => file.click());
@@ -379,7 +400,7 @@ function rvBuildExport() {
     version: RV_FORMAT.version,
     exportadoEn: new Date().toISOString(),
     datos: {
-      caseState, simulacroHistory, score, notes, trainingState, assistantPracticeState,
+      caseState, simulacroHistory, score, notes, misNotas: myNotesLoad(), trainingState, assistantPracticeState,
       simulacroCareer: simulacroCareer || "",
       userName: localStorage.getItem("preserum_userName") || ""
     }
@@ -431,7 +452,21 @@ function rvMerge(d) {
   saveProgress("simulacroHistory", simulacroHistory);
   score = Math.max(score, Number(d.score) || 0);
   localStorage.setItem(data.scoreKey, String(score));
-  if (!notes && typeof d.notes === "string" && d.notes) { notes = d.notes; localStorage.setItem(data.notesKey, notes); }
+  // Las notas nuevas van primero; el texto antiguo de "Notas rápidas" solo se copia si el archivo no trae la lista nueva.
+  if (Array.isArray(d.misNotas)) {
+    const list = myNotesLoad();
+    const byId = new Map(list.map(n => [n.id, n]));
+    d.misNotas.forEach(n => {
+      if (!rvIsObj(n) || typeof n.id !== "string" || typeof n.text !== "string" || !n.text.trim()) return;
+      const cur = byId.get(n.id);
+      if (!cur) {
+        const item = { id: n.id.slice(0, 40), text: n.text.slice(0, 2000), done: !!n.done, created: typeof n.created === "string" ? n.created : new Date().toISOString(), doneAt: n.done && typeof n.doneAt === "string" ? n.doneAt : null };
+        list.push(item); byId.set(item.id, item);
+      } else if (n.done && !cur.done) { cur.done = true; cur.doneAt = typeof n.doneAt === "string" ? n.doneAt : new Date().toISOString(); }
+    });
+    saveProgress("myNotesList", list);
+  }
+  if (!Array.isArray(d.misNotas) && !notes && typeof d.notes === "string" && d.notes) { notes = d.notes; localStorage.setItem(data.notesKey, notes); }
   if (rvIsObj(d.trainingState)) { trainingState = { ...d.trainingState, ...trainingState }; saveProgress("trainingState", trainingState); }
   if (rvIsObj(d.assistantPracticeState)) { assistantPracticeState = { ...d.assistantPracticeState, ...assistantPracticeState }; saveProgress("assistantPracticeState", assistantPracticeState); }
   if (!simulacroCareer && typeof d.simulacroCareer === "string" && d.simulacroCareer) { simulacroCareer = d.simulacroCareer; localStorage.setItem("simulacroCareer", simulacroCareer); }

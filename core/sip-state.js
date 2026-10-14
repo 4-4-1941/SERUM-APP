@@ -1,5 +1,5 @@
 const CORE_MODULE_BASE = new URL("./", document.currentScript.src);
-const CORE_VIEWS = Object.freeze({cases:"view-cases",simulacro:"view-simulacro",glossary:"view-reference",norms:"view-reference",priorityNorms:"view-reference",decrees:"view-reference",resources:"view-reference",examRegistry:"view-reference",assistant:"view-assistant",oficios:"view-assistant",hisCodesChild:"view-assistant",training:"view-training",review:"view-review"});
+const CORE_VIEWS = Object.freeze({cases:"view-cases",simulacro:"view-simulacro",glossary:"view-reference",norms:"view-reference",priorityNorms:"view-reference",decrees:"view-reference",resources:"view-reference",examRegistry:"view-reference",assistant:"view-assistant",oficios:"view-assistant",hisCodesChild:"view-assistant",training:"view-training",review:"view-review",notes:"view-notes"});
 const corePending = new Map();
 const coreLoaded = new Set();
 let coreNavigationRequest = 0;
@@ -67,4 +67,17 @@ function seenQuestionMap() {
     ((r && r.answers) || []).forEach(a => { if (a && !a.unanswered && a.selected != null) mark(a.caseId, t); });
   });
   return m;
+}
+
+// Mis notas: lista de dudas/recordatorios {id, text, done, created, doneAt}. Guardada en la clave "myNotesList".
+// Si la lista aún no existe, la nota antigua de "Notas rápidas" (texto libre) pasa a ser la primera nota.
+function myNotesId() { return Date.now().toString(36) + Math.random().toString(36).slice(2, 6); }
+function myNotesLoad() {
+  let list = loadProgress("myNotesList", null);
+  if (!Array.isArray(list)) {
+    list = [];
+    if (typeof notes === "string" && notes.trim()) list.push({ id: myNotesId(), text: notes.trim(), done: false, created: new Date().toISOString(), doneAt: null });
+    saveProgress("myNotesList", list);
+  }
+  return list;
 }

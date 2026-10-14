@@ -168,16 +168,13 @@ function renderResources() {
         </div>
       </div>
       <div class="panel">
-        <h3 class="section-title">Notas rápidas</h3>
-        <textarea id="notes" class="input" placeholder="Escribe aquí tus apuntes SERUMS...">${notes}</textarea>
-        <button id="save-notes" class="action-btn">Guardar notas</button>
+        <h3 class="section-title">Mis notas</h3>
+        <p style="line-height:1.6;color:#5B6E6A">Tus dudas y recordatorios ahora están en <strong>Mis notas</strong>, con casilla de pendiente o resuelta.</p>
+        <button id="open-notes" class="action-btn" type="button">Abrir Mis notas</button>
       </div>
     </section>
   `;
-  document.getElementById("save-notes").addEventListener("click", () => {
-    notes = document.getElementById("notes").value;
-    localStorage.setItem(data.notesKey, notes);
-  });
+  document.getElementById("open-notes").addEventListener("click", () => renderView("notes"));
 }
 
 function renderExamRegistry() {

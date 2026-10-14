@@ -4,7 +4,7 @@ function loadCoreScript(name) {
   if (coreScripts.has(name)) return coreScripts.get(name);
   const pending = new Promise((resolve, reject) => {
     const script = document.createElement('script');
-    script.src = new URL(name + '.js?v=20261014-vistas', CORE_MODULE_BASE).href;
+    script.src = new URL(name + '.js?v=20261014-notas', CORE_MODULE_BASE).href;
     script.onload = resolve;
     script.onerror = () => { script.remove(); coreScripts.delete(name); reject(new Error('Carga fallida: ' + name)); };
     document.head.appendChild(script);
@@ -68,6 +68,7 @@ async function renderView(view) {
   if (view === "hisCodesChild") renderHisCodesChild();
   if (view === "training") renderTraining();
   if (view === "review") renderReview();
+  if (view === "notes") renderNotes();
   if (view === "decrees") renderDecrees();
   if (view === "resources") renderResources();
   if (view === "examRegistry") renderExamRegistry();
