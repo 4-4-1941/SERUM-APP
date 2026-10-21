@@ -14,25 +14,81 @@ function orderPoolAvoidingRepeats(pool, usedIds) {
   return fresh.concat(repeated);
 }
 
-// ===== Blueprint por carrera (A4) =====
-// Cada carrera tiene su propio blueprint. Solo Psicología está activo; las demás
+// ===== Blueprint por carrera, con dos modos =====
+// Cada carrera tiene su propio blueprint. Solo Psicología y Enfermería están activas; las demás
 // carreras NO tienen blueprint (sin porcentajes inventados) y su simulacro queda bloqueado.
-// Los pesos de Psicología vienen de un análisis propio del examen, NO de un documento oficial.
+// Modos: "historico" = promedio de los 4 exámenes (por defecto) y "reciente" = solo 2026-II.
+// Pesos enteros que suman 100, recalculados desde los JSON de SIP-AI-RAG (knowledge/serums/banco_preguntas/)
+// con mayores restos. Es análisis propio, clasificación por IA pendiente de revisión humana.
+const SIP_BLUEPRINT_MODES = ["historico", "reciente"];
 const SIP_BLUEPRINTS = {
   "Psicología": {
     activo: true,
-    ejes: {
-      "Cuidado integral": 37,
-      "Salud pública": 25,
-      "Gestión": 21,
-      "Ética e interculturalidad": 15,
-      "Investigación": 2
+    modos: {
+    historico: {
+      etiqueta: "Histórico (promedio de 4 exámenes)",
+      ejes: {
+        "Cuidado integral": 29,
+        "Salud pública": 29,
+        "Gestión": 21,
+        "Ética e interculturalidad": 13,
+        "Investigación": 8
+      },
+      tipo: { definicion_conceptual: 51, caso_aplicado: 49 },
+      fuente: "Análisis propio de los 4 exámenes 2025-I, 2025-II, 2026-I y 2026-II (400 preguntas; en 2025-I solo Forma A) (banco oficial MINSA, Psicología); clasificación por IA pendiente de revisión humana. No es documento oficial.",
+      actualizado: "2026-10-21"
     },
-    tipo: { definicion_conceptual: 55, caso_aplicado: 45 },
-    fuente: "Análisis propio del examen SERUMS Psicología (no es documento oficial)",
-    actualizado: "2026-10-02"
+    reciente: {
+      etiqueta: "Reciente (solo 2026-II)",
+      ejes: {
+        "Cuidado integral": 27,
+        "Salud pública": 29,
+        "Gestión": 22,
+        "Ética e interculturalidad": 12,
+        "Investigación": 10
+      },
+      tipo: { definicion_conceptual: 54, caso_aplicado: 46 },
+      fuente: "Análisis propio del examen 2026-II (100 preguntas) (banco oficial MINSA, Psicología); clasificación por IA pendiente de revisión humana. No es documento oficial.",
+      actualizado: "2026-10-21"
+    }
+    }
+  },
+  "Enfermería": {
+    activo: true,
+    modos: {
+    historico: {
+      etiqueta: "Histórico (promedio de 4 exámenes)",
+      ejes: {
+        "Cuidado integral": 33,
+        "Salud pública": 30,
+        "Gestión": 19,
+        "Ética e interculturalidad": 11,
+        "Investigación": 7
+      },
+      tipo: { definicion_conceptual: 41, caso_aplicado: 59 },
+      fuente: "Análisis propio de los 4 exámenes 2025-I, 2025-II, 2026-I y 2026-II (400 preguntas; en 2025-I solo Forma A) (banco oficial MINSA, Enfermería); clasificación por IA pendiente de revisión humana. No es documento oficial.",
+      actualizado: "2026-10-21"
+    },
+    reciente: {
+      etiqueta: "Reciente (solo 2026-II)",
+      ejes: {
+        "Cuidado integral": 28,
+        "Salud pública": 31,
+        "Gestión": 19,
+        "Ética e interculturalidad": 10,
+        "Investigación": 12
+      },
+      tipo: { definicion_conceptual: 47, caso_aplicado: 53 },
+      fuente: "Análisis propio del examen 2026-II (100 preguntas) (banco oficial MINSA, Enfermería); clasificación por IA pendiente de revisión humana. No es documento oficial.",
+      actualizado: "2026-10-21"
+    }
+    }
   }
 };
+let simulacroBpMode = (() => {
+  const saved = localStorage.getItem("simulacroBpMode");
+  return SIP_BLUEPRINT_MODES.includes(saved) ? saved : "historico";
+})();
 const SIMULACRO_SIZES = [25, 50, 100];
 const SIMULACRO_NO_BLUEPRINT_MSG = "El simulacro para esta carrera aún no está configurado. Puedes usar el modo Entrenamiento con filtros.";
 let simulacroSize = (() => {
@@ -43,12 +99,14 @@ let simulacroPlan = null;
 
 function sumValues(obj) { return Object.values(obj).reduce((a, b) => a + b, 0); }
 
-// Blueprint activo y válido (ejes = 100 y tipo = 100) o null
-function getActiveBlueprint(career) {
+// Blueprint activo y válido (ejes = 100 y tipo = 100) para la carrera y el modo, o null
+function getActiveBlueprint(career, mode) {
   const bp = career ? SIP_BLUEPRINTS[career] : null;
   if (!bp || !bp.activo) return null;
-  if (Math.abs(sumValues(bp.ejes) - 100) > 1e-9 || Math.abs(sumValues(bp.tipo) - 100) > 1e-9) return null;
-  return bp;
+  const m = bp.modos && bp.modos[mode || simulacroBpMode];
+  if (!m) return null;
+  if (Math.abs(sumValues(m.ejes) - 100) > 1e-9 || Math.abs(sumValues(m.tipo) - 100) > 1e-9) return null;
+  return { activo: true, modo: mode || simulacroBpMode, etiqueta: m.etiqueta, ejes: m.ejes, tipo: m.tipo, fuente: m.fuente, actualizado: m.actualizado };
 }
 
 // Mayores restos: total exacto; en empate se prioriza el de mayor peso.
@@ -136,6 +194,8 @@ function buildBlueprintQueue(career, bp, size) {
   axes.forEach(b => { if (taken[b] < planned[b]) missing[b] = planned[b] - taken[b]; });
   simulacroPlan = {
     carrera: career,
+    modo: bp.modo,
+    modoEtiqueta: bp.etiqueta,
     fuente: bp.fuente,
     solicitadas: size,
     generadas: queue.length,
@@ -144,7 +204,7 @@ function buildBlueprintQueue(career, bp, size) {
     faltantes: missing,
     tipoPlanificado: largestRemainder(bp.tipo, queue.length),
     tipoAplicado: false,
-    tipoNota: "El banco aún no tiene etiqueta de tipo de pregunta: el reparto 55/45 no se aplicó."
+    tipoNota: `El banco aún no tiene etiqueta de tipo de pregunta: el reparto ${bp.tipo.definicion_conceptual}/${bp.tipo.caso_aplicado} (definición/caso) no se aplicó.`
   };
   return spreadByBlock(shuffle(queue)).map(shuffleCaseOptions);
 }
@@ -256,7 +316,7 @@ function renderSimulacro() {
 
 function renderSimulacroIntro() {
   pageTitle.textContent = "Simulacro SERUMS";
-  pageSubtitle.textContent = "Simulacro de 25, 50 o 100 preguntas con cronómetro y puntaje final. Para tu carrera usa su blueprint; sin blueprint activo se bloquea.";
+  pageSubtitle.textContent = "Simulacro de 25, 50 o 100 preguntas con cronómetro y puntaje final. Para tu carrera usa su blueprint (histórico o reciente); sin blueprint activo se bloquea.";
 
   const totalAvailable = data.cases.length;
   const target = Math.min(simulacroSize, totalAvailable);
@@ -265,6 +325,11 @@ function renderSimulacroIntro() {
   const careerOptions = () => `<option value="">Examen transversal: todas las carreras, todos los bloques</option>${careers.map(c => `<option value="${c}" ${simulacroCareer === c ? "selected" : ""}>Práctica por carrera: ${c}</option>`).join("")}`;
 
   const bpActive = getActiveBlueprint(simulacroCareer);
+  const hasBpCareer = Boolean(simulacroCareer) && Boolean(SIP_BLUEPRINTS[simulacroCareer] && SIP_BLUEPRINTS[simulacroCareer].activo);
+  const bpModeOptions = SIP_BLUEPRINT_MODES.map(m => {
+    const b = getActiveBlueprint(simulacroCareer, m);
+    return b ? `<option value="${m}" ${simulacroBpMode === m ? "selected" : ""}>${b.etiqueta}</option>` : "";
+  }).join("");
   const blocked = Boolean(simulacroCareer) && !bpActive;
   const bpPool = bpActive ? data.cases.filter(c => Object.prototype.hasOwnProperty.call(bpActive.ejes, c.block) && (c.career === simulacroCareer || c.career === "Transversal")).length : 0;
   root.innerHTML = `
@@ -283,8 +348,12 @@ function renderSimulacroIntro() {
             ${careerOptions()}
           </select>
         </label>
+        ${hasBpCareer ? `<label style="display:block;margin-bottom:10px;color:#5B6E6A;font-size:13px">
+          Blueprint (reparto por eje)
+          <select id="simulacro-bpmode-select" class="search" style="margin-top:4px">${bpModeOptions}</select>
+        </label>` : ""}
         <ul style="margin:0;padding-left:18px;color:#5B6E6A;line-height:1.7">
-          <li>${target} preguntas seleccionadas al azar, repartidas entre los 5 ejes. ${bpActive ? `Blueprint de ${simulacroCareer}: ${Object.values(bpActive.ejes).join("/")} (Cuidado integral / Salud pública / Gestión / Ética / Investigación). Fuente: ${bpActive.fuente}.${bpPool < simulacroSize ? ` ⚠️ Banco insuficiente: solo hay ${bpPool} preguntas disponibles; se generarán esas.` : ""}` : "Modo transversal: reparto provisional, pendiente de análisis por carrera."}</li>
+          <li>${target} preguntas seleccionadas al azar, repartidas entre los 5 ejes. ${bpActive ? `Blueprint ${bpActive.etiqueta} de ${simulacroCareer}: ${Object.values(bpActive.ejes).join("/")} (Cuidado integral / Salud pública / Gestión / Ética / Investigación); definición ${bpActive.tipo.definicion_conceptual} % y caso ${bpActive.tipo.caso_aplicado} %. Análisis propio, clasificación por IA pendiente de revisión humana.${bpPool < simulacroSize ? ` ⚠️ Banco insuficiente: solo hay ${bpPool} preguntas disponibles; se generarán esas.` : ""}` : "Modo transversal: reparto provisional, pendiente de análisis por carrera."}</li>
           <li>El examen real es transversal: reúne preguntas de todas las carreras y de todos los bloques. Esa es la modalidad predeterminada. Si prefieres practicar por tu carrera, elígela en la lista: se omiten los casos clínicos propios de otras profesiones y los demás bloques siguen siendo transversales.</li>
           <li>Se evitan repetir las preguntas de tus últimos 2 intentos, siempre que haya suficientes casos alternativos disponibles.</li>
           <li>Cronómetro total de ${Math.round(target * SIMULACRO_SECONDS_PER_Q / 60)} minutos (ritmo de referencia de 1 min/pregunta).</li>
@@ -314,6 +383,12 @@ function renderSimulacroIntro() {
     simulacroCareer = e.target.value;
     localStorage.setItem("simulacroCareer", simulacroCareer);
     if (simulacroCareer && !getActiveBlueprint(simulacroCareer)) logMissingBlueprint(simulacroCareer);
+    renderSimulacroIntro();
+  });
+  const bpModeSelect = document.getElementById("simulacro-bpmode-select");
+  if (bpModeSelect) bpModeSelect.addEventListener("change", e => {
+    simulacroBpMode = SIP_BLUEPRINT_MODES.includes(e.target.value) ? e.target.value : "historico";
+    localStorage.setItem("simulacroBpMode", simulacroBpMode);
     renderSimulacroIntro();
   });
   document.getElementById("simulacro-size-select").addEventListener("change", e => {
