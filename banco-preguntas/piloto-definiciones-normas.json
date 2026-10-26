@@ -1,0 +1,374 @@
+{
+ "module_version": 1,
+ "module": "definiciones-normas (piloto)",
+ "total_questions": 13,
+ "publication_status": "REVIEW_REQUIRED",
+ "warning": "Piloto de preguntas de definición generadas a partir de normas del repositorio SIP-AI-RAG. No integrar como banco validado hasta que un revisor profesional confirme clave, distractores y vigencia de la norma.",
+ "vigencia": "No verificada: antes de publicar hay que comprobar fecha, modificatorias y derogaciones de cada norma.",
+ "questions": [
+  {
+   "canonical_id": "DEF-0001",
+   "profession": "Transversal",
+   "specialty": "Transversal",
+   "thematic_block": "Gestión",
+   "tipo": "definición conceptual",
+   "difficulty": "Por revisar",
+   "statement": "¿Cómo define la Ley Marco de Telesalud a la telesalud?",
+   "alternatives": [
+    "Servicio de salud a distancia prestado por personal de salud competente, mediante tecnologías de la información y la comunicación (TIC), para que los servicios sean accesibles en áreas rurales o con limitada capacidad resolutiva.",
+    "Provisión de servicios de salud a distancia en promoción, prevención, diagnóstico, recuperación o rehabilitación, prestada por profesionales de la salud que usan TIC.",
+    "Capacidad de los sistemas de diversas organizaciones para interactuar con objetivos consensuados y comunes.",
+    "Atención presencial en establecimientos de salud con equipamiento biomédico de alta complejidad."
+   ],
+   "declared_answer": "A",
+   "justification": "La ley define telesalud como un servicio de salud a distancia prestado por personal competente con TIC, orientado a áreas rurales o con limitada capacidad resolutiva. La definición de provisión a distancia en promoción, prevención, diagnóstico, recuperación o rehabilitación corresponde a telemedicina; la de interacción entre sistemas, a interoperabilidad.",
+   "origin": "generado_ia_desde_norma",
+   "status": "REVIEW_REQUIRED",
+   "marca": "análisis propio, generado por IA a partir del texto de la norma; clasificación y redacción pendientes de revisión humana",
+   "source": {
+    "norma": "Ley N.° 30421, Ley Marco de Telesalud",
+    "articulo": "Art. 3, literal a",
+    "pagina_en_archivo": 1,
+    "archivo": "knowledge/minsa/serums-2026-ii/192482-ley-n-30421-normas-y-documentos-legales-congreso-de-la-rep-blica-plataforma-del-estado-peruano.md",
+    "url_oficial": "https://www.gob.pe/institucion/minsa/normas-legales/192482-30421",
+    "frase_de_anclaje": "Servicio de salud a distancia prestado por personal de salud competente"
+   }
+  },
+  {
+   "canonical_id": "DEF-0002",
+   "profession": "Transversal",
+   "specialty": "Transversal",
+   "thematic_block": "Gestión",
+   "tipo": "definición conceptual",
+   "difficulty": "Por revisar",
+   "statement": "Según la Ley Marco de Telesalud, la telemedicina es:",
+   "alternatives": [
+    "Un servicio a distancia limitado a la capacitación del personal de salud, sin atención a pacientes.",
+    "La provisión de servicios de salud a distancia en promoción, prevención, diagnóstico, recuperación o rehabilitación, prestada por profesionales de la salud que utilizan TIC, para facilitar el acceso de la población.",
+    "La capacidad de los sistemas de distintas organizaciones de compartir datos para optimizar recursos.",
+    "La atención domiciliaria que realiza el equipo de salud con visitas programadas al hogar."
+   ],
+   "declared_answer": "B",
+   "justification": "El literal b del artículo 3 define telemedicina como provisión de servicios de salud a distancia en los componentes de promoción, prevención, diagnóstico, recuperación o rehabilitación, con profesionales de la salud que usan TIC.",
+   "origin": "generado_ia_desde_norma",
+   "status": "REVIEW_REQUIRED",
+   "marca": "análisis propio, generado por IA a partir del texto de la norma; clasificación y redacción pendientes de revisión humana",
+   "source": {
+    "norma": "Ley N.° 30421, Ley Marco de Telesalud",
+    "articulo": "Art. 3, literal b",
+    "pagina_en_archivo": 1,
+    "archivo": "knowledge/minsa/serums-2026-ii/192482-ley-n-30421-normas-y-documentos-legales-congreso-de-la-rep-blica-plataforma-del-estado-peruano.md",
+    "url_oficial": "https://www.gob.pe/institucion/minsa/normas-legales/192482-30421",
+    "frase_de_anclaje": "Provisión de servicios de salud a distancia"
+   }
+  },
+  {
+   "canonical_id": "DEF-0003",
+   "profession": "Transversal",
+   "specialty": "Transversal",
+   "thematic_block": "Gestión",
+   "tipo": "definición conceptual",
+   "difficulty": "Por revisar",
+   "statement": "En la Ley Marco de Telesalud, la interoperabilidad es:",
+   "alternatives": [
+    "El servicio de salud a distancia que se presta en áreas rurales con TIC.",
+    "La provisión de servicios de diagnóstico y recuperación a distancia por profesionales de la salud.",
+    "La capacidad de los sistemas de diversas organizaciones para interactuar con objetivos consensuados y comunes, compartiendo información mediante el intercambio de datos entre sus sistemas.",
+    "La obligación de cada establecimiento de mantener sistemas de información independientes."
+   ],
+   "declared_answer": "C",
+   "justification": "La interoperabilidad implica que los establecimientos compartan información y conocimiento mediante el intercambio de datos entre sus sistemas de TIC, para optimizar el uso de los recursos.",
+   "origin": "generado_ia_desde_norma",
+   "status": "REVIEW_REQUIRED",
+   "marca": "análisis propio, generado por IA a partir del texto de la norma; clasificación y redacción pendientes de revisión humana",
+   "source": {
+    "norma": "Ley N.° 30421, Ley Marco de Telesalud",
+    "articulo": "Art. 3, literal c",
+    "pagina_en_archivo": 1,
+    "archivo": "knowledge/minsa/serums-2026-ii/192482-ley-n-30421-normas-y-documentos-legales-congreso-de-la-rep-blica-plataforma-del-estado-peruano.md",
+    "url_oficial": "https://www.gob.pe/institucion/minsa/normas-legales/192482-30421",
+    "frase_de_anclaje": "Es la capacidad de los sistemas de diversas organizaciones"
+   }
+  },
+  {
+   "canonical_id": "DEF-0004",
+   "profession": "Transversal",
+   "specialty": "Transversal",
+   "thematic_block": "Gestión",
+   "tipo": "definición conceptual",
+   "difficulty": "Por revisar",
+   "statement": "Según la Ley Marco de Telesalud, ¿qué entidad es el ente rector que formula la política nacional y sectorial de telesalud y elabora el Plan Nacional de Telesalud?",
+   "alternatives": [
+    "La Presidencia del Consejo de Ministros, a través de la Oficina Nacional de Gobierno Electrónico e Informática.",
+    "El Seguro Social de Salud.",
+    "El Ministerio de Transportes y Comunicaciones.",
+    "El Ministerio de Salud."
+   ],
+   "declared_answer": "D",
+   "justification": "El artículo 4 establece que el Ministerio de Salud es el ente rector del sector: formula, planea, dirige, coordina, ejecuta, supervisa y evalúa la política nacional y sectorial de telesalud, elabora el Plan Nacional de Telesalud y define los estándares de calidad.",
+   "origin": "generado_ia_desde_norma",
+   "status": "REVIEW_REQUIRED",
+   "marca": "análisis propio, generado por IA a partir del texto de la norma; clasificación y redacción pendientes de revisión humana",
+   "source": {
+    "norma": "Ley N.° 30421, Ley Marco de Telesalud",
+    "articulo": "Art. 4",
+    "pagina_en_archivo": 1,
+    "archivo": "knowledge/minsa/serums-2026-ii/192482-ley-n-30421-normas-y-documentos-legales-congreso-de-la-rep-blica-plataforma-del-estado-peruano.md",
+    "url_oficial": "https://www.gob.pe/institucion/minsa/normas-legales/192482-30421",
+    "frase_de_anclaje": "formula, planea, dirige, coordina, ejecuta, supervisa y evalúa la política nacional y sectorial de telesalud"
+   }
+  },
+  {
+   "canonical_id": "DEF-0005",
+   "profession": "Transversal",
+   "specialty": "Transversal",
+   "thematic_block": "Gestión",
+   "tipo": "definición conceptual",
+   "difficulty": "Por revisar",
+   "statement": "¿Quién preside la Comisión Nacional de Telesalud (Conatel)?",
+   "alternatives": [
+    "El representante del Ministerio de Salud.",
+    "El representante del Ministerio de Transportes y Comunicaciones.",
+    "El representante del Seguro Social de Salud.",
+    "El representante del Ministerio de Educación."
+   ],
+   "declared_answer": "A",
+   "justification": "La Conatel está integrada por representantes de varios sectores; el primero es el del Ministerio de Salud, quien la preside. La Oficina General de Estadística e Informática del Ministerio actúa como Secretaría Técnica.",
+   "origin": "generado_ia_desde_norma",
+   "status": "REVIEW_REQUIRED",
+   "marca": "análisis propio, generado por IA a partir del texto de la norma; clasificación y redacción pendientes de revisión humana",
+   "source": {
+    "norma": "Ley N.° 30421, Ley Marco de Telesalud",
+    "articulo": "Art. 6",
+    "pagina_en_archivo": 1,
+    "archivo": "knowledge/minsa/serums-2026-ii/192482-ley-n-30421-normas-y-documentos-legales-congreso-de-la-rep-blica-plataforma-del-estado-peruano.md",
+    "url_oficial": "https://www.gob.pe/institucion/minsa/normas-legales/192482-30421",
+    "frase_de_anclaje": "Un representante del Ministerio de Salud, quien la preside"
+   }
+  },
+  {
+   "canonical_id": "DEF-0006",
+   "profession": "Transversal",
+   "specialty": "Transversal",
+   "thematic_block": "Cuidado integral",
+   "tipo": "definición conceptual",
+   "difficulty": "Por revisar",
+   "statement": "¿Cuál es el objeto de la Ley de Salud Mental (Ley N.° 30947)?",
+   "alternatives": [
+    "Regular exclusivamente la internación de personas con problemas de salud mental en hospitales psiquiátricos.",
+    "Establecer el marco legal para garantizar el acceso a los servicios, la promoción, prevención, tratamiento y rehabilitación en salud mental, para el pleno ejercicio del derecho a la salud y el bienestar de la persona, la familia y la comunidad.",
+    "Crear un seguro de salud especial para personas con diagnóstico psiquiátrico.",
+    "Establecer sanciones para los establecimientos de salud que no cuenten con psiquiatras."
+   ],
+   "declared_answer": "B",
+   "justification": "El numeral 1.1 fija el objeto de la ley: marco legal para garantizar acceso a servicios, promoción, prevención, tratamiento y rehabilitación en salud mental, como condiciones para el pleno ejercicio del derecho a la salud y el bienestar.",
+   "origin": "generado_ia_desde_norma",
+   "status": "REVIEW_REQUIRED",
+   "marca": "análisis propio, generado por IA a partir del texto de la norma; clasificación y redacción pendientes de revisión humana",
+   "source": {
+    "norma": "Ley N.° 30947, Ley de Salud Mental",
+    "articulo": "Art. 1, numeral 1.1",
+    "pagina_en_archivo": 1,
+    "archivo": "knowledge/minsa/serums-2026-ii/1423694-ley-n-30947-normas-y-documentos-legales-congreso-de-la-rep-blica-plataforma-del-estado-peruano.md",
+    "url_oficial": "https://www.gob.pe/institucion/minsa/normas-legales/1423694-30947",
+    "frase_de_anclaje": "establecer el marco legal para garantizar el acceso a los servicios"
+   }
+  },
+  {
+   "canonical_id": "DEF-0007",
+   "profession": "Transversal",
+   "specialty": "Transversal",
+   "thematic_block": "Cuidado integral",
+   "tipo": "definición conceptual",
+   "difficulty": "Por revisar",
+   "statement": "Según la Ley de Salud Mental, la atención de la salud mental considera el modelo de atención:",
+   "alternatives": [
+    "Hospitalaria con internamiento prolongado como primera opción.",
+    "Exclusivamente biomédica en establecimientos del tercer nivel.",
+    "Comunitaria.",
+    "Privada con pago directo del usuario."
+   ],
+   "declared_answer": "C",
+   "justification": "El numeral 1.2 indica que la atención considera el modelo de atención comunitaria, con respeto a los derechos humanos y la dignidad, sin discriminación, con abordaje intercultural y erradicando la estigmatización.",
+   "origin": "generado_ia_desde_norma",
+   "status": "REVIEW_REQUIRED",
+   "marca": "análisis propio, generado por IA a partir del texto de la norma; clasificación y redacción pendientes de revisión humana",
+   "source": {
+    "norma": "Ley N.° 30947, Ley de Salud Mental",
+    "articulo": "Art. 1, numeral 1.2",
+    "pagina_en_archivo": 1,
+    "archivo": "knowledge/minsa/serums-2026-ii/1423694-ley-n-30947-normas-y-documentos-legales-congreso-de-la-rep-blica-plataforma-del-estado-peruano.md",
+    "url_oficial": "https://www.gob.pe/institucion/minsa/normas-legales/1423694-30947",
+    "frase_de_anclaje": "modelo de atención comunitaria"
+   }
+  },
+  {
+   "canonical_id": "DEF-0008",
+   "profession": "Transversal",
+   "specialty": "Transversal",
+   "thematic_block": "Ética e interculturalidad",
+   "tipo": "definición conceptual",
+   "difficulty": "Por revisar",
+   "statement": "Según el principio de confidencialidad de la Ley de Salud Mental, se prohíbe revelar, examinar o divulgar los archivos médicos de las personas sin:",
+   "alternatives": [
+    "La autorización verbal de cualquier familiar presente en la consulta.",
+    "La solicitud del jefe inmediato del profesional que atiende.",
+    "El pedido de cualquier institución pública interesada en el caso.",
+    "Su consentimiento expreso o, de ser el caso, el de su representante legal."
+   ],
+   "declared_answer": "D",
+   "justification": "El principio de confidencialidad garantiza la reserva de la información obtenida en el contexto clínico: no se pueden revelar los archivos médicos sin el consentimiento expreso de la persona o, si corresponde, de su representante legal.",
+   "origin": "generado_ia_desde_norma",
+   "status": "REVIEW_REQUIRED",
+   "marca": "análisis propio, generado por IA a partir del texto de la norma; clasificación y redacción pendientes de revisión humana",
+   "source": {
+    "norma": "Ley N.° 30947, Ley de Salud Mental",
+    "articulo": "Art. 3, numeral 4",
+    "pagina_en_archivo": 1,
+    "archivo": "knowledge/minsa/serums-2026-ii/1423694-ley-n-30947-normas-y-documentos-legales-congreso-de-la-rep-blica-plataforma-del-estado-peruano.md",
+    "url_oficial": "https://www.gob.pe/institucion/minsa/normas-legales/1423694-30947",
+    "frase_de_anclaje": "sin su consentimiento expreso"
+   }
+  },
+  {
+   "canonical_id": "DEF-0009",
+   "profession": "Transversal",
+   "specialty": "Transversal",
+   "thematic_block": "Cuidado integral",
+   "tipo": "definición conceptual",
+   "difficulty": "Por revisar",
+   "statement": "¿Qué principio de la Ley de Salud Mental establece que todas las personas con problemas de salud mental pueden acceder, sin discriminación ni riesgo de empobrecimiento, a servicios de salud y servicios sociales esenciales?",
+   "alternatives": [
+    "Cobertura sanitaria universal.",
+    "Equidad.",
+    "Accesibilidad.",
+    "Igualdad."
+   ],
+   "declared_answer": "A",
+   "justification": "El numeral 3 define la cobertura sanitaria universal como el acceso, sin discriminación ni riesgo de empobrecimiento, a servicios de salud y sociales esenciales. La equidad se refiere a la atención diferenciada a poblaciones vulnerables y la igualdad a la detección de desigualdades entre hombres y mujeres.",
+   "origin": "generado_ia_desde_norma",
+   "status": "REVIEW_REQUIRED",
+   "marca": "análisis propio, generado por IA a partir del texto de la norma; clasificación y redacción pendientes de revisión humana",
+   "source": {
+    "norma": "Ley N.° 30947, Ley de Salud Mental",
+    "articulo": "Art. 3, numeral 3",
+    "pagina_en_archivo": 1,
+    "archivo": "knowledge/minsa/serums-2026-ii/1423694-ley-n-30947-normas-y-documentos-legales-congreso-de-la-rep-blica-plataforma-del-estado-peruano.md",
+    "url_oficial": "https://www.gob.pe/institucion/minsa/normas-legales/1423694-30947",
+    "frase_de_anclaje": "Cobertura sanitaria universal. Todas las personas"
+   }
+  },
+  {
+   "canonical_id": "DEF-0010",
+   "profession": "Transversal",
+   "specialty": "Transversal",
+   "thematic_block": "Ética e interculturalidad",
+   "tipo": "definición conceptual",
+   "difficulty": "Por revisar",
+   "statement": "¿Qué principio de la Ley de Salud Mental dispone que la atención debe buscar la inclusión de la persona en su familia y en la comunidad, y que nadie debe ser discriminado por padecer o haber padecido un problema de salud mental?",
+   "alternatives": [
+    "Dignidad.",
+    "Inclusión social.",
+    "Calidad.",
+    "Confidencialidad."
+   ],
+   "declared_answer": "B",
+   "justification": "El numeral 9 define la inclusión social: uno de los objetivos de la atención es la inclusión de la persona en su familia y comunidad, y ninguna persona debe ser discriminada por padecer o haber padecido un problema de salud mental.",
+   "origin": "generado_ia_desde_norma",
+   "status": "REVIEW_REQUIRED",
+   "marca": "análisis propio, generado por IA a partir del texto de la norma; clasificación y redacción pendientes de revisión humana",
+   "source": {
+    "norma": "Ley N.° 30947, Ley de Salud Mental",
+    "articulo": "Art. 3, numeral 9",
+    "pagina_en_archivo": 1,
+    "archivo": "knowledge/minsa/serums-2026-ii/1423694-ley-n-30947-normas-y-documentos-legales-congreso-de-la-rep-blica-plataforma-del-estado-peruano.md",
+    "url_oficial": "https://www.gob.pe/institucion/minsa/normas-legales/1423694-30947",
+    "frase_de_anclaje": "Inclusión social. La atención, cuidado y tratamiento"
+   }
+  },
+  {
+   "canonical_id": "DEF-0011",
+   "profession": "Transversal",
+   "specialty": "Transversal",
+   "thematic_block": "Cuidado integral",
+   "tipo": "definición conceptual",
+   "difficulty": "Por revisar",
+   "statement": "¿Cuál es el objeto de la Ley Nacional del Cáncer (Ley N.° 31336)?",
+   "alternatives": [
+    "Financiar únicamente el tratamiento de los cánceres más frecuentes en el país.",
+    "Garantizar la cobertura gratuita solo en establecimientos del Ministerio de Salud.",
+    "Garantizar la cobertura universal, gratuita y prioritaria de los servicios de salud para todos los pacientes oncológicos, sin importar el tipo de cáncer.",
+    "Crear un seguro privado de salud exclusivo para pacientes oncológicos."
+   ],
+   "declared_answer": "C",
+   "justification": "El artículo 1 establece como objeto garantizar la cobertura universal, gratuita y prioritaria de los servicios de salud para todos los pacientes oncológicos, indistintamente del tipo de cáncer, con igualdad de condiciones y sin discriminación.",
+   "origin": "generado_ia_desde_norma",
+   "status": "REVIEW_REQUIRED",
+   "marca": "análisis propio, generado por IA a partir del texto de la norma; clasificación y redacción pendientes de revisión humana",
+   "source": {
+    "norma": "Ley N.° 31336, Ley Nacional del Cáncer",
+    "articulo": "Art. 1",
+    "pagina_en_archivo": 1,
+    "archivo": "knowledge/minsa/serums-2026-ii/7973110-ley-n-31336-normas-y-documentos-legales-ministerio-de-salud-plataforma-del-estado-peruano.md",
+    "url_oficial": "https://www.gob.pe/institucion/minsa/normas-legales/7973110-31336",
+    "frase_de_anclaje": "cobertura universal, gratuita y prioritaria de los servicios de salud para todos los pacientes oncológicos"
+   }
+  },
+  {
+   "canonical_id": "DEF-0012",
+   "profession": "Transversal",
+   "specialty": "Transversal",
+   "thematic_block": "Cuidado integral",
+   "tipo": "definición conceptual",
+   "difficulty": "Por revisar",
+   "statement": "Según la Ley Nacional del Cáncer, ¿quién formula, implementa y evalúa la Política Nacional de Lucha contra el Cáncer?",
+   "alternatives": [
+    "El Congreso de la República, a través de su Comisión de Salud.",
+    "Cada gobierno regional, de forma independiente.",
+    "Las empresas aseguradoras privadas del sistema de salud.",
+    "El Poder Ejecutivo, a través del Ministerio de Salud como órgano rector, y sus organismos públicos ejecutores."
+   ],
+   "declared_answer": "D",
+   "justification": "El artículo 4 señala que el Poder Ejecutivo, a través del Ministerio de Salud en su calidad de órgano rector, y sus organismos públicos ejecutores, formula, implementa y evalúa la Política Nacional de Lucha contra el Cáncer.",
+   "origin": "generado_ia_desde_norma",
+   "status": "REVIEW_REQUIRED",
+   "marca": "análisis propio, generado por IA a partir del texto de la norma; clasificación y redacción pendientes de revisión humana",
+   "source": {
+    "norma": "Ley N.° 31336, Ley Nacional del Cáncer",
+    "articulo": "Art. 4",
+    "pagina_en_archivo": 2,
+    "archivo": "knowledge/minsa/serums-2026-ii/7973110-ley-n-31336-normas-y-documentos-legales-ministerio-de-salud-plataforma-del-estado-peruano.md",
+    "url_oficial": "https://www.gob.pe/institucion/minsa/normas-legales/7973110-31336",
+    "frase_de_anclaje": "formula, implementa y evalúa la Política Nacional de"
+   }
+  },
+  {
+   "canonical_id": "DEF-0013",
+   "profession": "Transversal",
+   "specialty": "Transversal",
+   "thematic_block": "Cuidado integral",
+   "tipo": "definición conceptual",
+   "difficulty": "Por revisar",
+   "statement": "Según la Ley Nacional del Cáncer, ¿cuáles son los ejes vitales de la Política Nacional de Lucha contra el Cáncer?",
+   "alternatives": [
+    "Promoción de la salud, prevención, diagnóstico oportuno, tratamiento, rehabilitación, cuidados paliativos e investigación del cáncer.",
+    "Únicamente cirugía, quimioterapia y radioterapia.",
+    "Promoción de la salud, prevención y diagnóstico oportuno, sin incluir tratamiento ni cuidados paliativos.",
+    "Tamizaje poblacional, referencia a la capital y financiamiento por parte del paciente."
+   ],
+   "declared_answer": "A",
+   "justification": "El artículo 4 indica que la política considera como ejes vitales la promoción de la salud, la prevención, el diagnóstico oportuno, el tratamiento, la rehabilitación, los cuidados paliativos y la investigación del cáncer.",
+   "origin": "generado_ia_desde_norma",
+   "status": "REVIEW_REQUIRED",
+   "marca": "análisis propio, generado por IA a partir del texto de la norma; clasificación y redacción pendientes de revisión humana",
+   "source": {
+    "norma": "Ley N.° 31336, Ley Nacional del Cáncer",
+    "articulo": "Art. 4",
+    "pagina_en_archivo": 2,
+    "archivo": "knowledge/minsa/serums-2026-ii/7973110-ley-n-31336-normas-y-documentos-legales-ministerio-de-salud-plataforma-del-estado-peruano.md",
+    "url_oficial": "https://www.gob.pe/institucion/minsa/normas-legales/7973110-31336",
+    "frase_de_anclaje": "ejes vitales"
+   }
+  }
+ ]
+}
