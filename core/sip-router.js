@@ -4,7 +4,7 @@ function loadCoreScript(name) {
   if (coreScripts.has(name)) return coreScripts.get(name);
   const pending = new Promise((resolve, reject) => {
     const script = document.createElement('script');
-    script.src = new URL(name + '.js?v=20261028-visor', CORE_MODULE_BASE).href;
+    script.src = new URL(name + '.js?v=20261029-planificacion', CORE_MODULE_BASE).href;
     script.onload = resolve;
     script.onerror = () => { script.remove(); coreScripts.delete(name); reject(new Error('Carga fallida: ' + name)); };
     document.head.appendChild(script);
