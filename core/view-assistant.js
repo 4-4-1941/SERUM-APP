@@ -211,25 +211,155 @@ function hisInjectStyle() {
 .his-src{margin:6px 0 0;font-size:11.5px;color:#7a8b87}
 .his-link{display:inline-block;margin-top:6px;font-size:12px;font-weight:700;color:var(--primary);text-decoration:none;border:1px solid var(--primary);border-radius:999px;padding:3px 10px}
 .his-link:active{background:var(--primary);color:#fff}
+button.his-link{background:none;font:inherit;font-size:12px;font-weight:700;cursor:pointer}
+.his-pdf{position:fixed;inset:0;z-index:3000;background:#2b2f2e;display:flex;flex-direction:column}
+.his-pdf-bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:8px 10px;background:#fff;border-bottom:1px solid var(--line)}
+.his-pdf-title{flex:1 1 140px;min-width:0;font-size:13px;font-weight:700;color:var(--ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.his-pdf-ctl{display:flex;align-items:center;gap:6px}
+.his-pdf-pos{font-size:12.5px;font-weight:700;color:var(--ink);min-width:74px;text-align:center}
+.his-pdf-btn{border:1px solid var(--line);background:var(--primary-soft);color:var(--primary-dark);border-radius:8px;padding:8px 12px;font:inherit;font-weight:800;font-size:15px;cursor:pointer}
+.his-pdf-body{flex:1;overflow:auto;text-align:center;padding:10px;-webkit-overflow-scrolling:touch}
+.his-pdf-body canvas{background:#fff;box-shadow:0 2px 12px rgba(0,0,0,.45);max-width:none}
+.his-pdf-msg{color:#fff;padding:24px;font-size:15px}
 .his-warn{display:inline-block;margin-top:6px;font-size:11.5px;font-weight:700;color:#8a5a00;background:#FFF3D6;border-radius:6px;padding:2px 8px}
 @media(max-width:600px){.his-grid{grid-template-columns:1fr;padding:10px}.his-chip{padding:8px 12px}}`;
   document.head.appendChild(st);
 }
 
-// Enlace al manual en el repositorio SIP-AI-RAG (PDF completo; la página figura en la fuente de cada tarjeta)
+// Manuales en Supabase Storage (bucket privado «manuales-his» del proyecto oficial): se abren con enlace temporal dentro de la app.
+// Cada fila: [patrón de la fuente, archivo en el bucket, desfase de página (PDF = página citada + desfase), título, ruta de respaldo en el repositorio].
+const HIS_PDF_BUCKET = "manuales-his";
 const HIS_REPO_PDF = "https://github.com/4-4-1941/SIP-AI-RAG/blob/main/knowledge/minsa/";
+const HIS_PDF_RESPALDO_REPO = true; // Si falla el bucket, abre la copia del repositorio. Poner false cuando el bucket esté verificado.
 const HIS_MANUALES = [
-  [/^Salud Bucal 2025/, "manuales-his/SALUD_BUCAL_2025.pdf"],
-  [/^Adulto Mayor 2025/, "manuales-his/Manual de Registro y Codificacion de Adulto Mayor_2025.pdf"],
-  [/^Adulto 2025/, "manuales-his/Manual-curso_de_vida_adulto-2025.pdf"],
-  [/^Salud Mental 2025/, "manuales-his/Manual-salud_mental-2025.pdf"],
-  [/^Promoción 2024/, "manuales-his/Manual-promocion_salud-2024.pdf"],
-  [/^Pueblos Indígenas 2022/, "manuales-his/Actividades de Registro y  codificacion de Pueblos Indigenos_ Etnias_14.01.22 (1).pdf"]
+  [/^Salud Bucal 2025/, "salud-bucal-2025.pdf", 0, "Manual de Salud Bucal 2025", "manuales-his/SALUD_BUCAL_2025.pdf"],
+  [/^Adulto Mayor 2025/, "adulto-mayor-2025.pdf", 0, "Manual de Adulto Mayor 2025", "manuales-his/Manual de Registro y Codificacion de Adulto Mayor_2025.pdf"],
+  [/^Adulto 2025/, "adulto-2025.pdf", 1, "Manual Curso de Vida Adulto 2025", "manuales-his/Manual-curso_de_vida_adulto-2025.pdf"],
+  [/^Salud Mental 2025/, "salud-mental-2025.pdf", 1, "Manual de Salud Mental 2025", "manuales-his/Manual-salud_mental-2025.pdf"],
+  [/^Promoción 2024/, "promocion-salud-2024.pdf", 0, "Manual de Promoción de la Salud 2024", "manuales-his/Manual-promocion_salud-2024.pdf"],
+  [/^Pueblos Indígenas 2022/, "pueblos-indigenas-2022.pdf", 0, "Manual de Pueblos Indígenas 2022", "manuales-his/Actividades de Registro y  codificacion de Pueblos Indigenos_ Etnias_14.01.22 (1).pdf"]
 ];
-function hisLink(d) {
+function hisManual(d) {
   const f = String(d.fuente || "");
   const m = HIS_MANUALES.find(([re]) => re.test(f));
-  return m ? encodeURI(HIS_REPO_PDF + m[1]) : "";
+  if (!m) return null;
+  const pg = /\bpp?\.\s*(\d+)/.exec(f.split("·")[0]);
+  const cita = pg ? parseInt(pg[1], 10) : 1;
+  return { file: m[1], cita, page: cita + m[2], titulo: m[3], respaldo: encodeURI(HIS_REPO_PDF + m[4]) };
+}
+
+// ----- Visor de PDF dentro de la app (pdf.js): abre el manual en la página exacta -----
+let hisPdfLib = null;
+function hisPdfLoadLib() {
+  if (window.pdfjsLib) return Promise.resolve(window.pdfjsLib);
+  if (hisPdfLib) return hisPdfLib;
+  hisPdfLib = new Promise((resolve, reject) => {
+    const sc = document.createElement("script");
+    sc.src = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js";
+    sc.onload = () => {
+      window.pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+      resolve(window.pdfjsLib);
+    };
+    sc.onerror = () => { hisPdfLib = null; reject(new Error("pdfjs")); };
+    document.head.appendChild(sc);
+  });
+  return hisPdfLib;
+}
+// Cliente del proyecto oficial «SERUMS Intelligence Platform» (el mismo del banco de preguntas); no usa auth.js.
+const HIS_PDF_SUPABASE = Object.freeze({ url: "https://xcfdhwqjudzngvlssyeg.supabase.co", publishableKey: "sb_publishable_SMfnQmaqkzsFXn23qDriEQ_tG-Xb_Jd" });
+let hisPdfClient = null;
+async function hisPdfSignedUrl(file) {
+  if (!window.supabase || typeof window.supabase.createClient !== "function") throw new Error("sin-supabase");
+  if (!hisPdfClient) {
+    hisPdfClient = window.supabase.createClient(HIS_PDF_SUPABASE.url, HIS_PDF_SUPABASE.publishableKey, { auth: { persistSession: false, autoRefreshToken: false } });
+  }
+  const { data, error } = await hisPdfClient.storage.from(HIS_PDF_BUCKET).createSignedUrl(file, 3600);
+  if (error || !data || !data.signedUrl) throw new Error("sin-url");
+  return data.signedUrl;
+}
+function hisClosePdf() {
+  const ov = document.getElementById("his-pdf");
+  if (ov) { document.removeEventListener("keydown", ov._key); ov.remove(); }
+}
+async function hisOpenPdf(m) {
+  hisInjectStyle();
+  hisClosePdf();
+  const ov = document.createElement("div");
+  ov.id = "his-pdf";
+  ov.className = "his-pdf";
+  ov.innerHTML = `
+    <div class="his-pdf-bar">
+      <button type="button" class="his-pdf-btn" data-a="close">✕ Cerrar</button>
+      <span class="his-pdf-title">${hisEsc(m.titulo)}</span>
+      <div class="his-pdf-ctl">
+        <button type="button" class="his-pdf-btn" data-a="prev" aria-label="Página anterior">‹</button>
+        <span class="his-pdf-pos" id="his-pdf-pos"></span>
+        <button type="button" class="his-pdf-btn" data-a="next" aria-label="Página siguiente">›</button>
+        <button type="button" class="his-pdf-btn" data-a="zout" aria-label="Alejar">−</button>
+        <button type="button" class="his-pdf-btn" data-a="zin" aria-label="Acercar">+</button>
+      </div>
+    </div>
+    <div class="his-pdf-body" id="his-pdf-body"><p class="his-pdf-msg" id="his-pdf-msg">Cargando manual…</p><canvas id="his-pdf-canvas" hidden></canvas></div>`;
+  document.body.appendChild(ov);
+  const msg = ov.querySelector("#his-pdf-msg");
+  const canvas = ov.querySelector("#his-pdf-canvas");
+  const body = ov.querySelector("#his-pdf-body");
+  const pos = ov.querySelector("#his-pdf-pos");
+  let doc = null, num = m.page, zoom = 1, task = null, seq = 0;
+
+  async function draw() {
+    const my = ++seq;
+    num = Math.max(1, Math.min(doc.numPages, num));
+    pos.textContent = "p. " + num + " / " + doc.numPages;
+    const pg = await doc.getPage(num);
+    if (my !== seq) return;
+    const base = pg.getViewport({ scale: 1 });
+    const fit = Math.max(280, body.clientWidth - 20) / base.width;
+    const vp = pg.getViewport({ scale: fit * zoom });
+    const ratio = window.devicePixelRatio || 1;
+    canvas.width = Math.floor(vp.width * ratio);
+    canvas.height = Math.floor(vp.height * ratio);
+    canvas.style.width = Math.floor(vp.width) + "px";
+    canvas.style.height = Math.floor(vp.height) + "px";
+    if (task) { try { task.cancel(); } catch (e) { /* ya terminó */ } }
+    task = pg.render({ canvasContext: canvas.getContext("2d"), viewport: vp, transform: ratio !== 1 ? [ratio, 0, 0, ratio, 0, 0] : null });
+    try { await task.promise; } catch (e) { return; }
+    body.scrollTop = 0;
+  }
+  function go(n) { num = n; draw(); }
+  ov.addEventListener("click", e => {
+    const b = e.target.closest("[data-a]");
+    if (!b) return;
+    const a = b.dataset.a;
+    if (a === "close") hisClosePdf();
+    else if (!doc) return;
+    else if (a === "prev") go(num - 1);
+    else if (a === "next") go(num + 1);
+    else if (a === "zin") { zoom = Math.min(3, zoom + 0.25); draw(); }
+    else if (a === "zout") { zoom = Math.max(0.5, zoom - 0.25); draw(); }
+  });
+  ov._key = e => {
+    if (e.key === "Escape") hisClosePdf();
+    else if (doc && e.key === "ArrowRight") go(num + 1);
+    else if (doc && e.key === "ArrowLeft") go(num - 1);
+  };
+  document.addEventListener("keydown", ov._key);
+
+  try {
+    const [lib, url] = await Promise.all([hisPdfLoadLib(), hisPdfSignedUrl(m.file)]);
+    doc = await lib.getDocument({ url }).promise;
+    if (!document.getElementById("his-pdf")) return;
+    msg.hidden = true;
+    canvas.hidden = false;
+    await draw();
+  } catch (err) {
+    if (HIS_PDF_RESPALDO_REPO) {
+      hisClosePdf();
+      window.open(m.respaldo, "_blank", "noopener,noreferrer");
+    } else {
+      msg.textContent = "No se pudo abrir el manual. Inténtalo de nuevo en unos minutos.";
+    }
+  }
 }
 
 function renderHisCodesChild() {
@@ -246,6 +376,7 @@ function renderHisCodesChild() {
 
   root.innerHTML = `
     <section class="panel">
+      <button id="his-back-dashboard" type="button" class="toggle" style="margin:0 0 12px">← Volver al tablero</button>
       <input id="hiscodes-search" class="search" placeholder="Buscar por código, diagnóstico o actividad (ej. J189, CRED, 96150, tamizaje)..." />
       <div class="his-chips" id="hiscodes-chips"></div>
       <p class="his-count" id="hiscodes-count" aria-live="polite"></p>
@@ -266,6 +397,9 @@ function renderHisCodesChild() {
     chips.innerHTML = mk("Todos", all.length) + HIS_GROUPS.map(g => mk(g, all.filter(d => d.grupo === g).length)).join("");
   }
 
+  const hisList = [];
+  function hisIdx(d) { hisList.push(hisManual(d)); return hisList.length - 1; }
+
   function card(d) {
     return `
       <article class="his-card">
@@ -274,11 +408,12 @@ function renderHisCodesChild() {
         ${d.notaRegistro ? `<p class="his-nota"><strong>Registro:</strong> ${hisEsc(d.notaRegistro)}</p>` : ""}
         ${d.estado ? `<span class="his-warn">⚠ ${hisEsc(d.estado)}</span>` : ""}
         <p class="his-src">📖 ${hisEsc(d.fuente)}</p>
-        ${hisLink(d) ? `<a class="his-link" href="${hisLink(d)}" target="_blank" rel="noopener noreferrer">📄 Abrir manual (PDF)</a>` : ""}
+        ${hisManual(d) ? `<button type="button" class="his-link" data-i="${hisIdx(d)}">📄 Abrir manual (p. ${hisManual(d).cita})</button>` : ""}
       </article>`;
   }
 
   function draw() {
+    hisList.length = 0;
     const q = hisNorm(query.trim());
     const filtered = all.filter(d =>
       (grupo === "Todos" || d.grupo === grupo) &&
@@ -314,6 +449,11 @@ function renderHisCodesChild() {
     draw();
   });
   search.addEventListener("input", () => { query = search.value; draw(); });
+  list.addEventListener("click", e => {
+    const b = e.target.closest("[data-i]");
+    if (b && hisList[+b.dataset.i]) hisOpenPdf(hisList[+b.dataset.i]);
+  });
+  document.getElementById("his-back-dashboard").addEventListener("click", () => { hisClosePdf(); renderView("dashboard"); });
 
   drawChips();
   draw();
