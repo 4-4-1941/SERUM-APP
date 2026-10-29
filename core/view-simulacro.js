@@ -15,41 +15,41 @@ function orderPoolAvoidingRepeats(pool, usedIds) {
 }
 
 // ===== Blueprint por carrera, con dos modos =====
-// Cada carrera tiene su propio blueprint. Solo Psicología y Enfermería están activas; las demás
-// carreras NO tienen blueprint (sin porcentajes inventados) y su simulacro queda bloqueado.
+// Cada carrera tiene su propio blueprint (las 17 carreras del banco oficial MINSA). Una carrera sin
+// blueprint (sin porcentajes inventados) queda bloqueada en el simulacro.
 // Modos: "historico" = promedio de los 4 exámenes (por defecto) y "reciente" = solo 2026-II.
 // Pesos enteros que suman 100, recalculados desde los JSON de SIP-AI-RAG (knowledge/serums/banco_preguntas/)
 // con mayores restos. Es análisis propio, clasificación por IA pendiente de revisión humana.
 const SIP_BLUEPRINT_MODES = ["historico", "reciente"];
 const SIP_BLUEPRINTS = {
-  "Psicología": {
+  "Biología": {
     activo: true,
     modos: {
     historico: {
       etiqueta: "Histórico (promedio de 4 exámenes)",
       ejes: {
-        "Cuidado integral": 29,
-        "Salud pública": 29,
-        "Gestión": 21,
-        "Ética e interculturalidad": 13,
-        "Investigación": 8
+        "Cuidado integral": 24,
+        "Salud pública": 30,
+        "Gestión": 24,
+        "Ética e interculturalidad": 15,
+        "Investigación": 7
       },
-      tipo: { definicion_conceptual: 51, caso_aplicado: 49 },
-      fuente: "Análisis propio de los 4 exámenes 2025-I, 2025-II, 2026-I y 2026-II (400 preguntas; en 2025-I solo Forma A) (banco oficial MINSA, Psicología); clasificación por IA pendiente de revisión humana. No es documento oficial.",
-      actualizado: "2026-10-21"
+      tipo: { definicion_conceptual: 31, caso_aplicado: 69 },
+      fuente: "Análisis propio de los 4 exámenes 2025-I, 2025-II, 2026-I y 2026-II (400 preguntas; en 2025-I solo Forma A) (banco oficial MINSA, Biología); clasificación por IA pendiente de revisión humana. No es documento oficial.",
+      actualizado: "2026-10-29"
     },
     reciente: {
       etiqueta: "Reciente (solo 2026-II)",
       ejes: {
-        "Cuidado integral": 27,
-        "Salud pública": 29,
-        "Gestión": 22,
-        "Ética e interculturalidad": 12,
+        "Cuidado integral": 18,
+        "Salud pública": 34,
+        "Gestión": 23,
+        "Ética e interculturalidad": 15,
         "Investigación": 10
       },
-      tipo: { definicion_conceptual: 54, caso_aplicado: 46 },
-      fuente: "Análisis propio del examen 2026-II (100 preguntas) (banco oficial MINSA, Psicología); clasificación por IA pendiente de revisión humana. No es documento oficial.",
-      actualizado: "2026-10-21"
+      tipo: { definicion_conceptual: 34, caso_aplicado: 66 },
+      fuente: "Análisis propio del examen 2026-II (100 preguntas) (banco oficial MINSA, Biología); clasificación por IA pendiente de revisión humana. No es documento oficial.",
+      actualizado: "2026-10-29"
     }
     }
   },
@@ -67,7 +67,7 @@ const SIP_BLUEPRINTS = {
       },
       tipo: { definicion_conceptual: 41, caso_aplicado: 59 },
       fuente: "Análisis propio de los 4 exámenes 2025-I, 2025-II, 2026-I y 2026-II (400 preguntas; en 2025-I solo Forma A) (banco oficial MINSA, Enfermería); clasificación por IA pendiente de revisión humana. No es documento oficial.",
-      actualizado: "2026-10-21"
+      actualizado: "2026-10-29"
     },
     reciente: {
       etiqueta: "Reciente (solo 2026-II)",
@@ -80,11 +80,479 @@ const SIP_BLUEPRINTS = {
       },
       tipo: { definicion_conceptual: 47, caso_aplicado: 53 },
       fuente: "Análisis propio del examen 2026-II (100 preguntas) (banco oficial MINSA, Enfermería); clasificación por IA pendiente de revisión humana. No es documento oficial.",
-      actualizado: "2026-10-21"
+      actualizado: "2026-10-29"
+    }
+    }
+  },
+  "Farmacia y Bioquímica": {
+    activo: true,
+    modos: {
+    historico: {
+      etiqueta: "Histórico (promedio de 4 exámenes)",
+      ejes: {
+        "Cuidado integral": 28,
+        "Salud pública": 27,
+        "Gestión": 22,
+        "Ética e interculturalidad": 14,
+        "Investigación": 9
+      },
+      tipo: { definicion_conceptual: 46, caso_aplicado: 54 },
+      fuente: "Análisis propio de los 4 exámenes 2025-I, 2025-II, 2026-I y 2026-II (400 preguntas; en 2025-I solo Forma A) (banco oficial MINSA, Farmacia y Bioquímica); clasificación por IA pendiente de revisión humana. No es documento oficial.",
+      actualizado: "2026-10-29"
+    },
+    reciente: {
+      etiqueta: "Reciente (solo 2026-II)",
+      ejes: {
+        "Cuidado integral": 24,
+        "Salud pública": 28,
+        "Gestión": 22,
+        "Ética e interculturalidad": 12,
+        "Investigación": 14
+      },
+      tipo: { definicion_conceptual: 46, caso_aplicado: 54 },
+      fuente: "Análisis propio del examen 2026-II (100 preguntas) (banco oficial MINSA, Farmacia y Bioquímica); clasificación por IA pendiente de revisión humana. No es documento oficial.",
+      actualizado: "2026-10-29"
+    }
+    }
+  },
+  "Ingeniería Sanitaria": {
+    activo: true,
+    modos: {
+    historico: {
+      etiqueta: "Histórico (promedio de 4 exámenes)",
+      ejes: {
+        "Cuidado integral": 21,
+        "Salud pública": 34,
+        "Gestión": 24,
+        "Ética e interculturalidad": 12,
+        "Investigación": 9
+      },
+      tipo: { definicion_conceptual: 41, caso_aplicado: 59 },
+      fuente: "Análisis propio de los 4 exámenes 2025-I, 2025-II, 2026-I y 2026-II (400 preguntas; en 2025-I solo Forma A) (banco oficial MINSA, Ingeniería Sanitaria); clasificación por IA pendiente de revisión humana. No es documento oficial.",
+      actualizado: "2026-10-29"
+    },
+    reciente: {
+      etiqueta: "Reciente (solo 2026-II)",
+      ejes: {
+        "Cuidado integral": 16,
+        "Salud pública": 35,
+        "Gestión": 24,
+        "Ética e interculturalidad": 14,
+        "Investigación": 11
+      },
+      tipo: { definicion_conceptual: 38, caso_aplicado: 62 },
+      fuente: "Análisis propio del examen 2026-II (100 preguntas) (banco oficial MINSA, Ingeniería Sanitaria); clasificación por IA pendiente de revisión humana. No es documento oficial.",
+      actualizado: "2026-10-29"
+    }
+    }
+  },
+  "Medicina Humana": {
+    activo: true,
+    modos: {
+    historico: {
+      etiqueta: "Histórico (promedio de 4 exámenes)",
+      ejes: {
+        "Cuidado integral": 33,
+        "Salud pública": 29,
+        "Gestión": 20,
+        "Ética e interculturalidad": 11,
+        "Investigación": 7
+      },
+      tipo: { definicion_conceptual: 38, caso_aplicado: 62 },
+      fuente: "Análisis propio de los 4 exámenes 2025-I, 2025-II, 2026-I y 2026-II (400 preguntas; en 2025-I solo Forma A) (banco oficial MINSA, Medicina Humana); clasificación por IA pendiente de revisión humana. No es documento oficial.",
+      actualizado: "2026-10-29"
+    },
+    reciente: {
+      etiqueta: "Reciente (solo 2026-II)",
+      ejes: {
+        "Cuidado integral": 27,
+        "Salud pública": 32,
+        "Gestión": 21,
+        "Ética e interculturalidad": 9,
+        "Investigación": 11
+      },
+      tipo: { definicion_conceptual: 45, caso_aplicado: 55 },
+      fuente: "Análisis propio del examen 2026-II (100 preguntas) (banco oficial MINSA, Medicina Humana); clasificación por IA pendiente de revisión humana. No es documento oficial.",
+      actualizado: "2026-10-29"
+    }
+    }
+  },
+  "Medicina Veterinaria": {
+    activo: true,
+    modos: {
+    historico: {
+      etiqueta: "Histórico (promedio de 4 exámenes)",
+      ejes: {
+        "Cuidado integral": 28,
+        "Salud pública": 28,
+        "Gestión": 22,
+        "Ética e interculturalidad": 13,
+        "Investigación": 9
+      },
+      tipo: { definicion_conceptual: 40, caso_aplicado: 60 },
+      fuente: "Análisis propio de los 4 exámenes 2025-I, 2025-II, 2026-I y 2026-II (400 preguntas; en 2025-I solo Forma A) (banco oficial MINSA, Medicina Veterinaria); clasificación por IA pendiente de revisión humana. No es documento oficial.",
+      actualizado: "2026-10-29"
+    },
+    reciente: {
+      etiqueta: "Reciente (solo 2026-II)",
+      ejes: {
+        "Cuidado integral": 17,
+        "Salud pública": 32,
+        "Gestión": 26,
+        "Ética e interculturalidad": 15,
+        "Investigación": 10
+      },
+      tipo: { definicion_conceptual: 36, caso_aplicado: 64 },
+      fuente: "Análisis propio del examen 2026-II (100 preguntas) (banco oficial MINSA, Medicina Veterinaria); clasificación por IA pendiente de revisión humana. No es documento oficial.",
+      actualizado: "2026-10-29"
+    }
+    }
+  },
+  "Nutrición": {
+    activo: true,
+    modos: {
+    historico: {
+      etiqueta: "Histórico (promedio de 4 exámenes)",
+      ejes: {
+        "Cuidado integral": 27,
+        "Salud pública": 31,
+        "Gestión": 22,
+        "Ética e interculturalidad": 15,
+        "Investigación": 5
+      },
+      tipo: { definicion_conceptual: 48, caso_aplicado: 52 },
+      fuente: "Análisis propio de los 4 exámenes 2025-I, 2025-II, 2026-I y 2026-II (400 preguntas; en 2025-I solo Forma A) (banco oficial MINSA, Nutrición); clasificación por IA pendiente de revisión humana. No es documento oficial.",
+      actualizado: "2026-10-29"
+    },
+    reciente: {
+      etiqueta: "Reciente (solo 2026-II)",
+      ejes: {
+        "Cuidado integral": 28,
+        "Salud pública": 30,
+        "Gestión": 20,
+        "Ética e interculturalidad": 14,
+        "Investigación": 8
+      },
+      tipo: { definicion_conceptual: 56, caso_aplicado: 44 },
+      fuente: "Análisis propio del examen 2026-II (100 preguntas) (banco oficial MINSA, Nutrición); clasificación por IA pendiente de revisión humana. No es documento oficial.",
+      actualizado: "2026-10-29"
+    }
+    }
+  },
+  "Obstetricia": {
+    activo: true,
+    modos: {
+    historico: {
+      etiqueta: "Histórico (promedio de 4 exámenes)",
+      ejes: {
+        "Cuidado integral": 34,
+        "Salud pública": 26,
+        "Gestión": 19,
+        "Ética e interculturalidad": 13,
+        "Investigación": 8
+      },
+      tipo: { definicion_conceptual: 44, caso_aplicado: 56 },
+      fuente: "Análisis propio de los 4 exámenes 2025-I, 2025-II, 2026-I y 2026-II (400 preguntas; en 2025-I solo Forma A) (banco oficial MINSA, Obstetricia); clasificación por IA pendiente de revisión humana. No es documento oficial.",
+      actualizado: "2026-10-29"
+    },
+    reciente: {
+      etiqueta: "Reciente (solo 2026-II)",
+      ejes: {
+        "Cuidado integral": 32,
+        "Salud pública": 27,
+        "Gestión": 16,
+        "Ética e interculturalidad": 12,
+        "Investigación": 13
+      },
+      tipo: { definicion_conceptual: 43, caso_aplicado: 57 },
+      fuente: "Análisis propio del examen 2026-II (100 preguntas) (banco oficial MINSA, Obstetricia); clasificación por IA pendiente de revisión humana. No es documento oficial.",
+      actualizado: "2026-10-29"
+    }
+    }
+  },
+  "Odontología": {
+    activo: true,
+    modos: {
+    historico: {
+      etiqueta: "Histórico (promedio de 4 exámenes)",
+      ejes: {
+        "Cuidado integral": 31,
+        "Salud pública": 31,
+        "Gestión": 20,
+        "Ética e interculturalidad": 11,
+        "Investigación": 7
+      },
+      tipo: { definicion_conceptual: 34, caso_aplicado: 66 },
+      fuente: "Análisis propio de los 4 exámenes 2025-I, 2025-II, 2026-I y 2026-II (400 preguntas; en 2025-I solo Forma A) (banco oficial MINSA, Odontología); clasificación por IA pendiente de revisión humana. No es documento oficial.",
+      actualizado: "2026-10-29"
+    },
+    reciente: {
+      etiqueta: "Reciente (solo 2026-II)",
+      ejes: {
+        "Cuidado integral": 29,
+        "Salud pública": 31,
+        "Gestión": 19,
+        "Ética e interculturalidad": 10,
+        "Investigación": 11
+      },
+      tipo: { definicion_conceptual: 41, caso_aplicado: 59 },
+      fuente: "Análisis propio del examen 2026-II (100 preguntas) (banco oficial MINSA, Odontología); clasificación por IA pendiente de revisión humana. No es documento oficial.",
+      actualizado: "2026-10-29"
+    }
+    }
+  },
+  "Psicología": {
+    activo: true,
+    modos: {
+    historico: {
+      etiqueta: "Histórico (promedio de 4 exámenes)",
+      ejes: {
+        "Cuidado integral": 29,
+        "Salud pública": 29,
+        "Gestión": 21,
+        "Ética e interculturalidad": 13,
+        "Investigación": 8
+      },
+      tipo: { definicion_conceptual: 51, caso_aplicado: 49 },
+      fuente: "Análisis propio de los 4 exámenes 2025-I, 2025-II, 2026-I y 2026-II (400 preguntas; en 2025-I solo Forma A) (banco oficial MINSA, Psicología); clasificación por IA pendiente de revisión humana. No es documento oficial.",
+      actualizado: "2026-10-29"
+    },
+    reciente: {
+      etiqueta: "Reciente (solo 2026-II)",
+      ejes: {
+        "Cuidado integral": 27,
+        "Salud pública": 29,
+        "Gestión": 22,
+        "Ética e interculturalidad": 12,
+        "Investigación": 10
+      },
+      tipo: { definicion_conceptual: 54, caso_aplicado: 46 },
+      fuente: "Análisis propio del examen 2026-II (100 preguntas) (banco oficial MINSA, Psicología); clasificación por IA pendiente de revisión humana. No es documento oficial.",
+      actualizado: "2026-10-29"
+    }
+    }
+  },
+  "Tecnología Médica - Laboratorio Clínico": {
+    activo: true,
+    modos: {
+    historico: {
+      etiqueta: "Histórico (promedio de 4 exámenes)",
+      ejes: {
+        "Cuidado integral": 27,
+        "Salud pública": 29,
+        "Gestión": 22,
+        "Ética e interculturalidad": 12,
+        "Investigación": 10
+      },
+      tipo: { definicion_conceptual: 48, caso_aplicado: 52 },
+      fuente: "Análisis propio de los 4 exámenes 2025-I, 2025-II, 2026-I y 2026-II (400 preguntas; en 2025-I solo Forma A) (banco oficial MINSA, Tecnología Médica - Laboratorio Clínico); clasificación por IA pendiente de revisión humana. No es documento oficial.",
+      actualizado: "2026-10-29"
+    },
+    reciente: {
+      etiqueta: "Reciente (solo 2026-II)",
+      ejes: {
+        "Cuidado integral": 23,
+        "Salud pública": 33,
+        "Gestión": 21,
+        "Ética e interculturalidad": 11,
+        "Investigación": 12
+      },
+      tipo: { definicion_conceptual: 47, caso_aplicado: 53 },
+      fuente: "Análisis propio del examen 2026-II (100 preguntas) (banco oficial MINSA, Tecnología Médica - Laboratorio Clínico); clasificación por IA pendiente de revisión humana. No es documento oficial.",
+      actualizado: "2026-10-29"
+    }
+    }
+  },
+  "Tecnología Médica - Optometría": {
+    activo: true,
+    modos: {
+    historico: {
+      etiqueta: "Histórico (promedio de 4 exámenes)",
+      ejes: {
+        "Cuidado integral": 25,
+        "Salud pública": 31,
+        "Gestión": 20,
+        "Ética e interculturalidad": 13,
+        "Investigación": 11
+      },
+      tipo: { definicion_conceptual: 45, caso_aplicado: 55 },
+      fuente: "Análisis propio de los 4 exámenes 2025-I, 2025-II, 2026-I y 2026-II (400 preguntas; en 2025-I solo Forma A) (banco oficial MINSA, Tecnología Médica - Optometría); clasificación por IA pendiente de revisión humana. No es documento oficial.",
+      actualizado: "2026-10-29"
+    },
+    reciente: {
+      etiqueta: "Reciente (solo 2026-II)",
+      ejes: {
+        "Cuidado integral": 22,
+        "Salud pública": 33,
+        "Gestión": 19,
+        "Ética e interculturalidad": 12,
+        "Investigación": 14
+      },
+      tipo: { definicion_conceptual: 44, caso_aplicado: 56 },
+      fuente: "Análisis propio del examen 2026-II (100 preguntas) (banco oficial MINSA, Tecnología Médica - Optometría); clasificación por IA pendiente de revisión humana. No es documento oficial.",
+      actualizado: "2026-10-29"
+    }
+    }
+  },
+  "Tecnología Médica - Radiología": {
+    activo: true,
+    modos: {
+    historico: {
+      etiqueta: "Histórico (promedio de 4 exámenes)",
+      ejes: {
+        "Cuidado integral": 25,
+        "Salud pública": 29,
+        "Gestión": 22,
+        "Ética e interculturalidad": 14,
+        "Investigación": 10
+      },
+      tipo: { definicion_conceptual: 50, caso_aplicado: 50 },
+      fuente: "Análisis propio de los 4 exámenes 2025-I, 2025-II, 2026-I y 2026-II (400 preguntas; en 2025-I solo Forma A) (banco oficial MINSA, Tecnología Médica - Radiología); clasificación por IA pendiente de revisión humana. No es documento oficial.",
+      actualizado: "2026-10-29"
+    },
+    reciente: {
+      etiqueta: "Reciente (solo 2026-II)",
+      ejes: {
+        "Cuidado integral": 18,
+        "Salud pública": 33,
+        "Gestión": 23,
+        "Ética e interculturalidad": 16,
+        "Investigación": 10
+      },
+      tipo: { definicion_conceptual: 58, caso_aplicado: 42 },
+      fuente: "Análisis propio del examen 2026-II (100 preguntas) (banco oficial MINSA, Tecnología Médica - Radiología); clasificación por IA pendiente de revisión humana. No es documento oficial.",
+      actualizado: "2026-10-29"
+    }
+    }
+  },
+  "Tecnología Médica - Terapia Física": {
+    activo: true,
+    modos: {
+    historico: {
+      etiqueta: "Histórico (promedio de 4 exámenes)",
+      ejes: {
+        "Cuidado integral": 25,
+        "Salud pública": 32,
+        "Gestión": 21,
+        "Ética e interculturalidad": 12,
+        "Investigación": 10
+      },
+      tipo: { definicion_conceptual: 43, caso_aplicado: 57 },
+      fuente: "Análisis propio de los 4 exámenes 2025-I, 2025-II, 2026-I y 2026-II (400 preguntas; en 2025-I solo Forma A) (banco oficial MINSA, Tecnología Médica - Terapia Física); clasificación por IA pendiente de revisión humana. No es documento oficial.",
+      actualizado: "2026-10-29"
+    },
+    reciente: {
+      etiqueta: "Reciente (solo 2026-II)",
+      ejes: {
+        "Cuidado integral": 26,
+        "Salud pública": 31,
+        "Gestión": 19,
+        "Ética e interculturalidad": 10,
+        "Investigación": 14
+      },
+      tipo: { definicion_conceptual: 45, caso_aplicado: 55 },
+      fuente: "Análisis propio del examen 2026-II (100 preguntas) (banco oficial MINSA, Tecnología Médica - Terapia Física); clasificación por IA pendiente de revisión humana. No es documento oficial.",
+      actualizado: "2026-10-29"
+    }
+    }
+  },
+  "Tecnología Médica - Terapia Ocupacional": {
+    activo: true,
+    modos: {
+    historico: {
+      etiqueta: "Histórico (promedio de 4 exámenes)",
+      ejes: {
+        "Cuidado integral": 27,
+        "Salud pública": 29,
+        "Gestión": 21,
+        "Ética e interculturalidad": 13,
+        "Investigación": 10
+      },
+      tipo: { definicion_conceptual: 43, caso_aplicado: 57 },
+      fuente: "Análisis propio de los 4 exámenes 2025-I, 2025-II, 2026-I y 2026-II (400 preguntas; en 2025-I solo Forma A) (banco oficial MINSA, Tecnología Médica - Terapia Ocupacional); clasificación por IA pendiente de revisión humana. No es documento oficial.",
+      actualizado: "2026-10-29"
+    },
+    reciente: {
+      etiqueta: "Reciente (solo 2026-II)",
+      ejes: {
+        "Cuidado integral": 22,
+        "Salud pública": 34,
+        "Gestión": 20,
+        "Ética e interculturalidad": 11,
+        "Investigación": 13
+      },
+      tipo: { definicion_conceptual: 43, caso_aplicado: 57 },
+      fuente: "Análisis propio del examen 2026-II (100 preguntas) (banco oficial MINSA, Tecnología Médica - Terapia Ocupacional); clasificación por IA pendiente de revisión humana. No es documento oficial.",
+      actualizado: "2026-10-29"
+    }
+    }
+  },
+  "Tecnología Médica - Terapia del Lenguaje": {
+    activo: true,
+    modos: {
+    historico: {
+      etiqueta: "Histórico (promedio de 4 exámenes)",
+      ejes: {
+        "Cuidado integral": 24,
+        "Salud pública": 31,
+        "Gestión": 21,
+        "Ética e interculturalidad": 13,
+        "Investigación": 11
+      },
+      tipo: { definicion_conceptual: 46, caso_aplicado: 54 },
+      fuente: "Análisis propio de los 4 exámenes 2025-I, 2025-II, 2026-I y 2026-II (400 preguntas; en 2025-I solo Forma A) (banco oficial MINSA, Tecnología Médica - Terapia del Lenguaje); clasificación por IA pendiente de revisión humana. No es documento oficial.",
+      actualizado: "2026-10-29"
+    },
+    reciente: {
+      etiqueta: "Reciente (solo 2026-II)",
+      ejes: {
+        "Cuidado integral": 19,
+        "Salud pública": 34,
+        "Gestión": 21,
+        "Ética e interculturalidad": 13,
+        "Investigación": 13
+      },
+      tipo: { definicion_conceptual: 47, caso_aplicado: 53 },
+      fuente: "Análisis propio del examen 2026-II (100 preguntas) (banco oficial MINSA, Tecnología Médica - Terapia del Lenguaje); clasificación por IA pendiente de revisión humana. No es documento oficial.",
+      actualizado: "2026-10-29"
+    }
+    }
+  },
+  "Trabajo Social": {
+    activo: true,
+    modos: {
+    historico: {
+      etiqueta: "Histórico (promedio de 4 exámenes)",
+      ejes: {
+        "Cuidado integral": 29,
+        "Salud pública": 27,
+        "Gestión": 23,
+        "Ética e interculturalidad": 15,
+        "Investigación": 6
+      },
+      tipo: { definicion_conceptual: 37, caso_aplicado: 63 },
+      fuente: "Análisis propio de los 4 exámenes 2025-I, 2025-II, 2026-I y 2026-II (400 preguntas; en 2025-I solo Forma A) (banco oficial MINSA, Trabajo Social); clasificación por IA pendiente de revisión humana. No es documento oficial.",
+      actualizado: "2026-10-29"
+    },
+    reciente: {
+      etiqueta: "Reciente (solo 2026-II)",
+      ejes: {
+        "Cuidado integral": 32,
+        "Salud pública": 24,
+        "Gestión": 24,
+        "Ética e interculturalidad": 12,
+        "Investigación": 8
+      },
+      tipo: { definicion_conceptual: 41, caso_aplicado: 59 },
+      fuente: "Análisis propio del examen 2026-II (100 preguntas) (banco oficial MINSA, Trabajo Social); clasificación por IA pendiente de revisión humana. No es documento oficial.",
+      actualizado: "2026-10-29"
     }
     }
   }
 };
+// Nombres que usa el banco remoto para la misma carrera o examen.
+SIP_BLUEPRINTS["Medicina"] = SIP_BLUEPRINTS["Medicina Humana"];
+SIP_BLUEPRINTS["Tecnología Médica - Anatomía Patológica"] = SIP_BLUEPRINTS["Tecnología Médica - Laboratorio Clínico"]; // comparte examen y temario con Laboratorio Clínico
 let simulacroBpMode = (() => {
   const saved = localStorage.getItem("simulacroBpMode");
   return SIP_BLUEPRINT_MODES.includes(saved) ? saved : "historico";
