@@ -255,6 +255,8 @@ const HIS_MANUALES = [
   [/^Promoción 2024/, "promocion-salud-2024.pdf", 0, "Manual de Promoción de la Salud 2024", "manuales-his/Manual-promocion_salud-2024.pdf"],
   [/^Planificación Familiar 2024/, "planificacion-familiar-2024.pdf", 0, "Manual de Planificación Familiar 2024", "manuales-his/Manual-planificacion_familiar-2024.pdf"],
   [/^NTS 246-2026/, "nts/nts-246-2026-parte-1.pdf", 0, "NTS 246-2026: Esquema Nacional de Vacunación", "nts-n-246-minsa-digiesp-2026-parte-1 (1).pdf", [[97, "nts/nts-246-2026-parte-1.pdf", 0, "nts-n-246-minsa-digiesp-2026-parte-1 (1).pdf"], [9999, "nts/nts-246-2026-parte-2.pdf", -97, "nts-n-246-minsa-digiesp-2026-parte-2 (1).pdf"]]],
+  [/^Niño 2021/, "nino-2021.pdf", 0, "Manual de Etapa de Vida Niño 2021", "manuales-his/Manual de Registro y Codificación de la Atención. Etapa de Vida Niño” .pdf"],
+  [/^Inmunizaciones 2019/, "inmunizaciones-2019.pdf", 0, "Manual HIS de Inmunizaciones 2019", "manuales-his/Manual HIS_Inmunizaciones 2019.pdf"],
   [/^Pueblos Indígenas 2022/, "pueblos-indigenas-2022.pdf", 0, "Manual de Pueblos Indígenas 2022", "manuales-his/Actividades de Registro y  codificacion de Pueblos Indigenos_ Etnias_14.01.22 (1).pdf"],
   [/^Salud Ocular 2025/, "salud-ocular-2025.pdf", 0, "Manual de Salud Ocular 2025", "manuales-his/Manual-salud_ocular_y_prevención_de_la_ceguera-2025.pdf"],
   [/^ITS y Hepatitis 2023/, "its-hepatitis-2023.pdf", 0, "Manual de ITS y Hepatitis 2023", "manuales-his/Manual-enfermedades_de_transmisión_sexual_y_hepatitis-2023.pdf"],
@@ -264,7 +266,8 @@ const HIS_MANUALES = [
   [/^Adolescente 2026/, "adolescente-2026.pdf", 0, "Manual de Adolescente 2026", "manuales-his/manual del adolescente 2026.pdf"]
 ];
 function hisManual(d) {
-  // Recorre las fuentes separadas por «·» y usa la primera que tenga PDF disponible.
+  // Recorre las fuentes separadas por «·». Si una cita la NTS 246-2026 (vigente) usa esa; si no, la primera con PDF disponible.
+  let primera = null;
   for (const seg of String(d.fuente || "").split("·")) {
     const f = seg.trim();
     const m = HIS_MANUALES.find(([re]) => re.test(f));
@@ -276,9 +279,11 @@ function hisManual(d) {
       const t = m[5].find(([hasta]) => cita <= hasta) || m[5][m[5].length - 1];
       file = t[1]; page = cita + t[2]; respaldo = t[3];
     }
-    return { file, cita, page, titulo: m[3], respaldo: encodeURI(HIS_REPO_PDF + respaldo) };
+    const r = { file, cita, page, titulo: m[3], respaldo: encodeURI(HIS_REPO_PDF + respaldo) };
+    if (m[5]) return r;
+    if (!primera) primera = r;
   }
-  return null;
+  return primera;
 }
 // Guías clínicas: cada diagnóstico CIE-10 abre la guía en la página donde se define su código (verificada en el texto de la guía).
 const HIS_GUIAS = [
@@ -414,7 +419,7 @@ function renderHisCodesChild() {
   pageSubtitle.textContent = "Buscador de códigos CIE10/CPMS y reglas de registro para la Hoja HIS, con su fuente (manual, año y página).";
 
   const all = data.hisCodigosNino
-    .map(d => ({ ...d, grupo: "Niño", fuente: HIS_NINO_SRC, estado: "" }))
+    .map(d => ({ ...d, grupo: "Niño", fuente: d.fuente || HIS_NINO_SRC, estado: "" }))
     .concat(HIS_EXTRA, HIS_BUCAL, HIS_ADULTO_MAYOR, HIS_ADULTO, HIS_SALUD_MENTAL, HIS_PUEBLOS, HIS_PLANIFICACION, HIS_OCULAR, HIS_ITS, HIS_TBC, HIS_CANCER, HIS_DISCAPACIDAD, HIS_ADOLESCENTE);
 
   let grupo = "Todos";
