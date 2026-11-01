@@ -86,14 +86,14 @@ ul.mot{margin:6px 0 0 18px;padding:0;font-size:14px}
     <label for="nombre">Nombre (opcional)</label>
     <input id="nombre" autocomplete="off" placeholder="Solo para el resumen impreso">
     <div class="row">
-      <div><label for="fnac">Fecha de nacimiento</label><input id="fnac" type="date"></div>
-      <div><label for="feva">Fecha de evaluación</label><input id="feva" type="date"></div>
+      <div><label for="fnac">Nacimiento</label><input id="fnac" inputmode="numeric" autocomplete="off" maxlength="10" placeholder="ddmmaaaa"></div>
+      <div><label for="feva">Evaluación</label><input id="feva" inputmode="numeric" autocomplete="off" maxlength="10" placeholder="ddmmaaaa"></div>
     </div>
+    <p class="hint">Escriba solo números: 14072024 se convierte en 14/07/2024. La evaluación ya viene con la fecha de hoy.</p>
     <label for="sem">Semanas de gestación (si nació antes de las 37)</label>
-    <input id="sem" type="number" inputmode="numeric" min="22" max="42" placeholder="Déjelo vacío si nació a término">
+    <input id="sem" inputmode="numeric" maxlength="2" autocomplete="off" placeholder="Vacío si nació a término">
     <p class="hint">Si es menor de 2 años y nació antes de las 37 semanas, la prueba se aplica con la edad corregida.</p>
     <div id="msg"></div>
-    <button class="btn" id="calc">Calcular edad y grupo</button>
   </section>
 
   <section class="card" id="edad" hidden></section>
@@ -249,7 +249,7 @@ const CO_ANT_13=[I("¿Sabe decir si es niño o niña?",1),I("¿Dice frases como 
 /* ===== Utilidades ===== */
 const $=id=>document.getElementById(id);
 const COL={MG:"var(--MG)",MF:"var(--MF)",LE:"var(--LE)",SO:"var(--SO)",CO:"var(--CO)"};
-const ans={}; let g=0, edadTxt="", datosTxt="";
+const ans={}; let g=0, edadTxt="";
 
 function parse(s){const p=s.split("-").map(Number);return {y:p[0],m:p[1],d:p[2]}}
 function plural(n,u,us){return n+" "+(n===1?u:us)}
@@ -259,48 +259,55 @@ function aDias(a){return (a.y*12+a.m)*30+a.d}
 function deDias(t){const mm=Math.floor(t/30);return {y:Math.floor(mm/12),m:mm%12,d:t%30}}
 function grupoDe(meses){for(let i=0;i<RNG.length;i++){if(meses>=RNG[i][0]&&meses<=RNG[i][1])return i}return -1}
 
-/* ===== Paso 1: edad y grupo ===== */
-$("feva").value=new Date(Date.now()-new Date().getTimezoneOffset()*60000).toISOString().slice(0,10);
-$("calc").onclick=()=>{
-  const msg=$("msg");msg.innerHTML="";
-  const fn=$("fnac").value,fe=$("feva").value;
-  if(!fn||!fe){return err("Ingrese la fecha de nacimiento y la fecha de evaluación.")}
-  if(fe<fn){return err("La fecha de evaluación no puede ser anterior al nacimiento.")}
-  const cron=edadCron(parse(fn),parse(fe));
-  const mesesCron=cron.y*12+cron.m;
+/* ===== Paso 1: edad y grupo (se calcula sola al escribir) ===== */
+const pad=n=>String(n).padStart(2,"0");
+const hoy=new Date();
+$("feva").value=pad(hoy.getDate())+"/"+pad(hoy.getMonth()+1)+"/"+hoy.getFullYear();
+function leer(t){const m=/^(\d{2})\/(\d{2})\/(\d{4})$/.exec(t);if(!m)return null;const d=+m[1],mo=+m[2],y=+m[3],f=new Date(y,mo-1,d);
+  return (f.getFullYear()===y&&f.getMonth()===mo-1&&f.getDate()===d&&y>1900)?{y,m:mo,d}:null}
+function mascara(el){el.addEventListener("input",()=>{const d=el.value.replace(/\D/g,"").slice(0,8);
+  el.value=d.length>4?d.slice(0,2)+"/"+d.slice(2,4)+"/"+d.slice(4):d.length>2?d.slice(0,2)+"/"+d.slice(2):d;calcEdad()})}
+mascara($("fnac"));mascara($("feva"));
+$("sem").addEventListener("input",()=>{$("sem").value=$("sem").value.replace(/\D/g,"").slice(0,2);calcEdad()});
+let ultimo=-1;
+function ocultar(){$("edad").hidden=true;$("aplic").hidden=true;$("res").hidden=true;$("barra").hidden=true;ultimo=-1}
+function err(t){$("msg").innerHTML='<div class="err">'+t+'</div>'}
+const num=f=>f.y*10000+f.m*100+f.d;
+function datosTxt(){return ($("nombre").value.trim()||"Sin nombre")+" · Nac. "+$("fnac").value+" · Eval. "+$("feva").value}
+function calcEdad(){
+  $("msg").innerHTML="";
+  const sf=$("fnac").value,se=$("feva").value;
+  if(sf.length<10||se.length<10){ocultar();return}
+  const n=leer(sf),e=leer(se);
+  if(!n||!e){ocultar();return err("Revise las fechas: día, mes y año (por ejemplo 14/07/2024).")}
+  if(num(e)<num(n)){ocultar();return err("La fecha de evaluación no puede ser anterior al nacimiento.")}
+  const cron=edadCron(n,e),mesesCron=cron.y*12+cron.m;
   const sem=parseInt($("sem").value,10);
   let corr=null;
   if(!isNaN(sem)){
-    if(sem<22||sem>42)return err("Revise las semanas de gestación (entre 22 y 42).");
-    if(sem<37&&mesesCron<24){
-      const t=aDias(cron)-(40-sem)*7;
-      corr=deDias(Math.max(t,0));
-      corr.neg=t<0;
-    }
+    if(sem<22||sem>42){ocultar();return err("Revise las semanas de gestación (entre 22 y 42).")}
+    if(sem<37&&mesesCron<24)corr=deDias(Math.max(aDias(cron)-(40-sem)*7,0));
   }
-  const usada=corr||cron, meses=usada.y*12+usada.m;
+  const usada=corr||cron,meses=usada.y*12+usada.m;
   let h='<h2>Edad y grupo de aplicación</h2><div class="edades"><div class="edad"><b>Edad cronológica</b><span>'+fmt(cron)+'</span></div>';
   h+=corr?'<div class="edad"><b>Edad corregida ('+sem+' semanas)</b><span>'+fmt(corr)+'</span></div>':'<div class="edad"><b>Edad corregida</b><span>No corresponde</span></div>';
   h+='</div>';
-  if(corr){h+='<p class="nota">Se restaron '+((40-sem)*7)+' días ('+(40-sem)+' semanas) a la edad cronológica: se aplica la prueba del grupo que corresponde a la edad corregida.</p>'}
-  else if(!isNaN(sem)&&sem<37){h+='<p class="nota">Tiene 2 años o más: no se corrige la edad.</p>'}
+  if(corr)h+='<p class="nota">Se restaron '+((40-sem)*7)+' días ('+(40-sem)+' semanas) a la edad cronológica: se aplica la prueba del grupo que corresponde a la edad corregida.</p>';
+  else if(!isNaN(sem)&&sem<37)h+='<p class="nota">Tiene 2 años o más: no se corrige la edad.</p>';
   const gi=grupoDe(meses);
-  $("edad").hidden=false;$("aplic").hidden=true;$("res").hidden=true;$("barra").hidden=true;
+  $("edad").hidden=false;
   if(gi<0){
     h+='<div class="err">'+(meses<1?'El niño tiene menos de 1 mes: la prueba EDI se aplica desde el mes de edad.':'El niño tiene 72 meses o más: la prueba EDI cubre hasta los 5 años, 11 meses y 29 días.')+'</div>';
-    $("edad").innerHTML=h;return;
+    $("edad").innerHTML=h;$("aplic").hidden=true;$("res").hidden=true;$("barra").hidden=true;ultimo=-1;return;
   }
-  g=gi;
   const obligatoria=[1,6,9,18,30,42,60].includes(meses);
-  h+='<div class="grupo">Aplicar el grupo <b>'+NOM[g]+'</b> · '+RNG[g][2]+' <span style="opacity:.8">(manual, pág. '+PAG[g]+')</span></div>';
+  h+='<div class="grupo">Aplicar el grupo <b>'+NOM[gi]+'</b> · '+RNG[gi][2]+' <span style="opacity:.8">(manual, pág. '+PAG[gi]+')</span></div>';
   h+='<p class="nota">'+(obligatoria?'Esta edad ('+meses+(meses===1?' mes':' meses')+') es una de las mínimas indispensables para aplicar la prueba (1, 6, 9, 18, 30, 42 y 60 meses).':'Las edades mínimas indispensables son 1, 6, 9, 18, 30, 42 y 60 meses; además, aplique la prueba ante cualquier hallazgo o indicador de riesgo.')+'</p>';
   $("edad").innerHTML=h;
-  edadTxt="Edad cronológica: "+fmt(cron)+(corr?" · Edad corregida ("+sem+" sem): "+fmt(corr):"")+" · Grupo "+NOM[g]+" ("+RNG[g][2]+")";
-  datosTxt=($("nombre").value.trim()||"Sin nombre")+" · Nac. "+fn+" · Eval. "+fe;
-  for(const k in ans)delete ans[k];
-  render();
-};
-function err(t){$("msg").innerHTML='<div class="err">'+t+'</div>'}
+  edadTxt="Edad cronológica: "+fmt(cron)+(corr?" · Edad corregida ("+sem+" sem): "+fmt(corr):"")+" · Grupo "+NOM[gi]+" ("+RNG[gi][2]+")";
+  g=gi;
+  if(gi!==ultimo){ultimo=gi;for(const k in ans)delete ans[k];render()}else update();
+}
 
 /* ===== Paso 2: aplicación del grupo ===== */
 function itemHtml(k,it,tipo){
@@ -427,7 +434,7 @@ function update(){
   res.dataset.resumen=resumen(r);
 }
 function resumen(r){
-  const D=G[g];const L=["PRUEBA EDI · Grupo "+NOM[g]+" ("+RNG[g][2]+")",datosTxt,edadTxt,""];
+  const D=G[g];const L=["PRUEBA EDI · Grupo "+NOM[g]+" ("+RNG[g][2]+")",datosTxt(),edadTxt,""];
   AREAS.forEach(([a,nm])=>{const st=areaEstado(a);if(st.s!=="na")L.push(nm+": "+NAME_ES[st.s])});
   if(D.ALA.length)L.push("Señales de alarma presentes: "+cuenta("ala",D.ALA.length,"si").c);
   L.push("Exploración neurológica alterada: "+cuenta("en",D.EN.length,"si").c);
