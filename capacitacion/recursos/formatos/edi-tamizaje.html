@@ -22,8 +22,8 @@ main{max-width:760px;margin:0 auto;padding:12px}
 h2{font:700 19px/1.2 Georgia,serif;margin:0 0 10px;color:var(--pino)}
 h3{font:700 16px/1.25 system-ui,sans-serif;margin:0 0 6px}
 label{display:block;font-weight:600;font-size:14px;margin:10px 0 4px}
-input{width:100%;font:inherit;padding:10px;border:1px solid #aab8b3;border-radius:8px;background:#fff;color:var(--tinta)}
-input:focus,button:focus-visible{outline:3px solid #7fb9a6;outline-offset:1px}
+input,select{width:100%;font:inherit;padding:10px;border:1px solid #aab8b3;border-radius:8px;background:#fff;color:var(--tinta)}
+input:focus,select:focus,button:focus-visible{outline:3px solid #7fb9a6;outline-offset:1px}
 .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .btn{font:inherit;font-weight:700;border:0;border-radius:8px;padding:12px 16px;background:var(--pino);color:#fff;cursor:pointer;width:100%;margin-top:12px}
 .btn.sec{background:#e3ece8;color:var(--pino)}
@@ -67,10 +67,33 @@ ul.mot{margin:6px 0 0 18px;padding:0;font-size:14px}
 .barra .estado.V{color:var(--verde)}.barra .estado.A{color:#8a6700}.barra .estado.R{color:var(--rojo)}
 .aviso{font-size:12.5px;color:var(--suave);margin:8px 2px}
 [hidden]{display:none!important}
+details.mas{margin-top:12px;border:1px solid var(--linea);border-radius:8px;padding:8px 10px;background:#f7faf8}
+details.mas summary{font-weight:700;color:var(--pino);cursor:pointer}
+.solo-imprimir{display:none}
+@page{size:A4 landscape;margin:7mm}
 @media print{
-  body{background:#fff;padding:0}.top a,.barra,.btn,.resp button:not(.on),#datos,.hint{display:none!important}
-  .card{break-inside:avoid;border:1px solid #999}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body{background:#fff;padding:0}
+  .top,main,.barra{display:none!important}
+  #formato{display:block!important}
 }
+#formato{font:7.6pt/1.2 Arial,Helvetica,sans-serif;color:#000}
+#formato table{width:100%;border-collapse:collapse;table-layout:fixed}
+#formato th,#formato td{border:1px solid #000;padding:1.5px 3px;vertical-align:middle;text-align:center;word-break:break-word}
+#formato th{font-weight:700;background:#fff}
+#formato .l{text-align:left}
+#formato .bar{background:#bdd7ee;font-weight:700;text-align:center}
+#formato .tit{display:flex;border:2px solid #000;font:700 10pt/1.6 Arial,sans-serif}
+#formato .tit span{flex:1;text-align:center}#formato .tit span+span{background:#7f7f7f;color:#fff}
+#formato .it{display:inline-flex;align-items:center;gap:1px;margin:0 2px}
+#formato .it b{font-size:7pt;margin-right:1px}
+#formato .bx{display:inline-block;min-width:17px;padding:0 2px;border:1px solid #000;font-size:6.4pt;line-height:1.5}
+#formato .bx.y{background:#ffe600}#formato .bx.gn{background:#00b050}#formato .bx.rd{background:#ff2a2a}
+#formato .bx.x{font-weight:900;outline:2px solid #000;outline-offset:-1px}
+#formato .rs{display:block;font-weight:700;padding:1px 0;margin-top:1px}
+#formato .rs.V{background:#00b050}#formato .rs.A{background:#ffe600}#formato .rs.R{background:#ff2a2a}
+#formato .farea td:first-child{font-weight:700;background:#fff2cc}
+#formato .pie{margin-top:3px;font-size:6.5pt}
 </style>
 </head>
 <body>
@@ -93,6 +116,18 @@ ul.mot{margin:6px 0 0 18px;padding:0;font-size:14px}
     <label for="sem">Semanas de gestación (si nació antes de las 37)</label>
     <input id="sem" inputmode="numeric" maxlength="2" autocomplete="off" placeholder="Vacío si nació a término">
     <p class="hint">Si es menor de 2 años y nació antes de las 37 semanas, la prueba se aplica con la edad corregida.</p>
+    <details class="mas"><summary>Datos para el formato oficial (opcional)</summary>
+      <label for="seguro">Tipo de seguro</label><input id="seguro" autocomplete="off">
+      <label for="cuid">Madre / padre / cuidador</label><input id="cuid" autocomplete="off">
+      <label for="ipress">IPRESS</label><input id="ipress" autocomplete="off">
+      <label for="micro">Microrred / RIS</label><input id="micro" autocomplete="off">
+      <label for="tel">Teléfonos</label><input id="tel" inputmode="tel" autocomplete="off">
+      <div class="row">
+        <div><label for="indi">Población indígena</label><select id="indi"><option value="">—</option><option value="Sí">Sí</option><option value="No">No</option></select></div>
+        <div><label for="apl">Esta aplicación es</label><select id="apl"><option value="0">Inicial</option><option value="1">Subsecuente 1</option><option value="2">Subsecuente 2</option><option value="3">Subsecuente 3</option><option value="4">Subsecuente 4</option><option value="5">Subsecuente 5</option></select></div>
+      </div>
+      <label for="aplica">Nombre de quien aplica la prueba</label><input id="aplica" autocomplete="off">
+    </details>
     <div id="msg"></div>
   </section>
 
@@ -102,6 +137,8 @@ ul.mot{margin:6px 0 0 18px;padding:0;font-size:14px}
 
   <p class="aviso">La prueba EDI es una herramienta de tamizaje: el resultado no es un diagnóstico. Esta página reproduce los criterios del manual; ante cualquier duda siga el manual y la NTS vigentes. Los datos no se guardan ni se envían.</p>
 </main>
+
+<section id="formato" class="solo-imprimir"></section>
 
 <div class="barra" id="barra" hidden>
   <span class="estado" id="estado"></span>
@@ -249,7 +286,7 @@ const CO_ANT_13=[I("¿Sabe decir si es niño o niña?",1),I("¿Dice frases como 
 /* ===== Utilidades ===== */
 const $=id=>document.getElementById(id);
 const COL={MG:"var(--MG)",MF:"var(--MF)",LE:"var(--LE)",SO:"var(--SO)",CO:"var(--CO)"};
-const ans={}; let g=0, edadTxt="";
+const ans={}; let g=0, edadTxt="", ctx=null;
 
 function parse(s){const p=s.split("-").map(Number);return {y:p[0],m:p[1],d:p[2]}}
 function plural(n,u,us){return n+" "+(n===1?u:us)}
@@ -305,6 +342,7 @@ function calcEdad(){
   h+='<p class="nota">'+(obligatoria?'Esta edad ('+meses+(meses===1?' mes':' meses')+') es una de las mínimas indispensables para aplicar la prueba (1, 6, 9, 18, 30, 42 y 60 meses).':'Las edades mínimas indispensables son 1, 6, 9, 18, 30, 42 y 60 meses; además, aplique la prueba ante cualquier hallazgo o indicador de riesgo.')+'</p>';
   $("edad").innerHTML=h;
   edadTxt="Edad cronológica: "+fmt(cron)+(corr?" · Edad corregida ("+sem+" sem): "+fmt(corr):"")+" · Grupo "+NOM[gi]+" ("+RNG[gi][2]+")";
+  ctx={cron,corr,sem:isNaN(sem)?"":sem,sf,se};
   g=gi;
   if(gi!==ultimo){ultimo=gi;for(const k in ans)delete ans[k];render()}else update();
 }
@@ -429,7 +467,7 @@ function update(){
   let h='<h2>Resultado</h2><div class="semaforo '+r.nivel+'"><b>'+TXT[r.nivel]+'</b><small>'+edadTxt+'</small></div>';
   if(mot.length)h+='<p style="margin:0"><b>Motivo:</b></p><ul class="mot">'+[...new Set(mot)].map(x=>'<li>'+x+'</li>').join("")+'</ul>';
   else h+='<p style="margin:0">Todas las áreas, la exploración neurológica y las señales evaluadas están en verde (criterios del manual para este grupo).</p>';
-  h+='<button class="btn" id="copiar" type="button">Copiar resumen</button><button class="btn sec" id="imprimir" type="button">Imprimir o guardar PDF</button>';
+  h+='<button class="btn" id="copiar" type="button">Copiar resumen</button><button class="btn sec" id="imprimir" type="button">Imprimir en formato oficial</button>';
   res.innerHTML=h;res.hidden=false;
   res.dataset.resumen=resumen(r);
 }
@@ -442,8 +480,59 @@ function resumen(r){
   L.push("","RESULTADO: "+TXT[r.nivel],"Tamizaje, no es un diagnóstico. Manual EDI Perú 2026.");
   return L.join("\n");
 }
+
+/* ===== Impresión en el Formato Único de Aplicación del manual ===== */
+const esc=t=>String(t==null?"":t).replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));
+function boxes(tipo,x){
+  const M={v:["y","NO","gn","SÍ"],r:["rd","SÍ","gn","NO"],a:["y","SÍ","gn","NO"]}[tipo];
+  const cls=[M[0],M[2]],lab=[M[1],M[3]],val=[M[1]==="NO"?"no":"si",M[3]==="NO"?"no":"si"];
+  return [0,1].map(i=>'<span class="bx '+cls[i]+(x===val[i]?" x":"")+'">'+(x===val[i]?"✕ ":"")+lab[i]+'</span>').join("");
+}
+function minis(pref,n,tipo){let h="";for(let i=0;i<n;i++)h+='<span class="it"><b>'+(i+1)+'</b>'+boxes(tipo,ans[pref+i])+'</span>';return h}
+function fila(sel,inner){let h="";for(let i=0;i<6;i++)h+='<td>'+(i===sel?inner:"")+'</td>';return h}
+function armarFormato(){
+  if(!ctx)return;
+  const sel=parseInt($("apl").value,10)||0,D=G[g],r=calcular();
+  const NC=["Inicial","Subsecuente 1","Subsecuente 2","Subsecuente 3","Subsecuente 4","Subsecuente 5"];
+  const fn=ctx.sf.split("/"),ind=$("indi").value;
+  let h='<div class="tit"><span>FORMATO ÚNICO DE APLICACIÓN</span><span>Prueba de Evaluación del Desarrollo Infantil (EDI)</span></div>';
+  h+='<table><colgroup><col style="width:17%"><col style="width:46%"><col style="width:12%"><col style="width:25%"></colgroup>'+
+   '<tr><th>Nombre del niño (a)</th><td class="l">'+esc($("nombre").value)+'</td><th>Tipos de seguro</th><td class="l">'+esc($("seguro").value)+'</td></tr>'+
+   '<tr><th>Nombre de la Madre/Padre/Cuidador</th><td class="l" colspan="3">'+esc($("cuid").value)+'</td></tr>'+
+   '<tr><th>IPRESS</th><td class="l">'+esc($("ipress").value)+'</td><th>Teléfonos</th><td class="l">'+esc($("tel").value)+'</td></tr>'+
+   '<tr><th>MICRORRED/RIS</th><td class="l">'+esc($("micro").value)+'</td><th>Población Indígena</th><td>Sí <span class="bx'+(ind==="Sí"?" x":"")+'">'+(ind==="Sí"?"✕":"&nbsp;")+'</span> &nbsp; No <span class="bx'+(ind==="No"?" x":"")+'">'+(ind==="No"?"✕":"&nbsp;")+'</span></td></tr></table>';
+  const gE=ctx.corr?fmt(ctx.corr):"";
+  h+='<table><colgroup><col style="width:10%">'+'<col style="width:15%">'.repeat(6)+'</colgroup>'+
+   '<tr><td class="bar" colspan="7">SEGUIMIENTO AL DESARROLLO</td></tr>'+
+   '<tr><th>Fecha Nac.</th>'+NC.map(n=>'<th>'+n+'</th>').join("")+'</tr>'+
+   '<tr><td>'+esc(fn[0]||"dd")+' / '+esc(fn[1]||"mm")+' / '+esc(fn[2]||"aa")+'</td>'+fila(sel,"Fecha: "+esc(ctx.se))+'</tr>'+
+   '<tr><th>Edad</th>'+fila(sel,esc(fmt(ctx.cron)))+'</tr>'+
+   '<tr><th>Edad corregida</th>'+fila(sel,esc(gE))+'</tr>'+
+   '<tr><th>Semanas de gestación</th>'+fila(sel,esc(ctx.sem))+'</tr>'+
+   '<tr><th>Grupo de edad</th>'+fila(sel,esc(NOM[g]+" · "+RNG[g][2]))+'</tr></table>';
+  h+='<table><tr><td class="bar">NOMBRE COMPLETO DE LA PERSONA QUE APLICA LA PRUEBA EDI</td></tr><tr><td class="l" style="height:15px">'+esc($("aplica").value)+'</td></tr></table>';
+  h+='<table><colgroup><col style="width:10%">'+'<col style="width:15%">'.repeat(6)+'</colgroup>'+
+   '<tr><td class="bar" colspan="7">1. ÁREAS DEL DESARROLLO</td></tr><tr><th></th>'+NC.map(n=>'<th>'+n+'</th>').join("")+'</tr>';
+  AREAS.forEach(([a,nm])=>{
+    const n=D[a].length;let inner;
+    if(!n)inner="No aplica";
+    else{const st=areaEstado(a);inner=minis(a,n,"v");
+      const usoAnt=D[a].every((_,i)=>ans[a+i]!==undefined)&&D[a].filter((_,i)=>ans[a+i]==="si").length===0&&g>0;
+      if(usoAnt){const P=antItems(a);inner+='<div style="font-size:6pt">Grupo anterior: '+P.filter((_,i)=>ans["p"+a+i]==="si").length+' de '+P.length+' SÍ</div>'}
+      inner+='<span class="rs '+st.s+'">Resultado: '+NAME_ES[st.s]+'</span>'}
+    h+='<tr class="farea"><td>'+a+'</td>'+fila(sel,inner)+'</tr>';
+  });
+  h+='<tr><td class="bar" colspan="7">2. SEÑALES DE ALARMA</td></tr><tr><th>Alarma</th>'+fila(sel,D.ALA.length?minis("ala",D.ALA.length,"r"):"No existen en este grupo")+'</tr>'+
+   '<tr><td class="bar" colspan="7">3. EXPLORACIÓN NEUROLÓGICA</td></tr><tr><th>EN</th>'+fila(sel,minis("en",D.EN.length,"r"))+'</tr>'+
+   '<tr><td class="bar" colspan="7">RESULTADO GLOBAL DE LA EVALUACIÓN DEL DESARROLLO INFANTIL</td></tr><tr><th>Resultado</th>'+fila(sel,'<span class="rs '+r.nivel+'">'+TXT[r.nivel]+'</span>')+'</tr>'+
+   '<tr><td class="bar" colspan="7">4. FACTORES DE RIESGO BIOLÓGICO · 5. SEÑALES DE ALERTA'+(D.ALE?'':' (opcionales en este grupo)')+'</td></tr>'+
+   '<tr><th>FRB</th>'+fila(sel,D.ALE?minis("frb",FRB.length,"a"):"")+'</tr>'+
+   '<tr><th>Alerta</th>'+fila(sel,D.ALE?minis("ale",D.ALE.length,"a"):"")+'</tr></table>';
+  h+='<p class="pie">Instrumento de tamizaje, no es un diagnóstico. Calificación según el Manual para la aplicación de la prueba EDI (Perú, 2026; NTS N.° 238-MINSA/DGIESP-2025). Generado con SIP · SERUM-APP.</p>';
+  $("formato").innerHTML=h;
+}
 document.addEventListener("click",e=>{
-  if(e.target.id==="imprimir")window.print();
+  if(e.target.id==="imprimir"){armarFormato();window.print()}
   if(e.target.id==="copiar"){
     const t=$("res").dataset.resumen||"";
     (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>{e.target.textContent="Resumen copiado"}).catch(()=>{
