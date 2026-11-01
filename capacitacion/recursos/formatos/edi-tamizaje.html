@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prueba EDI · Evaluación del Desarrollo Infantil</title>
+<style>
+:root{
+  --pino:#0f3d33; --pino2:#1a5a4b; --fondo:#eef2f0; --papel:#ffffff; --tinta:#1c2b27; --suave:#5d6f69; --linea:#d3dcd8;
+  --verde:#1f8a4c; --verde-bg:#e3f4ea; --amar:#e0a800; --amar-bg:#fff4cc; --rojo:#c0392b; --rojo-bg:#fbe3df;
+  --MG:#c9d98a; --MF:#6f96d1; --LE:#ee9dbd; --SO:#f5b83a; --CO:#b79cd8;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--fondo);color:var(--tinta);font:16px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding-bottom:84px}
+.top{background:var(--pino);color:#fff;padding:14px 16px 16px}
+.top a{color:#bfe3d6;text-decoration:none;font-size:14px}
+.top h1{margin:6px 0 2px;font:700 24px/1.15 Georgia,"Times New Roman",serif}
+.top p{margin:0;color:#cfe6dd;font-size:14px}
+main{max-width:760px;margin:0 auto;padding:12px}
+.card{background:var(--papel);border:1px solid var(--linea);border-radius:10px;padding:14px;margin:0 0 12px}
+h2{font:700 19px/1.2 Georgia,serif;margin:0 0 10px;color:var(--pino)}
+h3{font:700 16px/1.25 system-ui,sans-serif;margin:0 0 6px}
+label{display:block;font-weight:600;font-size:14px;margin:10px 0 4px}
+input{width:100%;font:inherit;padding:10px;border:1px solid #aab8b3;border-radius:8px;background:#fff;color:var(--tinta)}
+input:focus,button:focus-visible{outline:3px solid #7fb9a6;outline-offset:1px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.btn{font:inherit;font-weight:700;border:0;border-radius:8px;padding:12px 16px;background:var(--pino);color:#fff;cursor:pointer;width:100%;margin-top:12px}
+.btn.sec{background:#e3ece8;color:var(--pino)}
+.hint{font-size:13px;color:var(--suave);margin:4px 0 0}
+.err{background:var(--rojo-bg);border:1px solid var(--rojo);color:#7a1f15;border-radius:8px;padding:10px;margin-top:10px;font-size:14px}
+.edades{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.edad{background:#f4f8f6;border:1px solid var(--linea);border-radius:8px;padding:8px 10px}
+.edad b{display:block;font-size:12px;color:var(--suave);font-weight:600}
+.edad span{font:700 17px/1.2 Georgia,serif}
+.grupo{margin-top:10px;background:var(--pino);color:#fff;border-radius:8px;padding:10px 12px}
+.grupo b{font:700 20px/1.1 Georgia,serif}
+.nota{font-size:13px;color:var(--suave);margin-top:8px}
+.area{border-left:8px solid var(--c,#999);padding-left:12px}
+.area header{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:6px}
+.chip{font-size:12px;font-weight:700;padding:3px 9px;border-radius:99px;background:#e8eeeb;color:var(--suave);white-space:nowrap}
+.chip.V{background:var(--verde);color:#fff}.chip.A{background:var(--amar);color:#2a2100}.chip.R{background:var(--rojo);color:#fff}
+.item{padding:9px 0;border-top:1px solid #edf1ef}
+.item:first-of-type{border-top:0}
+.q{margin:0 0 7px}
+.obs{display:inline-block;font-size:11px;font-weight:700;color:#0b4d70;background:#d9ecf7;border-radius:4px;padding:1px 6px;margin-left:4px;vertical-align:1px}
+.resp{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.resp button{font:inherit;font-weight:700;padding:10px;border-radius:8px;border:2px solid #c3cfca;background:#fff;color:var(--tinta);cursor:pointer}
+.resp button.on.si{background:var(--verde);border-color:var(--verde);color:#fff}
+.resp button.on.no{background:var(--amar);border-color:var(--amar);color:#2a2100}
+.resp.rojo button.on.si{background:var(--rojo);border-color:var(--rojo);color:#fff}
+.resp.rojo button.on.no{background:var(--verde);border-color:var(--verde);color:#fff}
+.resp.amar button.on.si{background:var(--amar);border-color:var(--amar);color:#2a2100}
+.resp.amar button.on.no{background:var(--verde);border-color:var(--verde);color:#fff}
+.resp.ant button.on.si{background:var(--amar);border-color:var(--amar);color:#2a2100}
+.resp.ant button.on.no{background:var(--rojo);border-color:var(--rojo);color:#fff}
+.ant{margin-top:10px;background:#fffaf0;border:1px dashed var(--amar);border-radius:8px;padding:10px}
+.ant p.t{margin:0 0 6px;font-size:14px;font-weight:600}
+.sec-title{margin:14px 0 6px;font:700 17px/1.2 Georgia,serif;color:var(--pino)}
+.semaforo{border-radius:10px;padding:14px;color:#fff;margin-bottom:10px}
+.semaforo.V{background:var(--verde)}.semaforo.A{background:var(--amar);color:#2a2100}.semaforo.R{background:var(--rojo)}
+.semaforo b{display:block;font:700 22px/1.15 Georgia,serif}
+.semaforo small{display:block;margin-top:4px;font-size:13px;opacity:.95}
+ul.mot{margin:6px 0 0 18px;padding:0;font-size:14px}
+.barra{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--linea);padding:8px 12px;display:flex;gap:10px;align-items:center;justify-content:space-between;z-index:5}
+.barra .estado{font-size:14px;font-weight:700}
+.barra .estado.V{color:var(--verde)}.barra .estado.A{color:#8a6700}.barra .estado.R{color:var(--rojo)}
+.aviso{font-size:12.5px;color:var(--suave);margin:8px 2px}
+[hidden]{display:none!important}
+@media print{
+  body{background:#fff;padding:0}.top a,.barra,.btn,.resp button:not(.on),#datos,.hint{display:none!important}
+  .card{break-inside:avoid;border:1px solid #999}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <a href="../../index.html">‹ Capacitación</a>
+  <h1>Prueba EDI</h1>
+  <p>Evaluación del Desarrollo Infantil · Manual Perú 2026 · NTS N.° 238-MINSA/DGIESP-2025</p>
+</header>
+
+<main>
+  <section class="card" id="datos">
+    <h2>Datos del niño</h2>
+    <label for="nombre">Nombre (opcional)</label>
+    <input id="nombre" autocomplete="off" placeholder="Solo para el resumen impreso">
+    <div class="row">
+      <div><label for="fnac">Fecha de nacimiento</label><input id="fnac" type="date"></div>
+      <div><label for="feva">Fecha de evaluación</label><input id="feva" type="date"></div>
+    </div>
+    <label for="sem">Semanas de gestación (si nació antes de las 37)</label>
+    <input id="sem" type="number" inputmode="numeric" min="22" max="42" placeholder="Déjelo vacío si nació a término">
+    <p class="hint">Si es menor de 2 años y nació antes de las 37 semanas, la prueba se aplica con la edad corregida.</p>
+    <div id="msg"></div>
+    <button class="btn" id="calc">Calcular edad y grupo</button>
+  </section>
+
+  <section class="card" id="edad" hidden></section>
+  <section id="aplic" hidden></section>
+  <section class="card" id="res" hidden></section>
+
+  <p class="aviso">La prueba EDI es una herramienta de tamizaje: el resultado no es un diagnóstico. Esta página reproduce los criterios del manual; ante cualquier duda siga el manual y la NTS vigentes. Los datos no se guardan ni se envían.</p>
+</main>
+
+<div class="barra" id="barra" hidden>
+  <span class="estado" id="estado"></span>
+  <button class="btn sec" id="arriba" style="width:auto;margin:0;padding:9px 14px">Ver resultado</button>
+</div>
+
+<script>
+"use strict";
+/* ===== Datos del manual (EDI, versión peruana 2026) ===== */
+const I=(t,o)=>({t,o:!!o});
+const AREAS=[["MG","Motriz gruesa"],["MF","Motriz fina"],["LE","Lenguaje"],["SO","Social"],["CO","Conocimiento"]];
+const EN3=[I("¿Presenta alteración en la movilidad de alguna parte del cuerpo?",1),I("¿Presenta alteración o asimetría en la movilidad de ojos o expresión facial?",1),I("¿Presenta perímetro cefálico por arriba o por debajo de 2 desviaciones estándar para su edad?",1)];
+const FRB=["Asistencia a dos o menos controles prenatales.","Presencia de sangrados, infecciones de vías urinarias o cervicovaginitis, presión alta o enfermedades sistémicas durante el embarazo.","Gestación menor a 34 semanas.","Peso de su niño al nacer de 1500 g o menos.","Retardo en la respiración o circular de cordón a cuello durante el parto o cesárea.","Hospitalización de su niño en la Unidad de Cuidados Intensivos Neonatales (UCIN) al nacimiento o antes del primer mes de vida con una duración mayor a 4 días.","Madre menor a 16 años al momento del parto."];
+const PERD=I("¿La madre, padre o cuidador primario reporta que el niño ha experimentado una pérdida importante y constante de las habilidades que en algún momento tuvo?");
+const NOM=["UNO","DOS","TRES","CUATRO","CINCO","SEIS","SIETE","OCHO","NUEVE","DIEZ","ONCE","DOCE","TRECE","CATORCE","QUINCE"];
+const RNG=[[1,1,"1 mes"],[2,2,"2 meses"],[3,3,"3 meses"],[4,4,"4 meses"],[5,6,"5 a 6 meses"],[7,9,"7 a 9 meses"],[10,12,"10 a 12 meses"],[13,15,"13 a 15 meses"],[16,18,"16 a 18 meses"],[19,24,"19 a 24 meses"],[25,30,"25 a 30 meses"],[31,36,"31 a 36 meses"],[37,48,"37 a 48 meses"],[49,59,"49 a 59 meses"],[60,71,"60 a 71 meses"]];
+const PAG=[54,58,62,66,70,74,78,82,86,90,94,98,102,106,110];
+const G=[
+{ /* 1 */
+ MG:[I("Cuando su bebé está acostado boca abajo, ¿puede voltear su cabeza para los dos lados?",1),I("Cuando desviste a su bebé, ¿patea y mueve los brazos?")],
+ MF:[I("¿Su bebé mantiene las manos cerradas la mayor parte del tiempo?"),I("Cuando le da en la mano una sonaja a su bebé, ¿la retiene durante al menos 3 segundos?",1)],
+ LE:[I("¿Su bebé se tranquiliza cuando escucha su voz?"),I("¿Hace algún ruido con la boca, llora cuando está incómodo o quiere comer?")],
+ SO:[I("Cuando llora, ¿se tranquiliza al hablarle o levantarlo?"),I("Cuando usted está frente a su bebé, ¿sigue con la mirada sus movimientos?",1)],
+ CO:[],ALA:[],EN:EN3,
+ ALE:[I("Al evaluar el tono muscular de su niño, ¿lo siente totalmente flácido o presenta rigidez en sus extremidades?",1),I("En la evaluación de los reflejos de Moro, prensión palmar y plantar, ¿falta alguno de estos 3 reflejos?",1),I("¿Su hijo tiene problemas para comer: se atraganta, se pone morado o presenta problemas para succionar?"),I("¿Considera que el desarrollo de su niño es inadecuado?")]},
+{ /* 2 */
+ MG:[I("Cuando acuesta a su bebé boca abajo, ¿levanta su cabeza durante al menos 3 segundos?",1),I("Cuando carga a su bebé, ¿logra sostener la cabeza sin que se le vaya bruscamente hacia atrás o hacia alguno de los lados?",1)],
+ MF:[I("¿Puede seguir con la vista el movimiento de objetos de colores vivos?",1),I("¿Se lleva la mano a la boca?",1)],
+ LE:[I("Cuando su bebé oye un ruido, ¿voltea hacia la fuente de sonido, estando ésta fuera de su campo visual?"),I("¿Hace sonidos como “a”, “e”, “u”?")],
+ SO:[I("¿Hace sonidos con la boca cuando le hablan?"),I("¿Reconoce los rostros que le son familiares y sonríe?")],
+ CO:[],
+ ALA:[I("Al evaluar el tono muscular de su niño, ¿lo siente totalmente flácido o presenta rigidez en sus extremidades?",1),I("¿El reflejo de Moro está ausente o es asimétrico?",1),I("¿Su hijo tiene problemas para comer: se atraganta, se pone morado o presenta problemas para succionar?")],
+ EN:EN3,
+ ALE:[I("¿Están las manos de su niño permanentemente empuñadas con el pulgar adentro?",1),I("¿Está el niño frecuentemente irritable y cuesta trabajo tranquilizarlo a pesar de haber satisfecho sus necesidades y de forma más notoria que otros niños de su edad?"),I("¿Frecuentemente se encuentra aletargado y no muestra interés por lo que sucede a su alrededor?, ¿cuesta trabajo mantenerlo despierto?"),I("¿Considera que algo no va del todo bien en el comportamiento, desarrollo o características de su bebé?")]},
+{ /* 3 */
+ MG:[I("Cuando su bebé está boca abajo y apoyado en sus antebrazos, ¿logra sostener la cabeza al menos 3 segundos?",1),I("Cuando su bebé se sienta, ¿ha observado si logra sostener la cabeza sin que se vaya bruscamente hacia adelante, atrás o hacia alguno de los lados?",1)],
+ MF:[I("¿Se ha fijado si su bebé observa sus manos durante al menos 3 segundos mientras las está moviendo?"),I("¿Tiene su bebé las manos abiertas la mayor parte del tiempo?",1)],
+ LE:[I("Cuando le hablan a su bebé, ¿hace sonidos con la boca o sonríe?"),I("Cuando balbucea, ¿pronuncia alguna consonante como “agu” o “ga”?")],
+ SO:[I("¿Sonríe su bebé con facilidad?"),I("Cuando usted le habla al bebé fuera de su campo visual, ¿voltea la cabeza y trata de ubicar el origen de su voz?",1)],
+ CO:[],
+ ALA:[I("Al evaluar el tono muscular del niño, ¿lo siente totalmente flácido o presenta rigidez en sus extremidades?",1),I("¿El reflejo de Moro está ausente o es asimétrico?",1)],
+ EN:EN3,
+ ALE:[I("Cuando lo sostiene por el tronco, ¿su cabeza cae bruscamente hacia adelante, atrás o a los lados?",1),I("¿Se le dificulta seguir con la vista a las personas y a los objetos brillantes?",1),I("¿Se mantiene serio o inexpresivo cuando la madre, padre o cuidador primario le sonríe?"),I("¿Considera que algo no va del todo bien en el comportamiento, desarrollo o características de su bebé?")]},
+{ /* 4 */
+ MG:[I("Cuando su bebé está sentado y lo sostiene suavemente de la espalda, ¿mantiene su cabeza, sin dejarla caer hacia ningún lado por lo menos 1 minuto?",1),I("Cuando su bebé está acostado boca arriba, ¿se voltea hacia los lados?",1)],
+ MF:[I("¿Extiende su bebé alguno de sus brazos para tratar de agarrar un objeto que está a su alcance?",1),I("¿Puede mantener en la mano un objeto al menos 10 segundos?",1)],
+ LE:[I("¿Balbucea o grita para llamar su atención?"),I("¿Emite sonidos como “le”, “be”, “pa”, “gu”?")],
+ SO:[I("Piensa usted que cuando su bebé ve su pecho o la leche, ¿sabe que en poco tiempo le va a dar de lactar?"),I("¿Le gusta jugar con otras personas y llora cuando dejan de jugar con él?")],
+ CO:[],
+ ALA:[I("¿El reflejo de Moro está ausente o es asimétrico?",1),I("Cuando lo sostiene del tronco, ¿su cabeza cae bruscamente hacia adelante, atrás o a los lados?",1)],
+ EN:EN3,
+ ALE:[I("¿Hay asimetría en los movimientos de las manos?",1),I("¿Muestra indiferencia por los objetos?",1),I("¿Persiste el reflejo de Galant o de incurvación?",1),I("¿Considera que algo no va del todo bien en el comportamiento, desarrollo o características de su bebé?",1)]},
+{ /* 5 */
+ MG:[I("Cuando usted toma a su bebé de los brazos para sentarlo, ¿él le ayuda jalándose y elevando la cabeza?",1),I("Cuando usted para a su bebé sobre una superficie plana, ¿aguanta su peso sobre las piernas?",1)],
+ MF:[I("Cuando su bebé agarra algún objeto, ¿se lo pasa de una mano a otra?",1),I("Cuando sienta a su bebé encima de usted, ¿intenta insistentemente agarrar un objeto cercano a él, aunque no pueda alcanzarlo?",1)],
+ LE:[I("Si llama a su bebé cuando él no lo puede ver, ¿mueve la cabeza hacia su voz?",1),I("Si usted imita los sonidos que su bebé emite, ¿vuelve él a repetirlos?")],
+ SO:[I("¿Se pone intranquilo cuando una persona desconocida trata de cargarlo?"),I("Cuando usted se tapa la cabeza con una tela, ¿se ríe cuando usted se destapa?",1)],
+ CO:[],
+ ALA:[I("¿Hay asimetría en los movimientos de las manos?",1),I("¿Persiste el reflejo de Galant o de encurvación?",1)],
+ EN:EN3},
+{ /* 6 */
+ MG:[I("Al sentar a su bebé en el suelo, ¿permanece sentado aunque sea apoyándose en sus manos?",1),I("Cuando su bebé quiere ir de un lado a otro y se encuentra boca arriba, ¿se voltea para quedar boca abajo y arrastrarse sobre su abdomen?",1)],
+ MF:[I("Cuando quiere agarrar las cosas, ¿utiliza sus dedos como si fueran un rastrillo?",1),I("¿Le gusta golpear objetos contra la mesa o el suelo?")],
+ LE:[I("¿Puede hacer dos sonidos iguales como “ba-ba”, “da-da”, “ta-ta”?"),I("¿Hace gestos para decir lo que quiere?")],
+ SO:[I("Cuando está con otras personas conocidas, ¿reacciona ante sus expresiones y parece contento?"),I("Cuando le da de beber líquidos, ¿lo ayuda a sostener el vaso o la taza?")],
+ CO:[],
+ ALA:[I("¿Persiste el reflejo de Moro?",1),I("¿Se encuentra ausente el reflejo de paracaídas?",1)],
+ EN:EN3},
+{ /* 7 */
+ MG:[I("Cuando su bebé se desplaza de un lado a otro, ¿utiliza sus manos y rodillas?",1),I("¿Puede su bebé caminar agarrado de los muebles?",1)],
+ MF:[I("¿Puede sujetar un objeto pequeño con los dedos y mantenerlo en el centro de la mano?",1),I("¿Sabe aplaudir?")],
+ LE:[I("Cuando su bebé está jugando en una actividad que lo tiene entretenido y usted le dice “no, no”, ¿deja de hacerla?",1),I("¿Dice papá o mamá?")],
+ SO:[I("¿Empieza a comer por sí solo con los dedos?"),I("Cuando lo viste, ¿le ayuda terminando de meter el brazo por la manga?")],
+ CO:[],
+ ALA:[I("¿Necesita apoyarse en sus manos para permanecer sentado?",1),I("¿Se le dificulta comunicarse, ya sea balbuceando o con gestos? Por ejemplo: señalar lo que desea, mover la mano para saludar, hacer señas, jalar para llamar la atención.")],
+ EN:EN3},
+{ /* 8 */
+ MG:[I("¿Camina solo?",1),I("Cuando su niño está sentado, ¿puede pararse solo?",1),I("¿Puede su niño agacharse para agarrar un objeto del suelo y volver a ponerse de pie sin apoyarse en algo?",1)],
+ MF:[I("¿Le gusta tirar o aventar juguetes u otros objetos al suelo?"),I("¿Le gusta sacar y meter cosas de las bolsas, cajas o recipientes?",1),I("Sin apoyar la mano o el brazo en la mesa, ¿puede tomar una bolita de papel utilizando las yemas de los dedos?",1)],
+ LE:[I("¿Puede señalar su zapato o alguna parte del cuerpo?",1),I("¿Puede decir otra palabra además de papá y mamá?"),I("Cuando quiere algo, ¿se lo comunica con gestos y sonidos?")],
+ SO:[I("¿Come solo, sin que alguien le ayude?"),I("¿Le gusta abrazar o besar a sus papás?"),I("¿Obedece órdenes sencillas como: “ven”, “dámelo”, “trae tu pelota”, etc.?",1)],
+ CO:[],
+ ALA:[I("¿Se le dificulta desplazarse solo o gatear?",1)],
+ EN:EN3},
+{ /* 9 */
+ MG:[I("¿Puede su niño sentarse solo en una silla pequeña?"),I("¿Puede su niño patear una pelota?",1),I("¿Corre aunque sea de forma torpe?",1)],
+ MF:[I("¿Sabe colocar cubos uno encima del otro?",1),I("¿Puede meter bolitas de papel en un frasco de plástico que tenga la boca chica?",1),I("Si usted le da un pedazo de papel y un lápiz o crayola, ¿utiliza la punta para tratar de dibujar?",1)],
+ LE:[I("¿Sabe decir cuatro palabras además de “mamá” y “papá”?"),I("¿Puede señalar 2 o 3 partes de su cuerpo?",1),I("¿Sabe el nombre de algunos objetos?",1)],
+ SO:[I("¿Utiliza la cuchara para comer?"),I("Cuando va a desvestir a su niño, ¿le ayuda quitándose parte de su ropa, como los zapatos o sandalias?"),I("A su hijo, ¿le gusta imitarlo en tareas de la casa como barrer o sacudir?")],
+ CO:[],
+ ALA:[I("¿Se comunica únicamente con balbuceo, gritos o ruidos aislados?"),I("Para desplazarse, ¿solamente gatea o se arrastra?",1),I("¿Muestra conductas repetitivas o estereotipadas, por ejemplo: balancearse sin parar en su silla o golpearse la cabeza con las manos?"),PERD],
+ EN:EN3},
+{ /* 10 */
+ MG:[I("¿Puede su niño subirse solo a los muebles?"),I("¿Corre su niño sin caerse?",1),I("¿Patea la pelota sin perder el equilibrio?",1)],
+ MF:[I("¿Intenta abrir un frasco de plástico girando la tapa rosca con la mano?",1),I("¿Puede desenvolver un juguete que esté envuelto en papel celofán?",1),I("¿Puede comer ayudándose de una cuchara sin tirar la comida?")],
+ LE:[I("¿Dice frases de dos palabras?"),I("¿Sabe decir ocho o más palabras además de “mamá” y “papá”?"),I("¿Obedece órdenes sencillas?",1)],
+ SO:[I("¿Trata de hacer las cosas solo y se molesta cuando no lo dejan?"),I("¿Avisa cuando ha ensuciado el pañal?"),I("¿Le pide ayuda cuando quiere algo que no alcanza?")],
+ CO:[],
+ ALA:[I("Cuando camina, ¿presenta una forma inmadura de hacerlo, primero apoya los dedos y luego el talón o después de varios meses sólo apoya las puntas de los pies?",1),PERD],
+ EN:EN3},
+{ /* 11 */
+ MG:[I("Cuando su niño salta, ¿levanta los dos pies del suelo a la vez?",1),I("¿Puede subir o bajar al menos dos escalones con ayuda?"),I("¿Puede su niño pararse sobre un solo pie?",1)],
+ MF:[I("¿Abre un frasco de plástico solo?",1),I("¿Lanza una pelota con la mano?",1),I("¿Hace hileras con 4 cubos?",1)],
+ LE:[I("¿Sabe decir su nombre?",1),I("¿Utiliza palabras como “yo”, “mío”, “él”, “ella”, “tú”?"),I("¿Usa oraciones de 3 palabras, por ejemplo: “quiero mi pelota”, “dame mi leche”?")],
+ SO:[I("¿Le ayuda a guardar las cosas de la casa en su lugar?"),I("¿Juega a simular cosas que vio?"),I("¿Se lava solo las manos y la cara?")],
+ CO:[],
+ ALA:[I("¿Muestra indiferencia excesiva al entorno?"),PERD],
+ EN:EN3},
+{ /* 12 */
+ MG:[I("¿Puede su niño agacharse fácilmente hacia adelante sin caerse?",1),I("¿Puede su niño caminar sobre la punta de sus pies?",1),I("¿Puede caminar hacia atrás?",1)],
+ MF:[I("¿Puede abotonar un botón de una prenda de vestir?"),I("¿Puede levantar una bola pequeña de papel del suelo tomándola con los dedos índice y pulgar?",1),I("¿Imita trazos verticales y horizontales?",1)],
+ LE:[I("¿Sabe decir su edad?",1),I("Cuando está con personas que no conoce, ¿éstas entienden la mayoría de las palabras que dice?"),I("Cuando habla, ¿utiliza el plural de las palabras: “perros”, “juguetes”, “niños”, etc.?",1)],
+ SO:[I("¿Juega con otros niños?"),I("¿Entiende la diferencia entre “mío” y “tuyo”?"),I("¿Se separa fácilmente de sus padres?")],
+ CO:[],
+ ALA:[I("¿Babea constantemente o habla de manera poco entendible?"),I("¿Se comunica con palabras aisladas, es decir, no forma oraciones como “mamá quiero leche”, y sólo dice “leche”?"),I("¿Se cae frecuentemente y le cuesta trabajo subir o bajar escaleras?"),PERD],
+ EN:EN3},
+{ /* 13 */
+ MG:[I("¿Salta su niño en un solo pie, en el mismo lugar, por lo menos 3 veces sin sujetarse?",1),I("Cuando le avientan a su niño una pelota grande, ¿puede atraparla?",1),I("¿Sube y baja las escaleras sin apoyarse de la pared o de la baranda?",1)],
+ MF:[I("¿Puede meter un pasador o cordón por los agujeros de una cuenta o de un zapato?",1),I("¿Puede dibujar una persona con 2 o más partes del cuerpo: ojos, nariz, boca, pelo, tronco, brazos, piernas, etc.?",1),I("¿Puede dibujar un círculo o una cruz?",1)],
+ LE:[I("¿Le dice lo que quiere con palabras?"),I("¿Puede contarle algo de lo que hizo ayer?",1),I("Frecuentemente pregunta “¿por qué?”",1)],
+ SO:[I("¿Puede vestirse y desvestirse solo?"),I("¿Puede ir al baño solo?"),I("¿Juega con otros niños al papá, a la mamá, al doctor, policías y ladrones o a algún otro personaje?")],
+ CO:[I("¿Conoce el nombre de cuatro colores?",1),I("¿Puede decir los nombres de dos o más números?"),I("¿Puede contarle una parte del cuento que le hayan contado o leído previamente?")],
+ ALA:[I("¿Se le dificulta copiar un círculo en una hoja de papel?",1),I("¿Solamente dice frases de 2 palabras?"),PERD],
+ EN:EN3},
+{ /* 14 */
+ MG:[I("¿Sabe su niño darse volantines?"),I("¿Puede su niño saltar hacia adelante cayendo con los pies juntos?",1),I("¿Puede su niño saltar con un sólo pie hacia adelante tres veces cayendo con el mismo pie?",1)],
+ MF:[I("¿Puede dibujar un cuadrado?",1),I("¿Sabe escribir 2 o más letras?",1),I("¿Puede dibujar una persona con 4 o más partes del cuerpo: ojos, nariz, boca, pelo, tronco, brazos, piernas, etc.?",1)],
+ LE:[I("¿Sabe usar el tiempo futuro?",1),I("¿Puede contar cuentos?",1),I("Cuando algo le gusta mucho, ¿dice: “dame más”?")],
+ SO:[I("¿Puede decir el nombre de dos de sus amigos?"),I("¿Le gusta jugar al papá o a la mamá o actuar como otra persona de la familia?"),I("¿Se puede bañar solo?")],
+ CO:[I("¿Puede decir el nombre correcto de cuatro colores y los puede reconocer?",1),I("¿Puede contar correctamente hasta diez?",1),I("Cuando habla, ¿utiliza las palabras “ayer”, “hoy” y “mañana”?")],
+ ALA:[I("Cuando está con otros niños, ¿los ignora y prefiere jugar solo?"),PERD],
+ EN:EN3},
+{ /* 15 */
+ MG:[I("¿Puede su niño saltar con un solo pie hacia adelante siete veces cayendo con el mismo pie?",1),I("¿Puede saltar hacia atrás con los pies juntos?",1),I("¿Camina siguiendo una línea recta, juntando el talón de un pie con la punta del otro pie, por lo menos 5 pasos?",1)],
+ MF:[I("¿Puede dibujar un triángulo copiándolo?",1),I("¿Puede tocar la punta de su dedo pulgar con la punta de cada dedo de la misma mano consecutivamente?",1),I("¿Puede cortar el papel con tijeras de punta redonda siguiendo una línea recta, teniendo 1 cm de margen de error?",1)],
+ LE:[I("¿Habla con suficiente claridad para que otros lo entiendan?",1),I("¿Comunica sus emociones diciendo palabras como: “feliz”, “triste”, “molesto”? (si recibes regalos, ¿cómo te sientes?)",1),I("¿Puede seguir órdenes verbales de tres pasos, por ejemplo: “aplaude, dame el lápiz y ponte de pie”?",1)],
+ SO:[I("¿La mayoría de las veces comparte fácilmente sus cosas con otros niños?"),I("¿Le gusta ir a la escuela?"),I("¿Espera su turno con facilidad cuando interactúa con sus compañeros, maestros o cuidadores primarios?")],
+ CO:[I("Cuando le piden que escriba 2 números o 2 letras, ¿lo hace?",1),I("¿Puede completar oraciones con la palabra que significa lo opuesto? Por ejemplo: “el conejo es rápido, la tortuga es…”",1),I("¿Identifica el valor de dos o más monedas o billetes?",1)],
+ ALA:[I("¿Presenta dolores de cabeza persistentes, visión borrosa o mareo?"),I("¿Presenta dificultad para cepillarse los dientes, lavarse y secarse las manos o desvestirse sin ayuda?"),I("¿Durante más de tres días a la semana el niño presenta miedo, agresión, timidez o tristeza en mayor intensidad que los niños de su edad?")],
+ EN:[EN3[0],EN3[1]]}
+];
+/* Ítems de Conocimiento (31-36 meses) que el manual lista solo como "grupo anterior" del grupo 13 */
+const CO_ANT_13=[I("¿Sabe decir si es niño o niña?",1),I("¿Dice frases como “tengo sueño”, “me quiero ir a dormir”?"),I("¿Hace preguntas como: “¿quién?”, “¿cuándo?”, “¿dónde?”, “¿por qué?”?")];
+
+/* ===== Utilidades ===== */
+const $=id=>document.getElementById(id);
+const COL={MG:"var(--MG)",MF:"var(--MF)",LE:"var(--LE)",SO:"var(--SO)",CO:"var(--CO)"};
+const ans={}; let g=0, edadTxt="", datosTxt="";
+
+function parse(s){const p=s.split("-").map(Number);return {y:p[0],m:p[1],d:p[2]}}
+function plural(n,u,us){return n+" "+(n===1?u:us)}
+function fmt(a){const t=[];if(a.y)t.push(plural(a.y,"año","años"));t.push(plural(a.m,"mes","meses"));t.push(plural(a.d,"día","días"));return t.join(", ").replace(/, ([^,]*)$/," y $1")}
+function edadCron(n,e){let y=e.y-n.y,m=e.m-n.m,d=e.d-n.d;if(d<0){d+=30;m-=1}if(m<0){m+=12;y-=1}return {y,m,d}}
+function aDias(a){return (a.y*12+a.m)*30+a.d}
+function deDias(t){const mm=Math.floor(t/30);return {y:Math.floor(mm/12),m:mm%12,d:t%30}}
+function grupoDe(meses){for(let i=0;i<RNG.length;i++){if(meses>=RNG[i][0]&&meses<=RNG[i][1])return i}return -1}
+
+/* ===== Paso 1: edad y grupo ===== */
+$("feva").value=new Date(Date.now()-new Date().getTimezoneOffset()*60000).toISOString().slice(0,10);
+$("calc").onclick=()=>{
+  const msg=$("msg");msg.innerHTML="";
+  const fn=$("fnac").value,fe=$("feva").value;
+  if(!fn||!fe){return err("Ingrese la fecha de nacimiento y la fecha de evaluación.")}
+  if(fe<fn){return err("La fecha de evaluación no puede ser anterior al nacimiento.")}
+  const cron=edadCron(parse(fn),parse(fe));
+  const mesesCron=cron.y*12+cron.m;
+  const sem=parseInt($("sem").value,10);
+  let corr=null;
+  if(!isNaN(sem)){
+    if(sem<22||sem>42)return err("Revise las semanas de gestación (entre 22 y 42).");
+    if(sem<37&&mesesCron<24){
+      const t=aDias(cron)-(40-sem)*7;
+      corr=deDias(Math.max(t,0));
+      corr.neg=t<0;
+    }
+  }
+  const usada=corr||cron, meses=usada.y*12+usada.m;
+  let h='<h2>Edad y grupo de aplicación</h2><div class="edades"><div class="edad"><b>Edad cronológica</b><span>'+fmt(cron)+'</span></div>';
+  h+=corr?'<div class="edad"><b>Edad corregida ('+sem+' semanas)</b><span>'+fmt(corr)+'</span></div>':'<div class="edad"><b>Edad corregida</b><span>No corresponde</span></div>';
+  h+='</div>';
+  if(corr){h+='<p class="nota">Se restaron '+((40-sem)*7)+' días ('+(40-sem)+' semanas) a la edad cronológica: se aplica la prueba del grupo que corresponde a la edad corregida.</p>'}
+  else if(!isNaN(sem)&&sem<37){h+='<p class="nota">Tiene 2 años o más: no se corrige la edad.</p>'}
+  const gi=grupoDe(meses);
+  $("edad").hidden=false;$("aplic").hidden=true;$("res").hidden=true;$("barra").hidden=true;
+  if(gi<0){
+    h+='<div class="err">'+(meses<1?'El niño tiene menos de 1 mes: la prueba EDI se aplica desde el mes de edad.':'El niño tiene 72 meses o más: la prueba EDI cubre hasta los 5 años, 11 meses y 29 días.')+'</div>';
+    $("edad").innerHTML=h;return;
+  }
+  g=gi;
+  const obligatoria=[1,6,9,18,30,42,60].includes(meses);
+  h+='<div class="grupo">Aplicar el grupo <b>'+NOM[g]+'</b> · '+RNG[g][2]+' <span style="opacity:.8">(manual, pág. '+PAG[g]+')</span></div>';
+  h+='<p class="nota">'+(obligatoria?'Esta edad ('+meses+(meses===1?' mes':' meses')+') es una de las mínimas indispensables para aplicar la prueba (1, 6, 9, 18, 30, 42 y 60 meses).':'Las edades mínimas indispensables son 1, 6, 9, 18, 30, 42 y 60 meses; además, aplique la prueba ante cualquier hallazgo o indicador de riesgo.')+'</p>';
+  $("edad").innerHTML=h;
+  edadTxt="Edad cronológica: "+fmt(cron)+(corr?" · Edad corregida ("+sem+" sem): "+fmt(corr):"")+" · Grupo "+NOM[g]+" ("+RNG[g][2]+")";
+  datosTxt=($("nombre").value.trim()||"Sin nombre")+" · Nac. "+fn+" · Eval. "+fe;
+  for(const k in ans)delete ans[k];
+  render();
+};
+function err(t){$("msg").innerHTML='<div class="err">'+t+'</div>'}
+
+/* ===== Paso 2: aplicación del grupo ===== */
+function itemHtml(k,it,tipo){
+  return '<div class="item"><p class="q">'+it.t+(it.o?' <span class="obs">Observe al niño</span>':'')+'</p>'+
+  '<div class="resp '+tipo+'" data-k="'+k+'"><button type="button" class="no" data-v="no">No</button><button type="button" class="si" data-v="si">Sí</button></div></div>';
+}
+function antItems(a){
+  if(g===12&&a==="CO")return CO_ANT_13;
+  return G[g-1][a];
+}
+function render(){
+  const D=G[g];let h='';
+  h+='<p class="sec-title">Áreas del desarrollo</p><p class="nota" style="margin-top:-2px">Responda cada ítem: <b>Sí</b> si lo hace o lo tiene (siempre o la mayor parte de las veces); <b>No</b> si no lo hace o lo hace muy rara vez. Los ítems marcados requieren observar directamente al niño.</p>';
+  AREAS.forEach(([a,nm])=>{
+    if(a==="CO"&&!D.CO.length){h+='<div class="card area" style="--c:'+COL.CO+'"><header><h3>Conocimiento</h3></header><p class="nota" style="margin:0">No aplica para este grupo de edad.</p></div>';return}
+    h+='<div class="card area" style="--c:'+COL[a]+'"><header><h3>'+nm+'</h3><span class="chip" id="chip-'+a+'">Pendiente</span></header>';
+    D[a].forEach((it,i)=>{h+=itemHtml(a+i,it,"")});
+    if(g>0){
+      h+='<div class="ant" id="ant-'+a+'" hidden><p class="t">Sin ítems logrados: aplique las preguntas del grupo anterior ('+RNG[g-1][2]+'). Sí = lo hace. Con 2 o más “Sí” el área queda en amarillo; con 1 o ninguno, en rojo.</p>';
+      antItems(a).forEach((it,i)=>{h+=itemHtml("p"+a+i,it,"ant")});
+      h+='</div>';
+    }
+    h+='</div>';
+  });
+  if(D.ALA.length||g===0){
+    h+='<div class="card"><h2>Señales de alarma</h2>';
+    if(!D.ALA.length)h+='<p class="nota" style="margin:0">En este grupo no existen señales de alarma.</p>';
+    D.ALA.forEach((it,i)=>{h+=itemHtml("ala"+i,it,"rojo")});
+    h+='<p class="hint">Sí = presente (rojo).</p></div>';
+  }
+  h+='<div class="card"><h2>Exploración neurológica</h2>';
+  D.EN.forEach((it,i)=>{h+=itemHtml("en"+i,it,"rojo")});
+  h+='<p class="hint">Sí = hay alteración (rojo).</p></div>';
+  if(D.ALE){
+    h+='<div class="card"><h2>Factores de riesgo biológico</h2><p class="nota" style="margin-top:-4px">En este grupo de edad es obligatorio aplicarlos. Sí = presente (amarillo).</p>';
+    FRB.forEach((t,i)=>{h+=itemHtml("frb"+i,{t,o:0},"amar")});
+    h+='</div><div class="card"><h2>Señales de alerta</h2><p class="nota" style="margin-top:-4px">Obligatorias en este grupo. Sí = presente (amarillo).</p>';
+    D.ALE.forEach((it,i)=>{h+=itemHtml("ale"+i,it,"amar")});
+    h+='</div>';
+  }else{
+    h+='<p class="aviso">En este grupo de edad los factores de riesgo biológico y las señales de alerta son opcionales y no modifican la calificación global (manual, pág. '+(PAG[g]+1)+'). Regístrelos en el formato del manual si los aplica.</p>';
+  }
+  $("aplic").innerHTML=h;$("aplic").hidden=false;$("res").hidden=true;$("barra").hidden=false;
+  update();
+}
+
+document.addEventListener("click",e=>{
+  const b=e.target.closest(".resp button");if(!b)return;
+  const k=b.parentNode.dataset.k;ans[k]=b.dataset.v;
+  [...b.parentNode.children].forEach(x=>x.classList.toggle("on",x===b));
+  update();
+});
+
+/* ===== Calificación ===== */
+function areaEstado(a){
+  const D=G[g][a];if(!D.length)return {s:"na"};
+  const r=D.map((_,i)=>ans[a+i]);
+  if(r.includes(undefined))return {s:"pend",need:r.filter(x=>x===undefined).length};
+  const v=r.filter(x=>x==="si").length;
+  if(v>=2)return {s:"V"};
+  if(g===0)return {s:"R"};
+  if(v===1)return {s:"A"};
+  const P=antItems(a),pr=P.map((_,i)=>ans["p"+a+i]);
+  if(pr.includes(undefined))return {s:"pend",ant:true,need:pr.filter(x=>x===undefined).length};
+  return {s:pr.filter(x=>x==="si").length>=2?"A":"R"};
+}
+function cuenta(pref,n,val){let c=0,p=0;for(let i=0;i<n;i++){const x=ans[pref+i];if(x===undefined)p++;else if(x===val)c++}return {c,p}}
+const NAME_ES={V:"Verde",A:"Amarillo",R:"Rojo"};
+function calcular(){
+  const D=G[g];let pend=0;const rojo=[],amar=[];
+  const nA={V:0,A:0,R:0};
+  const rs={};
+  AREAS.forEach(([a,nm])=>{
+    const st=areaEstado(a);rs[a]=st;
+    const chip=$("chip-"+a),ant=$("ant-"+a);
+    if(st.s==="na")return;
+    if(ant)ant.hidden=!(st.ant||(st.s!=="pend"&&G[g][a].every((_,i)=>ans[a+i]!==undefined)&&G[g][a].filter((_,i)=>ans[a+i]==="si").length===0&&g>0));
+    if(st.s==="pend"){pend+=st.need;chip.textContent="Pendiente";chip.className="chip"}
+    else{nA[st.s]++;chip.textContent=NAME_ES[st.s];chip.className="chip "+st.s;
+      if(st.s==="R")rojo.push("Área "+nm.toLowerCase()+" en rojo");if(st.s==="A")amar.push("Área "+nm.toLowerCase()+" en amarillo")}
+  });
+  const ala=cuenta("ala",D.ALA.length,"si"),en=cuenta("en",D.EN.length,"si");
+  pend+=ala.p+en.p;
+  let frb={c:0,p:0},ale={c:0,p:0};
+  if(D.ALE){frb=cuenta("frb",FRB.length,"si");ale=cuenta("ale",D.ALE.length,"si");pend+=frb.p+ale.p}
+  let nivel="V";
+  const subir=n=>{if(n==="R")nivel="R";else if(n==="A"&&nivel!=="R")nivel="A"};
+  if(g===0){
+    if(nA.R>=1)subir("R");
+    if(en.c>=1){subir("R");rojo.push("Exploración neurológica alterada")}
+    if(ale.c>=2){subir("A");amar.push("Dos o más señales de alerta en amarillo")}
+    if(frb.c>=2){subir("A");amar.push("Dos o más factores de riesgo biológico en amarillo")}
+    if(ale.c>=1&&frb.c>=1){subir("A");amar.push("Señal de alerta y factor de riesgo biológico en amarillo")}
+  }else if(g<=3){
+    if(nA.R>=1)subir("R");
+    if(nA.A>=2){subir("R");rojo.push("Dos o más áreas en amarillo")}
+    if(nA.A===1&&(frb.c>=1||ale.c>=1)){subir("R");rojo.push("Un área en amarillo más factor de riesgo biológico o señal de alerta en amarillo")}
+    if(ala.c>=1){subir("R");rojo.push("Señal de alarma presente")}
+    if(en.c>=1){subir("R");rojo.push("Exploración neurológica alterada")}
+    if(nA.A===1)subir("A");
+    if(ale.c>=2){subir("A");amar.push("Dos o más señales de alerta en amarillo")}
+    if(frb.c>=2){subir("A");amar.push("Dos o más factores de riesgo biológico en amarillo")}
+    if(ale.c>=1&&frb.c>=1){subir("A");amar.push("Señal de alerta y factor de riesgo biológico en amarillo")}
+  }else{
+    if(nA.R>=1)subir("R");
+    if(ala.c>=1){subir("R");rojo.push("Señal de alarma presente")}
+    if(en.c>=1){subir("R");rojo.push("Exploración neurológica alterada")}
+    if(nA.A>=1)subir("A");
+  }
+  return {pend,nivel,rojo,amar};
+}
+const TXT={V:"Desarrollo normal",A:"Rezago en el desarrollo",R:"Riesgo de retraso en el desarrollo"};
+function update(){
+  const r=calcular();
+  const est=$("estado"),res=$("res");
+  if(r.pend>0){est.textContent="Faltan "+r.pend+" respuestas";est.className="estado";res.hidden=true;return}
+  est.textContent=TXT[r.nivel];est.className="estado "+r.nivel;
+  const mot=r.nivel==="R"?r.rojo:r.nivel==="A"?r.amar:[];
+  let h='<h2>Resultado</h2><div class="semaforo '+r.nivel+'"><b>'+TXT[r.nivel]+'</b><small>'+edadTxt+'</small></div>';
+  if(mot.length)h+='<p style="margin:0"><b>Motivo:</b></p><ul class="mot">'+[...new Set(mot)].map(x=>'<li>'+x+'</li>').join("")+'</ul>';
+  else h+='<p style="margin:0">Todas las áreas, la exploración neurológica y las señales evaluadas están en verde (criterios del manual para este grupo).</p>';
+  h+='<button class="btn" id="copiar" type="button">Copiar resumen</button><button class="btn sec" id="imprimir" type="button">Imprimir o guardar PDF</button>';
+  res.innerHTML=h;res.hidden=false;
+  res.dataset.resumen=resumen(r);
+}
+function resumen(r){
+  const D=G[g];const L=["PRUEBA EDI · Grupo "+NOM[g]+" ("+RNG[g][2]+")",datosTxt,edadTxt,""];
+  AREAS.forEach(([a,nm])=>{const st=areaEstado(a);if(st.s!=="na")L.push(nm+": "+NAME_ES[st.s])});
+  if(D.ALA.length)L.push("Señales de alarma presentes: "+cuenta("ala",D.ALA.length,"si").c);
+  L.push("Exploración neurológica alterada: "+cuenta("en",D.EN.length,"si").c);
+  if(D.ALE){L.push("Factores de riesgo biológico presentes: "+cuenta("frb",FRB.length,"si").c);L.push("Señales de alerta presentes: "+cuenta("ale",D.ALE.length,"si").c)}
+  L.push("","RESULTADO: "+TXT[r.nivel],"Tamizaje, no es un diagnóstico. Manual EDI Perú 2026.");
+  return L.join("\n");
+}
+document.addEventListener("click",e=>{
+  if(e.target.id==="imprimir")window.print();
+  if(e.target.id==="copiar"){
+    const t=$("res").dataset.resumen||"";
+    (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>{e.target.textContent="Resumen copiado"}).catch(()=>{
+      const ta=document.createElement("textarea");ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand("copy");e.target.textContent="Resumen copiado"}catch(_){e.target.textContent="No se pudo copiar"}ta.remove()});
+  }
+});
+$("arriba").onclick=()=>{const r=$("res");if(!r.hidden)r.scrollIntoView({behavior:"smooth"});else window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"})};
+</script>
+</body>
+</html>
