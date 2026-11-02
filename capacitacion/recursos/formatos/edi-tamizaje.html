@@ -99,6 +99,7 @@ details.mas summary{font-weight:700;color:var(--pino);cursor:pointer}
 <body>
 <header class="top">
   <a href="../../index.html">‹ Capacitación</a>
+  <a href="edi-instructivo.html" style="margin-left:14px">Instructivo de uso</a>
   <h1>Prueba EDI</h1>
   <p>Evaluación del Desarrollo Infantil · Manual Perú 2026 · NTS N.° 238-MINSA/DGIESP-2025</p>
 </header>
@@ -135,7 +136,7 @@ details.mas summary{font-weight:700;color:var(--pino);cursor:pointer}
   <section id="aplic" hidden></section>
   <section class="card" id="res" hidden></section>
 
-  <p class="aviso">La prueba EDI es una herramienta de tamizaje: el resultado no es un diagnóstico. Esta página reproduce los criterios del manual; ante cualquier duda siga el manual y la NTS vigentes. Los datos no se guardan ni se envían.</p>
+  <p class="aviso">La prueba EDI es una herramienta de tamizaje: el resultado no es un diagnóstico. Esta página reproduce los criterios del manual; ante cualquier duda siga el manual y la NTS vigentes. Los datos no se envían a ningún servidor: solo se guardan en este dispositivo si usted toca «Guardar en mi registro».</p>
 </main>
 
 <section id="formato" class="solo-imprimir"></section>
@@ -145,6 +146,7 @@ details.mas summary{font-weight:700;color:var(--pino);cursor:pointer}
   <button class="btn sec" id="arriba" style="width:auto;margin:0;padding:9px 14px">Ver resultado</button>
 </div>
 
+<script src="../../../core/sip-registro.js?v=20261107-registro"></script>
 <script>
 "use strict";
 /* ===== Datos del manual (EDI, versión peruana 2026) ===== */
@@ -467,7 +469,7 @@ function update(){
   let h='<h2>Resultado</h2><div class="semaforo '+r.nivel+'"><b>'+TXT[r.nivel]+'</b><small>'+edadTxt+'</small></div>';
   if(mot.length)h+='<p style="margin:0"><b>Motivo:</b></p><ul class="mot">'+[...new Set(mot)].map(x=>'<li>'+x+'</li>').join("")+'</ul>';
   else h+='<p style="margin:0">Todas las áreas, la exploración neurológica y las señales evaluadas están en verde (criterios del manual para este grupo).</p>';
-  h+='<button class="btn" id="copiar" type="button">Copiar resumen</button><button class="btn sec" id="imprimir" type="button">Imprimir en formato oficial</button>';
+  h+='<button class="btn" id="guardar" type="button">Guardar en mi registro</button><button class="btn sec" id="imprimir" type="button">Imprimir en formato oficial</button><button class="btn sec" id="copiar" type="button">Copiar resumen</button><a class="btn sec" href="mi-registro.html" style="display:block;text-align:center;text-decoration:none">Ver mi registro y exportar a Excel</a>';
   res.innerHTML=h;res.hidden=false;
   res.dataset.resumen=resumen(r);
 }
@@ -531,8 +533,33 @@ function armarFormato(){
   h+='<p class="pie">Instrumento de tamizaje, no es un diagnóstico. Calificación según el Manual para la aplicación de la prueba EDI (Perú, 2026; NTS N.° 238-MINSA/DGIESP-2025). Generado con SIP · SERUM-APP.</p>';
   $("formato").innerHTML=h;
 }
+
+/* ===== Guardar en Mi registro (solo en este dispositivo) ===== */
+function guardarRegistro(){
+  if(!ctx)return "Calcule primero la edad";
+  if(!window.SIP_REGISTRO)return "No se encontró core/sip-registro.js";
+  const sel=parseInt($("apl").value,10)||0,D=G[g],r=calcular();
+  const NC=["Inicial","Subsecuente 1","Subsecuente 2","Subsecuente 3","Subsecuente 4","Subsecuente 5"];
+  const est=a=>{const st=areaEstado(a);return st.s==="na"?"":st.s};
+  const nom=$("nombre").value.trim();
+  const rec={
+    id:"EDI|"+nom.toLowerCase()+"|"+ctx.sf+"|"+ctx.se+"|"+sel,
+    tipo:"EDI",fecha:ctx.se.split("/").reverse().join("-"),
+    titulo:"EDI · Grupo "+NOM[g]+" ("+RNG[g][2]+")",resultado:r.nivel,
+    paciente:{nombre:nom,fnac:ctx.sf,cuidador:$("cuid").value.trim(),tel:$("tel").value.trim(),seguro:$("seguro").value.trim()},
+    ipress:$("ipress").value.trim(),micro:$("micro").value.trim(),indigena:$("indi").value,aplica:$("aplica").value.trim(),
+    datos:{aplicacion:NC[sel],edad:fmt(ctx.cron),edadCorr:ctx.corr?fmt(ctx.corr):"",semanas:ctx.sem,grupo:NOM[g],rango:RNG[g][2],
+      MG:est("MG"),MF:est("MF"),LE:est("LE"),SO:est("SO"),CO:est("CO"),
+      ala:cuenta("ala",D.ALA.length,"si").c,en:cuenta("en",D.EN.length,"si").c,
+      frb:D.ALE?cuenta("frb",FRB.length,"si").c:"",ale:D.ALE?cuenta("ale",D.ALE.length,"si").c:""},
+    resumen:resumen(r)
+  };
+  const x=window.SIP_REGISTRO.guardar(rec);
+  return (x.actualizado?"Actualizado en su registro":"Guardado en su registro")+" ("+x.total+" en total)";
+}
 document.addEventListener("click",e=>{
   if(e.target.id==="imprimir"){armarFormato();window.print()}
+  if(e.target.id==="guardar"){e.target.textContent=guardarRegistro()}
   if(e.target.id==="copiar"){
     const t=$("res").dataset.resumen||"";
     (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>{e.target.textContent="Resumen copiado"}).catch(()=>{
