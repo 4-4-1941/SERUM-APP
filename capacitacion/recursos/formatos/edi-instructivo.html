@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Instructivo de uso · Prueba EDI</title>
+<style>
+:root{--pino:#0f3d33;--fondo:#eef2f0;--tinta:#1c2b27;--suave:#5d6f69;--linea:#d3dcd8;--verde:#1f8a4c;--amar:#e0a800;--rojo:#c0392b}
+*{box-sizing:border-box}
+body{margin:0;background:var(--fondo);color:var(--tinta);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding-bottom:30px}
+.top{background:var(--pino);color:#fff;padding:14px 16px 16px}
+.top a{color:#bfe3d6;text-decoration:none;font-size:14px;margin-right:14px}
+.top h1{margin:6px 0 2px;font:700 24px/1.15 Georgia,"Times New Roman",serif}
+.top p{margin:0;color:#cfe6dd;font-size:14px}
+main{max-width:780px;margin:0 auto;padding:12px}
+.card{background:#fff;border:1px solid var(--linea);border-radius:10px;padding:14px 16px;margin:0 0 12px;break-inside:avoid}
+h2{font:700 19px/1.25 Georgia,serif;margin:0 0 8px;color:var(--pino)}
+h3{font:700 16px/1.3 system-ui,sans-serif;margin:12px 0 4px}
+p{margin:6px 0}
+ol,ul{margin:6px 0 6px 20px;padding:0}li{margin:4px 0}
+.paso{display:flex;gap:10px;margin:10px 0}
+.paso>b{flex:0 0 28px;height:28px;border-radius:50%;background:var(--pino);color:#fff;text-align:center;line-height:28px;font-size:14px}
+.paso div{flex:1}
+.sem{display:grid;gap:8px;margin:8px 0}
+.sem div{border-radius:8px;padding:8px 10px;font-size:14.5px}
+.sem .V{background:#e3f4ea;border-left:8px solid var(--verde)}
+.sem .A{background:#fff4cc;border-left:8px solid var(--amar)}
+.sem .R{background:#fbe3df;border-left:8px solid var(--rojo)}
+table{width:100%;border-collapse:collapse;font-size:14.5px;margin:8px 0}
+th,td{border:1px solid var(--linea);padding:6px 8px;text-align:left;vertical-align:top}
+th{background:#e3ece8}
+.aviso{background:#fff4cc;border:1px solid var(--amar);border-radius:8px;padding:10px 12px;font-size:14px;margin:8px 0}
+.nota{font-size:13px;color:var(--suave)}
+.btn{display:inline-block;font:inherit;font-weight:700;border:0;border-radius:8px;padding:10px 14px;background:var(--pino);color:#fff;text-decoration:none;cursor:pointer}
+@page{size:A4;margin:12mm}
+@media print{body{background:#fff}.top a,.btn,.noimp{display:none!important}.card{border:1px solid #999}}
+</style>
+</head>
+<body>
+<header class="top">
+  <a href="edi-tamizaje.html">‹ Ir a la herramienta EDI</a><a href="../../index.html">Capacitación</a>
+  <h1>Instructivo de uso · Prueba EDI</h1>
+  <p>Cómo usar la herramienta y el Formato Único de Aplicación · Manual EDI Perú 2026</p>
+</header>
+
+<main>
+  <section class="card">
+    <h2>1. Qué es y a quién se aplica</h2>
+    <p>La prueba <b>EDI (Evaluación del Desarrollo Infantil)</b> es un tamizaje para detectar a tiempo problemas del neurodesarrollo en niños <b>desde 1 mes hasta 5 años, 11 meses y 29 días</b>. Está organizada en <b>15 grupos de edad</b> y la aplican médicos y enfermeras/os capacitados, según la NTS N.° 238-MINSA/DGIESP-2025.</p>
+    <p>Las edades <b>mínimas e indispensables</b> para aplicarla son <b>1, 6, 9, 18, 30, 42 y 60 meses</b>. Además, se aplica ante cualquier hallazgo o indicador de riesgo detectado en la vigilancia del desarrollo.</p>
+    <div class="aviso">Es un tamizaje: el resultado orienta la conducta, <b>no es un diagnóstico</b>. Esta herramienta reproduce los criterios del manual; ante cualquier duda, el manual manda.</div>
+  </section>
+
+  <section class="card">
+    <h2>2. Reglas de oro del manual</h2>
+    <ul>
+      <li><b>Dos formas de preguntar:</b> <i>pregunta dirigida</i> (se interroga a la madre, padre o cuidador) y <i>observación del niño</i>. Los ítems con dos asteriscos (**) se evalúan <b>observando directamente al niño</b>; en la herramienta aparecen con la etiqueta «Observe al niño».</li>
+      <li><b>Cada ítem se califica solo con SÍ o NO.</b> SÍ = lo hace o lo tiene. NO = no lo hace o no lo tiene.</li>
+      <li><b>En las preguntas dirigidas importa la frecuencia:</b> SÍ si lo hace siempre o la mayor parte de las veces; NO si no lo hace o lo hace muy rara vez.</li>
+      <li>Si hay que observar al niño y no lo hace o lo hace mal, <b>repita la instrucción</b> para asegurarse de que no puede hacerlo a pesar de haber entendido.</li>
+      <li><b>El resultado se expresa en color</b> (verde, amarillo o rojo), no en cifras.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>3. Paso a paso en la herramienta</h2>
+    <div class="paso"><b>1</b><div><b>Escriba las fechas, solo con números.</b> En «Nacimiento» escriba <code>14072024</code> y se convierte en 14/07/2024. La fecha de evaluación ya viene con la de hoy; cámbiela solo si es otra. Si el niño nació antes de las 37 semanas, escriba las <b>semanas de gestación</b>.</div></div>
+    <div class="paso"><b>2</b><div><b>Lea la edad y el grupo.</b> La herramienta calcula sola la edad cronológica y, si corresponde, la <b>edad corregida</b>, y le dice qué grupo aplicar (de UNO a QUINCE). Si cambia una fecha, todo se recalcula.</div></div>
+    <div class="paso"><b>3</b><div><b>Responda los ítems de cada área</b> (motriz gruesa, motriz fina, lenguaje, social y, desde los 37 meses, conocimiento). Toque <b>Sí</b> o <b>No</b>. Cada área muestra su color al terminar.</div></div>
+    <div class="paso"><b>4</b><div><b>Si no logró ningún ítem de un área,</b> aparece un recuadro con las preguntas del <b>grupo de edad anterior</b>. Respóndalas: con 2 o más «Sí» el área queda en <b>amarillo</b>; con 1 o ninguno, en <b>rojo</b>.</div></div>
+    <div class="paso"><b>5</b><div><b>Responda señales de alarma y exploración neurológica.</b> Aquí <b>Sí significa que está presente o alterado</b> (rojo). Hasta el grupo 4 (4 meses) también debe responder los <b>factores de riesgo biológico</b> y las <b>señales de alerta</b> (Sí = presente, amarillo).</div></div>
+    <div class="paso"><b>6</b><div><b>Lea el resultado.</b> Cuando responde todo, aparece el semáforo con el motivo. Mientras falten respuestas, la barra de abajo indica cuántas faltan.</div></div>
+    <div class="paso"><b>7</b><div><b>Guarde o imprima.</b> «Guardar en mi registro», «Imprimir en formato oficial» o «Copiar resumen» (ver los puntos 6 y 7).</div></div>
+  </section>
+
+  <section class="card">
+    <h2>4. Cómo leer el semáforo</h2>
+    <div class="sem">
+      <div class="V"><b>Desarrollo normal (verde):</b> el niño cumple los hitos esperados para su grupo en todas las áreas y no presenta señales de alarma ni anomalías en la exploración neurológica.</div>
+      <div class="A"><b>Rezago en el desarrollo (amarillo):</b> no cumple todos los hitos de su grupo, pero <u>no tiene un retraso considerable</u> porque logra los hitos del grupo anterior. Puede tener factores de riesgo o señales de alerta.</div>
+      <div class="R"><b>Riesgo de retraso en el desarrollo (rojo):</b> no cumple adecuadamente los hitos y tiene un retraso considerable (no logra los del grupo anterior), o presenta señales de alarma, o la exploración neurológica es claramente anormal.</div>
+    </div>
+    <h3>Cómo se califica cada área</h3>
+    <ul>
+      <li>Con <b>2 o más respuestas «Sí»</b> en el grupo de edad: <b>verde</b>.</li>
+      <li>Con <b>1</b> «Sí»: <b>amarillo</b>.</li>
+      <li>Con <b>ninguno</b>: se aplican las preguntas del grupo anterior (amarillo si logra 2 o más, rojo si logra 1 o ninguna).</li>
+      <li><b>Excepción, grupo UNO (1 mes):</b> no hay grupo anterior; con 1 o ninguna respuesta «Sí», el área es <b>roja</b>.</li>
+    </ul>
+    <h3>Cómo se obtiene el resultado global</h3>
+    <table>
+      <tr><th>Grupos</th><th>Rojo si hay…</th><th>Amarillo si hay…</th></tr>
+      <tr><td><b>UNO</b> (1 mes)</td><td>Un área roja o una exploración neurológica alterada.</td><td>2 o más señales de alerta, 2 o más factores de riesgo, o una alerta más un factor de riesgo.</td></tr>
+      <tr><td><b>DOS a CUATRO</b> (2 a 4 meses)</td><td>Un área roja, dos áreas amarillas, un área amarilla más un factor de riesgo o señal de alerta, una señal de alarma, o una exploración neurológica alterada.</td><td>Un área amarilla, 2 o más alertas, 2 o más factores de riesgo, o una alerta más un factor de riesgo.</td></tr>
+      <tr><td><b>CINCO a QUINCE</b> (5 a 71 meses)</td><td>Un área roja, una señal de alarma o una exploración neurológica alterada.</td><td>Una o más áreas amarillas.</td></tr>
+    </table>
+    <p class="nota">Del grupo CINCO en adelante, los factores de riesgo biológico y las señales de alerta son opcionales y no modifican el resultado global.</p>
+  </section>
+
+  <section class="card">
+    <h2>5. Edad corregida en prematuros</h2>
+    <p>Si el niño tiene <b>menos de 2 años y nació antes de las 37 semanas</b>, la prueba <b>debe aplicarse con la edad corregida</b>, no con la cronológica. La herramienta lo hace sola al escribir las semanas de gestación:</p>
+    <ol>
+      <li>Resta las semanas de gestación a 40.</li>
+      <li>Multiplica por 7 para pasarlas a días.</li>
+      <li>Resta esos días a la edad cronológica.</li>
+    </ol>
+    <p><b>Ejemplo del manual:</b> nacido el 14/07/2024, evaluado el 20/03/2025, 34 semanas. Edad cronológica: 8 meses y 6 días. Corrección: (40 − 34) × 7 = 42 días. Edad corregida: <b>6 meses y 24 días</b>, así que corresponde el grupo <b>CINCO</b>, no el SEIS.</p>
+    <div class="aviso">No corregir la edad puede hacer que se aplique el grupo siguiente y se califique como amarillo a un niño que en realidad tiene un desarrollo normal.</div>
+    <p class="nota">Los meses se cuentan de 30 días, como indica el manual.</p>
+  </section>
+
+  <section class="card">
+    <h2>6. El formato oficial impreso</h2>
+    <p>Al terminar, toque <b>«Imprimir en formato oficial»</b>. Se genera el <b>Formato Único de Aplicación</b> en una hoja A4 horizontal; para guardarlo como PDF, elija «Guardar como PDF» en el menú de impresión.</p>
+    <p>Antes de imprimir puede abrir <b>«Datos para el formato oficial (opcional)»</b> y completar lo que va en la cabecera:</p>
+    <table>
+      <tr><th>Campo</th><th>Qué escribir</th></tr>
+      <tr><td>Nombre del niño(a)</td><td>Nombre completo (campo «Nombre» al inicio de la página).</td></tr>
+      <tr><td>Madre / padre / cuidador, teléfonos</td><td>Quien responde las preguntas y su contacto.</td></tr>
+      <tr><td>Tipo de seguro, IPRESS, Microrred/RIS</td><td>Los datos del establecimiento y del seguro del niño.</td></tr>
+      <tr><td>Población indígena</td><td>Sí o No. Si el niño pertenece a un pueblo indígena y no es hispanohablante, consigne la necesidad de un traductor.</td></tr>
+      <tr><td>Esta aplicación es</td><td><b>Inicial</b> o <b>Subsecuente 1 a 5</b>: decide en qué columna del seguimiento se imprime la evaluación.</td></tr>
+      <tr><td>Quién aplica la prueba</td><td>Nombre completo de la persona que aplica la EDI.</td></tr>
+    </table>
+    <p><b>Seguimiento:</b> el formato tiene seis columnas (Inicial y Subsecuente 1 a 5). La evaluación de hoy se imprime solo en la columna elegida; las demás quedan en blanco para las visitas siguientes, que puede completar a mano o con otra impresión.</p>
+    <p class="nota">La hoja impresa reproduce la estructura del formato del manual (cabecera, seguimiento, áreas, señales de alarma, exploración neurológica, resultado global, factores de riesgo y señales de alerta). El diseño fino es propio de la herramienta, no una copia exacta del original.</p>
+  </section>
+
+  <section class="card">
+    <h2>7. Guardar y exportar a Excel</h2>
+    <ol>
+      <li>Al terminar una evaluación, toque <b>«Guardar en mi registro»</b>. Se guarda en este dispositivo. Si vuelve a guardar la misma evaluación, se actualiza y no se duplica.</li>
+      <li>Toque <b>«Ver mi registro y exportar a Excel»</b>. Allí puede buscar, ver el detalle, eliminar y <b>exportar a Excel (.xlsx)</b>.</li>
+      <li><b>Copia de seguridad:</b> descargue el archivo .json con frecuencia. Para pasar su registro a otro aparato (por ejemplo, del celular a la laptop), envíese la copia y toque <b>«Restaurar copia de seguridad»</b> allí; se suman los registros nuevos sin borrar los existentes.</li>
+    </ol>
+    <div class="aviso"><b>Importante:</b> el registro vive solo en el navegador de cada aparato. Si borra los datos del navegador sin tener una copia, se pierde. Contiene datos de pacientes: manéjelo con confidencialidad.</div>
+  </section>
+
+  <section class="card">
+    <h2>8. Errores frecuentes que conviene evitar</h2>
+    <ul>
+      <li>No corregir la edad en un prematuro menor de 2 años.</li>
+      <li>Aplicar el grupo equivocado: la herramienta lo indica; verifique que las fechas estén bien escritas.</li>
+      <li>Calificar «Sí» un ítem de observación sin haber visto al niño hacerlo.</li>
+      <li>Olvidar que en señales de alarma y exploración neurológica <b>«Sí» es lo malo</b> (presente o alterado).</li>
+      <li>Omitir los factores de riesgo y señales de alerta en los grupos UNO a CUATRO, donde sí cambian el resultado.</li>
+    </ul>
+    <p class="nota">Ante un resultado amarillo o rojo, siga la conducta que indican el manual EDI y la NTS N.° 238-MINSA/DGIESP-2025.</p>
+  </section>
+
+  <p class="noimp" style="text-align:center"><button class="btn" onclick="window.print()">Imprimir o guardar este instructivo</button></p>
+</main>
+</body>
+</html>
