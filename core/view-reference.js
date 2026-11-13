@@ -53,34 +53,222 @@ function renderGlossary() {
   draw();
 }
 
-function renderNorms() {
+function fichaEsc(s) {
+  return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+}
+
+const FICHA_ESTADOS = {
+  REVIEW_REQUIRED: { t: "Datos por confirmar", c: "ambar" },
+  FUENTE_OFICIAL: { t: "Fuente oficial verificada", c: "verde" }
+};
+
+function fichaItems() {
+  const F = (data.fichas || []);
+  const B = (data.blueprint && data.blueprint.normas) || [];
+  const usados = new Set();
+  const items = F.map(f => {
+    const bp = B.find(b => b.n === f.match);
+    if (bp) usados.add(bp.n);
+    return { ficha: f, code: f.code, title: f.title, eje: f.eje, p: bp ? bp.p : 0, c: bp ? bp.c : 0, t: bp ? bp.t : [], s: "" };
+  });
+  B.forEach(b => {
+    if (usados.has(b.n)) return;
+    items.push({ ficha: null, code: b.n, title: b.s || "", eje: b.e, p: b.p, c: b.c, t: b.t || [], s: b.s || "" });
+  });
+  items.sort((a, b) => (b.ficha ? 1 : 0) - (a.ficha ? 1 : 0) || b.p - a.p);
+  return items;
+}
+
+function fichaTramos(l) {
+  const tot = l.tramos.reduce((a, t) => a + t.w, 0);
+  return `
+    <div class="fi-line">
+      <div class="fi-line-title">${fichaEsc(l.titulo)}</div>
+      <div class="fi-bar">
+        ${l.tramos.map(t => `<div class="fi-seg ${fichaEsc(t.c)}" style="flex:${t.w} 1 ${Math.round(t.w / tot * 100)}%"><b>${fichaEsc(t.t)}</b><small>${fichaEsc(t.s)}</small></div>`).join("")}
+      </div>
+      ${l.sellos && l.sellos.length ? `<div class="fi-seals">
+        ${l.sellos.map(s => `<div class="fi-seal ${fichaEsc(s.c)}"><b>${fichaEsc(s.t)}</b><small>${fichaEsc(s.s)}</small></div>`).join("")}
+      </div>` : ""}
+      ${l.nota ? `<p class="fi-note">${fichaEsc(l.nota)}</p>` : ""}
+    </div>`;
+}
+
+function fichaCuerpo(f, key) {
+  const est = FICHA_ESTADOS[f.estado] || { t: f.estado, c: "gris" };
+  return `
+    <div class="fi-body">
+      <div class="fi-meta">
+        <span class="fi-badge ${est.c}">${fichaEsc(est.t)}</span>
+        <small>${fichaEsc(f.aprobada)}</small>
+      </div>
+      <p class="fi-vig"><b>Vigencia:</b> ${fichaEsc(f.vigencia)}</p>
+      ${f.alerta ? `<div class="fi-alert">⚠️ ${fichaEsc(f.alerta)}</div>` : ""}
+      ${f.linea ? fichaTramos(f.linea) : ""}
+      <details class="fi-sec" open>
+        <summary>1. Definiciones críticas</summary>
+        <dl class="fi-defs">
+          ${f.definiciones.map(d => `<dt>${fichaEsc(d[0])} <small>${fichaEsc(d[2])}</small></dt><dd>${fichaEsc(d[1])}</dd>`).join("")}
+        </dl>
+      </details>
+      <details class="fi-sec">
+        <summary>2. Plazos y parámetros</summary>
+        ${f.plazos.map(g => `
+          <h4 class="fi-sub">${fichaEsc(g.norma)}</h4>
+          <div class="fi-table-wrap"><table class="fi-table"><thead><tr><th>Dato</th><th>Valor</th><th>Ref.</th></tr></thead><tbody>
+            ${g.filas.map(r => `<tr><td>${fichaEsc(r[0])}</td><td><b>${fichaEsc(r[1])}</b></td><td>${fichaEsc(r[2])}</td></tr>`).join("")}
+          </tbody></table></div>`).join("")}
+      </details>
+      <details class="fi-sec">
+        <summary>${fichaEsc(f.flujo_titulo || "3. Qué hacer en el establecimiento")}</summary>
+        <ol class="fi-steps">${f.flujo.map(s => `<li>${fichaEsc(s)}</li>`).join("")}</ol>
+        ${f.flujo_nota ? `<p class="fi-note">${fichaEsc(f.flujo_nota)}</p>` : ""}
+      </details>
+      <details class="fi-sec">
+        <summary>4. Trampas frecuentes de examen</summary>
+        <ul class="fi-traps">${f.trampas.map(s => `<li>${fichaEsc(s)}</li>`).join("")}</ul>
+      </details>
+      <details class="fi-sec">
+        <summary>5. Practica: preguntas tipo SERUMS</summary>
+        ${f.preguntas.map((q, qi) => `
+          <div class="fi-q" data-key="${key}" data-q="${qi}">
+            <p class="fi-q-text">${fichaEsc(q.q)}</p>
+            ${q.o.map((o, oi) => `<button type="button" class="option-btn" data-o="${oi}"><b>${"ABCD"[oi]})</b> ${fichaEsc(o)}</button>`).join("")}
+            <div class="fi-q-out" aria-live="polite"></div>
+          </div>`).join("")}
+      </details>
+      <details class="fi-sec">
+        <summary>6. Fuente y pendientes</summary>
+        <p class="fi-note">${fichaEsc(f.fuente)}</p>
+        <ul class="fi-traps">${f.pendientes.map(s => `<li>${fichaEsc(s)}</li>`).join("")}</ul>
+      </details>
+      <p class="fi-foot">Material pedagógico, no sustituye la norma oficial. Trampas y preguntas: análisis propio, pendiente de revisión humana. © SIP SERUMS PERÚ</p>
+    </div>`;
+}
+
+function fichaCard(it, i) {
+  const f = it.ficha;
+  const pct = Math.min(100, Math.round((it.c || 0) * 2));
+  return `
+    <article class="norm-card fi-card${f ? " has-ficha" : ""}" data-i="${i}">
+      <span>${fichaEsc(it.code)}</span>
+      <h3>${fichaEsc(it.title || "Sin sumilla verificada")}</h3>
+      <div class="chips fi-chips">
+        <span class="chip">${fichaEsc(it.eje)}</span>
+        ${it.p ? `<span class="chip">${it.p} preguntas · ${it.c}%</span>` : ""}
+        <span class="fi-badge ${f ? "verde" : "gris"}">${f ? "Ficha lista" : "Ficha en preparación"}</span>
+      </div>
+      ${it.p ? `<div class="bar" title="Peso en el examen"><span style="width:${pct}%"></span></div>` : ""}
+      ${!f && it.t && it.t.length ? `<div class="chips fi-topics">${it.t.slice(0, 6).map(t => `<span class="chip fi-topic">${fichaEsc(t)}</span>`).join("")}</div>` : ""}
+      ${f ? `<button type="button" class="toggle fi-open" data-i="${i}">Abrir ficha de estudio</button><div class="toggle-panel fi-panel" id="fi-panel-${i}">${fichaCuerpo(f, i)}</div>` : ""}
+    </article>`;
+}
+
+async function renderNorms() {
+  const request = coreNavigationRequest;
   pageTitle.textContent = "Normativa SERUMS";
-  pageSubtitle.textContent = "Ley base, bibliografía oficial y normas de evaluación.";
+  pageSubtitle.textContent = "Fichas de estudio por norma: definiciones, plazos, trampas y preguntas tipo examen.";
+  root.innerHTML = `<section class="panel"><p style="color:#5B6E6A">Cargando fichas…</p></section>`;
+  try { await loadCoreScript("sip-data-fichas"); }
+  catch (error) {
+    if (request !== coreNavigationRequest) return;
+    root.innerHTML = `<section class="panel"><p>No se pudieron cargar las fichas. <button type="button" class="action-btn" id="fi-retry">Reintentar</button></p></section>`;
+    document.getElementById("fi-retry").addEventListener("click", renderNorms);
+    return;
+  }
+  if (request !== coreNavigationRequest) return;
+
+  const items = fichaItems();
+  const ejes = Object.keys((data.blueprint && data.blueprint.ejes) || {});
+  const conFicha = items.filter(x => x.ficha).length;
+  let eje = "";
+  let soloFicha = false;
+
   root.innerHTML = `
-    <section class="two-col">
-      <div class="panel">
-        <h3 class="section-title">Normas principales</h3>
-        <div class="norm-list">
-          ${data.norms.map((n, i) => `
-            <article class="norm-card">
-              <span>${n.code}</span>
-              <h3>${n.title}</h3>
-              <p>${n.summary}</p>
-              <button class="toggle" data-target="norm-${i}">Ver detalle</button>
-              <div class="toggle-panel" id="norm-${i}">
-                <p>${n.detail}</p>
-              </div>
-            </article>
-          `).join("")}
-        </div>
+    <section class="panel">
+      <div class="fi-summary">
+        <div><b>${items.length}</b><small>normas con preguntas</small></div>
+        <div><b>${conFicha}</b><small>con ficha lista</small></div>
+        <div><b>${data.blueprint ? data.blueprint.total : 0}</b><small>preguntas respaldadas</small></div>
       </div>
-      <div class="panel">
-        <h3 class="section-title">Base oficial</h3>
-        <p style="line-height:1.6;color:#5B6E6A">La Ley N.° 23330 figura como norma base del SERUMS, complementada por su reglamento y las modificatorias vigentes que el MINSA publica junto con la bibliografía oficial de cada proceso.</p>
+      <input id="fi-search" class="search" placeholder="Buscar norma o tema (ej. dengue, historia clínica, materna)..." />
+      <div class="chips fi-filters" id="fi-filters" style="margin:12px 0">
+        <span class="chip fi-filter" data-f="ficha" style="cursor:pointer">Solo con ficha</span>
+        ${ejes.map(e => `<span class="chip fi-filter" data-eje="${fichaEsc(e)}" style="cursor:pointer">${fichaEsc(e)}</span>`).join("")}
       </div>
+      <div class="norm-list" id="fi-list"></div>
     </section>
-  `;
+    <section class="panel" style="margin-top:18px">
+      <h3 class="section-title">Normas base del SERUMS</h3>
+      <div class="norm-list">
+        ${data.norms.map((n, i) => `
+          <article class="norm-card">
+            <span>${n.code}</span>
+            <h3>${n.title}</h3>
+            <p>${n.summary}</p>
+            <button class="toggle" data-target="norm-${i}">Ver detalle</button>
+            <div class="toggle-panel" id="norm-${i}"><p>${n.detail}</p></div>
+          </article>`).join("")}
+      </div>
+    </section>`;
+
+  const list = document.getElementById("fi-list");
+  const search = document.getElementById("fi-search");
+
+  function draw() {
+    const q = search.value.trim().toLowerCase();
+    const idx = [];
+    items.forEach((it, i) => {
+      if (soloFicha && !it.ficha) return;
+      if (eje && it.eje !== eje) return;
+      if (q) {
+        const hay = (it.code + " " + it.title + " " + (it.t || []).join(" ") + (it.ficha ? " " + it.ficha.definiciones.map(d => d[0]).join(" ") : "")).toLowerCase();
+        if (!hay.includes(q)) return;
+      }
+      idx.push(i);
+    });
+    list.innerHTML = idx.length ? idx.map(i => fichaCard(items[i], i)).join("") : `<p style="color:#5B6E6A">No hay normas con ese filtro.</p>`;
+  }
+
+  search.addEventListener("input", draw);
+  document.getElementById("fi-filters").addEventListener("click", e => {
+    const chip = e.target.closest(".fi-filter");
+    if (!chip) return;
+    if (chip.dataset.f === "ficha") soloFicha = !soloFicha;
+    else eje = eje === chip.dataset.eje ? "" : chip.dataset.eje;
+    document.querySelectorAll("#fi-filters .fi-filter").forEach(c => {
+      const on = c.dataset.f === "ficha" ? soloFicha : c.dataset.eje === eje;
+      c.classList.toggle("on", on);
+    });
+    draw();
+  });
+
+  list.addEventListener("click", e => {
+    const open = e.target.closest(".fi-open");
+    if (open) {
+      document.getElementById("fi-panel-" + open.dataset.i).classList.toggle("open");
+      return;
+    }
+    const opt = e.target.closest(".fi-q .option-btn");
+    if (!opt) return;
+    const box = opt.closest(".fi-q");
+    if (box.dataset.done) return;
+    const f = items[Number(box.dataset.key)].ficha;
+    const q = f.preguntas[Number(box.dataset.q)];
+    const pick = Number(opt.dataset.o);
+    box.dataset.done = "1";
+    box.querySelectorAll(".option-btn").forEach((b, bi) => {
+      if (bi === q.k) b.classList.add("fi-ok");
+      else if (bi === pick) b.classList.add("fi-bad");
+      b.disabled = true;
+    });
+    box.querySelector(".fi-q-out").innerHTML = `
+      <p class="fi-verdict ${pick === q.k ? "ok" : "bad"}">${pick === q.k ? "✅ Correcto" : "❌ Incorrecto. La clave es " + "ABCD"[q.k]}</p>
+      <ul class="fi-traps">${q.w.map((w, wi) => `<li><b>${"ABCD"[wi]})</b> ${fichaEsc(w)}</li>`).join("")}</ul>`;
+  });
+
   bindToggles();
+  draw();
 }
 
 function renderDecrees() {
