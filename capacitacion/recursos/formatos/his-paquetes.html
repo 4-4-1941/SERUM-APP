@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hoja HIS por paquetes (pedagógico)</title>
+<style>
+:root{color-scheme:light;--paper:#ffffff;--card:#ffffff;--line:#b9c3dc;--ink:#1c3f9c;--text:#1d2330;--mute:#5b6478;--bad:#b3261e;--badbg:#fdecea;--ok:#1b6b3a;--okbg:#e8f5ec;--warn:#8a5a00;--warnbg:#fff4d6}
+*{box-sizing:border-box}
+html{height:100%}
+body{margin:0;background:var(--paper);color:var(--text);font:16px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding:env(safe-area-inset-top,0) 0 env(safe-area-inset-bottom,0)}
+header,main{max-width:1000px;margin:0 auto;padding:0 14px}
+h1{font-size:1.35rem;margin:16px 0 4px}
+h2.s{font-size:1.05rem;margin:22px 0 8px;color:var(--ink)}
+.nota{color:var(--mute);font-size:.9rem;margin:0 0 12px}
+select,button,input{font:inherit}
+button,select,input[type=search]{min-height:44px;padding:0 14px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--text);width:100%}
+button{width:auto;cursor:pointer}
+button.main{background:var(--ink);border-color:var(--ink);color:#fff}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--ink);outline-offset:1px}
+.row{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+.row>*{flex:1 1 220px}
+.row>button{flex:0 0 auto}
+.pk{background:#eef2fa;border:1px solid #9fb0d8;border-radius:8px;padding:10px;margin:10px 0}
+.pk b{color:var(--ink)}
+.pg{display:inline-block;background:var(--ink);color:#fff;border-radius:999px;padding:1px 10px;font-size:.8rem;margin-left:6px}
+.msg{padding:10px;border-radius:6px;margin:10px 0;font-size:.93rem}
+.msg.e{background:var(--badbg);color:var(--bad)}
+.msg.o{background:var(--okbg);color:var(--ok)}
+.msg.i{background:var(--warnbg);color:var(--warn)}
+.res{border:1px solid var(--line);border-radius:8px;padding:8px 10px;margin:6px 0;display:flex;gap:10px;align-items:center;justify-content:space-between}
+.res span{font-size:.92rem}
+/* Hoja en formato HIS */
+.pac{background:#eef2fa;border:1px solid #9fb0d8;border-radius:8px;padding:10px}
+.f{display:grid;gap:6px;grid-template-columns:repeat(4,1fr)}
+.f label{font-size:.72rem;color:var(--mute);display:block}
+.f input,.f select{width:100%;min-height:38px;padding:4px 6px;border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent;color:var(--ink);font-weight:600}
+.f .w2{grid-column:span 2}
+.f .ed{display:flex;gap:4px}.f .ed input{width:58%}.f .ed select{width:42%}
+#sheet{display:grid;gap:12px;grid-template-columns:1fr;margin-top:12px}
+.reg{background:#ffffff;border:1px solid #9fb0d8;border-radius:8px;padding:10px}
+.reg:nth-child(even){background:#eef2fa}
+.reg h3{font-size:.95rem;margin:-10px -10px 8px;padding:6px 10px;display:flex;justify-content:space-between;gap:8px;background:#dde5f6;border-radius:7px 7px 0 0;color:#1c3f9c}
+.reg h3 span:last-child{font-weight:400;font-size:.8rem}
+.rs{font-size:.82rem;color:var(--mute);margin-bottom:6px}
+.dx{display:grid;grid-template-columns:3fr 1.2fr 1fr 1fr 1fr 1.5fr;gap:6px;margin-top:8px;align-items:end;border-top:1px dashed var(--line);padding-top:6px}
+.dx .h{font-size:.7rem;color:var(--mute);display:block}
+.dx input{width:100%;min-height:38px;padding:4px 6px;border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent;color:var(--ink);font-weight:600}
+.dxn .t{font-weight:600;color:var(--text);font-size:.92rem;min-height:38px}
+.dxn .t.vacio{color:var(--mute);font-weight:400}
+.dxn .p{display:inline-block;background:var(--ink);color:#fff;border-radius:999px;padding:0 8px;font-size:.7rem;margin-left:6px}
+.dxn .nt{font-size:.74rem;color:var(--mute);font-weight:400;margin-top:2px}
+.cat{font-size:.68rem;border-radius:4px;padding:1px 6px;background:#dde5f6;color:var(--ink);margin-left:6px;font-weight:400}
+.cat.HIS{background:var(--warnbg);color:var(--warn)}
+.cod{font-weight:700;color:var(--ink);min-height:38px;display:flex;align-items:center;flex-wrap:wrap}
+.tp{display:flex;gap:2px}
+.tp button{min-height:38px;min-width:34px;padding:0;border-radius:6px;font-weight:700;color:var(--ink)}
+.tp button[aria-pressed=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.tp.lock button{opacity:.5}
+.q{min-height:34px;padding:0 10px;font-size:.8rem;margin-top:4px}
+@media (max-width:620px){.f{grid-template-columns:repeat(2,1fr)}.dx{grid-template-columns:1fr 1fr 1fr}.dx>.dxn{grid-column:1/-1}.dx>.cd{grid-column:span 3}}
+#sheet:empty::before{content:"La hoja está vacía. Elige un paquete o busca un código.";color:var(--mute)}
+a{color:var(--ink)}
+</style>
+</head>
+<body>
+<header>
+<p style="margin:10px 0 0"><a href="../../../index.html">← Volver a Asistente Profesional</a></p>
+<h1>Hoja HIS por paquetes · pedagógico</h1>
+<p class="nota">Complemento del formato HIS: cada paquete se carga en registros de 3 líneas, igual que la hoja oficial. No reemplaza el HIS ni el criterio clínico. Los paquetes salen de los manuales HIS del MINSA y cada código se valida contra el CIE-10 2021 y el catálogo CPMS (RM 550-2023/MINSA).</p>
+</header>
+<main>
+<div id="estado" class="msg i" role="status">Cargando paquetes…</div>
+
+<h2 class="s">1. Elige un paquete</h2>
+<div class="row">
+<input type="search" id="fpaq" placeholder="Filtrar por nombre, código o página" aria-label="Filtrar paquetes" autocomplete="off">
+<select id="paq" aria-label="Paquete"><option value="">Paquete…</option></select>
+</div>
+<div id="infopaq"></div>
+<div class="row"><button class="main" id="cargar" type="button" disabled>Cargar paquete a la hoja</button></div>
+
+<h2 class="s">2. Busca otro código (CIE-10 o CPMS)</h2>
+<div class="row">
+<input type="search" id="q" placeholder="Código o palabra, ej. J00 o agudeza visual" aria-label="Buscar código" autocomplete="off">
+<select id="cat" aria-label="Catálogo"><option value="cie10">CIE-10 (diagnósticos)</option><option value="cpms">CPMS (procedimientos)</option></select>
+</div>
+<div id="resultados" aria-live="polite"></div>
+
+<h2 class="s">3. Hoja de registro (formato HIS)</h2>
+<div class="pac">
+<div class="f" id="pac">
+<div><label for="p_dia">Día</label><input id="p_dia" data-p="dia" inputmode="numeric" autocomplete="off"></div>
+<div class="w2"><label for="p_hc">HC / DNI / APP</label><input id="p_hc" data-p="hc" autocomplete="off"></div>
+<div><label for="p_sexo">Sexo</label><select id="p_sexo" data-p="sexo"><option value=""></option><option value="M">M</option><option value="F">F</option></select></div>
+<div><label for="p_edn">Edad</label><div class="ed"><input id="p_edn" data-p="edn" inputmode="numeric" autocomplete="off"><select data-p="edu" aria-label="Unidad de edad"><option value="A">A</option><option value="M">M</option><option value="D">D</option></select></div></div>
+<div class="w2"><label for="p_dist">Distrito</label><input id="p_dist" data-p="dist" autocomplete="off"></div>
+</div>
+<p class="nota" style="margin:8px 0 0">Estos datos se repiten en cada registro de la hoja. Se usan solo para practicar.</p>
+</div>
+<div id="sheet"></div>
+<div class="row">
+<button type="button" id="copiar" class="main">Copiar hoja</button>
+<button type="button" id="vaciar">Vaciar hoja</button>
+</div>
+<div id="aviso"></div>
+<p class="nota" style="margin-bottom:40px">Tipo de diagnóstico: P = presuntivo, D = definitivo, R = repetido. LAB: valor que el manual pide en esa prestación (se muestra la guía bajo cada casilla). Si un paquete fija el tipo (por ejemplo teleorientación = D), queda bloqueado.</p>
+</main>
+<script>
+(function(){
+"use strict";
+var CFG={url:"https://xcfdhwqjudzngvlssyeg.supabase.co",key:"sb_publishable_SMfnQmaqkzsFXn23qDriEQ_tG-Xb_Jd"};
+var paquetes=[],items=[],hoja=[],desc={},tmr=null,pac={dia:"",hc:"",sexo:"",edn:"",edu:"A",dist:""};
+function $(i){return document.getElementById(i)}
+function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+function api(path){
+  return fetch(CFG.url+"/rest/v1/"+path,{headers:{apikey:CFG.key,Accept:"application/json"}}).then(function(r){
+    if(!r.ok)throw new Error("HTTP "+r.status);return r.json();
+  });
+}
+function estado(txt,cls){var e=$("estado");e.textContent=txt;e.className="msg "+cls;e.hidden=!txt}
+function limpiar(s){return String(s||"").replace(/[(),*%\\"']/g," ").replace(/\s+/g," ").trim()}
+function dkey(h){return (h.catalogo==="CIE10"?"cie10":"cpms")+":"+h.codigo}
+function paqInfo(id){return paquetes.filter(function(p){return p.paquete_id===id})[0]}
+
+function cargarDatos(){
+  estado("Cargando paquetes…","i");
+  return Promise.all([
+    api("paquetes_his?select=paquete_id,nombre,manual,anio_manual,pagina_manual,condicion&order=paquete_id"),
+    api("paquetes_his_items?select=paquete_id,orden,catalogo,codigo,tipo_dx,lab1,lab2,lab3,nota&order=paquete_id,orden")
+  ]).then(function(r){
+    paquetes=r[0];items=r[1];
+    if(!paquetes.length){estado("No hay paquetes cargados todavía.","e");return}
+    estado(paquetes.length+" paquetes y "+items.length+" códigos disponibles.","o");
+    pintarSelect();
+  }).catch(function(){
+    estado("No se pudo conectar. Revisa tu internet e intenta de nuevo.","e");
+    var b=document.createElement("button");b.type="button";b.textContent="Reintentar";b.onclick=cargarDatos;$("estado").appendChild(document.createElement("br"));$("estado").appendChild(b);
+  });
+}
+function pintarSelect(){
+  var f=limpiar($("fpaq").value).toLowerCase(),s=$("paq"),act=s.value;
+  var html='<option value="">Paquete…</option>',n=0;
+  paquetes.forEach(function(p){
+    var txt=(p.paquete_id+" "+p.nombre+" "+p.condicion+" "+p.pagina_manual).toLowerCase();
+    var cods=items.filter(function(i){return i.paquete_id===p.paquete_id}).map(function(i){return i.codigo.toLowerCase()}).join(" ");
+    if(f&&txt.indexOf(f)<0&&cods.indexOf(f)<0)return;
+    n++;
+    html+='<option value="'+esc(p.paquete_id)+'">'+esc(p.nombre)+" · "+esc(p.condicion)+" · pág. "+esc(p.pagina_manual)+"</option>";
+  });
+  s.innerHTML=html;
+  if(act&&s.querySelector('option[value="'+act+'"]'))s.value=act;
+  if(!n)s.innerHTML='<option value="">Sin resultados</option>';
+  infoPaquete();
+}
+function infoPaquete(){
+  var id=$("paq").value,p=paqInfo(id);
+  $("cargar").disabled=!p;
+  if(!p){$("infopaq").innerHTML="";return}
+  var n=items.filter(function(i){return i.paquete_id===id}).length;
+  $("infopaq").innerHTML='<div class="pk"><b>'+esc(p.nombre)+'</b><span class="pg">pág. '+esc(p.pagina_manual)+'</span><br>'+esc(p.manual)+" "+esc(p.anio_manual||"")+" · "+esc(p.condicion)+"<br>"+n+" códigos</div>";
+}
+function pedirDescripciones(lista){
+  var por={cie10:[],cpms:[]};
+  lista.forEach(function(i){
+    var c=i.catalogo==="CIE10"?"cie10":i.catalogo==="CPMS"?"cpms":null;
+    if(c&&!desc[c+":"+i.codigo]&&por[c].indexOf(i.codigo)<0)por[c].push(i.codigo);
+  });
+  var pend=[];
+  ["cie10","cpms"].forEach(function(c){
+    if(!por[c].length)return;
+    var inn="in.("+por[c].map(function(x){return '"'+x+'"'}).join(",")+")";
+    pend.push(api(c+"?select=codigo,descripcion&codigo="+encodeURIComponent(inn)).then(function(rows){
+      rows.forEach(function(r){desc[c+":"+r.codigo]=r.descripcion});
+    }));
+  });
+  return Promise.all(pend);
+}
+function agregar(it){
+  var dup=hoja.some(function(h){return h.catalogo===it.catalogo&&h.codigo===it.codigo&&h.paquete_id===(it.paquete_id||"")});
+  if(dup)return false;
+  hoja.push({catalogo:it.catalogo,codigo:it.codigo,tipo:it.tipo_dx||"",fijo:!!it.tipo_dx,lab:["","",""],h1:it.lab1||"",h2:it.lab2||"",h3:it.lab3||"",nota:it.nota||"",paquete_id:it.paquete_id||""});
+  return true;
+}
+function cargarPaquete(){
+  var id=$("paq").value;if(!id)return;
+  var lista=items.filter(function(i){return i.paquete_id===id});
+  var nuevos=0;lista.forEach(function(i){if(agregar(i))nuevos++});
+  pedirDescripciones(lista).then(pintarHoja).catch(function(){pintarHoja();$("aviso").innerHTML='<div class="msg e">No se pudieron leer las descripciones; los códigos sí se cargaron.</div>'});
+  pintarHoja();
+  $("aviso").innerHTML='<div class="msg o">'+nuevos+" códigos añadidos a la hoja.</div>";
+}
+function resumenPac(){
+  var ed=pac.edn?(pac.edn+pac.edu):"";
+  return [pac.dia?("Día "+pac.dia):"",pac.hc?("DNI/HC "+pac.hc):"",ed?("Edad "+ed):"",pac.sexo?("Sexo "+pac.sexo):"",pac.dist||""].filter(Boolean).join(" · ")||"Sin datos del paciente";
+}
+function lineaHTML(h,ix){
+  var d=h?(h.catalogo==="HIS"?"Código definido por el manual HIS (no figura en CIE-10 ni CPMS)":desc[dkey(h)]):"";
+  if(!h)return '<div class="dx"><div class="dxn"><span class="h">Diagnóstico / actividad</span><div class="t vacio">—</div></div></div>';
+  var p=paqInfo(h.paquete_id);
+  var tp='<div><span class="h">Tipo</span><div class="tp'+(h.fijo?" lock":"")+'" role="group" aria-label="Tipo de diagnóstico">'+["P","D","R"].map(function(t){return '<button type="button" data-ix="'+ix+'" data-t="'+t+'" aria-pressed="'+(h.tipo===t)+'"'+(h.fijo?" disabled":"")+">"+t+"</button>"}).join("")+"</div></div>";
+  var lab="";
+  [["h1","LAB 1"],["h2","LAB 2"],["h3","LAB 3"]].forEach(function(q,k){
+    lab+='<div><span class="h">'+q[1]+'</span><input data-ix="'+ix+'" data-l="'+k+'" value="'+esc(h.lab[k])+'" aria-label="'+q[1]+" de "+esc(h.codigo)+'" title="'+esc(h[q[0]])+'" placeholder="'+(h[q[0]]?"ver guía":"")+'" autocomplete="off">'+(h[q[0]]?'<div class="nt">'+esc(h[q[0]])+"</div>":"")+"</div>";
+  });
+  return '<div class="dx"><div class="dxn"><span class="h">Diagnóstico / actividad</span><div class="t'+(d?"":" vacio")+'">'+(d?esc(d):"Cargando descripción…")+(p?'<span class="p">pág. '+esc(p.pagina_manual)+"</span>":"")+"</div>"+(h.nota?'<div class="nt">'+esc(h.nota)+"</div>":"")+
+    '<button type="button" class="q" data-q="'+ix+'" aria-label="Quitar '+esc(h.codigo)+'">Quitar</button></div>'+tp+lab+
+    '<div class="cd"><span class="h">Código CIE / CPMS</span><div class="cod">'+esc(h.codigo)+'<span class="cat '+esc(h.catalogo)+'">'+esc(h.catalogo)+"</span></div></div></div>";
+}
+function pintarHoja(){
+  var out="",total=Math.ceil(hoja.length/3);
+  for(var r=0;r<total;r++){
+    var tri=[0,1,2].map(function(k){return hoja[r*3+k]});
+    var pk=tri.filter(Boolean).map(function(h){var p=paqInfo(h.paquete_id);return p?p.nombre:"código añadido a mano"}).filter(function(v,i,a){return a.indexOf(v)===i}).join(" + ");
+    out+='<div class="reg"><h3><span>Registro '+(r+1)+" de "+total+'</span><span>'+(r<total-1?"continúa en el siguiente registro":"último registro")+'</span></h3><div class="rs">'+esc(resumenPac())+" · "+esc(pk)+"</div>"+
+      tri.map(function(h,k){return lineaHTML(h,r*3+k)}).join("")+"</div>";
+  }
+  $("sheet").innerHTML=out;
+}
+function buscar(){
+  var q=limpiar($("q").value),cat=$("cat").value,box=$("resultados");
+  if(q.length<2){box.innerHTML="";return}
+  var filtro="or=("+encodeURIComponent("codigo.ilike."+q+"*,descripcion.ilike.*"+q+"*")+")";
+  var extra=cat==="cie10"?"&activo=eq.true":"";
+  box.innerHTML='<div class="rs">Buscando…</div>';
+  api(cat+"?select=codigo,descripcion&"+filtro+extra+"&order=codigo&limit=20").then(function(rows){
+    if($("q").value&&limpiar($("q").value)!==q)return;
+    if(!rows.length){box.innerHTML='<div class="msg i">Sin resultados para «'+esc(q)+"».</div>";return}
+    box.innerHTML=rows.map(function(r,i){
+      return '<div class="res"><span><b>'+esc(r.codigo)+"</b> · "+esc(r.descripcion)+'</span><button type="button" data-add="'+i+'">Añadir</button></div>';
+    }).join("");
+    box._rows=rows;box._cat=cat;
+  }).catch(function(){box.innerHTML='<div class="msg e">No se pudo buscar. Revisa tu internet.</div>'});
+}
+function copiar(){
+  if(!hoja.length)return;
+  var t="Paciente: "+resumenPac()+"\n";
+  hoja.forEach(function(h,i){
+    if(i%3===0)t+="\n— Registro "+(i/3+1)+" —\n";
+    var labs=h.lab.filter(Boolean);
+    t+=[h.codigo,desc[dkey(h)]||"",h.tipo?("Tipo "+h.tipo):"",labs.length?("LAB "+h.lab.map(function(x){return x||"-"}).join("/")):""].filter(Boolean).join(" | ")+"\n";
+  });
+  function ok(){$("aviso").innerHTML='<div class="msg o">Hoja copiada.</div>'}
+  function mal(){$("aviso").innerHTML='<div class="msg e">No se pudo copiar automáticamente.</div>'}
+  if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(t).then(ok,mal);else mal();
+}
+$("fpaq").addEventListener("input",pintarSelect);
+$("paq").addEventListener("change",infoPaquete);
+$("cargar").addEventListener("click",cargarPaquete);
+$("q").addEventListener("input",function(){clearTimeout(tmr);tmr=setTimeout(buscar,300)});
+$("cat").addEventListener("change",buscar);
+$("copiar").addEventListener("click",copiar);
+$("vaciar").addEventListener("click",function(){hoja=[];pintarHoja();$("aviso").innerHTML=""});
+$("pac").addEventListener("input",function(e){var k=e.target.getAttribute("data-p");if(k)pac[k]=e.target.value;});
+$("pac").addEventListener("change",function(e){var k=e.target.getAttribute("data-p");if(k){pac[k]=e.target.value;pintarHoja()}});
+$("resultados").addEventListener("click",function(e){
+  var b=e.target.closest("button[data-add]");if(!b)return;
+  var box=$("resultados"),r=box._rows[+b.getAttribute("data-add")];
+  var it={catalogo:box._cat==="cie10"?"CIE10":"CPMS",codigo:r.codigo};
+  desc[box._cat+":"+r.codigo]=r.descripcion;
+  $("aviso").innerHTML=agregar(it)?'<div class="msg o">'+esc(r.codigo)+" añadido a la hoja.</div>":'<div class="msg i">'+esc(r.codigo)+" ya está en la hoja.</div>";
+  pintarHoja();
+});
+$("sheet").addEventListener("click",function(e){
+  var t=e.target.closest("button");if(!t)return;
+  if(t.hasAttribute("data-q")){hoja.splice(+t.getAttribute("data-q"),1);pintarHoja();return}
+  if(t.hasAttribute("data-t")&&!t.disabled){var h=hoja[+t.getAttribute("data-ix")];h.tipo=t.getAttribute("data-t");pintarHoja()}
+});
+$("sheet").addEventListener("input",function(e){
+  var i=e.target;if(!i.hasAttribute||!i.hasAttribute("data-l"))return;
+  hoja[+i.getAttribute("data-ix")].lab[+i.getAttribute("data-l")]=i.value;
+});
+pintarHoja();
+cargarDatos();
+})();
+</script>
+</body>
+</html>
