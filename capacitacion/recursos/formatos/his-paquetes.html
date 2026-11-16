@@ -118,6 +118,19 @@ function api(path){
     if(!r.ok)throw new Error("HTTP "+r.status);return r.json();
   });
 }
+function apiAll(path){
+  var out=[],from=0,size=1000;
+  function next(){
+    return fetch(CFG.url+"/rest/v1/"+path,{headers:{apikey:CFG.key,Accept:"application/json","Range-Unit":"items",Range:from+"-"+(from+size-1)}}).then(function(r){
+      if(!r.ok&&r.status!==206)throw new Error("HTTP "+r.status);return r.json();
+    }).then(function(rows){
+      out=out.concat(rows);
+      if(rows.length===size){from+=size;return next()}
+      return out;
+    });
+  }
+  return next();
+}
 function estado(txt,cls){var e=$("estado");e.textContent=txt;e.className="msg "+cls;e.hidden=!txt}
 function limpiar(s){return String(s||"").replace(/[(),*%\\"']/g," ").replace(/\s+/g," ").trim()}
 function dkey(h){return (h.catalogo==="CIE10"?"cie10":"cpms")+":"+h.codigo}
@@ -126,8 +139,8 @@ function paqInfo(id){return paquetes.filter(function(p){return p.paquete_id===id
 function cargarDatos(){
   estado("Cargando paquetes…","i");
   return Promise.all([
-    api("paquetes_his?select=paquete_id,nombre,manual,anio_manual,pagina_manual,condicion&order=paquete_id"),
-    api("paquetes_his_items?select=paquete_id,orden,catalogo,codigo,tipo_dx,lab1,lab2,lab3,nota&order=paquete_id,orden")
+    apiAll("paquetes_his?select=paquete_id,nombre,manual,anio_manual,pagina_manual,condicion,grupo&order=grupo,paquete_id"),
+    apiAll("paquetes_his_items?select=paquete_id,orden,catalogo,codigo,tipo_dx,lab1,lab2,lab3,nota&order=paquete_id,orden")
   ]).then(function(r){
     paquetes=r[0];items=r[1];
     if(!paquetes.length){estado("No hay paquetes cargados todavía.","e");return}
@@ -140,14 +153,19 @@ function cargarDatos(){
 }
 function pintarSelect(){
   var f=limpiar($("fpaq").value).toLowerCase(),s=$("paq"),act=s.value;
-  var html='<option value="">Paquete…</option>',n=0;
+  var html='<option value="">Paquete…</option>',n=0,grupos={},orden=[];
+  var idx={};
+  items.forEach(function(i){(idx[i.paquete_id]=idx[i.paquete_id]||[]).push(i.codigo.toLowerCase())});
   paquetes.forEach(function(p){
-    var txt=(p.paquete_id+" "+p.nombre+" "+p.condicion+" "+p.pagina_manual).toLowerCase();
-    var cods=items.filter(function(i){return i.paquete_id===p.paquete_id}).map(function(i){return i.codigo.toLowerCase()}).join(" ");
+    var txt=(p.paquete_id+" "+p.nombre+" "+p.condicion+" "+p.pagina_manual+" "+(p.grupo||"")).toLowerCase();
+    var cods=(idx[p.paquete_id]||[]).join(" ");
     if(f&&txt.indexOf(f)<0&&cods.indexOf(f)<0)return;
     n++;
-    html+='<option value="'+esc(p.paquete_id)+'">'+esc(p.nombre)+" · "+esc(p.condicion)+" · pág. "+esc(p.pagina_manual)+"</option>";
+    var g=p.grupo||"Otros";
+    if(!grupos[g]){grupos[g]=[];orden.push(g)}
+    grupos[g].push('<option value="'+esc(p.paquete_id)+'">'+esc(p.nombre)+" · pág. "+esc(p.pagina_manual)+"</option>");
   });
+  orden.forEach(function(g){html+='<optgroup label="'+esc(g)+" ("+grupos[g].length+')">'+grupos[g].join("")+"</optgroup>"});
   s.innerHTML=html;
   if(act&&s.querySelector('option[value="'+act+'"]'))s.value=act;
   if(!n)s.innerHTML='<option value="">Sin resultados</option>';
