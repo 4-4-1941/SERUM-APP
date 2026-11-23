@@ -43,4 +43,12 @@ document.addEventListener('DOMContentLoaded', async () => {
       loginSubmit.textContent = 'Ingresar';
     });
   }
+  // Cerrar sesión (conecta el botón logout-btn con logoutUser de auth.js)
+  const logoutBtn = document.getElementById('logout-btn');
+  if (logoutBtn) {
+    logoutBtn.addEventListener('click', async () => {
+      await logoutUser();
+      location.reload();
+    });
+  }
 });
