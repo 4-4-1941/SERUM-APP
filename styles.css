@@ -338,3 +338,14 @@ textarea#notes,textarea.input,select,input[type="text"],input:not([type]){width:
   .sidebar{overflow-y:auto}
   .sidebar .sidebar-footer{order:99}
 }
+
+/* Móvil: el pie (Puntaje, Casos resueltos, Cerrar sesión) solo aparece dentro del menú abierto */
+@media (max-width:820px){
+  .sidebar:not(.open) .sidebar-footer{display:none}
+}
+
+/* Móvil: quitar el bloque Puntaje / Casos resueltos / Cerrar sesión del encabezado; solo visible con el menú abierto */
+@media (max-width:820px){
+  .sidebar .sidebar-footer{display:none !important}
+  .sidebar.open .sidebar-footer{display:flex !important}
+}
