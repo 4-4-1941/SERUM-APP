@@ -328,3 +328,13 @@ textarea#notes,textarea.input,select,input[type="text"],input:not([type]){width:
   color:var(--muted);
   margin-top:18px;
 }
+
+
+/* Iconos del menú */
+.nav-btn i.ti{font-size:17px;margin-right:9px;vertical-align:-3px;opacity:.9}
+/* Pie del menú siempre abajo */
+.sidebar .sidebar-footer{order:99;margin-top:auto}
+@media (max-width:820px){
+  .sidebar{overflow-y:auto}
+  .sidebar .sidebar-footer{order:99}
+}
