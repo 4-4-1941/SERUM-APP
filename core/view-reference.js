@@ -58,7 +58,7 @@ function fichaEsc(s) {
 }
 
 const FICHA_ESTADOS = {
-  REVIEW_REQUIRED: { t: "Datos por confirmar", c: "ambar" },
+  REVIEW_REQUIRED: { t: "", c: "ambar" },
   FUENTE_OFICIAL: { t: "Fuente oficial verificada", c: "verde" }
 };
 
@@ -133,12 +133,10 @@ function fichaCuerpo(f, key) {
           </div>`).join("")}
       </details>
       <details class="fi-sec">
-        <summary>6. Documento y pendientes</summary>
+        <summary>6. Documento</summary>
         <p class="fi-doc"><b>${fichaEsc(f.code)}</b><br>${fichaEsc(f.title)}<br><small>${fichaEsc(f.aprobada)}</small></p>
         <p class="fi-note">Ref. = página del documento oficial en PDF.</p>
-        <ul class="fi-traps">${f.pendientes.map(s => `<li>${fichaEsc(s)}</li>`).join("")}</ul>
       </details>
-      <p class="fi-foot">Material pedagógico, no sustituye la norma oficial. Trampas y preguntas: análisis propio, pendiente de revisión humana. © SIP SERUMS PERÚ</p>
     </div>`;
 }
 
