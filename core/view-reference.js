@@ -114,13 +114,13 @@ function fichaCuerpo(f, key) {
             ${g.filas.map(r => `<tr><td data-l="Dato">${fichaEsc(r[0])}</td><td data-l="Valor"><b>${fichaEsc(r[1])}</b></td><td data-l="Ref.">${fichaEsc(r[2])}</td></tr>`).join("")}
           </tbody></table></div>`).join("")}
       </details>
-      <details class="fi-sec">
+      ${(f.flujo||[]).length ? `<details class="fi-sec">
         <summary>${fichaEsc(f.flujo_titulo || "3. Qué hacer en el establecimiento")}</summary>
         <ol class="fi-steps">${f.flujo.map(s => `<li>${fichaEsc(s)}</li>`).join("")}</ol>
         ${f.flujo_nota ? `<p class="fi-note">${fichaEsc(f.flujo_nota)}</p>` : ""}
-      </details>
+      </details>` : ""}
       <details class="fi-sec">
-        <summary>4. Trampas frecuentes de examen</summary>
+        <summary>3. Trampas frecuentes de examen</summary>
         <ul class="fi-traps">${f.trampas.map(s => `<li>${fichaEsc(s)}</li>`).join("")}</ul>
       </details>
       <details class="fi-sec">
