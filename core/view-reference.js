@@ -95,9 +95,9 @@ function fichaTramos(l) {
 }
 
 function fichaCuerpo(f, key) {
+  const enlaceDoc = ((f.fuente || "").match(/https?:\/\/\S+/) || [""])[0];
   return `
     <div class="fi-body">
-      <p class="fi-vig"><b>Vigencia:</b> ${fichaEsc(f.vigencia)}</p>
       ${f.alerta ? `<div class="fi-alert">⚠️ ${fichaEsc(f.alerta)}</div>` : ""}
       ${f.linea ? fichaTramos(f.linea) : ""}
       <details class="fi-sec" open>
@@ -134,8 +134,8 @@ function fichaCuerpo(f, key) {
       </details>
       <details class="fi-sec">
         <summary>6. Documento</summary>
-        <p class="fi-doc"><b>${fichaEsc(f.code)}</b><br>${fichaEsc(f.title)}<br><small>${fichaEsc(f.aprobada)}</small></p>
-        <p class="fi-note">Ref. = página del documento oficial en PDF.</p>
+        <p class="fi-doc"><b>${fichaEsc(f.fuente || "")}</b></p>
+        ${enlaceDoc ? `<p><a href="${enlaceDoc}" target="_blank" rel="noopener" style="color:#1F5F55;font-weight:700">Abrir documento oficial</a></p>` : ""}
       </details>
     </div>`;
 }
