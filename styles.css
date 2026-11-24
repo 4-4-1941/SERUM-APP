@@ -294,10 +294,25 @@ textarea#notes,textarea.input,select,input[type="text"],input:not([type]){width:
 /* Pie lateral: restaurado (estilos del pie con Puntaje, Casos resueltos y Cerrar sesión) */
 .sidebar-footer{
   margin-top:auto;
+  display:flex;
+  justify-content:flex-start;
+  align-items:center;
+  padding-top:8px;
+}
+.sidebar-top{
+  display:grid;
+  gap:6px;
+  margin:0 0 10px;
+}
+.sidebar-top .copyright-note{
+  margin:0;
+  font-size:10px;
+  text-align:right;
+}
+.sidebar-stats{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:8px;
-  padding-top:8px;
 }
 .mini-card{
   background:rgba(0,0,0,.18);
@@ -311,16 +326,7 @@ textarea#notes,textarea.input,select,input[type="text"],input:not([type]){width:
   gap:2px;
   min-height:64px;
 }
-.footer-actions{
-  grid-column:1/-1;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:8px;
-  margin-top:4px;
-}
-.footer-actions .logout-btn{padding:6px 10px;font-size:12px}
-.footer-actions .copyright-note{margin:0;font-size:9.5px;text-align:right}
+
 .mini-card span{
   color:#B9CFC9;
   font-size:11px;
@@ -357,7 +363,8 @@ textarea#notes,textarea.input,select,input[type="text"],input:not([type]){width:
 
 /* Móvil: el pie (Puntaje, Casos resueltos, Cerrar sesión) solo aparece dentro del menú abierto */
 @media (max-width:820px){
-  .sidebar:not(.open) .sidebar-footer{display:none}
+  .sidebar:not(.open) .sidebar-footer,
+  .sidebar:not(.open) .sidebar-top{display:none}
 }
 
 /* Móvil: quitar el bloque Puntaje / Casos resueltos / Cerrar sesión del encabezado; solo visible con el menú abierto */
