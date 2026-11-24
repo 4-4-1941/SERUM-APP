@@ -295,17 +295,32 @@ textarea#notes,textarea.input,select,input[type="text"],input:not([type]){width:
 .sidebar-footer{
   margin-top:auto;
   display:grid;
-  gap:10px;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+  padding-top:8px;
 }
 .mini-card{
   background:rgba(0,0,0,.18);
   border:1px dashed rgba(234,243,240,.28);
-  border-radius:14px;
-  padding:12px 14px;
+  border-radius:12px;
+  padding:8px 10px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:2px;
+  min-height:64px;
+}
+.footer-actions{
+  grid-column:1/-1;
   display:flex;
   justify-content:space-between;
   align-items:center;
+  gap:8px;
+  margin-top:4px;
 }
+.footer-actions .logout-btn{padding:6px 10px;font-size:12px}
+.footer-actions .copyright-note{margin:0;font-size:9.5px;text-align:right}
 .mini-card span{
   color:#B9CFC9;
   font-size:11px;
@@ -314,7 +329,8 @@ textarea#notes,textarea.input,select,input[type="text"],input:not([type]){width:
 }
 .mini-card strong{
   font-family:"Source Serif 4",Georgia,serif;
-  font-size:20px;
+  font-size:28px;
+  line-height:1;
   color:#F4E9CE;
 }
 .copyright-note{
